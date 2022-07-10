@@ -541,7 +541,7 @@ u8* TryGetRivalNameByTrainerClass(unusedArg u8 class)
 			return GetExpandedPlaceholder(ExpandPlaceholder_RivalName);
 		else
 	#elif defined OVERWRITE_RIVAL
-		if (class == CLASS_RIVAL || class == CLASS_RIVAL_2 || class == CLASS_CHAMPION)
+		if (class == CLASS_RIVAL || class == CLASS_CHAMPION)
 			return GetExpandedPlaceholder(ExpandPlaceholder_RivalName);
 		else
 	#endif

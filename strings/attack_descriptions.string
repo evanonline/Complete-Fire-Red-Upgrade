@@ -1151,13 +1151,73 @@ The user attacks\nwith psychic power.\nIt may leave the\ntarget frozen.
 The user delivers\na fierce kick that\nlower's the target's\ndefense stat.
 
 #org @DESC_FIERY_WRATH
-The user attacks\nwith intense, dark flames.\nIt may also make\nthe foe flinch.
+An attack wielding\nintense, dark flames.\nIt may also make\nthe foe flinch.
+
+#org @DESC_EERIE_SPELL
+The user attacks with\nits psychic power. This\nremoves 3 PP from \nthe target's last move.
 
 #org @DESC_THUNDER_CAGE
-A cage made of\nelectricity that traps\nthe target for four\nto five turns.
+A cage made of\nelectricity which\ntraps the target for\nfour to five turns.
 
 #org @DESC_DRAGON_ENERGY
 The higher the\nuser's HP, the\nmore powerful this\nattack becomes.
+
+#org @DESC_ASTRAL_BARRAGE
+The user sends\na frightful amount of\nsmall ghosts at\nopponents.
+
+#org @DESC_GLACIAL_LANCE
+The user hurls\nan icicle lance at\nopposing Pok\emon.
+
+#org @DESC_BARB_BARRAGE
+The user's toxic barbs\n do even more damage to\nopponnents under status conditions.\nIt may poison the opponent.
+
+#org @DESC_WAVE_CRASH
+The user shrouds\nitself in water\nand slams into its\ntarget, damaging its\nbody and raising/nSpeed.
+
+#org @DESC_PSYSHIELD_BASH
+Cloaking itself in\npsychic energy, the\nuser slams into the \ntarget.This may\nalso raise\nthe user's\nDefense and Sp. Def.
+
+#org @DESC_DIRE_CLAW
+The user aims for\na critical hit with\nruinous claws. May\npoison, paralyze or\nsleep its target.
+
+#org @DESC_INFERNAL_PARADE
+The user attacks\nwith myriad fireballs.\nMay burn target.\nThis move's power is\ndoubled on targets\nwith status ailments.
+
+#org @DESC_CEASELESS_EDGE
+The user critically\nslashes the target.\nShell splinters\nwill continuously\ndamage the target.
+
+#org @DESC_TRIPLE_ARROWS
+The user delivers\nan axe kick, then\nfires three arrows.\nThis raises its\ncritical hit ratio.
+
+#org @DESC_STONE_AXE
+The user swings\nits axes, aiming for\n a critical hit.\nRock splinters\nwill continuously\ndamage the target.
+
+#org @DESC_MOUNTAIN_GALE
+The user hurls\ngiant chunks of\nice at the target\nto inflict damage,\nbut lowers Speed.
+
+#org @DESC_ESPER_WING
+The user slashes the\ntarget with aura-\nenriched wings, raising Speed.\nHas a high\ncritical-hit ratio.
+
+#org @DESC_CHLOROBLAST
+The user launches\namassed chlorophyll,\ninflicting heavy\ndamage. This also\ndamages the user\nand lowers its Speed.
+
+#org @DESC_BITTER_MALICE
+The user attacks\nwith pure resentment.\nMay freeze target.\nThis move's power is\ndoubled on targets\nwith status ailments.
+
+#org @DESC_SCRUNCH
+A weird move taught\non TCG Island.\nPrevents incoming\ndamage, but only half\nthe time[.]
+
+#org @DESC_JAB
+A weird, simple punch\nattack that Mint\ninvented somehow.
+
+#org @DESC_SPECIAL_PUNCH
+A bizarre technique\nthat Mint created.\nThe user throws\na punch using\nits inner energy.
+
+#org @DESC_LEEK_SLAP
+An innaccurate slap\ninvented by Mint.\nCan only be used\nonce per battle.\n(You can use PP Ups,\nbut why would you?)
+
+#org @DESC_POT_SMASH
+A special TCG Island\nattack that can\nshatter pots[.] but\nnot much else.
 
 #org @DESC_MAX_GUARD
 Enables the user to\nevade all attacks.\nIt may fail if used\nin succession.

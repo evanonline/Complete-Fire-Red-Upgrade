@@ -230,7 +230,6 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_STANCECHANGE] = 10,
 	[ABILITY_STATIC] = 4,
 	[ABILITY_STEADFAST] = 2,
-	[ABILITY_STEELWORKER] = 6,
 	[ABILITY_STENCH] = 1,
 	[ABILITY_STICKYHOLD] = 3,
 	[ABILITY_STORMDRAIN] = 7,
@@ -245,6 +244,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_SYMBIOSIS] = 0,
 	[ABILITY_SYNCHRONIZE] = 4,
 	[ABILITY_TANGLEDFEET] = 2,
+	//[ABILITY_UNSEENFIST] = 5, TODO
 	[ABILITY_TANGLINGHAIR] = 5,
 	[ABILITY_TECHNICIAN] = 8,
 	[ABILITY_TELEPATHY] = 0,
@@ -455,6 +455,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				case ABILITY_TRACE:			//Trace were included in this list. It has thus been
 				case ABILITY_DOWNLOAD:		//been expanded to support newer abilities.
 				case ABILITY_UNNERVE:
+				//case ABILITY_ASONE: //to do
 				case ABILITY_ANTICIPATION:
 				case ABILITY_FOREWARN:
 				case ABILITY_FRISK:

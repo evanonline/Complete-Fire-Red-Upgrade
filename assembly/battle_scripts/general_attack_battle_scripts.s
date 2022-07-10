@@ -992,7 +992,7 @@ BS_032_Recover:
 	ppreduce
 	jumpifmove MOVE_ROOST RoostBS
 	jumpifmove MOVE_LIFEDEW LifeDewBS
-	jumpifmove MOVE_JUNGLEHEALING LifeDewBS @TODO
+	jumpifmove MOVE_JUNGLEHEALING JungleHealingBS
 
 RecoverBS:
 	setdamageasrestorehalfmaxhp 0x81D7DD1 BANK_ATTACKER @;BattleScript_AlreadyAtFullHp
@@ -1082,6 +1082,67 @@ LifeDewPartnerFullHealthBS:
 	printstring 0x4C @;STRINGID_PKMNHPFULL
 	waitmessage DELAY_1SECOND
 	goto BS_MOVE_END
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+JungleHealingBS:
+	callasm TryFailLifeDew
+	setdamageasrestorehalfmaxhp JungleHealFullHealthBS BANK_ATTACKER
+	attackanimation
+	waitanimation
+	orword HIT_MARKER HITMARKER_IGNORE_SUBSTITUTE
+	graphicalhpupdate BANK_ATTACKER
+	datahpupdate BANK_ATTACKER
+	printstring 0x4B @;STRINGID_PKMNREGAINEDHEALTH
+	waitmessage DELAY_1SECOND
+	attackstringnoprotean
+	cureifburnedparalysedorpoisoned JungleHealPartner_BS
+	tryactivateprotean
+	printstring 0xA7 @;STRINGID_PKMNSTATUSNORMAL
+	waitmessage DELAY_1SECOND
+	refreshhpbar BANK_ATTACKER
+	goto JungleHealPartner_BS
+
+JungleHealPartner_BS:
+	callasm SetTargetPartner
+	jumpiffainted BANK_TARGET BS_MOVE_END
+	jumpifcounter BANK_TARGET HEAL_BLOCK_TIMERS NOTEQUALS 0x0 BattleScript_NoHealTargetAfterHealBlock
+	accuracycheck LifeDewMissedPartnerBS 0x0
+	setdamageasrestorehalfmaxhp LifeDewPartnerFullHealthBS BANK_TARGET
+	orword HIT_MARKER HITMARKER_IGNORE_SUBSTITUTE
+	graphicalhpupdate BANK_TARGET
+	datahpupdate BANK_TARGET
+	printstring 0x4B @;STRINGID_PKMNREGAINEDHEALTH
+	waitmessage DELAY_1SECOND
+	cureprimarystatus BANK_TARGET BS_MOVE_END
+	tryactivateprotean
+	setword BATTLE_STRING_LOADER PurifyString
+	printstring 0x184
+	waitmessage DELAY_1SECOND
+	refreshhpbar BANK_TARGET
+	goto BS_MOVE_END
+
+.global RecoverJungleBS
+RecoverJungleBS:
+	setdamageasrestorehalfmaxhp JungleHealFullHealthBS BANK_ATTACKER
+	attackanimation
+	waitanimation
+	orword HIT_MARKER HITMARKER_IGNORE_SUBSTITUTE
+	graphicalhpupdate BANK_ATTACKER
+	datahpupdate BANK_ATTACKER
+	printstring 0x4B @;STRINGID_PKMNREGAINEDHEALTH
+	waitmessage DELAY_1SECOND
+	attackstringnoprotean
+	cureifburnedparalysedorpoisoned BS_MOVE_END
+	tryactivateprotean
+	printstring 0xA7 @;STRINGID_PKMNSTATUSNORMAL
+	waitmessage DELAY_1SECOND
+	refreshhpbar BANK_ATTACKER
+	goto BS_MOVE_END
+
+JungleHealFullHealthBS:
+	printstring 0x4C @;STRINGID_PKMNHPFULL
+	waitmessage DELAY_1SECOND
+	goto JungleHealPartner_BS
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -2075,8 +2136,9 @@ BS_099_Flail:
 
 .global BS_100_Spite
 BS_100_Spite:
+	jumpifmove MOVE_EERIESPELL EerieSpite
 	attackcanceler
-	accuracycheck FAILED_PRE 0x0
+	accuracycheck FAILED_PRE 0x00000000
 	attackstringnoprotean
 	ppreduce
 	reducepprandom FAILED
@@ -2086,6 +2148,18 @@ BS_100_Spite:
 	printstring 0x8D
 	waitmessage DELAY_1SECOND
 	goto BS_MOVE_END
+
+EerieSpite:
+	attackcanceler
+	accuracycheck BS_MOVE_MISSED 0x0
+	attackstring
+	call STANDARD_DAMAGE
+	jumpiffainted BANK_TARGET BS_MOVE_FAINT
+	jumpifmovehadnoeffect BS_MOVE_FAINT
+	reducepprandom BS_MOVE_FAINT
+	printstring 0x8D
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_FAINT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -2594,7 +2668,7 @@ BS_127_BatonPass:
 BatonPassSwitchOutBS:
 	copyarray CURRENT_MOVE BACKUP_HWORD 2
 	callasm ClearAttackerDidDamageOnce
-	callasm ClearTargetStatFellThisTurn @;So Eject Pack doesn't activate
+	callasm ClearTargetStatFellThisTurn @;So Eject Pack does not activate
 	openpartyscreen BANK_SWITCHING FAILED
 	switchoutabilities BANK_SWITCHING
 	waitstateatk
@@ -2726,7 +2800,7 @@ PartingShot_LowerSpAtk:
 	waitmessage DELAY_1SECOND
 	
 CheckPartingShotFail:
-	jumpifbyte EQUALS ANIM_TARGETS_HIT 0x0 BS_MOVE_END @;Anim didn't play means no stats were lowered
+	jumpifbyte EQUALS ANIM_TARGETS_HIT 0x0 BS_MOVE_END @;Anim not playing means no stats were lowered
 	goto UTurnCheckSwitchBS
 
 PartingShotEndBS:
@@ -2770,7 +2844,7 @@ DefogBS:
 DefogLoweredStat:
 	attackanimation
 	waitanimation
-	setbyte ANIM_TARGETS_HIT 0x1 @;So animation doesn't play again
+	setbyte ANIM_TARGETS_HIT 0x1 @;So animation does not play again
 	setgraphicalstatchangevalues
 	playanimation BANK_TARGET ANIM_STAT_BUFF ANIM_ARG_1
 	printfromtable 0x83FE588
@@ -3726,6 +3800,7 @@ BS_182_Superpower:
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_DRAGONASCENT CloseCombatBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_HAMMERARM HammerArmBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_ICEHAMMER HammerArmBS
+	jumpifhalfword EQUALS CURRENT_MOVE MOVE_CHLOROBLAST HammerArmBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_CLANGINGSCALES ClangingScalesBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_VCREATE VCreateBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_HYPERSPACEHOLE HyperspaceHoleBS
@@ -4386,6 +4461,7 @@ BS_211_CalmMind:
 	attackcanceler
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_QUIVERDANCE QuiverDanceBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_GEOMANCY GeomancyBS
+	jumpifhalfword EQUALS CURRENT_MOVE MOVE_PSYSHIELDBASH PsyshieldBashBS
 
 CalmMindBS:
 	attackstring
@@ -4520,6 +4596,33 @@ Geomancy_RaidBossSkipCharge:
 	callasm ClearCalculatedSpreadMoveData @;So the damage can be calculated
 	goto Geomancy_PowerHerbSkip
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+PsyshieldBashBS:
+	attackstring
+	ppreduce
+	jumpifstat BANK_TARGET LESSTHAN STAT_DEF STAT_MAX PsyshieldBash_Def
+	jumpifstat BANK_TARGET EQUALS STAT_SPDEF STAT_MAX 0x81D85E7
+
+PsyshieldBash_Def:
+	attackanimation
+	waitanimation
+	setbyte STAT_ANIM_PLAYED 0x0
+	playstatchangeanimation BANK_ATTACKER, STAT_ANIM_DEF | STAT_ANIM_DEF, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
+	setstatchanger STAT_DEF | INCREASE_1
+	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN CalmMind_SpDef
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 PsyshieldBash_SpDef
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+
+PsyshieldBash_SpDef:
+	setstatchanger STAT_SPDEF | INCREASE_1
+	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+	goto BS_STANDARD_HIT
+
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global BS_212_DragonDance
@@ -4645,26 +4748,50 @@ BS_213_StatSwapSplitters:
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_214_Blank
-BS_214_Blank:
+.global BS_214_Scrunch
+BS_214_Scrunch:
+	attackcanceler
+	attackstringnoprotean
+	ppreduce
+	accuracycheck BS_MOVE_MISSED_PAUSE 0x0
+	setprotect
+	tryactivateprotean
+	attackanimation
+	waitanimation
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x3 ScrunchPrintCustomMessage
+	printfromtable 0x83FE546
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+	
+ScrunchPrintCustomMessage:
+	printstring 0x184
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global BS_215_ShellSideArm
+BS_215_ShellSideArm:
 	goto BS_STANDARD_HIT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_215_Blank
-BS_215_Blank:
+.global BS_216_UnownHiddenPower
+BS_216_UnownHiddenPower:
 	goto BS_STANDARD_HIT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_216_Blank
-BS_216_Blank:
-	goto BS_STANDARD_HIT
-
-@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-.global BS_217_Blank
-BS_217_Blank:
+.global BS_217_TripleArrows
+BS_217_TripleArrows:
+	attackcanceler
+	setmoveeffect MOVE_EFFECT_DEF_MINUS_1 | MOVE_EFFECT_SP_DEF_MINUS_1
+	jumpifsecondarystatus BANK_ATTACKER STATUS2_PUMPEDUP FAILED_PRE
+	attackstring
+	ppreduce
+	setincreasedcriticalchance
+	printfromtable 0x83FE5B0
+	waitmessage DELAY_1SECOND
 	goto BS_STANDARD_HIT
 	
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -4774,9 +4901,18 @@ RelicSongEndBS:
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_224_Blank
-BS_224_Blank:
-	goto BS_STANDARD_HIT
+/* by greenphx*/
+.global BS_224_Poltergeist
+BS_224_Poltergeist:
+	attackcanceler
+	attackstringnoprotean
+	accuracycheck BS_MOVE_MISSED 0x0
+	callasm TargetHasItem + 1
+	call STANDARD_DAMAGE
+	jumpiffainted BANK_TARGET BS_MOVE_FAINT
+	jumpifmovehadnoeffect BS_MOVE_FAINT
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_FAINT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

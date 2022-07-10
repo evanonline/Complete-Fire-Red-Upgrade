@@ -161,11 +161,11 @@ u8 TMIdFromItemId(u16 itemId)
 	if (itemId == ITEM_NONE)
 		return 255; //So blank items get put at the end
 	else if (tmNum == 0)
-		return itemId - ITEM_TM01_FOCUS_PUNCH;
+		return itemId - ITEM_TM01; //ITEM_TM01_FOCUS_PUNCH by default
 	else
 		return tmNum-1;
 	#else
-		return itemId - ITEM_TM01_FOCUS_PUNCH;
+		return itemId - ITEM_TM01; //ITEM_TM01_FOCUS_PUNCH by default
 	#endif
 }
 

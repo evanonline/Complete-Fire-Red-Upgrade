@@ -123,6 +123,7 @@ Avoids ball and bomb moves.
 #org @DESC_GALEWINGS
 Flying moves hit first.
 
+#org @DESC_CHILLINGNEIGH
 #org @DESC_MOXIE
 Knockouts boost Attack.
 
@@ -542,3 +543,26 @@ Protects team from poison.
 
 #org @DESC_HUNGERSWITCH
 Changes form each turn.
+
+//SwSh DLC abilities
+
+#org @DESC_QUICKDRAW
+Occasionally moves first.
+
+#org @DESC_UNSEEN_FIST
+Contact moves ignore protection.
+
+#org @DESC_CURIOUSMEDICINE
+Removes stat changes on entry.
+
+#org @DESC_TRANSISTOR
+Powers up Electric-type moves.
+
+#org @DESC_DRAGONSMAW
+Powers up Dragon-type moves.
+
+#org @DESC_GRIMNEIGH
+Knockouts boost Sp. Atk.
+
+#org @DESC_AS_ONE
+Combines mount and rider.

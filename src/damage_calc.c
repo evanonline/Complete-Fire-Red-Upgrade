@@ -120,6 +120,9 @@ void atk04_critcalc(void)
 						#ifdef SPECIES_FARFETCHD
 						+ 2 * (atkEffect == ITEM_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD)
 						#endif
+						#ifdef SPECIES_SIRFETCHD
+						+ 2 * (atkEffect == ITEM_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_SIRFETCHD)
+						#endif
 						+ 2 * (gCurrentMove == MOVE_10000000_VOLT_THUNDERBOLT);
 
 			if (critChance > 4)
@@ -205,6 +208,8 @@ static u8 CalcPossibleCritChance(u8 bankAtk, u8 bankDef, u16 move, struct Pokemo
 					#endif
 					#ifdef SPECIES_FARFETCHD
 					+ 2 * (atkEffect == ITEM_EFFECT_STICK && atkSpecies == SPECIES_FARFETCHD)
+					#ifdef SPECIES_SIRFETCHD
+					+ 2 * (atkEffect == ITEM_EFFECT_STICK && atkSpecies == SPECIES_SIRFETCHD)
 					#endif
 					+ 2 * (move == MOVE_10000000_VOLT_THUNDERBOLT);
 
@@ -1176,6 +1181,14 @@ static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, 
 
 	if (moveType == TYPE_FIRE && gNewBS->tarShotBits & gBitTable[bankDef]) //Fire always Super-Effective if covered in tar
 		multiplier = TYPE_MUL_SUPER_EFFECTIVE;
+
+	if (move == MOVE_HIDDENPOWER)
+        multiplier = TYPE_MUL_SUPER_EFFECTIVE;	
+	
+		//todo 
+	//if (move == MOVE_JUDGMENT && GetMonItemEffect(bankAtk) == ITEM_EFFECT_LEGEND_PLATE)
+	//multiplier = TYPE_MUL_SUPER_EFFECTIVE;
+
 
 	if (checkMonDef)
 	{
@@ -2221,6 +2234,48 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 				spAttack = (spAttack * 3) / 2;
 			break;
 		#endif
+		
+		#ifdef SPECIES_ROTOM
+		case ITEM_EFFECT_SPIRIT_MOTOR:
+			if (data->atkSpecies == SPECIES_ROTOM)
+				spAttack *= 2;
+			break;
+		#endif
+
+		#ifdef SPECIES_CORSOLA
+		case ITEM_EFFECT_GROWTH_TAPPER:
+		//1.5x Boost
+			if (data->atkSpecies == SPECIES_CORSOLA
+			#ifdef SPECIES_MR_MIME
+			||  data->atkSpecies == SPECIES_MR_MIME
+			#endif
+			#ifdef SPECIES_FARFETCHD
+			||  data->atkSpecies == SPECIES_FARFETCHD
+			#endif
+			#ifdef SPECIES_QWILFISH
+			||  data->atkSpecies == SPECIES_QWILFISH
+			#endif
+			#ifdef SPECIES_LINOONE
+			||  data->atkSpecies == SPECIES_LINOONE
+			#endif
+			#ifdef SPECIES_BASCULIN_RED
+			||  data->atkSpecies == SPECIES_BASCULIN_RED
+			#endif
+			#ifdef SPECIES_BASCULIN_BLUE
+			||  data->atkSpecies == SPECIES_BASCULIN_BLUE
+			#endif
+			)
+			attack = (attack * 3) / 2;
+			spAttack = (spAttack * 3) / 2;
+			break;
+		#endif
+			
+		case ITEM_EFFECT_ENERGY_BUSTER:
+			if (data->defItemEffect == ITEM_EFFECT_MEGA_STONE || data->defItemEffect == ITEM_EFFECT_Z_CRYSTAL || IsDynamaxed(bankDef)) //Affects Mega Evolved, Z-Crystal Holding, or Dynamaxed/Gmaxed Pokemon
+				damage = (damage * 13) / 10; //1.3 boost
+			break;
+			
+		#endif
 	}
 
 //Target Item Checks
@@ -2704,6 +2759,18 @@ static u16 GetBasePower(struct DamageCalc* data)
 			break;
 
 		case MOVE_HEX:
+			if (!(data->specialFlags & FLAG_IGNORE_TARGET)
+			&& data->defStatus1 & STATUS_ANY)
+				power *= 2;
+			break;
+			
+		case MOVE_INFERNALPARADE:
+			if (!(data->specialFlags & FLAG_IGNORE_TARGET)
+			&& data->defStatus1 & STATUS_ANY)
+				power *= 2;
+			break;
+		
+		case MOVE_BARBBARRAGE:
 			if (!(data->specialFlags & FLAG_IGNORE_TARGET)
 			&& data->defStatus1 & STATUS_ANY)
 				power *= 2;

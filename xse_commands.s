@@ -160,7 +160,7 @@
 .4byte \source
 .endm
 
-@ Not sure. Judging from XSE's description I think it takes the least-significant byte in bank source and writes it to destination.
+@ Not sure. Judging from the XSE description I think it takes the least-significant byte in bank source and writes it to destination.
 .macro setptrbyte source:req, destination:req
 .byte 0x13
 .byte \source

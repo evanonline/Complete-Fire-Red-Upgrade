@@ -264,3 +264,5 @@ gAbilityDescriptions:
 .word DESC_MIMICRY
 .word DESC_SCREENCLEANER
 .word DESC_PASTEL_VEIL
+.word DESC_UNSEEN_FIST
+.word DESC_AS_ONE

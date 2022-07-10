@@ -3,7 +3,7 @@
 #define MAPSEC_DYNAMIC                      0x57
 
 #ifndef UNBOUND //Modify this section
-#define MAPSEC_PALLET_TOWN                  0x58
+#define MAPSEC_PALLET_CITY                  0x58 //Pallet Town hit it big!
 #define MAPSEC_VIRIDIAN_CITY                0x59
 #define MAPSEC_PEWTER_CITY                  0x5A
 #define MAPSEC_CERULEAN_CITY                0x5B
@@ -43,21 +43,21 @@
 #define MAPSEC_ROUTE_25                     0x7D
 #define MAPSEC_VIRIDIAN_FOREST              0x7E
 #define MAPSEC_MT_MOON                      0x7F
-#define MAPSEC_S_S_ANNE                     0x80
-#define MAPSEC_UNDERGROUND_PATH             0x81
-#define MAPSEC_UNDERGROUND_PATH_2           0x82
+#define MAPSEC_VERMILION_MARINA             0x80 //S.S. Anne. Just an expanded area - maybe Vermilion Hotel goes here too
+#define MAPSEC_FROZEN_PATH         		    0x81 //Underground Path. Sneasel home, early game "dungeon"
+#define MAPSEC_GROUDON_BEACH				0x82 //Underground Path 2. Part of initial Sevii Islands story leading to gym 3
 #define MAPSEC_DIGLETTS_CAVE                0x83
 #define MAPSEC_KANTO_VICTORY_ROAD           0x84
 #define MAPSEC_ROCKET_HIDEOUT               0x85
 #define MAPSEC_SILPH_CO                     0x86
-#define MAPSEC_POKEMON_MANSION              0x87
-#define MAPSEC_KANTO_SAFARI_ZONE            0x88
+#define MAPSEC_MISSING_CHASM	            0x87 //Pokemon Mansion. Path to Missingno / Glitch City
+#define MAPSEC_PAL_PARK			            0x88 //Kanto Safari Zone. Missingno home
 #define MAPSEC_POKEMON_LEAGUE               0x89
 #define MAPSEC_ROCK_TUNNEL                  0x8A
 #define MAPSEC_SEAFOAM_ISLANDS              0x8B
-#define MAPSEC_POKEMON_TOWER                0x8C
+#define MAPSEC_POKEMON_CATACOMBS            0x8C //Pokemon Tower. Catacombs underneath Lavender Town.
 #define MAPSEC_CERULEAN_CAVE                0x8D
-#define MAPSEC_POWER_PLANT                  0x8E
+#define MAPSEC_DISTORTED_SEA                0x8E //Power Plant. Don't need to remove Power Plant, just make its area part of Route 10. Route to Severed Sootopolise
 #define MAPSEC_ONE_ISLAND                   0x8F
 #define MAPSEC_TWO_ISLAND                   0x90
 #define MAPSEC_THREE_ISLAND                 0x91
@@ -70,10 +70,10 @@
 #define MAPSEC_CAPE_BRINK                   0x98
 #define MAPSEC_BOND_BRIDGE                  0x99
 #define MAPSEC_THREE_ISLE_PORT              0x9A
-#define MAPSEC_SEVII_ISLE_6                 0x9B
-#define MAPSEC_SEVII_ISLE_7                 0x9C
-#define MAPSEC_SEVII_ISLE_8                 0x9D
-#define MAPSEC_SEVII_ISLE_9                 0x9E
+#define MAPSEC_ROUTE_26         	        0x9B // "Sevii Isle 6". Route to Johto from Pokemon League checkpoint gate.
+#define MAPSEC_ROUTE_27     	 	        0x9C // "Sevii Isle 7". Route to Johto, blocked off.
+#define MAPSEC_ROUTE_28		                0x9D // "Sevii Isle 8". Route to Mt. Silver
+#define MAPSEC_MT_SILVER	                0x9E // "Sevii Isle 9". Final location of Leaf (Possibly other endgame fights? Creator cameos, Serena's Gauntlet?)
 #define MAPSEC_RESORT_GORGEOUS              0x9F
 #define MAPSEC_WATER_LABYRINTH              0xA0
 #define MAPSEC_FIVE_ISLE_MEADOW             0xA1
@@ -82,19 +82,19 @@
 #define MAPSEC_GREEN_PATH                   0xA4
 #define MAPSEC_WATER_PATH                   0xA5
 #define MAPSEC_RUIN_VALLEY                  0xA6
-#define MAPSEC_TRAINER_TOWER                0xA7
+#define MAPSEC_BATTLE_FRONTIER              0xA7 // "Trainer Tower". Don't need to remove Trainer Tower, just roll its area into Battle Frontier
 #define MAPSEC_CANYON_ENTRANCE              0xA8
 #define MAPSEC_SEVAULT_CANYON               0xA9
 #define MAPSEC_TANOBY_RUINS                 0xAA
-#define MAPSEC_SEVII_ISLE_22                0xAB
-#define MAPSEC_SEVII_ISLE_23                0xAC
-#define MAPSEC_SEVII_ISLE_24                0xAD
+#define MAPSEC_MINNESOTA_LODGE              0xAB //"Sevii Isle 22". Warrior gathering led by Seb
+#define MAPSEC_WARRIOR_SNOWLAND   		    0xAC //"Sevii Isle 23". Route to Glastrier
+#define MAPSEC_SEVERED_SOOTOPOLIS			0xAD //"Sevii Isle 24". Irida / Hoopa / Blacephelon postgame
 #define MAPSEC_NAVEL_ROCK                   0xAE
 #define MAPSEC_MT_EMBER                     0xAF
 #define MAPSEC_BERRY_FOREST                 0xB0
 #define MAPSEC_ICEFALL_CAVE                 0xB1
 #define MAPSEC_ROCKET_WAREHOUSE             0xB2
-#define MAPSEC_TRAINER_TOWER_2              0xB3
+#define MAPSEC_ETERNAL_SUMMIT          	    0xB3 //"Trainer Tower 2". Arceus / Protoceus
 #define MAPSEC_DOTTED_HOLE                  0xB4
 #define MAPSEC_LOST_CAVE                    0xB5
 #define MAPSEC_PATTERN_BUSH                 0xB6
@@ -116,11 +116,15 @@
 #define MAPSEC_CELADON_DEPT                 0xC4
 #define MAPSEC_NONE                         0xC5
 
+#define MAPSEC_FARAWAY_ISLAND				0xC6 //MAY NOT WORK? addition. this can be dropped if needed. Mew island from Emerald
+#define MAPSEC_UNKNOWN_TOWER				0xC7 //Also might not work. Alloy's tower above Cerulean Cave
+
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
 #define METLOC_FATEFUL_ENCOUNTER            0xFF
 
-#define KANTO_MAPSEC_COUNT (MAPSEC_CELADON_DEPT - MAPSEC_DYNAMIC)
+//#define KANTO_MAPSEC_COUNT (MAPSEC_CELADON_DEPT - MAPSEC_DYNAMIC)
+#define KANTO_MAPSEC_COUNT (MAPSEC_FARAWAY_ISLAND - MAPSEC_DYNAMIC)
 
 #ifdef UNBOUND //For Pokemon Unbound
 

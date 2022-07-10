@@ -921,10 +921,10 @@ static bool8 IsPseudoBossTrainerPartyForLevelScaling(u8 trainerPartyFlags)
 static bool8 IsBossTrainerClassForLevelScaling(u16 trainerId)
 {
 	switch (gTrainers[trainerId].trainerClass) {
-		case CLASS_LEADER:
-		case CLASS_ELITE_4:
+		case CLASS_GYM_LEADER:
+		case CLASS_ELITE_FOUR:
 		case CLASS_CHAMPION:
-		case CLASS_BOSS:
+		case CLASS_ROCKET_BOSS:
 		#ifdef UNBOUND
 		case CLASS_LOR_LEADER:
 		#endif
@@ -1790,7 +1790,7 @@ static void CreateFrontierMon(struct Pokemon* mon, const u8 level, const struct 
 	#ifdef UNBOUND
 		mon->metLocation = MAPSEC_BATTLE_FRONTIER;
 	#else
-		mon->metLocation = MAPSEC_TRAINER_TOWER;
+		mon->metLocation = MAPSEC_BATTLE_FRONTIER;
 	#endif
 
 	mon->metLevel = level;

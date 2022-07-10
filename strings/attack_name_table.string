@@ -2216,11 +2216,71 @@ Thunder Kick
 #org @NAME_FIERY_WRATH
 Fiery Wrath
 
+#org @NAME_EERIE_SPELL
+Eerie Spell
+
 #org @NAME_THUNDER_CAGE
 Thunder Cage
 
 #org @NAME_DRAGON_ENERGY
 DragonEnergy
+
+#org @NAME_ASTRAL_BARRAGE
+Astral Barr.
+
+#org @NAME_GLACIAL_LANCE 
+GlacialLance
+
+#org @NAME_BARB_BARRAGE
+Barb Barrage
+
+#org @NAME_WAVE_CRASH
+Wave Crash
+
+#org @NAME_PSYSHIELD_BASH
+Psyshld Bash
+
+#org @NAME_DIRE_CLAW
+Dire Claw
+
+#org @NAME_INFERNAL_PARADE
+Infer.Parade
+
+#org @NAME_CEASELESS_EDGE
+CeaselesEdge
+
+#org @NAME_TRIPLE_ARROWS
+TripleArrows
+
+#org @NAME_STONEAXE
+Stone Axe
+
+#org @NAME_MOUNTAINGALE
+MountainGale
+
+#org @NAME_ESPERWING
+Esper Wing
+
+#org @NAME_CHLOROBLAST
+Chloroblast
+
+#org @NAME_BITTER_MALICE
+BitterMalice
+
+#org @NAME_SCRUNCH
+Scrunch
+
+#org @NAME_JAB
+Jab
+
+#org @NAME_SPECIAL_PUNCH
+SpecialPunch
+
+#org @NAME_LEEK_SLAP
+Leek Slap
+
+#org @NAME_POT_SMASH
+Pot Smash
 
 #org @Z_Move_1
 Z-Move 1

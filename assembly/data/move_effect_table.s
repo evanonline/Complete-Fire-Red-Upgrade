@@ -229,17 +229,17 @@ gBattleScriptsForMoveEffects:
 .word BS_211_CalmMind
 .word BS_212_DragonDance
 .word BS_213_StatSwapSplitters
-.word BS_214_Blank
-.word BS_215_Blank
-.word BS_216_Blank
-.word BS_217_Blank
+.word BS_214_Scrunch @Was blank
+.word BS_215_ShellSideArm @was blank
+.word BS_216_UnownHiddenPower @was blank
+.word BS_217_TripleArrows @was blank
 .word BS_218_MeFirst
 .word BS_219_DestroyBerry
 .word BS_220_NaturalGift
 .word BS_221_SmackDown
 .word BS_222_DamageResetTargetStatChanges
 .word BS_223_RelicSong
-.word BS_224_Blank
+.word BS_224_Poltergeist
 .word BS_225_Blank
 .word BS_226_Terrain
 .word BS_227_Pledges

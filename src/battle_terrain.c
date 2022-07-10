@@ -156,7 +156,11 @@ u8 GetBattleTerrainOverride(void)
 		#ifdef OVERWRITE_BG_FOR_LEADER_CHAMPION
 			u8 trainerClass = GetFrontierTrainerClassId(gTrainerBattleOpponent_A, 0);
 			u8 trainerClassB = GetFrontierTrainerClassId(SECOND_OPPONENT, 1);
-			if (trainerClass == CLASS_LEADER || trainerClassB == CLASS_LEADER)
+			if (trainerClass == CLASS_GYM_LEADER || trainerClassB == CLASS_GYM_LEADER)
+			{
+				terrain = 12;
+			}
+			else if (trainerClass == CLASS_ELITE_FOUR || trainerClassB == CLASS_ELITE_FOUR)
 			{
 				terrain = 12;
 			}

@@ -7,6 +7,9 @@ The effects of weather\ndisappeared.
 #org @gText_MoldBreakerActivate
 [SCRIPTING_BANK] breaks\nthe mold!
 
+#org @gText_AsOneActivate
+[SCRIPTING_BANK] has two\nAbilities!
+
 #org @gText_TeravoltActivate
 [SCRIPTING_BANK] is radiating\na bursting aura!
 

@@ -45,7 +45,7 @@ extern const u8 sTrainerName_Grayson[];
 extern const u8 sTrainerName_Jack[];
 extern const u8 sTrainerName_Julian[];
 extern const u8 sTrainerName_Levi[];
-extern const u8 sTrainerName_Christopher[];
+extern const u8 sTrainerName_Wakabayashi[];
 extern const u8 sTrainerName_Joshua[];
 extern const u8 sTrainerName_Andrew[];
 extern const u8 sTrainerName_Lincoln[];
@@ -59,7 +59,7 @@ extern const u8 sTrainerName_Thomas[];
 extern const u8 sTrainerName_Charles[];
 extern const u8 sTrainerName_Caleb[];
 extern const u8 sTrainerName_Josiah[];
-extern const u8 sTrainerName_Christian[];
+extern const u8 sTrainerName_Tenerence[];
 extern const u8 sTrainerName_Hunter[];
 extern const u8 sTrainerName_Eli[];
 extern const u8 sTrainerName_Jonathan[];
@@ -103,7 +103,7 @@ extern const u8 sTrainerName_Jason[];
 extern const u8 sTrainerName_Santiago[];
 extern const u8 sTrainerName_Chase[];
 extern const u8 sTrainerName_Sawyer[];
-extern const u8 sTrainerName_Gavin[];
+extern const u8 sTrainerName_Yuu[];
 extern const u8 sTrainerName_Leonardo[];
 extern const u8 sTrainerName_Kayden[];
 extern const u8 sTrainerName_Ayden[];
@@ -146,8 +146,8 @@ extern const u8 sTrainerName_Addison[];
 extern const u8 sTrainerName_Eleanor[];
 extern const u8 sTrainerName_Natalie[];
 extern const u8 sTrainerName_Luna[];
-extern const u8 sTrainerName_Savannah[];
-extern const u8 sTrainerName_Brooklyn[];
+extern const u8 sTrainerName_Peggy[];
+extern const u8 sTrainerName_Hitomi[];
 extern const u8 sTrainerName_Leah[];
 extern const u8 sTrainerName_Zoe[];
 extern const u8 sTrainerName_Stella[];
@@ -249,7 +249,7 @@ const u8* const gMaleFrontierNamesTable[] =
 	sTrainerName_Jack,
 	sTrainerName_Julian,
 	sTrainerName_Levi,
-	sTrainerName_Christopher,
+	sTrainerName_Wakabayashi,
 	sTrainerName_Joshua,
 	sTrainerName_Andrew,
 	sTrainerName_Lincoln,
@@ -263,7 +263,7 @@ const u8* const gMaleFrontierNamesTable[] =
 	sTrainerName_Charles,
 	sTrainerName_Caleb,
 	sTrainerName_Josiah,
-	sTrainerName_Christian,
+	sTrainerName_Tenerence,
 	sTrainerName_Hunter,
 	sTrainerName_Eli,
 	sTrainerName_Jonathan,
@@ -307,7 +307,7 @@ const u8* const gMaleFrontierNamesTable[] =
 	sTrainerName_Santiago,
 	sTrainerName_Chase,
 	sTrainerName_Sawyer,
-	sTrainerName_Gavin,
+	sTrainerName_Yuu,
 	sTrainerName_Leonardo,
 	sTrainerName_Kayden,
 	sTrainerName_Ayden,
@@ -353,8 +353,8 @@ const u8* const gFemaleFrontierNamesTable[] =
 	sTrainerName_Eleanor,
 	sTrainerName_Natalie,
 	sTrainerName_Luna,
-	sTrainerName_Savannah,
-	sTrainerName_Brooklyn,
+	sTrainerName_Peggy,
+	sTrainerName_Hitomi,
 	sTrainerName_Leah,
 	sTrainerName_Zoe,
 	sTrainerName_Stella,

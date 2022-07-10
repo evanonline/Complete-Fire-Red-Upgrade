@@ -52,7 +52,7 @@
 #define FLAG_RUNNING_ENABLED 0x82F //The player can only run if this flag is set. If commented, the player will start the game with running shoes.
 #define FLAG_BIKE_TURBO_BOOST 0x91F //The bike moves extra fast if this flag is set or if the player holds B.
 #define FLAG_DISABLE_BAG 0x915 //The bag can't be used in-battle if this flag is set
-#define FLAG_MOVE_RELEARNER_IGNORE_LEVEL 0x916 //When set, the move relearner shows all level-up moves up to MAX_LEVEL
+//#define FLAG_MOVE_RELEARNER_IGNORE_LEVEL 0x916 //When set, the move relearner shows all level-up moves up to MAX_LEVEL
 #define FLAG_EGG_MOVE_RELEARNER 0x917 //When set, the move learner loads egg moves instead
 #define FLAG_DYNAMAX_BATTLE 0x918 //When set, Pokemon can Dynamax in battle
 #define FLAG_RAID_BATTLE 0x919 //When set, wild Pokemon will appear Dynamaxed and be fought Raid Battle style.
@@ -111,29 +111,29 @@ enum //These vars need to be one after the other (hence the enum)
 #define VAR_HEALING_YPOS 0x5039 //0x405C in JPAN's Engine
 
 /*===== TM/HM/Tutor Options (Vastly improved from other versions!) =====*/
-//#define EXPANDED_TMSHMS  //Comment this out if you want to keep 50 tms/8 hms
-//#define EXPANDED_MOVE_TUTORS //Comment this out if you want to keep 16 move tutors and the ultimate elemental moves being exclusive to Kantonian starters
-#define NUM_TMS 50	//keep this defined even if EXPANDED_TMSHMS is not!!
-#define NUM_HMS 8	//keep this defined even if EXPANDED_TMSHMS is not!!
-#define NUM_MOVE_TUTORS 16 //keep this defined even if EXPANDED_MOVE_TUTORS is not!! If using DPE, set to 128.
+#define EXPANDED_TMSHMS  //Comment this out if you want to keep 50 tms/8 hms
+#define EXPANDED_MOVE_TUTORS //Comment this out if you want to keep 16 move tutors and the ultimate elemental moves being exclusive to Kantonian starters
+#define NUM_TMS 120	//keep this defined even if EXPANDED_TMSHMS is not!!
+#define NUM_HMS 8   //keep this defined even if EXPANDED_TMSHMS is not!!
+#define NUM_MOVE_TUTORS 128 //keep this defined even if EXPANDED_MOVE_TUTORS is not!! If using DPE, set to 128.
 #define LAST_TOTAL_TUTOR_NUM 24 //Should be equal to (NUM_MOVE_TUTORS - 1) + 9. Must be set to an actual integer or the compilation will not work.
-//#define TMS_BEFORE_HMS  //Uncomment this if you want the HMs to appear after the TMs in your bag
-//#define DELETABLE_HMS //Uncomment this if you want HMs to be deletable without the Move Deleter
-//#define REUSABLE_TMS	//if defined, don't forget to give all TMs a Mystery byte of 1!
+#define TMS_BEFORE_HMS  //Uncomment this if you want the HMs to appear after the TMs in your bag
+#define DELETABLE_HMS //Uncomment this if you want HMs to be deletable without the Move Deleter
+#define REUSABLE_TMS	//if defined, don't forget to give all TMs a Mystery byte of 1!
 
 /*===== Time of Day Options =====*/
 #define TIME_MORNING_START 4		//4:00 AM / 4:00
-#define TIME_DAY_START 8			//8:00 AM / 8:00
-#define TIME_EVENING_START 17		//5:00 PM / 17:00
-#define TIME_NIGHT_START 20			//8:00 PM / 20:00
+#define TIME_DAY_START 11			//11:00 AM / 11:00
+#define TIME_EVENING_START 18		//6:00 PM / 18:00
+#define TIME_NIGHT_START 21			//9:00 PM / 21:00
 
 /*===== General Number Options =====*/
-#define KANTO_DEX_COUNT 151
-#define NATIONAL_DEX_COUNT 386
+#define KANTO_DEX_COUNT 905 // Kanto regional dex should be "reordered 905" in DPE - Evan
+#define NATIONAL_DEX_COUNT 905
 
 #define MAX_LEVEL 100 //Also change this in the file "asm_defines.asm" found in the root
 #define NUM_TRAINER_CLASSES 107 //Vanilla FR has 107
-#define EVOS_PER_MON 5 //The number of maximum evolutions per Pokemon. Vanilla FR has 5. DPE has 16!!!
+#define EVOS_PER_MON 16 //The number of maximum evolutions per Pokemon. Vanilla FR has 5. DPE has 16!!!
 #define EV_CAP 252 //Also change this in the file "asm_defines.s" found in the root
 #define POWER_ITEM_EV_YIELD 8 //Set to 4 for older mechanic
 
@@ -168,9 +168,9 @@ enum //These vars need to be one after the other (hence the enum)
 #define BADGE_7_OBEDIENCE_LEVEL 70
 
 /*===== OW Palette Options =====*/
-#define TREE_DISGUISE_PAL_ID 0x1105 //The NPC palette id of the tree disguise movement permission.
-#define ROCK_DISGUISE_PAL_ID 0x1104 //The NPC palette id of the mountain disguise movement permission.
-#define WEIRD_DISGUISE_PAL_ID 0x1103 //The NPC palette id of the weird disguise movement permission.
+#define TREE_DISGUISE_PAL_ID 0x1180 //The NPC palette id of the tree disguise movement permission.
+#define ROCK_DISGUISE_PAL_ID 0x1181 //The NPC palette id of the mountain disguise movement permission.
+#define WEIRD_DISGUISE_PAL_ID 0x1182 //The NPC palette id of the weird disguise movement permission.
 
 /*===== Pre-Battle Mugshot Options ====*/
 #define FR_PRE_BATTLE_MUGSHOT_STYLE //The FR Elite Four and Champion use their GF defined mugshots
@@ -189,7 +189,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define FLAG_POKEMON_RANDOMIZER 0x940 //Setting randomizes Pokemon species that are created.
 //#define FLAG_POKEMON_LEARNSET_RANDOMIZER 0x941 //Setting randomizes Pokemon learnsets.
 //#define FLAG_ABILITY_RANDOMIZER 0x942 //Setting randomizes Pokemon abilities.
-#define NUM_SPECIES_RANDOMIZER NUM_SPECIES_GEN_7 //The final number of Pokemon (+ 1) of species that can appear in the randomizer. Change to NUM_SPECIES for Gen 8
+#define NUM_SPECIES_RANDOMIZER NUM_SPECIES //The final number of Pokemon (+ 1) of species that can appear in the randomizer. Change to NUM_SPECIES for Gen 8
 
 /*===== Pre-existing Offsets =====*/
 //#define EXISTING_FOSSIL_IMAGE_TABLE_ADDRESS 0x81a4600 //Uncomment this if you've already inserted a fossil image table
@@ -200,7 +200,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define DNS_IN_BATTLE //Comment this line to disable the Day/Night system from working in battle
 #define OVERWRITE_RIVAL //Comment this line to disable to loading of your rival's name into trainer classes 0x51, 0x59, and 0x5A
 #define TRAINER_CLASS_POKE_BALLS //Comment this line to disable creating Trainer's pokemon with Poke Balls specific to their trainer class
-//#define TRAINERS_WITH_EVS //Uncomment this line to enable the Trainers with EVs hack, (only avaible with custom moveset and held item)
+#define TRAINERS_WITH_EVS //Uncomment this line to enable the Trainers with EVs hack, (only avaible with custom moveset and held item)
 //#define CONTINUE_LOST_BATTLES //Uncommenting this line will allow using trainerbattle 0x9 to continue lost battles if var 0x8000 is set to 0xFEFE
 #define DISPLAY_REAL_MOVE_TYPE_ON_MENU //If this line remains uncommented, the "true" move type will be displayed (such as Hidden Power, Weather Ball in Weather, etc.)
 #define DISPLAY_REAL_ACCURACY_ON_MENU //If this line remains uncommented, the "true" move accuracy will be displayed (Eg. The move Psychic on a Pokemon with Compound Eyes will have its accuracy appear as 130)
@@ -221,14 +221,14 @@ enum //These vars need to be one after the other (hence the enum)
 //#define SET_HEALING_PLACE_HACK  //Uncomment this if you want custom map/bank whiteout respawn locations
 //#define FOSSIL_IMAGE_HACK   //Uncommenting includes JPANs fossil image hack (see EXISTING_FOSSIL_IMAGE_TABLE_ADDRESS)
 #define EVO_HOLD_ITEM_REMOVAL //Comment this out if you want leveling up/hold item evolution (eg. sneasel) to remove the item (like normal)
-#define EXPAND_MOVESETS //Comment this out if you're using the Dynamic Pokemon Expansion repo to expand the movesets
+//#define EXPAND_MOVESETS //Comment this out if you're using the Dynamic Pokemon Expansion repo to expand the movesets
 //#define FATHER_PASSES_TMS //Uncomment this out if you want TMs the father knows to be passed through breeding
 //#define INHERIT_MASTER_CHERISH_BALL  //Uncomment this if you want Master and Cherish balls to be inherited by daycare offspring
-//#define GIVEPOKEMON_CUSTOM_HACK //Alows custom Pokemon to be given by setting the second last byte of the givepokemon scripting command
-//#define GIVEPOKEMON_BALL_HACK //Allows Pokemon to be given with a custom ball by setting the last byte of the givepokemon scripting command
+#define GIVEPOKEMON_CUSTOM_HACK //Alows custom Pokemon to be given by setting the second last byte of the givepokemon scripting command
+#define GIVEPOKEMON_BALL_HACK //Allows Pokemon to be given with a custom ball by setting the last byte of the givepokemon scripting command
 #define FRLG_ROAMING //When a roaming Pokemon is created, it will either be a Entei, Raikou, or Suicune, depending on the player's starter choice
 #define CAN_RUN_IN_BUILDINGS //Comment this line out to prevent the player from running indoors.
-//#define NO_POISON_IN_OW //Uncommenting this line will stop Pokemon from taking Poison damage in the overworld.
+#define NO_POISON_IN_OW //Uncommenting this line will stop Pokemon from taking Poison damage in the overworld.
 #define POISON_1_HP_SURVIVAL //Comment this line to allow Pokemon to faint from Poison in the overworld.
 #define BW_REPEL_SYSTEM  //Keep this uncommented if you want the game to ask the user to re-use another repel when it runs out
 #define AUTO_NAMING_SCREEN_SWAP  //Comment out if you don't want naming screens to auto-swap to lower-case after first upper-case letter
@@ -242,14 +242,14 @@ enum //These vars need to be one after the other (hence the enum)
 #define EXPANDED_TEXT_BUFFERS //Expands the number of scripting string buffers available. Comment out to keep original buffer text
 #define FOOTSTEP_NOISES //Sounds will be played when any object moves through grass or across sand
 #define CAN_ONLY_USE_OMNIDRECTIONAL_JUMP_ON_HEIGHT_2 //The omnidirectional jump tiles can only be used if the player is standing on a tile of height 2 (movement permission 0xC in AdvanceMap)
-#define HOOPA_CHANGE_IN_PC //Hoopa-Unbound will revert to confined form when placed in or withdrawn from a box
-#define SHAYMIN_CHANGE_IN_PC //Shaymin-Sky will revert to sky from when placed in or withdrawn from a box
+//#define HOOPA_CHANGE_IN_PC //Hoopa-Unbound will revert to confined form when placed in or withdrawn from a box
+//#define SHAYMIN_CHANGE_IN_PC //Shaymin-Sky will revert to sky from when placed in or withdrawn from a box
 #define HIGH_PITCH_MEGA_PRIMAL_CRY //Mega Pokemon cries will be higher pitched. This is useful if you're using the base form cries for Mega Evolutions
-//#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158.
+#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158. Note that this will break vanilla FR scripts around Celadon, such as the elevators, TM 4 drink girl, etc.
 //#define REPLACE_SOME_VANILLA_SPECIALS //Replaces the sp07C, sp07D, sp09E, sp156, sp18B, & the Coins scripting commands with modified versions. Breaks vanilla FR compatability.
 #define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
 //#define ONLY_CHECK_ITEM_FOR_HM_USAGE //Allows HMs to be used if the HM is the Bag, and as long as there is a Pokemon in the party that can learn the HM
-//#define FADE_NPCS_IN_FOG //Blends the NPC palettes in foggy weather to create the illusion that they're under the fog. Breaks FR Pokemon Tower healing zone
+#define FADE_NPCS_IN_FOG //Blends the NPC palettes in foggy weather to create the illusion that they're under the fog. Breaks FR Pokemon Tower healing zone
 
 /*===== Misc Battle Effect Options =====*/
 //#define OLD_BURN_DAMAGE //Uncomment this line if you want burn damage to do 1/8 of max health instead of 1/16
@@ -291,7 +291,7 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== Exp Gain Options =====*/
 //#define OLD_EXP_SHARE //Uncomment this line to make the Exp. Share work like it did before Gen 6
-//#define TRAINER_EXP_BOOST // Uncomment this line to give the Exp boost for battling a Trainer's Pokemon (Pre Gen 7)
+#define TRAINER_EXP_BOOST // Uncomment this line to give the Exp boost for battling a Trainer's Pokemon (Pre Gen 7)
 //#define OLD_EXP_SPLIT //Uncomment this line to split the Exp amongst all participating pokemon (Pre Gen 6)
 //#define FLAT_EXP_FORMULA //Uncomment this line to use a Flat Exp calculation formula (Gens 2 - 4, 6)
 #define GEN_7_BASE_EXP_YIELD //Base Exp Yield is read from gBaseExpBySpecies to use larger values that match Gen 7
@@ -300,7 +300,7 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== Other Battle Options =====*/
 //#define NO_GHOST_BATTLES //Uncomment this line to disable the Ghost battle feature from Pokemon Tower in Lavender town
-//#define GEN4_PLUS_SELECTION_SCREEN //Uncommenting this line does not give you the Gen 4+ selection screen, it only adds features that supports it
+#define GEN4_PLUS_SELECTION_SCREEN //Uncommenting this line does not give you the Gen 4+ selection screen, it only adds features that supports it
 //#define OBEDIENCE_CHECK_FOR_PLAYER_ORIGINAL_POKEMON //Uncommenting line line will open up the possibility that the Player's Pokemon can disobey them (not just traded mons)
 //#define WILD_ALWAYS_SMART //Uncomment this line if you want all Wild Pokemon to act smartly
 //#define HAIL_IN_BATTLE //Uncommenting this line enables the Hail weather effect in battle when the OW weather is set to WEATHER_STEADY_SNOW (0x7)
@@ -312,7 +312,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define DONT_HIDE_HEALTHBOXES_ATTACKER_STATUS_MOVES //Uncommenting this line doesn't hide the healthboxes when the attacker is using a status move that targets itself (Gen 4).
 //#define ENCOUNTER_MUSIC_BY_CLASS //Plays music when a trainer spots the player based on the trainer class rather than the value set in the trainer data.
 #define OKAY_WITH_AI_SUICIDE //The AI is allowed to use self-destructing moves
-//#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
+#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
 
 /* DexNav Options */
 //See "include/new/dexnav_config.h"

@@ -132,8 +132,8 @@ void HandleEndTurn_BattleWon(void)
 	VICTORY_MUSIC_SELECTION:
 		switch (gTrainers[id].trainerClass) {
 		#ifndef UNBOUND //Change this part
-			case CLASS_LEADER:
-			case CLASS_ELITE_4:
+			case CLASS_GYM_LEADER:
+			case CLASS_ELITE_FOUR:
 			case CLASS_CHAMPION:
 				PlayBGM(BGM_VICTORY_SPECIAL);
 				specialMus = TRUE;

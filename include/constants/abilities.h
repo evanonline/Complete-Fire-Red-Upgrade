@@ -118,7 +118,7 @@
 #define ABILITY_MAGICGUARD 0x73
 #define ABILITY_BULLETPROOF 0x74
 #define ABILITY_GALEWINGS 0x75
-#define ABILITY_MOXIE 0x76
+#define ABILITY_MOXIE 0x76 //Also Chilling Neigh, probably reworkable into Grim Neigh too
 #define ABILITY_AFTERMATH 0x77
 #define ABILITY_CURSEDBODY 0x78
 #define ABILITY_GOOEY 0x79
@@ -162,7 +162,7 @@
 #define ABILITY_DISGUISE 0x9F
 #define ABILITY_EMERGENCYEXIT 0xA0 //Also Wimp Out
 #define ABILITY_FLUFFY 0xA1
-#define ABILITY_STEELY_SPIRIT 0xA2
+#define ABILITY_STEELY_SPIRIT 0xA2 //Also Steelworker; will wrap Transistor and Dragon's Maw in
 #define ABILITY_PERISH_BODY 0xA3
 #define ABILITY_WANDERING_SPIRIT 0xA4
 #define ABILITY_POWERCONSTRUCT 0xA5
@@ -244,7 +244,7 @@
 #define ABILITY_COTTONDOWN 0xF1
 #define ABILITY_MIRRORARMOR 0xF2
 #define ABILITY_GULPMISSLE 0xF3
-#define ABILITY_STALWART 0xF4 //Also Propellor Tail
+#define ABILITY_STALWART 0xF4 //Also Propeller Tail
 #define ABILITY_STEAMENGINE 0xF5
 #define ABILITY_PUNKROCK 0xF6
 #define ABILITY_SANDSPIT 0xF7
@@ -255,5 +255,20 @@
 #define ABILITY_MIMICRY 0xFC
 #define ABILITY_SCREENCLEANER 0xFD
 #define ABILITY_PASTELVEIL 0xFE
+
+//#define ABILITY_UNSEENFIST 0xFF
+//#define ABILITY_ASONE 0x100
+//#define ABILITY_QUICKDRAW 0x101
+//#define ABILITY_CURIOUSMEDICINE 0x102
+//#define ABILITY_TRANSISTOR
+//#define ABILITY_DRAGONSMAW
+//#define ABILITY_GRIMNEIGH
+
+//Extra abilities are
+//Pure Power
+//Libero
+//Wimp Out
+//Chilling Neigh
+//Need to be written differently in CFRU as they have been condensed into similar abilities
 
 #define ABILITIES_COUNT (ABILITY_PASTELVEIL + 1)

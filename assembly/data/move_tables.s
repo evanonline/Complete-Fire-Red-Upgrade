@@ -26,6 +26,7 @@ move_tables.s
 .global gSheerForceBoostedMoves
 .global gRecklessBoostedMoves
 .global gPunchingMoves
+.global gKickingMoves
 .global gPulseAuraMoves
 .global gBitingMoves
 .global gBallBombMoves
@@ -123,6 +124,7 @@ gCopycatBannedMoves:
 .hword MOVE_MIRRORCOAT
 .hword MOVE_MIRRORMOVE
 .hword MOVE_PROTECT
+.hword MOVE_SCRUNCH
 .hword MOVE_RAGEPOWDER
 .hword MOVE_ROAR
 .hword MOVE_SHELLTRAP
@@ -183,6 +185,7 @@ gMetronomeBannedMoves:
 .hword MOVE_THIEF
 .hword MOVE_SNORE
 .hword MOVE_PROTECT
+.hword MOVE_SCRUNCH
 .hword MOVE_DESTINYBOND
 .hword MOVE_DETECT
 .hword MOVE_ENDURE
@@ -376,6 +379,7 @@ gParentalBondBannedMoves:
 .hword MOVE_FLING
 .hword MOVE_SELFDESTRUCT
 .hword MOVE_EXPLOSION
+.hword MOVE_MISTYEXPLOSION
 .hword MOVE_FINALGAMBIT
 .hword MOVE_ENDEAVOR
 .hword MOVE_UPROAR
@@ -436,6 +440,7 @@ gRaidBattleBannedMoves:
 .hword MOVE_CURSE
 .hword MOVE_DESTINYBOND
 .hword MOVE_EXPLOSION
+.hword MOVE_MISTYEXPLOSION
 .hword MOVE_INCINERATE
 .hword MOVE_KNOCKOFF
 .hword MOVE_PERISHSONG
@@ -455,10 +460,11 @@ gRaidBattleBannedRaidMonMoves:
 .hword MOVE_STEELBEAM
 .hword MOVE_PAINSPLIT
 .hword MOVE_ENDEAVOR
-.hword MOVE_FOCUSPUNCH @Must be executed as Max Moves b/c intros don't play
+.hword MOVE_FOCUSPUNCH @Must be executed as Max Moves b/c intros do not play
 .hword MOVE_SHELLTRAP
 .hword MOVE_BEAKBLAST
 .hword MOVE_PROTECT
+.hword MOVE_SCRUNCH
 .hword MOVE_DETECT
 .hword MOVE_QUICKGUARD
 .hword MOVE_WIDEGUARD
@@ -645,6 +651,11 @@ gSheerForceBoostedMoves:
 .hword MOVE_ZAPCANNON
 .hword MOVE_ZENHEADBUTT
 .hword MOVE_ZINGZAP
+.hword MOVE_BARBBARRAGE
+.hword MOVE_DIRECLAW
+.hword MOVE_INFERNALPARADE
+.hword MOVE_ESPERWING
+.hword MOVE_BITTERMALICE
 .hword MOVE_TABLES_TERMIN
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -663,6 +674,7 @@ gRecklessBoostedMoves:
 .hword MOVE_VOLTTACKLE
 .hword MOVE_WOODHAMMER
 .hword MOVE_WILDCHARGE
+.hword MOVE_WAVECRASH
 .hword MOVE_TABLES_TERMIN
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -687,6 +699,25 @@ gPunchingMoves:
 .hword MOVE_ICEHAMMER
 .hword MOVE_PLASMAFISTS
 .hword MOVE_DOUBLEIRONBASH
+.hword MOVE_JAB
+.hword MOVE_SPECIAL_PUNCH
+.hword MOVE_TABLES_TERMIN
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+gKickingMoves:
+.hword MOVE_BLAZEKICK
+.hword MOVE_DOUBLEKICK
+.hword MOVE_HIGHJUMPKICK
+.hword MOVE_JUMPKICK
+.hword MOVE_LOWKICK
+.hword MOVE_MEGAKICK
+.hword MOVE_ROLLINGKICK
+.hword MOVE_STOMP
+.hword MOVE_THUNDEROUSKICK
+.hword MOVE_TRIPLEARROWS
+.hword MOVE_TRIPLEAXEL
+.hword MOVE_TRIPLEKICK
 .hword MOVE_TABLES_TERMIN
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -909,6 +940,10 @@ gHighCriticalChanceMoves:
 .hword MOVE_SPACIALREND
 .hword MOVE_DRILLRUN
 .hword MOVE_SNIPESHOT
+.hword MOVE_DIRECLAW
+.hword MOVE_CEASELESSEDGE
+.hword MOVE_STONEAXE
+.hword MOVE_ESPERWING
 .hword MOVE_TABLES_TERMIN
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -1084,11 +1119,13 @@ gPercent33RecoilMoves:
 .hword MOVE_FLAREBLITZ
 .hword MOVE_BRAVEBIRD
 .hword MOVE_WOODHAMMER
+.hword MOVE_WAVECRASH
 .hword MOVE_TABLES_TERMIN
 
 gPercent50RecoilMoves:
 .hword MOVE_HEADSMASH
 .hword MOVE_LIGHTOFRUIN
+.hword MOVE_CHLOROBLAST
 .hword MOVE_TABLES_TERMIN
 
 gPercent66RecoilMoves:

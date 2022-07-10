@@ -94,7 +94,7 @@
 #define ITEM_EFFECT_GRISEOUS_ORB 90
 #define ITEM_EFFECT_DESTINY_KNOT 91
 #define ITEM_EFFECT_EXPERT_BELT 92
-#define ITEM_EFFECT_PRIMAL_ORB 93 //Red Orb: Quality = 0, Blue Orb: Quality = 1
+#define ITEM_EFFECT_PRIMAL_ORB 93 //Red Orb: Quality = 0, Blue Orb: Quality = 1, Chrono Orb: Quality = 2,
 #define ITEM_EFFECT_GEM 94 //Quality = Move Type
 #define ITEM_EFFECT_WEAKNESS_BERRY 95 //Quality = Move Type
 #define ITEM_EFFECT_CUSTAP_BERRY 96
@@ -140,6 +140,11 @@
 #define ITEM_EFFECT_UTILITY_UMBRELLA 136
 #define ITEM_EFFECT_THROAT_SPRAY 137
 
+#define ITEM_EFFECT_ENERGY_BUSTER 138
+#define ITEM_EFFECT_LEGEND_PLATE 139
+#define ITEM_EFFECT_GROWTH_TAPPER 140
+#define ITEM_EFFECT_SPIRIT_MOTOR 141
+
 #define ITEM_EFFECT_COUNT (ITEM_EFFECT_THROAT_SPRAY + 1)
 
 //Focus Sash: Item Effect = ITEM_EFFECT_FOCUS_BAND, Item Quality = 100, Item Mystery 2 = 1
@@ -156,6 +161,7 @@ enum OrbQualities
 {
 	QUALITY_RED_ORB,		//0
 	QUALITY_BLUE_ORB,		//1
+	QUALITY_CHRONO_ORB,		//2
 };
 
 enum PowerItemQualities
