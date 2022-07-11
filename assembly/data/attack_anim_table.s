@@ -15935,7 +15935,7 @@ HOLDHANDS_HEART: objtemplate ANIM_TAG_MAGENTA_HEART ANIM_TAG_VERTICAL_HEX OAM_OF
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
-@Credits to -
+@Background credit to Greenphx9
 ANIM_DYNAMAX_CANNON:
 	loadparticle ANIM_TAG_PURPLE_RING
 	launchtask AnimTask_BlendParticle 0x5 0x5 ANIM_TAG_PURPLE_RING 0x0 0xC 0xC 0x3D98 @;Pinkish Red
