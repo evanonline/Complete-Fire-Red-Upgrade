@@ -91,6 +91,7 @@
 .equ BG_HYPER_BEAM, 0x49
 .equ BG_DYNAMAX_CANNON, 0x4A
 .equ BG_AURA_SPHERE, 0x4B
+.equ BG_BITTER_MALICE, 0x4C
 
 @pals for pal fading tasks
 .equ PAL_BG, 0x1

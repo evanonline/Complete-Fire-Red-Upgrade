@@ -140,3 +140,6 @@ definitions for battle backgrounds
 .equ BG_AURA_SPHERE_IMG, Focus_BlastTiles
 .equ BG_AURA_SPHERE_PAL, Aura_Sphere_BGPal
 .equ BG_AURA_SPHERE_RAW, Focus_BlastMap
+.equ BG_BITTER_MALICE_IMG, NightmareTiles
+.equ BG_BITTER_MALICE_PAL, Bitter_MalicePal
+.equ BG_BITTER_MALICE_RAW, NightmareMap
