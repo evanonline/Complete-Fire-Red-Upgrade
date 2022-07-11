@@ -106,6 +106,7 @@ definitions for animation particles
 .equ MISTY_EXPLOSION_IMG, Misty_ExplosionTiles
 .equ BABY_IMG, BabyTiles
 .equ LEEK_IMG, LeekTiles
+.equ DECORATE_IMG, DecorateTiles
 
 @;Palettes
 .equ SWORD_PAL, SwordPal
@@ -214,3 +215,4 @@ definitions for animation particles
 .equ MISTY_EXPLOSION_PAL, Misty_ExplosionPal
 .equ BABY_PAL, BabyPal
 .equ LEEK_PAL, LeekPal
+.equ DECORATE_PAL, DecoratePal

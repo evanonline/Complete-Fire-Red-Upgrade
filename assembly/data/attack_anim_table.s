@@ -16341,8 +16341,23 @@ ANIM_BODY_PRESS:
 .pool
 @Credits to -
 ANIM_DECORATE:
-	goto 0x81c6f34 @ANIM_POUND
+	loadparticle ANIM_TAG_DECORATE
+	playsound2 0xAD SOUND_PAN_TARGET
+	launchtemplate DECORATE_SWEETS 0x82 0x5 0x14 0x0 0x0 0x18 0x1e
+	pause 0x4
+	playsound2 0xAD SOUND_PAN_TARGET
+	launchtemplate DECORATE_SWEETS 0x82 0x5 0x14 0x0 0xffe8 0x18 0x1e
+	pause 0x4
+	playsound2 0xAD SOUND_PAN_TARGET
+	launchtemplate DECORATE_SWEETS 0x82 0x5 0x14 0x0 0x18 0x18 0x1e
+	pause 0x4
+	pause 0x6
+	playsound2 0xAC SOUND_PAN_TARGET
+	waitforsound
 	endanimation
+	
+.align 2
+DECORATE_SWEETS: objtemplate ANIM_TAG_DECORATE ANIM_TAG_DECORATE OAM_OFF_32x32 gDummySpriteAnimTable 0x0 gDummySpriteAffineAnimTable 0x80DE8B1
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
@@ -16887,9 +16902,47 @@ GENERIC_EXPLOSION:
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
-@Credits to -
 ANIM_ETERNABEAM:
-	goto 0x81d29a7 @ANIM_HYPERBEAM
+	loadparticle ANIM_TAG_PURPLE_RING
+	launchtask AnimTask_BlendParticle 0x5 0x5 ANIM_TAG_PURPLE_RING 0x0 0xC 0xC 0x7CBF @;Pink
+	launchtask AnimTask_pal_fade 0xa 0x5 PAL_BG 0x1 0x0 0xE 0x0 @;Black
+	pokespritetoBG side_target
+	pause 0x10
+	playsoundpanchange 0x8A SOUND_PAN_ATTACKER SOUND_PAN_TARGET 0x2 0x0
+	launchtask AnimTask_screen_shake 0x5 0x3, 5, 1, 67
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	launchtask AnimTask_move_bank 0x5 0x5 bank_target 0x0 0x4 0x45 0x1
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	launchsoundtask 0x80DCF39 0x7 0xc8 0xffc0 SOUND_PAN_TARGET 0x3 0x4 0x0 0xf  
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	call PURPLE_BEAM
+	waitanimation
+	pause 0x5
+	launchtask AnimTask_pal_fade 0xa 0x5 PAL_BG 0x1 0xE 0x0 0x0 @;From black
+	pokespritefromBG side_target
 	endanimation
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
