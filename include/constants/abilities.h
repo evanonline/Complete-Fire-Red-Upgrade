@@ -162,7 +162,7 @@
 #define ABILITY_DISGUISE 0x9F
 #define ABILITY_EMERGENCYEXIT 0xA0 //Also Wimp Out
 #define ABILITY_FLUFFY 0xA1
-#define ABILITY_STEELY_SPIRIT 0xA2 //Also Steelworker; will wrap Transistor and Dragon's Maw in
+#define ABILITY_STEELY_SPIRIT 0xA2
 #define ABILITY_PERISH_BODY 0xA3
 #define ABILITY_WANDERING_SPIRIT 0xA4
 #define ABILITY_POWERCONSTRUCT 0xA5
