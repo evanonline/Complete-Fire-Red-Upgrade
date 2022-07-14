@@ -16428,8 +16428,17 @@ ANIM_DRUM_BEATING:
 @Credits to -
 .global ANIM_SNAP_TRAP
 ANIM_SNAP_TRAP:
-	goto 0x81c6f34 @ANIM_POUND
+	loadparticle ANIM_TAG_SNAPTRAP
+	playsound2 0x9A SOUND_PAN_TARGET
+	launchtemplate SNAPTRAP_TEMP, TEMPLATE_TARGET | 2, 0x3, 0, 0, 1
+	pause 0x4
+	playsound2 0x71 SOUND_PAN_TARGET
+	waitanimation
 	endanimation
+	
+.align 2
+SNAPTRAP_TEMP: objtemplate ANIM_TAG_SNAPTRAP ANIM_TAG_SNAPTRAP OAM_OFF_32x32 sExplosionAnimTable 0x0 gDummySpriteAffineAnimTable SpriteCB_AnimSpriteOnMonPos
+	
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
@@ -18174,7 +18183,7 @@ ANIM_BITTER_MALICE:
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
 .pool
 ANIM_SCRUNCH:
-	goto 0x81c6f34 @ANIM_POUND
+	goto 0x81c8f1c	@MOVE_DEFENSECURL
 	endanimation
 	
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	

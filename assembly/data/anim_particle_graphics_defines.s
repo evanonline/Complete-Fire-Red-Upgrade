@@ -107,6 +107,7 @@ definitions for animation particles
 .equ BABY_IMG, BabyTiles
 .equ LEEK_IMG, LeekTiles
 .equ DECORATE_IMG, DecorateTiles
+.equ SNAPTRAP_IMG, SnapTrapTiles
 
 @;Palettes
 .equ SWORD_PAL, SwordPal
@@ -216,3 +217,4 @@ definitions for animation particles
 .equ BABY_PAL, BabyPal
 .equ LEEK_PAL, LeekPal
 .equ DECORATE_PAL, DecoratePal
+.equ SNAPTRAP_PAL, SnapTrapPal

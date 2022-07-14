@@ -394,6 +394,7 @@ animparticle MISTY_EXPLOSION_IMG,	(32 * 32 * 4) / 2,	ANIM_TAG_MISTY_EXPLOSION
 animparticle BABY_IMG, (32 * 32) / 2, ANIM_TAG_BABY
 animparticle LEEK_IMG, (32 * 32) / 2, ANIM_TAG_LEEK
 animparticle DECORATE_IMG, (32 * 32) / 2, ANIM_TAG_DECORATE
+animparticle SNAPTRAP_IMG, (32 * 32 * 4) / 2, ANIM_TAG_SNAPTRAP
 
 gBattleAnimPaletteTable:
 animparticlepal 0x8d028b4,	ANIM_TAG_BONE
@@ -776,3 +777,4 @@ animparticlepal MISTY_EXPLOSION_PAL,	ANIM_TAG_MISTY_EXPLOSION
 animparticlepal BABY_PAL, ANIM_TAG_BABY
 animparticlepal LEEK_PAL, ANIM_TAG_LEEK
 animparticlepal DECORATE_PAL, ANIM_TAG_DECORATE
+animparticlepal SNAPTRAP_PAL, ANIM_TAG_SNAPTRAP
