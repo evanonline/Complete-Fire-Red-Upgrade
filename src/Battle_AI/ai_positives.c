@@ -1147,6 +1147,14 @@ u8 AIScript_Positives(const u8 bankAtk, const u8 bankDef, const u16 originalMove
 				INCREASE_VIABILITY(3); //Past strongest move
 			break;
 
+		//credit to matteo and greenphx9 for this AI improvement
+		case EFFECT_METRONOME:
+			if (CanKnockOutWithoutMove(move, bankAtk, bankDef, FALSE))
+			{
+				INCREASE_VIABILITY(17);
+			}
+			break;
+		
 		case EFFECT_ATTRACT:
 			if (IS_SINGLE_BATTLE
 			&&  WillFaintFromSecondaryDamage(bankDef)
