@@ -1289,7 +1289,7 @@ bool8 IsAnimMoveDestinyBond(void)
 
 bool8 IsAnimMoveThunderWave(void)
 {
-	return sAnimMoveIndex == MOVE_THUNDERWAVE;
+    return sAnimMoveIndex == MOVE_THUNDERWAVE || sAnimMoveIndex == MOVE_THUNDERCAGE;
 }
 
 bool8 IsAnimMoveGrudge(void)

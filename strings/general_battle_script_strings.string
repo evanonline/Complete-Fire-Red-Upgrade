@@ -374,7 +374,7 @@ The storm is getting too strong to\nwithstand!
 [PLAY_SE][11][00][FD][06] disappeared\nsomewhere[.]\p
 
 #org @gText_TargetTrappedThunderCage
-[ATTACKER] trapped [TARGET]!
+[TARGET] was trapped\nin the electricity!
 
 #org @gText_TargetSplinters
 Jagged splinters dug into\n[TARGET]!
