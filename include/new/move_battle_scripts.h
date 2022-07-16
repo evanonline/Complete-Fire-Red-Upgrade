@@ -197,6 +197,10 @@ extern const u8 TerrainEndString[];
 extern const u8 RoastedBerryString[];
 extern const u8 gText_TargetWasInfested[];
 extern const u8 gText_TargetWasCaughtInSnapTrap[];
+extern const u8 gText_TargetTrappedThunderCage[];
+extern const u8 gText_TargetSplinters[];
+
+extern const u8 Text_Poltergeist[];
 
 extern const u8 BattleScript_HealingWishHeal[];
 extern const u8 BattleScript_LunarDanceHeal[];

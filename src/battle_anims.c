@@ -1209,14 +1209,10 @@ void AnimTask_GetTrappedMoveAnimId(u8 taskId)
 		case MOVE_THUNDERCAGE:
 			gBattleAnimArgs[0] = 9;
 			break;
+		case MOVE_STONEAXE:
 		case MOVE_CEASELESSEDGE:
 			gBattleAnimArgs[0] = 10;
 			break;
-		case MOVE_STONEAXE:
-			gBattleAnimArgs[0] = 11;
-			break;
-		case MOVE_LEAFTORNADO:
-			gBattleAnimArgs[0] = 12;
 			break;
 		default:
 			gBattleAnimArgs[0] = 0;

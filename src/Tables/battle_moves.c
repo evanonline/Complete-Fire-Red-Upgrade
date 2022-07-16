@@ -11239,7 +11239,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_SNAPTRAP] =
-	{	//ANIM TODO
+	{
 		.effect = EFFECT_TRAP,
 		.power = 35,
 		.type = TYPE_GRASS,
@@ -11815,7 +11815,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_SCORCHINGSANDS] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_BURN_HIT,
 		.power = 70,
 		.type = TYPE_GROUND,
@@ -11847,7 +11847,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_WICKEDBLOW] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_HIT,
 		.power = 80,
 		.type = TYPE_DARK,
@@ -11863,7 +11863,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_SURGINGSTRIKES] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_MULTI_HIT,
 		.power = 25,
 		.type = TYPE_WATER,
@@ -11895,7 +11895,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_THUNDEROUSKICK] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_DEFENSE_DOWN_HIT,
 		.power = 90,
 		.type = TYPE_FIGHTING,
@@ -11911,7 +11911,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_FIERYWRATH] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_FLINCH_HIT,
 		.power = 90,
 		.type = TYPE_DARK,
@@ -11943,8 +11943,8 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_THUNDERCAGE] =
-	{	//ANIM TODO
-		.effect = EFFECT_TRAP, //one eight of target's max HP for four to five turns. does not have specific trap damage but functions; needs text string in general_attack_battle_scripts.s to be called
+	{	
+		.effect = EFFECT_TRAP, //one eight of target's max HP for four to five turns. trap function not working
 		.power = 80,
 		.type = TYPE_ELECTRIC,
 		.accuracy = 90,
@@ -11960,7 +11960,7 @@ const struct BattleMove gBattleMoves[] =
 
 	[MOVE_DRAGONENERGY] =
 	{	//ANIM TODO
-		.effect = EFFECT_HIT, //needs damage calc...?
+		.effect = EFFECT_HIT, //probably needs damage calc. Should be something to reference for this
 		.power = 150, // (150 x current HP / max HP. if <1, becomes 1)
 		.type = TYPE_DRAGON,
 		.accuracy = 100,
@@ -12088,7 +12088,7 @@ const struct BattleMove gBattleMoves[] =
 	
 	[MOVE_CEASELESSEDGE] =
 	{
-		.effect = EFFECT_TRAP, //has high critical rate in move_tables.s. needs proper DoT damage using the text string in general_attack_battle_scripts.s
+		.effect = EFFECT_TRAP, //has high critical rate in move_tables.s
 		.power = 65,
 		.type = TYPE_DARK,
 		.accuracy = 90,
@@ -12120,7 +12120,7 @@ const struct BattleMove gBattleMoves[] =
 
 	[MOVE_STONEAXE] =
 	{
-		.effect = EFFECT_TRAP, //has high critical rate in move_tables.s. needs proper DoT damage using the text string in general_attack_battle_scripts.s
+		.effect = EFFECT_TRAP, //has high critical rate in move_tables.s
 		.power = 65,
 		.type = TYPE_ROCK,
 		.accuracy = 90,
@@ -12136,7 +12136,7 @@ const struct BattleMove gBattleMoves[] =
 	
 	[MOVE_MOUNTAINGALE] =
 	{
-		.effect = EFFECT_SPEED_DOWN_HIT,
+		.effect = EFFECT_SUPERPOWER,
 		.power = 100,
 		.type = TYPE_ICE,
 		.accuracy = 85,
