@@ -11944,7 +11944,7 @@ const struct BattleMove gBattleMoves[] =
 
 	[MOVE_THUNDERCAGE] =
 	{	
-		.effect = EFFECT_TRAP, //one eight of target's max HP for four to five turns. trap function not working
+		.effect = EFFECT_TRAP, //one eight of target's max HP for four to five turns.
 		.power = 80,
 		.type = TYPE_ELECTRIC,
 		.accuracy = 90,

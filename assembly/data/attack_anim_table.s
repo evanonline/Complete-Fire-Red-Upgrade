@@ -17062,7 +17062,49 @@ SCALE_SHOT_MISSILE: objtemplate ANIM_TAG_SCALE_SHOT ANIM_TAG_SCALE_SHOT OAM_OFF_
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
 ANIM_METEOR_BEAM:
-	goto 0x81cad1b @MOVE_SKYATTACK
+	choosetwoturnanim METEOR_CHARGE_ANIM METEOR_ATTACK_ANIM
+
+METEOR_CHARGE_ANIM:
+	loadparticle ANIM_TAG_FOCUS_ENERGY @endure buff effect
+	loadparticle ANIM_TAG_GUARD_RING
+	loadparticle ANIM_TAG_SMALL_EMBER
+	loadBG1 BG_TWINKLE_TACKLE
+	waitanimation
+	playsound2 0xEC SOUND_PAN_ATTACKER
+	launchtask AnimTask_move_bank 0x5 0x5 bank_attacker 0x0 0x2 0x5f 0x1
+	launchtask AnimTask_pal_fade 0xa 0x5 PAL_ATK 0x2 0x0 0x5 0x726A
+	pause 0x8
+	playsound2 0x85 SOUND_PAN_ATTACKER
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x19
+	playsound2 0x85 SOUND_PAN_ATTACKER
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x19
+	playsound2 0x85 SOUND_PAN_ATTACKER
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	pause 0x4
+	launchtemplate LUNAR_DANCE_RINGS 0x2 0x0
+	waitanimation
+	launchtask AnimTask_pal_fade 0xa 0x5 PAL_BG 0x1 0x8 0x0 0x0
+	launchtask AnimTask_pal_fade 0xa 0x5 PAL_ATK 0x2 0x5 0x0 0x7C60
+	waitanimation
+	loaddefaultBG
+	resetblends
+	pokespritefromBG side_attacker
+	endanimation
+	
+METEOR_ATTACK_ANIM:
+	goto ANIM_BREAKNECK_BLITZ
 	endanimation
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
