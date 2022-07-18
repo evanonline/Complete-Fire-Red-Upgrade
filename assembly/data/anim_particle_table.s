@@ -395,6 +395,7 @@ animparticle BABY_IMG, (32 * 32) / 2, ANIM_TAG_BABY
 animparticle LEEK_IMG, (32 * 32) / 2, ANIM_TAG_LEEK
 animparticle DECORATE_IMG, (32 * 32) / 2, ANIM_TAG_DECORATE
 animparticle SNAPTRAP_IMG, (32 * 32 * 4) / 2, ANIM_TAG_SNAPTRAP
+animparticle TEATIME_IMG, (32 * 32) / 2, ANIM_TAG_TEATIME
 
 gBattleAnimPaletteTable:
 animparticlepal 0x8d028b4,	ANIM_TAG_BONE
@@ -778,3 +779,4 @@ animparticlepal BABY_PAL, ANIM_TAG_BABY
 animparticlepal LEEK_PAL, ANIM_TAG_LEEK
 animparticlepal DECORATE_PAL, ANIM_TAG_DECORATE
 animparticlepal SNAPTRAP_PAL, ANIM_TAG_SNAPTRAP
+animparticlepal TEATIME_PAL, ANIM_TAG_TEATIME

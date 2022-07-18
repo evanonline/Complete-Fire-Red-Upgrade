@@ -16152,8 +16152,17 @@ DREEPY_MISSILE: objtemplate ANIM_TAG_DREEPY ANIM_TAG_DREEPY OAM_OFF_32x32 gAnimC
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
 ANIM_TEATIME:
-	goto 0x81cb40e @ANIM_MILKDRINK
-	endanimation
+	loadparticle ANIM_TAG_TEATIME
+	playsound2 0xBB SOUND_PAN_TARGET
+	launchtemplate TEATIME_POT TEMPLATE_TARGET | 2, 0x3, 0x26 0xfff0 0x0
+	waitanimation
+	resetblends
+	pokespritefromBG side_target
+	waitanimation
+	endanimation 
+	
+.align 2
+TEATIME_POT: objtemplate ANIM_TAG_TEATIME ANIM_TAG_TEATIME OAM_DOUBLE_32x32 0x83E3844 0x0 0x83E63DC 0x80AF3B9
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
@@ -18339,17 +18348,12 @@ LEEK_SLAP_HIT:
 	playsound2 0xBB SOUND_PAN_TARGET
 	launchtemplate Template_Hit TEMPLATE_TARGET | 1, 0x4, 0x0 0x0 bank_target 0x1
 	launchtemplate BABYSMASH 0x1 0x5 bank_target 0x0 0x0 0x20 0xa
-	launchtemplate SLAP_BABY TEMPLATE_TARGET | 2, 0x4 0xfff0 0xfff8 0xa0 0xffe0
-	launchtemplate SLAP_BABY TEMPLATE_TARGET | 2, 0x4 0xfff0 0xfff8 0xff00 0xffd8
-	launchtemplate SLAP_BABY TEMPLATE_TARGET | 2, 0x4 0xfff0 0xfff8 0x1a0 0xffda
-	launchtemplate SLAP_BABY TEMPLATE_TARGET | 2, 0x4 0xfff0 0xfff8 0xfe80 0xffe1
 	pause 14
 	return
 
 .align 2
 BABYSMASH: objtemplate ANIM_TAG_BABY ANIM_TAG_BABY OAM_NORMAL_32x32 gDummySpriteAnimTable 0x0 gDummySpriteAffineAnimTable SpriteCB_SpriteOnMonForDurationUseY
 SLAP_LEEK: objtemplate ANIM_TAG_LEEK ANIM_TAG_LEEK OAM_NORMAL_32x32 gDummySpriteAnimTable 0x0 gDummySpriteAffineAnimTable SpriteCB_WakeUpSlap
-SLAP_BABY: objtemplate ANIM_TAG_BABY ANIM_TAG_BABY OAM_OFF_16x16 gDummySpriteAnimTable 0x0 gDummySpriteAffineAnimTable 0x80B0DF1
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
 .pool

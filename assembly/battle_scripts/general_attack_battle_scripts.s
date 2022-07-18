@@ -2821,10 +2821,23 @@ BS_128_Pursuit:
 .global BattleScript_SideStatusWoreOffRet
 BS_129_RapidSpin:
 	jumpifmove MOVE_DEFOG DefogBS
+	jumpifmove MOVE_COURTCHANGE CourtChangeBS 
 	
 RapidSpinBS:
 	setmoveeffect MOVE_EFFECT_RAPIDSPIN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BS_STANDARD_HIT
+	
+CourtChangeBS:
+    attackcanceler
+    attackstring
+    ppreduce
+    callasm CourtChangeHelperFunc
+    attackanimation
+    waitanimation
+    setword BATTLE_STRING_LOADER gText_CourtChange
+    printstring 0x184
+    waitmessage DELAY_1SECOND
+    goto BS_MOVE_END
 	
 DefogBS:
 	attackcanceler

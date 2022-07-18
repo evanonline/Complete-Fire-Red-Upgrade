@@ -108,6 +108,174 @@ void AcupressureFunc(void)
 	SET_STATCHANGER(stat, 2, FALSE);
 }
 
+void CourtChangeHelperFunc(void)
+{
+	u32 bits;
+	struct SideTimer bits2;
+	bits = gSideStatuses[0];
+	bits2 = gSideTimers[0]; 
+	if (gSideStatuses[1] & SIDE_STATUS_REFLECT){
+    	gSideStatuses[0] |= SIDE_STATUS_REFLECT;
+		gSideTimers[0].reflectTimer = gSideTimers[1].reflectTimer; 
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_REFLECT);
+		gSideTimers[0].reflectTimer = 0;
+	}
+
+	if (bits & SIDE_STATUS_REFLECT) {
+    	gSideStatuses[1] |= SIDE_STATUS_REFLECT;
+		gSideTimers[1].reflectTimer = bits2.reflectTimer;
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_REFLECT);
+		gSideTimers[1].reflectTimer = 0;
+	} 
+
+	if (gSideStatuses[1] & SIDE_STATUS_LIGHTSCREEN) {
+		gSideStatuses[0] |= SIDE_STATUS_LIGHTSCREEN;
+		gSideTimers[0].lightscreenTimer = gSideTimers[1].lightscreenTimer; 
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_LIGHTSCREEN);
+		gSideTimers[0].lightscreenTimer = 0;
+	}
+
+	if (bits & SIDE_STATUS_LIGHTSCREEN) {
+		gSideStatuses[1] |= SIDE_STATUS_LIGHTSCREEN;
+		gSideTimers[1].lightscreenTimer = bits2.lightscreenTimer; 
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_LIGHTSCREEN);
+		gSideTimers[1].lightscreenTimer = 0;
+	}
+	
+	if (gSideStatuses[1] & SIDE_STATUS_SAFEGUARD) {
+		gSideStatuses[0] |= SIDE_STATUS_SAFEGUARD;
+		gSideTimers[0].safeguardTimer = gSideTimers[1].safeguardTimer; 
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_SAFEGUARD);
+		gSideTimers[0].safeguardTimer = 0;
+	}
+
+	if (bits & SIDE_STATUS_SAFEGUARD) {
+		gSideStatuses[1] |= SIDE_STATUS_SAFEGUARD;
+		gSideTimers[1].safeguardTimer = bits2.safeguardTimer; 
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_SAFEGUARD);
+		gSideTimers[1].safeguardTimer = 0;
+	}
+	
+	u8 tailwindTimer0 = gNewBS->TailwindTimers[0]; 
+	if (gNewBS->TailwindTimers[1] > 0) {
+		gNewBS->TailwindTimers[0] = gNewBS->TailwindTimers[1];
+	} else {
+		gNewBS->TailwindTimers[0] = 0; 
+	}
+	
+	if (tailwindTimer0 > 0) {
+		gNewBS->TailwindTimers[1] = tailwindTimer0;
+	} else {
+		gNewBS->TailwindTimers[1] = 0;
+	}
+
+	//Mist
+
+	if (gSideStatuses[1] & SIDE_STATUS_MIST) {
+		gSideStatuses[0] |= SIDE_STATUS_MIST;
+		gSideTimers[0].mistTimer = gSideTimers[1].mistTimer; 
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_MIST);
+		gSideTimers[0].mistTimer = 0;
+	}
+
+	if (bits & SIDE_STATUS_MIST) {
+		gSideStatuses[1] |= SIDE_STATUS_MIST;
+		gSideTimers[1].mistTimer = bits2.mistTimer; 
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_MIST);
+		gSideTimers[1].mistTimer = 0;
+	}
+	
+	if (gSideTimers[1].stickyWeb)
+	{
+		gSideStatuses[0] |= SIDE_STATUS_SPIKES;
+		gSideTimers[0].stickyWeb = 1;
+	} else{
+		gSideStatuses[0] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[0].stickyWeb = 0;
+	}
+	if (bits2.stickyWeb) 
+	{
+		gSideStatuses[1] |= SIDE_STATUS_SPIKES;
+		gSideTimers[1].stickyWeb = 1;
+	} else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[1].stickyWeb = 0;
+	}
+
+	if (gSideStatuses[1] & SIDE_STATUS_SPIKES) {
+    	gSideStatuses[0] |= SIDE_STATUS_SPIKES;
+		gSideTimers[0].spikesAmount = gSideTimers[1].spikesAmount;
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[0].spikesAmount = 0;
+	}
+	
+	if (bits & SIDE_STATUS_SPIKES) {
+		gSideStatuses[1] |= SIDE_STATUS_SPIKES;
+		gSideTimers[1].spikesAmount = bits2.spikesAmount;
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[1].spikesAmount = 0;
+	}
+	
+	if (gSideTimers[1].tspikesAmount) 
+	{
+		gSideTimers[0].tspikesAmount = gSideTimers[1].tspikesAmount;
+		gSideStatuses[0] |= SIDE_STATUS_SPIKES;
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[0].tspikesAmount = 0;
+	}
+
+	if (bits2.tspikesAmount) 
+	{
+		gSideTimers[1].tspikesAmount = bits2.tspikesAmount;
+		gSideStatuses[1] |= SIDE_STATUS_SPIKES;
+	}
+	else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[1].tspikesAmount = 0;
+	}
+
+	if(gSideTimers[1].srAmount){
+		gSideTimers[0].srAmount = 1;
+		gSideStatuses[0] |= SIDE_STATUS_SPIKES;
+	}
+	else {
+		gSideStatuses[0] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[0].srAmount = 0;
+	}
+
+	if (bits2.srAmount){
+		gSideTimers[1].srAmount = 1;
+		gSideStatuses[1] |= SIDE_STATUS_SPIKES;
+	} else {
+		gSideStatuses[1] &= ~(SIDE_STATUS_SPIKES);
+		gSideTimers[1].srAmount = 0;
+	}
+	
+
+}
+
 void SetStatSwapSplit(void)
 {
 	u8 bankAtk = gBankAttacker;

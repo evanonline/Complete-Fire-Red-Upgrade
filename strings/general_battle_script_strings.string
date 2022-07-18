@@ -380,4 +380,7 @@ The storm is getting too strong to\nwithstand!
 Jagged splinters dug into\n[TARGET]!
 
 #org @Text_Poltergeist
-[TARGET] is about to be\nattacked by its item!
+[TARGET] is about to\nbe attacked by its item!
+
+#org @gText_CourtChange
+[ATTACKER] swapped each\nside's battle effects!

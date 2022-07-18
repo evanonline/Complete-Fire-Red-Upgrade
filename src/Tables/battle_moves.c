@@ -11207,7 +11207,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_DECORATE] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_DECORATE,
 		.power = 0,
 		.type = TYPE_FAIRY,
@@ -11915,10 +11915,10 @@ const struct BattleMove gBattleMoves[] =
 		.effect = EFFECT_FLINCH_HIT,
 		.power = 90,
 		.type = TYPE_DARK,
-		.accuracy = 20,
+		.accuracy = 100,
 		.pp = 10,
-		.secondaryEffectChance = 0,
-		.target = MOVE_TARGET_SELECTED,
+		.secondaryEffectChance = 20,
+		.target = MOVE_TARGET_BOTH,
 		.priority = 0,
 		.flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
 		.z_move_power = 100,
@@ -11960,7 +11960,7 @@ const struct BattleMove gBattleMoves[] =
 
 	[MOVE_DRAGONENERGY] =
 	{	//ANIM TODO
-		.effect = EFFECT_HIT, //probably needs damage calc. Should be something to reference for this
+		.effect = EFFECT_HIT,
 		.power = 150, // (150 x current HP / max HP. if <1, becomes 1)
 		.type = TYPE_DRAGON,
 		.accuracy = 100,
@@ -12104,7 +12104,7 @@ const struct BattleMove gBattleMoves[] =
 	
 	[MOVE_TRIPLEARROWS] =
 	{
-		.effect = EFFECT_TRIPLEARROWS, //done but code might be bad
+		.effect = EFFECT_TRIPLEARROWS, //done but code is bad
 		.power = 50,
 		.type = TYPE_FIGHTING,
 		.accuracy = 100,

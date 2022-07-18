@@ -1528,9 +1528,21 @@ u8 AIScript_Positives(const u8 bankAtk, const u8 bankDef, const u16 originalMove
 			}
 			break;
 
+		//credit to matteo
 		case EFFECT_MEMENTO:
-			//TODO
-			break;
+		//If enemy only has 1 monster left and you have more than 1, use Memento to destroy their attack stats
+             if (ViableMonCountFromBank(bankAtk) > 1 
+              && ViableMonCountFromBank(bankDef) == 1)
+             {
+                INCREASE_STATUS_VIABILITY(3);
+             }
+             //If they are trapped
+             else if (IsTrapped(bankDef, TRUE) 
+              && ViableMonCountFromBank(bankAtk) > 1)
+             {
+                INCREASE_STATUS_VIABILITY(1);
+             }
+            break;
 
 		case EFFECT_FOLLOW_ME:
 			if (IS_DOUBLE_BATTLE
