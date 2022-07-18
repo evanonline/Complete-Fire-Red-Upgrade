@@ -198,7 +198,7 @@ BS_008_DreamEater:
 	attackstring
 	ppreduce
 	waitmessage DELAY_1SECOND
-	goto 0x81D69BE @;Target wasn't affected
+	goto 0x81D69BE @;Target was not affected
 
 EatTheDreams:
 	accuracycheck BS_MOVE_MISSED 0x0
@@ -245,7 +245,7 @@ BS_010_RaiseUserAtk1:
 	setstatchanger STAT_ATK | INCREASE_1
 	jumpifmove MOVE_HONECLAWS HoneClawsBS
 	jumpifnotbattletype BATTLE_DOUBLE BS_BUFF_ATK_STATS
-	jumpifmove MOVE_HOWL HowlBS @;Only difference is that it raises partner's attack in Doubles too
+	jumpifmove MOVE_HOWL HowlBS @;Only difference is that it raises partner attack in Doubles too
 	goto BS_BUFF_ATK_STATS
 
 HoneClawsBS:
@@ -4767,7 +4767,7 @@ BS_214_Scrunch:
 	attackcanceler
 	attackstringnoprotean
 	ppreduce
-	accuracycheck BS_MOVE_MISSED_PAUSE 0x0
+	accuracycheck FAILED 0x0
 	setprotect
 	tryactivateprotean
 	attackanimation
@@ -5453,10 +5453,39 @@ BS_244_Blank:
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_245_Blank
-BS_245_Blank:
-	goto BS_STANDARD_HIT
+.global BS_245_Decorate
+BS_245_Decorate:
+	attackcanceler
+	attackstring
+	ppreduce
+	
+	jumpifspecialstatusflag EQUALS STATUS3_SEMI_INVULNERABLE 0x0 FAILED
+	jumpiffainted BANK_TARGET FAILED
+	jumpifprotectedbycraftyshield BANK_TARGET FAILED
+	
+	attackstring
+	ppreduce
+	jumpifstat BANK_TARGET LESSTHAN STAT_ATK STAT_MAX Decorate_Atk
+	jumpifstat BANK_TARGET EQUALS STAT_SPATK STAT_MAX 0x81D85E7
 
+Decorate_Atk:
+	waitanimation
+	setbyte STAT_ANIM_PLAYED 0x0
+	playstatchangeanimation BANK_TARGET, STAT_ANIM_ATK | STAT_ANIM_SPATK, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
+	setstatchanger STAT_ATK | INCREASE_2
+	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN Decorate_SpAtk
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 CalmMind_SpDef
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+
+Decorate_SpAtk:
+	setstatchanger STAT_SPATK | INCREASE_2
+	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+	
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global BS_246_Blank

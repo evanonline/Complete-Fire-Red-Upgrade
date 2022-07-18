@@ -215,7 +215,7 @@
 #define EFFECT_DRAGON_DANCE 212 //+ Shift Gear + Shell Smash
 
 #define EFFECT_STAT_SWAP_SPLIT 213
-#define EFFECT_SCRUNCH 214
+#define EFFECT_SCRUNCH 214 // Protect with accuracy miss
 #define EFFECT_SHELLSIDEARM 215
 #define EFFECT_UNOWN_HIDDENPOWER 216
 #define EFFECT_TRIPLEARROWS 217
