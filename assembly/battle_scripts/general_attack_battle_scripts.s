@@ -2966,8 +2966,33 @@ BS_137_SunnyDay:
 
 .global BS_138_AttackerRaiseDef1Chance
 BS_138_AttackerRaiseDef1Chance:
+	jumpifmove MOVE_PSYSHIELDBASH PsyshieldBashBS
 	setmoveeffect MOVE_EFFECT_DEF_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
 	goto BS_STANDARD_HIT
+	
+PsyshieldBashBS:
+	attackcanceler
+	accuracycheck BS_MOVE_MISSED 0x0
+	call STANDARD_DAMAGE
+	jumpifstat BANK_TARGET LESSTHAN STAT_DEF STAT_MAX PsyshieldBash_Def
+	jumpifstat BANK_TARGET EQUALS STAT_SPDEF STAT_MAX 0x81D85E7
+	
+PsyshieldBash_Def:
+	setbyte STAT_ANIM_PLAYED 0x0
+	playstatchangeanimation BANK_ATTACKER, STAT_ANIM_SPATK | STAT_ANIM_SPDEF, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
+	setstatchanger STAT_DEF | INCREASE_1
+	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN PsyshieldBash_SpDef
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 PsyshieldBash_SpDef
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+
+PsyshieldBash_SpDef:
+	setstatchanger STAT_SPDEF | INCREASE_1
+	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -4475,7 +4500,6 @@ BS_211_CalmMind:
 	attackcanceler
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_QUIVERDANCE QuiverDanceBS
 	jumpifhalfword EQUALS CURRENT_MOVE MOVE_GEOMANCY GeomancyBS
-	jumpifhalfword EQUALS CURRENT_MOVE MOVE_PSYSHIELDBASH PsyshieldBashBS
 
 CalmMindBS:
 	attackstring
@@ -4609,33 +4633,6 @@ Geomancy_RaidBossSkipCharge:
 	setbyte ANIM_TURN 0x1
 	callasm ClearCalculatedSpreadMoveData @;So the damage can be calculated
 	goto Geomancy_PowerHerbSkip
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-PsyshieldBashBS:
-	attackstring
-	ppreduce
-	jumpifstat BANK_TARGET LESSTHAN STAT_DEF STAT_MAX PsyshieldBash_Def
-	jumpifstat BANK_TARGET EQUALS STAT_SPDEF STAT_MAX 0x81D85E7
-
-PsyshieldBash_Def:
-	attackanimation
-	waitanimation
-	setbyte STAT_ANIM_PLAYED 0x0
-	playstatchangeanimation BANK_ATTACKER, STAT_ANIM_DEF | STAT_ANIM_DEF, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
-	setstatchanger STAT_DEF | INCREASE_1
-	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN CalmMind_SpDef
-	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 PsyshieldBash_SpDef
-	printfromtable 0x83FE57C
-	waitmessage DELAY_1SECOND
-
-PsyshieldBash_SpDef:
-	setstatchanger STAT_SPDEF | INCREASE_1
-	statbuffchange STAT_ATTACKER | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
-	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
-	printfromtable 0x83FE57C
-	waitmessage DELAY_1SECOND
-	goto BS_STANDARD_HIT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -5447,7 +5444,7 @@ BattleScript_SetTerrainReturn:
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global BS_244_Blank
+.global BS_244_Teatime
 BS_244_Blank:
 	goto BS_STANDARD_HIT
 

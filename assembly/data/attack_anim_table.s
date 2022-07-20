@@ -17960,6 +17960,7 @@ ANIM_PSYSHIELD_BASH:
 	loadparticle ANIM_TAG_AIR_WAVE_2 @white/grey
 	loadparticle ANIM_TAG_SPARKLE_2 @stars
 	launchtemplate SOULBLAZE_PURPLE_CHARGE 0x2 0x1 0x0 	@charge
+	soundcomplex 0x8f SOUND_PAN_ATTACKER 0x20 0x2
 	call SOULBLAZE_PURPLE_ENERGY_SWIRL
 	call SOULBLAZE_PURPLE_ENERGY_SWIRL
 	call SOULBLAZE_PURPLE_ENERGY_SWIRL
@@ -17969,7 +17970,7 @@ ANIM_PSYSHIELD_BASH:
 	launchtemplate 0x83d4e9c 0x2 0x5 0x0 0x14 0x0 0x0 0x4  
 	pause 0x3 
 	waitanimation 
-	playsound2 0x8d 0x3f 
+	playsound2 0xba SOUND_PAN_ATTACKER
 	launchtemplate 0x83e7c08 0x84 0x4 0xfff6 0x0 0x1 0x0  
 	launchtemplate 0x83d4e9c 0x2 0x5 0x1 0xffe0 0x0 0x0 0x3  
 	waitanimation 

@@ -259,7 +259,7 @@ gBattleScriptsForMoveEffects:
 .word BS_241_FlameBurst
 .word BS_242_LastResortSkyDrop
 .word BS_243_DamageSetTerrain
-.word BS_244_Blank
+.word BS_244_Teatime
 .word BS_245_Decorate
 .word BS_246_Blank
 .word BS_247_Blank

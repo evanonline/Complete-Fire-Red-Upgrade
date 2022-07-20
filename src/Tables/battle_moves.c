@@ -12040,16 +12040,16 @@ const struct BattleMove gBattleMoves[] =
 	
 	[MOVE_PSYSHIELDBASH] =
 	{
-		.effect = EFFECT_CALM_MIND,
+		.effect = EFFECT_DEFENSE_UP_HIT,
 		.power = 70,
 		.type = TYPE_PSYCHIC,
 		.accuracy = 90,
 		.pp = 10,
-		.secondaryEffectChance = 80,
+		.secondaryEffectChance = 100,
 		.target = MOVE_TARGET_SELECTED,
 		.priority = 0,
 		.flags = FLAG_MAKES_CONTACT | FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED,
-		.z_move_power = 175,
+		.z_move_power = 100,
 		.split = SPLIT_PHYSICAL,
 		.z_move_effect = 0
 	},
