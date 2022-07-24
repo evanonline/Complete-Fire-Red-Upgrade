@@ -3,11 +3,11 @@
 ## What is this?
 This is my work in progress fork for a personal romhack project (tentatively "Pokemon Trails"). Here's a general breakdown of what this repository has:
 
--PLA Pokemon support (plus a few extras for my personal project.)
--Several signature moves from PLA: Barb Barrage, Wave Crash, Psyshield Bash, Dire Claw, Infernal Parade, Ceaseless Edge, Triple Arrows, Stone Axe, Mountain Gale, Esper Wing, Chloroblast, Bitter Malice. Much of the code, animation and implementation of this can be credited to Greenphx9, but some of it is from me.
--A small few TCG moves integrated with accurate effects (again for my personal project. It's setup for a joke in the story)
--Additional animations for Gen 8 moves that did not have finished animation work in vanilla CFRU.
--Support for move effects of Court Change (courtesy of Soupercell), Thunder Cage, Snap Trap, and Decorate, all of which do not have function in vanilla CFRU.
+* PLA Pokemon support (plus a few extras for my personal project.)
+* Several signature moves from PLA: Barb Barrage, Wave Crash, Psyshield Bash, Dire Claw, Infernal Parade, Ceaseless Edge, Triple Arrows, Stone Axe, Mountain Gale, Esper Wing, Chloroblast, Bitter Malice. Much of the code, animation and implementation of this can be credited to Greenphx9, but some of it is from me.
+* A small few TCG moves integrated with accurate effects (again for my personal project. It's setup for a joke in the story)
+* Additional animations for Gen 8 moves that did not have finished animation work in vanilla CFRU.
+* Support for move effects of Court Change (courtesy of Soupercell), Thunder Cage, Snap Trap, and Decorate, all of which do not have function in vanilla CFRU.
 
 Generally, credits are listed in the files, or in notes for the individual commits, for who changed what - but my process is confessedly pretty messy and I may have made some mistakes! Please do not hesitate to point out any problems to me.
 
