@@ -19,6 +19,8 @@ tables to edit:
 
 #ifndef UNBOUND //Modify this section
 
+// route 1 temp for testing
+
 const struct WildPokemon gRoute1_LandMonsMorning[] =
 {
 	{3, 3, SPECIES_PIDGEY},
@@ -73,6 +75,105 @@ const struct WildPokemon gRoute1_LandMonsNight[] =
 
 const struct WildPokemonInfo gRoute1_LandMonsInfoNight = {21, gRoute1_LandMonsNight};
 
+// permanent trails stuff starts here
+
+const struct WildPokemon gRoute6_LandMonsMorning[] =
+{
+	{3, 6, SPECIES_PIDGEY},
+	{3, 4, SPECIES_RATTATA},
+	{3, 4, SPECIES_YAMPER},
+	{2, 2, SPECIES_SWIRLIX},
+	{1, 3, SPECIES_MEOWTH},
+	{4, 5, SPECIES_SWIRLIX},
+	{1, 5, SPECIES_WINGULL},
+	{3, 4, SPECIES_SNUBBULL},
+	{1, 3, SPECIES_IGGLYBUFF},
+	{2, 3, SPECIES_PATRAT},
+	{2, 2, SPECIES_MEOWTH_A},
+	{2, 2, SPECIES_RATTATA_A},
+};
+
+const struct WildPokemonInfo gRoute6_LandMonsInfoMorning = {21, gRoute6_LandMonsMorning};
+
+const struct WildPokemon gRoute6_LandMonsEvening[] =
+{
+	{3, 6, SPECIES_PIDGEY},
+	{2, 5, SPECIES_RATTATA},
+	{3, 5, SPECIES_MEOWTH},
+	{4, 4, SPECIES_YAMPER},
+	{3, 6, SPECIES_SNUBBULL},
+	{4, 4, SPECIES_SNUBBULL},
+	{3, 3, SPECIES_SWIRLIX},
+	{2, 3, SPECIES_IGGLYBUFF},
+	{3, 3, SPECIES_WINGULL},
+	{4, 4, SPECIES_PATRAT},
+	{4, 4, SPECIES_RATTATA_A},
+	{4, 4, SPECIES_MEOWTH_A},
+};
+
+const struct WildPokemonInfo gRoute6_LandMonsInfoEvening = {21, gRoute6_LandMonsEvening};
+
+const struct WildPokemon gRoute6_LandMonsNight[] =
+{
+	{4, 6, SPECIES_PATRAT},
+	{4, 5, SPECIES_RATTATA_A},
+	{4, 5, SPECIES_MEOWTH_A},
+	{3, 3, SPECIES_MEOWTH},
+	{4, 5, SPECIES_PATRAT},
+	{3, 4, SPECIES_SNUBBULL},
+	{3, 3, SPECIES_RATTATA},
+	{1, 3, SPECIES_IGGLYBUFF},
+	{1, 4, SPECIES_YAMPER},
+	{1, 3, SPECIES_PIDGEY},
+	{2, 2, SPECIES_SWIRLIX},
+	{2, 3, SPECIES_WINGULL},
+};
+
+const struct WildPokemonInfo gRoute6_LandMonsInfoNight = {21, gRoute6_LandMonsNight};
+
+const struct WildPokemon gRoute6_WaterMons[] =
+{
+    {20, 30, SPECIES_PSYDUCK},
+    {10, 20, SPECIES_WINGULL},
+    {20, 25, SPECIES_MARILL},
+    {5, 10, SPECIES_AZURILL},
+    {10, 27, SPECIES_SWIRLIX},
+};
+
+const struct WildPokemonInfo gRoute6_WaterMonsInfo = {4, gRoute6_WaterMons};
+
+const struct WildPokemon gRoute6_FishingMons[] =
+{
+    {5, 8, SPECIES_MAGIKARP},
+    {5, 7, SPECIES_SWIRLIX},
+    {10, 19, SPECIES_MAGIKARP},
+    {12, 18, SPECIES_GOLDEEN},
+    {10, 15, SPECIES_POLIWAG},
+    {25, 30, SPECIES_CORPHISH},
+    {30, 35, SPECIES_CORPHISH},
+    {20, 25, SPECIES_CORPHISH},
+    {35, 40, SPECIES_POLIWHIRL},
+    {40, 45, SPECIES_GYARADOS},
+};
+
+const struct WildPokemonInfo gRoute6_FishingMonsInfo = {30, gRoute6_FishingMons};
+
+const struct WildPokemon gRoute6_FishingMonsNight[] =
+{
+    {5, 8, SPECIES_MAGIKARP},
+    {5, 7, SPECIES_CORPHISH},
+    {10, 19, SPECIES_MAGIKARP},
+    {12, 18, SPECIES_GOLDEEN},
+    {10, 15, SPECIES_POLIWAG},
+    {25, 30, SPECIES_CORPHISH},
+    {30, 35, SPECIES_CORPHISH},
+    {20, 25, SPECIES_SWIRLIX},
+    {35, 41, SPECIES_POLIWHIRL},
+    {40, 47, SPECIES_GYARADOS},
+};
+
+const struct WildPokemonInfo gRoute6_FishingMonsInfoNight = {30, gRoute6_FishingMonsNight};
+
 const struct WildPokemonHeader gWildMonMorningHeaders[] =
 {
 	{
@@ -83,6 +184,16 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
 	},
+	
+	{
+		.mapGroup = MAP_GROUP(ROUTE_6),
+		.mapNum = MAP_NUM(ROUTE_6),
+		.landMonsInfo = &gRoute6_LandMonsInfoMorning,
+		.waterMonsInfo = &gRoute6_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute6_FishingMonsInfo,
+	},
+	
 	{
 		.mapGroup = 0xFF,
 		.mapNum = 0xFF,
@@ -103,6 +214,16 @@ const struct WildPokemonHeader gWildMonEveningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
 	},
+	
+	{
+		.mapGroup = MAP_GROUP(ROUTE_6),
+		.mapNum = MAP_NUM(ROUTE_6),
+		.landMonsInfo = &gRoute6_LandMonsInfoEvening,
+		.waterMonsInfo = &gRoute6_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute6_FishingMonsInfo,
+	},
+	
 	{
 		.mapGroup = 0xFF,
 		.mapNum = 0xFF,
@@ -123,6 +244,16 @@ const struct WildPokemonHeader gWildMonNightHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
 	},
+	
+	{
+		.mapGroup = MAP_GROUP(ROUTE_6),
+		.mapNum = MAP_NUM(ROUTE_6),
+		.landMonsInfo = &gRoute6_LandMonsInfoNight,
+		.waterMonsInfo = &gRoute6_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute6_FishingMonsInfoNight,
+	},
+	
 	{
 		.mapGroup = 0xFF,
 		.mapNum = 0xFF,

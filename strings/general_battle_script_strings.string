@@ -379,6 +379,9 @@ The storm is getting too strong to\nwithstand!
 #org @gText_TargetSplinters
 Jagged splinters dug into\n[TARGET]!
 
+#org @gText_Teatime
+All held Berries were eaten!
+
 #org @Text_Poltergeist
 [TARGET] is about to\nbe attacked by its item!
 
