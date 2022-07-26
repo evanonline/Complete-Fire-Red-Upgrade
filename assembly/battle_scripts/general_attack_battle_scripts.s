@@ -4800,14 +4800,14 @@ BS_216_UnownHiddenPower:
 .global BS_217_TripleArrows
 BS_217_TripleArrows:
 	attackcanceler
-	setmoveeffect MOVE_EFFECT_DEF_MINUS_1 | MOVE_EFFECT_SP_DEF_MINUS_1
-	jumpifsecondarystatus BANK_ATTACKER STATUS2_PUMPEDUP FAILED_PRE
 	attackstring
 	ppreduce
+	setmoveeffect MOVE_EFFECT_DEF_MINUS_1 |  MOVE_EFFECT_SP_DEF_MINUS_1
+	goto BS_STANDARD_HIT
+	jumpifsecondarystatus BANK_ATTACKER STATUS2_PUMPEDUP BS_MOVE_END
 	setincreasedcriticalchance
 	printfromtable 0x83FE5B0
 	waitmessage DELAY_1SECOND
-	goto BS_STANDARD_HIT
 	
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

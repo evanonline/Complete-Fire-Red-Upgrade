@@ -80,35 +80,35 @@ const struct WildPokemonInfo gRoute1_LandMonsInfoNight = {21, gRoute1_LandMonsNi
 const struct WildPokemon gRoute6_LandMonsMorning[] =
 {
 	{3, 6, SPECIES_PIDGEY},
-	{3, 4, SPECIES_RATTATA},
-	{3, 4, SPECIES_YAMPER},
-	{2, 2, SPECIES_SWIRLIX},
-	{1, 3, SPECIES_MEOWTH},
-	{4, 5, SPECIES_SWIRLIX},
+	{3, 4, SPECIES_ZIGZAGOON},
 	{1, 5, SPECIES_WINGULL},
+	{3, 4, SPECIES_YAMPER},
+	{2, 3, SPECIES_CRAMORANT},
+	{1, 2, SPECIES_SWIRLIX},
+	{1, 3, SPECIES_PINECO},
+	{3, 5, SPECIES_SWIRLIX},
 	{3, 4, SPECIES_SNUBBULL},
 	{1, 3, SPECIES_IGGLYBUFF},
 	{2, 3, SPECIES_PATRAT},
-	{2, 2, SPECIES_MEOWTH_A},
-	{2, 2, SPECIES_RATTATA_A},
+	{2, 2, SPECIES_ZIGZAGOON_G},
 };
 
 const struct WildPokemonInfo gRoute6_LandMonsInfoMorning = {21, gRoute6_LandMonsMorning};
 
 const struct WildPokemon gRoute6_LandMonsEvening[] =
 {
-	{3, 6, SPECIES_PIDGEY},
-	{2, 5, SPECIES_RATTATA},
-	{3, 5, SPECIES_MEOWTH},
+	{2, 4, SPECIES_PIDGEY},
+	{2, 5, SPECIES_ZIGZAGOON},
+	{3, 5, SPECIES_PINECO},
 	{4, 4, SPECIES_YAMPER},
 	{3, 6, SPECIES_SNUBBULL},
-	{4, 4, SPECIES_SNUBBULL},
-	{3, 3, SPECIES_SWIRLIX},
+	{2, 3, SPECIES_CRAMORANT},
+	{1, 3, SPECIES_SWIRLIX},
 	{2, 3, SPECIES_IGGLYBUFF},
-	{3, 3, SPECIES_WINGULL},
-	{4, 4, SPECIES_PATRAT},
-	{4, 4, SPECIES_RATTATA_A},
-	{4, 4, SPECIES_MEOWTH_A},
+	{1, 3, SPECIES_WINGULL},
+	{1, 4, SPECIES_PATRAT},
+	{4, 4, SPECIES_ZIGZAGOON_G},
+	{5, 6, SPECIES_CRAMORANT},
 };
 
 const struct WildPokemonInfo gRoute6_LandMonsInfoEvening = {21, gRoute6_LandMonsEvening};
@@ -116,17 +116,17 @@ const struct WildPokemonInfo gRoute6_LandMonsInfoEvening = {21, gRoute6_LandMons
 const struct WildPokemon gRoute6_LandMonsNight[] =
 {
 	{4, 6, SPECIES_PATRAT},
-	{4, 5, SPECIES_RATTATA_A},
-	{4, 5, SPECIES_MEOWTH_A},
-	{3, 3, SPECIES_MEOWTH},
-	{4, 5, SPECIES_PATRAT},
-	{3, 4, SPECIES_SNUBBULL},
-	{3, 3, SPECIES_RATTATA},
-	{1, 3, SPECIES_IGGLYBUFF},
-	{1, 4, SPECIES_YAMPER},
+	{4, 4, SPECIES_ZIGZAGOON_G},
+	{2, 4, SPECIES_IGGLYBUFF},
+	{2, 5, SPECIES_PATRAT},
+	{3, 3, SPECIES_PINECO},
+	{2, 3, SPECIES_SNUBBULL},
+	{1, 3, SPECIES_CRAMORANT},
+	{1, 3, SPECIES_YAMPER},
 	{1, 3, SPECIES_PIDGEY},
-	{2, 2, SPECIES_SWIRLIX},
-	{2, 3, SPECIES_WINGULL},
+	{3, 3, SPECIES_ZIGZAGOON},
+	{1, 2, SPECIES_SWIRLIX},
+	{1, 3, SPECIES_WINGULL},
 };
 
 const struct WildPokemonInfo gRoute6_LandMonsInfoNight = {21, gRoute6_LandMonsNight};
