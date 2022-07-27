@@ -84,7 +84,7 @@ static const struct LevelUpMove sVenusaurLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(45, MOVE_SYNTHESIS),
 	LEVEL_UP_MOVE(50, MOVE_PETALBLIZZARD),
 	LEVEL_UP_MOVE(53, MOVE_SOLARBEAM),
-	LEVEL_UP_END
+	LEVEL_UP_END,
 };
 
 static const struct LevelUpMove sCharmanderLevelUpLearnset[] = {
@@ -143,7 +143,7 @@ static const struct LevelUpMove sCharizardLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(62, MOVE_INFERNO),
 	LEVEL_UP_MOVE(71, MOVE_HEATWAVE),
 	LEVEL_UP_MOVE(77, MOVE_FLAREBLITZ),
-	LEVEL_UP_END
+	LEVEL_UP_END,
 };
 
 static const struct LevelUpMove sSquirtleLevelUpLearnset[] = {
@@ -162,7 +162,7 @@ static const struct LevelUpMove sSquirtleLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(34, MOVE_IRONDEFENSE),
 	LEVEL_UP_MOVE(37, MOVE_RAINDANCE),
 	LEVEL_UP_MOVE(40, MOVE_HYDROPUMP),
-	LEVEL_UP_END
+	LEVEL_UP_END,
 };
 
 static const struct LevelUpMove sWartortleLevelUpLearnset[] = {
@@ -183,7 +183,7 @@ static const struct LevelUpMove sWartortleLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(41, MOVE_IRONDEFENSE),
 	LEVEL_UP_MOVE(45, MOVE_RAINDANCE),
 	LEVEL_UP_MOVE(49, MOVE_HYDROPUMP),
-	LEVEL_UP_END
+	LEVEL_UP_END,
 };
 
 static const struct LevelUpMove sBlastoiseLevelUpLearnset[] = {
@@ -206,7 +206,7 @@ static const struct LevelUpMove sBlastoiseLevelUpLearnset[] = {
 	LEVEL_UP_MOVE(47, MOVE_IRONDEFENSE),
 	LEVEL_UP_MOVE(54, MOVE_RAINDANCE),
 	LEVEL_UP_MOVE(60, MOVE_HYDROPUMP),
-	LEVEL_UP_END
+	LEVEL_UP_END,
 };
 
 static const struct LevelUpMove sCaterpieLevelUpLearnset[] = {

@@ -18090,7 +18090,7 @@ ANIM_TRIPLE_ARROWS:
 	waitanimation
 	pokespritefromBG side_target
 	resetblends
-	endanimation
+	goto 0x81d1307 @ANIM_FOCUSENERGY
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
 .pool
