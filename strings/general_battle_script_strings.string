@@ -380,7 +380,10 @@ The storm is getting too strong to\nwithstand!
 Jagged splinters dug into\n[TARGET]!
 
 #org @gText_Teatime
-All held Berries were eaten!
+This move is busted!\nI hate it!
+
+#org @gText_ScrunchFail
+The Scrunch failed to protect\n[ATTACKER]!
 
 #org @Text_Poltergeist
 [TARGET] is about to\nbe attacked by its item!

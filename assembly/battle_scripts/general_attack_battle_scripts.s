@@ -4768,20 +4768,21 @@ BS_214_Scrunch:
 	attackcanceler
 	attackstringnoprotean
 	ppreduce
-	accuracycheck FAILED 0x0
+	accuracycheck ScrunchFail 0x0
 	setprotect
 	tryactivateprotean
 	attackanimation
 	waitanimation
-	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x3 ScrunchPrintCustomMessage
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x3 ProtectPrintCustomMessage
 	printfromtable 0x83FE546
 	waitmessage DELAY_1SECOND
 	goto BS_MOVE_END
 	
-ScrunchPrintCustomMessage:
-	printstring 0x184
-	waitmessage DELAY_1SECOND
-	goto BS_MOVE_END
+ScrunchFail:
+	setword BATTLE_STRING_LOADER gText_ScrunchFail
+    printstring 0x184
+    waitmessage DELAY_1SECOND
+    goto BS_MOVE_END
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -4801,6 +4802,7 @@ BS_216_UnownHiddenPower:
 BS_217_TripleArrows:
 	attackcanceler
 	ppreduce
+	accuracycheck BS_MOVE_MISSED 0x0
 	call STANDARD_DAMAGE
 	jumpifmovehadnoeffect BS_MOVE_FAINT
 	jumpifsecondarystatus BANK_ATTACKER STATUS2_PUMPEDUP TripleArrowLowerDef
