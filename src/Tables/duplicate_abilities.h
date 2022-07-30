@@ -9,6 +9,7 @@ extern const u8 NAME_WIMP_OUT[];
 extern const u8 NAME_PROPELLER_TAIL[];
 extern const u8 NAME_CHILLING_NEIGH[];
 extern const u8 NAME_IRON_BARBS[];
+extern const u8 NAME_AIR_LOCK[];
 
 static struct DuplicateAbility sDuplicateAbilities[] =
 {
@@ -76,5 +77,10 @@ static struct DuplicateAbility sDuplicateAbilities[] =
         .species = SPECIES_TOGEDEMARU,
         .currAbility = ABILITY_ROUGHSKIN,
         .replaceAbilityString = NAME_IRON_BARBS,
+	},
+	{
+        .species = SPECIES_RAYQUAZA,
+        .currAbility = ABILITY_CLOUDNINE,
+        .replaceAbilityString = NAME_AIR_LOCK,
 	},
 };

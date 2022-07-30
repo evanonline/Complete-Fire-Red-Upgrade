@@ -2171,17 +2171,17 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 			data->defense *= 2;
 			break;
 
-		case ABILITY_PORTALPOWER:
+		//ase ABILITY_PORTALPOWER:
 		//0.75x Decrement
-		#ifdef PORTAL_POWER
-			if ((useMonAtk && !CheckContactByMon(move, data->monAtk))
-			|| (!useMonAtk && !CheckContact(move, bankAtk)))
-			{
-				attack = (attack * 75) / 100;
-				spAttack = (spAttack * 75) / 100;
-			}
-		#endif
-			break;
+		//#ifdef PORTAL_POWER
+			//if ((useMonAtk && !CheckContactByMon(move, data->monAtk))
+			//|| (!useMonAtk && !CheckContact(move, bankAtk)))
+			//{
+				//attack = (attack * 75) / 100;
+				//spAttack = (spAttack * 75) / 100;
+			//}
+		//#endif
+			//break;
 	}
 
 //Attacker Item Checks
@@ -3330,6 +3330,18 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 		case ABILITY_STEELY_SPIRIT:
 		//1.5x Boost
 			if (data->moveType == TYPE_STEEL)
+				power = (power * 15) / 10;
+			break;
+			
+		case ABILITY_DRAGONSMAW:
+		//1.5x Boost
+			if (data->moveType == TYPE_DRAGON)
+				power = (power * 15) / 10;
+			break;
+			
+		case ABILITY_TRANSISTOR:
+		//1.5x Boost
+			if (data->moveType == TYPE_ELECTRIC)
 				power = (power * 15) / 10;
 			break;
 
