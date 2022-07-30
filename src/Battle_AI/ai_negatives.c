@@ -1469,6 +1469,11 @@ MOVESCR_CHECK_0:
 				DECREASE_VIABILITY(10);
 				break;
 			}
+			
+			if (ABILITY(bankDef) == ABILITY_UNSEENFIST){ //Don't protect against Urshifu
+				DECREASE_VIABILITY(10);
+				break;
+			}
 
 			if (gBattleMoves[gLastResultingMoves[bankAtk]].effect == EFFECT_PROTECT
 			&&  move != MOVE_QUICKGUARD

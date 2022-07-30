@@ -550,7 +550,7 @@ Changes form each turn.
 Occasionally moves first.
 
 #org @DESC_UNSEEN_FIST
-Contact moves ignore protection.
+Contact moves bypass Protect.
 
 #org @DESC_CURIOUSMEDICINE
 Removes stat changes on entry.

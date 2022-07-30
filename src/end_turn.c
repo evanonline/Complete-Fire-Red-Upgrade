@@ -314,6 +314,7 @@ u8 TurnBasedEffects(void)
 				if (BATTLER_ALIVE(gActiveBattler))
 				{
 					gLastUsedAbility = ABILITY(gActiveBattler);
+					gLastUsedSpecies = ABILITY(gActiveBattler);
 					switch(gLastUsedAbility) {
 						case ABILITY_RAINDISH:
 						case ABILITY_DRYSKIN:
@@ -1290,6 +1291,7 @@ u8 TurnBasedEffects(void)
 						if (BATTLER_ALIVE(gActiveBattler))
 						{
 							gLastUsedAbility = ABILITY(gActiveBattler);
+							gLastUsedSpecies = ABILITY(gActiveBattler);
 							switch(gLastUsedAbility) {
 								case ABILITY_SPEEDBOOST:
 								case ABILITY_TRUANT:

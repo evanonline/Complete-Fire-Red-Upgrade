@@ -12056,7 +12056,7 @@ const struct BattleMove gBattleMoves[] =
 	
 	[MOVE_DIRECLAW] =
 	{
-		.effect = EFFECT_TRI_ATTACK, //Should be poison / paralyze / freeze insteadd of burn / paralyze / freeze
+		.effect = EFFECT_TRI_ATTACK,
 		.power = 65,
 		.type = TYPE_POISON,
 		.accuracy = 100,

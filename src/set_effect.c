@@ -387,8 +387,30 @@ void SetMoveEffect(bool8 primary, u8 certain)
 				}
 				else
 				{
-					gBattleCommunication[MOVE_EFFECT_BYTE] = umodsi(Random(), 3) + 3;
-					SetMoveEffect(FALSE, 0);
+					if (gCurrentMove == MOVE_DIRECLAW)
+					{
+						u8 effect = umodsi(Random(), 3);
+						switch (effect)
+						{
+						case 0:
+							gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_POISON;
+							SetMoveEffect(FALSE, 0);
+							break;
+						case 1:
+							gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_PARALYSIS;
+							SetMoveEffect(FALSE, 0);
+							break;
+						case 2:
+							gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_SLEEP;
+							SetMoveEffect(FALSE, 0);
+							break;
+						}
+					}
+					else
+					{
+						gBattleCommunication[MOVE_EFFECT_BYTE] = umodsi(Random(), 3) + 3;
+						SetMoveEffect(FALSE, 0);
+					}
 				}
 				break;
 

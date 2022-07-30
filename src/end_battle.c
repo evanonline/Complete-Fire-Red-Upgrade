@@ -362,6 +362,7 @@ u8 IsRunningFromBattleImpossible(void)
 		{
 			gBattleScripting.bank = i;
 			gLastUsedAbility = ABILITY(i);
+			gLastUsedSpecies = SPECIES(i);
 			gBattleCommunication[MULTISTRING_CHOOSER] = 2;
 			return ABILITY_PREVENTING_ESCAPE;
 		}
@@ -372,6 +373,7 @@ u8 IsRunningFromBattleImpossible(void)
 		{
 			gBattleScripting.bank = i;
 			gLastUsedAbility = ABILITY(i);
+			gLastUsedSpecies = SPECIES(i);
 			gBattleCommunication[MULTISTRING_CHOOSER] = 2;
 			return ABILITY_PREVENTING_ESCAPE;
 		}
@@ -382,6 +384,7 @@ u8 IsRunningFromBattleImpossible(void)
 		{
 			gBattleScripting.bank = i;
 			gLastUsedAbility = ABILITY(i);
+			gLastUsedSpecies = SPECIES(i);
 			gBattleCommunication[MULTISTRING_CHOOSER] = 2;
 			return ABILITY_PREVENTING_ESCAPE;
 		}
@@ -450,6 +453,7 @@ bool8 TryRunFromBattle(u8 bank)
 	else if (ABILITY(bank) == ABILITY_RUNAWAY)
 	{
 		gLastUsedAbility = ABILITY_RUNAWAY;
+		gLastUsedSpecies = SPECIES(bank);
 		gProtectStructs[bank].fleeFlag = 2;
 		++effect;
 	}

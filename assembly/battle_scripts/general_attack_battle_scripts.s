@@ -4934,6 +4934,9 @@ BS_224_Poltergeist:
 	jumpiffainted BANK_TARGET BS_MOVE_FAINT
 	jumpifmovehadnoeffect BS_MOVE_FAINT
 	waitmessage DELAY_1SECOND
+	setword BATTLE_STRING_LOADER gText_Poltergeist
+    printstring 0x184
+    waitmessage DELAY_1SECOND
 	goto BS_MOVE_FAINT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

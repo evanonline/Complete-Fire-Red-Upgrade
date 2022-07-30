@@ -385,8 +385,8 @@ This move is busted!\nI hate it!
 #org @gText_ScrunchFail
 The Scrunch failed to protect\n[ATTACKER]!
 
-#org @Text_Poltergeist
-[TARGET] is about to\nbe attacked by its item!
+#org @gText_Poltergeist
+[TARGET] is\nattacked by its item!
 
 #org @gText_CourtChange
 [ATTACKER] swapped each\nside's battle effects!
