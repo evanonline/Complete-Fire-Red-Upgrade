@@ -947,6 +947,9 @@ enum ProtectQueries ShouldProtect(u8 bankAtk, u8 bankDef, u16 move)
 		return FALSE;
 
 	if (WillFaintFromSecondaryDamage(bankAtk)
+		&& defAbility != ABILITY_GRIMNEIGH
+		&& defAbility != ABILITY_ASONE_CHILLING
+		&& defAbility != ABILITY_ASONE_GRIM
 		&& defAbility != ABILITY_MOXIE
 		&& defAbility != ABILITY_BEASTBOOST)
 		return FALSE; //Don't protect if you're going to faint after protecting and foe can't get boosts from your KO

@@ -527,8 +527,8 @@ Stamina
 #org @NAME_STEELWORKER
 Steelworker
 
-#org @NAME_TANGLING_HAIR
-Tangling Hair
+#org @NAME_AS_ONE_CHILLING
+As One
 
 #org @NAME_TRIAGE
 Triage
@@ -665,8 +665,8 @@ Queenly Majesty
 #org @NAME_INNARDS_OUT
 Innards Out
 
-#org @NAME_DAZZLING
-Dazzling
+#org @NAME_AS_ONE_GRIM
+As One
 
 #org @NAME_GLUTTONY
 Gluttony
@@ -771,21 +771,11 @@ Pastel Veil
 Unseen Fist
 
 
-
-#org @NAME_AS_ONE_CHILLING
-As One
-
-#org @NAME_AS_ONE_GRIM
-As One
-
-
-
 #org @NAME_QUICK_DRAW
 Quick Draw
 
 #org @NAME_CURIOUS_MEDICINE
 Curious Medicine
-
 
 
 #org @NAME_PURE_POWER
@@ -808,3 +798,9 @@ Iron Barbs
 
 #org @NAME_AIR_LOCK
 Air Lock
+
+#org @NAME_DAZZLING
+Dazzling
+
+#org @NAME_TANGLING_HAIR
+Tangling Hair

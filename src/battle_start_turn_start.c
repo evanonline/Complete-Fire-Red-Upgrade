@@ -1722,6 +1722,8 @@ s32 BracketCalc(u8 bank)
 
 			case ITEM_EFFECT_CUSTAP_BERRY:
 				if (!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_UNNERVE, 0, 0)
+				&& !AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_ASONE_CHILLING, 0, 0)
+				&& !AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_ASONE_GRIM, 0, 0)
 				&& PINCH_BERRY_CHECK(bank))
 				{
 					gNewBS->CustapQuickClawIndicator |= gBitTable[bank];

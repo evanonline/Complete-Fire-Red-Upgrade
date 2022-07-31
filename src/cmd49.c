@@ -780,6 +780,7 @@ void atk49_moveend(void) //All the effects that happen after a move is used
 					break;
 
 				case ABILITY_MOXIE:
+				case ABILITY_ASONE_CHILLING:
 					if ((arg1 != ARG_IN_FUTURE_ATTACK || gWishFutureKnock.futureSightPartyIndex[bankDef] == gBattlerPartyIndexes[gBankAttacker])
 					&& gBattleMons[bankDef].hp == 0
 					&& BATTLER_ALIVE(gBankAttacker)
@@ -802,7 +803,8 @@ void atk49_moveend(void) //All the effects that happen after a move is used
 					}
 					break;
 					
-				case ABILITY_GRIMNEIGH: //added 
+				case ABILITY_GRIMNEIGH: //added
+				case ABILITY_ASONE_GRIM:
 					if ((arg1 != ARG_IN_FUTURE_ATTACK || gWishFutureKnock.futureSightPartyIndex[bankDef] == gBattlerPartyIndexes[gBankAttacker])
 					&& gBattleMons[bankDef].hp == 0
 					&& BATTLER_ALIVE(gBankAttacker)

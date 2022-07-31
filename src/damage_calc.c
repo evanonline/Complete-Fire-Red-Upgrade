@@ -2600,7 +2600,9 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 	//Second Target Item Checks
 	switch (data->defItemEffect) {
 		case ITEM_EFFECT_WEAKNESS_BERRY:
-			if (!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bankDef, ABILITY_UNNERVE, 0, 0) && data->atkAbility != ABILITY_UNNERVE)
+			if ((!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bankDef, ABILITY_UNNERVE, 0, 0) && data->atkAbility != ABILITY_UNNERVE)
+				&& (!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bankDef, ABILITY_ASONE_CHILLING, 0, 0) && data->atkAbility != ABILITY_ASONE_CHILLING)
+				&& (!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bankDef, ABILITY_ASONE_GRIM, 0, 0) && data->atkAbility != ABILITY_ASONE_GRIM))
 			{
 				if ((data->resultFlags & MOVE_RESULT_SUPER_EFFECTIVE && data->defItemQuality == data->moveType)
 				|| (data->defItemQuality == TYPE_NORMAL && data->moveType == TYPE_NORMAL)) //Chilan Berry

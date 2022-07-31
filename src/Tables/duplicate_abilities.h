@@ -10,6 +10,7 @@ extern const u8 NAME_PROPELLER_TAIL[];
 extern const u8 NAME_CHILLING_NEIGH[];
 extern const u8 NAME_IRON_BARBS[];
 extern const u8 NAME_AIR_LOCK[];
+extern const u8 NAME_DAZZLING[];
 
 static struct DuplicateAbility sDuplicateAbilities[] =
 {
@@ -82,5 +83,20 @@ static struct DuplicateAbility sDuplicateAbilities[] =
         .species = SPECIES_RAYQUAZA,
         .currAbility = ABILITY_CLOUDNINE,
         .replaceAbilityString = NAME_AIR_LOCK,
+	},
+	{
+        .species = SPECIES_BRUXISH,
+        .currAbility = ABILITY_QUEENLYMAJESTY,
+        .replaceAbilityString = NAME_DAZZLING,
+	},
+	{
+        .species = SPECIES_DIGLETT_H,
+        .currAbility = ABILITY_GOOEY,
+        .replaceAbilityString = NAME_TANGLING_HAIR,
+	},
+	{
+        .species = SPECIES_DUGTRIO_H,
+        .currAbility = ABILITY_GOOEY,
+        .replaceAbilityString = NAME_TANGLING_HAIR,
 	},
 };

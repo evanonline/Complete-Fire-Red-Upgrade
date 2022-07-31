@@ -202,6 +202,8 @@ static bool8 TryRemoveNeutralizingGas(u8 ability)
 				//Some abilities don't reactivate
 				switch (ability) {
 					case ABILITY_UNNERVE:
+					case ABILITY_ASONE_CHILLING:
+					case ABILITY_ASONE_GRIM:
 						break;
 					case ABILITY_IMPOSTER: //Never gets another chance
 						gStatuses3[bank] |= STATUS3_SWITCH_IN_ABILITY_DONE;
@@ -225,8 +227,9 @@ static bool8 TryRemoveUnnerve(u8 bank)
 	u8 side = SIDE(bank);
 	bool8 ret = FALSE;
 
-	if (ABILITY(bank) == ABILITY_UNNERVE)
+	if (ABILITY(bank) == ABILITY_UNNERVE || ABILITY(bank) == ABILITY_ASONE_CHILLING || ABILITY(bank) == ABILITY_ASONE_GRIM)
 	{
+		u8 oldAbility = ABILITY(bank);
 		*GetAbilityLocation(bank) = ABILITY_NONE; //Temporarily remove Unnerve so Berries can activate
 
 		for (int i = 0; i < gBattlersCount; ++i)
@@ -244,19 +247,18 @@ static bool8 TryRemoveUnnerve(u8 bank)
 				}
 			}
 		}
-
-		*GetAbilityLocation(bank) = ABILITY_UNNERVE; //Restore Unnerve so loop can continue when we return to this function
+		
+		*GetAbilityLocation(bank) = oldAbility; //Restore Unnerve so loop can continue when we return to this function
 	}
 
 	return ret;
 }
-
 static bool8 TryActivateFlowerGift(u8 leavingBank)
 {
 	u32 i = 0;
 
-	if (ABILITY(leavingBank) == ABILITY_AIRLOCK
-	||  ABILITY(leavingBank) == ABILITY_CLOUDNINE)
+	if (ABILITY(leavingBank) == ABILITY_CLOUDNINE
+	/*||  ABILITY(leavingBank) == ABILITY_AIRLOCK*/)
 		gBattleMons[leavingBank].ability = ABILITY_NONE; //Remove ability because we can't have these anymore
 
 	for (u8 bank = gBanksByTurnOrder[i]; i < gBattlersCount; ++i, bank = gBanksByTurnOrder[i])

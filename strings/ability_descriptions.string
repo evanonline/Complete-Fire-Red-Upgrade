@@ -564,5 +564,8 @@ Powers up Dragon-type moves.
 #org @DESC_GRIMNEIGH
 Knockouts boost Sp. Atk.
 
-#org @DESC_AS_ONE
-Combines mount and rider.
+#org @DESC_ASONE_CHILLING
+Combines mount and rider powers.
+
+#org @DESC_ASONE_GRIM
+Combines mount and rider powers.
