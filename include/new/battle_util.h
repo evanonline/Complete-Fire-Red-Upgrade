@@ -86,6 +86,7 @@ void AddBankToPickupStack(const u8 bank);
 void RemoveBankFromPickupStack(const u8 bank);
 u8 GetTopOfPickupStackNotIncludingBank(const u8 bank);
 void RemoveScreensFromSide(const u8 side);
+//void ClearStatsAllied(const u8 side);
 
 void ClearBankStatus(u8 bank);
 bool8 DoesSleepClausePrevent(u8 bank);

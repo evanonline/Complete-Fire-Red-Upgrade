@@ -125,6 +125,7 @@ extern const u8 gText_AnticipationActivate[];
 extern const u8 gText_ForewarnActivate[];
 extern const u8 gText_FriskActivate[];
 extern const u8 gText_ScreenCleanerActivate[];
+extern const u8 gText_CuriousMedicineActivate[];
 extern const u8 gText_NeutralizingGasActivate[];
 extern const u8 gText_NeutralizingGasEnd[];
 extern const u8 ElectricTerrainSetString[];

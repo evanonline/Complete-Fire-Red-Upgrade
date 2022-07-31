@@ -11,6 +11,10 @@ extern const u8 NAME_CHILLING_NEIGH[];
 extern const u8 NAME_IRON_BARBS[];
 extern const u8 NAME_AIR_LOCK[];
 extern const u8 NAME_DAZZLING[];
+extern const u8 NAME_TANGLING_HAIR[];
+extern const u8 NAME_TURBOBLAZE[];
+extern const u8 NAME_TERAVOLT[];
+extern const u8 NAME_FILTER[];
 
 static struct DuplicateAbility sDuplicateAbilities[] =
 {
@@ -90,13 +94,48 @@ static struct DuplicateAbility sDuplicateAbilities[] =
         .replaceAbilityString = NAME_DAZZLING,
 	},
 	{
-        .species = SPECIES_DIGLETT_H,
+        .species = SPECIES_DIGLETT_A,
         .currAbility = ABILITY_GOOEY,
         .replaceAbilityString = NAME_TANGLING_HAIR,
 	},
 	{
-        .species = SPECIES_DUGTRIO_H,
+        .species = SPECIES_DUGTRIO_A,
         .currAbility = ABILITY_GOOEY,
         .replaceAbilityString = NAME_TANGLING_HAIR,
+	},	
+	{
+        .species = SPECIES_RESHIRAM,
+        .currAbility = ABILITY_MOLDBREAKER,
+        .replaceAbilityString = NAME_TURBOBLAZE,
+	},		
+	{
+        .species = SPECIES_KYUREM_WHITE,
+        .currAbility = ABILITY_MOLDBREAKER,
+        .replaceAbilityString = NAME_TURBOBLAZE,
+	},		
+	{
+        .species = SPECIES_ZEKROM,
+        .currAbility = ABILITY_MOLDBREAKER,
+        .replaceAbilityString = NAME_TERAVOLT,
+	},		
+	{
+        .species = SPECIES_KYUREM_BLACK,
+        .currAbility = ABILITY_MOLDBREAKER,
+        .replaceAbilityString = NAME_TERAVOLT,
 	},
+	{
+        .species = SPECIES_MR_MIME,
+        .currAbility = ABILITY_SOLIDROCK,
+        .replaceAbilityString = NAME_FILTER,
+	},	
+	{
+        .species = SPECIES_AGGRON_MEGA,
+        .currAbility = ABILITY_SOLIDROCK,
+        .replaceAbilityString = NAME_FILTER,
+	},	
+	{
+        .species = SPECIES_MIME_JR,
+        .currAbility = ABILITY_SOLIDROCK,
+        .replaceAbilityString = NAME_FILTER,
+	},	
 };

@@ -1707,7 +1707,8 @@ bool8 GoodIdeaToLowerAttack(u8 bankDef, u8 bankAtk, u16 move)
 	return STAT_STAGE(bankDef, STAT_STAGE_ATK) > 4 && PhysicalMoveInMoveset(bankDef)
 		&& defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		//&& defAbility != ABILITY_FULLMETALBODY
+		&& defAbility != ABILITY_WHITESMOKE
+		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_HYPERCUTTER;
 }
 
@@ -1722,7 +1723,8 @@ bool8 GoodIdeaToLowerDefense(u8 bankDef, u8 bankAtk, u16 move)
 		&& PhysicalMoveInMoveset(bankAtk)
 		&& defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		//&& defAbility != ABILITY_FULLMETALBODY
+		&& defAbility != ABILITY_WHITESMOKE
+		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_BIGPECKS;
 }
 
@@ -1771,7 +1773,8 @@ bool8 GoodIdeaToLowerAccuracy(u8 bankDef, u8 bankAtk, u16 move)
 
 	return defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		//&& defAbility != ABILITY_FULLMETALBODY
+		&& defAbility != ABILITY_WHITESMOKE
+		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_KEENEYE;
 }
 

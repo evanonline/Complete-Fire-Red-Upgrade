@@ -2549,7 +2549,7 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 			break;
 
 		case ABILITY_SOLIDROCK:
-		case ABILITY_FILTER:
+		//case ABILITY_FILTER:
 		case ABILITY_PRISMARMOR:
 		//0.75x Decrement
 			if (data->resultFlags & MOVE_RESULT_SUPER_EFFECTIVE)

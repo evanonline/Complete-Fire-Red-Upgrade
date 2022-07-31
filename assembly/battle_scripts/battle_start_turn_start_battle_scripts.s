@@ -22,6 +22,7 @@ battle_start_turn_start_battle_scripts.s
 .global BattleScript_MistyTerrainBattleBegin
 .global BattleScript_PsychicTerrainBattleBegin
 .global BattleScript_QuickClaw
+.global BattleScript_QuickDraw
 .global BattleScript_FocusPunchSetUp
 .global BattleScript_BeakBlastSetUp
 .global BattleScript_ShellTrapSetUp
@@ -90,6 +91,7 @@ BattleScript_Primal:
 BattleScript_PrimalSub:
 	jumpifspecies BANK_ATTACKER SPECIES_GROUDON_PRIMAL PGroudonAnim
 	jumpifspecies BANK_ATTACKER SPECIES_KYOGRE_PRIMAL PKyogreAnim
+	jumpifspecies BANK_ATTACKER SPECIES_DIALGA_PRIMAL PKyogreAnim
 	playanimation BANK_ATTACKER ANIM_TRANSFORM 0x0
 
 RegularPrimalAnim:
@@ -150,6 +152,17 @@ BattleScript_QuickClaw:
 	end3
 
 QuickClawBS:
+	playanimation 0xA ANIM_ITEM_USE 0x0
+	printstring 0x184
+	waitmessage DELAY_HALFSECOND
+	end3
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+BattleScript_QuickDraw:
+	setword BATTLE_STRING_LOADER StringNull
+	printstring 0x184
+	setword BATTLE_STRING_LOADER gText_AbilityIncreasedSpeedBracket
 	playanimation 0xA ANIM_ITEM_USE 0x0
 	printstring 0x184
 	waitmessage DELAY_HALFSECOND

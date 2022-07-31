@@ -19,6 +19,7 @@ cmd49_battle_scripts.s
 .global BattleScript_BeakBlastBurn
 .global BattleScript_Magician
 .global BattleScript_Moxie
+.global BattleScript_GrimNeigh
 .global BattleScript_MindBlownDamage
 .global BattleScript_FaintAttackerForExplosion
 .global BattleScript_ExplosionAnim
@@ -151,6 +152,19 @@ BattleScript_Moxie:
 	waitmessage DELAY_1SECOND
 	call BattleScript_AbilityPopUpRevert
 MoxieReturnPostBuff:
+	return
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+BattleScript_GrimNeigh:
+	statbuffchange STAT_ATTACKER | STAT_BS_PTR GrimNeighReturnPostBuff
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 GrimNeighReturnPostBuff
+	call BattleScript_AbilityPopUp
+	playanimation BANK_ATTACKER ANIM_STAT_BUFF ANIM_ARG_1
+	printfromtable 0x83FE57C
+	waitmessage DELAY_1SECOND
+	call BattleScript_AbilityPopUpRevert
+GrimNeighReturnPostBuff:
 	return
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

@@ -305,8 +305,8 @@ Tinted Lens
 #org @NAME_SOLID_ROCK
 Solid Rock
 
-#org @NAME_FILTER
-Filter
+#org @NAME_FULL_METAL_BODY
+Full Metal Body
 
 #org @NAME_INFILTRATOR
 Infiltrator
@@ -461,11 +461,11 @@ Parental Bond
 #org @NAME_MOLD_BREAKER
 Mold Breaker
 
-#org @NAME_TURBOBLAZE
-Turboblaze
+#org @NAME_QUICK_DRAW
+Quick Draw
 
-#org @NAME_TERAVOLT
-Teravolt
+#org @NAME_CURIOUS_MEDICINE
+Curious Medicine
 
 #org @NAME_ZEN_MODE
 Zen Mode
@@ -771,11 +771,6 @@ Pastel Veil
 Unseen Fist
 
 
-#org @NAME_QUICK_DRAW
-Quick Draw
-
-#org @NAME_CURIOUS_MEDICINE
-Curious Medicine
 
 
 #org @NAME_PURE_POWER
@@ -804,3 +799,12 @@ Dazzling
 
 #org @NAME_TANGLING_HAIR
 Tangling Hair
+
+#org @NAME_TURBOBLAZE
+Turboblaze
+
+#org @NAME_TERAVOLT
+Teravolt
+
+#org @NAME_FILTER
+Filter

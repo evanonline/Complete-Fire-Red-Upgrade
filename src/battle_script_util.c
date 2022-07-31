@@ -391,8 +391,8 @@ void MoldBreakerRemoveAbilitiesOnForceSwitchIn(void)
 		bank = gBankAttacker;
 
 	if (ABILITY(bank) == ABILITY_MOLDBREAKER
-	||  ABILITY(bank) == ABILITY_TURBOBLAZE
-	||  ABILITY(bank) == ABILITY_TERAVOLT)
+	/*||  ABILITY(bank) == ABILITY_TURBOBLAZE
+	||  ABILITY(bank) == ABILITY_TERAVOLT*/)
 	{
 		if (gMoldBreakerIgnoredAbilities[ABILITY(gBankSwitching)])
 		{

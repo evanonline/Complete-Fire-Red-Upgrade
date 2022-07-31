@@ -10,7 +10,6 @@ Multi-hit moves hit five times.
 Turns electricity into Speed.
 
 #org @DESC_MULTISCALE
-#org @DESC_FULLMETALBODY
 Reduces damage at full HP.
 
 #org @DESC_TECHNICIAN
@@ -70,6 +69,9 @@ Boosts "not very effective\" moves.
 #org @DESC_SOLIDROCK
 #org @DESC_FILTER
 Weakens super-effective moves.
+
+#org @DESC_FULLMETALBODY
+Prevents ability reduction.
 
 #org @DESC_INFILTRATOR
 #ifdef UNBOUND
@@ -569,3 +571,4 @@ Combines mount and rider powers.
 
 #org @DESC_ASONE_GRIM
 Combines mount and rider powers.
+

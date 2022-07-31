@@ -44,7 +44,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_ADAPTABILITY] = 8,
 	[ABILITY_AFTERMATH] = 5,
 	[ABILITY_AERILATE] = 8,
-	//[ABILITY_AIRLOCK] = 5,
+//	[ABILITY_AIRLOCK] = 5,
 	[ABILITY_ANALYTIC] = 5,
 	[ABILITY_ANGERPOINT] = 4,
 	[ABILITY_ANTICIPATION] = 2,
@@ -75,7 +75,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_DAMP] = 2,
 	[ABILITY_DANCER] = 5,
 	[ABILITY_DARKAURA] = 6,
-	//[ABILITY_DAZZLING] = 5,
+//	[ABILITY_DAZZLING] = 5,
 	[ABILITY_DEFEATIST] = -1,
 	[ABILITY_DEFIANT] = 5,
 	[ABILITY_DELTASTREAM] = 10,
@@ -90,7 +90,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_ELECTRICSURGE] = 8,
 	[ABILITY_EMERGENCYEXIT] = 3,
 	[ABILITY_FAIRYAURA] = 6,
-	[ABILITY_FILTER] = 6,
+//	[ABILITY_FILTER] = 6,
 	[ABILITY_FLAMEBODY] = 4,
 	[ABILITY_FLAREBOOST] = 5,
 	[ABILITY_FLASHFIRE] = 6,
@@ -101,7 +101,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_FOREWARN] = 2,
 	[ABILITY_FRIENDGUARD] = 0,
 	[ABILITY_FRISK] = 3,
-//	[ABILITY_FULLMETALBODY] = 4,
+	[ABILITY_FULLMETALBODY] = 5,
 	[ABILITY_FURCOAT] = 7,
 	[ABILITY_GALEWINGS] = 6,
 	[ABILITY_GALVANIZE] = 8,
@@ -129,7 +129,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_INNERFOCUS] = 2,
 	[ABILITY_INSOMNIA] = 4,
 	[ABILITY_INTIMIDATE] = 7,
-	//[ABILITY_IRONBARBS] = 6,
+//	[ABILITY_IRONBARBS] = 6,
 	[ABILITY_IRONFIST] = 6,
 	[ABILITY_JUSTIFIED] = 4,
 	[ABILITY_KEENEYE] = 1,
@@ -175,7 +175,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_POISONHEAL] = 8,
 	[ABILITY_POISONPOINT] = 4,
 	[ABILITY_POISONTOUCH] = 4,
-	//[ABILITY_PORTALPOWER] = 8,
+//	[ABILITY_PORTALPOWER] = 8,
 	[ABILITY_POWERCONSTRUCT] = 10,
 	[ABILITY_POWEROFALCHEMY] = 0,
 	[ABILITY_PRANKSTER] = 8,
@@ -246,10 +246,10 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_SYNCHRONIZE] = 4,
 	[ABILITY_TANGLEDFEET] = 2,
 	[ABILITY_UNSEENFIST] = 5,
-	//[ABILITY_TANGLINGHAIR] = 5,
+//	[ABILITY_TANGLINGHAIR] = 5,
 	[ABILITY_TECHNICIAN] = 8,
 	[ABILITY_TELEPATHY] = 0,
-	[ABILITY_TERAVOLT] = 7,
+//	[ABILITY_TERAVOLT] = 7,
 	[ABILITY_THICKFAT] = 7,
 	[ABILITY_TINTEDLENS] = 7,
 	[ABILITY_TORRENT] = 5,
@@ -258,7 +258,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_TRACE] = 6,
 	[ABILITY_TRIAGE] = 7,
 	[ABILITY_TRUANT] = -2,
-	[ABILITY_TURBOBLAZE] = 7,
+//	[ABILITY_TURBOBLAZE] = 7,
 	[ABILITY_UNAWARE] = 6,
 	[ABILITY_UNBURDEN] = 7,
 	[ABILITY_UNNERVE] = 3,
@@ -281,7 +281,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_COTTONDOWN] = 3,
 	[ABILITY_MIRRORARMOR] = 6,
 	[ABILITY_GULPMISSILE] = 4,
-	[ABILITY_STALWART] = 2, //Also Propellor Tail
+	[ABILITY_STALWART] = 2, //Also Propeller Tail
 	[ABILITY_STEAMENGINE] = 3,
 	[ABILITY_PUNKROCK] = 2,
 	[ABILITY_SANDSPIT] = 5,
@@ -306,7 +306,7 @@ const bool8 gMoldBreakerIgnoredAbilities[] =
 	[ABILITY_CLEARBODY] =		TRUE,
 	[ABILITY_DAMP] =			TRUE,
 	[ABILITY_DRYSKIN] =			TRUE,
-	[ABILITY_FILTER] =			TRUE,
+//	[ABILITY_FILTER] =			TRUE,
 	[ABILITY_FLASHFIRE] =		TRUE,
 	[ABILITY_FLOWERGIFT] =		TRUE,
 	[ABILITY_HEATPROOF] =		TRUE,
@@ -360,12 +360,12 @@ const bool8 gMoldBreakerIgnoredAbilities[] =
 	[ABILITY_FURCOAT] =			TRUE,
 	[ABILITY_OVERCOAT] =		TRUE,
 	[ABILITY_SWEETVEIL] =		TRUE,
-	//[ABILITY_DAZZLING] =		TRUE,
+//	[ABILITY_DAZZLING] =		TRUE,
 	[ABILITY_DISGUISE] =		TRUE,
 	[ABILITY_FLUFFY] =			TRUE,
 	[ABILITY_QUEENLYMAJESTY] =	TRUE,
 	[ABILITY_WATERBUBBLE] =		TRUE,
-	//[ABILITY_PORTALPOWER] =	TRUE,
+//	[ABILITY_PORTALPOWER] =		TRUE,
 	[ABILITY_MIRRORARMOR] =		TRUE,
 	[ABILITY_PUNKROCK] =		TRUE,
 	[ABILITY_ICESCALES] =		TRUE,
@@ -747,17 +747,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			effect++;
 			break;
 
-		case ABILITY_TERAVOLT:
-			gBattleStringLoader = gText_TeravoltActivate;
-			BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-			effect++;
-			break;
+		//case ABILITY_TERAVOLT:
+			//gBattleStringLoader = gText_TeravoltActivate;
+			//BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+			//effect++;
+			//break;
 
-		case ABILITY_TURBOBLAZE:
-			gBattleStringLoader = gText_TurboblazeActivate;
-			BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-			effect++;
-			break;
+		//case ABILITY_TURBOBLAZE:
+			//gBattleStringLoader = gText_TurboblazeActivate;
+			//BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+			//effect++;
+			//break;
 
 		case ABILITY_SLOWSTART:
 			gNewBS->SlowStartTimers[bank] = 5;
@@ -1174,6 +1174,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
 			effect++;
 			break;
+			
+		//case ABILITY_CURIOUSMEDICINE:
+			//ClearStatsAllied(B_SIDE_PLAYER);
+			//gBattleStringLoader = gText_CuriousMedicineActivate;
+			//BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+			//effect++;
+			//break;
 
 		case ABILITY_MIMICRY: ;
 			const u8* script = TryActivateMimicryForBank(bank);

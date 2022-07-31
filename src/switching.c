@@ -407,6 +407,11 @@ void atk4D_switchindataupdate(void)
 		else
 			gStatuses3[gActiveBattler] &= ~STATUS3_ILLUSION;
 	}
+	
+	if (ABILITY(gActiveBattler) == ABILITY_CURIOUSMEDICINE)
+	{
+		
+	}
 
 	gBattleScripting.bank = gActiveBattler;
 
