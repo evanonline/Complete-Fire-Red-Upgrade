@@ -20,9 +20,10 @@
 #include "../include/new/damage_calc.h"
 #include "../include/new/dynamax.h"
 #include "../include/new/form_change.h"
-#include "../include/new/util.h"
+#include "../include/new/move_battle_scripts.h"
 #include "../include/new/move_tables.h"
 #include "../include/new/text.h"
+#include "../include/new/util.h"
 #include "../include/new/cmd49_battle_scripts.h"
 /*
 ability_battle_effects.c
@@ -667,6 +668,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				effect++;
 			}
 			break;
+		
+		case ABILITY_CURIOUSMEDICINE:
+			if (IS_DOUBLE_BATTLE
+			&& BATTLER_ALIVE(PARTNER(bank))
+			&& gBattleMons[PARTNER(bank)].status1)
+			{
+				gEffectBank = PARTNER(bank);
+				gBattleMons[gEffectBank].status2 |= MOVE_EFFECT_RESET_STAT_CHANGES;
+				gBattleStringLoader = TargetStatsResetString;
+				effect++;
+			}
+			break;
 
 		case ABILITY_FORECAST:
 			effect = CastformDataTypeChange(bank);
@@ -1174,13 +1187,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
 			effect++;
 			break;
-			
-		//case ABILITY_CURIOUSMEDICINE:
-			//ClearStatsAllied(B_SIDE_PLAYER);
-			//gBattleStringLoader = gText_CuriousMedicineActivate;
-			//BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
-			//effect++;
-			//break;
 
 		case ABILITY_MIMICRY: ;
 			const u8* script = TryActivateMimicryForBank(bank);
