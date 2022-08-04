@@ -54,7 +54,7 @@ static const u16 sCriticalHitChances[] =
 //This file's functions:
 static u8 CalcPossibleCritChance(u8 bankAtk, u8 bankDef, u16 move, struct Pokemon* monAtk, struct Pokemon* monDef);
 static void TypeDamageModificationByDefTypes(u8 atkAbility, u8 bankDef, u16 move, u8 moveType, u8* flags, u8 defType1, u8 defType2, u8 defType3);
-static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, const u8 defType, const u8 bankDef, u8 atkAbility, u8* flags, struct Pokemon* monDef, bool8 checkMonDef);
+static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, const u8 defType, const u8 bankDef, u8 atkAbility, u8* flags, struct Pokemon* monDef, struct Pokemon* monAtk, bool8 checkMonDef);
 static bool8 AbilityCanChangeTypeAndBoost(u16 move, u8 atkAbility, u8 electrifyTimer, bool8 checkIonDeluge, bool8 zMoveActive);
 static s32 CalculateBaseDamage(struct DamageCalc* data);
 static u16 GetBasePower(struct DamageCalc* data);
@@ -1112,13 +1112,13 @@ TYPE_LOOP:
 	multiplier3 = gTypeEffectiveness[moveType][defType3];
 
 	//If the multiplier is 0, that means normal damage. No effect is 1 (it is modified to 0 later).
-	ModulateDmgByType(multiplier1, move, moveType, defType1, bankDef, atkAbility, flags, 0, FALSE);
+	ModulateDmgByType(multiplier1, move, moveType, defType1, bankDef, atkAbility, flags, 0, 0, FALSE);
 
 	if (defType1 != defType2)
-		ModulateDmgByType(multiplier2, move, moveType, defType2, bankDef, atkAbility, flags, 0, FALSE);
+		ModulateDmgByType(multiplier2, move, moveType, defType2, bankDef, atkAbility, flags, 0, 0, FALSE);
 
 	if (defType3 != defType1 && defType3 != defType2)
-		ModulateDmgByType(multiplier3, move, moveType, defType3, bankDef, atkAbility, flags, 0, FALSE);
+		ModulateDmgByType(multiplier3, move, moveType, defType3, bankDef, atkAbility, flags, 0, 0, FALSE);
 
 	if (move == MOVE_FLYINGPRESS && moveType != TYPE_FLYING)
 	{
@@ -1138,10 +1138,10 @@ TYPE_LOOP_AI:
 	multiplier1 = gTypeEffectiveness[moveType][defType1];
 	multiplier2 = gTypeEffectiveness[moveType][defType2];
 
-	ModulateDmgByType(multiplier1, move, moveType, defType1, 0, atkAbility, flags, monDef, TRUE);
+	ModulateDmgByType(multiplier1, move, moveType, defType1, 0, atkAbility, flags, monDef, 0, TRUE);
 
 	if (defType1 != defType2)
-		ModulateDmgByType(multiplier2, move, moveType, defType2, 0, atkAbility, flags, monDef, TRUE);
+		ModulateDmgByType(multiplier2, move, moveType, defType2, 0, atkAbility, flags, monDef, 0, TRUE);
 
 	if (move == MOVE_FLYINGPRESS && moveType != TYPE_FLYING)
 	{
@@ -1150,7 +1150,8 @@ TYPE_LOOP_AI:
 	}
 }
 
-static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, const u8 defType, const u8 bankDef, u8 atkAbility, u8* flags, struct Pokemon* monDef, bool8 checkMonDef)
+static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, const u8 defType, const u8 bankDef, u8 atkAbility, u8* flags, struct Pokemon* monDef, struct Pokemon* monAtk, bool8 checkMonDef)
+
 {
 	if (IsInverseBattle())
 	{
@@ -1194,10 +1195,8 @@ static void ModulateDmgByType(u8 multiplier, const u16 move, const u8 moveType, 
 	if (move == MOVE_HIDDENPOWER)
         multiplier = TYPE_MUL_SUPER_EFFECTIVE;	
 	
-		//todo 
-	//if (move == MOVE_JUDGMENT && GetMonItemEffect(bankAtk) == ITEM_EFFECT_LEGEND_PLATE)
-	//multiplier = TYPE_MUL_SUPER_EFFECTIVE;
-
+	if (move == MOVE_JUDGMENT && GetMonItemEffect(monAtk) == ITEM_EFFECT_LEGEND_PLATE)
+		multiplier = TYPE_MUL_SUPER_EFFECTIVE;
 
 	if (checkMonDef)
 	{

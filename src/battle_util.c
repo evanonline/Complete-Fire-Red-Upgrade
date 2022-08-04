@@ -1358,19 +1358,6 @@ void RemoveScreensFromSide(const u8 side)
 	gNewBS->AuroraVeilTimers[side] = 0;
 }
 
-//void ClearStatsAllied(const u8 side) //WIP Curious Medicine
-//{
-	//int i, j;
-
-	//for (i = 0; i < gBattlersCount; ++i)
-	//{
-		//for (j = 0; j < BATTLE_STATS_NO-1; ++j)
-			//gBattleMons[i].statStages[j] = 6;
-	//}
-
-	//++gBattlescriptCurrInstr;
-//}
-
 void ClearBankStatus(u8 bank)
 {
 	if (gBattleMons[bank].status1 & (STATUS_POISON | STATUS_TOXIC_POISON))

@@ -89,6 +89,7 @@ extern const u8 BattleScript_StickyHoldActivatesRet[];
 extern const u8 BattleScript_AvoidedMoveWithAbility[];
 extern const u8 BattleScript_MimicryTransformed[];
 extern const u8 BattleScript_MimicryReturnedToNormal[];
+extern const u8 BattleScript_GulpMissileActivate[];
 
 extern const u8 BattleScript_AbilityNoStatLoss[];
 extern const u8 BattleScript_PartnerAbilityNoStatLoss[];
