@@ -91,10 +91,24 @@ enum OverworldNPCSprites
 	EVENT_OBJ_GFX_BLAINE,
 	EVENT_OBJ_GFX_GIOVANNI,
 	EVENT_OBJ_GFX_MOM,
+	EVENT_OBJ_GFX_CELIO = 89,
+	EVENT_OBJ_GFX_PRIMO = 90,
+	EVENT_OBJ_GFX_GYMGUY = 91,
+	EVENT_OBJ_GFX_SMEARGLE = 152,
+	EVENT_OBJ_GFX_OCGUY = 154,
+	EVENT_OBJ_GFX_MARLEY,
 };
 
 #define EVENT_OBJ_GFX_RED_UNDERWATER 6 //By default VS. Seeker on bike b\c not used by anything else
 #define EVENT_OBJ_GFX_LEAF_UNDERWATER 13
+
+// unsure if needed
+
+//#define EVENT_OBJ_GFX_CELIO 	89
+//#define EVENT_OBJ_GFX_PRIMO 	90
+//#define EVENT_OBJ_GFX_GYMGUY 	91
+//#define EVENT_OBJ_GFX_SMEARGLE 	152
+//#define EVENT_OBJ_GFX_OCGUY 	154
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

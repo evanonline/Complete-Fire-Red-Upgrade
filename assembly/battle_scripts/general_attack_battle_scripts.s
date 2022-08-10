@@ -2992,7 +2992,7 @@ PsyshieldBash_SpDef:
 	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
 	printfromtable 0x83FE57C
 	waitmessage DELAY_1SECOND
-	goto BS_MOVE_END
+	goto BS_MOVE_FAINT
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

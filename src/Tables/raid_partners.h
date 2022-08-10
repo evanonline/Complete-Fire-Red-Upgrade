@@ -1,636 +1,536 @@
 #include "../config.h"
 
-
-#ifdef UNBOUND
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Catherine_Rank12[] =
+static const struct BattleTowerSpread sRaidPartnerSpread_May_Rank2[] =
 {
-	{
-		.species = SPECIES_SHELLOS_EAST,
-		.nature = NATURE_BOLD,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.spdEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STORMDRAIN
-		.item = ITEM_EVIOLITE,
-		.moves =
-		{
-			MOVE_SCALD,
-			MOVE_CLEARSMOG,
-			MOVE_MUDBOMB,
-			MOVE_RECOVER,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ALOMOMOLA,
-		.nature = NATURE_IMPISH,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_HEALER
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_AQUAJET,
-			MOVE_MIRRORCOAT,
-			MOVE_WISH,
-			MOVE_HEALPULSE,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_WARTORTLE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
+    {
+        .species = SPECIES_TORCHIC,
+        .item = ITEM_EXPERT_BELT,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Speed Boost
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_FLAMECHARGE,
+            MOVE_AERIALACE,
+            MOVE_ROCKSLIDE,
+            MOVE_SHADOWCLAW,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_MUNCHLAX,
+        .item = ITEM_NORMAL_GEM,
+        .ability = FRONTIER_ABILITY_2, //Thick Fat
+        .nature = NATURE_BRAVE,
+        .hpEv = 252,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 1,
+        .spDefIv = 30,
+        .spdIv = 27,
+        .moves = 
+        {
+            MOVE_ZENHEADBUTT,
+            MOVE_METRONOME,
+            MOVE_TACKLE,
+            MOVE_DEFENSECURL,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_LOTAD,
+        .item = ITEM_BLUNDER_POLICY,
+        .ability = FRONTIER_ABILITY_1, //Swift Swim
+        .nature = NATURE_MODEST,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WHIRLPOOL,
+            MOVE_BUBBLEBEAM,
+            MOVE_MEGADRAIN,
+            MOVE_ICYWIND,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_May_Rank5[] =
+{
+    {
+        .species = SPECIES_BLAZIKEN,
+        .item = ITEM_BLAZIKENITE,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Speed Boost
+        .nature = NATURE_ADAMANT,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_FIREPUNCH,
+            MOVE_BRICKBREAK,
+            MOVE_THUNDERPUNCH,
+            MOVE_KNOCKOFF,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SNORLAX,
+        .item = ITEM_LEFTOVERS,
+        .ability = FRONTIER_ABILITY_2, //Thick Fat
+        .nature = NATURE_BRAVE,
+        .hpEv = 12,
+        .atkEv = 244,
+        .spDefEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 1,
+        .spDefIv = 30,
+        .spdIv = 27,
+        .moves = 
+        {
+            MOVE_CURSE,
+            MOVE_DARKESTLARIAT,
+            MOVE_BODYSLAM,
+            MOVE_REST,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_LUDICOLO,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Swift Swim
+        .nature = NATURE_MODEST,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_HYDROPUMP,
+            MOVE_GIGADRAIN,
+            MOVE_ICEBEAM,
+            MOVE_FOCUSBLAST,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_May_Rank6[] =
+{
+    {
+        .species = SPECIES_GROUDON,
+        .item = ITEM_RED_ORB,
+        .ability = FRONTIER_ABILITY_1, //Drought
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_PRECIPICEBLADES,
+            MOVE_HEATCRASH,
+            MOVE_DRAGONCLAW,
+            MOVE_STONEEDGE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_LATIAS,
+        .item = ITEM_LATIASITE,
+        .ability = FRONTIER_ABILITY_1, //Levitate
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_PSYSHOCK,
+            MOVE_DRAGONPULSE,
+            MOVE_ICEBEAM,
+            MOVE_THUNDERBOLT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_DEOXYS_ATTACK,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Pressure
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_PSYCHIC,
+            MOVE_SHADOWBALL,
+            MOVE_FOCUSBLAST,
+            MOVE_METEORBEAM,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Brendan_Rank2[] =
+{
+    {
+        .species = SPECIES_MUDKIP,
+        .item = ITEM_SHELL_BELL,
+        .ability = FRONTIER_ABILITY_1, //Torrent
+        .nature = NATURE_ADAMANT,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WATERFALL,
+            MOVE_ROCKSMASH,
+            MOVE_ROCKTHROW,
+            MOVE_BITE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_ARON,
+        .item = ITEM_EVIOLITE,
+        .ability = FRONTIER_ABILITY_1, //Sturdy
+        .nature = NATURE_ADAMANT,
+        .hpEv = 248,
+        .atkEv = 252,
+        .spDefEv = 8,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_ROCKTOMB,
+            MOVE_IRONTAIL,
+            MOVE_SHADOWCLAW,
+            MOVE_BULLDOZE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SEEDOT,
+        .item = ITEM_SITRUS_BERRY,
+        .ability = FRONTIER_ABILITY_1, //Chlorophyll
+        .nature = NATURE_ADAMANT,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_BULLETSEED,
+            MOVE_PAYBACK,
+            MOVE_RETALIATE,
+            MOVE_ROCKSMASH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Brendan_Rank5[] =
+{
+    {
+        .species = SPECIES_SWAMPERT,
+        .item = ITEM_SWAMPERTITE,
+        .ability = FRONTIER_ABILITY_1, //Torrent
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WATERFALL,
+            MOVE_EARTHQUAKE,
+            MOVE_STONEEDGE,
+            MOVE_ICEPUNCH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_AGGRON,
+        .item = ITEM_LEFTOVERS,
+        .ability = FRONTIER_ABILITY_2, //Rock Head
+        .nature = NATURE_ADAMANT,
+        .hpEv = 252,
+        .atkEv = 120,
+        .defEv = 132,
+        .spDefEv = 4,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_BODYPRESS,
+            MOVE_HEAVYSLAM,
+            MOVE_EARTHQUAKE,
+            MOVE_HEADSMASH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SHIFTRY,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Chlorophyll
+        .nature = NATURE_ADAMANT,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_LEAFBLADE,
+            MOVE_KNOCKOFF,
+            MOVE_BRICKBREAK,
+            MOVE_SUCKERPUNCH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Brendan_Rank6[] =
+{
+    {
+        .species = SPECIES_KYOGRE,
+        .item = ITEM_BLUE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Drizzle
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WATERSPOUT,
+            MOVE_THUNDER,
+            MOVE_ICEBEAM,
+            MOVE_ORIGINPULSE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_LATIOS,
+        .item = ITEM_LATIOSITE,
+        .ability = FRONTIER_ABILITY_1, //Levitate
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_PSYCHIC,
+            MOVE_MYSTICALFIRE,
+            MOVE_DRAGONPULSE,
+            MOVE_SURF,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_JIRACHI,
+        .item = ITEM_LEFTOVERS,
+        .ability = FRONTIER_ABILITY_1, //Serene Grace
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_IRONHEAD,
+            MOVE_ZENHEADBUTT,
+            MOVE_ICEPUNCH,
+            MOVE_THUNDERPUNCH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_OldMan_Rank2[] =
+{
+    {
+        .species = SPECIES_MUDKIP,
+        .item = ITEM_SHELL_BELL,
+        .ability = FRONTIER_ABILITY_1, //Torrent
+        .nature = NATURE_ADAMANT,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WATERFALL,
+            MOVE_ROCKSMASH,
+            MOVE_ROCKTHROW,
+            MOVE_BITE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_KAKUNA,
+        .item = ITEM_EVIOLITE,
+        .ability = FRONTIER_ABILITY_1, //Shed Skin
+        .nature = NATURE_JOLLY,
 		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_RAINDISH
-		.item = ITEM_IAPAPA_BERRY,
-		.moves =
-		{
-			MOVE_AQUATAIL,
-			MOVE_ICEPUNCH,
-			MOVE_POWERUPPUNCH,
-			MOVE_RAINDANCE,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Catherine_Rank3[] =
-{
-	{
-		.species = SPECIES_GASTRODON_EAST,
-		.nature = NATURE_BOLD,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.spAtkEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STORMDRAIN
-		.item = ITEM_WIKI_BERRY,
-		.moves =
-		{
-			MOVE_SCALD,
-			MOVE_MUDBOMB,
-			MOVE_CLEARSMOG,
-			MOVE_RECOVER,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ALOMOMOLA,
-		.nature = NATURE_IMPISH,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_HEALER
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_AQUAJET,
-			MOVE_MIRRORCOAT,
-			MOVE_WISH,
-			MOVE_HEALPULSE,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_BLASTOISE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_RAINDISH
-		.item = ITEM_DAMP_ROCK,
-		.moves =
-		{
-			MOVE_AQUATAIL,
-			MOVE_ICEPUNCH,
-			MOVE_POWERUPPUNCH,
-			MOVE_RAINDANCE,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Catherine_Rank456[] =
-{
-	{
-		.species = SPECIES_GASTRODON_EAST,
-		.nature = NATURE_BOLD,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.spAtkEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STORMDRAIN
-		.item = ITEM_WIKI_BERRY,
-		.moves =
-		{
-			MOVE_SCALD,
-			MOVE_EARTHPOWER,
-			MOVE_CLEARSMOG,
-			MOVE_RECOVER,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ALOMOMOLA,
-		.nature = NATURE_IMPISH,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_HEALER
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_AQUAJET,
-			MOVE_MIRRORCOAT,
-			MOVE_WISH,
-			MOVE_HEALPULSE,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_BLASTOISE,
-		.nature = NATURE_MODEST,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_RAINDISH
-		.item = ITEM_BLASTOISINITE,
-		.moves =
-		{
-			MOVE_WATERPULSE,
-			MOVE_AURASPHERE,
-			MOVE_DARKPULSE,
-			MOVE_FLASHCANNON,
-		},
-		.ball = BALL_TYPE_DIVE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Ginger_Rank123[] =
-{
-	{
-		.species = SPECIES_VIVILLON,
-		.nature = NATURE_TIMID,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
 		.defEv = 4,
 		.spdEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_FRIENDGUARD
-		.item = ITEM_BINDING_BAND,
-		.moves =
-		{
-			MOVE_INFESTATION,
-			MOVE_ELECTROWEB,
-			MOVE_LIGHTSCREEN,
-			MOVE_PROTECT,
-		},
-		.ball = BALL_TYPE_NET_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_CLEFAIRY,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_FRIENDGUARD
-		.item = ITEM_EVIOLITE,
-		.moves =
-		{
-			MOVE_MOONBLAST,
-			MOVE_HELPINGHAND,
-			MOVE_FOLLOWME,
-			MOVE_LIFEDEW,
-		},
-		.ball = BALL_TYPE_MOON_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_AUDINO,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_HEALER
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_DAZZLINGGLEAM,
-			MOVE_FLAMETHROWER,
-			MOVE_HEALPULSE,
-			MOVE_WISH,
-		},
-		.ball = BALL_TYPE_PREMIER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Ginger_Rank456[] =
-{
-	{
-		.species = SPECIES_VIVILLON,
-		.nature = NATURE_TIMID,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 4,
-		.spdEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_FRIENDGUARD
-		.item = ITEM_BINDING_BAND,
-		.moves =
-		{
-			MOVE_INFESTATION,
-			MOVE_ELECTROWEB,
-			MOVE_LIGHTSCREEN,
-			MOVE_PROTECT,
-		},
-		.ball = BALL_TYPE_NET_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_CLEFABLE,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_MAGICGUARD
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_MOONBLAST,
-			MOVE_FOLLOWME,
-			MOVE_MAGICCOAT,
-			MOVE_LIFEDEW,
-		},
-		.ball = BALL_TYPE_MOON_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_AUDINO,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.defEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_HEALER
-		.item = ITEM_AUDINITE,
-		.moves =
-		{
-			MOVE_DAZZLINGGLEAM,
-			MOVE_HELPINGHAND,
-			MOVE_HEALPULSE,
-			MOVE_WISH,
-		},
-		.ball = BALL_TYPE_PREMIER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Abimbola_Rank23[] =
-{
-	{
-		.species = SPECIES_FOONGUS,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_REGENERATOR
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_GIGADRAIN,
-			MOVE_VENOSHOCK,
-			MOVE_CLEARSMOG,
-			MOVE_TOXIC,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_AXEW,
-		.nature = NATURE_ADAMANT,
 		.hpIv = 31,
 		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 0,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_MOLDBREAKER
-		.item = ITEM_EXPERT_BELT,
-		.moves =
-		{
-			MOVE_DRAGONCLAW,
-			MOVE_AQUATAIL,
-			MOVE_POISONJAB,
-			MOVE_XSCISSOR,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ONIX,
-		.nature = NATURE_CAREFUL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.atkEv = 252,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STURDY
-		.item = ITEM_EVIOLITE,
-		.moves =
-		{
-			MOVE_ROCKSLIDE,
-			MOVE_STOMPINGTANTRUM,
-			MOVE_IRONHEAD,
-			MOVE_BIND,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Abimbola_Rank456[] =
-{
-	{
-		.species = SPECIES_AMOONGUSS,
-		.nature = NATURE_CALM,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_REGENERATOR
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_GIGADRAIN,
-			MOVE_SLUDGEBOMB,
-			MOVE_RAGEPOWDER,
-			MOVE_SPORE,
-		},
-		.ball = BALL_TYPE_GREAT_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_HAXORUS,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.atkEv = 252,
-		.defEv = 252,
-		.spdEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_MOLDBREAKER
-		.item = ITEM_DRAGONIUM_Z,
-		.moves =
-		{
-			MOVE_DRAGONCLAW,
-			MOVE_AQUATAIL,
-			MOVE_POISONJAB,
-			MOVE_SWORDSDANCE,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_STEELIX,
-		.nature = NATURE_BRAVE,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 0,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STURDY
-		.item = ITEM_STEELIXITE,
-		.moves =
-		{
-			MOVE_GYROBALL,
-			MOVE_STOMPINGTANTRUM,
-			MOVE_AQUATAIL,
-			MOVE_FIREFANG,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Mahina_Rank456[] =
-{
-	{
-		.species = SPECIES_GYARADOS,
-		.nature = NATURE_CAREFUL,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_INTIMIDATE
-		.item = ITEM_WATERIUM_Z,
-		.moves =
-		{
-			MOVE_AQUATAIL,
-			MOVE_CRUNCH,
-			MOVE_IRONHEAD,
-			MOVE_POWERWHIP,
-		},
-		.ball = BALL_TYPE_LURE_BALL,
-		.shiny = TRUE,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_VOLCARONA,
-		.nature = NATURE_MODEST,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.defEv = 4,
-		.spAtkEv = 252,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_FLAMEBODY
-		.item = ITEM_LEFTOVERS,
-		.moves =
-		{
-			MOVE_BUGBUZZ,
-			MOVE_FIERYDANCE,
-			MOVE_LIGHTSCREEN,
-			MOVE_ROOST,
-		},
-		.ball = BALL_TYPE_LUXURY_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_VENUSAUR,
+        .moves = 
+        {
+            MOVE_POISONSTING,
+            MOVE_STRINGSHOT,
+            MOVE_BUGBITE,
+            MOVE_HARDEN,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_BULBASAUR,
+        .item = ITEM_SITRUS_BERRY,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Chlorophyll
 		.nature = NATURE_BOLD,
 		.hpIv = 31,
 		.atkIv = 0,
@@ -641,8 +541,139 @@ static const struct BattleTowerSpread sRaidPartnerSpread_Mahina_Rank456[] =
 		.hpEv = 252,
 		.defEv = 252,
 		.spAtkEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_CHLOROPHYLL
-		.item = ITEM_VENUSAURITE,
+        .moves = 
+        {
+            MOVE_SYNTHESIS,
+            MOVE_SEEDBOMB,
+            MOVE_POISONPOWDER,
+            MOVE_SLEEPPOWDER,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_OldMan_Rank5[] =
+{
+    {
+        .species = SPECIES_MARSHTOMP,
+        .item = ITEM_CHOICE_SCARF,
+        .ability = FRONTIER_ABILITY_1, //Torrent
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_MUDDYWATER,
+            MOVE_EARTHQUAKE,
+            MOVE_ENDEAVOR,
+            MOVE_ANCIENTPOWER,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_IVYSAUR,
+        .item = ITEM_EVIOLITE,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Chlorophyll
+		.nature = NATURE_BOLD,
+		.hpIv = 31,
+		.atkIv = 0,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.defEv = 252,
+		.spAtkEv = 4,
+        .moves = 
+		{
+			MOVE_VINEWHIP,
+			MOVE_LEECHSEED,
+			MOVE_WORRYSEED,
+			MOVE_POISONPOWDER,
+		},
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+    {
+        .species = SPECIES_BEEDRILL,
+        .item = ITEM_FOCUS_SASH,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Sniper
+        .nature = NATURE_JOLLY,
+		.atkEv = 252,
+		.defEv = 4,
+		.spdEv = 252,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_LASERFOCUS,
+            MOVE_TAILWIND,
+            MOVE_POISONJAB,
+            MOVE_ASSURANCE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_OldMan_Rank6[] =
+{
+    {
+        .species = SPECIES_SWAMPERT,
+        .item = ITEM_SWAMPERTITE,
+        .ability = FRONTIER_ABILITY_1, //Torrent
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WATERFALL,
+            MOVE_EARTHQUAKE,
+            MOVE_STONEEDGE,
+            MOVE_ICEPUNCH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_VENUSAUR,
+        .item = ITEM_VENUSAURITE,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Chlorophyll
+		.nature = NATURE_BOLD,
+		.hpIv = 31,
+		.atkIv = 0,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.defEv = 252,
+		.spAtkEv = 4,
 		.moves =
 		{
 			MOVE_GRASSPLEDGE,
@@ -650,34 +681,242 @@ static const struct BattleTowerSpread sRaidPartnerSpread_Mahina_Rank456[] =
 			MOVE_WEATHERBALL,
 			MOVE_LEECHSEED,
 		},
-		.ball = BALL_TYPE_POKE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+        .species = SPECIES_BEEDRILL,
+        .item = ITEM_BEEDRILLITE,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Sniper
+		.nature = NATURE_JOLLY,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.spdEv = 252,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.moves =
+		{
+			MOVE_DRILLRUN,
+			MOVE_TAILWIND,
+			MOVE_POISONJAB,
+			MOVE_XSCISSOR,
+		},
 		.forSingles = TRUE,
 		.forDoubles = TRUE,
 		.modifyMovesDoubles = FALSE,
 	},
 };
 
-static const struct BattleTowerSpread sRaidPartnerSpread_Alford_Rank456[] =
+static const struct BattleTowerSpread sRaidPartnerSpread_Primo_Rank2[] =
 {
-	{
-		.species = SPECIES_EMPOLEON,
-		.nature = NATURE_BOLD,
+    {
+        .species = SPECIES_JIGGLYPUFF,
+        .item = ITEM_METRONOME,
+        .ability = FRONTIER_ABILITY_1, //Cute Charm
+        .nature = NATURE_LONELY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_POUND,
+            MOVE_DISARMINGVOICE,
+            MOVE_SING,
+            MOVE_COPYCAT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SMEARGLE,
+        .item = ITEM_LUM_BERRY,
+        .ability = FRONTIER_ABILITY_2, //Technician
+        .nature = NATURE_JOLLY,
+		.hpEv = 4,
+		.defEv = 252,
+		.spdEv = 252,
 		.hpIv = 31,
-		.atkIv = 0,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 30,
+		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_BUGBITE,
+            MOVE_NATURALGIFT,
+            MOVE_AVALANCHE,
+            MOVE_SPORE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_BASCULIN_WHITE,
+        .item = ITEM_LEFTOVERS,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Mold Breaker
+		.nature = NATURE_ADAMANT,
+		.hpEv = 252,
+		.atkEv = 252,
+		.defEv = 4,
+		.hpIv = 31,
+		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_AQUAJET,
+            MOVE_SWIFT,
+            MOVE_MUDDYWATER,
+            MOVE_HEADSMASH,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Primo_Rank5[] =
+{
+    {
+        .species = SPECIES_WIGGLYTUFF,
+        .item = ITEM_METRONOME,
+        .ability = FRONTIER_ABILITY_1, //Cute Charm
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_WISH,
+            MOVE_DAZZLINGGLEAM,
+            MOVE_HYPERVOICE,
+            MOVE_HELPINGHAND,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SMEARGLE,
+        .item = ITEM_FOCUS_SASH,
+        .ability = FRONTIER_ABILITY_2, //Technician
+        .nature = NATURE_JOLLY,
+		.hpEv = 4,
+		.defEv = 252,
+		.spdEv = 252,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 30,
+		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_TAUNT,
+            MOVE_NUZZLE,
+            MOVE_AVALANCHE,
+            MOVE_SPORE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SMEARGLE,
+        .item = ITEM_FOCUS_SASH,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Moody
+        .nature = NATURE_JOLLY,
+		.hpEv = 4,
+		.defEv = 252,
+		.spdEv = 252,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_SHELLSMASH,
+            MOVE_SPORE,
+            MOVE_SUBSTITUTE,
+            MOVE_POWERTRIP,
+        },
+		.ball = BALL_TYPE_GREAT_BALL,
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Primo_Rank6[] =
+{
+    {
+        .species = SPECIES_BASCULEGION,
+        .item = ITEM_PROTECTIVE_PADS,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Mold Breaker
+		.nature = NATURE_ADAMANT,
 		.hpEv = 252,
-		.spAtkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_TORRENT
-		.item = ITEM_LEFTOVERS,
+		.atkEv = 252,
+		.defEv = 4,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+        .moves = 
+        {
+            MOVE_WAVECRASH,
+            MOVE_SWIFT,
+            MOVE_PHANTOMFORCE,
+            MOVE_SOAK,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_ZARUDE_DADA,
+        .item = ITEM_HEAVY_DUTY_BOOTS,
+        .ability = FRONTIER_ABILITY_1, //Leaf Guard
+		.nature = NATURE_JOLLY,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.spdEv = 252,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
 		.moves =
 		{
-			MOVE_WATERPLEDGE,
-			MOVE_FLASHCANNON,
-			MOVE_ICEBEAM,
+			MOVE_POWERWHIP,
+			MOVE_DARKESTLARIAT,
+			MOVE_JUNGLEHEALING,
 			MOVE_SWAGGER,
 		},
 		.ball = BALL_TYPE_CHERISH_BALL,
@@ -686,613 +925,380 @@ static const struct BattleTowerSpread sRaidPartnerSpread_Alford_Rank456[] =
 		.modifyMovesDoubles = FALSE,
 	},
 	{
-		.species = SPECIES_AEGISLASH,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 0,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_STANCECHANGE
-		.item = ITEM_FOCUS_SASH,
-		.moves =
-		{
-			MOVE_IRONHEAD,
-			MOVE_SHADOWCLAW,
-			MOVE_SACREDSWORD,
-			MOVE_KINGSSHIELD,
-		},
-		.ball = BALL_TYPE_CHERISH_BALL,
-		.shiny = TRUE,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_GALLADE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spDefEv = 252,
-		.spdEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_JUSTIFIED
-		.item = ITEM_GALLADITE,
-		.moves =
-		{
-			MOVE_PSYCHOCUT,
-			MOVE_DRAINPUNCH,
-			MOVE_POISONJAB,
-			MOVE_POWERUPPUNCH,
-		},
-		.ball = BALL_TYPE_CHERISH_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Rival_Rank56[] =
-{
-	{
-		.species = SPECIES_GARCHOMP,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_ROUGHSKIN
-		.item = ITEM_GARCHOMPITE,
-		.moves =
-		{
-			MOVE_DRAGONCLAW,
-			MOVE_STOMPINGTANTRUM,
-			MOVE_POISONJAB,
-			MOVE_CRUNCH,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_MAMOSWINE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 196,
-		.atkEv = 252,
-		.spdEv = 60,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_THICKFAT
-		.item = ITEM_FOCUS_SASH,
-		.moves =
-		{
-			MOVE_ICICLESPEAR,
-			MOVE_STOMPINGTANTRUM,
-			MOVE_STONEEDGE,
-			MOVE_ICESHARD,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_GRANBULL,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_INTIMIDATE
-		.item = ITEM_ASSAULT_VEST,
-		.moves =
-		{
-			MOVE_PLAYROUGH,
-			MOVE_POWERUPPUNCH,
-			MOVE_ICEPUNCH,
-			MOVE_THUNDERPUNCH,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_TYRANITAR,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_SANDSTREAM
-		.item = ITEM_TYRANITARITE,
-		.moves =
-		{
-			MOVE_STONEEDGE,
-			MOVE_CRUNCH,
-			MOVE_POWERUPPUNCH,
-			MOVE_FIREPUNCH,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_METAGROSS,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.atkEv = 252,
-		.spDefEv = 252,
-		.spdEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_CLEARBODY
-		.item = ITEM_METAGROSSITE,
-		.moves =
-		{
-			MOVE_IRONHEAD,
-			MOVE_ZENHEADBUTT,
-			MOVE_POWERUPPUNCH,
-			MOVE_ICEPUNCH,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Marlon_Rank56[] =
-{
-	{
-		.species = SPECIES_MACHAMP,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 0,
-		.hpEv = 252,
-		.atkEv = 4,
-		.spDefEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_GUTS
-		.item = ITEM_SITRUS_BERRY,
-		.moves =
-		{
-			MOVE_BRICKBREAK,
-			MOVE_ICEPUNCH,
-			MOVE_BULLETPUNCH,
-			MOVE_WIDEGUARD,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-		.gigantamax = TRUE,
-	},
-	{
-		.species = SPECIES_KROOKODILE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_INTIMIDATE
-		.item = ITEM_ASSAULT_VEST,
-		.moves =
-		{
-			MOVE_STOMPINGTANTRUM,
-			MOVE_DARKESTLARIAT,
-			MOVE_AQUATAIL,
-			MOVE_THUNDERFANG,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_ZAPDOS,
-		.nature = NATURE_MODEST,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_STATIC
-		.item = ITEM_ELECTRIUM_Z,
-		.moves =
-		{
-			MOVE_THUNDERBOLT,
-			MOVE_HEATWAVE,
-			MOVE_OMINOUSWIND,
-			MOVE_ROOST,
-		},
-		.ball = BALL_TYPE_DUSK_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Jax_Rank6[] =
-{
-	{
-		.species = SPECIES_GOLURK,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_IRONFIST
-		.item = ITEM_GROUNDIUM_Z,
-		.moves =
-		{
-			MOVE_HIGHHORSEPOWER,
-			MOVE_PHANTOMFORCE,
-			MOVE_POWERUPPUNCH,
-			MOVE_GRAVITY,
-		},
-		.ball = BALL_TYPE_CHERISH_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_MAGNEZONE,
-		.nature = NATURE_MODEST,
-		.hpIv = 31,
-		.atkIv = 0,
-		.defIv = 31,
-		.spAtkIv = 31,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.spAtkEv = 252,
-		.ability = FRONTIER_ABILITY_2, //ABILITY_STURDY
-		.item = ITEM_AIR_BALLOON,
-		.moves =
-		{
-			MOVE_THUNDERBOLT,
-			MOVE_FLASHCANNON,
-			MOVE_SIGNALBEAM,
-			MOVE_MIRRORCOAT,
-		},
-		.ball = BALL_TYPE_CHERISH_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_SALAMENCE,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.atkEv = 252,
+        .species = SPECIES_SMEARGLE,
+        .item = ITEM_FOCUS_SASH,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Moody
+        .nature = NATURE_JOLLY,
+		.hpEv = 4,
 		.defEv = 252,
-		.spdEv = 4,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_INTIMIDATE
-		.item = ITEM_SALAMENCITE,
-		.moves =
-		{
-			MOVE_DRAGONCLAW,
-			MOVE_DOUBLEEDGE,
-			MOVE_AQUATAIL,
-			MOVE_FIREFANG,
-		},
-		.ball = BALL_TYPE_CHERISH_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-};
-
-static const struct BattleTowerSpread sRaidPartnerSpread_Red_Rank6[] =
-{
-	{
-		.species = SPECIES_PIKACHU_CAP_ORIGINAL,
-		.nature = NATURE_MODEST,
+		.spdEv = 252,
 		.hpIv = 31,
-		.atkIv = 0,
+		.atkIv = 31,
 		.defIv = 31,
 		.spAtkIv = 31,
 		.spDefIv = 31,
 		.spdIv = 31,
-		.spAtkEv = 252,
-		.spDefEv = 4,
-		.spdEv = 252,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_LIGHTNINGROD
-		.item = ITEM_PIKASHUNIUM_Z,
-		.moves =
-		{
-			MOVE_THUNDERBOLT,
-			MOVE_GRASSKNOT,
-			MOVE_VOLTSWITCH,
-			MOVE_REFLECT,
-		},
-		.ball = BALL_TYPE_POKE_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
-	{
-		.species = SPECIES_SNORLAX,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.spDefEv = 4,
-		.ability = FRONTIER_ABILITY_HIDDEN, //ABILITY_GLUTTONY
-		.item = ITEM_AGUAV_BERRY,
-		.moves =
-		{
-			MOVE_BODYSLAM,
-			MOVE_CRUNCH,
-			MOVE_HIGHHORSEPOWER,
-			MOVE_RECYCLE,
-		},
-		.ball = BALL_TYPE_MASTER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-		.gigantamax = TRUE,
-	},
-	{
-		.species = SPECIES_MEWTWO,
-		.nature = NATURE_ADAMANT,
-		.hpIv = 31,
-		.atkIv = 31,
-		.defIv = 31,
-		.spAtkIv = 0,
-		.spDefIv = 31,
-		.spdIv = 31,
-		.hpEv = 252,
-		.atkEv = 252,
-		.ability = FRONTIER_ABILITY_1, //ABILITY_PRESSURE
-		.item = ITEM_MEWTWONITE_X,
-		.moves =
-		{
-			MOVE_ZENHEADBUTT,
-			MOVE_POWERUPPUNCH,
-			MOVE_POISONJAB,
-			MOVE_RECOVER,
-		},
-		.ball = BALL_TYPE_MASTER_BALL,
-		.forSingles = TRUE,
-		.forDoubles = TRUE,
-		.modifyMovesDoubles = FALSE,
-	},
+        .moves = 
+        {
+            MOVE_PRECIPICEBLADES,
+            MOVE_SHELLSMASH,
+            MOVE_SUBSTITUTE,
+            MOVE_POWERTRIP,
+        },
+		.ball = BALL_TYPE_GREAT_BALL,
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
 };
 
-extern const u8 sTrainerName_Catherine[];
-extern const u8 sTrainerName_Ginger[];
-extern const u8 sTrainerName_Abimbola[];
-extern const u8 sTrainerName_Mahina[];
-extern const u8 sTrainerName_Alford[];
-extern const u8 sTrainerName_Marlon[];
-extern const u8 sTrainerName_Jax[];
-extern const u8 sTrainerName_Red[];
+static const struct BattleTowerSpread sRaidPartnerSpread_Marley_Rank2[] =
+{
+
+    {
+        .species = SPECIES_GROWLITHE,
+        .item = ITEM_CHARCOAL,
+        .ability = FRONTIER_ABILITY_2, //Flash Fire
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_FIREFANG,
+            MOVE_THIEF,
+            MOVE_AERIALACE,
+            MOVE_WILDCHARGE,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_VOLTORB,
+        .item = ITEM_MAGNET,
+        .ability = FRONTIER_ABILITY_2, //Static
+        .nature = NATURE_TIMID,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_CHARGEBEAM,
+            MOVE_SHOCKWAVE,
+            MOVE_SIGNALBEAM,
+            MOVE_SWIFT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_ZIGZAGOON_G,
+        .item = ITEM_SITRUS_BERRY,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Quick Feet
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 8,
+        .spdEv = 248,
+        .hpIv = 29,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 5,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_SUPERFANG,
+            MOVE_KNOCKOFF,
+            MOVE_QUICKGUARD,
+            MOVE_HEADBUTT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Marley_Rank5[] =
+{
+    {
+        .species = SPECIES_ARCANINE,
+        .item = ITEM_CHOICE_BAND,
+        .ability = FRONTIER_ABILITY_2, //Flash Fire
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_FLAREBLITZ,
+            MOVE_WILDCHARGE,
+            MOVE_PLAYROUGH,
+            MOVE_CLOSECOMBAT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_ELECTRODE,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_2, //Static
+        .nature = NATURE_HASTY,
+        .atkEv = 4,
+        .spAtkEv = 252,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_THUNDERBOLT,
+            MOVE_VOLTSWITCH,
+            MOVE_SIGNALBEAM,
+            MOVE_EXPLOSION,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+	{
+        .species = SPECIES_OBSTAGOON,
+        .item = ITEM_SITRUS_BERRY,
+        .ability = FRONTIER_ABILITY_HIDDEN, //Defiant
+        .nature = NATURE_JOLLY,
+        .atkEv = 248,
+        .spDefEv = 8,
+        .spdEv = 252,
+        .hpIv = 29,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 5,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_TAUNT,
+            MOVE_KNOCKOFF,
+            MOVE_QUICKGUARD,
+            MOVE_HEADBUTT,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Marley_Rank6[] =
+{
+    {
+        .species = SPECIES_ENTEI,
+        .item = ITEM_CHOICE_BAND,
+        .ability = FRONTIER_ABILITY_1, //Pressure
+        .nature = NATURE_JOLLY,
+        .atkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_SACREDFIRE,
+            MOVE_STOMPINGTANTRUM,
+            MOVE_STONEEDGE,
+            MOVE_EXTREMESPEED,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_SHAYMIN_SKY,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Serene Grace
+        .nature = NATURE_MILD,
+		.atkEv = 52,
+        .spAtkEv = 204,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 31,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_SEEDFLARE,
+            MOVE_AIRSLASH,
+            MOVE_LEECHSEED,
+            MOVE_EARTHPOWER,
+        },
+		.ball = BALL_TYPE_CHERISH_BALL,
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+    {
+        .species = SPECIES_ENAMORUS,
+        .item = ITEM_LIFE_ORB,
+        .ability = FRONTIER_ABILITY_1, //Healer
+        .nature = NATURE_MODEST,
+        .spAtkEv = 252,
+        .spDefEv = 4,
+        .spdEv = 252,
+        .hpIv = 31,
+        .atkIv = 0,
+        .defIv = 31,
+        .spAtkIv = 31,
+        .spDefIv = 31,
+        .spdIv = 31,
+        .moves = 
+        {
+            MOVE_MOONBLAST,
+            MOVE_NASTYPLOT,
+            MOVE_MYSTICALFIRE,
+            MOVE_EARTHPOWER,
+        },
+        .forSingles = TRUE,
+        .forDoubles = TRUE,
+        .modifyMovesDoubles = FALSE,
+    },
+};
+
+extern const u8 sTrainerName_May[];
+extern const u8 sTrainerName_Brendan[];
+extern const u8 sTrainerName_OldMan[];
+extern const u8 sTrainerName_Primo[];
+extern const u8 sTrainerName_Marley[];
 
 const struct MultiRaidTrainer gRaidPartners[] =
 {
 	{
-		.owNum = EVENT_OBJ_GFX_CATHERINE,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_CATHERINE,
-		.gender = FEMALE,
-		.otId = 0xCD2F27AB,
-		.name = sTrainerName_Catherine,
-		.spreads =
-		{
-			[ONE_STAR_RAID ... TWO_STAR_RAID] =	 sRaidPartnerSpread_Catherine_Rank12,
-			[THREE_STAR_RAID] =				 	 sRaidPartnerSpread_Catherine_Rank3,
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =	 sRaidPartnerSpread_Catherine_Rank456,
-		},
-		.spreadSizes =
-		{
-			[ONE_STAR_RAID ... TWO_STAR_RAID] =   NELEMS(sRaidPartnerSpread_Catherine_Rank12),
-			[THREE_STAR_RAID] = 				 NELEMS(sRaidPartnerSpread_Catherine_Rank3),
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Catherine_Rank456),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_GINGER,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_GINGER,
-		.gender = FEMALE,
-		.otId = 0xAD5C417B,
-		.name = sTrainerName_Ginger,
-		.spreads =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Ginger_Rank123,
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Ginger_Rank456,
-		},
-		.spreadSizes =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Ginger_Rank123),
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Ginger_Rank456),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_ABIMBOLA,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_ABIMBOLA,
-		.gender = MALE,
-		.otId = 0x2EC3AEBC,
-		.name = sTrainerName_Abimbola,
-		.spreads =
-		{
-			[TWO_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Abimbola_Rank23,
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Abimbola_Rank456,
-		},
-		.spreadSizes =
-		{
-			[TWO_STAR_RAID ... THREE_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Abimbola_Rank23),
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Abimbola_Rank456),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_MAHINA,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_MAHINA,
+		.owNum = EVENT_OBJ_GFX_MAY,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_MAY,
 		.gender = FEMALE,
 		.otId = 0x87116209,
-		.name = sTrainerName_Mahina,
+		.name = sTrainerName_May,
 		.spreads =
 		{
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Mahina_Rank456,
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_May_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_May_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_May_Rank6,
 		},
 		.spreadSizes =
 		{
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Mahina_Rank456),
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank6),
 		},
 	},
 	{
-		.owNum = EVENT_OBJ_GFX_ALFORD,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_ALFORD,
+		.owNum = EVENT_OBJ_GFX_BRENDAN,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_BRENDAN,
 		.gender = MALE,
-		.otId = 0x61AC8B90,
-		.name = sTrainerName_Alford,
+		.otId = 0x87116209,
+		.name = sTrainerName_Brendan,
 		.spreads =
 		{
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Alford_Rank456,
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Brendan_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_Brendan_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_Brendan_Rank6,
 		},
 		.spreadSizes =
 		{
-			[FOUR_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Alford_Rank456),
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank6),
 		},
 	},
 	{
-		.owNum = EVENT_OBJ_GFX_RIVAL,
-		.trainerClass = CLASS_RIVAL,
-		.backSpriteId = TRAINER_BACK_PIC_RIVAL,
+		.owNum = EVENT_OBJ_GFX_OLD_MAN_2,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_OLD_MAN,
 		.gender = MALE,
-		.otId = 0xECBAA1AD,
-		.name = NULL, //Predefined ingame
+		.otId = 0x87116209,
+		.name = sTrainerName_OldMan,
 		.spreads =
 		{
-			[FIVE_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Rival_Rank56,
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_OldMan_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_OldMan_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_OldMan_Rank6,
 		},
 		.spreadSizes =
 		{
-			[FIVE_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Rival_Rank56),
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank6),
 		},
 	},
 	{
-		.owNum = EVENT_OBJ_GFX_MARLON,
-		.trainerClass = CLASS_SHADOW_ADMIN,
-		.backSpriteId = TRAINER_BACK_PIC_MARLON,
+		.owNum = EVENT_OBJ_GFX_PRIMO,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_POKE_DUDE,
 		.gender = MALE,
-		.otId = 0x4156010,
-		.name = sTrainerName_Marlon,
+		.otId = 0x87116209,
+		.name = sTrainerName_Primo,
 		.spreads =
 		{
-			[FIVE_STAR_RAID ... SIX_STAR_RAID] =  sRaidPartnerSpread_Marlon_Rank56,
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_Primo_Rank6,
 		},
 		.spreadSizes =
 		{
-			[FIVE_STAR_RAID ... SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Marlon_Rank56),
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank6),
 		},
 	},
 	{
-		.owNum = EVENT_OBJ_GFX_JAX,
-		.trainerClass = CLASS_PKMN_TRAINER_2,//CLASS_CHAMPION,
-		.backSpriteId = TRAINER_BACK_PIC_JAX,
-		.gender = MALE,
-		.otId = 0x95746426,
-		.name = sTrainerName_Jax,
+		.owNum = EVENT_OBJ_GFX_MARLEY,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_MARLEY,
+		.gender = FEMALE,
+		.otId = 0x87116209,
+		.name = sTrainerName_Marley,
 		.spreads =
 		{
-			[SIX_STAR_RAID] =  sRaidPartnerSpread_Jax_Rank6,
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Marley_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_Marley_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_Marley_Rank6,
 		},
 		.spreadSizes =
 		{
-			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Jax_Rank6),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_RED,
-		.trainerClass = CLASS_PKMN_TRAINER_2,
-		.backSpriteId = TRAINER_BACK_PIC_RED_NEW,
-		.gender = MALE,
-		.otId = 0x95746426,
-		.name = sTrainerName_Red,
-		.spreads =
-		{
-			[SIX_STAR_RAID] =  sRaidPartnerSpread_Red_Rank6,
-		},
-		.spreadSizes =
-		{
-			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Red_Rank6),
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Marley_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Marley_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Marley_Rank6),
 		},
 	},
 };
-
-#else
-
-const struct MultiRaidTrainer gRaidPartners[] =
-{
-	{
-	},
-};
-
-#endif
 
 const u8 gNumRaidPartners = NELEMS(gRaidPartners);

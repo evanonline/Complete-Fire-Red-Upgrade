@@ -9,3 +9,18 @@ Battle ends if:\n4 Pok\emon faint\n10 turns pass
 
 #org @gText_RaidBattleChoosePartner
 Available Partners
+
+#org @sTrainerName_May
+May
+
+#org @sTrainerName_Brendan
+Brendan
+
+#org @sTrainerName_OldMan
+Old Man
+
+#org @sTrainerName_Primo
+Primo
+
+#org @sTrainerName_Marley
+Marley

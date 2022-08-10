@@ -47,6 +47,9 @@ extern const u8 gTrainerBackPic_AlfordPal[];
 #define gTrainerPalette_Alford gTrainerBackPic_AlfordPal
 extern const u8 gTrainerBackPic_TessyPal[];
 #define gTrainerPalette_Tessy gTrainerBackPic_TessyPal
+
+extern const u8 gTrainerBackPic_MarleyPal[];
+#define gTrainerPalette_Marley gTrainerBackPic_MarleyPal
 extern const u8 gTrainerBackPic_Protag2SherryPal[];
 #define gTrainerPalette_Protag2Sherry gTrainerBackPic_Protag2SherryPal
 
@@ -58,6 +61,7 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 	[TRAINER_BACK_PIC_MAY] =		{gTrainerPalette_May, 			TRAINER_BACK_PIC_MAY},
 	[TRAINER_BACK_PIC_POKE_DUDE] =	{gTrainerPalette_PokeDude, 		TRAINER_BACK_PIC_POKE_DUDE},
 	[TRAINER_BACK_PIC_OLD_MAN] =	{gTrainerPalette_OldMan, 		TRAINER_BACK_PIC_OLD_MAN},
+	[TRAINER_BACK_PIC_MARLEY] =		{gTrainerPalette_Marley,		TRAINER_BACK_PIC_MARLEY},
 	[TRAINER_BACK_PIC_SHERRY] =		{gTrainerPalette_Protag2Sherry, TRAINER_BACK_PIC_SHERRY},
 
 #ifdef UNBOUND //For Pokemon Unbound
@@ -92,6 +96,7 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 #define gTrainerBackAnims_Mahina (const union AnimCmd* const*) 0x8239F44
 #define gTrainerBackAnims_Alford (const union AnimCmd* const*) 0x8239F44
 #define gTrainerBackAnims_Tessy (const union AnimCmd* const*) 0x8239F44
+#define gTrainerBackAnims_Marley (const union AnimCmd* const*) 0x8239F44
 #define gTrainerBackAnims_Protag2Sherry (const union AnimCmd* const*) 0x8239F44
 
 const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
@@ -102,6 +107,7 @@ const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 	[TRAINER_BACK_PIC_MAY] = gTrainerBackAnims_May,
 	[TRAINER_BACK_PIC_POKE_DUDE] = gTrainerBackAnims_PokeDude,
 	[TRAINER_BACK_PIC_OLD_MAN] = gTrainerBackAnims_OldMan,
+	[TRAINER_BACK_PIC_MARLEY] = gTrainerBackAnims_Marley,
 	[TRAINER_BACK_PIC_SHERRY] = gTrainerBackAnims_Protag2Sherry,
 
 #ifdef UNBOUND
@@ -127,6 +133,7 @@ const struct MonCoords gTrainerBackPicCoords[] =
 	[TRAINER_BACK_PIC_MAY] = 		{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_POKE_DUDE] = 	{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_OLD_MAN] = 	{.coords = 8, .y_offset = 4},
+	[TRAINER_BACK_PIC_MARLEY] = 	{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_SHERRY] = 	{.coords = 8, .y_offset = 5},
 
 #ifdef UNBOUND
@@ -168,9 +175,11 @@ extern const u8 gTrainerBackPic_AbimbolaTiles[];
 extern const u8 gTrainerBackPic_MahinaTiles[];
 extern const u8 gTrainerBackPic_AlfordTiles[];
 extern const u8 gTrainerBackPic_TessyTiles[];
-extern const u8 gTrainerBackPic_Protag2SherryTiles[];
 
-static const struct SpriteFrameImage sTrainerBackPicTable_Brendan[] =
+extern const u8 gTrainerBackPic_Protag2SherryTiles[];
+extern const u8 gTrainerBackPic_MarleyTiles[];
+
+static const struct SpriteFrameImage gTrainerBackPicTable_Brendan[] =
 {
 	{gTrainerBackPic_BrendanTiles, 			0x800, 0},
 	{gTrainerBackPic_BrendanTiles + 0x0800, 0x800, 0},
@@ -178,7 +187,7 @@ static const struct SpriteFrameImage sTrainerBackPicTable_Brendan[] =
 	{gTrainerBackPic_BrendanTiles + 0x1800, 0x800, 0},
 };
 
-static const struct SpriteFrameImage sTrainerBackPicTable_May[] =
+static const struct SpriteFrameImage gTrainerBackPicTable_May[] =
 {
 	{gTrainerBackPic_MayTiles, 				0x800, 0},
 	{gTrainerBackPic_MayTiles + 0x0800, 	0x800, 0},
@@ -186,12 +195,23 @@ static const struct SpriteFrameImage sTrainerBackPicTable_May[] =
 	{gTrainerBackPic_MayTiles + 0x1800, 	0x800, 0},
 };
 
-static const struct SpriteFrameImage sTrainerBackPicTable_Protag2Sherry[] =
+static const struct SpriteFrameImage gTrainerBackPicTable_Marley[] =
 {
-	{gTrainerBackPic_MayTiles, 				0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x0800, 	0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x1000, 	0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x1800, 	0x800, 0},
+	{gTrainerBackPic_MarleyTiles, 			0x800, 0},
+	{gTrainerBackPic_MarleyTiles + 0x0800, 	0x800, 0},
+	{gTrainerBackPic_MarleyTiles + 0x1000, 	0x800, 0},
+	{gTrainerBackPic_MarleyTiles + 0x1800, 	0x800, 0},
+	{gTrainerBackPic_MarleyTiles + 0x2000, 	0x800, 0},
+};
+
+
+static const struct SpriteFrameImage gTrainerBackPicTable_Protag2Sherry[] =
+{
+	{gTrainerBackPic_Protag2SherryTiles,  			0x800, 0},
+	{gTrainerBackPic_Protag2SherryTiles + 0x0800, 	0x800, 0},
+	{gTrainerBackPic_Protag2SherryTiles + 0x1000, 	0x800, 0},
+	{gTrainerBackPic_Protag2SherryTiles + 0x1800, 	0x800, 0},
+	{gTrainerBackPic_Protag2SherryTiles + 0x2000, 	0x800, 0},
 };
 
 #ifdef UNBOUND
@@ -322,7 +342,7 @@ const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
 		.paletteTag = 0,
 		.oam = gOamData_TrainerBacksprite,
 		.anims = NULL,
-		.images = sTrainerBackPicTable_Brendan,
+		.images = gTrainerBackPicTable_Brendan,
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},
@@ -332,7 +352,7 @@ const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
 		.paletteTag = 0,
 		.oam = gOamData_TrainerBacksprite,
 		.anims = NULL,
-		.images = sTrainerBackPicTable_May,
+		.images = gTrainerBackPicTable_May,
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},
@@ -356,13 +376,23 @@ const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},
+	[TRAINER_BACK_PIC_MARLEY] =
+	{
+		.tileTag = 0xFFFF,
+		.paletteTag = 0,
+		.oam = gOamData_TrainerBacksprite,
+		.anims = NULL,
+		.images = gTrainerBackPicTable_Marley,
+		.affineAnims = gAffineAnims_TrainerBacksprite,
+		.callback = gSpriteCB_TrainerBacksprite,
+	},
 	[TRAINER_BACK_PIC_SHERRY] =
 	{
 		.tileTag = 0xFFFF,
 		.paletteTag = 0,
 		.oam = gOamData_TrainerBacksprite,
 		.anims = NULL,
-		.images = sTrainerBackPicTable_Protag2Sherry,
+		.images = gTrainerBackPicTable_Protag2Sherry,
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},

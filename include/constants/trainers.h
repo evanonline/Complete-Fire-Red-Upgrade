@@ -198,7 +198,8 @@
 #define TRAINER_BACK_PIC_MAY              	3
 #define TRAINER_BACK_PIC_POKE_DUDE        	4
 #define TRAINER_BACK_PIC_OLD_MAN 			5
-#define TRAINER_BACK_PIC_SHERRY				6
+#define TRAINER_BACK_PIC_MARLEY             		6
+#define TRAINER_BACK_PIC_SHERRY				7
 
 #ifndef UNBOUND //CHANGE THESE
 

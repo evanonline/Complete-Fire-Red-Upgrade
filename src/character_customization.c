@@ -93,12 +93,33 @@ static const struct CharacterCustomizationPaletteSwitch sCharacterPalSwitchTable
 
 #else //Modify this
 	// create 255 OW tables
+	
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_155Marley;
+extern const u16 gEventObjectPic_155MarleyPal[];
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_156MrRime;
+extern const u16 gEventObjectPic_156MrRimePal[];
+	
+	static NPCPtr sOverworldTable2[] = { 
+		&gEventObjectGraphicsInfo_155Marley,
+		&gEventObjectGraphicsInfo_156MrRime,
+	};
+	
 	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[255] =
 	{
 		(NPCPtr*) 0x8EB1000,
+		sOverworldTable2,
 		(NPCPtr*) 0x0,
 		// etc...
 		// please note that this method makes compatability with OW Manager challenging
+	};
+		static const struct SpritePalette sObjectEventSpritePalettes12[] = {
+		{gEventObjectPic_155MarleyPal, 0x1201},
+		{gEventObjectPic_156MrRimePal, 0x1202},
+		{NULL, 0x11FF},
+	};
+	const struct SpritePalette* const gObjectEventSpritePalettesSwitcher[255] = {
+		[0x11] = (const struct SpritePalette*)0x8F15E70,
+		[0x12] = sObjectEventSpritePalettes12,
 	};
 #endif
 
