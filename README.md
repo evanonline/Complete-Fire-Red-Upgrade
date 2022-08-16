@@ -1,7 +1,19 @@
 # Complete Fire Red Upgrade
 
 ## What is this?
-A complete upgrade for FireRed, including an upgraded Battle Engine. By using this or any assets from this repository, you consent to never making money off your game (unless you have my explicit permission). That includes both pay-walls **as well as optional donations** (which includes ko-fi, Patreon, etc.). If you have a problem with this, feel free to send me a Discord message (Skeli#3917) and I will give you my PayPal so you can pay me $100000 for the hundreds if not thousands of hours I poured into this for **free** (I don't actually want your money - I'm trying to make a point). Not to mention it's illegal to profit off of an IP you don't own.
+This is my work in progress fork for a personal romhack project (tentatively "Pokemon Trails"). Here's a general breakdown of what this repository has:
+
+* PLA Pokemon support (plus a few extras for my personal project.)
+* Several signature moves from PLA: Barb Barrage, Wave Crash, Psyshield Bash, Dire Claw, Infernal Parade, Ceaseless Edge, Triple Arrows, Stone Axe, Mountain Gale, Esper Wing, Chloroblast, Bitter Malice. Much of the code, animation and implementation of this can be credited to Greenphx9 and Soupercell, but some of it is from me.
+* A small few TCG moves integrated with accurate effects (again for my personal project. It's setup for a joke in the story)
+* Additional animations for Gen 8 moves that did not have finished animation work in vanilla CFRU.
+* Support for move effects of Court Change (courtesy of Soupercell), Thunder Cage, Snap Trap, and Decorate, all of which do not have function in vanilla CFRU.
+
+Generally, credits are listed in the files, or in notes for the individual commits, for who changed what - but my process is confessedly pretty messy and I may have made some mistakes! Please do not hesitate to point out any problems to me.
+
+Attack animation particles are free to use (most of the new ones are from me) but please don't use any other graphics I've created or am using; though I have done many, I didn't create all of the character sprites used here. (A more detailed graphics credits listing will come when I start adding more character graphics)
+
+**Vanilla CFRU info - read the documentation!!**
 
 **Before doing anything it is HIGHLY recommended the documentation be read thoroughly.**
 

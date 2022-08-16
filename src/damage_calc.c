@@ -3466,16 +3466,12 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			break;
 	}
 
-	//Gem activated at runtime
-	if (gNewBS->GemHelper)
-	{
-		//1.3x / 1.5x Boost
-		#ifdef OLD_GEM_BOOST
-			power = (power * 15) / 10;
-		#else
-			power = (power * 13) / 10;
-		#endif
-	}
+    //Gem activated at runtime
+    if (gNewBS->GemHelper)
+    {
+        power = (power * 15) / 10;
+        gNewBS->GemHelper = FALSE; //this line
+    }
 
 	//Charge check - 2x Boost
 	if (data->atkStatus3 & STATUS3_CHARGED_UP && data->moveType == TYPE_ELECTRIC)
