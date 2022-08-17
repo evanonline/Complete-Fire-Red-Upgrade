@@ -1908,7 +1908,8 @@ MOVESCR_CHECK_0:
 			||  !BATTLER_ALIVE(bankAtkPartner)
 			||  PARTNER_MOVE_EFFECT_IS_SAME_NO_TARGET
 			||  (partnerMove != MOVE_NONE && SPLIT(partnerMove) == SPLIT_STATUS)
-			||  gBattleStruct->monToSwitchIntoId[bankAtkPartner] != PARTY_SIZE) //Partner is switching out.
+			||  gBattleStruct->monToSwitchIntoId[bankAtkPartner] != PARTY_SIZE //Partner is switching out.
+			||  IsMoveRedirectionPrevented(MOVE_NONE, data->defAbility)) //Only check Ability
 				DECREASE_VIABILITY(10);
 			break;
 
