@@ -172,6 +172,7 @@ BattleSetup_ConfigureTrainerBattle 8080228 1
 SetTrainerFlags 80803FC 0
 BattleSetup_StartTrainerBattle 8080464 0
 SetUpTrainerEncounterMusic 8080628 0
+GetLocationMusicNew 8055D6C 1
 GetIntroSpeechOfApproachingTrainer 80806D8 0
 GetTrainerCantBattleSpeech 8080734 0
 DoPoisonFieldEffect 80A0618 0
@@ -416,6 +417,7 @@ FieldCB_RushInjuredPokemonToCenter 0807F5F0 0
 ## Summary Screen
 CamomonsSummaryScreenHook 08136168 0
 ChangeSummaryScreenMonSinglesDoubles 0813b20c 1
+SummaryScreen_TradeMonMetLocationHook 08137776 2
 
 ## Hall of Fame Fix
 CB2_DoHallOfFameScreen 080F1EFC 3

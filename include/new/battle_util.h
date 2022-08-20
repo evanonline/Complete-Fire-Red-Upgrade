@@ -34,6 +34,7 @@ u8 ViableMonCountFromBank(u8 bank);
 u8 ViableMonCountFromBankLoadPartyRange(u8 bank);
 bool8 CheckContact(u16 move, u8 bank);
 bool8 CheckContactByMon(u16 move, struct Pokemon* mon);
+bool8 IsContactMove(u16 move, u8 bankAtk, u8 bankDef);
 bool8 CheckHealingMove(u16 move);
 bool8 CheckSoundMove(u16 move);
 bool8 SheerForceCheck(void);
@@ -72,6 +73,7 @@ bool8 IsAffectedByPowderByDetails(u8 type1, u8 type2, u8 type3, u8 ability, u8 i
 bool8 MoveIgnoresSubstitutes(u16 move, u8 atkAbility);
 bool8 MoveBlockedBySubstitute(u16 move, u8 bankAtk, u8 bankDef);
 bool8 MonMoveBlockedBySubstitute(u16 move, struct Pokemon* monAtk, u8 bankDef);
+bool8 BypassesScreens(u8 ability);
 bool8 IsMockBattle(void);
 bool8 IsMoveAffectedByParentalBond(u16 move, u8 bankAtk);
 u8 CalcMoveSplit(u8 bank, u16 move);

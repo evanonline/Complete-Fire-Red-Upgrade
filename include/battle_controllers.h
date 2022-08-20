@@ -115,6 +115,7 @@ struct ChooseMoveStruct
 	u8 moveResults[MAX_BATTLERS_COUNT][MAX_MON_MOVES];
 	u16 movePowers[MAX_MON_MOVES];
 	u16 moveAcc[MAX_MON_MOVES];
+	u8 moveSplit[MAX_MON_MOVES];
 	u8 monType3;
 	bool8 canMegaEvolve;
 	u8 megaVariance;

@@ -880,6 +880,7 @@ struct NewBattleStruct
 	u32 maxGoldrushMoney;
 	u16 itemBackup[PARTY_SIZE];
 	u8 hiddenHealthboxFlags[MAX_SPRITES / 8]; //~2017AD8
+	u8 shellSideArmSplit[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT];
 
 	//Things for Spread Moves
 	s32 DamageTaken[MAX_BATTLERS_COUNT]; //~0x2017AC8

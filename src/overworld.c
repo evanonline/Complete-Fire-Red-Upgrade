@@ -42,6 +42,7 @@
 #include "../include/constants/trainer_classes.h"
 
 #include "../include/new/dexnav.h"
+#include "../include/new/dns.h"
 #include "../include/new/item.h"
 #include "../include/new/follow_me.h"
 #include "../include/new/frontier.h"
@@ -1185,6 +1186,32 @@ void SetUpTrainerEncounterMusic(void)
 
 		PlayNewMapMusic(music);
 	}
+}
+
+u16 GetLocationMusicNew(struct WarpData* warp)
+{
+    bool8 night = IsNightTime();
+    u16 music = Overworld_GetMapHeaderByGroupAndId(warp->mapGroup, warp->mapNum)->music;
+
+    switch (music)
+    {
+        case BGM_POKEMONCENTER:
+            if (night)
+                music = BGM_POKEMONCENTER_NIGHT;
+            break;
+			
+		//case BGM_POKEMART:
+            //if (morning)
+               //music = BGM_POKEMART_MORN;
+            //break;
+			
+		case BGM_POKEMART:
+            if (night)
+                music = BGM_POKEMART_NIGHT;
+            break;
+    }
+
+    return music;
 }
 
 //special 0x18F

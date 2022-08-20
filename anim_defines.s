@@ -462,6 +462,7 @@
 .equ AnimTask_TraceMonBlended, 0x80bab99
 .equ AnimTask_SmokescreenImpact, 0x80de34d
 .equ AnimTask_AttackerPunchWithTrace, 0x8077031
+.equ AnimTask_StatusClearedEffect, 0x80e2085
 
 @launchtemplate
 
@@ -523,6 +524,9 @@
 .equ Template_FallingRock, 0x83e73b4
 .equ Template_BlackSmoke, 0x83fee18
 .equ Template_GustToTarget, 0x83e6b1c
+.equ Template_IngrainRoot, 0x83e2dc4
+.equ Template_IngrainOrb, 0x83e2e04
+.equ Template_WillOWispFire, 0x83e5ee4
 
 .equ SpriteCB_AnimSpriteOnMonPos, 0x8075D9D
 .equ Callback_TranslateAnimSpriteToTargetMonLocation, 0x8075DF5

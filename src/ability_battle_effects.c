@@ -670,14 +670,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			break;
 		
 		case ABILITY_CURIOUSMEDICINE:
-			if (IS_DOUBLE_BATTLE
-			&& BATTLER_ALIVE(PARTNER(bank))
-			&& gBattleMons[PARTNER(bank)].status1)
+			if (IS_DOUBLE_BATTLE)
 			{
-				gEffectBank = PARTNER(bank);
-				gBattleMons[gEffectBank].status2 |= MOVE_EFFECT_RESET_STAT_CHANGES;
-				gBattleStringLoader = TargetStatsResetString;
-				effect++;
+				u8 partner = PARTNER(bank);
+				if (BATTLER_ALIVE(partner))
+				{
+					for (i = 0; i < BATTLE_STATS_NO - 1; ++i)
+						gBattleMons[partner].statStages[i] = 6;
+
+					gBankTarget = partner;
+					gBattleStringLoader = gText_CuriousMedicineActivate;
+					BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+					effect++;
+				}
 			}
 			break;
 

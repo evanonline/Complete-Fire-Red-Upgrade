@@ -11751,8 +11751,8 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_COACHING] =
-	{	//ANIM TODO
-		.effect = EFFECT_HELPING_HAND, //EFFECT TODO. Should boost Attack AND Defense
+	{	
+		.effect = EFFECT_HELPING_HAND,
 		.power = 0,
 		.type = TYPE_FIGHTING,
 		.accuracy = 0,

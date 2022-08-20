@@ -1252,3 +1252,18 @@ AIXItemStringHook:
 	ldr r6, =0x81D99E4
 	ldr r0, =0x8016706 | 1
 	bx r0
+
+.pool
+@0x8137776 with r2
+SummaryScreen_TradeMonMetLocationHook:
+	ldr r2, =GetMonData
+	bl bxr2
+	lsl r0, r0, #0x18
+	lsr r5, r0, #0x18
+	ldr r0, [r7]
+	add r0, r4 @Mon
+	mov r1, r5 @Met Location
+	bl TryReplaceSummaryScreenLocationWithFarAwayLocation
+	mov r5, r0
+	ldr r1, =0x8137780 | 1
+	bx r1

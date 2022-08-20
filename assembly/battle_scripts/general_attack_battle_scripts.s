@@ -3699,6 +3699,7 @@ BS_175_Taunt:
 .global BS_176_HelpingHand
 BS_176_HelpingHand:
 	attackcanceler
+	jumpifmove MOVE_COACHING BS_Coaching
 	attackstringnoprotean
 	ppreduce
 	sethelpinghand FAILED
@@ -3707,6 +3708,46 @@ BS_176_HelpingHand:
 	waitanimation
 	printstring 0xAE @;STRINGID_PKMNREADYTOHELP
 	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+BS_Coaching:
+	jumpifbyte NOTANDS BATTLE_TYPE BATTLE_DOUBLE FAILED_PRE
+	callasm SetTargetPartner
+	jumpiffainted BANK_TARGET FAILED_PRE
+	jumpifspecialstatusflag BANK_TARGET STATUS3_SEMI_INVULNERABLE 0x0 FAILED_PRE
+	attackstring
+	ppreduce
+	jumpifstat BANK_TARGET LESSTHAN STAT_ATK STAT_MAX Coaching_Atk
+	jumpifstat BANK_TARGET EQUALS STAT_DEF STAT_MAX BattleScript_CantRaiseMultipleTargetStats
+
+Coaching_Atk:
+	attackanimation
+	waitanimation
+	setbyte STAT_ANIM_PLAYED 0x0
+	playstatchangeanimation BANK_TARGET, STAT_ANIM_ATK | STAT_ANIM_DEF, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
+	setstatchanger STAT_ATK | INCREASE_1
+	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN Coaching_Def
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 Coaching_Def
+	printfromtable gStatUpStringIds
+	waitmessage DELAY_1SECOND
+
+Coaching_Def:
+	setstatchanger STAT_DEF | INCREASE_1
+	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
+	printfromtable gStatUpStringIds
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+
+BattleScript_CantRaiseMultipleTargetStats:
+	pause DELAY_HALFSECOND
+	orbyte OUTCOME OUTCOME_FAILED
+	swapattackerwithtarget @;So the proper string is shown
+	printstring 25 @;STRINGID_STATSWONTINCREASE2
+	waitmessage DELAY_1SECOND
+	swapattackerwithtarget
 	goto BS_MOVE_END
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -5476,34 +5517,30 @@ BS_244_Teatime:
 
 .global BS_245_Decorate
 BS_245_Decorate:
-	attackcanceler
-	attackstring
-	ppreduce
-	
-	jumpifspecialstatusflag EQUALS STATUS3_SEMI_INVULNERABLE 0x0 FAILED
+	jumpifspecialstatusflag BANK_TARGET STATUS3_SEMI_INVULNERABLE 0x0 FAILED
 	jumpiffainted BANK_TARGET FAILED
 	jumpifprotectedbycraftyshield BANK_TARGET FAILED
-	
 	attackstring
 	ppreduce
 	jumpifstat BANK_TARGET LESSTHAN STAT_ATK STAT_MAX Decorate_Atk
-	jumpifstat BANK_TARGET EQUALS STAT_SPATK STAT_MAX 0x81D85E7
+	jumpifstat BANK_TARGET EQUALS STAT_SPATK STAT_MAX BattleScript_CantRaiseMultipleTargetStats
 
 Decorate_Atk:
+	attackanimation
 	waitanimation
 	setbyte STAT_ANIM_PLAYED 0x0
 	playstatchangeanimation BANK_TARGET, STAT_ANIM_ATK | STAT_ANIM_SPATK, STAT_ANIM_UP | STAT_ANIM_IGNORE_ABILITIES
 	setstatchanger STAT_ATK | INCREASE_2
 	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN Decorate_SpAtk
-	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 CalmMind_SpDef
-	printfromtable 0x83FE57C
+	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 Decorate_SpAtk
+	printfromtable gStatUpStringIds
 	waitmessage DELAY_1SECOND
 
 Decorate_SpAtk:
 	setstatchanger STAT_SPATK | INCREASE_2
 	statbuffchange STAT_TARGET | STAT_BS_PTR | STAT_CERTAIN BS_MOVE_END
 	jumpifbyte EQUALS MULTISTRING_CHOOSER 0x2 BS_MOVE_END
-	printfromtable 0x83FE57C
+	printfromtable gStatUpStringIds
 	waitmessage DELAY_1SECOND
 	goto BS_MOVE_END
 	

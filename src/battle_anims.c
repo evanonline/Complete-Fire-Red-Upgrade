@@ -825,6 +825,24 @@ static const union AffineAnimCmd sSpriteAffineAnim_FlutterbyPulsate[] =
 	AFFINEANIMCMD_JUMP(0),
 };
 
+static const union AffineAnimCmd sSpriteAffineAnim_ShellSideArmOpponent[] =
+{
+	AFFINEANIMCMD_FRAME(0, 0, -64, 1), //Rotate right 90 degrees
+	AFFINEANIMCMD_END
+};
+
+static const union AffineAnimCmd sSpriteAffineAnim_ShellSideArmPlayer[] =
+{
+	AFFINEANIMCMD_FRAME(0, 0, 64, 1), //Rotate left 90 degrees
+	AFFINEANIMCMD_END
+};
+
+const union AffineAnimCmd* const gSpriteAffineAnimTable_ShellSideArm[] =
+{
+	sSpriteAffineAnim_ShellSideArmOpponent,
+	sSpriteAffineAnim_ShellSideArmPlayer,
+};
+
 static const union AffineAnimCmd sSpriteAffineAnim_FlutterbyGrow[] =
 {
 	AFFINEANIMCMD_FRAME(8, 8, 0, 16), //Double in size

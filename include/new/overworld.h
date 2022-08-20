@@ -52,6 +52,7 @@ void BattleSetup_StartTrainerBattle(void);
 const u8* GetIntroSpeechOfApproachingTrainer(void);
 const u8* GetTrainerCantBattleSpeech(void);
 void SetUpTrainerEncounterMusic(void);
+u16 GetLocationMusicNew(struct WarpData* warp);
 void SetTrainerFlags(void);
 bool8 TryStartStepCountScript(u16 metatileBehavior);
 bool8 TryRunOnFrameMapScript(void);

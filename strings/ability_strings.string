@@ -89,7 +89,7 @@ The Ice Face took damage for\n[TARGET]!
 All screens on the field were\ncleansed!
 
 #org @gText_CuriousMedicineActivate
-[TARGET] reset\nany stat changes affecting its\lallies!
+[TARGET]'s stat changes\nwere removed!
 
 #org @gText_NeutralizingGasActivate
 Neutralizing Gas fills the area!

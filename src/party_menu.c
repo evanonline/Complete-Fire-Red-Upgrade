@@ -477,6 +477,14 @@ u8 ChangeSummaryScreenMonSinglesDoubles(u8 delta)
 	return result;
 };
 
+bool8 TryReplaceSummaryScreenLocationWithFarAwayLocation(struct Pokemon* mon, u8 metLocation)
+{
+	if (IsTradedMon(mon) && !SummaryScreen_IsMultiBattlePartner())
+		metLocation = 0; //Forces "met in a trade"
+
+	return metLocation;
+}
+
 //Battle Tower Selection Updates//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 extern u8 gOtherText_NoMoreOnePoke[];

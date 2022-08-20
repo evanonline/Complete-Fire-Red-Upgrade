@@ -17370,10 +17370,17 @@ ANIM_CORROSIVE_GAS:
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
+@Credits to Skeli
 ANIM_COACHING:
-	goto 0x81cba5f @MOVE_HELPINGHAND
+	playsound2 0xA0 SOUND_PAN_ATTACKER
+	launchtask AnimTask_splash_down 0x2 0x2 bank_attacker 0x1
+	waitanimation
+	playsound2 0xA0 SOUND_PAN_TARGET
+	launchtask AnimTask_pal_fade_complex 0x2 0x6 PAL_DEF 0x1 0x2 0x0 0xA 0x1E5D @;Orange
+	launchtask AnimTask_splash_down 0x2 0x2 bank_target 0x1
+	waitanimation
 	endanimation
-
+	
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
 @Credits to greenphx9
@@ -17545,8 +17552,42 @@ ANIM_SCORCHING_SANDS:
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 .pool
+@Credits to Skeli
 ANIM_JUNGLE_HEALING:
-	goto 0x81d1d17
+	loadparticle ANIM_TAG_ROOTS
+	loadparticle ANIM_TAG_ORBS
+	loadparticle ANIM_TAG_SPARKLE_2
+	loadBG1 BG_SNUGGLE_FOREVER
+	waitbgfadeout
+	launchtemplate Template_IngrainRoot TEMPLATE_ATTACKER | 2, 0x5 0x10 0x1a 0xffff 0x2 0x96
+	playsound2 0x94 SOUND_PAN_ATTACKER
+	pause 0xa
+	launchtemplate Template_IngrainRoot TEMPLATE_ATTACKER | 2, 0x5 0xffe0 0x14 0x1 0x1 0x8c
+	playsound2 0x94 SOUND_PAN_ATTACKER
+	pause 0xa
+	launchtemplate Template_IngrainRoot TEMPLATE_ATTACKER | 2, 0x5 0x20 0x16 0x1 0x0 0x82
+	playsound2 0x94 SOUND_PAN_ATTACKER
+	pause 0xa
+	launchtemplate Template_IngrainRoot TEMPLATE_ATTACKER | 2, 0x5 0xfff0 0x19 0xffff 0x3 0x78
+	playsound2 0x94 SOUND_PAN_ATTACKER
+	pause 0x28
+	launchtemplate Template_IngrainOrb TEMPLATE_ATTACKER | 3, 0x5 0x20 0x1a 0xffff 0x3 0x1e
+	pause 0x5
+	playsound2 0x77 SOUND_PAN_ATTACKER
+	pause 0x5
+	launchtemplate Template_IngrainOrb TEMPLATE_ATTACKER | 3, 0x5 0xffd0 0x14 0x1 0x2 0x1e
+	playsound2 0x77 SOUND_PAN_ATTACKER
+	pause 0x5
+	playsound2 0x77 SOUND_PAN_ATTACKER
+	pause 0x5
+	launchtemplate Template_IngrainOrb TEMPLATE_ATTACKER | 3, 0x5 0x30 0x1a 0xfffe 0x3 0x12
+	playsound2 0x77 SOUND_PAN_ATTACKER
+	pause 0xa
+	playsound2 0xe8 0xc0
+	launchtask AnimTask_StatusClearedEffect 0x2 0x1 0x1 
+	waitanimation
+	loaddefaultbg
+	waitbgfadein
 	endanimation
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -18002,42 +18043,53 @@ ANIM_DIRE_CLAW:
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
 .pool
+@Credits to Skeli
 ANIM_INFERNAL_PARADE:
-	loadparticle ANIM_TAG_SPARKLE_4
-	loadparticle ANIM_TAG_SMALL_EMBER
 	loadparticle ANIM_TAG_PURPLE_FLAME
-	launchtask AnimTask_BlendParticle 0x5 0x5 ANIM_TAG_SMALL_EMBER 0x2 0xA 0xA 0x7D3d @;Pinkish purple
-	call SET_PSYCHIC_BG
-	launchtask 0x80B3419 0x2 0x0
+	loadparticle ANIM_TAG_WISP_FIRE
 	pokespritetoBG bank_target
-	leftbankBG_over_partnerBG bank_target
-	soundcomplex 0x7b SOUND_PAN_ATTACKER 0x7 0xA
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	launchtask AnimTask_PurpleFlamesOnTarget 0x3 0x0
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	launchtask AnimTask_pal_fade_complex 0x2 0x6 PAL_DEF 0x2 0x2 0x0 0xc 0x43D
-	launchtask AnimTask_move_bank_2 0x2 0x5 bank_target 0x4 0x0 0x32 0x1
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
-	call FLAMETHROWER_FIRE
+	leftopponentbankBG_over_partnerBG bank_target
+	loadBG1 BG_GHOST
+	playsound2 0xb6 0xc0 
+	waitbgfadein
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3, -30,  10,  20 @;Bottom left
+	pause 0x3
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3,  30, -30, -20 @;Top right
+	pause 0x3
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3,  30,  10,  20 @;Bottom right
+	pause 0x3
+	launchtask AnimTask_move_bank 0x2 0x5 bank_target 0x0 0x3 0x32 0x1
+	call CREATE_INFERNAL_FLAMES
+	call CREATE_INFERNAL_FLAMES
+	call CREATE_INFERNAL_FLAMES
+	call CREATE_INFERNAL_FLAMES
+	playsound2 0x8a SOUND_PAN_TARGET
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0x0
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0x2a
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0x54
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0x7e
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0xa8
+	launchtemplate Template_WillOWispFire TEMPLATE_TARGET | 2, 0x1 0xd2
 	waitanimation
-	pokespritefromBG side_target
-	call UNSET_SCROLLING_BG
+	pause 0xC
+	loaddefaultbg
+	waitbgfadein
+	pokespritefrombg bank_target
 	endanimation
+
+CREATE_INFERNAL_FLAMES:
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3, -30, -30, -20 @;Top left
+	pause 0x3
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3, -30,  10,  20 @;Bottom left
+	pause 0x3
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3,  30, -30, -20 @;Top right
+	pause 0x3
+	launchtemplate INFERNAL_FIRE TEMPLATE_TARGET | 2, 0x3,  30,  10,  20 @;Bottom right
+	pause 0x3
+	return
+
+.align 2
+INFERNAL_FIRE: objtemplate ANIM_TAG_PURPLE_FLAME ANIM_TAG_PURPLE_FLAME OAM_DOUBLE_BLEND_16x32 0x83E76DC 0x0 gSpriteAffineAnimTable_Flutterby SpriteCB_MaxFlutterby
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@		
 .pool
