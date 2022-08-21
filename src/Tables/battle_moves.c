@@ -11959,7 +11959,7 @@ const struct BattleMove gBattleMoves[] =
 	},
 
 	[MOVE_DRAGONENERGY] =
-	{	//ANIM TODO
+	{	
 		.effect = EFFECT_HIT,
 		.power = 150, // (150 x current HP / max HP. if <1, becomes 1)
 		.type = TYPE_DRAGON,

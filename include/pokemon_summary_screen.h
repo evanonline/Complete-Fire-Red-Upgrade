@@ -2,6 +2,7 @@
 #define GUARD_POKEMON_SUMMARY_SCREEN_H
 
 #include "main.h"
+#include "constants/moves.h"
 
 extern const u8* const gMoveDescriptionPointers[];
 extern const u8* const gNatureNamePointers[];

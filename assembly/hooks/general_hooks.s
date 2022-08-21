@@ -1267,3 +1267,4 @@ SummaryScreen_TradeMonMetLocationHook:
 	mov r5, r0
 	ldr r1, =0x8137780 | 1
 	bx r1
+	

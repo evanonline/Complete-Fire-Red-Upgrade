@@ -14,6 +14,7 @@
 #include "../include/party_menu.h"
 #include "../include/pokemon_icon.h"
 #include "../include/pokemon_storage_system.h"
+#include "../include/pokemon_summary_screen.h"
 #include "../include/random.h"
 #include "../include/script.h"
 #include "../include/sound.h"
@@ -36,6 +37,7 @@
 #include "../include/new/follow_me.h"
 #include "../include/new/form_change.h"
 #include "../include/new/item.h"
+#include "../include/new/multi.h"
 #include "../include/new/overworld.h"
 #include "../include/new/party_menu.h"
 #include "../include/new/util.h"
@@ -455,27 +457,32 @@ static void OpenSummary(u8 taskId)
 
 u8 ChangeSummaryScreenMonSinglesDoubles(u8 delta)
 {
-	u8 numMons = gSummaryScreenData->maxPartyIndex + 1;
+	u8 numMons = sMonSummaryScreen->lastIndex + 1;
 	delta += numMons;
 
-	// guarantees result will be in range [0, numMons)
-	u8 result = umodsi(gCurrentPartyIndex + delta, numMons);
+	//Guarantees result will be in range [0, numMons)
+	u8 result = (sLastViewedMonIndex + delta) % numMons;
 
-	// skip over eggs on other pages
-	if (gSummaryScreenData->currentPage != PAGE_INFO)
+	//Skip over eggs on other pages
+	if (sMonSummaryScreen->curPageIndex != PAGE_INFO)
 	{
-		while (GetMonData(gSummaryScreenData->partyData+result, MON_DATA_IS_EGG, NULL))
-		{
-			result = umodsi(result + delta, numMons);
-		}
+		while (GetMonData(&sMonSummaryScreen->monList.mons[result], MON_DATA_IS_EGG, NULL))
+			result = (result + delta) % numMons;
 	}
 
 	// necessary to gracefully handle parties of 1 Pokemon
-	if (result == gCurrentPartyIndex)
+	if (result == sLastViewedMonIndex)
 		return -1;
 
 	return result;
 };
+
+
+bool8 SummaryScreen_IsMultiBattlePartner(void)
+{
+    return IsMultiBattle()
+		&& (sLastViewedMonIndex >= 4 || sLastViewedMonIndex == 1);
+}
 
 bool8 TryReplaceSummaryScreenLocationWithFarAwayLocation(struct Pokemon* mon, u8 metLocation)
 {

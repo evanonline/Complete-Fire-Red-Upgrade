@@ -1313,6 +1313,25 @@ bool8 IsAnimMoveGrudge(void)
 	return sAnimMoveIndex == MOVE_GRUDGE;
 }
 
+//Dragon Ascent//
+void AnimTask_IsAttackerRayquaza(u8 taskId)
+{
+	#ifdef NATIONAL_DEX_RAYQUAZA
+	if (SpeciesToNationalPokedexNum(GetAnimAttackerSpecies()) == NATIONAL_DEX_RAYQUAZA)
+		gBattleAnimArgs[0] = 1;
+	else
+	#endif
+		gBattleAnimArgs[0] = 0;
+
+	DestroyAnimVisualTask(taskId);
+}
+
+void AnimTask_IsAttackerShiny(u8 taskId)
+{
+	gBattleAnimArgs[0] = IsMonShiny(GetIllusionPartyData(gBattleAnimAttacker));
+	DestroyAnimVisualTask(taskId);
+}
+
 bool8 IsAnimMoveFairyLock(void)
 {
 	return sAnimMoveIndex == MOVE_FAIRYLOCK;
@@ -3109,6 +3128,42 @@ void SpriteCB_StoneAxe(struct Sprite* sprite)
 	sprite->callback = StartAnimLinearTranslation;
 	StoreSpriteCallbackInData6(sprite, DestroyAnimSprite);
 }
+
+//Moves the balls for Dragon Energy sideways along the target side
+//arg 0: Duration
+void SpriteCB_DragonEnergyShot(struct Sprite* sprite)
+{
+	s16 startingX, finishingX, y;
+	u8 def1 = gBattleAnimTarget;
+	u8 def2 = PARTNER(def1);
+
+	if (IS_SINGLE_BATTLE || SIDE(gBattleAnimAttacker) == SIDE(gBattleAnimTarget))
+		y = GetBattlerSpriteCoord(def1, BATTLER_COORD_Y_PIC_OFFSET);
+	else
+		y = (GetBattlerSpriteCoord(def1, BATTLER_COORD_Y_PIC_OFFSET) + GetBattlerSpriteCoord(def2, BATTLER_COORD_Y_PIC_OFFSET)) / 2;
+
+	if (SIDE(gBattleAnimTarget) == B_SIDE_OPPONENT)
+	{
+		startingX = 0;
+		finishingX = 255;
+	}
+	else
+	{
+		startingX = 255;
+		finishingX = 0;
+	}
+
+	sprite->oam.priority = 1; //So it always appears above both targets
+	sprite->pos1.x = startingX;
+	sprite->pos1.y = y;
+	sprite->pos2.x = 0;
+	sprite->data[0] = gBattleAnimArgs[0];
+	sprite->data[2] = finishingX;
+	sprite->data[4] = y;
+	sprite->callback = StartAnimLinearTranslation;
+	StoreSpriteCallbackInData6(sprite, DestroySpriteAndMatrix);
+}
+
 
 //Creates The Extreme Evoboost Circles
 void SpriteCB_ExtremeEvoboostCircle(struct Sprite *sprite)
