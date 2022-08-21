@@ -4,6 +4,7 @@
 #include "../include/new/battle_terrain.h"
 #include "../include/new/battle_util.h"
 #include "../include/new/dns.h"
+#include "../include/new/evolution.h"
 #include "../include/new/form_change.h"
 #include "../include/new/frontier.h"
 #include "../include/new/util.h"
@@ -315,6 +316,24 @@ void HandleFormChange(void)
 
 	SetMonData(mon, MON_DATA_HP, &battleMon->hp);
 	SetMonData(mon, MON_DATA_MAX_HP, &battleMon->maxHP);
+}
+
+void TrySetCorrectToxtricityForm(struct BoxPokemon* mon)
+{
+	u16 species = GetBoxMonData(mon, MON_DATA_SPECIES2, NULL);
+
+	if (species == SPECIES_TOXTRICITY || species == SPECIES_TOXTRICITY_LOW_KEY)
+	{
+		if (HasHighNature((struct Pokemon*) mon))
+			species = SPECIES_TOXTRICITY;
+		else
+			species = SPECIES_TOXTRICITY_LOW_KEY;
+	}
+	else
+		species = SPECIES_NONE;
+
+	if (species != SPECIES_NONE)
+		SetBoxMonData(mon, MON_DATA_SPECIES, &species); //Set the correct form
 }
 
 //Overworld Form Change Functions////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

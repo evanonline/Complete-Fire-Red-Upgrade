@@ -249,6 +249,19 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 				case EVO_FLAG_SET:
 					if (FlagGet(gEvolutionTable[species][i].param))
 						targetSpecies = gEvolutionTable[species][i].targetSpecies;
+					break;
+				
+				case EVO_NATURE_HIGH:
+					if (level >= gEvolutionTable[species][i].param
+					&& HasHighNature(mon))
+						targetSpecies = gEvolutionTable[species][i].targetSpecies;
+					break;
+
+				case EVO_NATURE_LOW:
+					if (level >= gEvolutionTable[species][i].param
+					&& !HasHighNature(mon))
+						targetSpecies = gEvolutionTable[species][i].targetSpecies;
+					break;
 			}
 		}
 		break;
@@ -326,6 +339,8 @@ bool8 IsLevelUpEvolutionMethod(u8 method)
 		case EVO_LEVEL_NIGHT:
 		case EVO_LEVEL_DAY:
 		case EVO_LEVEL_SPECIFIC_TIME_RANGE:
+		case EVO_NATURE_HIGH:
+		case EVO_NATURE_LOW:
 			return TRUE;
 		default:
 			return FALSE;
@@ -367,6 +382,29 @@ bool8 IsOtherEvolutionMethod(u8 method)
 		case EVO_MOVE:
 		case EVO_OTHER_PARTY_MON:
 		case EVO_FLAG_SET:
+			return TRUE;
+		default:
+			return FALSE;
+	}
+}
+
+bool8 HasHighNature(struct Pokemon* mon)
+{
+	switch (GetNature(mon))
+	{
+		case NATURE_HARDY:
+		case NATURE_BRAVE:
+		case NATURE_ADAMANT:
+		case NATURE_NAUGHTY:
+		case NATURE_DOCILE:
+		case NATURE_IMPISH:
+		case NATURE_LAX:
+		case NATURE_HASTY:
+		case NATURE_JOLLY:
+		case NATURE_NAIVE:
+		case NATURE_RASH:
+		case NATURE_SASSY:
+		case NATURE_QUIRKY:
 			return TRUE;
 		default:
 			return FALSE;
