@@ -284,6 +284,8 @@ sStartMenuCursorPos = 0x20370F4;
 sNumStartMenuItems = 0x20370F5;
 sStartMenuOrder = 0x20370F6;
 sDrawStartMenuState = 0x20370FF;
+sTimeWindowTemplate = 0x83a738c;
+sTimeWindowId = 0x2037101;
 
 /* Other RAM */
 sWarpDestination = 0x2031DBC;
@@ -1462,7 +1464,7 @@ IsUpdateLinkStateCBActive = 0x805642C | 1;
 AppendToStartMenuItems = 0x806ED94 | 1;
 SetUpStartMenu_Link = 0x806EE34 | 1;
 SetUpStartMenu_UnionRoom = 0x806EE58 | 1;
-DestroySafariZoneStatsWindow = 0x806EF18 | 1;
+/*DestroySafariZoneStatsWindow = 0x806EF18 | 1;*/
 PrintStartMenuItems = 0x806EF44 | 1;
 DrawStartMenuInOneGo = 0x806F14C | 1;
 task50_startmenu = 0x806F168 | 1;

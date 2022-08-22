@@ -528,6 +528,7 @@ ReloadMartList 0809BECA 0
 SetUpStartMenu 0806ed54 0
 StartCB_HandleInput 0806F280 0
 FixStartMenuSize 080f78f4 0
+DestroySafariZoneStatsWindow 0806ef18 0
 
 ##Pokemon Storage System
 SendMonToPC 8040B90 1

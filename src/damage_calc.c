@@ -365,6 +365,11 @@ u32 AI_CalcDmg(const u8 bankAtk, const u8 bankDef, const u16 move, struct Damage
 		damage *= 5;
 		return damage;
 	}
+	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) && ITEM_EFFECT(bankAtk) == ITEM_EFFECT_LOADED_DICE)
+	{
+		damage *= 4;
+		return damage;
+	}
 	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) || gBattleMoves[move].effect == EFFECT_TRIPLE_KICK) //Three hits on average
 	{
 		damage *= 3;
@@ -461,6 +466,11 @@ u32 AI_CalcPartyDmg(u8 bankAtk, u8 bankDef, u16 move, struct Pokemon* monAtk, st
 		damage *= 5;
 		return damage;
 	}
+	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) && ITEM_EFFECT(bankAtk) == ITEM_EFFECT_LOADED_DICE)
+	{
+		damage *= 4;
+		return damage;
+	}
 	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) || gBattleMoves[move].effect == EFFECT_TRIPLE_KICK) //Three hits on average
 	{
 		damage *= 3;
@@ -552,6 +562,11 @@ u32 AI_CalcMonDefDmg(u8 bankAtk, u8 bankDef, u16 move, struct Pokemon* monDef, s
 	if (CheckTableForMove(move, gTwoToFiveStrikesMoves) && ABILITY(bankAtk) == ABILITY_SKILLLINK)
 	{
 		damage *= 5;
+		return damage;
+	}
+	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) && ITEM_EFFECT(bankAtk) == ITEM_EFFECT_LOADED_DICE)
+	{
+		damage *= 4;
 		return damage;
 	}
 	else if (CheckTableForMove(move, gTwoToFiveStrikesMoves) || gBattleMoves[move].effect == EFFECT_TRIPLE_KICK) //Three hits on average

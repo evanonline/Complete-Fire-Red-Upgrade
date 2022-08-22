@@ -1,1 +1,7 @@
+npc 1 4 0 EventScript_VermilionPort_NPC1
+npc 1 4 1 EventScript_VermilionPort_NPC2
+npc 1 4 2 EventScript_VermilionPort_NPC3
+npc 1 4 3 EventScript_VermilionPort_NPC4
+npc 1 4 4 EventScript_VermilionPort_NPC5
+
 npc 3 0 1 EventScript_PalletTown_CoolGuy

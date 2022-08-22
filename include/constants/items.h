@@ -785,7 +785,7 @@ enum
 #define ITEM_ADAMANT_CRYSTAL 0x2E5 //transforms Dialga to Origin Form
 #define ITEM_LUSTROUS_GLOBE 0x2E6 //transforms Palkia to Origin Form
 #define ITEM_REINS_OF_UNITY 0x2E7 //Fuses Calyrex to Spectrier and Glastrier
-#define ITEM_FREE_SPACE16 0x2E8
+#define ITEM_LOADED_DICE 0x2E8 //"If a Pokémon uses a multistrike move, that move will be more likely to hit more times."
 #define ITEM_FREE_SPACE17 0x2E9
 #define ITEM_FREE_SPACE18 0x2EA
 #define ITEM_FREE_SPACE19 0x2EB
