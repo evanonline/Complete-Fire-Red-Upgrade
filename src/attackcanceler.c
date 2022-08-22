@@ -963,6 +963,7 @@ static u8 AtkCanceller_UnableToUseMove(void)
 			if (CheckTableForMove(gCurrentMove, gTwoToFiveStrikesMoves))
 			{
 				u8 ability = ABILITY(gBankAttacker);
+				u8 atkEffect = ITEM_EFFECT(gBankAttacker);
 
 				if (gCurrentMove == MOVE_SURGINGSTRIKES)
 				{
@@ -972,7 +973,7 @@ static u8 AtkCanceller_UnableToUseMove(void)
 				{
 					gMultiHitCounter = 5;
 				}
-				else if (ITEM_EFFECT(bankAtk) == ITEM_EFFECT_LOADED_DICE)
+				else if (atkEffect == ITEM_EFFECT_LOADED_DICE)
 				{
 					gMultiHitCounter = Random() & 4;
 					if (gMultiHitCounter > 2)
