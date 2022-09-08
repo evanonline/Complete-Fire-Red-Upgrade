@@ -27,6 +27,7 @@ enum FightingClasses
 	FIGHT_CLASS_SWEEPER_KILL,
 	FIGHT_CLASS_SWEEPER_SETUP_STATS,
 	FIGHT_CLASS_SWEEPER_SETUP_STATUS,
+	FIGHT_CLASS_SWEEPER_SETUP_SCREENS,
 	FIGHT_CLASS_STALL,
 	FIGHT_CLASS_TEAM_SUPPORT_BATON_PASS,
 	FIGHT_CLASS_TEAM_SUPPORT_CLERIC,
@@ -215,7 +216,7 @@ bool8 IsClassBatonPass(u8 class)
 
 bool8 IsClassScreener(u8 class)
 {
-	return class == FIGHT_CLASS_TEAM_SUPPORT_SCREENS;
+	return class == FIGHT_CLASS_TEAM_SUPPORT_SCREENS || class == FIGHT_CLASS_SWEEPER_SETUP_SCREENS;
 }
 
 bool8 IsClassCleric(u8 class)
@@ -279,12 +280,26 @@ bool8 IsClassDoublesSpecific(u8 class)
 bool8 IsClassDoublesAttacker(u8 class)
 {
 	return class == FIGHT_CLASS_DOUBLES_TRICK_ROOM_ATTACKER
-		|| class == FIGHT_CLASS_DOUBLES_SETUP_ATTACKER;
+		|| class ==  FIGHT_CLASS_DOUBLES_SETUP_ATTACKER;
 }
 
 bool8 IsClassDamager(u8 class)
 {
-	return IsClassSweeper(class) || IsClassDoublesAttacker(class);
+	return IsClassSweeper(class) || IsClassDoublesAttacker(class)
+		|| class == FIGHT_CLASS_SWEEPER_SETUP_SCREENS;
+}
+
+bool8 IsClassGoodToTaunt(u8 class)
+{
+	return class == FIGHT_CLASS_STALL
+		|| class == FIGHT_CLASS_SWEEPER_SETUP_SCREENS
+		|| class == FIGHT_CLASS_TEAM_SUPPORT_BATON_PASS
+		|| class == FIGHT_CLASS_TEAM_SUPPORT_CLERIC
+		|| class == FIGHT_CLASS_TEAM_SUPPORT_SCREENS
+		|| class == FIGHT_CLASS_ENTRY_HAZARDS
+		|| class == FIGHT_CLASS_DOUBLES_TRICK_ROOM_SETUP
+		|| class == FIGHT_CLASS_DOUBLES_UTILITY
+		|| class == FIGHT_CLASS_DOUBLES_TEAM_SUPPORT;
 }
 
 u8 GetBankFightingStyle(u8 bank)
@@ -682,6 +697,9 @@ bool8 ShouldTrap(u8 bankAtk, u8 bankDef, u16 move, u8 class)
 
 	if (IsClassStall(class))
 	{
+		if (!HasMonToSwitchTo(bankDef))
+			return FALSE;
+
 		if (MoveWouldHitFirst(move, bankAtk, bankDef)) //Attacker goes first
 		{
 			if (!CanKnockOut(bankDef, bankAtk)) //Enemy can't kill attacker
@@ -1287,7 +1305,7 @@ bool8 ShouldPivot(u8 bankAtk, u8 bankDef, u16 move, u8 class)
 
 	if (IS_SINGLE_BATTLE)
 	{
-		if (!BankHasMonToSwitchTo(bankAtk))
+		if (!HasMonToSwitchTo(bankAtk))
 			return CAN_TRY_PIVOT; //Can't switch
 
 		if (IsPredictedToSwitch(bankDef, bankAtk) && !hasUsefulStatBoost)
@@ -1501,6 +1519,7 @@ void IncreaseStatusViability(s16* originalViability, u8 class, u8 boost, u8 bank
 		break;
 
 	case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:
+	case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 		INCREASE_VIABILITY(2 + boost);
 		break;
 
@@ -1694,6 +1713,7 @@ void IncreaseStatViability(s16* originalViability, u8 class, u8 boost, u8 bankAt
 		break;
 
 	case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:
+	case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 		if (ShouldTryToSetUpStat(bankAtk, bankDef, move, stat, statLimit))
 			INCREASE_STATUS_VIABILITY(1); //Treat like a low-priority status move
 		break;
@@ -1836,8 +1856,9 @@ void IncreaseSleepViability(s16* originalViability, u8 class, u8 bankAtk, u8 ban
 		break;
 
 	case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:
+	case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 		if (AccuracyCalc(move, bankAtk, bankDef) >= 80) //Decent chance of hitting
-			INCREASE_STATUS_VIABILITY(8);
+			INCREASE_VIABILITY(8);
 		else
 			INCREASE_STATUS_VIABILITY(3);
 		break;
@@ -1941,6 +1962,7 @@ void IncreaseSubstituteViability(s16* originalViability, u8 class, u8 bankAtk, u
 			break;
 
 		case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:
+		case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 			if (ShouldUseSubstitute(bankAtk, bankDef))
 				INCREASE_STATUS_VIABILITY(1);
 			break;
@@ -2224,6 +2246,7 @@ void IncreasePivotViability(s16* originalViability, u8 class, u8 bankAtk, unused
 		break;
 
 	case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:
+	case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 		INCREASE_VIABILITY(7);
 		break;
 
@@ -2396,6 +2419,7 @@ void IncreaseTailwindViability(s16* originalViability, u8 class, u8 bankAtk, u8 
 	s16 viability = *originalViability;
 
 	switch (class) {
+	case FIGHT_CLASS_SWEEPER_SETUP_SCREENS:
 	case FIGHT_CLASS_TEAM_SUPPORT_BATON_PASS:
 	case FIGHT_CLASS_TEAM_SUPPORT_CLERIC:
 	case FIGHT_CLASS_TEAM_SUPPORT_SCREENS:

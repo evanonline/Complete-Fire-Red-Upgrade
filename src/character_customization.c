@@ -93,33 +93,12 @@ static const struct CharacterCustomizationPaletteSwitch sCharacterPalSwitchTable
 
 #else //Modify this
 	// create 255 OW tables
-	
-extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_155Marley;
-extern const u16 gEventObjectPic_155MarleyPal[];
-extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_156MrRime;
-extern const u16 gEventObjectPic_156MrRimePal[];
-	
-	static NPCPtr sOverworldTable2[] = { 
-		&gEventObjectGraphicsInfo_155Marley,
-		&gEventObjectGraphicsInfo_156MrRime,
-	};
-	
 	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[255] =
 	{
 		(NPCPtr*) 0x8EB1000,
-		sOverworldTable2,
 		(NPCPtr*) 0x0,
 		// etc...
 		// please note that this method makes compatability with OW Manager challenging
-	};
-		static const struct SpritePalette sObjectEventSpritePalettes12[] = {
-		{gEventObjectPic_155MarleyPal, 0x1201},
-		{gEventObjectPic_156MrRimePal, 0x1202},
-		{NULL, 0x11FF},
-	};
-	const struct SpritePalette* const gObjectEventSpritePalettesSwitcher[255] = {
-		[0x11] = (const struct SpritePalette*)0x8F15E70,
-		[0x12] = sObjectEventSpritePalettes12,
 	};
 #endif
 
@@ -131,13 +110,13 @@ struct PlayerGraphics
 
 static const struct PlayerGraphics sPlayerAvatarGfxIds[][2] =
 {
-	[PLAYER_AVATAR_STATE_NORMAL] =     {{EVENT_OBJ_GFX_RED_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT},          {EVENT_OBJ_GFX_LEAF_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT}},
-	[PLAYER_AVATAR_STATE_BIKE] =       {{EVENT_OBJ_GFX_RED_BIKE, PLAYER_AVATAR_FLAG_BIKE},               {EVENT_OBJ_GFX_LEAF_BIKE, PLAYER_AVATAR_FLAG_BIKE}},
-	[PLAYER_AVATAR_STATE_SURFING] =    {{EVENT_OBJ_GFX_RED_SURFING, PLAYER_AVATAR_FLAG_SURFING},         {EVENT_OBJ_GFX_LEAF_SURFING, PLAYER_AVATAR_FLAG_SURFING}},
-	[PLAYER_AVATAR_STATE_FIELD_MOVE] = {{EVENT_OBJ_GFX_RED_FIELD_MOVE, PLAYER_AVATAR_FLAG_FIELD_MOVE},   {EVENT_OBJ_GFX_LEAF_FIELD_MOVE, PLAYER_AVATAR_FLAG_FIELD_MOVE}},
-	[PLAYER_AVATAR_STATE_FISHING] =    {{EVENT_OBJ_GFX_RED_FISHING, 0},                                  {EVENT_OBJ_GFX_LEAF_FISHING, 0}},
-	[PLAYER_AVATAR_STATE_VS_SEEKER] =  {{EVENT_OBJ_GFX_RED_VS_SEEKER, 0},                                {EVENT_OBJ_GFX_LEAF_VS_SEEKER, 0}},
-	[PLAYER_AVATAR_STATE_UNDERWATER] = {{EVENT_OBJ_GFX_RED_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},   {EVENT_OBJ_GFX_LEAF_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER}},
+	[PLAYER_AVATAR_STATE_NORMAL] =     {{EVENT_OBJ_GFX_RED_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT},          {EVENT_OBJ_GFX_SHERRY_NORMAL, PLAYER_AVATAR_FLAG_ON_FOOT}},
+	[PLAYER_AVATAR_STATE_BIKE] =       {{EVENT_OBJ_GFX_RED_BIKE, PLAYER_AVATAR_FLAG_BIKE},               {EVENT_OBJ_GFX_SHERRY_BIKE, PLAYER_AVATAR_FLAG_BIKE}},
+	[PLAYER_AVATAR_STATE_SURFING] =    {{EVENT_OBJ_GFX_RED_SURFING, PLAYER_AVATAR_FLAG_SURFING},         {EVENT_OBJ_GFX_SHERRY_SURFING, PLAYER_AVATAR_FLAG_SURFING}},
+	[PLAYER_AVATAR_STATE_FIELD_MOVE] = {{EVENT_OBJ_GFX_RED_FIELD_MOVE, PLAYER_AVATAR_FLAG_FIELD_MOVE},   {EVENT_OBJ_GFX_SHERRY_FIELD_MOVE, PLAYER_AVATAR_FLAG_FIELD_MOVE}},
+	[PLAYER_AVATAR_STATE_FISHING] =    {{EVENT_OBJ_GFX_RED_FISHING, 0},                                  {EVENT_OBJ_GFX_SHERRY_FISHING, 0}},
+	[PLAYER_AVATAR_STATE_VS_SEEKER] =  {{EVENT_OBJ_GFX_RED_VS_SEEKER, 0},                                {EVENT_OBJ_GFX_SHERRY_VS_SEEKER, 0}},
+	[PLAYER_AVATAR_STATE_UNDERWATER] = {{EVENT_OBJ_GFX_RED_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER},   {EVENT_OBJ_GFX_SHERRY_UNDERWATER, PLAYER_AVATAR_FLAG_UNDERWATER}},
 };
 
 //This file's functions:
@@ -165,7 +144,7 @@ NPCPtr GetEventObjectGraphicsInfo(u16 graphicsId)
 	{
 		switch (spriteId) {
 			case EVENT_OBJ_GFX_RED_BIKE_VS_SEEKER:
-			case EVENT_OBJ_GFX_LEAF_BIKE_VS_SEEKER:
+			case EVENT_OBJ_GFX_SHERRY_BIKE_VS_SEEKER:
 				newId = VarGet(VAR_PLAYER_VS_SEEKER_ON_BIKE);
 				break;
 		}
@@ -188,7 +167,7 @@ NPCPtr GetEventObjectGraphicsInfo(u16 graphicsId)
 		spriteAddr = gOverworldTableSwitcher[tableId][spriteId];
 
 	if (spriteAddr == NULL)
-		spriteAddr = gOverworldTableSwitcher[0][EVENT_OBJ_GFX_LITTLE_BOY];	// first non-player sprite in first table default
+		spriteAddr = gOverworldTableSwitcher[0][EVENT_OBJ_GFX_MAY_EM];	// first non-player sprite in first table default
 
 	return spriteAddr;
 };

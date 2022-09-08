@@ -749,6 +749,8 @@ u8 __attribute__((long_call)) CheckPartyPokerus(struct Pokemon *party, u8 select
 bool8 __attribute__((long_call)) PokemonItemUseNoEffect(struct Pokemon *mon, u16 item, u8 partyIndex, u8 moveIndex);
 u8 __attribute__((long_call)) GetItemEffectParamOffset(u16 itemId, u8 effectByte, u8 effectBit);
 
+bool8 __attribute__((long_call)) IsPlayerPartyAndPokemonStorageFull(void);
+
 /*
 void ZeroMonData(struct Pokemon *mon);
 void ZeroPlayerPartyMons(void);

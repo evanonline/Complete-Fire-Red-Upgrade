@@ -1,0 +1,44 @@
+#org @gText_OpeningOptionsStart
+Hey, sib!\nCome on!
+
+#org @gText_OpeningOptionsDirection
+We're all ready!\nKanto's outside, sib!\pBefore we go, we can check out\nthat computer over there.\pIt has a bunch of exciting\n[GREEN]Challenge Settings[BLACK]!\pThey all sound scary for newbies,\nso I'm not touching them[.]
+
+#org @gText_OpeningOptionsIntro
+Welcome to the Indigo League!\pBefore you disembark to begin your\nLeague challenge, you are allowed\lto choose several modifiers\lfor your run.\pThere are neither rewards\nnor penalties for using\lthese options.
+
+#org @gText_OpeningOptionsChoice1
+Regulation Mode
+
+#org @gText_OpeningOptionsChoice2
+Scalemons Mode
+
+#org @gText_OpeningOptionsChoice3
+Randomizer Mode
+
+#org @gText_OpeningOptionsRegulationMode
+Would you like to enable\n[GREEN]Regulation Mode[BLACK]?\pIn Gym battles and\lElite Four battles,\lyou will be unable to use\lbag items such as Potions,\land [GREEN]Sleep Clause[BLACK]will be active.\lUnder the [GREEN]Sleep Clause[BLACK],\l[RED]only 1 Pok\emon per team\lcan be put to sleep at a time.\pAdditionally, Set Mode will be\npermanently enabled.
+
+#org @gText_OpeningOptionsRegulationModeYes
+[GREEN]Regulation Mode enabled.[BLACK]
+
+#org @gText_OpeningOptionsRegulationModeNo
+[GREEN]Regulation Mode disabled.[BLACK]
+
+#org @gText_OpeningOptionsScalemons
+Would you like to enable[GREEN]Scalemons\nMode[BLACK]?\pThis mode scales every fully\nevolved Pok\emon's base stats\lup or down to 600.
+
+#org @gText_ScalemonsEnabledYes
+[GREEN]Scalemons Mode enabled.[BLACK]
+
+#org @gText_ScalemonsEnabledNo
+[GREEN]Scalemons Mode disabled.[BLACK]
+
+#org @gText_OpeningOptionsSRandomizer
+Would you like to enable[GREEN]Randomizer\nMode[BLACK]?\pThis randomizes every Pok\emon\nin the world!\p[RED]Many legendaries may not be\nencountered.[BLACK]
+
+#org @gText_RandomizerEnabledYes
+[GREEN]Randomizer Mode enabled.[BLACK]
+
+#org @gText_RandomizerEnabledNo
+[GREEN]Randomizer Mode disabled.[BLACK]

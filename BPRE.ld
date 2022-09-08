@@ -7,6 +7,7 @@ gBattleTowerStreaks = 0x2026840;
 gBattleMineStreaks = 0x2026B40;
 gBattleCircusStreaks = 0x2026B50;
 gFollowerState = 0x203B818;
+gLastUsedBall = 0x203B774;
 gNewBS = 0x203E038;
 gInShop = 0x203E043;
 sItemDescriptionPocket = 0x203E053;
@@ -616,7 +617,7 @@ UpdateHealthboxAttribute = 0x8049D98 | 1;
 MoveBattleBar = 0x8049FD8 | 1;
 MoveBattleBarGraphically = 0x804A0D4 | 1;
 CalcNewBarValue = 0x804A2F0 | 1;
-GetScaledExpFraction = 0x804A59C | 1;
+//GetScaledExpFraction = 0x804A59C | 1;
 GetBattlerSide = 0x80751C4 | 1;
 GetBattlerPosition = 0x80751D8 | 1;
 GetBattlerAtPosition = 0x80751E8 | 1;
@@ -735,9 +736,10 @@ CopyTrainerTowerPlayerWonText = 0x815DC40 | 1;
 /* Poke Ball Functions */
 SpriteCB_TestBallThrow = 0x804ABD4 | 1;
 SpriteCB_ReleaseMonFromBall = 0x804B268 | 1;
+SpriteCB_PlayerMonSendOut_2 = 0x804B6D4 | 1;
 CreatePokeballSpriteToReleaseMon = 0x804B908 | 1;
 objc_ball_instanciate2_entry_804B9E8 = 0x804B9E8 | 1;
-sub_804BD94 = 0x804BD94 | 1;
+StartHealthboxSlideIn = 0x804BD94 | 1;
 //LoadBallGfx = 0x804BEF4 | 1;
 FreeBallGfx = 0x804BF64 | 1;
 //ItemIdToBallId = 0x80EF52C | 1;
@@ -1446,6 +1448,7 @@ Menu_PrintFormatIntlPlayerName = 0x812E6DC | 1;
 /* PicBox Functions */
 Task_PokemonPicWindow = 0x809D288 | 1;
 TaskDestroyPicBox = 0x809D494 | 1;
+ScriptMenu_ShowPokemonPic = 0x809d2f0 | 1;
 CreateWindowFromRect = 0x809D654 | 1;
 PicBoxSetter = 0x809D6D4 | 1;
 BoxCreateTask = 0x81119D4 | 1;
@@ -1842,5 +1845,11 @@ DMA0_CNT_H = 0x40000BA;
 sMonSummaryScreen = 0x203B140;
 AddTextPrinterParameterized3 = 0x812E51C | 1;
 
+/* Options Menu */
+sOptionMenuPtr = 0x203DA00;
+
+/* Misc */
 IsPlayerPartyAndPokemonStorageFull = 0x8040F6C | 1;
 gLastUsedSpecies = 0x203FA00;
+sMessageBoxType = 0x203709C;
+Task_ScriptShowMonPic = 0x809D288 | 1;

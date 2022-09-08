@@ -153,6 +153,47 @@ NormalBallThrowReturn:
 	bx r2
 
 .pool
+@0x804AA2C with r0
+PokeBallThrowSoundHook:
+	mov r0, #0x36 @Throw Poke Ball
+	ldr r1, =PlaySE
+	bl bxr1
+	ldr r0, =0x804AA68 | 1
+	bx r0
+
+.pool
+@0x804AB04 with r1
+TrainersThrowPokeBallsHook1:
+	add r0, #24 @X-Offset to the right thrown from
+	strh r0, [r4, #0x20]
+	mov r0, r6
+	mov r1, #1
+	ldr r2, =GetBattlerSpriteCoord
+	bl bxr2
+	lsl r0, #0x18
+	lsr r0, #0x18
+	sub r0, #12 @Y-Offset upwards thrown from
+	ldr r1, =0x0804AB14 | 1
+	bx r1
+
+.pool
+@0x804B80E with r1
+TrainersThrowPokeBallsHook2:
+	mov r0, r4
+	ldr r1, =GetBattlerPosition
+	bl bxr1
+	mov r1, #2 @BIT_FLANK
+	and r0, r1
+	cmp r0, #0
+	beq ReleaseMon1FromBall @Left mon
+	ldr r0, =0x0804B81C | 1 @Release mon 2
+	bx r0
+
+ReleaseMon1FromBall:
+	ldr r0, =0x0804B828 | 1
+	bx r0
+
+.pool
 @0x80A1E2C with r0
 DoubleWildPokeBallItemUseFixHook:
 	mov r0, r4
@@ -1057,6 +1098,27 @@ HealthBarChangeAmountHook:
 	bx r4
 
 .pool
+@0x804A066 with r1
+ExpBarChangeAmountHook:
+	lsl r0, r0, #0x10
+	lsr r5, r0, #0x10
+	mov r0, r8 @Bank
+	bl ShouldFillExpBarToMax
+	cmp r0, #0x0
+	beq ExpBarNormalChangeAmount
+	mov r0, #0x1
+	neg r4, r0
+	ldr r0, =0x804A080 | 1
+	bx r0
+
+ExpBarNormalChangeAmount:
+	ldr r0, [r4, #0x4]
+	ldr r1, [r4, #0x8]
+	mov r3, r4
+	ldr r2, =0x804A070 | 1
+	bx r2
+
+.pool
 @0x81E381C with r0
 ActivateMGBAPrint:
 	add sp, #0x10
@@ -1267,4 +1329,21 @@ SummaryScreen_TradeMonMetLocationHook:
 	mov r5, r0
 	ldr r1, =0x8137780 | 1
 	bx r1
+	
+.pool
+@0x8032CEC with r0
+LastUsedBallOverrideHook:
+	push {r4-r5, lr}
+	sub sp, #0x4
+	bl DidPlayerUseLastBallAndTryUpdateControllerFunc
+	cmp r0, #0x0
+	bne LastUsedBallOverrideHook_SkipBag
+	mov r0, #0x1
+	neg r0, r0
+	ldr r1, =0x8032CF4 | 1
+	bx r1
+
+LastUsedBallOverrideHook_SkipBag: @Skips the palette fade to bag
+	ldr r0, =0x8032D30 | 1
+	bx r0
 	

@@ -762,6 +762,8 @@ struct NewBattleStruct
 	u8 chiStrikeCritBoosts[MAX_BATTLERS_COUNT]; //~0x2017A4B
 	u8 sandblastCentiferno[MAX_BATTLERS_COUNT]; //Records if any banks are trapped by G-Max Centiferno or G-Max Sandblast
 	u8 disguisedAs[MAX_BATTLERS_COUNT]; //The party index + 1 the mon with Illusion is disguised as
+	u8 quickClawRandomNumber[MAX_BATTLERS_COUNT];
+	u8 quickDrawRandomNumber[MAX_BATTLERS_COUNT];
 
 	//Bit Fields for Banks
 	u8 MicleBerryBits;
@@ -770,7 +772,7 @@ struct NewBattleStruct
 	u8 playedFocusPunchMessage;
 	u8 playedShellTrapMessage;
 	u8 RoostCounter;
-	u8 CustapQuickClawIndicator; //0x2017632
+	u8 quickClawCustapIndicator;
 	u8 HealingWishLoc;
 	u8 PowderByte;
 	u8 quashed;
@@ -863,6 +865,8 @@ struct NewBattleStruct
 	bool8 doingPluckItemEffect : 1;
 	bool8 usedXSpDef : 1; //Needed because it's hooked into the X Sp. Atk
 	bool8 lessThanHalfHPBeforeShellBell : 1; //For Emergency Exit
+	bool8 usedLastBall : 1; //Helps prevent the bag from opening
+	bool8 threwBall : 1; //Last Used Ball only appears once a ball has been thrown once
 
 	//Other
 	u16 LastUsedMove;
@@ -1321,7 +1325,7 @@ struct BattleAnimationInfo
     u8 field_7;
     u8 ballThrowCaseId;
     u8 field_9_x1 : 1;
-    u8 field_9_x2 : 1;
+    u8 wildMonInvisible : 1;
     u8 field_9_x1C : 3;
     u8 field_9_x20 : 1;
     u8 field_9_x40 : 1;

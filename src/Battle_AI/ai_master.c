@@ -1745,7 +1745,7 @@ static bool8 ShouldSwitchIfWonderGuard(void)
 							return FALSE;
 						break;
 					case EFFECT_ROAR:
-						if (BankHasMonToSwitchTo(bankDef))
+						if (HasMonToSwitchTo(bankDef))
 							return FALSE;
 						break;
 					case EFFECT_TOXIC:

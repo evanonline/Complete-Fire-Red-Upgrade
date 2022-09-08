@@ -20,14 +20,12 @@ build/*
 *.ss8
 *.ss9
 *.toml
-Multi Target Moves Plan.txt
+strings/mystery_gift_passwords.string
+
 generatedrepoints
 *__pycache__
 *.idea
 tables.xlsx
-cfru_thread.txt
-src/Tables/criminon_trainer_spreads.c
-Cover Art.png
 
 # generated temporary files
 .fuse*

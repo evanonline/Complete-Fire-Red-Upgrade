@@ -32,3 +32,9 @@ EventScript_VermilionPort_NPC4:
 EventScript_VermilionPort_NPC5:
 	msgbox gText_VermilionTruck2 MSG_FACE
 	end
+
+.global EventScript_VermilionPort_NPC6
+EventScript_VermilionPort_NPC6:
+	msgbox gText_VermilionPortNPC3 MSG_FACE
+	end
+	

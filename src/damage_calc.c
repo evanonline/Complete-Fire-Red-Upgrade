@@ -124,6 +124,9 @@ void atk04_critcalc(void)
 						#ifdef SPECIES_SIRFETCHD
 						+ 2 * (atkEffect == ITEM_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_SIRFETCHD)
 						#endif
+						#ifdef SPECIES_PALKIA_ORIGIN
+						+ 2 * (gCurrentMove == MOVE_SPACIALREND && SPECIES(gBankAttacker) == SPECIES_PALKIA_ORIGIN)
+						#endif
 						+ 2 * (gCurrentMove == MOVE_10000000_VOLT_THUNDERBOLT);
 
 			if (critChance > 4)
@@ -2009,7 +2012,7 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 	if (useMonDef)
 	{
 		struct Pokemon* monDef = data->monDef;
-
+		
 		switch (data->move) {
 			case MOVE_FOULPLAY:
 				attack = monDef->attack;
@@ -3185,6 +3188,27 @@ static u16 GetBasePower(struct DamageCalc* data)
 				power *= 2;
 			break;
 
+		case MOVE_ROAROFTIME:
+			#ifdef SPECIES_DIALGA_ORIGIN
+			if (data->atkSpecies == SPECIES_DIALGA_ORIGIN)
+				power = 170;
+			#endif
+			break;
+
+		case MOVE_SPACIALREND:
+			#ifdef SPECIES_PALKIA_ORIGIN
+			if (data->atkSpecies == SPECIES_PALKIA_ORIGIN)
+				power = 90;
+			#endif
+			break;
+			
+		case MOVE_SHADOWFORCE:
+			#ifdef SPECIES_GIRATINA_ORIGIN
+			if (data->atkSpecies == SPECIES_GIRATINA_ORIGIN)
+				power = 120;
+			#endif
+			break;
+			
 		default:
 			if (gBattleMoves[move].effect == EFFECT_TRIPLE_KICK)
 			{
@@ -3403,26 +3427,28 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 				power = (power * 12) / 10;
 			break;
 
-		#ifdef SPECIES_DIALGA
+		#ifdef NATIONAL_DEX_DIALGA
 		case ITEM_EFFECT_ADAMANT_ORB:
 		//1.2x Boost
-			if (data->atkSpecies == SPECIES_DIALGA && (data->moveType == TYPE_STEEL || data->moveType == TYPE_DRAGON))
+			if (SpeciesToNationalPokedexNum(data->atkSpecies) == NATIONAL_DEX_DIALGA
+			&& (data->moveType == TYPE_STEEL || data->moveType == TYPE_DRAGON))
 				power = (power * 12) / 10;
 			break;
 		#endif
 
-		#ifdef SPECIES_PALKIA
+		#ifdef NATIONAL_DEX_PALKIA
 		case ITEM_EFFECT_LUSTROUS_ORB:
 		//1.2x Boost
-			if (data->atkSpecies == SPECIES_PALKIA && (data->moveType == TYPE_WATER || data->moveType == TYPE_DRAGON))
+			if (SpeciesToNationalPokedexNum(data->atkSpecies) == NATIONAL_DEX_PALKIA
+			&& (data->moveType == TYPE_WATER || data->moveType == TYPE_DRAGON))
 				power = (power * 12) / 10;
 			break;
 		#endif
 
-		#if (defined SPECIES_GIRATINA && defined SPECIES_GIRATINA_ORIGIN)
+		#ifdef NATIONAL_DEX_GIRATINA
 		case ITEM_EFFECT_GRISEOUS_ORB:
 		//1.2x Boost
-			if ((data->atkSpecies == SPECIES_GIRATINA || data->atkSpecies == SPECIES_GIRATINA_ORIGIN)
+			if (SpeciesToNationalPokedexNum(data->atkSpecies) == NATIONAL_DEX_GIRATINA
 			&& (data->moveType == TYPE_GHOST || data->moveType == TYPE_DRAGON))
 				power = (power * 12) / 10;
 			break;

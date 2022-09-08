@@ -22,10 +22,6 @@ start_menu.c
 	associated functions such as safari steps/ball count.
 */
 
-/*
-RTC on start menu code by Greenphx9
-*/
-
 enum
 {
 	STARTMENU_POKEDEX,

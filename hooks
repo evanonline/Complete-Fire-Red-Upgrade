@@ -44,10 +44,12 @@ OpenPartyScreenBatonPassExplosionFix 8024C16 0
 CalcMonHiddenPowerType 802B678 1
 SpriteCB_SlideInTrainer 8033EEC 1
 HealthBarChangeAmountHook 804A00C 4
+ExpBarChangeAmountHook 804A066 1
 ReshowBattleScreenMonSpriteHook1 8077CD2 0
 ReshowBattleScreenMonSpriteHook2 8077ECA 0
 ReshowBattleScreenHealthboxSpriteHook 8078104 0
 BattleUseFunc_PokeDoll 80A2010 1
+LastUsedBallOverrideHook 8032CEC 0
 
 HandleInputChooseAction 0802E438 0
 SwitchMoveDataHook 802EF90 0
@@ -250,6 +252,11 @@ TradePokeballFixHook 804BBD8 0
 DoubleWildPokeBallItemUseFixHook 080A1E2C 0
 DoubleWildDexHook1 802D9D8 0
 DoubleWildDexHook2 802DAEC 0
+PokeBallThrowSoundHook 804AA2C 0
+TrainersThrowPokeBallsHook1 804AB04 1
+TrainersThrowPokeBallsHook2 804B80E 1
+SpriteCB_OpponentMonSendOut_1 804B868 1
+
 
 ##Illusion Hooks
 BattleLoadOpponentMonSpriteGfxHook 803432C 2

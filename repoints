@@ -3,6 +3,14 @@
 ##Tables
 gMoveDescriptions 080E5440
 gMoveDescriptions 08137BC8
+gLongMoveNames 080BFAA4
+gLongMoveNames 08125BE4
+gLongMoveNames 08125CE0
+gLongMoveNames 0812606C
+gLongMoveNames 08126128
+gLongMoveNames 081261FC
+gLongMoveNames 0812627C
+gLongMoveNames 08126E64
 gAbilityDescriptions 080001C4
 gAbilityDescriptions 081367A8
 gMoveAnimations 080725D0
@@ -270,3 +278,11 @@ gText_TextSpeedMid 083cc330
 gText_TextSpeedFast 083cc334
 gText_TextSpeedInstant 083cc338
 #endif
+
+##For Mystery Gift
+EventScript_MysteryGiftPerson 081BB1D3
+CableClub_EventScript_HideOrShowMysteryGiftMan 081BB1B5
+
+##Trainer Sprites
+g082YoungsterBTiles 823980C
+g082YoungsterBPal 8239CAC

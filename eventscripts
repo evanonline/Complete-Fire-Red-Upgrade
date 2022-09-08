@@ -3,5 +3,9 @@ npc 1 4 1 EventScript_VermilionPort_NPC2
 npc 1 4 2 EventScript_VermilionPort_NPC3
 npc 1 4 3 EventScript_VermilionPort_NPC4
 npc 1 4 4 EventScript_VermilionPort_NPC5
+npc 1 4 5 EventScript_VermilionPort_NPC6
 
 npc 3 0 1 EventScript_PalletTown_CoolGuy
+
+npc 6 7 0 EventScript_PewterCity_HouseHusband1
+npc 6 7 1 EventScript_PewterCity_HouseHusband2

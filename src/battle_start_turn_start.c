@@ -666,9 +666,9 @@ void RunTurnActionsFunctions(void)
 	{
 		for (i = 0; i < gBattlersCount; ++i) //Loop through all battlers and play Quick Claw anim for each
 		{
-			if (gNewBS->CustapQuickClawIndicator & gBitTable[i])
+			if (gNewBS->quickClawCustapIndicator & gBitTable[i])
 			{
-				gNewBS->CustapQuickClawIndicator &= ~(gBitTable[i]);
+				gNewBS->quickClawCustapIndicator &= ~(gBitTable[i]);
 
 				if (gActionsByTurnOrder[i] != ACTION_USE_ITEM)
 				{
@@ -1710,14 +1710,14 @@ s32 BracketCalc(u8 bank)
 	u8 itemQuality = ITEM_QUALITY(bank);
 	u8 ability = ABILITY(bank);
 
-	gNewBS->CustapQuickClawIndicator &= ~(gBitTable[bank]); //Reset the Quick Claw counter just in case
+	gNewBS->quickClawCustapIndicator &= ~(gBitTable[bank]); //Reset the Quick Claw counter just in case
 	if (BATTLER_ALIVE(bank))
 	{
 		switch (itemEffect) {
 			case ITEM_EFFECT_QUICK_CLAW:
 				if (gRandomTurnNumber % 100 < itemQuality)
 				{
-					gNewBS->CustapQuickClawIndicator |= gBitTable[bank];
+					gNewBS->quickClawCustapIndicator |= gBitTable[bank];
 					return 1;
 				}
 				break;
@@ -1728,7 +1728,7 @@ s32 BracketCalc(u8 bank)
 				&& !AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_ASONE_GRIM, 0, 0)
 				&& PINCH_BERRY_CHECK(bank))
 				{
-					gNewBS->CustapQuickClawIndicator |= gBitTable[bank];
+					gNewBS->quickClawCustapIndicator |= gBitTable[bank];
 					return 1;
 				}
 				break;

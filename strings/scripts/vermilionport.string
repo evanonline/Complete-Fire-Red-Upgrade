@@ -2,31 +2,40 @@
 I love pressing [L_BUTTON] to [GREEN]enable\n[BLACK]the [GREEN]auto-run[BLACK] function!\lTry it yourself and feel the wind!
 
 #org @gText_VermilionTruck1
-I want to look for rare Pok\emon\nunderneath this truck,\lbut I'm afraid of getting isekaied[.]\pIf this thing runs me over, I might be\nsent to [GREEN]a world where Pok\emon talk\l[BLACK]or something crazy like that!
+I must know whose trucks these are[.]\nAre they for hotel staff?\lDock workers?\pI'm gonna wait here until I\nsee someone get in and drive!
 
 #org @gText_VermilionTruck2
-Many of my friends like visual novels.\pThere's this one where a guy invites\nsomeone into a truck that has\lair conditioning[.]\lMy friends go crazy about it.\pI don't know what it means, but when\nI see a truck in real life,\lI wonder to myself if it also has\lair conditioning.
+I have a friend who got run over\nby a truck once.\pThat's how I found out that\nPok\emon Centers treat people, too!\pHe's fine now, but he was in\nbad shape for a while.\pWhile he was unconscious,\nhe had this crazy dream[.]\pHe said he was reborn in a\n[GREEN]world where Pok\emon talked,[BLACK]\land [GREEN]humans didn't exist![BLACK]\pThere was some talk about a\n[BLUE]Rescue Team[BLACK] or something.\lHe still insists it was all real!\pDon't get hit by a truck.
 
 #org @gText_VermilionPortNPC1
-Are you from the Sevii Islands?\nOr Aeos Island?\lTCG Island, maybe?\lOh, oh! Is it the Orange Islands?\pYou're definitely from SOME island[.]\nyou've got that islandy,\lsea-salty scent!\pOr maybe that's just the ocean\nfive feet away[.]
+Are you from [RED]Aeos Island[BLACK]?\nThe place with Unite Battles?\lNo?\lOh, oh! Is it the [RED]Orange Islands[BLACK]?\pYou're definitely from SOME island[.]\nyou've got that islandy,\lsea-salty scent!\pOr maybe that's just the ocean\none tile away[.]
 
 #org @gText_VermilionPortNPC2
 Ahh, the sea!\pHow I love the tranquil crashing of\nthe waves against the land[.]
 
 #org @gText_VermilionPortNPC3
-Ports are a place of coming and going.\pI don't have anywhere to go, though. I simply enjoy\nwatching the movement of boats and people.
+Ports are a place of coming and\ngoing.\pI don't have anywhere to go,\nthough.\pI simply enjoy watching\nthe movement of boats and people.
 
 #org @gText_VermilionPortTourismBoardIntro
 Many fliers are posted on the tourism board.\nRead them?
 
-#org @gTextVermilionPortTourismBoard1
-[RED]Battle! Trade! Evolve!\p[BLUE]Book a ship to the [GREEN]Warrior's Lodge[BLUE] to train with the\nhearty, cunning fighters of the frigid midwestern seas.\pThe power coursing through our land can\nevolve your Pok\emon into strange new regional forms like those discovered in\l[GREEN]Alola, Galar, and Hisui[BLUE]!\pAsk the nearest travel agent about your next visit to the [GREEN]Mi[BLUE][.]\p[BLACK]Ah... someone tore the rest of the flyer off...\n
+#org @gText_VermilionPortTourismBoardOption1
+Worn ad
 
-#org @gTextVermilionPortTourismBoard2
+#org @gText_VermilionPortTourismBoardOption2
+Lavender ad
+
+#org @gText_VermilionPortTourismBoardText1
+[RED]Battle! Trade! Evolve!\p[BLUE]Book a ship to the [GREEN]Warrior's Lodge[BLUE] to train with the\nhearty, cunning fighters of the frigid midwestern seas.\pThe power coursing through our land can\nevolve your Pok\emon into strange new regional forms like those discovered in\l[GREEN]Alola, Galar, and Hisui[BLUE]!\pAsk the nearest travel agent about your next visit to the [GREEN]Mi[BLUE][.]\p[BLACK]Ah[.] someone tore the rest of the flyer off[.]\n
+
+#org @gText_VermilionPortTourismBoardText2
 [BLUE]Heartwarming! [RED]Lavender Town[BLUE] has named [RED]Gengar[BLUE] its [RED]Official\nAmbassador[BLUE] to help welcome tourists to the town's gorgeous\lseaswept greens with its signature friendly smile!
 
-#org @gTextVermilionPortCalvervtutrp
+#org @gText_VermilionPortHotelCalvervtutrp
 I really wanted to name my Houndoom something\ncool, like "Cerberus"!\pBut my baby sister mashed a bunch of buttons,\nand somehow my Houndoom ended up being named\l"Calvervtutrp"[.]\lLuckily, you can rename your Pok\emon any time\lat Pok\emon Centers now!\pBut[.] we got used to calling him\n"Calvervtutrp"[.]
 
-#org @gTextVermilionPortDumbPun
-Tch[.] a Pok\emon battle? No thanks.\pFight me in Meltan Blood: Type Lumineon.\nNo? I thought so.\lCoward[.]
+#org @gText_VermilionPortHotelDumbPun
+Tch[.] a Pok\emon battle? No thanks.\pFight me in [RED]Meltan Blood: Type Lumineon[BLACK] instead.\nNo? I thought so.\lCoward[.]
+
+#org @gText_VermilionPortHotelTechnology
+Technology is incredible!\pThe internet is connecting people\nin all kinds of new ways.\lLifelong friends are made there.\pAnd it's not just that!\nPeople work together on\lamazing creative projects,\lbettering each other,\l collaborating for the\lsheer sake of collaboration!\pThese people will never meet,\nyet they help each other\lcreate things anyway.\pOnline[.] it's actually awesome.

@@ -149,7 +149,7 @@ const struct WildPokemon gRoute6_FishingMons[] =
     {10, 19, SPECIES_MAGIKARP},
     {12, 18, SPECIES_GOLDEEN},
     {10, 15, SPECIES_POLIWAG},
-    {25, 30, SPECIES_CORPHISH},
+    {25, 30, SPECIES_LOTAD},
     {30, 35, SPECIES_CORPHISH},
     {20, 25, SPECIES_CORPHISH},
     {35, 40, SPECIES_POLIWHIRL},
@@ -160,7 +160,7 @@ const struct WildPokemonInfo gRoute6_FishingMonsInfo = {30, gRoute6_FishingMons}
 
 const struct WildPokemon gRoute6_FishingMonsNight[] =
 {
-    {5, 8, SPECIES_MAGIKARP},
+    {5, 8, SPECIES_LOTAD},
     {5, 7, SPECIES_CORPHISH},
     {10, 19, SPECIES_MAGIKARP},
     {12, 18, SPECIES_GOLDEEN},
