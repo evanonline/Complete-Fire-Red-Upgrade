@@ -281,7 +281,7 @@ gText_TextSpeedInstant 083cc338
 
 ##For Mystery Gift
 EventScript_MysteryGiftPerson 081BB1D3
-CableClub_EventScript_HideOrShowMysteryGiftMan 081BB1B5
+##CableClub_EventScript_HideOrShowMysteryGiftMan 081BB1B5
 
 ##Trainer Sprites
 g082YoungsterBTiles 823980C

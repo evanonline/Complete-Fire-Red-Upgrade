@@ -44,6 +44,7 @@ extern const u8 gText_MysteryGift_PachirisuSeJunParkPassword[];
 extern const u8 gText_MysteryGift_BanetteCorbinPassword[];
 extern const u8 gText_MysteryGift_LanturnDiannePassword[];
 extern const u8 gText_MysteryGift_SableyeGolgoPassword[];
+extern const u8 gText_MysteryGift_RayquazaVCreatePassword[];
 extern const u8 gText_MysteryGift_GameBoyAdvanceSecretCode[];
 
 const struct NewMysteryGift gMysteryGifts[] = 
@@ -555,12 +556,11 @@ const struct NewMysteryGift gMysteryGifts[] =
         .ballType = BALL_TYPE_POKE_BALL,
         .password = gText_MysteryGift_LanturnDiannePassword,
     },
-};
 
 // Golgo's Sableye (Octazooka)
 	{
         .species = SPECIES_SABLEYE,
-        .item = ITEM_BLACKSLUDGE,
+        .item = ITEM_BLACK_SLUDGE,
         .abilityNum = 0,
         .nature = NATURE_QUIRKY,
         .moves = 
@@ -593,6 +593,44 @@ const struct NewMysteryGift gMysteryGifts[] =
         .ballType = BALL_TYPE_CHERISH_BALL,
         .password = gText_MysteryGift_SableyeGolgoPassword,
     },
+	
+	// V-Create Rayquaza
+	{
+        .species = SPECIES_RAYQUAZA,
+        .item = ITEM_LIFE_ORB,
+        .abilityNum = 0,
+        .nature = NATURE_HASTY,
+        .moves = 
+        {
+            MOVE_EXTREMESPEED,
+            MOVE_HYPERBEAM,
+            MOVE_DRAGONPULSE,
+            MOVE_VCREATE,
+        },
+        .ivs =
+        {
+            31,
+            31,
+            31,
+            31,
+            31,
+            31,
+        },
+        .evs = 
+        {
+            0,
+            0,
+            0,
+            252,
+            4,
+            252,
+        },
+        .level = 100,
+        .isShiny = FALSE,
+        .ballType = BALL_TYPE_CHERISH_BALL,
+        .password = gText_MysteryGift_RayquazaVCreatePassword,
+    },
+	
 };
 
 u8 CheckMysteryGiftPassword(void)

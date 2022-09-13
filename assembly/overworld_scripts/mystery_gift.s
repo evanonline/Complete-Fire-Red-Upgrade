@@ -5,7 +5,7 @@
 .include "../xse_defines.s"
 .include "../asm_defines.s"
 
-.equ FLAG_SYS_GAME_CLEAR, 0x82C
+##.equ FLAG_BADGE03_GET, 0x822
 
 .global EventScript_MysteryGiftPerson
 EventScript_MysteryGiftPerson:
@@ -58,7 +58,7 @@ EventScript_MysteryGift_ClaimGift:
     msgbox gText_PlayerReceievedGiftMon MSG_KEEPOPEN
     waitse
     closeonkeypress
-    hidepokepic
+    ##hidepokepic
 	msgbox 0x81A56A7 MSG_YESNO
     compare LASTRESULT 0x0
 	goto_if_eq EventScript_MysteryGift_EndGiveMon
@@ -70,17 +70,16 @@ EventScript_MysteryGift_ClaimGift:
 EventScript_MysteryGift_EndGiveMon:
     release
     end
-    
 
 EventScript_MysteryGift_AlreadyReceieved:
     msgbox gText_AlreadyClaimedGift MSG_FACE
     release
     end
 
-CableClub_EventScript_HideOrShowMysteryGiftMan:
-    goto_if_unset FLAG_SYS_GAME_CLEAR EventScript_HideMysteryGiftMan
-	clearflag 0x70
-    return
+##CableClub_EventScript_HideOrShowMysteryGiftMan:
+   ## goto_if_unset FLAG_BADGE03_GET EventScript_HideMysteryGiftMan
+	##clearflag 0x70
+    ##return
 
 EventScript_HideMysteryGiftMan:
 	setflag 0x70
