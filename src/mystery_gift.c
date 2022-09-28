@@ -52,7 +52,7 @@ const struct NewMysteryGift gMysteryGifts[] =
 	// Debug Only
     {
         .species = SPECIES_TREECKO,
-        .item = ITEM_ENIGMA_BERRY,
+        .item = ITEM_LUM_BERRY,
         .abilityNum = 0,
         .nature = NATURE_JOLLY,
         .moves = 

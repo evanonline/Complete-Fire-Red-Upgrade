@@ -1,44 +1,50 @@
 #org @gText_OpeningOptionsStart
-Hey, sib!\nCome on!
-
-#org @gText_OpeningOptionsDirection
-We're all ready!\nKanto's outside, sib!\pBefore we go, we can check out\nthat computer over there.\pIt has a bunch of exciting\n[GREEN]Challenge Settings[BLACK]!\pThey all sound scary for newbies,\nso I'm not touching them[.]
+Hey, sib!\nI got the call!\lThe Professor's aide is in the lobby!\pBefore we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings![BLACK]\pBut if you're ready, we can\nhead down together!
 
 #org @gText_OpeningOptionsIntro
-Welcome to the Indigo League!\pBefore you disembark to begin your\nLeague challenge, you are allowed\lto choose several modifiers\lfor your run.\pThere are neither rewards\nnor penalties for using\lthese options.
+Scanning Trainer Card[.]
 
-#org @gText_OpeningOptionsChoice1
-Regulation Mode
+#org @gText_OpeningOptionsActive
+Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!
 
-#org @gText_OpeningOptionsChoice2
-Scalemons Mode
+#org @gText_WhichSetting
+Which setting would you like to\naccess?
 
-#org @gText_OpeningOptionsChoice3
-Randomizer Mode
+#org @gText_OpeningOptionsRandomizer
+Would you like to activate\n[GREEN]Randomizer Mode?[BLACK]\pThis randomizes every Pok\emon\nin the world!\p[RED]There may be discrepancies between\na Pok\emon seen on the overworld,\land the Pok\emon actually fought.\pMany legendaries may not appear.[BLACK]
 
-#org @gText_OpeningOptionsRegulationMode
-Would you like to enable\n[GREEN]Regulation Mode[BLACK]?\pIn Gym battles and\lElite Four battles,\lyou will be unable to use\lbag items such as Potions,\land [GREEN]Sleep Clause[BLACK]will be active.\lUnder the [GREEN]Sleep Clause[BLACK],\l[RED]only 1 Pok\emon per team\lcan be put to sleep at a time.\pAdditionally, Set Mode will be\npermanently enabled.
+#org @gText_RandomizerCurrentlyDisabled
+Randomizer Mode is currently\n[RED]disabled.[BLACK]
 
-#org @gText_OpeningOptionsRegulationModeYes
-[GREEN]Regulation Mode enabled.[BLACK]
-
-#org @gText_OpeningOptionsRegulationModeNo
-[GREEN]Regulation Mode disabled.[BLACK]
-
-#org @gText_OpeningOptionsScalemons
-Would you like to enable[GREEN]Scalemons\nMode[BLACK]?\pThis mode scales every fully\nevolved Pok\emon's base stats\lup or down to 600.
-
-#org @gText_ScalemonsEnabledYes
-[GREEN]Scalemons Mode enabled.[BLACK]
-
-#org @gText_ScalemonsEnabledNo
-[GREEN]Scalemons Mode disabled.[BLACK]
-
-#org @gText_OpeningOptionsSRandomizer
-Would you like to enable[GREEN]Randomizer\nMode[BLACK]?\pThis randomizes every Pok\emon\nin the world!\p[RED]Many legendaries may not be\nencountered.[BLACK]
+#org @gText_RandomizerCurrentlyEnabled
+Randomizer Mode is currently\n[BLUE]enabled.[BLACK]
 
 #org @gText_RandomizerEnabledYes
-[GREEN]Randomizer Mode enabled.[BLACK]
+Randomizer Mode [BLUE]enabled.[BLACK]
 
 #org @gText_RandomizerEnabledNo
-[GREEN]Randomizer Mode disabled.[BLACK]
+Randomizer Mode [RED]disabled.[BLACK]
+
+#org @gText_OpeningOptionsPCDone
+Thank you! Good luck on your\nPok\emon journey!
+
+#org @gText_OpeningSibWarning
+You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to access those\nsettings again!
+
+#org @gText_OpeningSibGo
+Alright! Let's go!\nI'm so excited!
+
+#org @gText_NameSherry
+Sherry
+
+#org @gText_NameBrandy
+Brandy
+
+#org @gText_NamePC
+Indigo PC
+
+#org @gText_OpeningOptionsInactive
+Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options Service[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
+
+#org @gText_BathroomEasterEgg
+The bathroom's over here.\nDon't need to use it, though!

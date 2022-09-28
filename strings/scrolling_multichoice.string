@@ -32,4 +32,10 @@ Example 9
 #org @sExampleText_10
 Example 10
 
+#org @sRunSettingsRandomizer
+Randomizer Mode
+
+#org @sRunSettingsCancel
+End
+
 #endif

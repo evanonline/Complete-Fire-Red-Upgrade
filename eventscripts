@@ -1,3 +1,12 @@
+## Vermilion Port Hotel Room Intro
+##map 9 8 EventScript_IntroSibSpriteScript
+##map 9 8 EventScript_SibStart
+npc 9 8 1 EventScript_SibRoomLeave
+npc 9 8 0 EventScript_IndigoOptionsPC
+sign 9 8 0 EventScript_BathroomEasterEgg
+
+
+## Vermilion Port outside
 npc 1 4 0 EventScript_VermilionPort_NPC1
 npc 1 4 1 EventScript_VermilionPort_NPC2
 npc 1 4 2 EventScript_VermilionPort_NPC3
@@ -5,9 +14,15 @@ npc 1 4 3 EventScript_VermilionPort_NPC4
 npc 1 4 4 EventScript_VermilionPort_NPC5
 npc 1 4 5 EventScript_VermilionPort_NPC6
 
-npc 3 0 1 EventScript_PalletTown_CoolGuy
+## Cerulean City
+sign 3 3 3 EventScript_TrainerTips_Nuzlocke
 
+## Pewter City
 npc 6 7 0 EventScript_PewterCity_HouseHusband1
 npc 6 7 1 EventScript_PewterCity_HouseHusband2
 
-npc 6 6 4 EventScript_MysteryGiftPerson
+
+## One Island Net Center
+npc 32 1 4 EventScript_OneIsland_FatefulClown
+npc 32 1 5 EventScript_MysteryGiftPerson
+npc 32 0 3 EventScript_OneIsland_PCNPC1

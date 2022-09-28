@@ -1,11 +1,8 @@
-#org @Text_TrainerTips_WildCharge
+#org @gText_TrainerTips_WildCharge
 Trainer Tips!\pThe move Wild Charge is stronger than ever!\nIts strength is now equal to Flare Blitz, following new\nPok\emon League regulations.
 
-#org @Text_TrainerTips_Nuzlocke
-Trainer Tips!\pA [GREEN]Nuzlocke[BLACK] is a self-imposed challenge run\nof the Pok\emon League. The rules are simple!\pYou can only catch the first Pok\emon you see in an area.\pIf a Pok\emon faints, you may no longer use it on\n your team.\pIf you run out of Pok\emon[.] you must start your League challenge over!\pThe Nuzlocke ruleset is not officially enforced by the\nPok\emon League, but it IS fully legal to attempt!\nGive it a try sometime!
+#org @gText_TrainerTips_Nuzlocke
+Trainer Tips!\pA [GREEN]Nuzlocke[BLACK] is a [BLUE]self-imposed[BLACK]\nPok\emon League challenge run.\pThe rules are simple!\p[BLUE]1. You can only catch the first\nPok\emon you encounter per area.\p2. If a Pok\emon faints, you may\nno longer use it on your team.\p3. If you run out of Pok\emon[.]\nstart your League challenge over!\p[BLACK]The [GREEN]Nuzlocke[BLACK] ruleset is [BLUE]not enforced\nofficially[BLACK] by the Pok\emon League.\pBut it IS fully legal to attempt!\nGive it a try sometime!
 
-#org @Text_TrainerTips_Steelworker
-Trainer Tips!\pDue to new Pok\emon League regulations, it has been mandated that\nno more than 255 Pok\emon abilities may exist.\nAs such, some similar abilities have been condensed together.\nFor example, [RED]Steelworker[BLACK], [RED]Transistor[BLACK], and [RED]Dragon's Maw[BLACK] are now all one ability.\pHowever, depending on which Pok\emon has the ability, its function will change!\nAs such, most Pok\emon will still essentially have the same roles and powers.\nAny questions should be directed to the\n[GREEN]CFRU (Council of Functional Restrictions & Unification)[BLACK]\nat the Indigo Plateau.
-
-#org @Text_TrainerTips_PalletStartMenu
+#org @gText_TrainerTips_PalletStartMenu
 Trainer Tips!\pPress [START_BUTTON] to open the menu!

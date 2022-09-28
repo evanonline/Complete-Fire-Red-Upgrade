@@ -1389,7 +1389,7 @@ Brine
 Fairy Wind
 
 #org @NAME_LONG_DOLL_EYES
-Baby Doll Eyes
+Baby-Doll Eyes
 
 #org @NAME_LONG_PLAY_ROUGH
 Play Rough
@@ -2216,6 +2216,9 @@ Thunderous Kick
 #org @NAME_LONG_FIERY_WRATH
 Fiery Wrath
 
+#org @NAME_LONG_EERIE_SPELL
+Eerie Spell
+
 #org @NAME_LONG_THUNDER_CAGE
 Thunder Cage
 
@@ -2228,44 +2231,56 @@ Astral Barrage
 #org @NAME_LONG_GLACIAL_LANCE 
 Glacial Lance
 
-#org @NAME_LONG_EERIESPELL
-Eerie Spell
-
-#org @NAME_LONG_PSYSHIELDBASH
-Psyshield Bash
-
-#org @NAME_LONG_CHLOROBLAST
-Chloroblast
-
-#org @NAME_LONG_ESPERWING
-Esper Wing
-
-#org @NAME_LONG_BARBBARRAGE
+#org @NAME_LONG_BARB_BARRAGE
 Barb Barrage
 
-#org @NAME_LONG_TRIPLEARROWS
-Triple Arrows
+#org @NAME_LONG_WAVE_CRASH
+Wave Crash
 
-#org @NAME_LONG_CEASELESSEDGE
-Ceaseless Edge
+#org @NAME_LONG_PSYSHIELD_BASH
+Psyshld Bash
 
-#org @NAME_LONG_INFERNALPARADE
-Infernal Parade
-
-#org @NAME_LONG_DIRECLAW
+#org @NAME_LONG_DIRE_CLAW
 Dire Claw
 
-#org @NAME_LONG_BITTERMALICE
-Bitter Malice
+#org @NAME_LONG_INFERNAL_PARADE
+Infernal Parade
 
-#org @NAME_LONG_WAVECRASH
-Wave Crash
+#org @NAME_LONG_CEASELESS_EDGE
+Ceaseless Edge
+
+#org @NAME_LONG_TRIPLE_ARROWS
+Triple Arrows
 
 #org @NAME_LONG_STONEAXE
 Stone Axe
 
 #org @NAME_LONG_MOUNTAINGALE
 Mountain Gale
+
+#org @NAME_LONG_ESPERWING
+Esper Wing
+
+#org @NAME_LONG_CHLOROBLAST
+Chloroblast
+
+#org @NAME_LONG_BITTER_MALICE
+Bitter Malice
+
+#org @NAME_LONG_SCRUNCH
+Scrunch
+
+#org @NAME_LONG_JAB
+Jab
+
+#org @NAME_LONG_SPECIAL_PUNCH
+Special Punch
+
+#org @NAME_LONG_LEEK_SLAP
+Leek Slap
+
+#org @NAME_LONG_POT_SMASH
+Pot Smash
 
 #org @Z_Long_Move1
 Z-Move 1

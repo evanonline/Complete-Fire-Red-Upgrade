@@ -1389,7 +1389,7 @@ Brine
 Fairy Wind
 
 #org @NAME_DOLL_EYES
-Doll Eyes
+BabyDollEyes
 
 #org @NAME_PLAY_ROUGH
 Play Rough
@@ -1530,13 +1530,13 @@ Chip Away
 Smack Down
 
 #org @NAME_SPACE_HOLE
-Space Hole
+Hysp.Hole
 
 #org @NAME_GYRO_BALL
 Gyro Ball
 
 #org @NAME_SPACE_FURY
-Space Fury
+Hysp.Fury
 
 #org @NAME_ATTACK_ORDER
 Attack Order
@@ -1557,13 +1557,13 @@ Defog
 Origin Pulse
 
 #org @NAME_CLIFF_BLADES
-Cliff Blades
+Prec.Blades
 
 #org @NAME_GUARD_SWAP
 Guard Swap
 
 #org @NAME_STEAM_PUMP
-Steam Pump
+Ste.Eruption
 
 #org @NAME_METAL_BURST
 Metal Burst
@@ -1584,7 +1584,7 @@ Psycho Shift
 Wring Out
 
 #org @NAME_KINGS_SHIELD
-Kings Shield
+K.Shield
 
 #org @NAME_PSYSTRIKE
 Psystrike
@@ -1698,10 +1698,10 @@ Chatter
 Confide
 
 #org @NAME_WATER_STAR
-Water Star
+W.Shuriken
 
 #org @NAME_MYSTIC_FIRE
-Mystic Fire
+MysticFire
 
 #org @NAME_SPIKY_SHIELD
 Spiky Shield
@@ -1725,7 +1725,7 @@ Power-Up Hit
 1000 Waves
 
 #org @NAME_PARA_CHARGE
-Para Charge
+Para.Charge
 
 #org @NAME_SEARING_SHOT
 Searing Shot
@@ -1743,7 +1743,7 @@ Anchor Shot
 Aurora Veil
 
 #org @NAME_BANEFUL_BUNK
-Baneful Bunk
+B.Bunker
 
 #org @NAME_BEAK_BLAST
 Beak Blast
@@ -1758,16 +1758,16 @@ Burn Up
 Clang Scales
 
 #org @NAME_DARK_LARIAT
-Dark Lariat
+D.Lariat
 
 #org @NAME_DRACO_HAMMER
-Draco Hammer
+Dra.Hammer
 
 #org @NAME_FIRE_LASH
 Fire Lash
 
 #org @NAME_FIRST_PRESS
-First Press
+F.Impress
 
 #org @NAME_FLEUR_CANNON
 Fleur Cannon
@@ -1803,7 +1803,7 @@ Geist Beam
 Multi-Attack
 
 #org @NAME_NATURE'S_MAD
-Nature's Mad
+N.Madness
 
 #org @NAME_POLLEN_PUFF
 Pollen Puff
@@ -1854,16 +1854,16 @@ Spirit Lock
 Spotlight
 
 #org @NAME_BAD_TANTRUM
-Bad Tantrum
+Stm.Tantrum
 
 #org @NAME_STRENGTH_SAP
 Strength Sap
 
 #org @NAME_SUNSTEEL_RAM
-Sunsteel Ram
+Sunst.Strike
 
 #org @NAME_TEARY_LOOK
-Teary Look
+Tearf.Look
 
 #org @NAME_THROAT_CHOP
 Throat Chop
@@ -1878,16 +1878,16 @@ Trop Kick
 Zing Zap
 
 #org @NAME_ELEC_TERRAIN
-Elec Terrain
+Elec.Terrain
 
 #org @NAME_GRAS_TERRAIN
-Gras Terrain
+Gras.Terrain
 
 #org @NAME_MIST_TERRAIN
-Mist Terrain
+Mist.Terrain
 
 #org @NAME_PSYC_TERRAIN
-Psyc Terrain
+Psyc.Terrain
 
 #org @NAME_GRASS_PLEDGE
 Grass Pledge
@@ -2004,7 +2004,7 @@ Embargo
 Fairy Lock
 
 #org @NAME_LIGHT_O_RUIN
-Light o Ruin
+LightRuin
 
 #org @NAME_TRUMP_CARD
 Trump Card
@@ -2196,7 +2196,7 @@ Triple Axel
 DualWingbeat
 
 #org @NAME_SCORCHING_SANDS
-Scorch Sands
+Scorch.Sands
 
 #org @NAME_JUNGLE_HEALING
 Jungle Heal
@@ -2205,7 +2205,7 @@ Jungle Heal
 Wicked Blow
 
 #org @NAME_SURGING_STRIKES
-SurgeStrikes
+Surg.Strikes
 
 #org @NAME_FREEZING_GLARE
 Freeze Glare
@@ -2238,7 +2238,7 @@ Barb Barrage
 Wave Crash
 
 #org @NAME_PSYSHIELD_BASH
-Psyshld Bash
+Psyshld.Bash
 
 #org @NAME_DIRE_CLAW
 Dire Claw
@@ -2247,7 +2247,7 @@ Dire Claw
 Infer.Parade
 
 #org @NAME_CEASELESS_EDGE
-CeaselesEdge
+Csls.Edge
 
 #org @NAME_TRIPLE_ARROWS
 TripleArrows

@@ -3100,6 +3100,9 @@ extern const u8 sExampleText_8[];
 extern const u8 sExampleText_9[];
 extern const u8 sExampleText_10[];
 
+extern const u8 sRunSettingsRandomizer[];
+extern const u8 sRunSettingsCancel[];
+
 extern const u8 sText_1[];
 extern const u8 sText_2[];
 extern const u8 sText_3[];
@@ -3145,11 +3148,18 @@ static const u8* sMultichoiceSet2[] =
 	sExampleText_10,
 };
 
+static const u8* sMultichoiceRunOptionsPC[] =
+{
+	sRunSettingsRandomizer,
+	sRunSettingsCancel,
+};
+
 // Multichoice Lists
 const struct ScrollingMulti gScrollingSets[] =
 {
 	{sMultichoiceSet1, ARRAY_COUNT(sMultichoiceSet1)},
 	{sMultichoiceSet2, ARRAY_COUNT(sMultichoiceSet2)},
+	{sMultichoiceRunOptionsPC, ARRAY_COUNT(sMultichoiceRunOptionsPC)},
 };
 
 //Link number of opts shown at once to the box height
