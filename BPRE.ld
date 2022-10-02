@@ -288,6 +288,10 @@ sDrawStartMenuState = 0x20370FF;
 sTimeWindowTemplate = 0x83a738c;
 sTimeWindowId = 0x2037101;
 
+/* Trade RAM */
+gSelectedTradeMonPositions = 0x2031DA4;
+sTradeData = 0x2031DAC;
+
 /* Other RAM */
 sWarpDestination = 0x2031DBC;
 gPSSData = 0x20397B0;
@@ -1148,7 +1152,7 @@ AddTextPrinterParameterized = 0x8002C48 | 1;
 RunTextPrinters = 0x8002DE8 | 1;
 IsTextPrinterActive = 0x8002E64 | 1;
 GetStringWidth = 0x8005ED4 | 1;
-StringCopy10 = 0x8008CF4 | 1;
+StringCopy_Nickname = 0x8008CF4 | 1;
 StringGetEnd10 = 0x8008D28 | 1;
 StringCopy = 0x8008D84 | 1;
 StringAppend = 0x8008DA4 | 1;
@@ -1847,6 +1851,11 @@ AddTextPrinterParameterized3 = 0x812E51C | 1;
 
 /* Options Menu */
 sOptionMenuPtr = 0x203DA00;
+
+/*InGame Trades*/
+sInGameTradeMailMessages = 0x826d1a8;
+ItemIsMail = 0x80980f8 | 1;
+gLinkPartnerMail = 0x2031CCC;
 
 /* Misc */
 IsPlayerPartyAndPokemonStorageFull = 0x8040F6C | 1;

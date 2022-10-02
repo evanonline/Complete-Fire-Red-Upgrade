@@ -10,6 +10,21 @@ Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYo
 #org @gText_WhichSetting
 Which setting would you like to\naccess?
 
+#org @gText_OpeningOptionsScalemons
+Would you like to activate\n[GREEN]Scalemons?[BLACK]\pThis scales the base stats of\n[RED]all[BLACK] Pok\emon up or down to 600.\pDifficulty may vary from the\ndefault Pok\emon League experience.
+
+#org @gText_ScalemonsCurrentlyDisabled
+Scalemons Mode is currently\n[RED]disabled.[BLACK]
+
+#org @gText_ScalemonsCurrentlyEnabled
+Scalemons Mode is currently\n[BLUE]enabled.[BLACK]
+
+#org @gText_ScalemonsEnabledYes
+Scalemons Mode [BLUE]enabled.[BLACK]
+
+#org @gText_ScalemonsEnabledNo
+Scalemons Mode [RED]disabled.[BLACK]
+
 #org @gText_OpeningOptionsRandomizer
 Would you like to activate\n[GREEN]Randomizer Mode?[BLACK]\pThis randomizes every Pok\emon\nin the world!\p[RED]There may be discrepancies between\na Pok\emon seen on the overworld,\land the Pok\emon actually fought.\pMany legendaries may not appear.[BLACK]
 
@@ -48,3 +63,6 @@ Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options Service[BLACK].\pYou
 
 #org @gText_BathroomEasterEgg
 The bathroom's over here.\nDon't need to use it, though!
+
+#org @gText_Lodgenet
+The hotel's TV has a Nintendo 64\nbuilt in!\p[.]But it wants \$6950 for 60 minutes\nof gameplay[.]\lNot worth it!\l[.] [.] [.] [.] [.]\lBut somehow tantalizing[.]

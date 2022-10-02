@@ -599,7 +599,7 @@ def main():
 
                                 # Check if valid npc
                                 if eventId >= npcCount:
-                                    print("Errror! NPC id {} exceeds the count of {} on line {}: {}".format(eventId, npcCount, i, line.strip()))
+                                    print("Error! NPC id {} exceeds the count of {} on line {}: {}".format(eventId, npcCount, i, line.strip()))
                                     continue
 
                                 # Check shortcut npcs and modify symbol

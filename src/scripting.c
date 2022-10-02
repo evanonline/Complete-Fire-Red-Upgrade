@@ -3100,6 +3100,7 @@ extern const u8 sExampleText_8[];
 extern const u8 sExampleText_9[];
 extern const u8 sExampleText_10[];
 
+extern const u8 sRunSettingsScalemons[];
 extern const u8 sRunSettingsRandomizer[];
 extern const u8 sRunSettingsCancel[];
 
@@ -3150,6 +3151,7 @@ static const u8* sMultichoiceSet2[] =
 
 static const u8* sMultichoiceRunOptionsPC[] =
 {
+	sRunSettingsScalemons,
 	sRunSettingsRandomizer,
 	sRunSettingsCancel,
 };

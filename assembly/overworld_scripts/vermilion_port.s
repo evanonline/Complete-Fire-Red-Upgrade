@@ -14,72 +14,83 @@
 EventScript_BathroomEasterEgg:
 	msgbox gText_BathroomEasterEgg MSG_SIGN
 	end
+	
+.global EventScript_Lodgenet
+EventScript_Lodgenet:
+	msgbox gText_Lodgenet MSG_SIGN
+	end
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Map script@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Sib sprite switch@@@@@@@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global EventScript_IntroSibSpriteScript
-EventScript_IntroSibSpriteScript:
+.global EventScript_VermilionIntroSibSpriteScript
+EventScript_VermilionIntroSibSpriteScript:
     mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite
     .byte MAP_SCRIPT_TERMIN
 
 EventScript_ChangeSibSprite:
-      checkgender
-      compare LASTRESULT 0x0
-      if 0x1 _goto EventScript_SetBrandySprite
-      compare LASTRESULT 0x1
-      if 0x1 _goto EventScript_SetSherrySprite
-      end
+    checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_SetSibNPCAsSherry
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_SetSibNPCAsBrandy
+    end
 
-EventScript_SetBrandySprite:
-      setvar 0x5028 + 0x0 0 
-      end
+EventScript_SetSibNPCAsSherry:
+    setvar 0x5028 + 0x0 7
+	checkflag FLAG_RUN_START
+	if SET _goto EventScript_VermilionIntro_HideSib
+    end
 
-EventScript_SetSherrySprite:
-      setvar 0x5028 + 0x0 7
-      end
+EventScript_SetSibNPCAsBrandy:
+    setvar 0x5028 + 0x0 0
+	checkflag FLAG_RUN_START
+	if SET _goto EventScript_VermilionIntro_HideSib
+    end
+	
+EventScript_VermilionIntro_HideSib:
+	setflag 0x951
+	hidesprite 1
+	end
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Sib entering hotel room@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global EventScript_SibStart
-EventScript_SideQuest_SibCheckMap:
-	mapscript MAP_SCRIPT_ON_LOAD EventScript_SibCheck
-	.byte MAP_SCRIPT_TERMIN
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Sib warp dialogue / run start@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-EventScript_SibCheck:
-	checkflag FLAG_RUN_START
-	if 0x1 _goto EventScript_HideSib	
-	lock
-	goto EventScript_SibStart
-	release
+.global EventScript_SibRoomLeave
+EventScript_SibRoomLeave_SetSibName:
+    checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_SibRoom_NameSherry
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_SibRoom_NameBrandy
+    end
+
+EventScript_SibRoom_NameSherry:
+	loadpointer 0x0 gText_NameSherry
+	setvar 0x8000 0x1
+	setvar 0x8001 0xB
+	setvar 0x8002 0x8
+	setvar 0x8003 0x2
+	callasm 0x8FB0001
+	goto EventScript_SibRoomLeave
 	end
 
-EventScript_SibStart:
-	opendoor 0x1F 0x1F
-	waitdooranim
-	showsprite 0
-	applymovement 0xFF EventScript_IntroPlayerMove1 @@@;Player faces door@@@
-	waitmovement 0x0
-	sound 0x15
-	applymovement 0x1 EventScript_IntroSibMove1 @@@;Sib enters@@@
-	waitmovement 0x0
-	sound 0x15
-	closedoor 0x1F 0x1F
-	msgbox gText_OpeningOptionsStart MSG_FACE @@@;Sib says first dialogue@@@
+EventScript_SibRoom_NameBrandy:
+	loadpointer 0x0 gText_NameBrandy
+	setvar 0x8000 0x1
+	setvar 0x8001 0xB
+	setvar 0x8002 0x8
+	setvar 0x8003 0x2
+	callasm 0x8FB0001
+	goto EventScript_SibRoomLeave
 	end
-	
-EventScript_IntroPlayerMove1:
-	.byte look_up
-	.byte 0x62
-	.byte 0xFE
-
-EventScript_IntroSibMove1:
-	.byte walk_down
-	.byte 0x62
-	.byte 0xFE
 
 EventScript_SibRoomLeave:
 	lock
@@ -87,20 +98,17 @@ EventScript_SibRoomLeave:
 	msgbox gText_OpeningSibWarning MSG_YESNO
 	compare LASTRESULT 0x1
 	goto_if_eq EventScript_RunStart
+	callasm 0x8FB0101
 	release
 	end
 
 EventScript_RunStart:
 	setflag FLAG_RUN_START
 	msgbox gText_OpeningSibGo MSG_FACE
+	callasm 0x8FB0101
 	warp 3 0 0xFF 0x7 0x3 @@temporarily pallet. eventually want warp 1 5@@
-	pause 0xA
+	pause 0xFF
 	return
-
-EventScript_HideSib:
-	hidesprite 0
-	release
-	end
 	
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Options PC@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -108,16 +116,23 @@ EventScript_HideSib:
 
 .global EventScript_IndigoOptionsPC
 EventScript_IndigoOptionsPC:
-	msgbox gText_OpeningOptionsIntro MSG_FACE
+	sound 0x30
+	loadpointer 0x0 gText_NamePC
+	setvar 0x8000 0x1
+	setvar 0x8001 0xB
+	setvar 0x8002 0x8
+	setvar 0x8003 0x2
+	callasm 0x8FB0001
+	msgbox gText_OpeningOptionsIntro MSG_KEEPOPEN
 	checkflag FLAG_RUN_START
 	if 0x1 _goto EventScript_IndigoOptionsPC_RunStarted @@@run started, computer inactive@@@
-	msgbox gText_OpeningOptionsActive MSG_FACE
+	msgbox gText_OpeningOptionsActive MSG_KEEPOPEN
 	goto EventScript_IndigoOptionsPC_List
 	end
 	
 .global EventScript_IndigoOptionsPC_RunStarted @@@other computers in sib & rival rooms use this@@@
 EventScript_IndigoOptionsPC_RunStarted:
-	msgbox gText_OpeningOptionsInactive MSG_FACE
+	msgbox gText_OpeningOptionsInactive MSG_KEEPOPEN
 	end
 
 EventScript_IndigoOptionsPC_List:
@@ -125,23 +140,68 @@ EventScript_IndigoOptionsPC_List:
 	waitmsg
 	setvar 0x8004 0x0
 	setvar 0x8000 0x2
-	setvar 0x8001 0x2
+	setvar 0x8001 0x4
 	special 0x158
 	waitstate
 	compare LASTRESULT 0x0
-	if 0x1 _goto EventScript_IndigoOptionsPC_RandoEnableDisableCheck
+	if 0x1 _goto EventScript_IndigoOptionsPC_EnableDisableCheck_Scalemons
 	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_IndigoOptionsPC_EnableDisableCheck_Rando
+	compare LASTRESULT 0x2
 	if 0x1 _goto EventScript_IndigoOptionsPC_LogOff
 	release
 	end
 	
 EventScript_IndigoOptionsPC_LogOff:
-	msgbox gText_OpeningOptionsPCDone MSG_FACE
+	msgbox gText_OpeningOptionsPCDone MSG_KEEPOPEN
 	sound 0x30
+	callasm 0x8FB0101
 	release
 	end
+	
+EventScript_IndigoOptionsPC_EnableDisableCheck_Scalemons:
+	checkflag 0x1200
+	if SET _goto EventScript_ScalemonsEnableAsk
+	goto EventScript_ScalemonsDisableAsk
+	release
+	end
+	
+EventScript_ScalemonsEnableAsk:
+	msgbox gText_ScalemonsCurrentlyEnabled MSG_KEEPOPEN
+	goto EventScript_IndigoOptionsPC_AskScalemons
+	end
+	
+EventScript_ScalemonsDisableAsk:
+	msgbox gText_ScalemonsCurrentlyDisabled MSG_KEEPOPEN
+	goto EventScript_IndigoOptionsPC_AskScalemons
+	end
+	
+EventScript_IndigoOptionsPC_AskScalemons:
+	msgbox gText_OpeningOptionsScalemons MSG_YESNO
+	compare LASTRESULT YES
+	if equal _goto ScalemonsSet
+	compare LASTRESULT NO
+	if equal _goto ScalemonsUnset
+	return
+	
+ScalemonsSet:
+	setflag 0x1200
+	sound 0x30
+	msgbox gText_ScalemonsEnabledYes MSG_KEEPOPEN
+	checksound
+	goto EventScript_IndigoOptionsPC_List
+	release
+	end
+	
+ScalemonsUnset:
+	clearflag 0x1200
+	sound 0x30
+	msgbox gText_ScalemonsEnabledNo MSG_KEEPOPEN
+	checksound
+	goto EventScript_IndigoOptionsPC_List
+	return
 
-EventScript_IndigoOptionsPC_RandoEnableDisableCheck:
+EventScript_IndigoOptionsPC_EnableDisableCheck_Rando:
 	checkflag 0x940
 	if SET _goto EventScript_RandoEnableAsk
 	goto EventScript_RandoDisableAsk
@@ -149,12 +209,12 @@ EventScript_IndigoOptionsPC_RandoEnableDisableCheck:
 	end
 	
 EventScript_RandoEnableAsk:
-	msgbox gText_RandomizerCurrentlyEnabled MSG_FACE
+	msgbox gText_RandomizerCurrentlyEnabled MSG_KEEPOPEN
 	goto EventScript_IndigoOptionsPC_AskRandomizer
 	end
 	
 EventScript_RandoDisableAsk:
-	msgbox gText_RandomizerCurrentlyDisabled MSG_FACE
+	msgbox gText_RandomizerCurrentlyDisabled MSG_KEEPOPEN
 	goto EventScript_IndigoOptionsPC_AskRandomizer
 	end
 

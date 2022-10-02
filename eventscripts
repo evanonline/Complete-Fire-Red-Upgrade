@@ -1,9 +1,9 @@
 ## Vermilion Port Hotel Room Intro
-##map 9 8 EventScript_IntroSibSpriteScript
-##map 9 8 EventScript_SibStart
-npc 9 8 1 EventScript_SibRoomLeave
+map 9 8 EventScript_VermilionIntroSibSpriteScript
+npc 9 8 1 EventScript_SibRoomLeave_SetSibName
 npc 9 8 0 EventScript_IndigoOptionsPC
 sign 9 8 0 EventScript_BathroomEasterEgg
+sign 9 8 1 EventScript_Lodgenet
 
 
 ## Vermilion Port outside
@@ -26,3 +26,4 @@ npc 6 7 1 EventScript_PewterCity_HouseHusband2
 npc 32 1 4 EventScript_OneIsland_FatefulClown
 npc 32 1 5 EventScript_MysteryGiftPerson
 npc 32 0 3 EventScript_OneIsland_PCNPC1
+npc 32 0 4 EventScript_DuskullTrade
