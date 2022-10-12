@@ -1,3 +1,9 @@
+#org @gText_BathroomEasterEgg
+The bathroom's over here.\nDon't need to use it, though!
+
+#org @gText_Lodgenet
+The hotel's TV has a Nintendo 64\nbuilt in!\p[.]But it wants \$6950 for 60 minutes\nof gameplay[.]\lNot worth it!\l[.] [.] [.] [.] [.]\lBut somehow tantalizing[.]
+
 #org @gText_VermilionPortAutorun
 I love pressing [L_BUTTON] to [GREEN]enable\n[BLACK]the [GREEN]auto-run[BLACK] function!\lTry it yourself and feel the wind!
 
@@ -19,23 +25,32 @@ Ports are a place of coming and\ngoing.\pI don't have anywhere to go,\nthough.\p
 #org @gText_VermilionPortTourismBoardIntro
 Many fliers are posted on the tourism board.\nRead them?
 
-#org @gText_VermilionPortTourismBoardOption1
-Worn ad
-
-#org @gText_VermilionPortTourismBoardOption2
-Lavender ad
-
 #org @gText_VermilionPortTourismBoardText1
 [RED]Battle! Trade! Evolve!\p[BLUE]Book a ship to the [GREEN]Warrior's Lodge[BLUE] to train with the\nhearty, cunning fighters of the frigid midwestern seas.\pThe power coursing through our land can\nevolve your Pok\emon into strange new regional forms like those discovered in\l[GREEN]Alola, Galar, and Hisui[BLUE]!\pAsk the nearest travel agent about your next visit to the [GREEN]Mi[BLUE][.]\p[BLACK]Ah[.] someone tore the rest of the flyer off[.]\n
 
 #org @gText_VermilionPortTourismBoardText2
-[BLUE]Heartwarming! [RED]Lavender Town[BLUE] has named [RED]Gengar[BLUE] its [RED]Official\nAmbassador[BLUE] to help welcome tourists to the town's gorgeous\lseaswept greens with its signature friendly smile!
+[BLUE]Heartwarming!\n[RED]Lavender Town[BLUE] has named [RED]Gengar[BLUE] its [RED]Official Ambassador[BLUE] to help welcome tourists to the town's gorgeous seaswept greens with its signature friendly smile!
 
 #org @gText_VermilionPortHotelCalvervtutrp
-I really wanted to name my Houndoom something\ncool, like "Cerberus"!\pBut my baby sister mashed a bunch of buttons,\nand somehow my Houndoom ended up being named\l"Calvervtutrp"[.]\lLuckily, you can rename your Pok\emon any time\lat Pok\emon Centers now!\pBut[.] we got used to calling him\n"Calvervtutrp"[.]
+I really wanted to name my Houndoom\nsomething cool, like "Cerberus"!\pBut my baby sister mashed some buttons,\nand my Houndoom ended up being named[.]\l"Calvervtutrp\"[.]\pLuckily, you can rename your Pok\emon\nany time at Pok\emon Centers now!\pBut[.] we got used to calling\nhim "Calvervtutrp"[.]
 
 #org @gText_VermilionPortHotelDumbPun
-Tch[.] a Pok\emon battle? No thanks.\pFight me in [RED]Meltan Blood: Type Lumineon[BLACK] instead.\nNo? I thought so.\lCoward[.]
+Tch[.] a Pok\emon battle?\nNo thanks.\pFight me in [RED]Meltan Blood:\nType Lumineon[BLACK] instead.\pNo? I thought so.\nCoward[.]
 
 #org @gText_VermilionPortHotelTechnology
-Technology is incredible!\pThe internet is connecting people\nin all kinds of new ways.\lLifelong friends are made there.\pAnd it's not just that!\nPeople work together on\lamazing creative projects,\lbettering each other,\l collaborating for the\lsheer sake of collaboration!\pThese people will never meet,\nyet they help each other\lcreate things anyway.\pOnline[.] it's actually awesome.
+Technology is incredible!\pThe internet is connecting us all!\nLifelong friends, made across vast distances!\pWe have singing androids!\nWormholes!\lDownload mods to transform video games!\pLook at that [GREEN]Baja Blastoise[BLACK]\nmachine over there!\pI can touch the screen on it,\nand mix dozens of soda flavors!\pThe power of science is staggering!
+
+#org @gText_VermilionPortHotel_TrainerSuite
+New Trainer Extended Stay Suite\nPowered by [GREEN]Oak Labs
+
+#org @gText_VermilionPortHotel_PoketchDetective_NPC1
+Watching TV in a hotel with your\nbuddies is a sacred act.\pI've never heard of Pok\etch Detective,\nbut it's all this one channel airs.\pThis is what travelling is REALLY about!
+
+#org @gText_VermilionPortHotel_PoketchDetective_NPC2
+How have none of you seen Pok\etch\nDetective?! It's a [GREEN]Sinnoh[BLACK] classic!\pMy favorite episode is\nCase File No.999: "The Pok\etch is Nice!\"\lI hope that one comes on!
+
+#org @gText_VermilionPortHotel_PoketchDetective_NPC3x
+Is this TV show ENTIRELY\na tutorial slash commercial?\lFor those watches from [GREEN]Sinnoh?[BLACK]\lAnd it has over a thousand episodes?!
+
+#org @gText_VermilionPortHotel_PoketchDetective_TV
+It's never a problem!\pThe child prodigy and Pok\etch\nDetective Ketch Appy is here!\pI'll use the [GREEN]Stopwatch[BLACK] to time how long\nit took the suspect to escape!\pOh, no! The [GREEN]Stopwatch[BLACK] has yet to be\nofficially distributed by the Pok\etch Company!\pWhat will you do, Pok\etch Detective?\nWhat's next, Pok\etch Detective?\lNext, Case File No.173:\l"The Pok\etch is Exclusive!"\lDon't miss it!

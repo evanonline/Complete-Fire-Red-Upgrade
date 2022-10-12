@@ -21,6 +21,7 @@ build/*
 *.ss9
 *.toml
 strings/mystery_gift_passwords.string
+strings/scripts/namebox_names.string
 
 generatedrepoints
 *__pycache__

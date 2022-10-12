@@ -10,6 +10,10 @@
 
 .equ FLAG_RUN_START, 0x993
 
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Messages in all hotel rooms@@@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 .global EventScript_BathroomEasterEgg
 EventScript_BathroomEasterEgg:
 	msgbox gText_BathroomEasterEgg MSG_SIGN
@@ -42,22 +46,41 @@ EventScript_SetSibNPCAsSherry:
     setvar 0x5028 + 0x0 7
 	checkflag FLAG_RUN_START
 	if SET _goto EventScript_VermilionIntro_HideSib
+	goto EventScript_IntroTalk
     end
 
 EventScript_SetSibNPCAsBrandy:
     setvar 0x5028 + 0x0 0
 	checkflag FLAG_RUN_START
 	if SET _goto EventScript_VermilionIntro_HideSib
+	goto EventScript_IntroTalk
     end
 	
 EventScript_VermilionIntro_HideSib:
 	setflag 0x951
 	hidesprite 1
 	end
+	
+EventScript_IntroTalk:
+	msgbox gText_VermilionPortNPC2 MSG_KEEPOPEN
+	end
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Sib entering hotel room@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+EventScript_SibIntroTile:
+	lock
+	checkflag FLAG_RUN_START
+	if SET _goto EventScript_VermilionIntro_HideSib
+	applymovement 0x1 EventScript_SibMovement1
+	release
+	end
+
+EventScript_SibMovement1:
+	.byte walk_down
+	.byte walk_down
+	.byte 0xFE
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Sib warp dialogue / run start@@@@@@@
@@ -116,7 +139,7 @@ EventScript_RunStart:
 
 .global EventScript_IndigoOptionsPC
 EventScript_IndigoOptionsPC:
-	sound 0x30
+	sound 0x2
 	loadpointer 0x0 gText_NamePC
 	setvar 0x8000 0x1
 	setvar 0x8001 0xB
@@ -154,7 +177,7 @@ EventScript_IndigoOptionsPC_List:
 	
 EventScript_IndigoOptionsPC_LogOff:
 	msgbox gText_OpeningOptionsPCDone MSG_KEEPOPEN
-	sound 0x30
+	sound 0x3
 	callasm 0x8FB0101
 	release
 	end

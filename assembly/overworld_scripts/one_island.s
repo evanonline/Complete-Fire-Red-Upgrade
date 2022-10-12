@@ -9,7 +9,7 @@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .equ INGAME_TRADE_DUSKULL, 4
-.equ FLAG_DID_DUSKULL_TRADE, 0x993
+.equ FLAG_DID_DUSKULL_TRADE, 0x994
 
 .global EventScript_OneIsland_FatefulClown
 EventScript_OneIsland_FatefulClown:

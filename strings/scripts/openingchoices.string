@@ -49,20 +49,6 @@ You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to 
 #org @gText_OpeningSibGo
 Alright! Let's go!\nI'm so excited!
 
-#org @gText_NameSherry
-Sherry
-
-#org @gText_NameBrandy
-Brandy
-
-#org @gText_NamePC
-Indigo PC
-
 #org @gText_OpeningOptionsInactive
 Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options Service[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
 
-#org @gText_BathroomEasterEgg
-The bathroom's over here.\nDon't need to use it, though!
-
-#org @gText_Lodgenet
-The hotel's TV has a Nintendo 64\nbuilt in!\p[.]But it wants \$6950 for 60 minutes\nof gameplay[.]\lNot worth it!\l[.] [.] [.] [.] [.]\lBut somehow tantalizing[.]

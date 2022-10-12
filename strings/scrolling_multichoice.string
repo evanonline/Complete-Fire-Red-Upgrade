@@ -41,4 +41,10 @@ Randomizer Mode
 #org @sRunSettingsCancel
 End
 
+#org @gText_VermilionPortTourismBoardOption1
+Worn ad
+
+#org @gText_VermilionPortTourismBoardOption2
+Lavender ad
+
 #endif

@@ -7,7 +7,7 @@
 
 /*===== Debugging Options =====*/
 //#define DEBUG_MEGA //Mega Evolution can always be used
-//#define DEBUG_HMS //HMs can always be used from the party screen, Surf, Waterfall, and Rock Climb can always be used
+#define DEBUG_HMS //HMs can always be used from the party screen, Surf, Waterfall, and Rock Climb can always be used
 //#define DEBUG_OBEDIENCE //Traded Pokemon never have obedience issues
 //#define DEBUG_DYNAMAX //Dynamax can be used in Dynamax battles without a Dynamax Band
 
@@ -191,6 +191,9 @@ enum //These vars need to be one after the other (hence the enum)
 //#define FLAG_ABILITY_RANDOMIZER 0x942 //Setting randomizes Pokemon abilities.
 #define NUM_SPECIES_RANDOMIZER NUM_SPECIES //The final number of Pokemon (+ 1) of species that can appear in the randomizer. Change to NUM_SPECIES for Gen 8
 
+/*=====Scalemons=====*/
+#define FLAG_SCALEMONS 0x1200 //Sets every Pokemon's BST to 600.
+
 /*===== Pre-existing Offsets =====*/
 //#define EXISTING_FOSSIL_IMAGE_TABLE_ADDRESS 0x81a4600 //Uncomment this if you've already inserted a fossil image table
 //#define EXISTING_OW_TABLE_ADDRESS 0x81a2000 //Uncomment if you don't want new overworld NPC tables to be generated. DON'T TOUCH IF YOU DON'T KNOW EXACTLY WHAT THIS IS FOR!
@@ -320,4 +323,13 @@ enum //These vars need to be one after the other (hence the enum)
 /*===== Mystery Gift Flags =====*/
 #define MYSTERY_GIFT_FLAGS_START 0x1700 //New flags = MYSTERY_GIFT_FLAGS_START + gift index
 
-#define INSTANT_TEXT // Enable Instant Text. Some Hack Authors might want this disabled because of the effects instant text has on pacing
+//#define INSTANT_TEXT //Enable Instant Text. Some Hack Authors might want this disabled because of the effects instant text has on pacing
+
+/*===== Custom Flags Index =====*/
+//This is just to keep track of used flags on my end.
+
+#define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
+#define FLAG_SMART_STRIKE_TM 0x992 //Pewter City - Smart Strike TM 
+#define FLAG_RUN_START 0x993 //Vermilion Port intro - determines that the run is started, and options (Randomizer, Scalemons etc) are locked in, and the hotel PC will no longer work. Hides sibling in initial hotel room
+#define FLAG_DID_DUSKULL_TRADE 0x994 //One Island - Dudeskull / Yellowducky trade
+#define FLAG_VISQUEZ_IS_HOME 0x995 //Storyline - Finished journey on Sevii to get Visquez to take over the gym in Vermilion. 
