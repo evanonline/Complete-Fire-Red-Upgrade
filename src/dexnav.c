@@ -65,6 +65,8 @@ dexnav.c
 
 //This file's functions:
 static void DexNavGetMon(u16 species, u8 potential, u8 level, u8 ability, u16* moves, u8 searchLevel, u8 chain, u16 item);
+static u16 TryRandomizePumpkabooForm(u16 species);
+static bool8 SpeciesHasMultipleSearchableForms(u16 species);
 static u8 FindHeaderIndexWithLetter(u16 species, u8 letter);
 static u8 PickTileScreen(u8 targetBehaviour, u8 areaX, u8 areaY, s16 *xBuff, s16 *yBuff, u8 smallScan);
 static u8 DexNavPickTile(u8 environment, u8 xSize, u8 ySize, bool8 smallScan);
@@ -174,7 +176,8 @@ void DexNavGetMon(u16 species, u8 potential, u8 level, u8 ability, u16* moves, u
 		}
 	}
 
-	//Create standard wild
+	//Create standard wild Pokemon
+	species = TryRandomizePumpkabooForm(species);
 	CreateWildMon(species, level, FindHeaderIndexWithLetter(species, sDexNavHudPtr->unownLetter - 1), TRUE);
 
 	//Pick potential ivs to set to 31
@@ -217,6 +220,53 @@ void DexNavGetMon(u16 species, u8 potential, u8 level, u8 ability, u16* moves, u
 	CalculateMonStats(mon);
 }
 
+static u16 TryRandomizePumpkabooForm(u16 species)
+{
+	#ifdef FLAG_POKEMON_RANDOMIZER
+	if (!FlagGet(FLAG_POKEMON_RANDOMIZER))
+	#endif
+	{
+		#if (defined NATIONAL_DEX_PUMPKABOO && defined NATIONAL_DEX_GOURGEIST)
+		u16 dexNum = SpeciesToNationalPokedexNum(species);
+		if (dexNum == NATIONAL_DEX_PUMPKABOO)
+		{
+			switch (Random() % 4)
+			{
+				//case 0:
+				//	break; //Keep same species
+				case 1:
+					species = SPECIES_PUMPKABOO_M;
+					break;
+				case 2:
+					species = SPECIES_PUMPKABOO_L;
+					break;
+				case 3:
+					species = SPECIES_PUMPKABOO_XL;
+					break;
+			}
+		}
+		else if (dexNum == NATIONAL_DEX_GOURGEIST)
+		{
+			switch (Random() % 4)
+			{
+				//case 0:
+				//	break; //Keep same species
+				case 1:
+					species = SPECIES_GOURGEIST_M;
+					break;
+				case 2:
+					species = SPECIES_GOURGEIST_L;
+					break;
+				case 3:
+					species = SPECIES_GOURGEIST_XL;
+					break;
+			}
+		}
+		#endif
+	}
+
+	return species;
+}
 
 static u8 FindHeaderIndexWithLetter(u16 species, u8 letter)
 {
@@ -557,7 +607,11 @@ static void DexNavShowFieldMessage(u8 id)
 	switch(id)
 	{
 		case FIELD_MSG_NOT_IN_AREA:
-			gLoadPointer = gText_CannotBeFound;
+			if (SpeciesHasMultipleSearchableForms(species))
+				gLoadPointer = gText_FormNotFoundHere;
+			else
+				gLoadPointer = gText_CannotBeFound;
+			break;
 			break;
 		case FIELD_MSG_LOOK_IN_OTHER_SPOT:
 			gLoadPointer = gText_NotFoundNearby;

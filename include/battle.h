@@ -240,6 +240,7 @@ struct TrainerMonNoItemCustomMoves
     u16 species;
     u16 moves[4];
 	u16 _; // 0x0000
+	u8 ability; //0 = Hidden, 1 = Ability_1, 2 = Ability_2, 3 = Random Ability 1 & 2, 4 = Random Any Ability
 };
 
 struct TrainerMonItemCustomMoves
@@ -249,14 +250,15 @@ struct TrainerMonItemCustomMoves
     u16 species;
     u16 heldItem;
     u16 moves[4];
+	u8 ability; //0 = Hidden, 1 = Ability_1, 2 = Ability_2, 3 = Random Ability 1 & 2, 4 = Random Any Ability
 };
 
 union TrainerMonPtr
 {
-    struct TrainerMonNoItemDefaultMoves* NoItemDefaultMoves;
-    struct TrainerMonNoItemCustomMoves* NoItemCustomMoves;
-    struct TrainerMonItemDefaultMoves* ItemDefaultMoves;
-    struct TrainerMonItemCustomMoves* ItemCustomMoves;
+    const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
+    const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
+    const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
+    const struct TrainerMonItemCustomMoves *ItemCustomMoves;
 };
 
 struct Trainer
@@ -271,16 +273,16 @@ struct Trainer
     /*0x18*/ bool8 doubleBattle;
     /*0x1C*/ u32 aiFlags;
     /*0x20*/ u8 partySize;
-    /*0x24*/ union TrainerMonPtr party;
+    /*0x24*/ const union TrainerMonPtr party;
 };
 
 #define PARTY_FLAG_CUSTOM_MOVES     0x1
 #define PARTY_FLAG_HAS_ITEM         0x2
 
-/*
+
 extern const struct Trainer gTrainers[];
-*/
-#define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))
+
+#define TRAINER_ENCOUNTER_MUSIC(trainer)((GET_TRAINER(trainer).encounterMusic_gender & 0x7F))
 
 struct UnknownFlags
 {
@@ -764,6 +766,8 @@ struct NewBattleStruct
 	u8 disguisedAs[MAX_BATTLERS_COUNT]; //The party index + 1 the mon with Illusion is disguised as
 	u8 quickClawRandomNumber[MAX_BATTLERS_COUNT];
 	u8 quickDrawRandomNumber[MAX_BATTLERS_COUNT];
+	u8 powerShifted[MAX_BATTLERS_COUNT];
+	u16 tookAbilityFrom[MAX_BATTLERS_COUNT]; //Helps display the correct Ability when one has been passed around
 
 	//Bit Fields for Banks
 	u8 MicleBerryBits;
@@ -955,6 +959,7 @@ struct NewBattleStruct
 		bool8 sideSwitchedThisRound;
 		u8 switchingCooldown[MAX_BATTLERS_COUNT]; //~0x2017B5B
 		u8 itemEffects[MAX_BATTLERS_COUNT];
+		u8 backupAbilities[MAX_BATTLERS_COUNT]; //For when Pokemon are temp Mega Evolved
 		u16 movePredictions[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT]; //movePredictions[bankAtk][bankDef]
 		u16 strongestMove[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT]; //strongestMove[bankAtk][bankDef]
 		bool8 moveKnocksOut1Hit[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT][MAX_MON_MOVES]; //moveKnocksOut1Hit[bankAtk][bankDef][monMoveIndex]

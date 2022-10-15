@@ -142,6 +142,7 @@ extern bool8 CanMonParticipateInASkyBattle(struct Pokemon* mon);
 
 //This file's functions:
 static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerNum, const bool8 firstTrainer, const bool8 side);
+static u8 GetTrainerMonGender(struct Trainer* trainer);
 #if (defined SCALED_TRAINERS && !defined  DEBUG_NO_LEVEL_SCALING)
 static u8 GetPlayerBiasedAverageLevel(u8 maxLevel);
 static bool8 CanTrainerEvolveMon(void);
@@ -175,6 +176,7 @@ static void TryShuffleMovesForCamomons(struct Pokemon* party, u8 tier, u16 train
 static u8 GetPartyIdFromPartyData(struct Pokemon* mon);
 static u8 GetHighestMonLevel(const struct Pokemon* const party);
 static void CheckShinyMon(struct Pokemon* mon);
+static void SetAbilityFromEnum(struct Pokemon* mon, u8 abilityNum);
 
 #ifdef OPEN_WORLD_TRAINERS
 
@@ -535,15 +537,16 @@ void sp06B_ReplacePlayerTeamWithMultiTrainerTeam(void)
 static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId, const bool8 firstTrainer, const bool8 side)
 {
 	u32 i, j, nameHash;
-	u8 monsCount, baseIV, setMonGender, trainerNameLengthOddness, minPartyLevel, maxPartyLevel, modifiedAveragePlayerLevel, highestPlayerLevel, canEvolveMon, levelScaling;
+	unusedArg u8 monsCount, baseIV, setMonGender, trainerNameLengthOddness, minPartyLevel, maxPartyLevel,
+	   modifiedAveragePlayerLevel, highestPlayerLevel, canEvolveMon, canEvolveMonBackup, levelScaling, setCustomMoves;
 	struct Trainer* trainer;
-	u32 otid = 0;
+	u32 otid = 0; 
 	u8 otIdType = OT_ID_RANDOM_NO_SHINY;
 
 	if (trainerId == TRAINER_SECRET_BASE)
 		return 0;
 	else if (IsFrontierTrainerId(trainerId))
-		return BuildFrontierParty(party, trainerId, BATTLE_FACILITY_STANDARD, firstTrainer, FALSE, side);
+		return BuildFrontierParty(party, trainerId, VarGet(VAR_BATTLE_FACILITY_TIER), firstTrainer, FALSE, side);
 
 	//Check if can build team
 	if (((gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_TRAINER_TOWER)) == BATTLE_TYPE_TRAINER)
@@ -553,12 +556,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 			ZeroEnemyPartyMons();
 
 		//Set up necessary data
-		trainer = &gTrainers[trainerId];
+		trainer = GET_TRAINER_PTR(trainerId);
 
 		//Choose Trainer IVs
 		#ifdef VAR_GAME_DIFFICULTY
 		u8 gameDifficulty = VarGet(VAR_GAME_DIFFICULTY);
-		if (gameDifficulty >= OPTIONS_EXPERT_DIFFICULTY)
+		if (gameDifficulty >= OPTIONS_EXPERT_DIFFICULTY && side != B_SIDE_PLAYER) //Not partner
 			baseIV = 31;
 		else
 		#endif
@@ -569,7 +572,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 		}
 
 		//Choose Trainer Pokemon genders
-		setMonGender = 0xFF; //Randomly assign gender based on hash
+		setMonGender = GetTrainerMonGender(trainer);
 		if (!firstTrainer && side == B_SIDE_PLAYER && trainer->encounterMusic > 0) //Multi partner with preset Id
 		{
 			otid = gFrontierMultiBattleTrainers[trainer->encounterMusic - 1].otId;
@@ -666,12 +669,24 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 		highestPlayerLevel = 0;
 		canEvolveMon = FALSE;
 		#endif
+		
+		#ifdef FLAG_POKEMON_RANDOMIZER
+		setCustomMoves = FlagGet(FLAG_BATTLE_FACILITY) //Don't set custom moves when the species wouldn't be randomized normally
+					|| !FlagGet(FLAG_POKEMON_RANDOMIZER) //Or when species aren't randomized
+					#ifdef FLAG_TEMP_DISABLE_RANDOMIZER
+					|| FlagGet(FLAG_TEMP_DISABLE_RANDOMIZER) //Unless the randomizer is disabled
+					#endif
+					;
+		#else
+		setCustomMoves = TRUE;
+		#endif
 
 		//Create each Pokemon
 		for (i = 0, trainerNameLengthOddness = StringLength(trainer->trainerName) & 1, nameHash = 0; i < monsCount; ++i)
 		{
 			u32 personalityValue;
 			u8 genderOffset = 0x80;
+			struct Pokemon* mon = &party[i];
 
 			if (setMonGender == 1)
 			{
@@ -717,7 +732,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 				if (FlagGet(FLAG_SCALE_TRAINER_LEVELS) || (gBattleTypeFlags & BATTLE_TYPE_TRAINER_TOWER))
 					openWorldLevel = GetHighestMonLevel(gPlayerParty);
 
-				CreateMon(&party[i], speciesToCreate, openWorldLevel, STANDARD_IV, TRUE, personalityValue, otIdType, otid);
+				CreateMon(mon, speciesToCreate, openWorldLevel, STANDARD_IV, TRUE, personalityValue, otIdType, otid);
 			}
 			else
 			#endif
@@ -729,25 +744,48 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 
 					case PARTY_FLAG_CUSTOM_MOVES:
 						MAKE_POKEMON(trainer->party.NoItemCustomMoves);
-						SET_MOVES(trainer->party.NoItemCustomMoves);
+						if (setCustomMoves)
+							SET_MOVES(trainer->party.NoItemCustomMoves);
+						SetAbilityFromEnum(&party[i], trainer->party.NoItemCustomMoves[i].ability);
 						break;
 
-					case PARTY_FLAG_HAS_ITEM:
+					case PARTY_FLAG_HAS_ITEM: ;
+						#if (defined SCALED_TRAINERS && !defined  DEBUG_NO_LEVEL_SCALING)
+						canEvolveMonBackup = canEvolveMon;
+						if (trainer->party.ItemDefaultMoves[i].heldItem == ITEM_EVIOLITE)
+							canEvolveMon = FALSE; //Don't try to evolve mon holding Eviolite
 						MAKE_POKEMON(trainer->party.ItemDefaultMoves);
-						SetMonData(&party[i], MON_DATA_HELD_ITEM, &trainer->party.ItemDefaultMoves[i].heldItem);
+						if (trainer->party.ItemDefaultMoves[i].heldItem == ITEM_EVIOLITE)
+							canEvolveMon = canEvolveMonBackup; //Restore original option for rest of team
+						#else
+						MAKE_POKEMON(trainer->party.ItemDefaultMoves);
+						#endif
+						SetMonData(mon, MON_DATA_HELD_ITEM, &trainer->party.ItemDefaultMoves[i].heldItem);
 						break;
 
 					case PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM:
+						#if (defined SCALED_TRAINERS && !defined  DEBUG_NO_LEVEL_SCALING)
+						canEvolveMonBackup = canEvolveMon;
+						if (trainer->party.ItemCustomMoves[i].heldItem == ITEM_EVIOLITE)
+							canEvolveMon = FALSE; //Don't try to evolve mon holding Eviolite
 						MAKE_POKEMON(trainer->party.ItemCustomMoves);
-						SET_MOVES(trainer->party.ItemCustomMoves);
-						SetMonData(&party[i], MON_DATA_HELD_ITEM, &trainer->party.ItemCustomMoves[i].heldItem);
+						if (trainer->party.ItemCustomMoves[i].heldItem == ITEM_EVIOLITE)
+							canEvolveMon = canEvolveMonBackup; //Restore original option for rest of team
+						#else
+						MAKE_POKEMON(trainer->party.ItemCustomMoves);
+						#endif
+
+						if (setCustomMoves)
+							SET_MOVES(trainer->party.ItemCustomMoves);
+						SetMonData(mon, MON_DATA_HELD_ITEM, &trainer->party.ItemCustomMoves[i].heldItem);
+						SetAbilityFromEnum(&party[i], trainer->party.ItemCustomMoves[i].ability);
 						break;
 				}
 			}
 
 			//Assign Trainer information to mon
 			u8 otGender = trainer->gender;
-			const u8* name = TryGetRivalNameByTrainerClass(gTrainers[trainerId].trainerClass);
+			const u8* name = TryGetRivalNameByTrainerClass(GET_TRAINER(trainerId).trainerClass);
 			if (name == NULL) //Not Rival or Rival name isn't tied to Trainer class
 				SetMonData(&party[i], MON_DATA_OT_NAME, &trainer->trainerName);
 			else
@@ -762,7 +800,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 			//Give EVs
 			#ifdef TRAINERS_WITH_EVS
 			u8 spreadNum = trainer->party.NoItemCustomMoves[i].iv;
-			if (gTrainers[trainerId].partyFlags == (PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM)
+			if (GET_TRAINER(trainerId).partyFlags == (PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM)
 			&& trainer->aiFlags > 1
 			#ifdef VAR_GAME_DIFFICULTY
 			&& gameDifficulty != OPTIONS_EASY_DIFFICULTY
@@ -817,14 +855,32 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 			}
 			#endif
 
+			//Fix Minior
+			if (IsMinior(mon->species))
+			{
+				u16 correctMiniorForm = GetMiniorCoreFromPersonality(mon->personality);
+				SetMonData(mon, MON_DATA_SPECIES, &correctMiniorForm); //Prevents problems with it changing forms after lowering its shields
+			}
+
 			//Caluate stats and set to full health
-			CalculateMonStatsNew(&party[i]);
-			HealMon(&party[i]);
+			CalculateMonStatsNew(mon);
+			HealMon(mon);
 
 			//Status Inducers
-			TryStatusInducer(&party[i]);
-			gBankTarget = i + 1;
+			TryStatusInducer(mon);
+			#ifdef UNBOUND
+			TryGiveSpecialTrainerStatusCondition(trainerId, mon);
+			#endif
+
+			//Fix Partner Met Locations
+			if (side == B_SIDE_PLAYER) //Partner
+			{
+				u8 metLoc = 0; //Unknown location
+				SetMonData(&gPlayerParty[i + 3], MON_DATA_MET_LOCATION, &metLoc); //So they don't the current area
+			}
 		}
+
+
 
 		//Set Double battle type if necessary
 		if (trainer->doubleBattle
@@ -848,6 +904,46 @@ static u8 CreateNPCTrainerParty(struct Pokemon* const party, const u16 trainerId
 		monsCount = 1;
 
 	return monsCount;
+}
+
+static u8 GetTrainerMonGender(struct Trainer* trainer)
+{
+	switch (trainer->trainerClass)
+	{
+		case CLASS_LADY:
+		case CLASS_ELITE_FOUR:
+		case CLASS_CHAMPION:
+		case CLASS_RIVAL:
+		case CLASS_ROCKET_BOSS:
+			return trainer->gender; //These Trainer classes always match the gender of the Trainer
+		default:
+			return 0xFF; //Randomly assign gender based on hash
+	}
+}
+
+static void SetAbilityFromEnum(struct Pokemon* mon, u8 abilityNum)
+{
+	switch(abilityNum) {
+		case Ability_Hidden:
+		GIVE_HIDDEN_ABILITY:
+			GiveMonNatureAndAbility(mon, GetNature(mon), 0xFF, FALSE, TRUE, FALSE); //Give Hidden Ability
+			break;
+		case Ability_1:
+		case Ability_2:
+			GiveMonNatureAndAbility(mon, GetNature(mon), MathMin(1, abilityNum - 1), FALSE, TRUE, FALSE);
+			break;
+		case Ability_Random_1_2:
+		GIVE_RANDOM_ABILITY:
+			GiveMonNatureAndAbility(mon, GetNature(mon), Random() % 2, FALSE, TRUE, FALSE);
+			break;
+		case Ability_RandomAll: ;
+			u8 random = Random() % 3;
+
+			if (random == 2)
+				goto GIVE_HIDDEN_ABILITY;
+
+			goto GIVE_RANDOM_ABILITY;
+	}
 }
 
 //These next few functions are related to scaling a Trainer's team dynamically based the player's strength
@@ -924,7 +1020,7 @@ static bool8 IsPseudoBossTrainerPartyForLevelScaling(u8 trainerPartyFlags)
 
 static bool8 IsBossTrainerClassForLevelScaling(u16 trainerId)
 {
-	switch (gTrainers[trainerId].trainerClass) {
+	switch (GET_TRAINER(trainerId).trainerClass) {
 		case CLASS_GYM_LEADER:
 		case CLASS_ELITE_FOUR:
 		case CLASS_CHAMPION:

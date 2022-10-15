@@ -1844,6 +1844,15 @@ bool8 CanMovePredictionProtectAgainstMove(u8 bankAtk, u8 bankDef, u16 move)
 	return FALSE;
 }
 
+bool8 MoveInMovesetAndUsable(u16 move, u8 bank)
+{
+	u8 movePos = FindMovePositionInMoveset(move, bank);
+	if (movePos >= MAX_MON_MOVES)
+		return FALSE;
+
+	return !(gBitTable[movePos] & CheckMoveLimitations(bank, 0, 0xFF));
+}
+
 bool8 DamagingMoveInMoveset(u8 bank)
 {
 	u16 move;

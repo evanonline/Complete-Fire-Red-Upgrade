@@ -78,6 +78,7 @@ bool8 IsPredictedToUsePursuitableMove(u8 bankAtk, u8 bankDef);
 bool8 IsMovePredictionPhazingMove(u8 bankAtk, u8 bankDef);
 bool8 CanMovePredictionProtectAgainstMove(u8 bankAtk, u8 bankDef, u16 move);
 
+bool8 MoveInMovesetAndUsable(u16 move, u8 bank);
 bool8 DamagingMoveInMoveset(u8 bank);
 bool8 PhysicalMoveInMoveset(u8 bank);
 bool8 SpecialMoveInMoveset(u8 bank);

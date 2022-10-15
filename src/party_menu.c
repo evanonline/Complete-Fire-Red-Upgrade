@@ -933,14 +933,25 @@ void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 	{
 		for (j = 0; j < NELEMS(gFieldMoves); ++j)
 		{
-			if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1, NULL) == gFieldMoves[j])
+			if (GetMonData(&mons[slotId], MON_DATA_MOVE1 + i, NULL) == gFieldMoves[j])
 			{
+				#ifdef ONLY_CHECK_ITEM_FOR_HM_USAGE
+				if (gFieldMoves[j] == MOVE_ROCKCLIMB
+				&& !CheckBagHasItem(ITEM_HM08_ROCK_CLIMB, 1))
+					continue; //Don't allow Rock Climbing until the item is obtained
+				#endif
+
 				AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
 				++k;
 
+				#ifdef ONLY_CHECK_ITEM_FOR_HM_USAGE
 				if (gFieldMoves[j] == MOVE_FLY)
-					k = MAX_MON_MOVES; //No point in appending Fly if it is already there
-				break;
+					knowsFly = TRUE; //No point in appending Fly if it is already there
+				else if (gFieldMoves[j] == MOVE_DIG)
+					knowsDig = TRUE;
+				else if (gFieldMoves[j] == MOVE_CUT)
+					knowsCut = TRUE;
+				#endif
 			}
 		}
 	}

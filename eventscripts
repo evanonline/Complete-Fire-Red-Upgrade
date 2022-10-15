@@ -26,7 +26,7 @@ npc 3 24 2 EventScript_Route6_SwirlixBreeder
 npc 3 24 3 EventScript_Route6_DNSExplainer
 
 #Iced-Under Path
-sign 1 31 8 EventScript_IcePath_DirectionsSign
+sign 1 31 7 EventScript_IcePath_DirectionsSign
 npc 1 32 0 EventScript_IcedPath_ExplainNPC1
 npc 1 31 0 EventScript_IcedPath_ExplainNPC2
 

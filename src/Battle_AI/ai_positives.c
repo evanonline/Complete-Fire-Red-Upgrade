@@ -1455,7 +1455,7 @@ u8 AIScript_Positives(const u8 bankAtk, const u8 bankDef, const u16 originalMove
 			break;
 
 		case EFFECT_HAIL:
-			if (MoveInMoveset(MOVE_AURORAVEIL, bankAtk))
+			if (MoveInMovesetAndUsable(MOVE_AURORAVEIL, bankAtk))
 			{
 				if (IsClassScreener(class))
 				{
@@ -2070,7 +2070,26 @@ u8 AIScript_Positives(const u8 bankAtk, const u8 bankDef, const u16 originalMove
 				}
 			}
 
-			INCREASE_STATUS_VIABILITY(2);
+			if (IS_DOUBLE_BATTLE)
+			{
+				if (IsClassDoublesSetupAttacker(class))
+					INCREASE_VIABILITY(17);
+				else if (IsClassDoublesTeamSupport(class) && BATTLER_ALIVE(data->bankAtkPartner) && MoveInMovesetAndUsable(MOVE_EXPANDINGFORCE, data->bankAtkPartner))
+					INCREASE_VIABILITY(15);
+				else if (IsClassDoublesUtility(class) && BATTLER_ALIVE(data->bankAtkPartner) && MoveInMovesetAndUsable(MOVE_EXPANDINGFORCE, data->bankAtkPartner))
+					INCREASE_VIABILITY(15);
+				else
+					INCREASE_STATUS_VIABILITY(2);
+			}
+			else
+			{
+				if (gTerrainType) {
+					DECREASE_VIABILITY(8); // Terrain already set; don't recommend setting another
+					break;
+				}
+
+				INCREASE_STATUS_VIABILITY(2);
+			}
 		break;
 
 		case EFFECT_PLEDGE:
