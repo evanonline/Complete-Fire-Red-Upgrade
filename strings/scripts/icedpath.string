@@ -7,5 +7,38 @@ I heard someone was trying to hatch\na shiny Sneasel!\pThey biked back and forth
 #org @gText_IcedPath_DirectionsSign
 [BLUE][ARROW_UP] Cerulean City\n[GREEN][ARROW_LEFT] Celadon City\l[RED][ARROW_DOWN] Vermilion City\l[BLACK]Access to Lavender Town blocked.
 
-#org @gText_IcedPath_Train
-Saffron's trains are out of\nservice.\pBut, when they were running, they'd\nshake this whole place up!
+#org @gText_IcedPath_CamperTroy_Before
+Ancient Pok\emon live again!\nI've made a new friend out of one!
+
+#org @gText_IcedPath_CamperTroy_Lose
+Me and Sneasel will get stronger.
+
+#org @gText_IcedPath_CamperTroy_After
+The [GREEN]Hisuian[BLACK] Sneasel was thought to\nbe long extinct.\pBut all it takes is one space-time\ndistortion, and then they're everywhere[.]
+
+#org @gText_IcedPath_CamperRoss_Before
+Watch yourself down here!\nRubble! Ice! Gross water! Danger!\pProve to me you're prepared for\nperil, with a Pok\emon battle!
+
+#org @gText_IcedPath_CamperRoss_Lose
+You're clear to go, friend!
+
+#org @gText_IcedPath_CamperRoss_After
+Saffron's trains are out of service.\pBut, when they were running, they'd\nshake this whole place up!
+
+#org @gText_IcedPath_CamperRoss_VsSeeker
+My Kecleon is really taking to\nthis crazy environment.\lCheck us out!
+
+#org @gText_IcedPath_SwimmerFrancine_Before
+I just swam in dirty, icy water\nto get here from Lavender Town[.]\lAnd I'd do it again, too!\lFufufu!
+
+#org @gText_IcedPath_SwimmerFrancine_Lose
+Swimming in dirty ice water is\nawesome and healthy. Try it!
+
+#org @gText_IcedPath_SwimmerFrancine_After
+So you know, you can walk up and\ndown that rubble to get around!\pIt hurt my bare feet to walk on\njagged metal, but it's all okay!\pI'll just swim the pain off in the\nice pool.\pSomeone like YOU might need help\nfrom a Pok\emon to swim, though.\lCan't help you there.
+
+#org @gText_IcedPath_SwimmerFrancine_VsSeeker
+I'm feeling great after another icy\nswim! Gimme a rematch!
+
+#org @gText_IcedPath_DiveHint
+Icewater blocks the path below.\nIt looks deep enough to dive in[.]\lWith a Pok\emon's help, of course.\pOnly a fool would swim in that\nfrigid, dirty water without help!\pAs a matter of fact, there's a\nswimmer down there I came to stop.\pBut, my Psyduck doesn't know Surf.\pAnd swimming across myself would be\nhypocritical.

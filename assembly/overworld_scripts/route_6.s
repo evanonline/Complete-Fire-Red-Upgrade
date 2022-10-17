@@ -58,3 +58,15 @@ EventScript_Route6_DNSExplainer:
 EventScript_Route6_DNSExplainer_Day:
 	msgbox gText_Zigzagoon_DNS_Day MSG_FACE
 	end
+
+.global EventScript_Route6_BugCatcherHorace
+EventScript_Route6_BugCatcherHorace:
+    trainerbattle0 0x0 0x2 0x0 gText_Route6_BugCatcherHorace_Before gText_Route6_BugCatcherHorace_Lose
+    msgbox gText_Route6_BugCatcherHorace_After MSG_NORMAL
+    end
+	
+.global EventScript_Route6_YoungsterMaruyama
+EventScript_Route6_YoungsterMaruyama:
+    trainerbattle0 0x0 0x3 0x0 gText_Route6_YoungsterMaruyama_Before gText_Route6_YoungsterMaruyama_Lose
+    msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+    end

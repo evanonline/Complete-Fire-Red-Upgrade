@@ -17,6 +17,7 @@ npc 1 4 5 EventScript_VermilionPort_NPC6
 sign 3 5 2 EventScript_GymSignVermilion_LtSurge
 npc 3 5 1 EventScript_VermilionCity_NPC_Sitizen
 npc 3 5 6 EventScript_VermilionCity_NPC_Tree
+npc 9 1 2 EventScript_VermilionCity_NPC_NostalgiaKid
 
 ## Route 6
 sign 3 24 0 EventScript_Route6_IcePathSign
@@ -24,11 +25,17 @@ npc 3 24 0 EventScript_Route6_BrendanFirstAppear
 npc 3 24 1 EventScript_Route6_SwirlixHater
 npc 3 24 2 EventScript_Route6_SwirlixBreeder
 npc 3 24 3 EventScript_Route6_DNSExplainer
+npc 3 24 4 EventScript_Route6_BugCatcherHorace
+npc 3 24 5 EventScript_Route6_YoungsterMaruyama
 
-#Iced-Under Path
-sign 1 31 7 EventScript_IcePath_DirectionsSign
+#Iced Path
+sign 1 31 7 EventScript_IcedPath_DirectionsSign
 npc 1 32 0 EventScript_IcedPath_ExplainNPC1
 npc 1 31 0 EventScript_IcedPath_ExplainNPC2
+npc 1 35 0 EventScript_IcedPath_DiveHintNPC
+npc 1 31 1 EventScript_IcedPath_CamperTroy
+npc 1 31 2 EventScript_IcedPath_SwimmerFrancine
+npc 1 31 3 EventScript_IcedPath_CamperRoss
 
 ## Cerulean City
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke

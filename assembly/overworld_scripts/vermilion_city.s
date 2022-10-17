@@ -30,3 +30,8 @@ EventScript_VermilionCity_NPC_Tree:
 EventScript_VermilionCity_NPC_Sitizen:
 	msgbox gText_VermilionCityNPC_Sitizen MSG_FACE
 	end
+
+.global EventScript_VermilionCity_NPC_NostalgiaKid
+EventScript_VermilionCity_NPC_NostalgiaKid:
+	msgbox gText_VermilionCityNPC_Nostalgic MSG_FACE
+	end
