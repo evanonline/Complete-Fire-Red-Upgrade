@@ -41,6 +41,20 @@
 #define FLAG_0x026               0x026
 #define FLAG_0x027               0x027
 
+/*===== Custom Flags Index =====*/
+//This is just to keep track of used flags on my end.
+
+/*
+#define FLAG_HIDE_SIB_HOTEL 0x951 //Person ID - hides sib sprite in intro room
+#define FLAG_ICEDPATH_TM97_HIDE 0x95D //Person ID - Obtained the TM97 item pickup
+
+#define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
+#define FLAG_SMART_STRIKE_TM 0x992 //Pewter City - Smart Strike TM 
+#define FLAG_RUN_START 0x993 //Vermilion Port intro - determines that the run is started, and options (Randomizer, Scalemons etc) are locked in, and the hotel PC will no longer work. Hides sibling in initial hotel room
+#define FLAG_DID_DUSKULL_TRADE 0x994 //One Island - Dudeskull / Yellowducky trade
+#define FLAG_VISQUEZ_IS_HOME 0x995 //Storyline - Finished journey on Sevii to get Visquez to take over the gym in Vermilion.
+*/
+
 // Hide/show flags
 /*
 #define FLAG_HIDE_BULBASAUR_BALL                           0x028

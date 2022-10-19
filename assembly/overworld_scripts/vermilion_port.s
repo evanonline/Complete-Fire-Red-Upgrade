@@ -30,7 +30,7 @@ EventScript_Lodgenet:
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global EventScript_VermilionIntroSibSpriteScript
-EventScript_VermilionIntroSibSpriteScript:
+gMapScripts_VermilionIntroSibSpriteScript:
     mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite
     .byte MAP_SCRIPT_TERMIN
 

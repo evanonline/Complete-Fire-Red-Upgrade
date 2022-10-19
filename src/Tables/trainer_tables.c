@@ -94,7 +94,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_2[] = {
     },
 };
 
-const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_2[] = {
+const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_3[] = {
     {
         .iv = 6,
         .lvl = 36,
@@ -175,7 +175,7 @@ const struct Trainer gTrainers[] = {
         .partyFlags = 0,
         .trainerClass = CLASS_YOUNGSTER,
         .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_YOUNGSTER_A,
+        .trainerPic = TRAINER_PIC_YOUNGSTER_B,
         .trainerName = {_M, _a, _r, _u, _y, _a, _m, _a, _END},
         .items = {},
         .doubleBattle = FALSE,
@@ -188,7 +188,7 @@ const struct Trainer gTrainers[] = {
         .partyFlags = 0,
         .trainerClass = CLASS_YOUNGSTER,
         .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_YOUNGSTER_A,
+        .trainerPic = TRAINER_PIC_YOUNGSTER_B,
         .trainerName = {_M, _a, _r, _u, _y, _a, _m, _a, _END},
         .items = {},
         .doubleBattle = FALSE,
@@ -273,7 +273,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_SEMI_SMART | AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_IcedPathCamperRoss),
         .party = {.NoItemCustomMoves = sParty_IcedPathCamperRoss}
-    }
+    },
 	
 	[TRAINER_ICEDPATH_CAMPER_ROSS_2] = {
         .partyFlags = PARTY_FLAG_CUSTOM_MOVES,

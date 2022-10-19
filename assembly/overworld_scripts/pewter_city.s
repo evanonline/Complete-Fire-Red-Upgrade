@@ -36,4 +36,8 @@ EventScript_PewterCity_HouseHusband2_AfterSmartStrike:
 	msgbox gText_PewterHouseHusband2AfterTM MSG_FACE
 	release
 	end
-	
+
+.global EventScript_PewterCity_CitySign
+EventScript_PewterCity_CitySign:
+	msgbox gText_Pewter_City_Sign MSG_SIGN
+	end

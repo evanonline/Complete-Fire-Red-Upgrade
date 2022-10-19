@@ -1,5 +1,5 @@
 ## Vermilion Port Hotel Room Intro
-map 9 8 EventScript_VermilionIntroSibSpriteScript
+map 9 8 gMapScripts_VermilionIntroSibSpriteScript
 npc 9 8 1 EventScript_SibRoomLeave_SetSibName
 npc 9 8 0 EventScript_IndigoOptionsPC
 sign 9 8 0 EventScript_BathroomEasterEgg
@@ -17,7 +17,12 @@ npc 1 4 5 EventScript_VermilionPort_NPC6
 sign 3 5 2 EventScript_GymSignVermilion_LtSurge
 npc 3 5 1 EventScript_VermilionCity_NPC_Sitizen
 npc 3 5 6 EventScript_VermilionCity_NPC_Tree
-npc 9 1 2 EventScript_VermilionCity_NPC_NostalgiaKid
+npc 9 3 0 EventScript_VermilionCity_FanClubOwner
+npc 9 3 1 EventScript_VermilionCity_NPC_NostalgiaKid
+npc 9 3 2 EventScript_VermilionCity_NPC_Sceptile
+npc 9 3 3 EventScript_VermilionCity_NPC_Yamper
+npc 9 3 4 EventScript_VermilionCity_NPC_YamperOwner
+npc 9 3 5 EventScript_VermilionCity_NPC_SceptileOwner
 
 ## Route 6
 sign 3 24 0 EventScript_Route6_IcePathSign
@@ -29,6 +34,7 @@ npc 3 24 4 EventScript_Route6_BugCatcherHorace
 npc 3 24 5 EventScript_Route6_YoungsterMaruyama
 
 #Iced Path
+map 1 31 gMapScripts_IcedPath_CheckHideTM97
 sign 1 31 7 EventScript_IcedPath_DirectionsSign
 npc 1 32 0 EventScript_IcedPath_ExplainNPC1
 npc 1 31 0 EventScript_IcedPath_ExplainNPC2
@@ -36,9 +42,21 @@ npc 1 35 0 EventScript_IcedPath_DiveHintNPC
 npc 1 31 1 EventScript_IcedPath_CamperTroy
 npc 1 31 2 EventScript_IcedPath_SwimmerFrancine
 npc 1 31 3 EventScript_IcedPath_CamperRoss
+npc 1 31 4 EventScript_TM97
 
 ## Cerulean City
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
+
+## Saffron City
+npc 14 9 0 EventScript_SaffronCity_Throh1
+npc 14 9 1 EventScript_SaffronCity_Throh1
+npc 14 9 2 EventScript_SaffronCity_Throh2
+npc 14 9 3 EventScript_SaffronCity_Throh1
+npc 14 9 4 EventScript_SaffronCity_Throh2
+npc 14 9 5 EventScript_SaffronCity_Throh1
+npc 14 9 6 EventScript_SaffronCity_ThrohRanger
+npc 14 9 7 EventScript_SaffronCity_Throh2
+npc 14 9 8 EventScript_SaffronCity_ThrohGranny
 
 ## Pewter City
 npc 6 7 0 EventScript_PewterCity_HouseHusband1

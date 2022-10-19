@@ -70,3 +70,8 @@ EventScript_Route6_YoungsterMaruyama:
     trainerbattle0 0x0 0x3 0x0 gText_Route6_YoungsterMaruyama_Before gText_Route6_YoungsterMaruyama_Lose
     msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
     end
+	
+EventScript_Route6_YoungsterMaruyama2:
+	trainerbattle0 0x0 0xB 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
+	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+	end
