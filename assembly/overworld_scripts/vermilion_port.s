@@ -8,6 +8,7 @@
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+.equ FLAG_OPENING_TEXT, 0x991
 .equ FLAG_RUN_START, 0x993
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -25,14 +26,15 @@ EventScript_Lodgenet:
 	end
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@;Map script@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Intro Room map script@@@@@@@@@@@@@@@
 @;Sib sprite switch@@@@@@@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global EventScript_VermilionIntroSibSpriteScript
 gMapScripts_VermilionIntroSibSpriteScript:
-    mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite
-    .byte MAP_SCRIPT_TERMIN
+   mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite
+   mapscript MAP_SCRIPT_ON_FRAME_TABLE LevelScripts_IntroSpeak
+   .byte MAP_SCRIPT_TERMIN
 
 EventScript_ChangeSibSprite:
     checkgender
@@ -46,14 +48,12 @@ EventScript_SetSibNPCAsSherry:
     setvar 0x5028 + 0x0 7
 	checkflag FLAG_RUN_START
 	if SET _goto EventScript_VermilionIntro_HideSib
-	goto EventScript_IntroTalk
     end
 
 EventScript_SetSibNPCAsBrandy:
     setvar 0x5028 + 0x0 0
 	checkflag FLAG_RUN_START
 	if SET _goto EventScript_VermilionIntro_HideSib
-	goto EventScript_IntroTalk
     end
 	
 EventScript_VermilionIntro_HideSib:
@@ -61,8 +61,39 @@ EventScript_VermilionIntro_HideSib:
 	hidesprite 1
 	end
 	
-EventScript_IntroTalk:
-	msgbox gText_VermilionPortNPC2 MSG_KEEPOPEN
+LevelScripts_IntroSpeak:
+	levelscript 0x5100, 0, LevelScript_SibOpeningMessage
+    .byte MAP_SCRIPT_TERMIN
+
+LevelScript_SibOpeningMessage:
+	setvar 0x5100 0x1
+	checkflag FLAG_OPENING_TEXT
+	if SET _goto SkipToEnd
+	applymovement 0xFF EventScript_Intro_PlayerFaceSib
+	applymovement 0x2 EventScript_Intro_SibFacePlayer
+	msgbox gText_OpeningOptionsStart MSG_KEEPOPEN
+	applymovement 0x2 EventScript_Intro_SibReturn
+	pause 0x30
+	closeonkeypress
+	setflag FLAG_OPENING_TEXT
+	goto SkipToEnd
+	
+EventScript_Intro_PlayerFaceSib:
+	.byte look_left
+	.byte 0xFE
+	
+EventScript_Intro_SibFacePlayer:
+	.byte walk_down
+	.byte look_right
+	.byte 0xFE
+	
+EventScript_Intro_SibReturn:
+	.byte walk_up
+	.byte look_down
+	.byte 0xFE
+	
+SkipToEnd:
+	release
 	end
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

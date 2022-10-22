@@ -49,14 +49,12 @@ EventScript_IcedPath_SwimmerFrancine:
     msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
 	end
 	
-.global EventScript_IcedPath_SwimmerFrancine
-EventScript_IcedPath_SwimmerFrancine:
+EventScript_IcedPath_SwimmerFrancine_2:
 	trainerbattle0 0x0 0x8 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose
     msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
 	end
 
-.global EventScript_IcedPath_SwimmerFrancine
-EventScript_IcedPath_SwimmerFrancine:
+EventScript_IcedPath_SwimmerFrancine_3:
 	trainerbattle0 0x0 0x9 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose
     msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
 	end
@@ -74,8 +72,7 @@ EventScript_IcedPath_CamperRoss:
     msgbox gText_IcedPath_CamperRoss_After MSG_NORMAL
 	end
 
-.global EventScript_IcedPath_CamperRoss_2
-EventScript_IcedPath_CamperRoss:
+EventScript_IcedPath_CamperRoss_2:
 	trainerbattle0 0x0 0xA 0x0 gText_IcedPath_CamperRoss_Before gText_IcedPath_CamperRoss_Lose
     msgbox gText_IcedPath_CamperRoss_After MSG_NORMAL
 	end
