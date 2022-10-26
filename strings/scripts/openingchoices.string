@@ -1,5 +1,5 @@
 #org @gText_OpeningOptionsStart
-Hey, sib!\nThe Professor's aide is here!\lWe can choose our Pok\emon!\pBefore we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings![BLACK]\pBut if you're ready, we can\nhead down together!
+Hey, sib!\nThe Professor's aide is here!\lWe can choose our Pok\emon!\pBefore we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings![BLACK]\pBut if you're ready, we can\nall go together!
 
 #org @gText_OpeningOptionsIntro
 Scanning Trainer Card[.]
@@ -50,16 +50,16 @@ You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to 
 Alright! Let's go!\nI'm so excited!
 
 #org @gText_OpeningOptionsInactive
-Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options Service[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
+Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
 
 #org @gText_PokemonChoiceLobby_Rival_1
 [.]\nHello, [PLAYER].\pAre you excited for our starters?\nHopefully, I can get a Piplup.\pBut Kanto's starters are classic[.]\nI'd be happy with them, too.\lWe'll just have to see.
 
 #org @gText_PokemonChoiceLobby_SibSherry_1
-Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Bulbasaur,\nyou gotta let me have it!\pAnd I'd let you get Tepig, of\ncourse!\pMatching outfits with your Pok\emon\nwould be so trendy!
+Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Bulbasaur,\nyou gotta let me have it!\pAnd I'd let you get Tepig, of\ncourse!\pMatching outfits with your Pok\emon\nwould be so trendy!\pWell, lead the way, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_SibBrandy_1
-Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?
+Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?\pWell, lead the way, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_SibWhereGoing
 Hey, sib!\nWhere are you going?\pStop funning around!
@@ -73,7 +73,7 @@ Hey, sib!\nWhere are you going?\pStop funning around!
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction2
 Ah, sorry! Force of habit! Usually,\nwe're doing this for littler kids.
 
-#org gText_PokemonChoiceLobby_Whisk2
+#org @gText_PokemonChoiceLobby_Whisk2
 [.] [.] [.] [.]
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction3
@@ -89,4 +89,4 @@ Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have jus
 [.] [.] Don't laugh at me for this,\n[PLAYER], but, I'm[.]\p[.] [.] I'm too nervous to look at the\nstarters!\lPlease, you go first.
 
 #org @gText_PokemonChoiceLobby_HatsumiIntertalk1
-Ah, hang on, I should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure is about to begin!\pMeeting, teaming up with, battling,\ntraining, and trading Pok\emon!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!"\p[.] if Professor Oak asks, please\ntell him about how I read you that.
+Ah, hang on, I should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure is about to begin!\pMeeting, teaming up with, battling,\ntraining, and trading Pok\emon!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!"\p[.] if you see Professor Oak, please\ntell him about how I read you that.

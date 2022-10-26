@@ -20,6 +20,11 @@ EventScript_OneIsland_FatefulClown:
 EventScript_OneIsland_PCNPC1:
 	msgbox gText_OneIsland_PCNPC1 MSG_FACE
 	end
+	
+.global EventScript_OneIsland_PCNPC2
+EventScript_OneIsland_PCNPC2:
+	msgbox gText_OneIsland_PCNPC2 MSG_FACE
+	end
 
 .global EventScript_DuskullTrade
 EventScript_DuskullTrade:

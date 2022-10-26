@@ -46,9 +46,12 @@
 
 /*
 #define FLAG_HIDE_SIB_HOTEL 0x951 //Person ID - hides sib sprite in intro room
+#define FLAG_HIDE_SIB_HOTEL2 0x952 //Person ID - hides sib sprite in trainer lobby room
 #define FLAG_ICEDPATH_TM97_HIDE 0x95D //Person ID - Obtained the TM97 item pickup
 
 #define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
+#define FLAG_STARTER_CHOSEN 0x990 // Chose starter
+#define FLAG_OPENING_TEXT 0x991 // Saw the opening dialogue from sibling after starting a new save file
 #define FLAG_SMART_STRIKE_TM 0x992 //Pewter City - Smart Strike TM 
 #define FLAG_RUN_START 0x993 //Vermilion Port intro - determines that the run is started, and options (Randomizer, Scalemons etc) are locked in, and the hotel PC will no longer work. Hides sibling in initial hotel room
 #define FLAG_DID_DUSKULL_TRADE 0x994 //One Island - Dudeskull / Yellowducky trade
