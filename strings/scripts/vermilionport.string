@@ -5,31 +5,43 @@ New Trainer Extended Stay Suites\nPowered by [GREEN]Oak Labs
 The bathroom's over here.\nDon't need to use it, though!
 
 #org @gText_VermilionPortHotel_PoketchDetective_NPC1
-Watching TV in a hotel with your\nbuddies is a sacred act.\pI've never heard of Pok\etch Detective,\nbut it's all this one channel airs.\pThis is what travelling is REALLY about!
+Watching TV in a hotel with your\nbuddies is a sacred act.\pI've never heard of [RED]Pok\etch\nDetective[BLACK] before.\pBut this one channel we found ONLY\nplays this show.\pThis is what travelling is REALLY\nabout!
 
 #org @gText_VermilionPortHotel_PoketchDetective_NPC2
-How have none of you seen Pok\etch\nDetective?! It's a [GREEN]Sinnoh[BLACK] classic!\pMy favorite episode is\nCase File No.999: "The Pok\etch is Nice!\"\lI hope that one comes on!
+How have none of you seen [RED]Pok\etch\nDetective[BLACK]?! It's a [GREEN]Sinnoh[BLACK] classic!\pMy favorite episode is [RED]Case File\nNo.999: "The Pok\etch is Nice!\"[BLACK]\lI hope that one comes on!
 
 #org @gText_VermilionPortHotel_PoketchDetective_NPC3
-Is this TV show ENTIRELY\na tutorial slash commercial?\lFor those watches from [GREEN]Sinnoh?[BLACK]\lAnd it has over a thousand episodes?!
+Is this TV show ENTIRELY\na tutorial slash commercial?\lFor those watches from [GREEN]Sinnoh[BLACK]?\lAnd it has over 1000 episodes?!
 
 #org @gText_VermilionPortHotel_PoketchDetective_TV
-It's never a problem!\pThe child prodigy and Pok\etch\nDetective Ketch Appy is here!\pI'll use the [GREEN]Stopwatch[BLACK] to time how long\nit took the suspect to escape!\pOh, no! The [GREEN]Stopwatch[BLACK] has yet to be\nofficially distributed by the Pok\etch Company!\pWhat will you do, Pok\etch Detective?\nWhat's next, Pok\etch Detective?\lNext, Case File No.173:\l"The Pok\etch is Exclusive!"\lDon't miss it!
+It's never a problem!\pThe child prodigy and Pok\etch\nDetective Ketch Appy is here!\pI'll use the [BLUE]Stopwatch[BLACK] to time how\nlong it took the suspect to escape!\pOh, no! The [BLUE]Stopwatch[BLACK] app has yet\nto be officially distributed!\pWhat will you do, Pok\etch Detective?\nWhat's next, Pok\etch Detective?\lNext, Case File No.173:\l"The Pok\etch is Exclusive!\"\lDon't miss it!
 
 #org @gText_Lodgenet
 The hotel's TV has a Nintendo 64\nbuilt in!\p[.]But it wants \$6950 for 60 minutes\nof gameplay[.]\lNot worth it!\l[.] [.] [.] [.] [.]\lBut somehow tantalizing[.]
 
+#org @gText_VermilionPortHotel_AlloysRoom
+A collection of large red bowties\nis inside this dresser.\lThey're meticulously arranged.
+
+#org @gText_VermilionPortHotel_RivalsRoom
+Oh? A worn guidebook is in the bin.\p[BLUE]"The Official Guide to Kanto For\nSuper Trainers!\"\l"Kanto - Exposed At Last!\"\p[BLACK]Corrections to dated information\nare scribbled all over the guide.\pIf you flip to the Pok\edex guide,\nit only lists 150 Pok\emon.\pHowever, an entry for Empoleon is\ncrudely drawn in at the end.\lIt barely fits.
+
+#org @gText_VermilionPortHotel_SibsRoomBrandy
+It's an issue of "[RED]Pok\etaku\nMagazine[BLACK]."\pThere's a fold on a page with\na review of "Tepig's DanceBoys 3D.\"
+
+#org @gText_VermilionPortHotel_SibsRoomSherry
+It's an issue of "[RED]Pok\etaku\nMagazine[BLACK]."\pThere's a fold on a page for\nIvysaur graphic tees for sale.
+
 #org @gText_MoviesRental1
-The hotel TV is displaying some\nmovies that are available for rent.\pThere's a movie with four boys\nwalking on train tracks[.]\pBetter get going, too!
+The hotel TV is showing trailers\nfor movies that guests can rent.\pThere's a movie with four boys\nwalking on train tracks[.]\pBetter get going, too!
 
 #org @gText_MoviesRental2
-The hotel TV is displaying some\nmovies that are available for rent.\pThey have Rebuild of Eeveegelion\n3.0: You Can (Not) Evolve[.]\pBut everyone evolves, even people!\nNever stop growing!
+The hotel TV is showing trailers\nfor movies that guests can rent.\pThey have [RED]Rebuild of Eeveegelion\n3.0: You Can (Not) Evolve[BLACK][.]\pBut everyone evolves, even people!\nNever stop growing!
 
 #org @gText_MoviesRental3
-The hotel TV is displaying some\nmovies that are available for rent.\pTwo Pichu brothers are watching a\nMeowth with a guitar.\pTime to rock the world, too!
+The hotel TV is showing trailers\nfor movies that guests can rent.\pTwo Pichu brothers are watching a\nMeowth with a guitar.\pTime to rock the world, too!
 
 #org @gText_MoviesRental4
-The hotel TV is displaying some\nmovies that are available for rent.\pThere's a whole series of strange\nUnovan movies about a giant woman[.]\pNever be afraid to get weird!
+The hotel TV is showing trailers\nfor movies that guests can rent.\pThere's a whole series of strange\nUnovan movies about a giant woman[.]\pNever be afraid to get weird!
 
 #org @gText_VermilionPortAutorun
 I love pressing [L_BUTTON] to [GREEN]enable\n[BLACK]the [GREEN]auto-run[BLACK] function!\lTry it yourself and feel the wind!
@@ -58,11 +70,32 @@ Many fliers are posted on the tourism board.\nRead them?
 #org @gText_VermilionPortTourismBoardText2
 [BLUE]Heartwarming!\n[RED]Lavender Town[BLUE] has named [RED]Gengar[BLUE] its [RED]Official Ambassador[BLUE] to help welcome tourists to the town's gorgeous seaswept greens with its signature friendly smile!
 
-#org @gText_VermilionPortHotelCalvervtutrp
+#org @gText_VermilionPortHotel_Calvervtutrp
 I really wanted to name my Houndoom\nsomething cool, like "Cerberus"!\pBut my baby sister mashed some buttons,\nand my Houndoom ended up being named[.]\l"Calvervtutrp\"[.]\pLuckily, you can rename your Pok\emon\nany time at Pok\emon Centers now!\pBut[.] we got too used to calling him\n"Calvervtutrp"[.]
 
-#org @gText_VermilionPortHotelDumbPun
+#org @gText_VermilionPortHotel_DumbPun
 Tch[.] a Pok\emon battle?\nNo thanks.\pFight me in [RED]Meltan Blood:\nType Lumineon[BLACK] instead.\pNo? I thought so.\nCoward[.]
 
-#org @gText_VermilionPortHotelTechnology
-Technology is incredible!\pThe internet is connecting us all!\nLifelong friends, made across vast distances!\pWe have singing androids!\nWormholes!\lDownload mods to transform video games!\pLook at that [GREEN]Baja Blastoise[BLACK]\nmachine over there!\pI can touch the screen on it,\nand mix dozens of soda flavors!\pThe power of science is staggering!
+#org @gText_VermilionPortHotel_Technology
+Technology is incredible!\pThe internet is connecting us all!\nLifelong friends beyond borders!\pWe have singing androids!\nWormholes!\lDownload mods for video games!\pLook at that [BLUE]Baja Blastoise[BLACK]\nmachine over there!\pI can touch the screen on it,\nand mix dozens of soda flavors!\lIt's awesome!\pThe power of science is staggering!
+
+#org @gText_VermilionPortHotel_KitchenNPC1
+Hey! Les how are du doing?\pMaybe if I talk like le head chef,\nI get du fantastique raise!
+
+#org @gText_VermilionPortHotel_KitchenNPC2
+Don't tell him I said this, but[.]\nThe head chef is a huge snob.\pHe used to work on the [GREEN]S.S. Anne[BLACK],\nand he's really proud of that.\pHe had them build this kitchen as\nan exact replica of the ship's!\pHe even leaves the same items\nlying around on the floor.
+
+#org @gText_VermilionPortHotel_KitchenNPC_HeadChef
+Er-hem!\nIndeed I am le Chef!\pSalmon du Salad, Eels au Barbecue,\nPrime Beefsteak[.]\lNone of you b\eotiens order that!\pNow I cook les continental\nbreakfast!\lI make les room service!\lHow far I have fallen!\pZe Trubbish we call guests could\nnot distinguish Prime Beefsteak[.]\p[.]from les own mother's Volcano\ndu Bakemeat!\lMy cuisine better serves a Lechonk!
+
+#org @gText_VermilionPortHotel_Receptionist
+Hello!\nYou're [PLAYER], right?\pI hope you're enjoying your stay\nin the Trainer Suites!\pYou're free to call our hotel your\nhome for your entire journey.
+
+#org @gText_VermilionPortHotel_Elevator
+Which floor do you want?
+
+#org @gText_VermilionPortHotel_LobbyNPC1
+This hotel welcomes new guests from\naround the world every day.\pIf you're staying in the trainer\nsuites, you should come back often!\pYour fellow guests can make for\ngreat battle partners.
+
+#org @gText_VermilionPortHotel_LobbyNPC2
+The top floor of the hotel[.]\pThis floor is popular with stat\nfreaks.\lJust[.]\lAbsolute freaks for stats.\pI don't know how you become a stat\nfreak.\lFrankly, I don't WANT to know.\pBut if you're the type who likes\n[BLUE]EV training[BLACK][.]\p[.]Well, these folks'll make for good\nopponents.\lJust don't say I didn't warn ya!

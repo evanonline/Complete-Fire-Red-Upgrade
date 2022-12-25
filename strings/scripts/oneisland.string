@@ -11,7 +11,7 @@ Hoo hoo!\nOh, don't mind me!\pI am here to witness fateful\nencounters.\pMystery
 So I traded my friend a Duskull\nfor his Psyduck, right?\pBut he didn't like the nickname\nI gave. "Dudeskull!\"\pThe Psyduck he traded me,\nit was named "Yellowducky.\"\lThat's an even more lame name!\pOur moms made us trade them\nback. But I still want a Psyduck!\lWanna trade for Dudeskull?
 x
 #org @gText_Trade_Dudeskull_No
-Are you sure?\p"Dudeskull" is a cool name,\neven for a female Duskull.
+Are you sure?\p"Dudeskull\" is a cool name,\neven for a female Duskull.
 
 #org @gText_Trade_Dudeskull_NoPsyduck
 That's not a Psyduck.\nNot interested.
@@ -21,3 +21,6 @@ She has an Impish nature, so make\nsure to only feed her sour food,\lbecause tha
 
 #org @gText_Trade_Dudeskull_After
 My friend is bad at naming Pok\emon.\nHe named his Zubat "Bluebatty,\"\land his Turtwig "Greenturty.\"\pAnd he says my names are stupid.\nWell, at least I am creative!
+
+#org @gText_OneIsland_ForeverGirl
+Even when I was younger, I knew I\nwanted to stay here forever.\lSo far, no regrets!

@@ -29,8 +29,3 @@ EventScript_SaffronCity_Throh2:
 	cry SPECIES_THROH 0x0
 	msgbox gText_SaffronCity_Throh2 MSG_FACE
 	end
-
-.global EventScript_SaffronCity_CitySign
-EventScript_SaffronCity_CitySign:
-	msgbox gText_Saffron_City_Sign MSG_SIGN
-	end

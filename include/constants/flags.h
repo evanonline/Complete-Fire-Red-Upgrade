@@ -47,15 +47,34 @@
 /*
 #define FLAG_HIDE_SIB_HOTEL 0x951 //Person ID - hides sib sprite in intro room
 #define FLAG_HIDE_SIB_HOTEL2 0x952 //Person ID - hides sib sprite in trainer lobby room
-#define FLAG_ICEDPATH_TM97_HIDE 0x95D //Person ID - Obtained the TM97 item pickup
+#define FLAG_HIDE_RIVAL_HOTEL1 0x953 //Person ID - hides rival sprite in trainer lobby room
+#define FLAG_HIDE_HATSUMI_HOTEL1 0x954 //Person ID - hides Hatsumi sprite in trainer lobby room
+#define FLAG_HIDE_STARTER_BALL1 0x955 //Person ID - hides Relicanth ball in trainer lobby room
+#define FLAG_HIDE_STARTER_BALL2 0x956 //Person ID - hides Sigilyph ball in trainer lobby room
+#define FLAG_HIDE_STARTER_BALL3 0x957 //Person ID - hides Passimian ball in trainer lobby room
 
 #define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
-#define FLAG_STARTER_CHOSEN 0x990 // Chose starter
-#define FLAG_OPENING_TEXT 0x991 // Saw the opening dialogue from sibling after starting a new save file
+
+#define FLAG_ICEDPATH_TM97_HIDE 0x95D //Person ID - Obtained the TM97 item pickup
+
+#define FLAG_INTROCUTSCENE1 0x95E //Finished the opening cutscene with Hatsumi's arrival, up to the starter selection
+
+#define FLAG_CHOSESTARTER1 0x960 //Chose Relicanth as a starter, or the 1st Pokemon if randomizer was active
+#define FLAG_CHOSESTARTER2	0x961 //Chose Sigilyph as a starter, or the 2nd Pokemon if randomizer was active
+#define FLAG_CHOSESTARTER3 0x962 //Chose Passimian as a starter, or the 3rd Pokemon if randomizer was active
+
+#define FLAG_STARTER_CHOSEN 0x990 //Chose starter
+#define FLAG_OPENING_TEXT 0x991 //Saw the opening dialogue from sibling after starting a new save file
 #define FLAG_SMART_STRIKE_TM 0x992 //Pewter City - Smart Strike TM 
 #define FLAG_RUN_START 0x993 //Vermilion Port intro - determines that the run is started, and options (Randomizer, Scalemons etc) are locked in, and the hotel PC will no longer work. Hides sibling in initial hotel room
 #define FLAG_DID_DUSKULL_TRADE 0x994 //One Island - Dudeskull / Yellowducky trade
 #define FLAG_VISQUEZ_IS_HOME 0x995 //Storyline - Finished journey on Sevii to get Visquez to take over the gym in Vermilion.
+#define FLAG_POWERUPS 0x996 //Run settings - Controls if powerups (Mega Evolutions and Z-Crystals) are enabled or disabled, and if Gigantamax can be used outside of Raids. Also affects teams with Mega Evolutions or Z-Crystals
+#define FLAG_POWERUPS_RESTRICTED 0x997 //Run settings - Restricts availability of most Mega Evolutions. Only the Mega Stones for Beedrill, Pidgeot, Sableye, Mawile, Medicham, Manectric, Banette, Sharpedo, Camerupt, Absol, Glalie, Lopunny and Audino are available until the postgame.
+
+
+0x1200 - Scalemons
+0x940 - Randomizer
 */
 
 // Hide/show flags

@@ -32,6 +32,9 @@ Example 9
 #org @sExampleText_10
 Example 10
 
+#org @sRunSettingsPowerups
+Powerups Toggle
+
 #org @sRunSettingsScalemons
 Scalemons Mode
 

@@ -4,15 +4,119 @@ npc 9 8 1 EventScript_SibRoomLeave_SetSibName
 npc 9 8 0 EventScript_IndigoOptionsPC
 sign 9 8 0 EventScript_BathroomEasterEgg
 sign 9 8 1 EventScript_VermilionHotelMovie
+sign 9 8 2 EventScript_VermilionHotelMovie
+sign 9 8 3 EventScript_Lodgenet
+tile 9 8 0 EventScript_VermilionIntro_SibEntry
 
 ## Vermilion Port Hotel Trainer Lobby / Pokemon choice
 map 9 9 gMapScripts_VermilionIntroSibSpriteScript_Hotel2
 npc 9 9 0 EventScript_VermilionIntro_Sib_First
 npc 9 9 1 EventScript_VermilionIntro_Rival_First
-tile 9 9 0 EventScript_VermilionIntro2_WhereYaGoin1
+npc 9 9 2 EventScript_VermilionIntro_Hatsumi
+npc 9 9 3 EventScript_VermilionIntro_Relicanth_Ball
+npc 9 9 4 EventScript_VermilionIntro_Sigilyph_Ball
+npc 9 9 5 EventScript_VermilionIntro_Passimian_Ball
+tile 9 9 0 EventScript_VermilionIntro2_HatsumiEnters
+tile 9 9 1 EventScript_Intro_SibWhereGoing1
+tile 9 9 2 EventScript_Intro_SibWhereGoing2
+tile 9 9 3 EventScript_Intro_SibWhereGoing2
+tile 9 9 4 EventScript_Intro_SibWhereGoing2
+tile 9 9 5 EventScript_Intro_SibWhereGoing2
+tile 9 9 6 EventScript_Intro_SibWhereGoing2
+tile 9 9 7 EventScript_Intro_SibWhereGoing2
+tile 9 9 8 EventScript_Intro_SibWhereGoing2
+tile 9 9 9 EventScript_Intro_SibWhereGoing2
+tile 9 9 10 EventScript_Intro_SibWhereGoing2
+tile 9 9 11 EventScript_Intro_SibWhereGoing2
+tile 9 9 12 EventScript_Intro_SibWhereGoing2
 
-##Vermilion Port Hotel
+##Vermilion Port Hotel Lobbies & Kitchen
 sign 9 9 0 EventScript_VermilionHotel_OakLabsTrainerSuite
+npc 1 5 0 EventScript_VermilionHotel_Receptionist
+npc 1 5 1 EventScript_VermilionHotel_Technology
+npc 1 5 2 EventScript_VermilionHotel_LobbyNPC1
+npc 1 8 0 EventScript_VermilionHotel_LobbyNPC2
+npc 1 10 0 EventScript_VermilionHotel_KitchenNPC1
+npc 1 10 5 EventScript_VermilionHotel_KitchenNPC2
+npc 1 10 3 EventScript_VermilionHotel_KitchenNPC_HeadChef
+
+## Vermilion Port Hotel Guests
+npc 1 17 2 EventScript_VermilionHotel_PoketchDetective_WatchParty1
+npc 1 17 0 EventScript_VermilionHotel_PoketchDetective_WatchParty2
+npc 1 17 1 EventScript_VermilionHotel_PoketchDetective_WatchParty3
+
+##Vermilion Port Hotel TVs lol
+sign 1 9 0 EventScript_VermilionHotelMovie
+sign 1 9 1 EventScript_VermilionHotelMovie
+sign 1 11 0 EventScript_VermilionHotelMovie
+sign 1 11 1 EventScript_VermilionHotelMovie
+sign 9 13 0 EventScript_VermilionHotelMovie
+sign 9 13 1 EventScript_VermilionHotelMovie
+sign 1 12 0 EventScript_VermilionHotelMovie
+sign 1 12 1 EventScript_VermilionHotelMovie
+sign 1 12 2 EventScript_Lodgenet
+sign 1 13 0 EventScript_VermilionHotelMovie
+sign 1 13 1 EventScript_VermilionHotelMovie
+sign 1 13 2 EventScript_Lodgenet
+sign 1 14 0 EventScript_VermilionHotelMovie
+sign 1 14 1 EventScript_VermilionHotelMovie
+sign 1 14 2 EventScript_Lodgenet
+sign 1 15 0 EventScript_VermilionHotelMovie
+sign 1 15 1 EventScript_VermilionHotelMovie
+sign 1 15 2 EventScript_Lodgenet
+sign 1 16 0 EventScript_VermilionHotelMovie
+sign 1 16 1 EventScript_VermilionHotelMovie
+sign 1 16 2 EventScript_Lodgenet
+sign 1 17 0 EventScript_VermilionHotel_PoketchDetective_TV
+sign 1 17 1 EventScript_VermilionHotel_PoketchDetective_TV
+sign 1 17 2 EventScript_Lodgenet
+sign 1 18 0 EventScript_VermilionHotelMovie
+sign 1 18 1 EventScript_VermilionHotelMovie
+sign 1 19 0 EventScript_VermilionHotelMovie
+sign 1 19 1 EventScript_VermilionHotelMovie
+sign 1 20 0 EventScript_VermilionHotelMovie
+sign 1 20 1 EventScript_VermilionHotelMovie
+sign 1 21 0 EventScript_VermilionHotelMovie
+sign 1 21 1 EventScript_VermilionHotelMovie
+sign 1 22 0 EventScript_VermilionHotelMovie
+sign 1 22 1 EventScript_VermilionHotelMovie
+sign 1 23 0 EventScript_VermilionHotelMovie
+sign 1 23 1 EventScript_VermilionHotelMovie
+sign 1 24 0 EventScript_VermilionHotelMovie
+sign 1 24 1 EventScript_VermilionHotelMovie
+sign 1 25 0 EventScript_VermilionHotelMovie
+sign 1 25 1 EventScript_VermilionHotelMovie
+sign 1 26 0 EventScript_VermilionHotelMovie
+sign 1 26 1 EventScript_VermilionHotelMovie
+sign 1 27 0 EventScript_VermilionHotelMovie
+sign 1 27 1 EventScript_VermilionHotelMovie
+sign 1 28 0 EventScript_VermilionHotelMovie
+sign 1 28 1 EventScript_VermilionHotelMovie
+sign 1 29 0 EventScript_VermilionHotelMovie
+sign 1 29 1 EventScript_VermilionHotelMovie
+sign 1 29 2 EventScript_Lodgenet
+
+
+##Other Trainer Suites
+npc 9 10 0 EventScript_IndigoOptionsPC
+sign 9 10 0 EventScript_VermilionHotelMovie
+sign 9 10 1 EventScript_VermilionHotelMovie
+sign 9 10 2 EventScript_Lodgenet
+sign 9 10 3 EventScript_BathroomEasterEgg
+sign 9 10 4 EventScript_VermilionHotel_RivalsRoom
+npc 9 11 0 EventScript_IndigoOptionsPC
+sign 9 11 0 EventScript_VermilionHotelMovie
+sign 9 11 1 EventScript_VermilionHotelMovie
+sign 9 11 2 EventScript_Lodgenet
+sign 9 11 3 EventScript_BathroomEasterEgg
+sign 9 11 4 EventScript_VermilionHotel_AlloysRoom
+sign 9 11 5 EventScript_VermilionHotel_AlloysRoom
+npc 9 12 0 EventScript_IndigoOptionsPC
+sign 9 12 0 EventScript_VermilionHotelMovie
+sign 9 12 1 EventScript_VermilionHotelMovie
+sign 9 12 2 EventScript_Lodgenet
+sign 9 12 3 EventScript_BathroomEasterEgg
+sign 9 12 4 EventScript_VermilionHotel_SibRoom
 
 ## Vermilion Port outside
 npc 1 4 0 EventScript_VermilionPort_NPC1
@@ -23,15 +127,32 @@ npc 1 4 4 EventScript_VermilionPort_NPC5
 npc 1 4 5 EventScript_VermilionPort_NPC6
 
 ## Vermilion City
-sign 3 5 2 EventScript_GymSignVermilion_LtSurge
+sign 3 5 0 EventScript_VermilionCity_CitySign
+sign 3 5 2 EventScript_GymSign_Vermilion
+sign 3 5 3 EventScript_VermilionPortDirections_Sign
+npc 3 5 0 EventScript_VermilionCity_NPC_Pollution
 npc 3 5 1 EventScript_VermilionCity_NPC_Sitizen
-npc 3 5 6 EventScript_VermilionCity_NPC_Tree
+npc 3 5 2 EventScript_VermilionCity_NPC_SailorSSAnne
+npc 3 5 3 EventScript_VermilionCity_NPC_Tree
+npc 9 0 0 EventScript_VermilionCity_NPC_FishingGuru
+npc 9 1 1 EventScript_VermilionCity_NPC_CalebsFriend
+npc 9 1 2 EventScript_VermilionCity_NPC_CoolLass
+npc 9 1 3 EventScript_VermilionCity_NPC_NamesHater
+npc 9 2 4 EventScript_VermilionCity_NPC_SadTinkatonExpert
 npc 9 3 0 EventScript_VermilionCity_FanClubOwner
 npc 9 3 1 EventScript_VermilionCity_NPC_NostalgiaKid
 npc 9 3 2 EventScript_VermilionCity_NPC_Sceptile
 npc 9 3 3 EventScript_VermilionCity_NPC_Yamper
 npc 9 3 4 EventScript_VermilionCity_NPC_YamperOwner
 npc 9 3 5 EventScript_VermilionCity_NPC_SceptileOwner
+npc 9 4 0 EventScript_VermilionCity_NPC_TypesSame
+npc 9 4 1 EventScript_VermilionCity_NPC_HighExpectations
+npc 9 5 1 EventScript_VermilionCity_NPC_MoneyCountingGirl
+npc 9 5 2 EventScript_VermilionCity_NPC_TeamRocketRemember
+npc 9 7 0 EventScript_VermilionCity_NPC_PaldeaSandwichCritic
+sign 9 7 0 EventScript_VermilionCity_NPC_PaldeaLetter
+npc 9 7 1 EventScript_VermilionCity_NPC_Primeape
+npc 9 7 3 EventScript_VermilionCity_NPC_EvioliteDiscovery
 
 ## Route 6
 sign 3 24 0 EventScript_Route6_IcePathSign
@@ -42,7 +163,7 @@ npc 3 24 3 EventScript_Route6_DNSExplainer
 npc 3 24 4 EventScript_Route6_BugCatcherHorace
 npc 3 24 5 EventScript_Route6_YoungsterMaruyama
 
-#Iced Path
+## Iced Path
 map 1 31 gMapScripts_IcedPath_CheckHideTM97
 sign 1 31 7 EventScript_IcedPath_DirectionsSign
 npc 1 32 0 EventScript_IcedPath_ExplainNPC1
@@ -53,10 +174,21 @@ npc 1 31 2 EventScript_IcedPath_SwimmerFrancine
 npc 1 31 3 EventScript_IcedPath_CamperRoss
 npc 1 31 4 EventScript_TM97
 
+## Celadon City
+sign 3 6 3 EventScript_CeladonCity_CitySign
+sign 3 6 7 EventScript_GymSign_Celadon
+npc 10 9 0 EventScript_CeladonCity_GameFreakNPC_0
+npc 10 9 2 EventScript_CeladonCity_GameFreakNPC_2
+npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
+
 ## Cerulean City
+sign 3 3 0 EventScript_CeruleanCity_CitySign
+sign 3 3 1 EventScript_GymSign_Cerulean
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
 
 ## Saffron City
+sign 3 10 0 EventScript_SaffronCity_CitySign
+sign 3 10 6 EventScript_GymSign_Saffron
 npc 14 9 0 EventScript_SaffronCity_Throh1
 npc 14 9 1 EventScript_SaffronCity_Throh1
 npc 14 9 2 EventScript_SaffronCity_Throh2
@@ -67,10 +199,33 @@ npc 14 9 6 EventScript_SaffronCity_ThrohRanger
 npc 14 9 7 EventScript_SaffronCity_Throh2
 npc 14 9 8 EventScript_SaffronCity_ThrohGranny
 
+## Lavender Town
+sign 3 4 1 EventScript_LavenderTown_CitySign
+
 ## Pewter City
+sign 3 2 4 EventScript_PewterCity_CitySign
+sign 3 2 2 EventScript_GymSign_Pewter
 npc 6 7 0 EventScript_PewterCity_HouseHusband1
 npc 6 7 1 EventScript_PewterCity_HouseHusband2
 
+## Viridian City
+sign 3 1 3 EventScript_ViridianCity_CitySign
+sign 3 1 1 EventScript_GymSign_Viridian
+
+## Pallet City
+sign 3 0 3 EventScript_PalletCity_CitySign
+
+## Cinnabar Island
+sign 3 8 0 EventScript_CinnabarIsland_CitySign
+sign 3 8 2 EventScript_GymSign_Cinnabar
+
+## Fuchsia City
+sign 3 7 0 EventScript_FuchsiaCity_CitySign
+sign 3 7 2 EventScript_GymSign_Fuchsia
+
+## One Island
+sign 3 12 0 EventScript_OneIsland_Sign
+npc 32 3 0 EventScript_OneIsland_NPC1
 
 ## One Island Net Center
 npc 32 1 4 EventScript_OneIsland_FatefulClown
@@ -78,3 +233,21 @@ npc 32 1 5 EventScript_MysteryGiftPerson
 npc 32 0 3 EventScript_OneIsland_PCNPC1
 npc 32 0 6 EventScript_OneIsland_PCNPC2
 npc 32 0 4 EventScript_DuskullTrade
+
+## Two Island
+sign 3 13 0 EventScript_TwoIsland_Sign
+
+## Three Island
+sign 3 14 0 EventScript_ThreeIsland_Sign
+
+## Four Island
+sign 3 15 0 EventScript_FourIsland_Sign
+
+## Five Island
+sign 3 16 0 EventScript_FiveIsland_Sign
+
+## Six Island
+sign 3 17 0 EventScript_SixIsland_Sign
+
+## Seven Island
+sign 3 18 0 EventScript_SevenIsland_Sign

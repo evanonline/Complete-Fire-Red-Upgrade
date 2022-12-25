@@ -45,6 +45,7 @@ extern const u8 gText_MysteryGift_BanetteCorbinPassword[];
 extern const u8 gText_MysteryGift_LanturnDiannePassword[];
 extern const u8 gText_MysteryGift_SableyeGolgoPassword[];
 extern const u8 gText_MysteryGift_RayquazaVCreatePassword[];
+extern const u8 gText_MysteryGift_CacneaPokeParkPassword[];
 extern const u8 gText_MysteryGift_GameBoyAdvanceSecretCode[];
 
 const struct NewMysteryGift gMysteryGifts[] = 
@@ -629,6 +630,43 @@ const struct NewMysteryGift gMysteryGifts[] =
         .isShiny = FALSE,
         .ballType = BALL_TYPE_CHERISH_BALL,
         .password = gText_MysteryGift_RayquazaVCreatePassword,
+    },
+	
+	// PokePark Cacnea
+	{
+        .species = SPECIES_CACNEA,
+        .item = ITEM_NONE,
+        .abilityNum = 0,
+        .nature = NATURE_MILD,
+        .moves = 
+        {
+            MOVE_POISONSTING,
+            MOVE_LEER,
+            MOVE_ABSORB,
+            MOVE_ENCORE,
+        },
+        .ivs =
+        {
+            31,
+            31,
+            31,
+            31,
+            31,
+            31,
+        },
+        .evs = 
+        {
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+        },
+        .level = 5,
+        .isShiny = FALSE,
+        .ballType = BALL_TYPE_POKE_BALL,
+        .password = gText_MysteryGift_CacneaPokeParkPassword,
     },
 	
 };

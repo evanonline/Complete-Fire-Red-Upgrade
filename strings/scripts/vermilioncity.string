@@ -2,7 +2,7 @@
 Thank goodness!\pThey finally got rid of that tree\nby the gym.\pThe city was overdue for some\nlandscaping!
 
 #org @gText_VermilionCityNPC_Sitizen
-Are you [GREEN]up standing[.][BLACK]\n[.]\lor are you a [GREEN]sit-izen![BLACK]\lHaw!\lIt's a joke, kiddo!\lA joke, I say! A joke!
+Are you [GREEN]up standing[BLACK][.]\n[.] [.] [.] [.] [.]\lor are you a [GREEN]sit-izen[BLACK]!\lHaw!\lIt's a joke, kiddo!\lA joke, I say! A joke!
 
 #org @gText_VermilionCityNPC_Nostalgic
 I hate all these new Pok\emon!\n[RED]Kanto's original 151[BLACK] are the best!\pWe have a real problem with\ninvasive species lately[.]
@@ -21,3 +21,54 @@ Sceptile[.]\n[.]is just the coolest ever[.]
 
 #org @gText_VermilionCityNPC_YamperOwner
 My Yamper is such a darling!\pYou can actually catch a Yamper\njust north of the city, on Route 6!\lBut MINE is a true Galarian import!
+
+#org @gText_VermilionCityNPC_Pollution
+We're careful about pollution here!\nStill!\pNo toxic sludge in sight in\nVermilion!\pYou'll have to head to [GREEN]Fuchsia City[BLACK]\nif you wanna see sludge.
+
+#org @gText_VermilionCityNPC_NamesHater
+Pok\emon names these days are too\nlong.\pBack in my day[.] we kept their names\nunder 10 characters!\pIn Kanto, we still haven't adapted\nour name display systems.\pSo, you might run into Pok\emon\nwhose names look truncated.\pThat's not a typo!\nOur systems are just outdated!\lRespect Crabominable's full name!
+
+#org @gText_VermilionCityNPC_CoolLass
+I'm just the best.\pI've got looks, style[.]\pI deserve an award.
+
+#org @gText_VermilionCityNPC_CalebVsAnnihilape
+Listen to this! An Annihilape\npunched my friend Caleb, right?\pBut Caleb says he's so tough he\ndidn't even feel it!\pBut get this! He says no one saw it\nhappen 'cus Annihilape is a ghost.\pMan[.]\lCaleb is so cool!
+
+#org @gText_VermilionCityNPC_SailorSSAnne
+The [GREEN]S.S. Anne[BLACK] had a controversial\naccident many years back.\pThey were talking about making an\n[GREEN]S.S. Anne 2[BLACK], but[.]\lthere's better ways to sail now!
+
+#org @gText_VermilionCityNPC_FishingGuru
+It's me! The one, the only!\nThe Fishing Guru!\pIt looks like you already have an\nawesome Old Rod.\lThat's the best kind of rod!\lYou're a kindred soul, buddy!
+
+#org @gText_VermilionCityNPC_TypesSame
+Things are the same as ever[.]\nI'm waiting for a shakeup.\pSomeone's gotta find some new\nPok\emon types or something.
+
+#org @gText_VermilionCityNPC_HighExpectations
+These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog! THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.
+
+#org @gText_VermilionCityNPC_PaldeaSandwichCritic
+You ever see how they make\nsandwiches in [GREEN]Paldea[BLACK]?\lAbsolute madness.\pWhy do they drop bread onto a\nsandwich from several feet above?!\pI love my Paldean pen pal anyway\nthough.
+
+#org @gText_VermilionCityNPC_PaldeaLetter
+Dear Greggy,\nI hope this letter finds you well.\pI heard the R Group is investing in\nbeautifying [GREEN]Celadon City[BLACK].\pA mining town like [GREEN]Zapapico[BLACK] doesn't\nneed to be pretty! We're rugged!\lBut, that does sound cool[.]
+
+#org @gText_VermilionCityNPC_EvioliteDiscovery
+The moment I found out Primeape can\nevolve now, I got so excited.\pBecause now my Primeape can benefit\nfrom holding [BLUE]Eviolite[BLACK]!\pShe's gonna have sooo much\nSpecial Defense.\pI hope you can find your own\n[BLUE]Eviolite[BLACK]!
+
+#org @gText_VermilionCityNPC_PrimeapeChatter
+Prau rau?
+
+#org @gText_VermilionCityNPC_TeamRocketMemory
+There's always going to be groups\nwho want to use Pok\emon for crime.\pBut if you ask me, none were worse\nthan Team Rocket was.\pOther teams wanted to reshape the\nworld. Change things.\lTeam Rocket[.] just wanted money.
+
+#org @gText_VermilionCityNPC_TeamRocketMemory2
+That Giovanni guy had so much\nmoney, so much power[.]\pBut all he could think to do with\nany of it was to vie for more.\pMe? I'm using my meager wealth to\nbuy my Finneon a snack.\pA buddy's smile is worth more than\nthe world.
+
+#org @gText_VermilionCityNPC_MoneySucks
+Grumble mumble[.]\nHey, you.\lAre you good at counting money?\lI'm sure not.
+
+#org @gText_VermilionPortSign
+Vermilion Port\n[ARROW_DOWN]
+
+#org @gText_VermilionCityNPC_SadTinkatonExpert
+Hi[.] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color and doesn't have\nfiery attacks, or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut no one will ever care.

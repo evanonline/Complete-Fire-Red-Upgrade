@@ -1,5 +1,11 @@
+#org @gText_OpeningSibEntry
+Hey, sib!\nThe Professor's aide just got here!\lWe can go choose our Pok\emon now!
+
 #org @gText_OpeningOptionsStart
-Hey, sib!\nThe Professor's aide is here!\lWe can choose our Pok\emon!\pBefore we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings![BLACK]\pBut if you're ready, we can\nall go together!
+Before we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings!
+
+#org @gText_OpeningOptionsStart2
+But if you're ready, we can all go\ntogether, and meet our Pok\emon!
 
 #org @gText_OpeningOptionsIntro
 Scanning Trainer Card[.]
@@ -10,35 +16,68 @@ Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYo
 #org @gText_WhichSetting
 Which setting would you like to\naccess?
 
+#org @gText_OpeningOptionsPowerups
+Would you like to activate\n[GREEN]Powerups[BLACK]?
+
+#org @gText_OpeningOptionsPowerupsExplain
+Z-Moves, Mega Evolution, Dynamax\nand G-Max are considered Powerups.\pWith Powerups enabled, you'll get\na [BLUE]Mega Bracelet[BLACK] and [BLUE]Z-Power Ring[BLACK]\lin your Trainer Package.\pWith Powerups restricted, you will\nonly find Mega Stones for Pok\emon\lwith a [RED]base stat total under 490[BLACK].\pWith Powerups disabled, you will\nnot receive any of these items.\pLeague trainers will not use any\nPowerups unavailable to you.\pYou will always receive a [BLUE]Dynamax\nBand[BLACK].\pHowever, if Powerups are\ndisabled, Dynamax will only be\lavailable in Raid Battles.\pOn [RED]all[BLACK] settings, Powerups can be\nobtained at the [GREEN]Battle Frontier[BLACK].
+
+#org @gText_OpeningOptionsPowerupsExplainRestricted
+The following Pok\emon's Mega\nEvolutions are unrestricted:\pBeedrill, Pidgeot, Sableye, Mawile,\nMedicham, Manectric, Banette,\lSharpedo, Camerupt, Absol, Glalie,\lLopunny, Audino.
+
+#org @gText_PowerupsCurrentlyDisabled
+Powerups are currently\n[RED]disabled[BLACK].
+
+#org @gText_PowerupsCurrentlyRestricted
+Powerups are currently\n[GREEN]restricted[BLACK].
+
+#org @gText_PowerupsCurrentlyEnabled
+Powerups are currently\n[BLUE]enabled[BLACK].
+
+#org @gText_PowerupsEnabledYes
+Powerups [BLUE]enabled[BLACK].
+
+#org @gText_PowerupsEnabledRestricted
+Powerups [BLUE]restricted[BLACK].
+
+#org @gText_PowerupsEnabledNo
+Powerups [RED]disabled[BLACK].
+
 #org @gText_OpeningOptionsScalemons
-Would you like to activate\n[GREEN]Scalemons?[BLACK]\pThis scales the base stats of\n[RED]all[BLACK] Pok\emon up or down to 600.\pDifficulty may vary from the\ndefault Pok\emon League experience.
+Would you like to activate\n[GREEN]Scalemons[BLACK]?
+
+#org @gText_OpeningOptionsScalemonsExplain
+This mode scales the base stats of\n[RED]all[BLACK] Pok\emon up or down to 600.\pDifficulty may vary from the\ndefault Pok\emon League experience.
 
 #org @gText_ScalemonsCurrentlyDisabled
-Scalemons Mode is currently\n[RED]disabled.[BLACK]
+Scalemons Mode is currently\n[RED]disabled[BLACK].
 
 #org @gText_ScalemonsCurrentlyEnabled
-Scalemons Mode is currently\n[BLUE]enabled.[BLACK]
+Scalemons Mode is currently\n[BLUE]enabled[BLACK].
 
 #org @gText_ScalemonsEnabledYes
-Scalemons Mode [BLUE]enabled.[BLACK]
+Scalemons Mode [BLUE]enabled[BLACK].
 
 #org @gText_ScalemonsEnabledNo
-Scalemons Mode [RED]disabled.[BLACK]
+Scalemons Mode [RED]disabled[BLACK].
 
 #org @gText_OpeningOptionsRandomizer
-Would you like to activate\n[GREEN]Randomizer Mode?[BLACK]\pThis randomizes every Pok\emon\nin the world!\p[RED]There may be discrepancies between\na Pok\emon seen on the overworld,\land the Pok\emon actually fought.\pMany legendaries may not appear.[BLACK]
+Would you like to activate\n[GREEN]Randomizer Mode[BLACK]?
+
+#org @gText_OpeningOptionsRandomizerExplain
+This randomizes every Pok\emon\nin the world!\p[RED]There may be discrepancies between\na Pok\emon seen on the overworld,\land the Pok\emon actually fought.\pMany legendaries may not appear.[BLACK]
 
 #org @gText_RandomizerCurrentlyDisabled
-Randomizer Mode is currently\n[RED]disabled.[BLACK]
+Randomizer Mode is currently\n[RED]disabled[BLACK].
 
 #org @gText_RandomizerCurrentlyEnabled
-Randomizer Mode is currently\n[BLUE]enabled.[BLACK]
+Randomizer Mode is currently\n[BLUE]enabled[BLACK].
 
 #org @gText_RandomizerEnabledYes
-Randomizer Mode [BLUE]enabled.[BLACK]
+Randomizer Mode [BLUE]enabled[BLACK].
 
 #org @gText_RandomizerEnabledNo
-Randomizer Mode [RED]disabled.[BLACK]
+Randomizer Mode [RED]disabled[BLACK].
 
 #org @gText_OpeningOptionsPCDone
 Thank you! Good luck on your\nPok\emon journey!
@@ -53,40 +92,136 @@ Alright! Let's go!\nI'm so excited!
 Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
 
 #org @gText_PokemonChoiceLobby_Rival_1
-[.]\nHello, [PLAYER].\pAre you excited for our starters?\nHopefully, I can get a Piplup.\pBut Kanto's starters are classic[.]\nI'd be happy with them, too.\lWe'll just have to see.
+[.]\nHello, [PLAYER].\p[.]Are you excited for our starters?\pThe aide left them on a table\nover there.\pBut she disappeared somewhere[.]\nGuess we ought to wait.\lShe'd better hurry up and get back.
 
 #org @gText_PokemonChoiceLobby_SibSherry_1
 Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Bulbasaur,\nyou gotta let me have it!\pAnd I'd let you get Tepig, of\ncourse!\pMatching outfits with your Pok\emon\nwould be so trendy!\pWell, lead the way, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_SibBrandy_1
-Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?\pWell, lead the way, [PLAYER]!
-
-#org @gText_PokemonChoiceLobby_SibWhereGoing
-Hey, sib!\nWhere are you going?\pStop funning around!
+Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?\pWell, you first, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction1
-(huff)\n(puff)\lHey, kiddos[.]!\lI'm[.]\lHatsumi!\lI'm the [.] [.] hoof [.] Oak Labs intern!
-
-#org @gText_PokemonChoiceLobby_Whisk1
-[.] Kiddos?! Don't talk down to us!
+AAAHH! I'M BACK! SORRYYYYY!\nI LEFT THE OLD RODS DOWNSTAIRS!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction2
-Ah, sorry! Force of habit! Usually,\nwe're doing this for littler kids.
-
-#org @gText_PokemonChoiceLobby_Whisk2
-[.] [.] [.] [.]
+(huff) (puff)\nAhh[.] Hoo[.]\lOne sec, kiddos[.]
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction3
-Ah! N-no offense! I'm not thinking\nstraight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pYour three Pok\emon are on the\ntable here.\pGo ahead and choose!
+(huff) (puff)
 
-#org @gText_PokemonChoiceLobby_Whisk3
+#org @gText_PokemonChoiceLobby_Hatsumi_Introduction4
+Whoof[.]
+
+#org @gText_PokemonChoiceLobby_DotDotDot
+[.] [.] [.] [.]
+
+#org @gText_PokemonChoiceLobby_Whisk_Introduction1
+[.]Hey, wait, did you call us\n"kiddos\"?!\pDon't talk down to us!
+
+#org @gText_PokemonChoiceLobby_Hatsumi_Introduction5
+Ah, sorry! Force of habit! Usually,\nwe're doing this for littler kids.
+
+#org @gText_PokemonChoiceLobby_Whisk_Introduction2
+[.] [.]\nGrgrr[.]
+
+#org @gText_PokemonChoiceLobby_Hatsumi_Introduction6
+Ah! N-no offense! I'm not thinking\nstraight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pI left your Pok\emon on the table.\nLet's get you all started!
+
+#org @gText_PokemonChoiceLobby_Whisk_Introduction3
 Finally! Let's see what we've got!
 
-#org @gText_PokemonChoiceLobby_SibIntertalk1
-Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have just caught these\nPok\emon today!\pWe're really getting premium\ntreatment!
+#org @gText_PokemonChoiceLobby_Hatsumi_Introduction7
+Okay!\nTake your pick, kiddos!\l[.]\lErr, esteemed equals!
 
-#org @gText_PokemonChoiceLobby_WhiskIntertalk1
+#org @gText_PokemonChoiceLobby_SibIntertalk1
+Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have just caught these\nPok\emon very recently!\pWe're really getting premium\ntreatment!
+
+#org @gText_PokemonChoiceLobby_RivalIntertalk1
 [.] [.] Don't laugh at me for this,\n[PLAYER], but, I'm[.]\p[.] [.] I'm too nervous to look at the\nstarters!\lPlease, you go first.
 
 #org @gText_PokemonChoiceLobby_HatsumiIntertalk1
-Ah, hang on, I should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure is about to begin!\pMeeting, teaming up with, battling,\ntraining, and trading Pok\emon!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!"\p[.] if you see Professor Oak, please\ntell him about how I read you that.
+Ah, hang on, I should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure\nis about to begin!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!\"\p[.]if you see Professor Oak, please\ntell him about how I read you that.
+
+#org @gText_PokemonChoiceLobby_RivalWhereGoing
+Hey, [PLAYER]!\nWhere are you going?\pQuit messing around[.]
+
+#org @gText_PokemonChoiceLobby_RelicanthBall
+Will you choose Relicanth, the\nLongevity Pok\emon?
+
+#org @gText_PokemonChoiceLobby_SigilyphBall
+Will you choose Sigilyph, the\nAvianoid Pok\emon?
+
+#org @gText_PokemonChoiceLobby_PassimianBall
+Will you choose Passimian, the\nTeamwork Pok\emon?
+
+#org @gText_PokemonChoiceLobby_Randomized
+Will you choose this randomized\nstarter?
+
+#org @gText_PokemonChoiceLobby_PokemonChosen
+[PLAYER] received the [BUFFER1]\nfrom the aide!
+
+#org @gText_PokemonChoiceLobby_StarterNickname
+Would you like to give\n[BUFFER1] a nickname?
+
+#org @gText_PokemonChoiceLobby_PokemonChosenRandom
+[PLAYER] received the Pok\emon\nfrom the aide!
+
+#org @gText_PokemonChoiceLobby_StarterNicknameRandom
+Would you like to give\nyour Pok\emon a nickname?
+
+#org @gText_PokemonChoiceLobby_EveryoneRandomStarters
+The others choose their own\nrandom Pok\emon as well!
+
+#org @gText_PokemonChoiceLobby_SibChoice1
+Alright, me next!\pI wanna leave [RIVAL] with the\nPok\emon weak to mine!
+
+#org @gText_PokemonChoiceLobby_RivalDestroyedOwnedBlastedSadTragic
+Hey! Not cool[.]\p[.] [.] [.]\nWell, let me see who I get[.]
+
+#org @gText_PokemonChoiceLobby_SibChoice2
+Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn
+All three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])
+
+#org @gText_PokemonChoiceLobby_RivalChoice1
+Hey[.]\nWhat's up with these starters?!
+
+#org @gText_PokemonChoiceLobby_RivalChoice2
+These aren't starters!\nThey're just some weirdos!\lNone of these Pok\emon even evolve!
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense1
+Auh[.]\nWe were, um[.]\lOut[.]\l[.] [.]of starter Pok\emon[.]?\pThese three were caught for an\ninternship project on swarms[.]
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense2
+B-but relax!\pRock, Flying and Fighting form a\ntype triangle!\lJust like Fire, Grass, and Water!\lH-heh ha ha[.]!
+
+#org @gText_PokemonChoiceLobby_RivalChoice3
+But this is all uneven[.]\pSigilyph being Psychic/Flying puts\nPassimian at a big disadvantage!
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense3
+A-ah, er[.]\pOh, uh, by the way!\nMy name's Hatsumi!
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense4
+I used to work for Professor Elm,\nand-
+
+#org @gText_PokemonChoiceLobby_RivalChoice4
+Cool. Now I know who to file a\ncomplaint about[.]
+
+#org @gText_PokemonChoiceLobby_HatsumiDefense5
+A-ah haha[.]\nWell[.] Uh[.]\p[.]L-let me give you your trainer\ngear, and I'll let you go! C'mere!
+
+#org @gText_PokemonChoiceLobby_HatsumiPackage
+Okay, gang!\pHere's your starter package,\ncourtesy of Oak Labs!
+
+#org @gText_PokemonChoiceLobby_YouGotStuff
+You got[.]\n[.]a ton of stuff from Hatsumi[.]!
+
+#org @gText_PokemonChoiceLobby_HatsumiExplain
+Okay, so... that's a Vs. Seeker,\nan Old Rod, a Town Map, a--
+
+#org @gText_PokemonChoiceLobby_RivalComplainAgain
+Hey, this Pok\edex is ancient!\nThis model doesn't even have a Rotom!
+
+#org @gText_PokemonChoiceLobby_HatsumiExplainAgain
+I-I'm sorry[.] Professor Oak only\nhad old HANDY909 models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\lYou can search for Pok\emon by habitat!l

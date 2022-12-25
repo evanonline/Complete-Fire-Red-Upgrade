@@ -1908,6 +1908,24 @@ void sp0B2_PokemonTypeInParty(void)
 	gSpecialVar_LastResult = PARTY_SIZE;
 }
 
+
+//@Details: Quick and dirty way of showing a Pokemon without their cry. Used for starters in randomized run.
+void ShowRelicanthPicNoCry(void)
+{
+    ScriptMenu_ShowPokemonPic(SPECIES_RELICANTH, 0xA, 0x3);
+}
+
+void ShowSigilyphPicNoCry(void)
+{
+    ScriptMenu_ShowPokemonPic(SPECIES_SIGILYPH, 0xA, 0x3);
+}
+
+void ShowPassimianPicNoCry(void)
+{
+    ScriptMenu_ShowPokemonPic(SPECIES_PASSIMIAN, 0xA, 0x3);
+}
+
+
 //@Details: Checks if any Pokemon in the player's party can learn Draco Meteor.
 //			Does not include a friendship check. That is handled in the tutor part.
 //@Returns: LastResult: 1 if any Pokemon can learn Draco Meteor. 0 otherwise.
@@ -3100,6 +3118,7 @@ extern const u8 sExampleText_8[];
 extern const u8 sExampleText_9[];
 extern const u8 sExampleText_10[];
 
+extern const u8 sRunSettingsPowerups[];
 extern const u8 sRunSettingsScalemons[];
 extern const u8 sRunSettingsRandomizer[];
 extern const u8 sRunSettingsCancel[];
@@ -3151,6 +3170,7 @@ static const u8* sMultichoiceSet2[] =
 
 static const u8* sMultichoiceRunOptionsPC[] =
 {
+	sRunSettingsPowerups,
 	sRunSettingsScalemons,
 	sRunSettingsRandomizer,
 	sRunSettingsCancel,

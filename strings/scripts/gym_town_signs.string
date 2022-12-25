@@ -1,5 +1,5 @@
 #org @gText_Pewter_Gym_Sign
-Pewter City Pok\emon Gym\nLeader: Brock\l[BLUE]"The Rock-Solid Pok\emon Trainer\"
+Pewter City Pok\emon Gym\nLeader: Brock\l[BLUE]"The Rock-Solid Pok\emon Expert\"
 
 #org @gText_Cerulean_Gym_Sign
 Cerulean City Pok\emon Gym\nLeader: Misty\l[BLUE]"The Tomboyish Mermaid\"
@@ -13,8 +13,8 @@ Vermilion City Pok\emon Gym\nLeader: Visquez\l[BLUE]"The Fulgurous Heir\"
 #org @gText_Celadon_Gym_Sign
 Celadon City Pok\emon Gym\nLeader: Erika\l[BLUE]"The Nature-Loving Princess\"
 
-#org @gText_Fuschia_Gym_Sign
-Fuschia City Pok\emon Gym\nLeader: Joy\l[BLUE]"The Exuberant Fae Friend\"
+#org @gText_Fuchsia_Gym_Sign
+Fuchsia City Pok\emon Gym\nLeader: Joy\l[BLUE]"The Exuberant Fae Friend\"
 
 #org @gText_Saffron_Gym_Sign
 Saffron City Pok\emon Gym\nLeader: Sabrina\l[BLUE]"The Mindful Mistress\"
@@ -49,14 +49,35 @@ Celadon City\nThe City of Rainbow Dreams
 #org @gText_Saffron_City_Sign
 Saffron City\nShining Big City
 
-#org @gText_Fuschia_City_Sign
-Fuschia City\nHappening and Passing City
+#org @gText_Fuchsia_City_Sign
+Fuchsia City\nHappening and Passing City
 
 #org @gText_Cinnabar_Island_Sign
-Cinnabar Island\nThe Town Reborn of Cinders
+Cinnabar Island\nThe Town Reborn From the Cinders
 
 #org @gText_Indigo_Plateau_Sign
 Indigo Plateau\nKanto's Highest Pok\emon Authority
+
+#org @gText_One_Island_Sign
+One Island\nKnot Island: Where Friends Gather
+
+#org @gText_Two_Island_Sign
+Two Island\nBoon Island: An Island for Two
+
+#org @gText_Three_Island_Sign
+Three Island\nKin Island: Isle of Family Bonding
+
+#org @gText_Four_Island_Sign
+Four Island\nFloe Island: Warm and Blu
+
+#org @gText_Five_Island_Sign
+Five Island\nChrono Island: Where Time Goes
+
+#org @gText_Six_Island_Sign
+Six Island\nFortune Island: Aged Wisdom Isle
+
+#org @gText_Seven_Island_Sign
+Seven Island\nQuest Island: Where Infinity Gazes
 
 #org @gText_Minnesota_Lodge_Sign
 Minnesota Lodge\nThe Lodge of Warriors and Potential

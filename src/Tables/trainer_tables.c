@@ -150,6 +150,21 @@ const struct TrainerMonNoItemCustomMoves sParty_IcedPathCamperRoss_2[] = {
     }
 };
 
+//Route 7
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route7InfielderDelbert[] = {
+    {
+        .iv = 1,
+        .lvl = 7,
+        .species = SPECIES_SPOINK,
+    },
+	{
+        .iv = 1,
+        .lvl = 6,
+        .species = SPECIES_THROH,
+    },
+};
+
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
 const struct Trainer gTrainers[] = {
@@ -286,5 +301,18 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_SEMI_SMART | AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_IcedPathCamperRoss_2),
         .party = {.NoItemCustomMoves = sParty_IcedPathCamperRoss_2}
-    }
+    },
+	
+	[TRAINER_ROUTE7_INFIELDER_DELBERT] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_INFIELDER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_INFIELDER,
+        .trainerName = {_D, _e, _l, _b, _e, _r, _t, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_Route7InfielderDelbert),
+        .party = {.NoItemDefaultMoves = sParty_Route7InfielderDelbert}
+    },
 };

@@ -61,4 +61,7 @@ EventScript_AfterDudeskull:
 	msgbox gText_Trade_Dudeskull_After MSG_FACE
 	end
 	
-	
+.global EventScript_OneIsland_NPC1
+EventScript_OneIsland_NPC1:
+	msgbox gText_OneIsland_ForeverGirl MSG_FACE
+	end
