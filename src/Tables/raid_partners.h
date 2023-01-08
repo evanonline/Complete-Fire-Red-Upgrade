@@ -34,7 +34,7 @@ static const struct BattleTowerSpread sRaidPartnerSpread_MayORAS_Rank2[] =
         .nature = NATURE_TIMID,
         .hpEv = 4,
         .spAtkEv = 252,
-        .spdfEv = 252,
+        .spdEv = 252,
         .hpIv = 31,
         .atkIv = 11,
         .defIv = 31,
@@ -215,7 +215,7 @@ static const struct BattleTowerSpread sRaidPartnerSpread_MayORAS_Rank6[] =
         .item = ITEM_LUM_BERRY,
         .ability = FRONTIER_ABILITY_1, //Magician
         .nature = NATURE_MILD,
-        .HpEv = 252,
+        .hpEv = 252,
         .spAtkEv = 248,
         .spdEv = 8,
         .hpIv = 31,
@@ -424,7 +424,7 @@ static const struct BattleTowerSpread sRaidPartnerSpread_MayRS_Rank6[] =
     },
     {
         .species = SPECIES_LATIAS,
-        .item = ITEM_SOULDEW,
+        .item = ITEM_SOUL_DEW,
         .ability = FRONTIER_ABILITY_1, //Levitate
         .nature = NATURE_TIMID,
 	.hpEv = 252,
@@ -505,7 +505,7 @@ static const struct BattleTowerSpread sRaidPartnerSpread_MayEm_Rank2[] =
         .species = SPECIES_CHIKORITA,
         .item = ITEM_NORMAL_GEM,
         .ability = FRONTIER_ABILITY_HIDDEN, //Leaf Guard
-        .nature = NATURE_ADAMNT,
+        .nature = NATURE_ADAMANT,
         .hpEv = 252,
         .atkEv = 252,
         .spdEv = 4,
@@ -599,7 +599,7 @@ static const struct BattleTowerSpread sRaidPartnerSpread_MayEm_Rank5[] =
             MOVE_SOFTBOILED,
             MOVE_COUNTER,
             MOVE_SEISMICTOSS,
-            MOVE_THUNDERWVE,
+            MOVE_THUNDERWAVE,
         },
         .forSingles = TRUE,
         .forDoubles = TRUE,
@@ -797,8 +797,8 @@ static const struct BattleTowerSpread sRaidPartnerSpread_Brendan_Rank5[] =
         .item = ITEM_SCEPTILITE,
         .ability = FRONTIER_ABILITY_1, //Overgrow
         .nature = NATURE_TIMID,
-	.defEv = 4,
-        .spatkEv = 252,
+        .spAtkEv = 252,
+        .spDefEv = 4,
         .spdEv = 252,
         .hpIv = 31,
         .atkIv = 31,
@@ -1674,27 +1674,7 @@ extern const u8 sTrainerName_Marley[];
 const struct MultiRaidTrainer gRaidPartners[] =
 {
 	{
-		.owNum = EVENT_OBJ_GFX_MAY,
-		.trainerClass = CLASS_PKMN_TRAINER,
-		.backSpriteId = TRAINER_BACK_PIC_MAY,
-		.gender = FEMALE,
-		.otId = 0x87116209,
-		.name = sTrainerName_May,
-		.spreads =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_May_Rank2,
-			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_May_Rank5,
-			[SIX_STAR_RAID] = sRaidPartnerSpread_May_Rank6,
-		},
-		.spreadSizes =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank2),
-			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank5),
-			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_May_Rank6),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_BRENDAN,
+		.owNum = EVENT_OBJ_GFX_BRENDAN_ORAS,
 		.trainerClass = CLASS_PKMN_TRAINER,
 		.backSpriteId = TRAINER_BACK_PIC_BRENDAN,
 		.gender = MALE,
@@ -1711,6 +1691,86 @@ const struct MultiRaidTrainer gRaidPartners[] =
 			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank2),
 			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank5),
 			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Brendan_Rank6),
+		},
+	},
+	{
+		.owNum = EVENT_OBJ_GFX_MAY_ORAS,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_MAY_ORAS,
+		.gender = FEMALE,
+		.otId = 0x87116209,
+		.name = sTrainerName_May,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_MayORAS_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_MayORAS_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_MayORAS_Rank6,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayORAS_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayORAS_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayORAS_Rank6),
+		},
+	},
+	{
+		.owNum = EVENT_OBJ_GFX_MAY_RS,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_MAY_RS,
+		.gender = FEMALE,
+		.otId = 0x87116209,
+		.name = sTrainerName_May,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_MayRS_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_MayRS_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_MayRS_Rank6,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayRS_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayRS_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayRS_Rank6),
+		},
+	},
+	{
+		.owNum = EVENT_OBJ_GFX_MAY_EM,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_MAY_EM,
+		.gender = FEMALE,
+		.otId = 0x87116209,
+		.name = sTrainerName_May,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_MayEm_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_MayEm_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_MayEm_Rank6,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayEm_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayEm_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_MayEm_Rank6),
+		},
+	},
+	{
+		.owNum = EVENT_OBJ_GFX_PRIMO,
+		.trainerClass = CLASS_PKMN_TRAINER,
+		.backSpriteId = TRAINER_BACK_PIC_PRIMO,
+		.gender = MALE,
+		.otId = 0x87116209,
+		.name = sTrainerName_Primo,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank2,
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank5,
+			[SIX_STAR_RAID] = sRaidPartnerSpread_Primo_Rank6,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank2),
+			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank5),
+			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank6),
 		},
 	},
 	{
@@ -1731,26 +1791,6 @@ const struct MultiRaidTrainer gRaidPartners[] =
 			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank2),
 			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank5),
 			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_OldMan_Rank6),
-		},
-	},
-	{
-		.owNum = EVENT_OBJ_GFX_PRIMO,
-		.trainerClass = CLASS_PKMN_TRAINER,
-		.backSpriteId = TRAINER_BACK_PIC_POKE_DUDE,
-		.gender = MALE,
-		.otId = 0x87116209,
-		.name = sTrainerName_Primo,
-		.spreads =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank2,
-			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = sRaidPartnerSpread_Primo_Rank5,
-			[SIX_STAR_RAID] = sRaidPartnerSpread_Primo_Rank6,
-		},
-		.spreadSizes =
-		{
-			[ONE_STAR_RAID ... THREE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank2),
-			[FOUR_STAR_RAID ... FIVE_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank5),
-			[SIX_STAR_RAID] = NELEMS(sRaidPartnerSpread_Primo_Rank6),
 		},
 	},
 	{

@@ -188,13 +188,15 @@
 
 //Backsprites
 #define TRAINER_BACK_PIC_RED              	0
-#define TRAINER_BACK_PIC_LEAF             	1
+#define TRAINER_BACK_PIC_SHERRY				1
 #define TRAINER_BACK_PIC_BRENDAN          	2
-#define TRAINER_BACK_PIC_MAY              	3
-#define TRAINER_BACK_PIC_POKE_DUDE        	4
-#define TRAINER_BACK_PIC_OLD_MAN 			5
-#define TRAINER_BACK_PIC_MARLEY             		6
-#define TRAINER_BACK_PIC_SHERRY				7
+#define TRAINER_BACK_PIC_MAY_ORAS           3
+#define TRAINER_BACK_PIC_MAY_RS           	4
+#define TRAINER_BACK_PIC_MAY_EM           	5
+#define TRAINER_BACK_PIC_PRIMO      	  	6
+#define TRAINER_BACK_PIC_OLD_MAN 			7
+#define TRAINER_BACK_PIC_MARLEY             8
+
 
 #ifndef UNBOUND //CHANGE THESE
 
