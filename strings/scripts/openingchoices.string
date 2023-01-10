@@ -1,23 +1,17 @@
 #org @gText_OpeningSibEntry
-Hey, sib!\nThe Professor's aide just got here!\lWe can go choose our Pok\emon now!
+There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC to the left that lets\nyou set a bunch of options.
 
-#org @gText_OpeningOptionsStart
-Before we go, you can put your\nTrainer Card into that PC,\land access some [RED]Advanced Settings!
-
-#org @gText_OpeningOptionsStart2
-But if you're ready, we can all go\ntogether, and meet our Pok\emon!
-
-#org @gText_OpeningOptionsIntro
+#org @gText_OpeningOptionsScanCheck
 Scanning Trainer Card[.]
 
 #org @gText_OpeningOptionsActive
-Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!
+Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!\p[ORANGE]DEV: this menu is softlock\nprone rn
 
 #org @gText_WhichSetting
 Which setting would you like to\naccess?
 
 #org @gText_OpeningOptionsPowerups
-Would you like to activate\n[GREEN]Powerups[BLACK]?
+Would you like to activate\n[GREEN]Powerups[BLACK]?\p[ORANGE]DEV: this setting\ncurrently does nothing
 
 #org @gText_OpeningOptionsPowerupsExplain
 Z-Moves, Mega Evolution, Dynamax\nand G-Max are considered Powerups.\pWith Powerups enabled, you'll get\na [BLUE]Mega Bracelet[BLACK] and [BLUE]Z-Power Ring[BLACK]\lin your Trainer Package.\pWith Powerups restricted, you will\nonly find Mega Stones for Pok\emon\lwith a [RED]base stat total under 490[BLACK].\pWith Powerups disabled, you will\nnot receive any of these items.\pLeague trainers will not use any\nPowerups unavailable to you.\pYou will always receive a [BLUE]Dynamax\nBand[BLACK].\pHowever, if Powerups are\ndisabled, Dynamax will only be\lavailable in Raid Battles.\pOn [RED]all[BLACK] settings, Powerups can be\nobtained at the [GREEN]Battle Frontier[BLACK].
@@ -79,11 +73,29 @@ Randomizer Mode [BLUE]enabled[BLACK].
 #org @gText_RandomizerEnabledNo
 Randomizer Mode [RED]disabled[BLACK].
 
+#org @gText_OpeningOptionsSinnohProblem
+Would you like to activate\n[GREEN]Sinnoh Problem Mode[BLACK]?\p[ORANGE]DEV: this setting currently\ndoes nothing\pinteraction between sinnoh problem\nand randomizer TBD
+
+#org @gText_OpeningOptionsSinnohProblemExplain
+When active, the only wild Pok\emon\nwill be those found in\lthe original Sinnoh Pok\edex.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
+
+#org @gText_SinnohProblemCurrentlyDisabled
+Sinnoh Problem Mode is currently\n[RED]disabled[BLACK].
+
+#org @gText_SinnohProblemCurrentlyEnabled
+Sinnoh Problem Mode is currently\n[BLUE]enabled[BLACK].
+
+#org @gText_SinnohProblemEnabledYes
+Sinnoh Problem Mode [BLUE]enabled[BLACK].
+
+#org @gText_SinnohProblemEnabledNo
+Sinnoh Problem Mode [RED]disabled[BLACK].
+
 #org @gText_OpeningOptionsPCDone
 Thank you! Good luck on your\nPok\emon journey!
 
 #org @gText_OpeningSibWarning
-You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to access those\nsettings again!
+You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to access those\nafter we leave!
 
 #org @gText_OpeningSibGo
 Alright! Let's go!\nI'm so excited!
@@ -182,7 +194,7 @@ Hey! Not cool[.]\p[.] [.] [.]\nWell, let me see who I get[.]
 Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn
-All three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])
+All three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])\pNow, I've got all your gear, too!\nC'mere!
 
 #org @gText_PokemonChoiceLobby_RivalChoice1
 Hey[.]\nWhat's up with these starters?!
@@ -211,11 +223,26 @@ Cool. Now I know who to file a\ncomplaint about[.]
 #org @gText_PokemonChoiceLobby_HatsumiDefense5
 A-ah haha[.]\nWell[.] Uh[.]\p[.]L-let me give you your trainer\ngear, and I'll let you go! C'mere!
 
+#org @gText_PokemonChoiceLobby_SibIntertalk2
+(Hey, sib[.] [RIVAL] is\nkind of embarassing us[.])
+
+#org @gText_PokemonChoiceLobby_SibIntertalk2_Rando
+Wow, crazy!\nWe all wanted to randomize!
+
+#org @gText_PokemonChoiceLobby_RivalIntertalk2
+[.] [.] [.] Well[.]\pIt IS nice to have a Pok\emon[.]\nBut[.]
+
+#org @gText_PokemonChoiceLobby_RivalIntertalk2_Rando
+Hmmph. I guess we're on equal\nfooting.\pI wasn't expecting us all to\nrandomize.
+
 #org @gText_PokemonChoiceLobby_HatsumiPackage
-Okay, gang!\pHere's your starter package,\ncourtesy of Oak Labs!
+Okay!\pHere's your starter package,\ncourtesy of Oak Labs!
 
 #org @gText_PokemonChoiceLobby_YouGotStuff
 You got[.]\n[.]a ton of stuff from Hatsumi[.]!
+
+#org @gText_PokemonChoiceLobby_OthersGotStuff
+[.]Oh, and so did your friends!
 
 #org @gText_PokemonChoiceLobby_HatsumiExplain
 Okay, so... that's a Vs. Seeker,\nan Old Rod, a Town Map, a--
@@ -224,4 +251,4 @@ Okay, so... that's a Vs. Seeker,\nan Old Rod, a Town Map, a--
 Hey, this Pok\edex is ancient!\nThis model doesn't even have a Rotom!
 
 #org @gText_PokemonChoiceLobby_HatsumiExplainAgain
-I-I'm sorry[.] Professor Oak only\nhad old HANDY909 models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\lYou can search for Pok\emon by habitat!l
+I-I'm sorry[.] Professor Oak only\nhad old HANDY909 models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\pLook! You can search for Pok\emon\nby habitat!

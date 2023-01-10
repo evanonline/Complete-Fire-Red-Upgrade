@@ -41,8 +41,32 @@ Scalemons Mode
 #org @sRunSettingsRandomizer
 Randomizer Mode
 
+#org @sRunSettingsSinnohProblem
+Sinnoh Problem!
+
 #org @sRunSettingsCancel
-End
+Cancel
+
+#org @sRunSettingsEnableThisMode
+Enable this mode
+
+#org @sRunSettingsDisableThisMode
+Disable this mode
+
+#org @sRunSettingsGimmeDetails
+Explain this setting
+
+#org @sRunSettingsEnableAllPowerups
+Enable all powerups
+
+#org @sRunSettingsEnableRestrictedPowerups
+Enable restricted powerups
+
+#org @sRunSettingsDisableAllPowerups
+Disable all powerups
+
+#org @sRunSettings
+List Restricted Exceptions
 
 #org @gText_VermilionPortTourismBoardOption1
 Worn ad

@@ -3121,7 +3121,15 @@ extern const u8 sExampleText_10[];
 extern const u8 sRunSettingsPowerups[];
 extern const u8 sRunSettingsScalemons[];
 extern const u8 sRunSettingsRandomizer[];
+extern const u8 sRunSettingsSinnohProblem[];
 extern const u8 sRunSettingsCancel[];
+
+extern const u8 sRunSettingsEnableThisMode[];
+extern const u8 sRunSettingsDisableThisMode[];
+extern const u8 sRunSettingsGimmeDetails[];
+extern const u8 sRunSettingsEnableAllPowerups[];
+extern const u8 sRunSettingsEnableRestrictedPowerups[];
+extern const u8 sRunSettingsDisableAllPowerups[];
 
 extern const u8 sText_1[];
 extern const u8 sText_2[];
@@ -3173,6 +3181,24 @@ static const u8* sMultichoiceRunOptionsPC[] =
 	sRunSettingsPowerups,
 	sRunSettingsScalemons,
 	sRunSettingsRandomizer,
+	sRunSettingsSinnohProblem,
+	sRunSettingsCancel,
+};
+
+static const u8* sMultichoiceRunOptionsPC_Choice[] =
+{
+	sRunSettingsEnableThisMode,
+	sRunSettingsDisableThisMode,
+	sRunSettingsGimmeDetails,
+	sRunSettingsCancel,
+};
+
+static const u8* sMultichoiceRunOptionsPC_ChoicePowerups[] =
+{
+	sRunSettingsEnableAllPowerups,
+	sRunSettingsEnableRestrictedPowerups,
+	sRunSettingsDisableAllPowerups,
+	sRunSettingsGimmeDetails,
 	sRunSettingsCancel,
 };
 
@@ -3182,6 +3208,8 @@ const struct ScrollingMulti gScrollingSets[] =
 	{sMultichoiceSet1, ARRAY_COUNT(sMultichoiceSet1)},
 	{sMultichoiceSet2, ARRAY_COUNT(sMultichoiceSet2)},
 	{sMultichoiceRunOptionsPC, ARRAY_COUNT(sMultichoiceRunOptionsPC)},
+	{sMultichoiceRunOptionsPC_Choice, ARRAY_COUNT(sMultichoiceRunOptionsPC_Choice)},
+	{sMultichoiceRunOptionsPC_ChoicePowerups, ARRAY_COUNT(sMultichoiceRunOptionsPC_ChoicePowerups)},
 };
 
 //Link number of opts shown at once to the box height
