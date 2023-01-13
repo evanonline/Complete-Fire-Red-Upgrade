@@ -1,17 +1,20 @@
 #org @gText_OpeningSibEntry
-There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC to the left that lets\nyou set a bunch of options.
+There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC behind you that lets\nyou set a bunch of options.\pCheck that out if you want, and\nthen come back here!
+
+#org @gText_OpeningOptionsMenusSuck
+Oh[.]\nThe Options PC is out of order[.]
 
 #org @gText_OpeningOptionsScanCheck
 Scanning Trainer Card[.]
 
 #org @gText_OpeningOptionsActive
-Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!\p[ORANGE]DEV: this menu is softlock\nprone rn
+Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!\p[RED]DEV: this menu is buggy and\nass such currently disabled
 
 #org @gText_WhichSetting
 Which setting would you like to\naccess?
 
 #org @gText_OpeningOptionsPowerups
-Would you like to activate\n[GREEN]Powerups[BLACK]?\p[ORANGE]DEV: this setting\ncurrently does nothing
+Would you like to activate\n[GREEN]Powerups[BLACK]?\p[RED]DEV: this setting\ncurrently does nothing
 
 #org @gText_OpeningOptionsPowerupsExplain
 Z-Moves, Mega Evolution, Dynamax\nand G-Max are considered Powerups.\pWith Powerups enabled, you'll get\na [BLUE]Mega Bracelet[BLACK] and [BLUE]Z-Power Ring[BLACK]\lin your Trainer Package.\pWith Powerups restricted, you will\nonly find Mega Stones for Pok\emon\lwith a [RED]base stat total under 490[BLACK].\pWith Powerups disabled, you will\nnot receive any of these items.\pLeague trainers will not use any\nPowerups unavailable to you.\pYou will always receive a [BLUE]Dynamax\nBand[BLACK].\pHowever, if Powerups are\ndisabled, Dynamax will only be\lavailable in Raid Battles.\pOn [RED]all[BLACK] settings, Powerups can be\nobtained at the [GREEN]Battle Frontier[BLACK].
@@ -74,10 +77,10 @@ Randomizer Mode [BLUE]enabled[BLACK].
 Randomizer Mode [RED]disabled[BLACK].
 
 #org @gText_OpeningOptionsSinnohProblem
-Would you like to activate\n[GREEN]Sinnoh Problem Mode[BLACK]?\p[ORANGE]DEV: this setting currently\ndoes nothing\pinteraction between sinnoh problem\nand randomizer TBD
+Would you like to activate\n[GREEN]Sinnoh Problem Mode[BLACK]?\p[RED]DEV: this setting currently\ndoes nothing\pinteraction between sinnoh problem\nand randomizer TBD
 
 #org @gText_OpeningOptionsSinnohProblemExplain
-When active, the only wild Pok\emon\nwill be those found in\lthe original Sinnoh Pok\edex.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
+When active, the only wild Pok\emon\nwill be those found in the original\lSinnoh Pok\edex.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
 
 #org @gText_SinnohProblemCurrentlyDisabled
 Sinnoh Problem Mode is currently\n[RED]disabled[BLACK].
@@ -194,7 +197,7 @@ Hey! Not cool[.]\p[.] [.] [.]\nWell, let me see who I get[.]
 Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn
-All three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])\pNow, I've got all your gear, too!\nC'mere!
+I'm Hatsumi, by the way[.]!\pAll three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])\pNow, I've got all your gear, too!\nC'mere!
 
 #org @gText_PokemonChoiceLobby_RivalChoice1
 Hey[.]\nWhat's up with these starters?!
@@ -239,16 +242,49 @@ Hmmph. I guess we're on equal\nfooting.\pI wasn't expecting us all to\nrandomize
 Okay!\pHere's your starter package,\ncourtesy of Oak Labs!
 
 #org @gText_PokemonChoiceLobby_YouGotStuff
-You got[.]\n[.]a ton of stuff from Hatsumi[.]!
+You got[.]\n[.]a TON of stuff from Hatsumi[.]!
 
 #org @gText_PokemonChoiceLobby_OthersGotStuff
 [.]Oh, and so did your friends!
 
-#org @gText_PokemonChoiceLobby_HatsumiExplain
-Okay, so... that's a Vs. Seeker,\nan Old Rod, a Town Map, a--
+#org @gText_PokemonChoiceLobby_HatsumiExplainStuff
+Okay, so... there's your Pok\edex,\nwith National AND New Kanto orders.\pYou've also got your DexNav,\nyour Vs. Seeker, a Town Map,\la Berry Pouch, a-
 
 #org @gText_PokemonChoiceLobby_RivalComplainAgain
-Hey, this Pok\edex is ancient!\nThis model doesn't even have a Rotom!
+Hey, this Pok\edex is ancient!\pWhere's the Rotom?!\nIt should have a Rotom!
 
 #org @gText_PokemonChoiceLobby_HatsumiExplainAgain
-I-I'm sorry[.] Professor Oak only\nhad old HANDY909 models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\pLook! You can search for Pok\emon\nby habitat!
+I-I'm sorry[.] Professor Oak only\nhad old [BLUE]HANDY909[BLACK] models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\pLook! You can search for Pok\emon\nby habitat!
+
+#org @gText_PokemonChoiceLobby_SibApologize
+Sounds cool to me, honestly!\nThank you, Miss Hatsumi!\pI'm sorry my friend is being a\nweenie.
+
+#org @gText_PokemonChoiceLobby_RivalWeenified
+[RED]WEENIE?!?!?
+
+#org @gText_PokemonChoiceLobby_HatsumiFinal1
+H-heh ha ha[.]!\nUh[.]
+
+#org @gText_PokemonChoiceLobby_HatsumiFinal2
+Ah! I've been here too long!\nOh no!\pI still have so much stuff to\ndo for the professor!\lI gotta jet, kiddos!\lA-adultos!\lH-heh ha ha[.]!
+
+#org @gText_PokemonChoiceLobby_RivalUnimpressed
+She's just out of here already?!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere1
+We should head out too, gang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere2
+We should head out too, gang!\pC'mon! I wanna go see what\nmy Passimian can do!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere3
+We should head out too, gang!\pC'mon! I wanna go see what\nmy Relicanth can do!
+
+#org @gText_PokemonChoiceLobby_RivalAngyAngy1
+Ahghghg! COME BACK HERE!
+
+#org @gText_PokemonChoiceLobby_RivalAngyAngy2
+AT LEAST HOLD THE ELEVATOR FOR ME!
+
+#org @gText_PokemonChoiceLobby_RivalAngyAngy3
+[.]I am NOT a weenie[.]!

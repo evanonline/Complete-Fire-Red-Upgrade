@@ -17,12 +17,7 @@ EventScript_Route6_IcePathSign:
 
 .global EventScript_Route6_BrendanFirstAppear
 EventScript_Route6_BrendanFirstAppear:
-	loadpointer 0x0 gText_NameBrendan
-	setvar 0x8000 0x1
-	setvar 0x8001 0xB
-	setvar 0x8002 0x8
-	setvar 0x8003 0x2
-	callasm 0x8FB0001
+	call EventScript_NameBrendan
 	checkflag FLAG_BRENDANFIRST_SPOKEN
 	if SET _goto EventScript_Route6_BrendanFirstAppear_Talk2
 	msgbox gText_Route6_BrendanFirstAppear MSG_FACE
