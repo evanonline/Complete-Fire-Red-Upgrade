@@ -17,18 +17,18 @@ EventScript_Route6_IcePathSign:
 
 .global EventScript_Route6_BrendanFirstAppear
 EventScript_Route6_BrendanFirstAppear:
-	call EventScript_NameBrendan
+	@call EventScript_NameBrendan
 	checkflag FLAG_BRENDANFIRST_SPOKEN
 	if SET _goto EventScript_Route6_BrendanFirstAppear_Talk2
 	msgbox gText_Route6_BrendanFirstAppear MSG_FACE
 	setflag FLAG_BRENDANFIRST_SPOKEN
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
 EventScript_Route6_BrendanFirstAppear_Talk2:
 	msgbox gText_Route6_BrendanFirstAppear_FollowUp MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	

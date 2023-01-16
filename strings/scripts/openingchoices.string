@@ -8,7 +8,7 @@ Oh[.]\nThe Options PC is out of order[.]
 Scanning Trainer Card[.]
 
 #org @gText_OpeningOptionsActive
-Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!\p[RED]DEV: this menu is buggy and\nass such currently disabled
+Welcome, [PLAYER]!\pThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou may activate [RED]challenging\ngameplay modifiers[BLACK] here.\p[RED]These settings will persist for\nthe rest of your League challenge,\l[BLACK]and [RED]cannot be changed later.\pFirst-timers may want to avoid these\noptions!\p[RED]DEV: this menu is vulnerable and\nshould be updated
 
 #org @gText_WhichSetting
 Which setting would you like to\naccess?
@@ -17,10 +17,10 @@ Which setting would you like to\naccess?
 Would you like to activate\n[GREEN]Powerups[BLACK]?\p[RED]DEV: this setting\ncurrently does nothing
 
 #org @gText_OpeningOptionsPowerupsExplain
-Z-Moves, Mega Evolution, Dynamax\nand G-Max are considered Powerups.\pWith Powerups enabled, you'll get\na [BLUE]Mega Bracelet[BLACK] and [BLUE]Z-Power Ring[BLACK]\lin your Trainer Package.\pWith Powerups restricted, you will\nonly find Mega Stones for Pok\emon\lwith a [RED]base stat total under 490[BLACK].\pWith Powerups disabled, you will\nnot receive any of these items.\pLeague trainers will not use any\nPowerups unavailable to you.\pYou will always receive a [BLUE]Dynamax\nBand[BLACK].\pHowever, if Powerups are\ndisabled, Dynamax will only be\lavailable in Raid Battles.\pOn [RED]all[BLACK] settings, Powerups can be\nobtained at the [GREEN]Battle Frontier[BLACK].
+Z-Moves, Mega Evolution, Dynamax\nand G-Max are considered Powerups.\pWith Powerups enabled, you'll be\nable to find and use these powers.\pWith Powerups restricted, you will\nnot find Mega Stones for Pok\emon\l[RED]with base stat totals over 490.[BLACK]\pWith Powerups disabled, you will\nnot be able to use [RED]any[BLACK] powers.\pDynamax is usable in Raid Battles\non all settings.\pLeague trainers will not use any\nPowerups unavailable to you.\pOn [RED]all[BLACK] settings, Powerups can be\nobtained at the [GREEN]Battle Frontier[BLACK].
 
 #org @gText_OpeningOptionsPowerupsExplainRestricted
-The following Pok\emon's Mega\nEvolutions are unrestricted:\pBeedrill, Pidgeot, Sableye, Mawile,\nMedicham, Manectric, Banette,\lSharpedo, Camerupt, Absol, Glalie,\lLopunny, Audino.
+The following Pok\emon's Mega\nStones can be found in Restricted:\pBeedrill, Pidgeot, Sableye, Mawile,\nMedicham, Manectric, Banette,\lSharpedo, Camerupt, Absol, Glalie,\lLopunny, Audino.
 
 #org @gText_PowerupsCurrentlyDisabled
 Powerups are currently\n[RED]disabled[BLACK].
@@ -35,7 +35,7 @@ Powerups are currently\n[BLUE]enabled[BLACK].
 Powerups [BLUE]enabled[BLACK].
 
 #org @gText_PowerupsEnabledRestricted
-Powerups [BLUE]restricted[BLACK].
+Powerups set to [BLUE]restricted[BLACK].
 
 #org @gText_PowerupsEnabledNo
 Powerups [RED]disabled[BLACK].
@@ -80,7 +80,7 @@ Randomizer Mode [RED]disabled[BLACK].
 Would you like to activate\n[GREEN]Sinnoh Problem Mode[BLACK]?\p[RED]DEV: this setting currently\ndoes nothing\pinteraction between sinnoh problem\nand randomizer TBD
 
 #org @gText_OpeningOptionsSinnohProblemExplain
-When active, the only wild Pok\emon\nwill be those found in the original\lSinnoh Pok\edex.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
+In the wild, only Pok\emon from the\noriginal Sinnoh Pok\edex will spawn.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
 
 #org @gText_SinnohProblemCurrentlyDisabled
 Sinnoh Problem Mode is currently\n[RED]disabled[BLACK].

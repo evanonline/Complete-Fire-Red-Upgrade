@@ -164,10 +164,10 @@ EventScript_VermilionIntro_SibFirstMessage:
 	sound 0x1C
 	sound 0x1C
 	applymovement 0xFF EventScript_Intro_EveryoneFaceRight
-	call EventScript_NameSib
+	@call eventscript_nameSib
 	msgbox gText_OpeningSibEntry MSG_KEEPOPEN
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	setvar 0x511C 0x1
 	release
 	end
@@ -183,11 +183,11 @@ EventScript_ReleaseEnd:
 
 .global EventScript_VermilionIntro_Rival_First
 EventScript_VermilionIntro_Rival_First:
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	checkflag FLAG_INTROCUTSCENE1
 	if 0x1 _goto EventScript_VermilionIntro_Rival_Second
 	msgbox gText_PokemonChoiceLobby_Rival_1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
@@ -195,7 +195,7 @@ EventScript_VermilionIntro_Rival_Second:
 	checkflag FLAG_STARTER_CHOSEN
 	if 0x1 _goto EventScript_VermilionIntro_Rival_Third
 	msgbox gText_PokemonChoiceLobby_RivalIntertalk1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
@@ -203,13 +203,13 @@ EventScript_VermilionIntro_Rival_Third:
 	checkflag 0x940
 	if 0x1 _goto EventScript_VermilionIntro_Rival_Third_Rando
 	msgbox gText_PokemonChoiceLobby_RivalIntertalk2 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
 EventScript_VermilionIntro_Rival_Third_Rando:
 	msgbox gText_PokemonChoiceLobby_RivalIntertalk2_Rando MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 
@@ -223,20 +223,20 @@ EventScript_VermilionIntro_Sib_First:
     end
 	
 EventScript_VermilionIntro_Sib_First_Sherry:
-	call EventScript_NameSherry
+	@call eventscript_nameSherry
 	checkflag FLAG_INTROCUTSCENE1
 	if 0x1 _goto EventScript_VermilionIntro_Sib_Second
 	msgbox gText_PokemonChoiceLobby_SibSherry_1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
 EventScript_VermilionIntro_Sib_First_Brandy:
-	call EventScript_NameBrandy
+	@call eventscript_nameBrandy
 	checkflag FLAG_INTROCUTSCENE1
 	if 0x1 _goto EventScript_VermilionIntro_Sib_Second
 	msgbox gText_PokemonChoiceLobby_SibBrandy_1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
@@ -244,7 +244,7 @@ EventScript_VermilionIntro_Sib_Second:
 	checkflag FLAG_STARTER_CHOSEN
 	if 0x1 _goto EventScript_VermilionIntro_Sib_Third
 	msgbox gText_PokemonChoiceLobby_SibIntertalk1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
@@ -252,13 +252,13 @@ EventScript_VermilionIntro_Sib_Third:
 	checkflag 0x940
 	if 0x1 _goto EventScript_VermilionIntro_Sib_Third_Rando
 	msgbox gText_PokemonChoiceLobby_SibIntertalk2 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
 EventScript_VermilionIntro_Sib_Third_Rando:
 	msgbox gText_PokemonChoiceLobby_SibIntertalk2_Rando MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
@@ -269,12 +269,12 @@ EventScript_VermilionIntro2_HatsumiEnters:
 	lockall
 	setflag 0x95E
 	setvar 0x511B 0x0
-	call EventScript_NameUnknown
+	@call eventscript_nameUnknown
 	playsong 0x12E 0x0
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction1 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0x1 EventScript_Intro_EveryoneFaceUp2
 	sound 0x15
 	waitmovement 0x0
@@ -284,26 +284,26 @@ EventScript_VermilionIntro2_HatsumiEnters:
 	applymovement 0x3 EventScript_Intro_HatsumiEnter1
 	applymovement 0x2 EventScript_Intro_RivalMoveToHatsumi
 	waitmovement 0x0
-	call EventScript_NameHatsumiAide
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction2 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x25
 	applymovement 0x3 EventScript_Intro_HatsumiEnter2
 	pause 0x35
-	call EventScript_NameHatsumiAide
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction3 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0x3 EventScript_Intro_HatsumiEnter2
 	pause 0x35
-	call EventScript_NameHatsumiAide
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction4 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0x3 EventScript_Intro_HatsumiEnter2
 	applymovement 0x1 EventScript_Intro_EveryoneFaceRight
 	applymovement 0xFF EventScript_Intro_EveryoneFaceRight
@@ -316,39 +316,39 @@ EventScript_VermilionIntro2_HatsumiEnters:
 	pause 0x30
 	applymovement 0x2 EventScript_Intro_RivalSteppy
 	pause 0x15
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_Whisk_Introduction1 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0x3 EventScript_Intro_EveryoneFaceLeft2
 	sound 0x15
 	waitmovement 0x0
 	pause 0x20
-	call EventScript_NameHatsumiAide
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction5 MSG_KEEPOPEN
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_Whisk_Introduction2 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameHatsumiAide
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction6 MSG_KEEPOPEN
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_Whisk_Introduction3 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x10
 	applymovement 0x1 EventScript_Intro_SibToBalls
 	applymovement 0x2 EventScript_Intro_RivalToBalls
 	applymovement 0x3 EventScript_Intro_HatsumiToBalls
 	applymovement 0xFF EventScript_Intro_PlayerToBalls
 	waitmovement 0x0
-	callasm 0x8FB0101
-	call EventScript_NameHatsumiAide
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_Hatsumi_Introduction7 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	fadedefault
 	releaseall
 	end
@@ -361,11 +361,11 @@ EventScript_VermilionIntro_Hatsumi:
 	end
 	
 EventScript_VermilionIntro_Hatsumi_Talk:	
-	call EventScript_NameHatsumiAide
+	@call eventscript_nameHatsumiAide
 	checkflag FLAG_STARTER_CHOSEN
 	if 0x1 _goto EventScript_VermilionIntro_Hatsumi_GivesDaItems
 	msgbox gText_PokemonChoiceLobby_HatsumiIntertalk1 MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 
@@ -569,12 +569,12 @@ EventScript_VermilionIntro_SibStarterSelect_WhichSib:
 	end
 
 EventScript_VermilionIntro_SibStarterSelect_NameSherry:
-	call EventScript_NameSherry
+	@call eventscript_nameSherry
 	goto EventScript_VermilionIntro_SibStarterSelect
 	end
 
 EventScript_VermilionIntro_SibStarterSelect_NameBrandy:
-	call EventScript_NameBrandy
+	@call eventscript_nameBrandy
 	goto EventScript_VermilionIntro_SibStarterSelect
 	end
 	
@@ -589,7 +589,7 @@ EventScript_VermilionIntro_SibStarterSelect:
 	waitmovement 0x0
 	pause 0x15
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	checkflag FLAG_CHOSESTARTER1
 	if SET _goto EventScript_VermilionIntro_Starter1_NowSibRivalChoose
 	checkflag FLAG_CHOSESTARTER2
@@ -605,10 +605,10 @@ EventScript_VermilionIntro_Starter1_NowSibRivalChoose:
 	setflag 0x956
 	sound 0x17
 	pause 0x20
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	applymovement 0x2 EventScript_Intro_RivalAngySteppy
 	msgbox gText_PokemonChoiceLobby_RivalDestroyedOwnedBlastedSadTragic MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x10
 	applymovement 0x2 EventScript_Intro_RivalToBall3
 	waitmovement 0x0
@@ -627,10 +627,10 @@ EventScript_VermilionIntro_Starter2_NowSibRivalChoose:
 	setflag 0x957
 	sound 0x17
 	pause 0x20
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	applymovement 0x2 EventScript_Intro_RivalAngySteppy
 	msgbox gText_PokemonChoiceLobby_RivalDestroyedOwnedBlastedSadTragic MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x10
 	applymovement 0x2 EventScript_Intro_RivalToBall1
 	waitmovement 0x0
@@ -649,10 +649,10 @@ EventScript_VermilionIntro_Starter3_NowSibRivalChoose:
 	setflag 0x955
 	sound 0x17
 	pause 0x2
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	applymovement 0x2 EventScript_Intro_RivalAngySteppy
 	msgbox gText_PokemonChoiceLobby_RivalDestroyedOwnedBlastedSadTragic MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x10
 	applymovement 0x2 EventScript_Intro_RivalToBall2
 	waitmovement 0x0
@@ -667,7 +667,7 @@ EventScript_VermilionIntro_Starter3_NowSibRivalChoose:
 EventScript_VermilionIntro_StartersComplain:
 	applymovement 0x2 EventScript_Intro_EveryoneFaceUp1
 	pause 0x15
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalChoice1 MSG_KEEPOPEN
 	pause 0x5
 	applymovement 0x1 EventScript_Intro_EveryoneFaceUp1
@@ -676,33 +676,33 @@ EventScript_VermilionIntro_StartersComplain:
 	pause 0x15
 	applymovement 0x2 EventScript_Intro_RivalAngySteppyOnceMore
 	msgbox gText_PokemonChoiceLobby_RivalChoice2 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameHatsumiAide
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense1 MSG_KEEPOPEN
 	call EventScript_HatsumiNervousShuffle
 	waitmovement 0x0
 	pause 0x15
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense2 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameRival
+	@callasm 0x8FB0101
+	@call eventscript_nameRival
 	applymovement 0x2 EventScript_Intro_RivalAngySteppyOnceMore
 	msgbox gText_PokemonChoiceLobby_RivalChoice3 MSG_KEEPOPEN
 	call EventScript_HatsumiNervousShuffle
-	callasm 0x8FB0101
-	call EventScript_NameHatsumiAide
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumiAide
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense3 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameHatsumi
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumi
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense4 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameRival
+	@callasm 0x8FB0101
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalChoice4 MSG_KEEPOPEN
-	callasm 0x8FB0101
-	call EventScript_NameHatsumi
+	@callasm 0x8FB0101
+	@call eventscript_nameHatsumi
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense5 MSG_KEEPOPEN
 	waitmsg
 	closeonkeypress
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	releaseall
 	end
 	
@@ -760,15 +760,15 @@ EventScript_VermilionIntro_Starter3_RandomSibRivalWarp:
 EventScript_VermilionIntro_RandomizedStartersForAll2:
 	fadescreen 0x0
 	pause 0x30
-	call EventScript_NameHatsumi
+	@call eventscript_nameHatsumi
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn MSG_KEEPOPEN
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	release
 	end
 	
 EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	msgbox gText_PokemonChoiceLobby_HatsumiPackage MSG_FACE
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	pause 0x20
 	fadescreen 0x1
 	pause 0x15
@@ -804,25 +804,25 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	fadescreen 0x0
 	pause 0x30
 	playsong 0x12E 0x0
-	call EventScript_NameHatsumi
+	@call eventscript_nameHatsumi
 	msgbox gText_PokemonChoiceLobby_HatsumiExplainStuff MSG_NORMAL
 	applymovement 0x2 EventScript_Intro_ExclaimSlowSteppy
 	sound 0x15
 	waitmovement 0x0
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalComplainAgain MSG_KEEPOPEN
-	call EventScript_NameHatsumi
+	@call eventscript_nameHatsumi
 	applymovement 0x3 EventScript_Intro_EveryoneFaceUp1
 	msgbox gText_PokemonChoiceLobby_HatsumiExplainAgain MSG_KEEPOPEN
 	applymovement 0x1 EventScript_Intro_RivalAngySteppy
 	pause 0x10
-	call EventScript_NameSib
+	@call eventscript_nameSib
 	msgbox gText_PokemonChoiceLobby_SibApologize MSG_KEEPOPEN
 	applymovement 0x2 EventScript_Intro_EveryoneFaceLeft2
 	sound 0x15
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalWeenified MSG_KEEPOPEN
-	call EventScript_NameHatsumi
+	@call eventscript_nameHatsumi
 	msgbox gText_PokemonChoiceLobby_HatsumiFinal1 MSG_KEEPOPEN
 	applymovement 0x2 EventScript_Intro_EveryoneFaceDown
 	call EventScript_HatsumiNervousShuffle
@@ -861,10 +861,10 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	hidesprite 3
 	setvar 0x511B 0x1
 	pause 0x20
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalUnimpressed MSG_KEEPOPEN
 	applymovement 0x1 EventScript_Intro_RivalAngySteppyOnceMore
-	call EventScript_NameSib
+	@call eventscript_nameSib
 	checkflag FLAG_CHOSESTARTER1
 	if SET _call EventScript_SibHypedForSigilyph
 	checkflag FLAG_CHOSESTARTER2
@@ -881,21 +881,21 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	waitmovement 0x0
 	pause 0x10
 	hidesprite 1
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalAngyAngy1 MSG_KEEPOPEN
 	applymovement 0x2 EventScript_RivalLeavesLobby1
 	waitmovement 0x0
 	sound 0x42
 	checksound
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalAngyAngy2 MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0x2 EventScript_RivalLeavesLobby2
 	waitmovement 0x0
 	pause 0x15
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalAngyAngy3 MSG_KEEPOPEN
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	closeonkeypress
 	setflag FLAG_INTROCUTSCENE_DONE
 	setflag 0x952
@@ -940,17 +940,17 @@ EventScript_HatsumiNervousShuffle:
 
 EventScript_SibHypedForSigilyph:
 	msgbox gText_PokemonChoiceLobby_SibOuttaHere1 MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	return
 
 EventScript_SibHypedForPassimian:
 	msgbox gText_PokemonChoiceLobby_SibOuttaHere2 MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	return
 
 EventScript_SibHypedForRelicanth:
 	msgbox gText_PokemonChoiceLobby_SibOuttaHere3 MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	return
 
 EventScript_MoveSibIfCentered:
@@ -1199,9 +1199,9 @@ EventScript_RivalLeavesLobby2:
 
 EventScript_Intro_SibWhereGoing1:
 	setvar 0x511B 0x0
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalWhereGoing MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0xFF EventScript_Intro_PlayerAwayFromExit1
 	waitmovement 0x0
 	release
@@ -1209,9 +1209,9 @@ EventScript_Intro_SibWhereGoing1:
 	
 EventScript_Intro_SibWhereGoing2:
 	setvar 0x511B 0x0
-	call EventScript_NameRival
+	@call eventscript_nameRival
 	msgbox gText_PokemonChoiceLobby_RivalWhereGoing MSG_NORMAL
-	callasm 0x8FB0101
+	@callasm 0x8FB0101
 	applymovement 0xFF EventScript_Intro_PlayerAwayFromExit2
 	waitmovement 0x0
 	release

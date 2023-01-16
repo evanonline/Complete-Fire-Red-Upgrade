@@ -3127,6 +3127,7 @@ extern const u8 sRunSettingsCancel[];
 extern const u8 sRunSettingsEnableThisMode[];
 extern const u8 sRunSettingsDisableThisMode[];
 extern const u8 sRunSettingsGimmeDetails[];
+extern const u8 sRunSettingsListUnrestricted[];
 extern const u8 sRunSettingsEnableAllPowerups[];
 extern const u8 sRunSettingsEnableRestrictedPowerups[];
 extern const u8 sRunSettingsDisableAllPowerups[];
@@ -3185,31 +3186,12 @@ static const u8* sMultichoiceRunOptionsPC[] =
 	sRunSettingsCancel,
 };
 
-static const u8* sMultichoiceRunOptionsPC_Choice[] =
-{
-	sRunSettingsEnableThisMode,
-	sRunSettingsDisableThisMode,
-	sRunSettingsGimmeDetails,
-	sRunSettingsCancel,
-};
-
-static const u8* sMultichoiceRunOptionsPC_ChoicePowerups[] =
-{
-	sRunSettingsEnableAllPowerups,
-	sRunSettingsEnableRestrictedPowerups,
-	sRunSettingsDisableAllPowerups,
-	sRunSettingsGimmeDetails,
-	sRunSettingsCancel,
-};
-
 // Multichoice Lists
 const struct ScrollingMulti gScrollingSets[] =
 {
 	{sMultichoiceSet1, ARRAY_COUNT(sMultichoiceSet1)},
 	{sMultichoiceSet2, ARRAY_COUNT(sMultichoiceSet2)},
 	{sMultichoiceRunOptionsPC, ARRAY_COUNT(sMultichoiceRunOptionsPC)},
-	{sMultichoiceRunOptionsPC_Choice, ARRAY_COUNT(sMultichoiceRunOptionsPC_Choice)},
-	{sMultichoiceRunOptionsPC_ChoicePowerups, ARRAY_COUNT(sMultichoiceRunOptionsPC_ChoicePowerups)},
 };
 
 //Link number of opts shown at once to the box height

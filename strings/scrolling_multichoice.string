@@ -54,7 +54,7 @@ Enable this mode
 Disable this mode
 
 #org @sRunSettingsGimmeDetails
-Explain this setting
+Explain
 
 #org @sRunSettingsEnableAllPowerups
 Enable all powerups
@@ -65,8 +65,8 @@ Enable restricted powerups
 #org @sRunSettingsDisableAllPowerups
 Disable all powerups
 
-#org @sRunSettings
-List Restricted Exceptions
+#org @sRunSettingsListUnrestricted
+List Restricted exceptions
 
 #org @gText_VermilionPortTourismBoardOption1
 Worn ad

@@ -6,6 +6,7 @@
 .include "../asm_defines.s"
 
 ##.equ FLAG_BADGE03_GET, 0x822
+.equ FLAG_RANDOIMMUNITY, 0x993
 
 .global EventScript_MysteryGiftPerson
 EventScript_MysteryGiftPerson:
@@ -30,6 +31,8 @@ EventScript_MysteryGift_NoSpaceForMon:
 	end
 
 EventScript_MysteryGift_EnterPassword:
+	checkflag 0x940
+	if SET _call EventScript_MysteryGiftRandoImmunity1
     msgbox gText_PleaseEnterPassword MSG_FACE
     setvar 0x8000 1
     setvar 0x8001 1
@@ -40,6 +43,8 @@ EventScript_MysteryGift_EnterPassword:
     case 0, EventScript_MysteryGift_InvalidMysteryGift
     case 1, EventScript_MysteryGift_ClaimGift
     case 2, EventScript_MysteryGift_AlreadyReceieved
+	checkflag FLAG_RANDOIMMUNITY
+	if SET _call EventScript_MysteryGiftRandoImmunity2
     release
     end
 
@@ -48,6 +53,8 @@ EventScript_MysteryGift_InvalidMysteryGift:
     compare LASTRESULT 1
     goto_if_eq EventScript_MysteryGift_EnterPassword
     release
+	checkflag FLAG_RANDOIMMUNITY
+	if SET _call EventScript_MysteryGiftRandoImmunity2
     end
 
 EventScript_MysteryGift_ClaimGift: 
@@ -64,15 +71,21 @@ EventScript_MysteryGift_ClaimGift:
 	goto_if_eq EventScript_MysteryGift_EndGiveMon
 	call 0x81A8C27
 	call 0x81A74EB
+	checkflag FLAG_RANDOIMMUNITY
+	if SET _call EventScript_MysteryGiftRandoImmunity2
     release
     end
 
 EventScript_MysteryGift_EndGiveMon:
+	checkflag FLAG_RANDOIMMUNITY
+	if SET _call EventScript_MysteryGiftRandoImmunity2
     release
     end
 
 EventScript_MysteryGift_AlreadyReceieved:
     msgbox gText_AlreadyClaimedGift MSG_FACE
+	checkflag FLAG_RANDOIMMUNITY
+	if SET _call EventScript_MysteryGiftRandoImmunity2
     release
     end
 
@@ -84,4 +97,13 @@ EventScript_MysteryGift_AlreadyReceieved:
 EventScript_HideMysteryGiftMan:
 	setflag 0x70
 	return
+
+EventScript_MysteryGiftRandoImmunity1:
+	clearflag 0x940
+	setflag FLAG_RANDOIMMUNITY
+	return
 	
+EventScript_MysteryGiftRandoImmunity2:
+	setflag 0x940
+	clearflag FLAG_RANDOIMMUNITY
+	return
