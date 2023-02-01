@@ -9,18 +9,44 @@
 #include "../../include/new/build_pokemon.h"
 #include "../../include/new/build_pokemon_2.h"
 
+// Rival Battle 1 (Vermilion Port, outside)
+
+const struct TrainerMonNoItemDefaultMoves sParty_RivalBattle1_PlayerChoseRelicanth[] = {
+    {
+        .iv = 3,
+        .lvl = 5,
+        .species = SPECIES_PASSIMIAN,
+    },
+};
+	
+const struct TrainerMonNoItemDefaultMoves sParty_RivalBattle1_PlayerChoseSigilyph[] = {
+    {
+        .iv = 3,
+        .lvl = 5,
+        .species = SPECIES_RELICANTH,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_RivalBattle1_PlayerChosePassimian[] = {
+    {
+        .iv = 15,
+        .lvl = 5,
+        .species = SPECIES_SIGILYPH,
+    },
+};
+
 //Route 6
 
 const struct TrainerMonNoItemDefaultMoves sParty_Route6BugCatcherHorace[] = {
     {
         .iv = 3,
         .lvl = 4,
-        .species = SPECIES_METAPOD,
+        .species = SPECIES_BLIPBUG,
     },
 	{
         .iv = 3,
         .lvl = 4,
-        .species = SPECIES_KAKUNA,
+        .species = SPECIES_CATERPIE,
     },
 };
 
@@ -115,7 +141,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_3[] = {
 const struct TrainerMonNoItemDefaultMoves sParty_IcedPathCamperTroy[] = {
     {
         .iv = 0,
-        .lvl = 7,
+        .lvl = 6,
         .species = SPECIES_SNEASEL_H,
     }
 };
@@ -173,6 +199,49 @@ const struct Trainer gTrainers[] = {
         .trainerName = NO_NAME,
     },
 	
+	// Rival Battle 1
+	
+	[TRAINER_RIVALBATTLE1_PLAYER_CHOSE_RELICANTH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_RIVAL,		
+        .trainerName = NO_NAME, // Name replaced from RIVAL trainer classes
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .partySize = NELEMS(sParty_RivalBattle1_PlayerChoseRelicanth),
+        .party = {.NoItemDefaultMoves = sParty_RivalBattle1_PlayerChoseRelicanth}
+    },
+	
+	[TRAINER_RIVALBATTLE1_PLAYER_CHOSE_SIGILYPH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_RIVAL,
+        .trainerName = NO_NAME, // Name replaced from RIVAL trainer classes
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .partySize = NELEMS(sParty_RivalBattle1_PlayerChoseSigilyph),
+        .party = {.NoItemDefaultMoves = sParty_RivalBattle1_PlayerChoseSigilyph}
+    },
+		
+	[TRAINER_RIVALBATTLE1_PLAYER_CHOSE_PASSIMIAN] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_RIVAL,
+        .trainerName = NO_NAME, // Name replaced from RIVAL trainer classes
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .partySize = NELEMS(sParty_RivalBattle1_PlayerChosePassimian),
+        .party = {.NoItemDefaultMoves = sParty_RivalBattle1_PlayerChosePassimian}
+    },
+	
+	// Route 6
+	
 	[TRAINER_ROUTE6_BUGCATCHER_HORACE] = {
         .partyFlags = 0,
         .trainerClass = CLASS_BUG_CATCHER,
@@ -224,6 +293,8 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sParty_Route6SuperNerdDieter_1),
         .party = {.ItemCustomMoves = sParty_Route6SuperNerdDieter_1}
     },
+	
+	// Iced Path
 	
     [TRAINER_ICEDPATH_SWIMMER_FRANCINE] = {
         .partyFlags = 0,
@@ -302,6 +373,8 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sParty_IcedPathCamperRoss_2),
         .party = {.NoItemCustomMoves = sParty_IcedPathCamperRoss_2}
     },
+	
+	// Route 7
 	
 	[TRAINER_ROUTE7_INFIELDER_DELBERT] = {
         .partyFlags = 0,

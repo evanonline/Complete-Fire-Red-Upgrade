@@ -1,5 +1,8 @@
 #org @gText_VermilionPortHotel_TrainerSuite
-New Trainer Extended Stay Suites\nPowered by [GREEN]Oak Labs
+New Trainer Extended Stay Suites\nPowered by Oak Labs
+
+#org @gText_VermilionPort_VermilionHotelSign
+The hub of the sea!\nVermilion Hotel
 
 #org @gText_VermilionPortHotel_BajaBlastoiseMachine
 A [BLUE]Baja Blastoise Freestyle Machine[BLACK]!\nDo you want a drink?
@@ -59,7 +62,7 @@ I must know whose trucks these are[.]\nAre they for hotel staff?\lDock workers?\
 I have a friend who got run over\nby a truck once.\pThat's how I found out that\nPok\emon Centers treat people, too!\pHe's fine now, but he was in\nbad shape for a while.\pWhile he was unconscious,\nhe had this crazy dream[.]\pHe said he was reborn in a\n[GREEN]world where Pok\emon talked,[BLACK]\land [GREEN]humans didn't exist![BLACK]\pThere was some talk about a\n[BLUE]Rescue Team[BLACK] or something.\lHe still insists it was all real!\pDon't get hit by a truck.
 
 #org @gText_VermilionPortNPC1
-Are you from [RED]Aeos Island[BLACK]?\nThe place with Unite Battles?\lNo?\lOh, oh! Is it the [RED]Orange Islands[BLACK]?\pYou're definitely from SOME island[.]\nyou've got that islandy,\lsea-salty scent!\pOr maybe that's just the ocean\none tile away[.]
+What island are you from?\nThere's so many islands out there.\pYou're definitely from SOME island[.]\nyou've got that islandy,\lsea-salty scent!\pOr maybe that's just the ocean\ntwo tiles away[.]
 
 #org @gText_VermilionPortNPC2
 Ahh, the sea!\pHow I love the tranquil crashing of\nthe waves against the land[.]
@@ -68,16 +71,16 @@ Ahh, the sea!\pHow I love the tranquil crashing of\nthe waves against the land[.
 Ports are a place of coming and\ngoing.\pI don't have anywhere to go,\nthough.\pI simply enjoy watching\nthe movement of boats and people.
 
 #org @gText_VermilionPortTourismBoardIntro
-Many fliers are posted on the tourism board.\nRead them?
+Many fliers are posted on the\ntourism board. Read them?
 
 #org @gText_VermilionPortTourismBoardText1
-[RED]Battle! Trade! Evolve!\p[BLUE]Book a ship to the [GREEN]Warrior's Lodge[BLUE] to train with the\nhearty, cunning fighters of the frigid midwestern seas.\pThe power coursing through our land can\nevolve your Pok\emon into strange new regional forms like those discovered in\l[GREEN]Alola, Galar, and Hisui[BLUE]!\pAsk the nearest travel agent about your next visit to the [GREEN]Mi[BLUE][.]\p[BLACK]Ah[.] someone tore the rest of the flyer off[.]\n
+Battle! Trade! Evolve!\pBook a ship to the Warrior's Lodge!\nTrain with hearty, cunning fighters,\ldeep in the frigid midwestern seas!\pThe power coursing through our land\naffects regional evolutions!\pNo need to head to Alola or Galar!\nOur techniques have you covered!\pYou can even evolve your Pok\emon\nthe Hisuian way!\pJust do your training at the lodge\nin [GRAY]Min[.]ne[.]
+
+#org @gText_VermilionPortTourismBoardText1_TornOffEnd
+It seems that someone tore the rest\nof the flyer off[.]
 
 #org @gText_VermilionPortTourismBoardText2
-[BLUE]Heartwarming!\n[RED]Lavender Town[BLUE] has named [RED]Gengar[BLUE] its [RED]Official Ambassador[BLUE] to help welcome tourists to the town's gorgeous seaswept greens with its signature friendly smile!
-
-#org @gText_VermilionPortHotel_Calvervtutrp
-I really wanted to name my Houndoom\nsomething cool, like "Cerberus"!\pBut my baby sister mashed some buttons,\nand my Houndoom ended up being named[.]\l"Calvervtutrp\"[.]\pLuckily, you can rename your Pok\emon\nany time at Pok\emon Centers now!\pBut[.] we got too used to calling him\n"Calvervtutrp"[.]
+Lavender Town has named Gengar its\nOfficial Ambassador Pok\emon!\pWith its signature winsome smile,\nGengar will welcome you to our\lhumble seaside town!\pVisit our famous broadcast tower!\nEnjoy fishing!\lAnd maybe even meet a Gengar!
 
 #org @gText_VermilionPortHotel_DumbPun
 Tch[.] a Pok\emon battle?\nNo thanks.\pFight me in [RED]Meltan Blood:\nType Lumineon[BLACK] instead.\pNo? I thought so.\nCoward[.]
@@ -86,13 +89,13 @@ Tch[.] a Pok\emon battle?\nNo thanks.\pFight me in [RED]Meltan Blood:\nType Lumi
 Technology is incredible!\pThe internet is connecting us all!\nLifelong friends beyond borders!\pWe have singing androids!\nWormholes!\lDownload mods for video games!\pLook at that [BLUE]Baja Blastoise[BLACK]\nmachine over there!\pI can touch the screen on it,\nand mix dozens of soda flavors!\lIt's awesome!\pThe power of science is staggering!
 
 #org @gText_VermilionPortHotel_KitchenNPC1
-Hey! Les how are du doing?\pMaybe if I talk like le head chef,\nI get du fantastique raise!
+If we didn't leave Great Balls on\nthe floor, we'd get yelled at.\pThe old head chef couldn't work\nwithout his floor Great Ball.\pHe was the kind of chef who could\nonly cook in specific conditions.\pHe's finally gone, but we got so\nused to leaving a ball there[.]
 
 #org @gText_VermilionPortHotel_KitchenNPC2
-Don't tell him I said this, but[.]\nThe head chef is a huge snob.\pHe used to work on the [GREEN]S.S. Anne[BLACK],\nand he's really proud of that.\pHe had them build this kitchen as\nan exact replica of the ship's!\pHe even leaves the same items\nlying around on the floor.
+The old head chef used to cook\naboard the [GREEN]S.S. Anne[BLACK].\pSo, the kitchen was built as a\nreplica of the ship's, for him.\pHe got fussy about having to make\ncontinental breakfasts.\lIt was "beneath him.\"\lSo he finally quit.
 
 #org @gText_VermilionPortHotel_KitchenNPC_HeadChef
-Er-hem!\nIndeed I am le Chef!\pSalmon du Salad, Eels au Barbecue,\nPrime Beefsteak[.]\lNone of you b\eotiens order that!\pNow I cook les continental\nbreakfast!\lI make les room service!\lHow far I have fallen!\pZe Trubbish we call guests could\nnot distinguish Prime Beefsteak[.]\p[.]from les own mother's Volcano\ndu Bakemeat!\lMy cuisine better serves a Lechonk!
+Hello. I am the new head chef.\nHave you tried our room service?\pI am so proud of my waffles.\nOrder them any time, even 1 AM!
 
 #org @gText_VermilionPortHotel_Receptionist
 Hello!\nYou're [PLAYER], right?\pI hope you're enjoying your stay\nin the Trainer Suites!\pYou're free to call our hotel your\nhome for your entire journey.
@@ -105,3 +108,45 @@ This hotel welcomes new guests from\naround the world every day.\pIf you're stay
 
 #org @gText_VermilionPortHotel_LobbyNPC2
 The top floor of the hotel[.]\pThis floor is popular with stat\nfreaks.\lJust[.]\lAbsolute freaks for stats.\pI don't know how you become a stat\nfreak.\lFrankly, I don't WANT to know.\pBut if you're the type who likes\n[BLUE]EV training[BLACK][.]\p[.]Well, these folks'll make for good\nopponents.\lJust don't say I didn't warn ya!
+
+#org @gText_VermilionPortHotel_HallwayClowns
+Hoo hoaoa hoo!\nHallway dance!
+
+#org @gText_VermilionPortHotel_JanitorBlocking
+Sorry, bucko! The stairs are messy.\nWon't take long to tidy up, though.\pIn the meantime, you can watch\nthose weirdo clowns!\lI have no idea what they're doing.
+
+#org @gText_VermilionPortHotel_RivalFight1_SeesYou
+Aghh!\n[PLAYER]!\pI don't know where your sib went[.]\nBut I'm gonna kick their butt!\pBut first, I'm get stronger by\nbeating you!
+
+#org @gText_VermilionPortHotel_RivalFight1_Lose
+Noo waaaay!
+
+#org @gText_VermilionPortHotel_RivalFight1_Win
+Whisk: Hah! Take that!
+
+#org @gText_VermilionPortHotel_RivalFight1_After1_PlayerWin1
+Ugh[.]\nThis isn't working at all!\p[.]but I guess I got carried away[.]\nYOU didn't call me a weenie.\pSorry[.] I know our parents said\nto look out for each other.\pLet me heal your Pok\emon.\nMy dad bought me lots of Potions.
+
+#org @gText_VermilionPortHotel_RivalFight1_After1_PlayerWin2
+I need to get a better Pok\emon\nimmediately!\lThis one won't do at all!\l[.] [.] [.]\lEr[.]\lMumble mumble[.]
+
+#org @gText_VermilionPortHotel_RivalFight1_After1_PlayerLose1
+Hah[.]! That's what you get!\n[.]but I guess YOU didn't insult me[.]\pI feel a little bad.\nHere, let me revive your Pok\emon[.]\pMy dad bought me tons of Revives\nbefore I left, so it's okay.
+
+#org @gText_VermilionPortHotel_RivalFight1_After1_PlayerLose2
+And to think I won my first battle\nwith such a bad Pok\emon!\l[.] [.]\lEr[.]
+
+#org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseRelicanth
+(I-I'm sorry, Passimian[.]\nYou're not the problem.)\p(We just don't fit each other\nwell[.])\p(I've never been much for sports[.]\nIt's really my fault[.])
+
+#org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseSigilyph
+(I-I'm sorry, Relicanth[.]\nYou're not the problem.)\p(We really just don't fit each\nother well[.])\p(Maybe if I were a pro swimmer, or\na marine biologist[.])
+
+#org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChosePassimian
+(I-I'm sorry, Sigilyph[.]\nYou're not the problem.)\p(I think we just don't fit each\nother well[.])\p(I just don't know much about\nancient history yet[.])
+
+#org @gText_VermilionPortHotel_RivalFight1_After3
+[.]Ahem!\nI'm gonna go catch more Pok\emon!\pKanto is supposed to have TONS of\nPok\emon now!\pIt shouldn't be hard to find one\nthat suits me better.\p[GREEN]Vermilion City[BLACK] has a gym to\nchallenge, too!\pThe world's my Cloyster! This\nadventure can still be awesome!\pAnd then, at the end[.] I'll\nclobber your whole weird family!
+
+#org @gText_VermilionPort_SeviiSailor
+Ahoy!\nBoats to the [GREEN]Sevii Islands[BLACK] are\ncurrently out of service.\pA Dhelmise started haunting our\nnew ferry!

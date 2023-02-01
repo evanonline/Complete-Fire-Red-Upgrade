@@ -20,7 +20,7 @@ enum OverworldNPCSprites
 	EVENT_OBJ_GFX_MAY_RS,
 	EVENT_OBJ_GFX_MAY_EM,
 	EVENT_OBJ_GFX_LITTLE_GIRL,
-	EVENT_OBJ_GFX_YOUNGSTER,
+	EVENT_OBJ_GFX_YOUNGSTER_B,
 	EVENT_OBJ_GFX_RANDOM_GUY,
 	EVENT_OBJ_GFX_BUG_CATCHER,
 	EVENT_OBJ_GFX_SITTING_GUY,
@@ -175,6 +175,10 @@ enum OverworldNPCSprites
 	EVENT_OBJ_GFX_VENUS = 232,
 	EVENT_OBJ_GFX_PKMN_RANGER_A = 233,
 	EVENT_OBJ_GFX_PKMN_RANGER_B = 234,
+	EVENT_OBJ_GFX_BASEBALL_GUY = 235,
+	EVENT_OBJ_GFX_LUDICOLO = 236,
+	EVENT_OBJ_GFX_YOUNGSTER_A = 237,
+	EVENT_OBJ_GFX_MAGIKARP = 238,
 };
 
 #define EVENT_OBJ_GFX_RED_UNDERWATER 6 //By default VS. Seeker on bike b\c not used by anything else
@@ -187,6 +191,8 @@ enum OverworldNPCSprites
 //#define EVENT_OBJ_GFX_GYMGUY 	91
 //#define EVENT_OBJ_GFX_SMEARGLE 	152
 //#define EVENT_OBJ_GFX_OCGUY 	154
+
+////////////////////////////////////////////////////////////////
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

@@ -12,6 +12,7 @@
 
 .global EventScript_Route6_IcePathSign
 EventScript_Route6_IcePathSign:
+	msgboxsign
 	msgbox gText_Route6_IcePathSign MSG_SIGN
 	end
 
@@ -69,4 +70,8 @@ EventScript_Route6_YoungsterMaruyama:
 EventScript_Route6_YoungsterMaruyama2:
 	trainerbattle0 0x0 0xB 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
 	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+	end
+
+EventScript_Route6_DexnavExplainer:
+	msgbox gText_Route6_NPCWhoExplainsDexnav MSG_FACE
 	end

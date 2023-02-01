@@ -17,6 +17,80 @@ tables to edit:
 
 */
 
+// Vermilion Port (Outside)
+
+const struct WildPokemon gVermilionPort_WaterMons[] =
+{
+    {20, 27, SPECIES_TENTACOOL},
+    {20, 20, SPECIES_WAILMER},
+    {25, 27, SPECIES_PELIPPER},
+    {2, 21, SPECIES_HORSEA},
+    {25, 26, SPECIES_WAILMER},
+};
+
+const struct WildPokemonInfo gVermilionPort_WaterMonsInfo = {2, gVermilionPort_WaterMons};
+
+const struct WildPokemon gVermilionPort_FishingMons[] =
+{
+    {4, 4, SPECIES_WISHIWASHI},
+    {4, 5, SPECIES_WISHIWASHI},
+    {10, 16, SPECIES_WISHIWASHI},
+    {12, 16, SPECIES_BRUXISH},
+    {10, 15, SPECIES_DHELMISE},
+    {25, 29, SPECIES_TENTACOOL},
+    {30, 35, SPECIES_SKRELP},
+    {21, 29, SPECIES_HORSEA},
+    {31, 31, SPECIES_TENTACRUEL},
+    {25, 35, SPECIES_WISHIWASHI},
+};
+
+const struct WildPokemonInfo gVermilionPort_FishingMonsInfo = {20, gVermilionPort_FishingMons};
+
+const struct WildPokemon gVermilionPort_FishingMonsEveningNight[] =
+{
+    {4, 4, SPECIES_DHELMISE},
+    {4, 5, SPECIES_TENTACOOL},
+    {10, 18, SPECIES_DHELMISE},
+    {12, 17, SPECIES_BRUXISH},
+    {10, 15, SPECIES_DHELMISE},
+    {25, 28, SPECIES_HORSEA},
+    {30, 35, SPECIES_SKRELP},
+    {21, 35, SPECIES_DHELMISE},
+    {31, 31, SPECIES_TENTACRUEL},
+    {25, 35, SPECIES_DHELMISE},
+};
+
+const struct WildPokemonInfo gVermilionPort_FishingMonsInfoEveningNight = {25, gVermilionPort_FishingMonsEveningNight};
+
+// Vermilion City
+
+const struct WildPokemon gVermilionCity_WaterMons[] =
+{
+    {20, 23, SPECIES_TENTACOOL},
+    {10, 20, SPECIES_TENTACOOL},
+    {20, 25, SPECIES_WAILMER},
+    {20, 23, SPECIES_TENTACOOL},
+    {21, 27, SPECIES_WAILMER},
+};
+
+const struct WildPokemonInfo gVermilionCity_WaterMonsInfo = {4, gVermilionCity_WaterMons};
+
+const struct WildPokemon gVermilionCity_FishingMons[] =
+{
+    {5, 5, SPECIES_MAGIKARP},
+    {5, 6, SPECIES_GOLDEEN},
+    {10, 15, SPECIES_REMORAID},
+    {12, 15, SPECIES_CARVANHA},
+    {9, 17, SPECIES_GOLDEEN},
+    {27, 31, SPECIES_CARVANHA},
+    {26, 35, SPECIES_OCTILLERY},
+    {21, 26, SPECIES_SKRELP},
+    {35, 40, SPECIES_SKRELP},
+    {40, 45, SPECIES_SKRELP},
+};
+
+const struct WildPokemonInfo gVermilionCity_FishingMonsInfo = {30, gVermilionCity_FishingMons};
+
 // Route 6
 
 const struct WildPokemon gRoute6_LandMonsMorning[] =
@@ -27,7 +101,7 @@ const struct WildPokemon gRoute6_LandMonsMorning[] =
 	{3, 4, SPECIES_YAMPER},
 	{2, 3, SPECIES_CRAMORANT},
 	{1, 2, SPECIES_SWIRLIX},
-	{1, 3, SPECIES_PINECO},
+	{1, 3, SPECIES_CHINGLING},
 	{3, 5, SPECIES_SWIRLIX},
 	{3, 4, SPECIES_SNUBBULL},
 	{1, 3, SPECIES_IGGLYBUFF},
@@ -45,7 +119,7 @@ const struct WildPokemon gRoute6_LandMonsDay[] =
 	{2, 3, SPECIES_ZIGZAGOON},
 	{2, 3, SPECIES_PIDGEY},
 	{1, 2, SPECIES_SWIRLIX},
-	{1, 3, SPECIES_PINECO},
+	{1, 2, SPECIES_CHINGLING},
 	{3, 5, SPECIES_SWIRLIX},
 	{3, 4, SPECIES_SNUBBULL},
 	{1, 3, SPECIES_IGGLYBUFF},
@@ -59,7 +133,7 @@ const struct WildPokemon gRoute6_LandMonsEvening[] =
 {
 	{2, 4, SPECIES_PIDGEY},
 	{2, 5, SPECIES_ZIGZAGOON},
-	{3, 5, SPECIES_PINECO},
+	{3, 5, SPECIES_CHINGLING},
 	{4, 4, SPECIES_YAMPER},
 	{3, 6, SPECIES_SNUBBULL},
 	{2, 3, SPECIES_CRAMORANT},
@@ -79,7 +153,7 @@ const struct WildPokemon gRoute6_LandMonsNight[] =
 	{4, 4, SPECIES_ZIGZAGOON_G},
 	{2, 4, SPECIES_IGGLYBUFF},
 	{2, 5, SPECIES_PATRAT},
-	{3, 3, SPECIES_PINECO},
+	{3, 5, SPECIES_CHINGLING},
 	{2, 3, SPECIES_SNUBBULL},
 	{1, 3, SPECIES_CRAMORANT},
 	{1, 3, SPECIES_YAMPER},
@@ -140,7 +214,7 @@ const struct WildPokemon gRoute7_LandMonsMorning[] =
 {
 	{3, 6, SPECIES_ODDISH},
 	{5, 6, SPECIES_BELLSPROUT},
-	{6, 7, SPECIES_MORELULL},
+	{5, 6, SPECIES_MORELULL},
 	{6, 6, SPECIES_COMBEE},
 	{5, 6, SPECIES_MEOWTH},
 	{4, 6, SPECIES_FURFROU},
@@ -156,9 +230,9 @@ const struct WildPokemonInfo gRoute7_LandMonsInfoMorning = {21, gRoute7_LandMons
 
 const struct WildPokemon gRoute7_LandMonsDay[] =
 {
-	{5, 7, SPECIES_MEOWTH},
+	{5, 6, SPECIES_MEOWTH},
 	{4, 6, SPECIES_ODDISH},
-	{6, 7, SPECIES_MORELULL},
+	{6, 6, SPECIES_MORELULL},
 	{4, 6, SPECIES_THROH},
 	{5, 6, SPECIES_BELLSPROUT},
 	{6, 6, SPECIES_COMBEE},
@@ -174,9 +248,9 @@ const struct WildPokemonInfo gRoute7_LandMonsInfoDay = {21, gRoute7_LandMonsDay}
 
 const struct WildPokemon gRoute7_LandMonsEvening[] =
 {
-	{5, 7, SPECIES_SPEAROW},
+	{5, 6, SPECIES_SPEAROW},
 	{4, 6, SPECIES_ODDISH},
-	{6, 7, SPECIES_MORELULL},
+	{6, 6, SPECIES_MORELULL},
 	{5, 6, SPECIES_BELLSPROUT},
 	{4, 6, SPECIES_THROH},
 	{4, 6, SPECIES_SAWK},
@@ -197,7 +271,7 @@ const struct WildPokemon gRoute7_LandMonsNight[] =
 	{3, 6, SPECIES_SPEAROW},
 	{5, 5, SPECIES_MORELULL},
 	{4, 6, SPECIES_SAWK},
-	{6, 7, SPECIES_HOUNDOUR},
+	{6, 6, SPECIES_HOUNDOUR},
 	{4, 6, SPECIES_ODDISH},
 	{5, 6, SPECIES_BELLSPROUT},
 	{4, 6, SPECIES_THROH},
@@ -215,12 +289,12 @@ const struct WildPokemon gIcedPath_LandMons[] =
 	{4, 6, SPECIES_SNEASEL},
 	{4, 6, SPECIES_SNEASEL},
 	{2, 6, SPECIES_SNEASEL},
-	{3, 7, SPECIES_SNEASEL},
+	{3, 6, SPECIES_SNEASEL},
 	{3, 3, SPECIES_SNEASEL},
 	{2, 3, SPECIES_SNOM},
 	{3, 3, SPECIES_SNOM},
 	{5, 5, SPECIES_CRYOGONAL},
-	{3, 7, SPECIES_CRYOGONAL},
+	{3, 6, SPECIES_CRYOGONAL},
 	{5, 5, SPECIES_SNEASEL_H},
 	{3, 5, SPECIES_SNEASEL_H},
 	{4, 6, SPECIES_SNEASEL_H},
@@ -238,10 +312,10 @@ static const struct WildPokemon gIcedPath_LandMonsMorning[] =
 	{3, 5, SPECIES_SNOM},
 	{3, 5, SPECIES_SNOM},
 	{4, 5, SPECIES_SNEASEL_H},
-	{6, 7, SPECIES_CRYOGONAL},
+	{6, 6, SPECIES_CRYOGONAL},
 	{4, 4, SPECIES_SNEASEL_H},
-	{3, 9, SPECIES_SNEASEL},
-	{4, 10, SPECIES_SNEASEL_H},
+	{3, 6, SPECIES_SNEASEL},
+	{4, 7, SPECIES_SNEASEL_H},
 };
 
 static const struct WildPokemonInfo gIcedPath_LandMonsInfoMorning = {24, gIcedPath_LandMonsMorning};
@@ -276,6 +350,22 @@ const struct WildPokemonInfo gIcedPath_FishingMonsInfo = {21, gIcedPath_FishingM
 const struct WildPokemonHeader gWildMonMorningHeaders[] =
 {
 	{
+		.mapGroup = MAP_GROUP(VERMILION_PORT_EXTERIOR),
+		.mapNum = MAP_NUM(VERMILION_PORT_EXTERIOR),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionPort_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionPort_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(VERMILION_CITY),
+		.mapNum = MAP_NUM(VERMILION_CITY),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
+	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),
 		.landMonsInfo = &gRoute6_LandMonsInfoMorning,
@@ -303,6 +393,22 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 
 const struct WildPokemonHeader gWildMonDayHeaders[] =
 {
+	{
+		.mapGroup = MAP_GROUP(VERMILION_PORT_EXTERIOR),
+		.mapNum = MAP_NUM(VERMILION_PORT_EXTERIOR),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionPort_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionPort_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(VERMILION_CITY),
+		.mapNum = MAP_NUM(VERMILION_CITY),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
 	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),
@@ -332,6 +438,22 @@ const struct WildPokemonHeader gWildMonDayHeaders[] =
 const struct WildPokemonHeader gWildMonEveningHeaders[] =
 {
 	{
+		.mapGroup = MAP_GROUP(VERMILION_PORT_EXTERIOR),
+		.mapNum = MAP_NUM(VERMILION_PORT_EXTERIOR),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionPort_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionPort_FishingMonsInfoEveningNight,
+	},
+	{
+		.mapGroup = MAP_GROUP(VERMILION_CITY),
+		.mapNum = MAP_NUM(VERMILION_CITY),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
+	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),
 		.landMonsInfo = &gRoute6_LandMonsInfoEvening,
@@ -359,6 +481,22 @@ const struct WildPokemonHeader gWildMonEveningHeaders[] =
 
 const struct WildPokemonHeader gWildMonNightHeaders[] =
 {
+	{
+		.mapGroup = MAP_GROUP(VERMILION_PORT_EXTERIOR),
+		.mapNum = MAP_NUM(VERMILION_PORT_EXTERIOR),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionPort_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionPort_FishingMonsInfoEveningNight,
+	},
+	{
+		.mapGroup = MAP_GROUP(VERMILION_CITY),
+		.mapNum = MAP_NUM(VERMILION_CITY),
+		.landMonsInfo = NULL,
+		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
 	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),

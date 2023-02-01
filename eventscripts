@@ -1,12 +1,8 @@
 ## Vermilion Port Hotel Room Intro
-map 9 8 gMapScripts_VermilionIntroSibSpriteScript_Hotel1
-npc 9 8 1 EventScript_SibRoomLeave_SetSibName
-npc 9 8 0 EventScript_IndigoOptionsPC
 sign 9 8 0 EventScript_BathroomEasterEgg
 sign 9 8 1 EventScript_VermilionHotelMovie
 sign 9 8 2 EventScript_VermilionHotelMovie
 sign 9 8 3 EventScript_Lodgenet
-tile 9 8 0 EventScript_VermilionIntro_SibEntry
 
 ## Vermilion Port Hotel Trainer Lobby / Pokemon choice
 map 9 9 gMapScripts_VermilionIntroSibSpriteScript_Hotel2
@@ -16,6 +12,7 @@ npc 9 9 2 EventScript_VermilionIntro_Hatsumi
 npc 9 9 3 EventScript_VermilionIntro_Relicanth_Ball
 npc 9 9 4 EventScript_VermilionIntro_Sigilyph_Ball
 npc 9 9 5 EventScript_VermilionIntro_Passimian_Ball
+npc 9 9 6 EventScript_IndigoOptionsPC
 tile 9 9 0 EventScript_VermilionIntro2_HatsumiEnters
 tile 9 9 1 EventScript_Intro_SibWhereGoing1
 tile 9 9 2 EventScript_Intro_SibWhereGoing2
@@ -29,9 +26,15 @@ tile 9 9 9 EventScript_Intro_SibWhereGoing2
 tile 9 9 10 EventScript_Intro_SibWhereGoing2
 tile 9 9 11 EventScript_Intro_SibWhereGoing2
 tile 9 9 12 EventScript_Intro_SibWhereGoing2
+tile 9 9 13 EventScript_VermilionIntro_SibFirstMessage
+tile 9 9 14 EventScript_VermilionIntro_SibFirstMessage
+tile 9 9 15 EventScript_VermilionIntro_SibFirstMessage
 
 ##Vermilion Port Hotel Lobbies & Kitchen
 sign 9 9 0 EventScript_VermilionHotel_OakLabsTrainerSuite
+sign 9 9 1 EventScript_BajaBlastoiseMachine
+sign 1 5 0 EventScript_BajaBlastoiseMachine
+sign 1 5 1 EventScript_BajaBlastoiseMachine
 npc 1 5 0 EventScript_VermilionHotel_Receptionist
 npc 1 5 1 EventScript_VermilionHotel_Technology
 npc 1 5 2 EventScript_VermilionHotel_LobbyNPC1
@@ -39,6 +42,10 @@ npc 1 8 0 EventScript_VermilionHotel_LobbyNPC2
 npc 1 10 0 EventScript_VermilionHotel_KitchenNPC1
 npc 1 10 5 EventScript_VermilionHotel_KitchenNPC2
 npc 1 10 3 EventScript_VermilionHotel_KitchenNPC_HeadChef
+npc 1 6 0 EventScript_VermilionHotel_HallwayClowns
+npc 1 6 1 EventScript_VermilionHotel_HallwayClowns
+npc 1 6 2 EventScript_VermilionHotel_HallwayClowns
+npc 1 6 3 EventScript_VermilionHotel_ConfusedJanitor
 
 ## Vermilion Port Hotel Guests
 npc 1 17 2 EventScript_VermilionHotel_PoketchDetective_WatchParty1
@@ -96,22 +103,18 @@ sign 1 29 0 EventScript_VermilionHotelMovie
 sign 1 29 1 EventScript_VermilionHotelMovie
 sign 1 29 2 EventScript_Lodgenet
 
-
 ##Other Trainer Suites
-npc 9 10 0 EventScript_IndigoOptionsPC
 sign 9 10 0 EventScript_VermilionHotelMovie
 sign 9 10 1 EventScript_VermilionHotelMovie
 sign 9 10 2 EventScript_Lodgenet
 sign 9 10 3 EventScript_BathroomEasterEgg
 sign 9 10 4 EventScript_VermilionHotel_RivalsRoom
-npc 9 11 0 EventScript_IndigoOptionsPC
 sign 9 11 0 EventScript_VermilionHotelMovie
 sign 9 11 1 EventScript_VermilionHotelMovie
 sign 9 11 2 EventScript_Lodgenet
 sign 9 11 3 EventScript_BathroomEasterEgg
 sign 9 11 4 EventScript_VermilionHotel_AlloysRoom
 sign 9 11 5 EventScript_VermilionHotel_AlloysRoom
-npc 9 12 0 EventScript_IndigoOptionsPC
 sign 9 12 0 EventScript_VermilionHotelMovie
 sign 9 12 1 EventScript_VermilionHotelMovie
 sign 9 12 2 EventScript_Lodgenet
@@ -125,18 +128,25 @@ npc 1 4 2 EventScript_VermilionPort_NPC3
 npc 1 4 3 EventScript_VermilionPort_NPC4
 npc 1 4 4 EventScript_VermilionPort_NPC5
 npc 1 4 5 EventScript_VermilionPort_NPC6
+npc 1 4 7 EventScript_VermilionPort_SeviiFerrySailor
+tile 1 4 0 EventScript_VermilionPort_RivalBattle1
+sign 1 4 1 EventScript_VermilionPort_VermilionHotelSign
+sign 1 4 2 EventScript_VermilionPort_VermilionHotelTourismBoard
 
 ## Vermilion City
 sign 3 5 0 EventScript_VermilionCity_CitySign
 sign 3 5 2 EventScript_GymSign_Vermilion
 sign 3 5 3 EventScript_VermilionPortDirections_Sign
+sign 3 5 5 EventScript_CeriseLab_Sign
 npc 3 5 0 EventScript_VermilionCity_NPC_Pollution
 npc 3 5 1 EventScript_VermilionCity_NPC_Sitizen
 npc 3 5 2 EventScript_VermilionCity_NPC_SailorSSAnne
 npc 3 5 3 EventScript_VermilionCity_NPC_Tree
+npc 3 5 6 EventScript_VermilionCity_NPC_BuildingLore
 npc 9 0 0 EventScript_VermilionCity_NPC_FishingGuru
+npc 9 0 1 EventScript_VermilionCity_NPC_MagikarpFlop
 npc 9 1 1 EventScript_VermilionCity_NPC_CalebsFriend
-npc 9 1 2 EventScript_VermilionCity_NPC_CoolLass
+npc 9 1 2 EventScript_VermilionCity_NPC_NicknameHint
 npc 9 1 3 EventScript_VermilionCity_NPC_NamesHater
 npc 9 2 4 EventScript_VermilionCity_NPC_SadTinkatonExpert
 npc 9 3 0 EventScript_VermilionCity_FanClubOwner
@@ -153,6 +163,13 @@ npc 9 7 0 EventScript_VermilionCity_NPC_PaldeaSandwichCritic
 sign 9 7 0 EventScript_VermilionCity_NPC_PaldeaLetter
 npc 9 7 1 EventScript_VermilionCity_NPC_Primeape
 npc 9 7 3 EventScript_VermilionCity_NPC_EvioliteDiscovery
+npc 9 14 0 EventScript_VermilionCity_NPC_CoolLass
+npc 9 14 1 EventScript_VermilionCity_NPC_Water
+npc 9 15 0 EventScript_VermilionCity_NPC_RomhackGuyLeft
+npc 9 15 1 EventScript_VermilionCity_NPC_RomhackGuyRight
+
+## Route 5
+sign 3 23 0 EventScript_Route6_IcePathSign
 
 ## Route 6
 sign 3 24 0 EventScript_Route6_IcePathSign
@@ -162,6 +179,17 @@ npc 3 24 2 EventScript_Route6_SwirlixBreeder
 npc 3 24 3 EventScript_Route6_DNSExplainer
 npc 3 24 4 EventScript_Route6_BugCatcherHorace
 npc 3 24 5 EventScript_Route6_YoungsterMaruyama
+npc 3 24 6 EventScript_Route6_DexnavExplainer
+
+## Route 7
+sign 3 25 0 EventScript_Route6_IcePathSign
+
+## Route 8
+sign 3 26 0 EventScript_Route6_IcePathSign
+
+## Route 11
+npc 3 29 0 EventScript_Route11_SnorlaxRuinManiac
+npc 3 29 1 EventScript_Route11_Snorlax
 
 ## Iced Path
 map 1 31 gMapScripts_IcedPath_CheckHideTM97

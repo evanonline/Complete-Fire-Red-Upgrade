@@ -68,10 +68,10 @@ Disable all powerups
 #org @sRunSettingsListUnrestricted
 List Restricted exceptions
 
-#org @gText_VermilionPortTourismBoardOption1
+#org @sText_VermilionPortTourismBoardOption1
 Worn ad
 
-#org @gText_VermilionPortTourismBoardOption2
+#org @sText_VermilionPortTourismBoardOption2
 Lavender ad
 
 #endif

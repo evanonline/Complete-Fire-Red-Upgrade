@@ -10,6 +10,9 @@ I hate all these new Pok\emon!\n[RED]Kanto's original 151[BLACK] are the best!\p
 #org @gText_VermilionCity_FanClubOwner
 I chair the Pok\emon Fan Club!\pI raise more than a hundred\nPok\emon!\pI'm very fussy when it comes to\nPok\emon! I surely am!\pYou[.]\pYou aren't worthy of hearing about\nmy Rapidash.\l[.]Yet!\pCome back when you've [RED]won at our\ncity's gym![BLACK]\lI don't care if it isn't open!
 
+#org @gText_VermilionCity_FanClubOwner2
+I chair the Pok\emon Fan Club!\pI raise more than a hundred\nPok\emon!\pI'm very fussy when it comes to\nPok\emon! I surely am!\pYou[.]\pYou aren't worthy of hearing about\nmy Rapidash.\l[.]Yet!\pCome back when you've [RED]won at our\ncity's gym![BLACK]\lIt's open now!
+
 #org @gText_VermilionCity_Sceptile
 Scraaaeh!
 
@@ -41,13 +44,13 @@ The [GREEN]S.S. Anne[BLACK] had a controversial\naccident many years back.\pThey
 It's me! The one, the only!\nThe Fishing Guru!\pIt looks like you already have an\nawesome Old Rod.\lThat's the best kind of rod!\lYou're a kindred soul, buddy!
 
 #org @gText_VermilionCityNPC_TypesSame
-Things are the same as ever[.]\nI'm waiting for a shakeup.\pSomeone's gotta find some new\nPok\emon types or something.
+Things are the same as ever[.]\nI'm waiting for a shakeup.\pThere's no new Pok\emon types[.]\nBoring!
 
 #org @gText_VermilionCityNPC_HighExpectations
-These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog! THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.
+These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog! THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.\lNo shame in that!
 
 #org @gText_VermilionCityNPC_PaldeaSandwichCritic
-You ever see how they make\nsandwiches in [GREEN]Paldea[BLACK]?\lAbsolute madness.\pWhy do they drop bread onto a\nsandwich from several feet above?!\pI love my Paldean pen pal anyway\nthough.
+Out in [GREEN]Paldea[BLACK], their trash glistens\na little bit out in the wild.\pBut here in [GREEN]Kanto[BLACK], you need to use\nan [BLUE]Itemfinder[BLACK] to get hidden items.\pCultural differences are so\ninteresting!
 
 #org @gText_VermilionCityNPC_PaldeaLetter
 Dear Greggy,\nI hope this letter finds you well.\pI heard the R Group is investing in\nbeautifying [GREEN]Celadon City[BLACK].\pA mining town like [GREEN]Zapapico[BLACK] doesn't\nneed to be pretty! We're rugged!\lBut, that does sound cool[.]
@@ -72,3 +75,27 @@ Vermilion Port\n[ARROW_DOWN]
 
 #org @gText_VermilionCityNPC_SadTinkatonExpert
 Hi[.] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color and doesn't have\nfiery attacks, or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut no one will ever care.
+
+#org @gText_VermilionCityNPC_CoolFinally
+It was great when that building\nfinally finished construction.\pThere was a Machop who diligently\nprepared the construction site[.]\lEvery day! For years!\pThe town awarded that little guy\na medal for his hard work.\pWhat's the building?\nEh, some lab or something.
+
+#org @gText_VermilionCityNPC_Calvervtutrp
+You can nickname your Pok\emon at\nany [GREEN]Pok\emon Center[BLACK] now!\lSo convenient!\pJust be careful. I wanted to name\nmy Houndoom something super cool.\pBut I was babysitting my infant\nsister, and she burped real weird[.]\pThe nurse thought the burp was the\nname[.]\pSo now my Houndoom is named\n"C'verv'trp\"[.]\pWe can change the name back, of\ncourse.\pBut, our whole family got used to\ncalling our Houndoom "C'verv'trp\"[.]
+
+#org @gText_CeriseLabSign
+Cerise Laboratory
+
+#org @gText_VermilionCityNPC_FunnyRomhackGuy1
+Hahaha! Haaa! Hoo-ee!
+
+#org @gText_VermilionCityNPC_FunnyRomhackGuy2_FunnyRed
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [RED]Pok\emon Funny Red[BLACK].
+
+#org @gText_VermilionCityNPC_FunnyRomhackGuy2_LaughGreen
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].
+
+#org @gText_VermilionCityNPC_Water
+What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could just drink\nHydro Pump water for the rest of my life.
+
+#org @gText_VermilionCityNPC_MagikarpFlop
+Karpkarp[.]\nKarp[.][.]

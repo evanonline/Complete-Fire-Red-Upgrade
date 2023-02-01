@@ -14,6 +14,7 @@
 .equ FLAG_CHOSESTARTER3, 0x962
 .equ FLAG_INTROCUTSCENE1, 0x95E
 .equ FLAG_INTROCUTSCENE_DONE, 0x95F
+.equ FLAG_RIVAL_1_CLEAR, 0x963
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Messages in all hotel rooms@@@@@@@@@
@@ -160,10 +161,12 @@ EventScript_VermilionIntro_HideEverything:
 .global EventScript_VermilionIntro_SibFirstMessage
 EventScript_VermilionIntro_SibFirstMessage:
 	setvar 0x511C 0x0
+	sethealingplace 0x06 @sets healing place to Vermilion Pokemon Center.
 	applymovement 0x1 EventScript_Intro_SibJumpy
 	sound 0x1C
 	sound 0x1C
 	applymovement 0xFF EventScript_Intro_EveryoneFaceRight
+	pause 0x5
 	@call eventscript_nameSib
 	msgbox gText_OpeningSibEntry MSG_KEEPOPEN
 	closeonkeypress
@@ -790,6 +793,7 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	additem ITEM_BERRY_POUCH 0x1
 	additem ITEM_TM_CASE 0x1
 	additem ITEM_TOWN_MAP 0x1
+	additem ITEM_EXP_SHARE 0x1
 	additem ITEM_VS_SEEKER 0x1
 	additem ITEM_ITEMFINDER 0x1
 	additem ITEM_OLD_ROD 0x1
@@ -897,9 +901,9 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	msgbox gText_PokemonChoiceLobby_RivalAngyAngy3 MSG_KEEPOPEN
 	@callasm 0x8FB0101
 	closeonkeypress
-	setflag FLAG_INTROCUTSCENE_DONE
 	setflag 0x952
 	setflag 0x953
+	setflag FLAG_INTROCUTSCENE_DONE
 	hidesprite 2
 	setflag 0x954
 	pause 0x20
@@ -1194,7 +1198,6 @@ EventScript_RivalLeavesLobby2:
 	.byte 0x32
 	.byte 0x32
 	.byte 0x32
-	.byte 0x32
 	.byte 0xFE
 
 EventScript_Intro_SibWhereGoing1:
@@ -1219,9 +1222,25 @@ EventScript_Intro_SibWhereGoing2:
 	
 .global EventScript_VermilionHotel_OakLabsTrainerSuite
 EventScript_VermilionHotel_OakLabsTrainerSuite:
+	msgboxsign
 	msgbox gText_VermilionPortHotel_TrainerSuite MSG_SIGN
 	end
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Roadblock NPCs@@@@@@@@@@@@@@@@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global EventScript_VermilionHotel_HallwayClowns
+EventScript_VermilionHotel_HallwayClowns:
+	msgbox gText_VermilionPortHotel_HallwayClowns MSG_NORMAL
+	closeonkeypress
+	end
 	
+.global EventScript_VermilionHotel_ConfusedJanitor
+EventScript_VermilionHotel_ConfusedJanitor:
+	msgbox gText_VermilionPortHotel_JanitorBlocking MSG_FACE
+	end
+
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;Indoor NPCs@@@@@@@@@@@@@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -1260,10 +1279,126 @@ EventScript_VermilionHotel_Technology:
 EventScript_VermilionHotel_Receptionist:
 	msgbox gText_VermilionPortHotel_Receptionist MSG_FACE
 	end		
-	
-	
+
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@;Hotel Guest NPCs@@@@@@@@@@@@@@@@@@@@
+@;Rival Battle 1@@@@@@@@@@@@@@@@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global EventScript_VermilionPort_RivalBattle1
+EventScript_VermilionPort_RivalBattle1:
+	lockall
+	setvar 0x511D 0x0
+	applymovement 0x7 EventScript_Intro_ExclaimOnly
+	sound 0x15
+	waitmovement 0x0
+	pause 0x20
+	applymovement 0x7 EventScript_Intro_EveryoneFaceUp1
+	msgbox gText_VermilionPortHotel_RivalFight1_SeesYou MSG_KEEPOPEN
+	checkflag FLAG_CHOSESTARTER1
+	if SET _goto EventScript_VermilionPort_RivalBattle1_Starter1
+	checkflag FLAG_CHOSESTARTER2
+	if SET _goto EventScript_VermilionPort_RivalBattle1_Starter2
+	checkflag FLAG_CHOSESTARTER3
+	if SET _goto EventScript_VermilionPort_RivalBattle1_Starter3
+	end
+	
+EventScript_VermilionPort_RivalBattle1_Starter1: @Starter was Relicanth, rival uses Passimian
+	trainerbattle9 0x9 0xD 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	special 0x0
+	compare LASTRESULT 0x0
+	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_VermilionPort_RivalBeatPlayer
+	end
+	
+EventScript_VermilionPort_RivalBattle1_Starter2: @Starter was Sigilyph, rival uses Relicanth
+	trainerbattle9 0x9 0xE 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	special 0x0
+	compare LASTRESULT 0x0
+	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_VermilionPort_RivalBeatPlayer
+	end
+	
+EventScript_VermilionPort_RivalBattle1_Starter3: @Starter was Passimian, rival uses Sigilyph
+	trainerbattle9 0x9 0xF 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	special 0x0
+	compare LASTRESULT 0x0
+	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_VermilionPort_RivalBeatPlayer
+	end
+
+EventScript_VermilionPort_PlayerBeatRival:
+	msgbox gText_VermilionPortHotel_RivalFight1_After1_PlayerWin1 MSG_KEEPOPEN
+	closeonkeypress
+	fadescreen 0x1
+	sound 0x1
+	checksound
+	special 0x0
+	fadescreen 0x0
+	msgbox gText_VermilionPortHotel_RivalFight1_After1_PlayerWin2 MSG_KEEPOPEN
+	goto EventScript_VermilionPort_RivalEndTalk
+	end
+
+EventScript_VermilionPort_RivalBeatPlayer:
+	msgbox gText_VermilionPortHotel_RivalFight1_After1_PlayerLose1 MSG_KEEPOPEN
+	closeonkeypress
+	fadescreen 0x1
+	sound 0x1
+	checksound
+	special 0x0
+	fadescreen 0x0
+	msgbox gText_VermilionPortHotel_RivalFight1_After1_PlayerLose2 MSG_KEEPOPEN
+	goto EventScript_VermilionPort_RivalEndTalk
+	end
+	
+EventScript_VermilionPort_RivalEndTalk:
+	checkflag FLAG_CHOSESTARTER1
+	if SET _call EventScript_RivalApologizePassimian
+	checkflag FLAG_CHOSESTARTER2
+	if SET _call EventScript_RivalApologizeRelicanth
+	checkflag FLAG_CHOSESTARTER3
+	if SET _call EventScript_RivalApologizeSigilyph
+	msgbox gText_VermilionPortHotel_RivalFight1_After3 MSG_KEEPOPEN
+	closeonkeypress
+	applymovement 0x7 EventScript_Intro_RivalLeavesHotel
+	waitmovement 0x0
+	pause 0x5
+	setflag FLAG_RIVAL_1_CLEAR
+	setflag 0x958
+	setflag 0x959
+	hidesprite 7
+	setvar 0x511D 0x1
+	end
+
+EventScript_RivalApologizePassimian:
+	msgbox gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseRelicanth MSG_KEEPOPEN
+	return
+
+EventScript_RivalApologizeRelicanth:
+	msgbox gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseSigilyph MSG_KEEPOPEN
+	return
+
+EventScript_RivalApologizeSigilyph:
+	msgbox gText_VermilionPortHotel_RivalFight1_After2_PlayerChosePassimian MSG_KEEPOPEN
+	return
+
+EventScript_Intro_ExclaimOnly:
+	.byte exclaim
+	.byte 0xFE
+
+EventScript_Intro_RivalLeavesHotel:
+	.byte walk_down
+	.byte walk_down
+	.byte walk_down
+	.byte walk_down
+	.byte walk_down
+	.byte walk_down
+	.byte 0xFE
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Permanent Hotel Guest NPCs@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	
 .global EventScript_VermilionHotel_PoketchDetective_TV
@@ -1314,6 +1449,7 @@ EventScript_VermilionPort_NPC2:
 .global EventScript_VermilionPort_NPC3
 EventScript_VermilionPort_NPC3:
 	msgbox gText_VermilionTruck1 MSG_FACE
+	applymovement 0x2 EventScript_Intro_EveryoneFaceRight
 	end
 
 .global EventScript_VermilionPort_NPC4
@@ -1331,3 +1467,51 @@ EventScript_VermilionPort_NPC6:
 	msgbox gText_VermilionPortNPC3 MSG_FACE
 	end
 
+.global EventScript_VermilionPort_VermilionHotelSign
+EventScript_VermilionPort_VermilionHotelSign:
+	msgboxsign
+	msgbox gText_VermilionPort_VermilionHotelSign MSG_SIGN
+	end
+
+.global EventScript_VermilionPort_VermilionHotelTourismBoard
+EventScript_VermilionPort_VermilionHotelTourismBoard:
+	setvar 0x8006 0x0
+	loadpointer 0x0 sText_VermilionPortTourismBoardOption1
+	special 0x25
+	setvar 0x8006 0x1
+	loadpointer 0x0 sText_VermilionPortTourismBoardOption2
+	special 0x25
+	preparemsg gText_VermilionPortTourismBoardIntro
+	waitmsg
+	multichoice 0x0 0x0 0x20 0x0
+	compare LASTRESULT 0x0
+	if 0x1 _goto EventScript_VermilionPort_Tourism1
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_VermilionPort_Tourism2
+	goto EventScript_VermilionPort_TourismEnd
+	end
+	
+ EventScript_VermilionPort_Tourism1:
+	msgboxsign
+	msgbox gText_VermilionPortTourismBoardText1 MSG_KEEPOPEN
+	msgboxnormal
+	msgbox gText_VermilionPortTourismBoardText1_TornOffEnd MSG_KEEPOPEN
+	goto EventScript_VermilionPort_VermilionHotelTourismBoard
+	end
+	
+ EventScript_VermilionPort_Tourism2:
+	msgboxsign
+	msgbox gText_VermilionPortTourismBoardText2 MSG_KEEPOPEN
+	msgboxnormal
+	goto EventScript_VermilionPort_VermilionHotelTourismBoard
+	end
+	
+EventScript_VermilionPort_TourismEnd:
+	closeonkeypress
+	release
+	end
+	
+EventScript_VermilionPort_SeviiFerrySailor:
+	msgbox gText_VermilionPort_SeviiSailor MSG_FACE
+	end
+	

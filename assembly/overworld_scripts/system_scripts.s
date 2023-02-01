@@ -20,8 +20,6 @@ SystemScript_EnableAutoRun:
 	lockall
 	checksound
 	sound 0x2
-	signmsg
-	msgboxsign
 	msgbox gText_AutoRunEnable MSG_SIGN
 	checksound
 	releaseall
@@ -32,7 +30,6 @@ SystemScript_DisableAutoRun:
 	lockall
 	checksound
 	sound 0x3
-	msgboxsign
 	msgbox gText_AutoRunDisable MSG_SIGN
 	checksound
 	releaseall
@@ -43,8 +40,6 @@ SystemScript_EnableBikeTurboBoost:
 	lockall
 	@;checksound - otherwise lags after hopping on bike
 	sound 0x2
-	signmsg
-	msgboxsign
 	msgbox gText_BikeTurboBoostEnable MSG_SIGN
 	checksound
 	releaseall
@@ -55,7 +50,6 @@ SystemScript_DisableBikeTurboBoost:
 	lockall
 	@;checksound
 	sound 0x3
-	msgboxsign
 	msgbox gText_BikeTurboBoostDisable MSG_SIGN
 	checksound
 	releaseall
@@ -114,7 +108,6 @@ SystemScript_MiningScan_SkipFieldEffect:
 .global SystemScript_PoisonSurvial
 SystemScript_PoisonSurvial:
 	lockall
-	msgboxsign
 	msgbox gText_PoisonSurvial MSG_KEEPOPEN
 	closeonkeypress
 	releaseall
@@ -135,7 +128,6 @@ EventScript_BwRepelWoreOff:
 	
 AnotherRepel:
 	bufferitem 0x2 0x800E
-	msgboxsign
 	msgbox gText_AskUseAnotherRepel MSG_YESNO
 	compare LASTRESULT 0x1
 	if notequal _goto EndScript
@@ -165,13 +157,11 @@ UseAnotherMaxRepel:
 FinishNewRepel:
 	checksound
 	sound 0x29 @;Repel spray sound
-	msgboxsign
 	msgbox gText_UsedAnotherRepel MSG_SIGN
 	goto EndScript
 	
 EventScript_RepelWoreOff:
 	lockall
-	msgboxsign
 	msgbox gText_RepelWoreOff MSG_KEEPOPEN
 	closeonkeypress
 	
@@ -802,7 +792,6 @@ m_LadderClimbDown: .byte 0xAF, end_m
 
 .global EventScript_HiddenGrottoForest
 EventScript_HiddenGrottoForest:
-	msgboxsign
 	msgbox gText_FollowNarrowPath MSG_YESNO
 	compare LASTRESULT NO
 	if equal _goto EventScript_HiddenGrottoForest_Reject

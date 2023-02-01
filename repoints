@@ -284,6 +284,8 @@ EventScript_MysteryGiftPerson 081BB1D3
 ##CableClub_EventScript_HideOrShowMysteryGiftMan 081BB1B5
 
 ##Trainer Sprites
+g002WhiskTiles 823958C
+g002WhiskPal 8239A2C
 g082YoungsterBTiles 823980C
 g082YoungsterBPal 8239CAC
 g083BugCatcherTiles	8239814

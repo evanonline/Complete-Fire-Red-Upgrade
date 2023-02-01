@@ -35,12 +35,13 @@ EventScript_IcedPath_ExplainNPC2:
 
 .global EventScript_IcedPath_DirectionsSign
 EventScript_IcedPath_DirectionsSign:
+	msgboxsign
 	msgbox gText_IcedPath_DirectionsSign MSG_SIGN
 	end
 
 .global EventScript_IcedPath_DiveHintNPC
 EventScript_IcedPath_DiveHintNPC:
-	msgbox gText_IcedPath_DiveHint MSG_SIGN
+	msgbox gText_IcedPath_DiveHint MSG_FACE
 	end
 	
 .global EventScript_IcedPath_SwimmerFrancine

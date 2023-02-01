@@ -529,8 +529,8 @@ const struct BattleTowerTrainer gTowerTrainers[] =
 {
 	{
 		.owNum = 			EVENT_OBJ_GFX_YOUNGSTER,
-		.trainerClass = 	CLASS_YOUNGSTER_A,
-		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_A,
+		.trainerClass = 	CLASS_YOUNGSTER_B,
+		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_B,
 		.gender = 			BATTLE_FACILITY_MALE,
 		.preBattleText = 	sFrontierText_Youngster_PreBattle_1,
 		.playerWinText = 	sFrontierText_Youngster_PlayerWin_1,
@@ -538,8 +538,8 @@ const struct BattleTowerTrainer gTowerTrainers[] =
 	},
 	{
 		.owNum = 			EVENT_OBJ_GFX_YOUNGSTER,
-		.trainerClass = 	CLASS_YOUNGSTER_A,
-		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_A,
+		.trainerClass = 	CLASS_YOUNGSTER_B,
+		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_B,
 		.gender = 			BATTLE_FACILITY_MALE,
 		.preBattleText = 	sFrontierText_Youngster_PreBattle_2,
 		.playerWinText = 	sFrontierText_Youngster_PlayerWin_2,
@@ -547,8 +547,8 @@ const struct BattleTowerTrainer gTowerTrainers[] =
 	},
 	{
 		.owNum = 			EVENT_OBJ_GFX_YOUNGSTER,
-		.trainerClass = 	CLASS_YOUNGSTER_A,
-		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_A,
+		.trainerClass = 	CLASS_YOUNGSTER_B,
+		.trainerSprite = 	TRAINER_PIC_YOUNGSTER_B,
 		.gender = 			BATTLE_FACILITY_MALE,
 		.preBattleText = 	sFrontierText_Youngster_PreBattle_3,
 		.playerWinText = 	sFrontierText_Youngster_PlayerWin_3,
@@ -2277,9 +2277,9 @@ const u8 gNumFrontierMultiTrainers = NELEMS(gFrontierMultiBattleTrainers);
 	const struct BattleTowerTrainer gTowerTrainers[] =
 	{
 		{
-			.owNum = 			EVENT_OBJ_GFX_YOUNGSTER,
+			.owNum = 			EVENT_OBJ_GFX_YOUNGSTER_B,
 			.trainerClass = 	CLASS_YOUNGSTER,
-			.trainerSprite = 	TRAINER_PIC_YOUNGSTER_A,
+			.trainerSprite = 	TRAINER_PIC_YOUNGSTER_B,
 			.gender = 			BATTLE_FACILITY_MALE,
 			.preBattleText = 	sFrontierText_Youngster_PreBattle_1,
 			.playerWinText = 	sFrontierText_Youngster_PlayerWin_1,

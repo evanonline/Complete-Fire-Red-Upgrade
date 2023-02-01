@@ -84,6 +84,12 @@ EventScript_VermilionCity_NPC_FishingGuru:
 	msgbox gText_VermilionCityNPC_FishingGuru MSG_FACE
 	end
 
+.global EventScript_VermilionCity_NPC_MagikarpFlop
+EventScript_VermilionCity_NPC_MagikarpFlop:
+	cry SPECIES_MAGIKARP 0x0
+	msgbox gText_VermilionCityNPC_MagikarpFlop MSG_FACE
+	end
+
 .global EventScript_VermilionCity_NPC_TypesSame
 EventScript_VermilionCity_NPC_TypesSame:
 	msgbox gText_VermilionCityNPC_TypesSame MSG_FACE
@@ -129,14 +135,62 @@ EventScript_VermilionCity_NPC_TeamRocketRemember:
 EventScript_VermilionCity_NPC_MoneyCountingGirl:
 	msgbox gText_VermilionCityNPC_MoneySucks MSG_FACE
 	end
-		
-.global EventScript_VermilionCity_Sign
-EventScript_VermilionCity_Sign:
-	msgbox gText_Vermilion_City_Sign MSG_SIGN
-	end		
+	
+.global EventScript_VermilionCity_NPC_NicknameHint
+EventScript_VermilionCity_NPC_NicknameHint:
+	msgbox gText_VermilionCityNPC_Calvervtutrp MSG_FACE
+	end
+	
+.global EventScript_VermilionCity_NPC_BuildingLore
+EventScript_VermilionCity_NPC_BuildingLore:
+	msgbox gText_VermilionCityNPC_CoolFinally MSG_FACE
+	end
+	
+.global EventScript_VermilionCity_NPC_RomhackGuyLeft
+EventScript_VermilionCity_NPC_RomhackGuyLeft:
+	msgbox gText_VermilionCityNPC_FunnyRomhackGuy1 MSG_KEEPOPEN
+	applymovement 0x1 NPCFacePlayer
+	msgbox gText_VermilionCityNPC_FunnyRomhackGuy2_FunnyRed MSG_NORMAL
+	closeonkeypress
+	applymovement 0x1 FaceDown 
+	end
+	
+.global EventScript_VermilionCity_NPC_RomhackGuyRight
+EventScript_VermilionCity_NPC_RomhackGuyRight:
+	msgbox gText_VermilionCityNPC_FunnyRomhackGuy1 MSG_KEEPOPEN
+	applymovement 0x2 NPCFacePlayer
+	msgbox gText_VermilionCityNPC_FunnyRomhackGuy2_LaughGreen MSG_NORMAL
+	closeonkeypress
+	applymovement 0x2 FaceDown
+	end
+
+.global EventScript_VermilionCity_NPC_Water
+EventScript_VermilionCity_NPC_Water:
+	msgbox gText_VermilionCityNPC_Water MSG_FACE
+	applymovement 0x2 FaceUp
+	end
 	
 .global EventScript_VermilionPortDirections_Sign
 EventScript_VermilionPortDirections_Sign:
+	msgboxsign
 	msgbox gText_VermilionPortSign MSG_SIGN
 	end
+
+.global EventScript_CeriseLab_Sign
+EventScript_CeriseLab_Sign:
+	msgboxsign
+	msgbox gText_CeriseLabSign MSG_SIGN
+	end
 	
+NPCFacePlayer:
+	.byte 0x4A
+	.byte 0xFE	
+
+FaceUp:
+	.byte look_up
+	.byte 0xFE	
+
+
+FaceDown:
+	.byte look_down
+	.byte 0xFE

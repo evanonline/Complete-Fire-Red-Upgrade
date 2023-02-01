@@ -107,3 +107,4 @@ EventScript_MysteryGiftRandoImmunity2:
 	setflag 0x940
 	clearflag FLAG_RANDOIMMUNITY
 	return
+	
