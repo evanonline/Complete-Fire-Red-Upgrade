@@ -54,7 +54,7 @@
 #define FLAG_HIDE_STARTER_BALL3 0x957 //Person ID - hides Passimian ball in trainer lobby room
 #define FLAG_HIDE_CLOWNS_JANITOR 0x958 //Person ID - hides clowns & janitor on Vermilion Hotel floor 3 after first rival fight
 #define FLAG_HIDE_RIVAL_HOTEL2 0x959 //Person ID - hides rival after he walks away after first rival fight
-
+#define FLAG_RIVAL_VERMILIONCITY 0x59A //Person ID - rival running around in Vermilion City
 
 #define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
 
@@ -68,6 +68,8 @@
 #define FLAG_CHOSESTARTER3 0x962 //Chose Passimian as a starter, or the 3rd Pokemon if randomizer was active
 
 #define FLAG_RIVAL_1_CLEAR 0x963 //Fought rival for the first time at Vermilion Port
+
+#define FLAG_RIVAL_WHINE_SEEN 0x964 //Player has seen the rival whine about Snorlax and move to the gym
 
 #define FLAG_STARTER_CHOSEN 0x990 //Chose starter
 

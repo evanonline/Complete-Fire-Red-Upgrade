@@ -9,8 +9,25 @@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .equ FLAG_VISQUEZ_IS_HOME, 0x995
+.equ FLAG_RIVAL_WHINE_SEEN, 0x964
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global EventScript_VermilionCity_MapScript
+
+gMapScripts_VermilionCity:
+    mapscript MAP_SCRIPT_ON_TRANSITION, EventScript_VermilionCity_MapScript
+    .byte MAP_SCRIPT_TERMIN
+
+EventScript_VermilionCity_MapScript:
+	checkflag 0x964
+	if SET _call EventScript_VermilionCity_MoveRival
+	end
+
+EventScript_VermilionCity_MoveRival:
+	movesprite2 0x5 0x10 0x1B
+	spritebehave 0x5 0x9
+	return
 
 .global EventScript_VermilionCity_NPC_Tree
 EventScript_VermilionCity_NPC_Tree:
@@ -182,6 +199,30 @@ EventScript_CeriseLab_Sign:
 	msgbox gText_CeriseLabSign MSG_SIGN
 	end
 	
+.global EventScript_VermilionCity_RivalDisappointJog
+EventScript_VermilionCity_RivalDisappointJog:
+	setvar 0x4011 0x1
+	lockall
+	setflag FLAG_RIVAL_WHINE_SEEN
+	msgbox gText_VermilionCity_RivalCutscene1Rival1 MSG_NORMAL
+	applymovement 0x5 RivalToDiglettCave
+	waitmovement 0x0
+	pause 0x30
+	msgbox gText_VermilionCity_RivalCutscene1DotDotDot MSG_NORMAL
+	applymovement 0x5 RivalFromDiglettCave
+	waitmovement 0x0
+	msgbox gText_VermilionCity_RivalCutscene1Rival2 MSG_KEEPOPEN
+	pause 0x5
+	applymovement 0x5 RivalToGym
+	waitmovement 0x0
+	movesprite 0x5 0x10 0x1B
+	call EventScript_VermilionCity_MoveRival
+	closeonkeypress
+	release
+	end
+	
+@@@need map script to place rival on load after rival whine flag is set, and also to destroy him when player leaves Vermilion / enters Iced Path
+	
 NPCFacePlayer:
 	.byte 0x4A
 	.byte 0xFE	
@@ -190,7 +231,48 @@ FaceUp:
 	.byte look_up
 	.byte 0xFE	
 
-
 FaceDown:
 	.byte look_down
 	.byte 0xFE
+	
+RivalToDiglettCave:
+	.byte 0x34
+	.byte 0x34
+	.byte 0x34
+	.byte 0x34
+	.byte 0x34
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0xFE
+	
+RivalFromDiglettCave:
+	.byte 0x31
+	.byte 0x31
+	.byte 0x31
+	.byte 0x31
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0xFE
+
+RivalToGym:
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x33
+	.byte 0x37
+	.byte 0x37
+	.byte 0x37
+	.byte 0xFE
+	

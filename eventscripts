@@ -134,6 +134,7 @@ sign 1 4 1 EventScript_VermilionPort_VermilionHotelSign
 sign 1 4 2 EventScript_VermilionPort_VermilionHotelTourismBoard
 
 ## Vermilion City
+map 3 5 gMapScripts_VermilionCity
 sign 3 5 0 EventScript_VermilionCity_CitySign
 sign 3 5 2 EventScript_GymSign_Vermilion
 sign 3 5 3 EventScript_VermilionPortDirections_Sign
@@ -167,6 +168,11 @@ npc 9 14 0 EventScript_VermilionCity_NPC_CoolLass
 npc 9 14 1 EventScript_VermilionCity_NPC_Water
 npc 9 15 0 EventScript_VermilionCity_NPC_RomhackGuyLeft
 npc 9 15 1 EventScript_VermilionCity_NPC_RomhackGuyRight
+tile 3 5 0 EventScript_VermilionCity_RivalDisappointJog
+tile 3 5 1 EventScript_VermilionCity_RivalDisappointJog
+tile 3 5 2 EventScript_VermilionCity_RivalDisappointJog
+tile 3 5 3 EventScript_VermilionCity_RivalDisappointJog
+tile 3 5 4 EventScript_VermilionCity_RivalDisappointJog
 
 ## Route 5
 sign 3 23 0 EventScript_Route6_IcePathSign
@@ -180,6 +186,9 @@ npc 3 24 3 EventScript_Route6_DNSExplainer
 npc 3 24 4 EventScript_Route6_BugCatcherHorace
 npc 3 24 5 EventScript_Route6_YoungsterMaruyama
 npc 3 24 6 EventScript_Route6_DexnavExplainer
+
+## Route 7
+npc 3 25 0 EventScript_Route7_InfielderDelbert
 
 ## Route 7
 sign 3 25 0 EventScript_Route6_IcePathSign

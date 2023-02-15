@@ -1364,7 +1364,7 @@ EventScript_VermilionPort_RivalEndTalk:
 	closeonkeypress
 	applymovement 0x7 EventScript_Intro_RivalLeavesHotel
 	waitmovement 0x0
-	pause 0x5
+	pause 0x10
 	setflag FLAG_RIVAL_1_CLEAR
 	setflag 0x958
 	setflag 0x959
@@ -1389,6 +1389,7 @@ EventScript_Intro_ExclaimOnly:
 	.byte 0xFE
 
 EventScript_Intro_RivalLeavesHotel:
+	.byte walk_down
 	.byte walk_down
 	.byte walk_down
 	.byte walk_down

@@ -77,7 +77,7 @@ Vermilion Port\n[ARROW_DOWN]
 Hi[.] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color and doesn't have\nfiery attacks, or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut no one will ever care.
 
 #org @gText_VermilionCityNPC_CoolFinally
-It was great when that building\nfinally finished construction.\pThere was a Machop who diligently\nprepared the construction site[.]\lEvery day! For years!\pThe town awarded that little guy\na medal for his hard work.\pWhat's the building?\nEh, some lab or something.
+It was wonderful when they finally\nfinished that building over there.\pThere was a Machop who diligently\nprepared the construction site[.]\lEvery day! For years!\pThe town awarded that little guy\na medal for his hard work.\pWhat's the building?\nEh, some lab or something.
 
 #org @gText_VermilionCityNPC_Calvervtutrp
 You can nickname your Pok\emon at\nany [GREEN]Pok\emon Center[BLACK] now!\lSo convenient!\pJust be careful. I wanted to name\nmy Houndoom something super cool.\pBut I was babysitting my infant\nsister, and she burped real weird[.]\pThe nurse thought the burp was the\nname[.]\pSo now my Houndoom is named\n"C'verv'trp\"[.]\pWe can change the name back, of\ncourse.\pBut, our whole family got used to\ncalling our Houndoom "C'verv'trp\"[.]
@@ -95,7 +95,16 @@ Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's c
 Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].
 
 #org @gText_VermilionCityNPC_Water
-What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could just drink\nHydro Pump water for the rest of my life.
+What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could drink Hydro Pump\nwater for the rest of my life.
 
 #org @gText_VermilionCityNPC_MagikarpFlop
-Karpkarp[.]\nKarp[.][.]
+Ma-gi-karp[.][.]
+
+#org @gText_VermilionCity_RivalCutscene1Rival1
+Okay! First things first,\n[GREEN]Diglett's Cave[BLACK]!\pA good Ground-type like Diglett\nwill SMOTHER Surge!\lGround beats Electric!
+
+#org @gText_VermilionCity_RivalCutscene1DotDotDot
+[.] [.] [.] [.] [.]
+
+#org @gText_VermilionCity_RivalCutscene1Rival2
+[.] [.] [.]\nFreaking Snorlax[.]\pFine! I'll take Surge WITHOUT a\ntype advantage!

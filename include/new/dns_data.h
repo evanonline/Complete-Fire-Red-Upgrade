@@ -250,8 +250,8 @@ const struct DNSPalFade gDNSNightFadingByTime[24][6] =
 
 const struct SpecificTilesetFade gSpecificTilesetFades[] =
 {
-	//These Palette Town ones have been left in as examples. Feel free to remove.
-	{ //Palette Town - Player's Door
+	//These Pallet Town ones have been left in as examples. Feel free to remove.
+	{ //Pallet Town - Player's Door
 		.tilesetPointer = 0x82D4AAC, //Tileset 1
 		.paletteNumToFade = 8,
 		.paletteIndicesToFade =
@@ -262,7 +262,7 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
-	{ //Palette Town - Oak's Lab Windows
+	{ //Pallet Town - Oak's Lab Windows
 		.tilesetPointer = 0x82D4AAC, //Tileset 1
 		.paletteNumToFade = 9,
 		.paletteIndicesToFade =
@@ -273,7 +273,7 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
-	{ //Palette Town - Oak's Lab Door
+	{ //Pallet Town - Oak's Lab Door
 		.tilesetPointer = 0x82D4AAC, //Tileset 1
 		.paletteNumToFade = 10,
 		.paletteIndicesToFade =
@@ -281,6 +281,21 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			{8,  RGB(31, 31, 20)},
 			{9,  RGB(31, 31, 14)},
 			{10, RGB(31, 30, 0)},
+			TILESET_PAL_FADE_END
+		},
+	},
+	
+	{ //Vermilion City - New lamppost tiles / hotel entrance lights, hotel windows
+		.tilesetPointer = 0x82D4B24, //Tileset 6
+		.paletteNumToFade = 11,
+		.paletteIndicesToFade =
+		{
+			{2,  RGB(24, 15, 12)},
+			{3,  RGB(31, 31, 28)},
+			{6,  RGB(14, 14, 13)},
+			{11,  RGB(31, 28, 16)},
+			{12,  RGB(27, 26, 14)},
+			{13,  RGB(24, 25, 12)},
 			TILESET_PAL_FADE_END
 		},
 	},
