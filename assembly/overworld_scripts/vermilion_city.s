@@ -10,6 +10,7 @@
 
 .equ FLAG_VISQUEZ_IS_HOME, 0x995
 .equ FLAG_RIVAL_WHINE_SEEN, 0x964
+.equ FLAG_SKIPPED_VERMILIONGYMSCENE, 0x59B
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -20,8 +21,15 @@ gMapScripts_VermilionCity:
     .byte MAP_SCRIPT_TERMIN
 
 EventScript_VermilionCity_MapScript:
+	checkflag 0x59A
+	if SET _goto EventScript_VermilionCity_HideRival
 	checkflag 0x964
 	if SET _call EventScript_VermilionCity_MoveRival
+	end
+	
+EventScript_VermilionCity_HideRival:
+	setflag 0x59A
+	hidesprite 5
 	end
 
 EventScript_VermilionCity_MoveRival:
@@ -221,7 +229,102 @@ EventScript_VermilionCity_RivalDisappointJog:
 	release
 	end
 	
-@@@need map script to place rival on load after rival whine flag is set, and also to destroy him when player leaves Vermilion / enters Iced Path
+.global EventScript_VermilionCity_RivalAndFlynn
+EventScript_VermilionCity_RivalAndFlynn:
+	setvar 0x511E 0x1
+	lockall
+	msgbox gText_VermilionCity_RivalCutscene2Rival0 MSG_KEEPOPEN
+	applymovement 0x6 FaceLeft
+	applymovement 0xFF PlayerToRival
+	msgbox gText_VermilionCity_RivalCutscene2Flynn1_1 MSG_KEEPOPEN
+	applymovement 0x6 FaceDown
+	msgbox gText_VermilionCity_RivalCutscene2Flynn1_2 MSG_KEEPOPEN
+	applymovement 0x5 WalkLeft
+	msgbox gText_VermilionCity_RivalCutscene2Rival1 MSG_KEEPOPEN
+	applymovement 0x6 FaceUp
+	msgbox gText_VermilionCity_RivalCutscene2Flynn2 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Rival2 MSG_KEEPOPEN
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	waitmovement 0x0
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	waitmovement 0x0
+	applymovement 0x6 FaceDown
+	msgbox gText_VermilionCity_RivalCutscene2Flynn3 MSG_KEEPOPEN
+	applymovement 0x5 FaceRightExclaim
+	sound 0x15
+	waitmovement 0x0
+	msgbox gText_VermilionCity_RivalCutscene2Rival3 MSG_KEEPOPEN
+	applymovement 0x5 FaceLeft
+	msgbox gText_VermilionCity_RivalCutscene2Flynn4 MSG_KEEPOPEN
+	applymovement 0x6 FaceLeft
+	applymovement 0x5 ExclaimNormal
+	sound 0x15
+	msgbox gText_VermilionCity_RivalCutscene2Rival4 MSG_KEEPOPEN
+	applymovement 0x6 FaceUp
+	msgbox gText_VermilionCity_RivalCutscene2Flynn5 MSG_KEEPOPEN
+	applymovement 0x5 DoubleExclaim
+	sound 0x15
+	msgbox gText_VermilionCity_RivalCutscene2Rival5 MSG_KEEPOPEN
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	msgbox gText_VermilionCity_RivalCutscene2Flynn6 MSG_KEEPOPEN
+	applymovement 0x6 FaceLeft
+	msgbox gText_VermilionCity_RivalCutscene2Rival6 MSG_KEEPOPEN
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	waitmovement 0x0
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	waitmovement 0x0
+	applymovement 0x5 RivalBumpsFlynn
+	sound 0x7
+	msgbox gText_VermilionCity_RivalCutscene2Flynn7_1 MSG_KEEPOPEN
+	sound 0x3
+	checksound
+	applymovement 0x6 FaceRight
+	msgbox gText_VermilionCity_RivalCutscene2Flynn7_2 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Rival7 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Flynn8 MSG_KEEPOPEN
+	applymovement 0x5 RivalSteppyLeft
+	msgbox gText_VermilionCity_RivalCutscene2Rival8 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Flynn9 MSG_KEEPOPEN
+	applymovement 0x6 FlynnSpin
+	sound 0x22
+	pause 0x10
+	sound 0x22
+	waitmovement 0x0
+	msgbox gText_VermilionCity_RivalCutscene2Rival9 MSG_KEEPOPEN
+	applymovement 0x6 FaceRight
+	msgbox gText_VermilionCity_RivalCutscene2Flynn10 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Rival10 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Flynn11 MSG_KEEPOPEN
+	applymovement 0x5 RivalSteppyLeft
+	msgbox gText_VermilionCity_RivalCutscene2Rival11 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Flynn12 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Rival12 MSG_KEEPOPEN
+	msgbox gText_VermilionCity_RivalCutscene2Flynn13 MSG_KEEPOPEN
+	applymovement 0x5 FaceRight
+	msgbox gText_VermilionCity_RivalCutscene2Rival13 MSG_KEEPOPEN
+	applymovement 0x5 RivalLeaves
+	waitmovement 0x0
+	setflag 0x59A
+	hidesprite 5
+	msgbox gText_VermilionCity_RivalCutscene2Flynn14 MSG_NORMAL
+	end
+
+.global EventScript_VermilionCity_FlynnGym
+EventScript_VermilionCity_FlynnGym:
+	checkflag FLAG_SKIPPED_VERMILIONGYMSCENE
+	if SET _goto EventScript_VermilionCity_FlynnGymShortExplain
+	msgbox gText_VermilionCity_FlynnAfter MSG_FACE
+	end
+
+EventScript_VermilionCity_FlynnGymShortExplain:
+	msgbox gText_VermilionCity_FlynnAfter_DidntSeeCutscene MSG_FACE
+	clearflag FLAG_SKIPPED_VERMILIONGYMSCENE @clearing the flag will reset Flynn dialogue to the above from then on
+	end
 	
 NPCFacePlayer:
 	.byte 0x4A
@@ -235,6 +338,31 @@ FaceDown:
 	.byte look_down
 	.byte 0xFE
 	
+FaceLeft:
+	.byte look_left
+	.byte 0xFE
+	
+FaceRight:
+	.byte look_right
+	.byte 0xFE
+	
+FaceRightExclaim:
+	.byte look_right
+	.byte 0x62
+	.byte 0xFE
+
+ExclaimNormal:
+	.byte 0x62
+	.byte 0xFE
+	
+DoubleExclaim:
+	.byte 0x65
+	.byte 0xFE
+
+WalkLeft:
+	.byte walk_left
+	.byte 0xFE
+
 RivalToDiglettCave:
 	.byte 0x34
 	.byte 0x34
@@ -275,4 +403,45 @@ RivalToGym:
 	.byte 0x37
 	.byte 0x37
 	.byte 0xFE
+
+PlayerToRival:
+	.byte walk_down
+	.byte walk_down
+	.byte walk_left
+	.byte 0xFE
 	
+RivalBumpsFlynn:
+	.byte look_left
+	.byte 0x4C
+	.byte 0x33
+	.byte 0x34
+	.byte 0x4D
+	.byte 0xFE
+	
+RivalSteppyLeft:
+	.byte 0x27
+	.byte 0x2B
+	.byte 0xFE
+
+FlynnSpin:
+	.byte 0x94
+	.byte 0x95
+	.byte 0x94
+	.byte 0x95
+	.byte look_down
+	.byte 0xFE
+
+RivalLeaves:
+	.byte 0x35
+	.byte 0x34
+	.byte 0x34
+	.byte 0x34
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0x32
+	.byte 0xFE

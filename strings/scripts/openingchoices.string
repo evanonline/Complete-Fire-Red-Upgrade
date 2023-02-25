@@ -1,8 +1,8 @@
-#org @gText_OpeningSibEntry
-There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC behind you that lets\nyou set a bunch of options.\pCheck that out if you want, and\nthen come back here!
+#org @gText_OpeningSibEntry_Brandy
+[RED]Brandy[BLACK]: There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC behind you that lets\nyou set a bunch of options.\pCheck that out if you want, and\nthen come back here!
 
-#org @gText_OpeningOptionsMenusSuck
-Oh[.]\nThe Options PC is out of order[.]
+#org @gText_OpeningSibEntry_Sherry
+[RED]Sherry[BLACK]: There you are, sib!\nYou're just in time!\pThe Professor's aide is here! She's\njust getting stuff downstairs!\pThere's a PC behind you that lets\nyou set a bunch of options.\pCheck that out if you want, and\nthen come back here!
 
 #org @gText_OpeningOptionsScanCheck
 Scanning Trainer Card[.]
@@ -97,68 +97,65 @@ Sinnoh Problem Mode [RED]disabled[BLACK].
 #org @gText_OpeningOptionsPCDone
 Thank you! Good luck on your\nPok\emon journey!
 
-#org @gText_OpeningSibWarning
-You ready to go, sib?\nAre you done at the computer?\p[RED]You won't be able to access those\nafter we leave!
-
-#org @gText_OpeningSibGo
-Alright! Let's go!\nI'm so excited!
-
 #org @gText_OpeningOptionsInactive
 Welcome, [PLAYER]!\lThis is the [BLUE]Indigo League Options\nService[BLACK].\pYou are no longer eligible to\nmodify challenge settings.
 
 #org @gText_PokemonChoiceLobby_Rival_1
-[.]\nHello, [PLAYER].\p[.]Are you excited for our starters?\pThe aide left them on a table\nover there.\pBut she disappeared somewhere[.]\nGuess we ought to wait.\lShe'd better hurry up and get back.
+[RED][RIVAL][BLACK]: [.] [.]\nHello, [PLAYER].\p[.]Are you excited for our starters?\pThe aide left them on a table\nover there.\pBut she disappeared somewhere[.]\nGuess we ought to wait.\lShe'd better hurry up and get back.
 
 #org @gText_PokemonChoiceLobby_SibSherry_1
-Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Bulbasaur,\nyou gotta let me have it!\pAnd I'd let you get Tepig, of\ncourse!\pMatching outfits with your Pok\emon\nwould be so trendy!\pWell, lead the way, [PLAYER]!
+[RED]Sherry[BLACK]: Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Bulbasaur,\nyou gotta let me have it!\pAnd I'd let you get Tepig, of\ncourse!\pMatching outfits with your Pok\emon\nwould be so trendy!\pWell, lead the way, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_SibBrandy_1
-Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?\pWell, you first, [PLAYER]!
+[RED]Brandy[BLACK]: Sib!\nI'm so excited for our Pok\emon!\pOf course, if there's a Tepig,\nyou gotta let me have it!\pAnd I'd let you get Bulbasaur, of\ncourse!\pGetting our favorites would be\nserendipitous, y'know?\pWell, you first, [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction1
 AAAHH! I'M BACK! SORRYYYYY!\nI LEFT THE OLD RODS DOWNSTAIRS!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction2
-(huff) (puff)\nAhh[.] Hoo[.]\lOne sec, kiddos[.]
+[RED]Oak's Aide[BLACK]: (huff) (puff)\nAhh[.] Hoo[.]\lOne sec, kiddos[.]
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction3
-(huff) (puff)
+[RED]Oak's Aide[BLACK]: (huff) (puff)
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction4
-Whoof[.]
+[RED]Oak's Aide[BLACK]: Whoof[.]
 
 #org @gText_PokemonChoiceLobby_DotDotDot
 [.] [.] [.] [.]
 
 #org @gText_PokemonChoiceLobby_Whisk_Introduction1
-[.]Hey, wait, did you call us\n"kiddos\"?!\pDon't talk down to us!
+[RED][RIVAL][BLACK]: [.]Hey, wait, did\nyou call us "kiddos\"?!\pDon't talk down to us!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction5
-Ah, sorry! Force of habit! Usually,\nwe're doing this for littler kids.
+[RED]Oak's Aide[BLACK]: Ah, sorry!\nForce of habit!\pUsually, we're doing this\nfor littler kids.
 
 #org @gText_PokemonChoiceLobby_Whisk_Introduction2
-[.] [.]\nGrgrr[.]
+[RED][RIVAL][BLACK]: [.] [.]\nGrgrr[.]
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction6
-Ah! N-no offense! I'm not thinking\nstraight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pI left your Pok\emon on the table.\nLet's get you all started!
+[RED]Oak's Aide[BLACK]:  Ah! N-no offense!\nI'm not thinking straight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pI left your Pok\emon on the table.\nLet's get you all started!
 
 #org @gText_PokemonChoiceLobby_Whisk_Introduction3
-Finally! Let's see what we've got!
+[RED][RIVAL][BLACK]: Finally!\nLet's see what we've got!
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction7
-Okay!\nTake your pick, kiddos!\l[.]\lErr, esteemed equals!
+[RED]Oak's Aide[BLACK]: Okay!\nTake your pick, kiddos!\l[.]\lErr, esteemed equals!
 
-#org @gText_PokemonChoiceLobby_SibIntertalk1
-Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have just caught these\nPok\emon very recently!\pWe're really getting premium\ntreatment!
+#org @gText_PokemonChoiceLobby_SibIntertalk1_Brandy
+[RED]Brandy[BLACK]: Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have just caught these\nPok\emon very recently!\pWe're really getting premium\ntreatment!
+
+#org @gText_PokemonChoiceLobby_SibIntertalk1_Sherry
+[RED]Sherry[BLACK]: Hmm[.] hey sib[.]\nThose Pok\e Balls look brand new,\lright?\pThey must have just caught these\nPok\emon very recently!\pWe're really getting premium\ntreatment!
 
 #org @gText_PokemonChoiceLobby_RivalIntertalk1
-[.] [.] Don't laugh at me for this,\n[PLAYER], but, I'm[.]\p[.] [.] I'm too nervous to look at the\nstarters!\lPlease, you go first.
+[RED][RIVAL][BLACK]: [.] [.] Don't laugh at me\nfor this, [PLAYER], but, I'm[.]\p[.] [.] I'm too nervous to look at the\nstarters!\lPlease, you go first.
 
 #org @gText_PokemonChoiceLobby_HatsumiIntertalk1
-Ah, hang on, I should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure\nis about to begin!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!\"\p[.]if you see Professor Oak, please\ntell him about how I read you that.
+[RED]Oak's Aide[BLACK]: Ah, hang on.\pI should be reading\nfrom the official Oak Labs script.\lAhem!\p"Trainers! It's time to choose your\n[RED]very own Partner Pok\emon![BLACK]\pYour very own Pok\emon adventure\nis about to begin!\pImmerse yourself in a newly\nevolved adventure!\pA world of dreams and adventures\nwith Pok\emon awaits! Let's go!\"\p[.]if you see Professor Oak, please\ntell him about how I read you that.
 
 #org @gText_PokemonChoiceLobby_RivalWhereGoing
-Hey, [PLAYER]!\nWhere are you going?\pQuit messing around[.]
+[RED][RIVAL][BLACK]: Hey, [PLAYER]!\nWhere are you going?\pQuit messing around[.]
 
 #org @gText_PokemonChoiceLobby_RelicanthBall
 Will you choose Relicanth, the\nLongevity Pok\emon?
@@ -187,59 +184,71 @@ Would you like to give\nyour Pok\emon a nickname?
 #org @gText_PokemonChoiceLobby_EveryoneRandomStarters
 The others choose their own\nrandom Pok\emon as well!
 
-#org @gText_PokemonChoiceLobby_SibChoice1
-Alright, me next!\pI wanna leave [RIVAL] with the\nPok\emon weak to mine!
+#org @gText_PokemonChoiceLobby_SibChoice1_Brandy
+[RED]Brandy[BLACK]: Alright, me next!\pI wanna leave [RIVAL] with the\nPok\emon weak to mine!
+
+#org @gText_PokemonChoiceLobby_SibChoice1_Sherry
+[RED]Sherry[BLACK]: Alright, me next!\pI wanna leave [RIVAL] with the\nPok\emon weak to mine!
 
 #org @gText_PokemonChoiceLobby_RivalDestroyedOwnedBlastedSadTragic
-Hey! Not cool[.]\p[.] [.] [.]\nWell, let me see who I get[.]
+[RED][RIVAL][BLACK]: Hey! Not cool[.]\p[.] [.] [.]\nWell, let me see who I get[.]
 
-#org @gText_PokemonChoiceLobby_SibChoice2
-Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
+#org @gText_PokemonChoiceLobby_SibChoice2Brandy
+[RED]Brandy[BLACK]: Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
+
+#org @gText_PokemonChoiceLobby_SibChoice2Sherry
+[RED]Sherry[BLACK]: Ha ha ha! Sorry,\n[RIVAL], I'm just teasing!\pAt least you'll have the advantage\non [PLAYER]!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn
-I'm Hatsumi, by the way[.]!\pAll three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])\pNow, I've got all your gear, too!\nC'mere!
+[RED]Oak's Aide[BLACK]: I'm Hatsumi,\nby the way[.]!\pAll three of you chose [BLUE]Randomizer\nMode[BLACK], so no complaints, okay?\p(You have no idea how hard it was\nto get those Pok\emon[.])\pNow, I've got all your gear, too!\nC'mere!
 
 #org @gText_PokemonChoiceLobby_RivalChoice1
-Hey[.]\nWhat's up with these starters?!
+[RED][RIVAL][BLACK]: Hey[.]\nWhat's up with these starters?!
 
 #org @gText_PokemonChoiceLobby_RivalChoice2
 These aren't starters!\nThey're just some weirdos!\lNone of these Pok\emon even evolve!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense1
-Auh[.]\nWe were, um[.]\lOut[.]\l[.] [.]of starter Pok\emon[.]?\pThese three were caught for an\ninternship project on swarms[.]
+[RED]Oak's Aide[BLACK]: Auh[.]\nWe were, um[.]\lOut[.]\l[.] [.]of starter Pok\emon[.]?\pThese three were caught for an\ninternship project on swarms[.]
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense2
 B-but relax!\pRock, Flying and Fighting form a\ntype triangle!\lJust like Fire, Grass, and Water!\lH-heh ha ha[.]!
 
 #org @gText_PokemonChoiceLobby_RivalChoice3
-But this is all uneven[.]\pSigilyph being Psychic/Flying puts\nPassimian at a big disadvantage!
+[RED][RIVAL][BLACK]: But this is all uneven[.]\pSigilyph being Psychic/Flying puts\nPassimian at a big disadvantage!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense3
-A-ah, er[.]\pOh, uh, by the way!\nMy name's Hatsumi!
+[RED]Oak's Aide[BLACK]: A-ah, er[.]\pOh, uh, by the way!\nMy name's Hatsumi!
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense4
 I used to work for Professor Elm,\nand-
 
 #org @gText_PokemonChoiceLobby_RivalChoice4
-Cool. Now I know who to file a\ncomplaint about[.]
+[RED][RIVAL][BLACK]: Cool.\nThanks for sharing.\pNow I know who to file a\ncomplaint about[.]
 
 #org @gText_PokemonChoiceLobby_HatsumiDefense5
-A-ah haha[.]\nWell[.] Uh[.]\p[.]L-let me give you your trainer\ngear, and I'll let you go! C'mere!
+[RED]Hatsumi[BLACK]: A-ah haha[.]\nWell[.] Uh[.]\p[.]L-let me give you your trainer\ngear, and I'll let you go! C'mere!
 
-#org @gText_PokemonChoiceLobby_SibIntertalk2
-(Hey, sib[.] [RIVAL] is\nkind of embarassing us[.])
+#org @gText_PokemonChoiceLobby_SibIntertalk2_Sherry
+[RED]Sherry[BLACK]: (Hey, sib[.])\p([RIVAL] is kind of embarassing\nus[.])
 
-#org @gText_PokemonChoiceLobby_SibIntertalk2_Rando
-Wow, crazy!\nWe all wanted to randomize!
+#org @gText_PokemonChoiceLobby_SibIntertalk2_Brandy
+[RED]Brandy[BLACK]: (Hey, sib[.])\p([RIVAL] is kind of embarassing\nus[.])
+
+#org @gText_PokemonChoiceLobby_SibIntertalk2_Rando_Sherry
+[RED]Sherry[BLACK]: Wow, crazy!\nWe all wanted to randomize!
+
+#org @gText_PokemonChoiceLobby_SibIntertalk2_Rando_Brandy
+[RED]Brandy[BLACK]: Wow, crazy!\nWe all wanted to randomize!
 
 #org @gText_PokemonChoiceLobby_RivalIntertalk2
-[.] [.] [.] Well[.]\pIt IS nice to have a Pok\emon[.]\nBut[.]
+[RED][RIVAL][BLACK]: [.] [.] [.] Well[.]\pIt IS nice to have a Pok\emon[.]\nBut[.]
 
 #org @gText_PokemonChoiceLobby_RivalIntertalk2_Rando
-Hmmph. I guess we're on equal\nfooting.\pI wasn't expecting us all to\nrandomize.
+[RED][RIVAL][BLACK]: Hmmph.\nI guess we're on equal footing.\pI wasn't expecting us all to\nrandomize.
 
 #org @gText_PokemonChoiceLobby_HatsumiPackage
-Okay!\pHere's your starter package,\ncourtesy of Oak Labs!
+[RED]Hatsumi[BLACK]: Okay!\pHere's your starter package,\ncourtesy of Oak Labs!
 
 #org @gText_PokemonChoiceLobby_YouGotStuff
 You got[.]\n[.]a TON of stuff from Hatsumi[.]!
@@ -248,40 +257,53 @@ You got[.]\n[.]a TON of stuff from Hatsumi[.]!
 [.]Oh, and so did your friends!
 
 #org @gText_PokemonChoiceLobby_HatsumiExplainStuff
-Okay, so... there's your Pok\edex,\nwith National AND New Kanto orders.\pYou've also got your DexNav,\nyour Vs. Seeker, a Town Map,\la Berry Pouch, a-
+[RED]Hatsumi[BLACK]: Okay, so...\nthere's your Pok\edex, with[.]\lNational, AND New Kanto orders!\pYou've also got your DexNav,\nyour Vs. Seeker, a Town Map,\la Berry Pouch, a-
 
 #org @gText_PokemonChoiceLobby_RivalComplainAgain
-Hey, this Pok\edex is ancient!\pWhere's the Rotom?!\nIt should have a Rotom!
+[RED][RIVAL][BLACK]: Hey, this Pok\edex is\nancient!\pWhere's the Rotom?!\nIt should have a Rotom!
 
 #org @gText_PokemonChoiceLobby_HatsumiExplainAgain
-I-I'm sorry[.] Professor Oak only\nhad old [BLUE]HANDY909[BLACK] models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\pLook! You can search for Pok\emon\nby habitat!
+[RED]Hatsumi[BLACK]: I-I'm sorry[.]\pProfessor Oak only\nhad old [BLUE]HANDY909[BLACK] models left[.]\pB-but you'll find that this Pok\edex\ncan do things newer ones can't!\pLook! You can search for Pok\emon\nby habitat!
 
-#org @gText_PokemonChoiceLobby_SibApologize
-Sounds cool to me, honestly!\nThank you, Miss Hatsumi!\pI'm sorry my friend is being a\nweenie.
+#org @gText_PokemonChoiceLobby_SibApologize_Sherry
+[RED]Sherry[BLACK]: Sounds cool to me,\nhonestly!\lThank you, Miss Hatsumi!\pI'm sorry my friend is being a\nweenie.
+
+#org @gText_PokemonChoiceLobby_SibApologize_Brandy
+[RED]Brandy[BLACK]: Sounds cool to me,\nhonestly!\lThank you, Miss Hatsumi!\pI'm sorry my friend is being a\nweenie.
 
 #org @gText_PokemonChoiceLobby_RivalWeenified
-[RED]WEENIE?!?!?
+[RED][RIVAL][BLACK]: [RED]WEENIE?!?!?
 
 #org @gText_PokemonChoiceLobby_HatsumiFinal1
-H-heh ha ha[.]!\nUh[.]
+[RED]Hatsumi[BLACK]: H-heh ha ha[.]!\nUh[.]
 
 #org @gText_PokemonChoiceLobby_HatsumiFinal2
 Ah! I've been here too long!\nOh no!\pI still have so much stuff to\ndo for the professor!\lI gotta jet, kiddos!\lA-adultos!\lH-heh ha ha[.]!
 
 #org @gText_PokemonChoiceLobby_RivalUnimpressed
-She's just out of here already?!
+[RED][RIVAL][BLACK]: She's just out of here\nalready?!
 
-#org @gText_PokemonChoiceLobby_SibOuttaHere1
-We should head out too, gang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
+#org @gText_PokemonChoiceLobby_SibOuttaHere1_Sherry
+[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
 
-#org @gText_PokemonChoiceLobby_SibOuttaHere2
-We should head out too, gang!\pC'mon! I wanna go see what\nmy Passimian can do!
+#org @gText_PokemonChoiceLobby_SibOuttaHere2_Sherry
+[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Passimian can do!
 
-#org @gText_PokemonChoiceLobby_SibOuttaHere3
-We should head out too, gang!\pC'mon! I wanna go see what\nmy Relicanth can do!
+#org @gText_PokemonChoiceLobby_SibOuttaHere3_Sherry
+[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Relicanth can do!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere1_Brandy
+[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere2_Brandy
+[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Passimian can do!
+
+#org @gText_PokemonChoiceLobby_SibOuttaHere3_Brandy
+[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Relicanth can do!
+
 
 #org @gText_PokemonChoiceLobby_RivalAngyAngy1
-Ahghghg! COME BACK HERE!
+[RED][RIVAL][BLACK]: Ahghghg!\nCOME BACK HERE!
 
 #org @gText_PokemonChoiceLobby_RivalAngyAngy2
 AT LEAST HOLD THE ELEVATOR FOR ME!

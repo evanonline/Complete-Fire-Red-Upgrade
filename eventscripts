@@ -143,6 +143,7 @@ npc 3 5 0 EventScript_VermilionCity_NPC_Pollution
 npc 3 5 1 EventScript_VermilionCity_NPC_Sitizen
 npc 3 5 2 EventScript_VermilionCity_NPC_SailorSSAnne
 npc 3 5 3 EventScript_VermilionCity_NPC_Tree
+npc 3 5 5 EventScript_VermilionCity_FlynnGym
 npc 3 5 6 EventScript_VermilionCity_NPC_BuildingLore
 npc 9 0 0 EventScript_VermilionCity_NPC_FishingGuru
 npc 9 0 1 EventScript_VermilionCity_NPC_MagikarpFlop
@@ -173,6 +174,7 @@ tile 3 5 1 EventScript_VermilionCity_RivalDisappointJog
 tile 3 5 2 EventScript_VermilionCity_RivalDisappointJog
 tile 3 5 3 EventScript_VermilionCity_RivalDisappointJog
 tile 3 5 4 EventScript_VermilionCity_RivalDisappointJog
+tile 3 5 5 EventScript_VermilionCity_RivalAndFlynn
 
 ## Route 5
 sign 3 23 0 EventScript_Route6_IcePathSign
@@ -210,6 +212,8 @@ npc 1 31 1 EventScript_IcedPath_CamperTroy
 npc 1 31 2 EventScript_IcedPath_SwimmerFrancine
 npc 1 31 3 EventScript_IcedPath_CamperRoss
 npc 1 31 4 EventScript_TM97
+tile 1 31 0 EventScript_IcedPath_CheckVermilionGymCutscene
+tile 1 31 1 EventScript_IcedPath_CheckVermilionGymCutscene
 
 ## Celadon City
 sign 3 6 3 EventScript_CeladonCity_CitySign
@@ -222,6 +226,20 @@ npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
 sign 3 3 0 EventScript_CeruleanCity_CitySign
 sign 3 3 1 EventScript_GymSign_Cerulean
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
+
+## Saffron guard tiles
+tile 17 1 0 Guard_LooksLeftMovesUp
+tile 17 1 1 Guard_LooksLeftMovesUp
+tile 17 1 2 Guard_LooksLeftMovesUp
+tile 18 0 0 Guard_LooksRightMovesDown
+tile 18 0 1 Guard_LooksRightMovesDown
+tile 18 0 2 Guard_LooksRightMovesDown
+tile 19 0 0 Guard_LooksUpMovesLeft
+tile 19 0 1 Guard_LooksUpMovesLeft
+tile 19 0 2 Guard_LooksUpMovesLeft
+tile 20 0 0 Guard_LooksUpMovesRight
+tile 20 0 1 Guard_LooksUpMovesRight
+tile 20 0 2 Guard_LooksUpMovesRight
 
 ## Saffron City
 sign 3 10 0 EventScript_SaffronCity_CitySign

@@ -56,6 +56,8 @@
 #define FLAG_HIDE_RIVAL_HOTEL2 0x959 //Person ID - hides rival after he walks away after first rival fight
 #define FLAG_RIVAL_VERMILIONCITY 0x59A //Person ID - rival running around in Vermilion City
 
+#define FLAG_SKIPPED_VERMILIONGYMSCENE 0x59B // If the player crosses certain tiles in Iced Path, it checks "FLAG_RIVALVERMILIONCITY". If it is not set, the cutscene is disabled and this flag is set in order to activate a truncated explanation of the current critical path from Flynn in front of the gym.
+
 #define FLAG_BRENDANFIRST_SPOKEN 0x95C //Talked to Brendan on Route 6 at the start, and saw his initial dialogue
 
 #define FLAG_ICEDPATH_TM97_HIDE 0x95D //Person ID - Obtained the TM97 item pickup

@@ -23,14 +23,6 @@
 @;Options PC@@@@@@@@@@@@@@@@@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.global EventScript_IndigoOptionsPC_Broken
-EventScript_IndigoOptionsPC_Broken:
-	sound 0x2
-	msgbox gText_OpeningOptionsMenusSuck MSG_KEEPOPEN
-	closeonkeypress
-	sound 0x3
-	end
-
 .global EventScript_IndigoOptionsPC
 EventScript_IndigoOptionsPC:
 	sound 0x2

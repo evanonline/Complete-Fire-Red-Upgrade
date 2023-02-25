@@ -8,6 +8,10 @@
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+.equ FLAG_SKIPPED_VERMILIONGYMSCENE, 0x59B
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 .global EventScript_IcedPath_CheckHideTM97
 gMapScripts_IcedPath_CheckHideTM97:
     mapscript MAP_SCRIPT_ON_LOAD EventScript_IcedPath_TM97FlagCheck
@@ -54,6 +58,19 @@ EventScript_IcedPath_SwimmerFrancine_2:
 	trainerbattle0 0x0 0x8 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose
     msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
 	end
+
+.global EventScript_IcedPath_CheckVermilionGymCutscene
+EventScript_IcedPath_CheckVermilionGymCutscene:
+	checkflag 0x59A
+	if NOT_SET _call EventScript_NullifyRivalCutsceneVermilion
+	setvar 0x4012 0x1
+	end
+
+EventScript_NullifyRivalCutsceneVermilion:
+	setflag FLAG_SKIPPED_VERMILIONGYMSCENE
+	setflag 0x59A
+	setvar 0x511E 0x1
+	return
 
 EventScript_IcedPath_SwimmerFrancine_3:
 	trainerbattle0 0x0 0x9 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose

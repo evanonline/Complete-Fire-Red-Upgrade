@@ -60,13 +60,13 @@ Explain
 Enable all powerups
 
 #org @sRunSettingsEnableRestrictedPowerups
-Enable restricted powerups
+Enable Restricted Powerups Mode
 
 #org @sRunSettingsDisableAllPowerups
 Disable all powerups
 
 #org @sRunSettingsListUnrestricted
-List Restricted exceptions
+List Restricted Mode exceptions
 
 #org @sText_VermilionPortTourismBoardOption1
 Worn ad

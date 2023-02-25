@@ -46,6 +46,9 @@ extern const u8 gText_MysteryGift_LanturnDiannePassword[];
 extern const u8 gText_MysteryGift_SableyeGolgoPassword[];
 extern const u8 gText_MysteryGift_RayquazaVCreatePassword[];
 extern const u8 gText_MysteryGift_CacneaPokeParkPassword[];
+extern const u8 gText_MysteryGift_VietnameseCrystalPassword[];
+extern const u8 gText_MysteryGift_SonicLabyrinthPassword[];
+extern const u8 gText_MysteryGift_MetroidPassword[];
 extern const u8 gText_MysteryGift_GameBoyAdvanceSecretCode[];
 
 const struct NewMysteryGift gMysteryGifts[] = 
@@ -667,6 +670,117 @@ const struct NewMysteryGift gMysteryGifts[] =
         .isShiny = FALSE,
         .ballType = BALL_TYPE_POKE_BALL,
         .password = gText_MysteryGift_CacneaPokeParkPassword,
+    },
+	
+	// Vietnamese Crystal Hoothoot
+	{
+        .species = SPECIES_HOOTHOOT,
+        .item = ITEM_CHOICE_SPECS,
+        .abilityNum = 2,
+        .nature = NATURE_MODEST,
+        .moves = 
+        {
+            MOVE_AGILITY,
+            MOVE_WORKUP,
+            MOVE_HURRICANE,
+            MOVE_ROOST,
+        },
+        .ivs =
+        {
+            31,
+            31,
+            31,
+            31,
+            31,
+            31,
+        },
+        .evs = 
+        {
+            0,
+            0,
+            0,
+            252,
+            4,
+            252,
+        },
+        .level = 5,
+        .isShiny = TRUE,
+        .ballType = BALL_TYPE_CHERISH_BALL,
+        .password = gText_MysteryGift_VietnameseCrystalPassword,
+    },
+	
+	// Sonic Labyrinth Toucannon
+	{
+        .species = SPECIES_TOUCANNON,
+        .item = ITEM_ASSAULT_VEST,
+        .abilityNum = 2,
+        .nature = NATURE_JOLLY,
+        .moves = 
+        {
+            MOVE_BEAKBLAST,
+            MOVE_BULLETSEED,
+            MOVE_GUNKSHOT,
+            MOVE_OVERHEAT,
+        },
+        .ivs =
+        {
+            29,
+            29,
+            29,
+            29,
+            29,
+            31,
+        },
+        .evs = 
+        {
+            0,
+            252,
+            4,
+            0,
+            0,
+            252,
+        },
+        .level = 5,
+        .isShiny = TRUE,
+        .ballType = BALL_TYPE_CHERISH_BALL,
+        .password = gText_MysteryGift_SonicLabyrinthPassword,
+    },
+		
+	// Metroid Skarmory
+	{
+        .species = SPECIES_SKARMORY,
+        .item = ITEM_ASSAULT_VEST,
+        .abilityNum = 2,
+        .nature = NATURE_JOLLY,
+        .moves = 
+        {
+            MOVE_ICEBEAM,
+            MOVE_PINMISSILE,
+            MOVE_HYPERBEAM,
+            MOVE_IRONDEFENSE,
+        },
+        .ivs =
+        {
+            27,
+            25,
+            27,
+            25,
+            27,
+            28,
+        },
+        .evs = 
+        {
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+        },
+        .level = 5,
+        .isShiny = TRUE,
+        .ballType = BALL_TYPE_CHERISH_BALL,
+        .password = gText_MysteryGift_MetroidPassword,
     },
 	
 };

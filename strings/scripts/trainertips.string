@@ -5,7 +5,10 @@ Trainer Tips!\pThe move Wild Charge is stronger than ever!\nIts strength is now 
 Trainer Tips!\pAll Pok\emon stats and types remain\nunchanged with Generation IX rules.\pHowever, Pok\emon movepools may\ndiffer from common online listings.
 
 #org @gText_TrainerTips_Nuzlocke
-Trainer Tips!\pA [GREEN]Nuzlocke[BLACK] is a [BLUE]self-imposed[BLACK]\nPok\emon League challenge run.\pThe rules are simple!\p[BLUE]1. You can only catch the first\nPok\emon you encounter per area.\p2. If a Pok\emon faints, you may\nno longer use it on your team.\p3. If you run out of Pok\emon[.]\nstart your League challenge over!\p[BLACK]The [GREEN]Nuzlocke[BLACK] ruleset is [BLUE]not enforced\nofficially[BLACK] by the Pok\emon League.\pBut it IS fully legal to attempt!\nGive it a try sometime!
+Trainer Tips!\pA [GREEN]Nuzlocke[BLACK] is a [BLUE]self-imposed[BLACK]\nPok\emon League challenge run.\pThe rules are simple!\p[BLUE]1. You can only catch the first\nPok\emon you encounter per area.\p2. If a Pok\emon faints, you may\nno longer use it on your team.\p3. If you run out of Pok\emon[.]\nstart your League challenge over!\pThe name "Nuzlocke\" comes from a\nparticularly famous Nuzleaf,\lwho took the challenge and [RED]lost[BLACK].\p[BLACK]The [GREEN]Nuzlocke[BLACK] ruleset is [BLUE]not enforced\nofficially[BLACK] by the Pok\emon League.\pBut it IS fully legal to attempt!\nGive it a try sometime!
 
 #org @gText_TrainerTips_PalletStartMenu
 Trainer Tips!\pPress [START_BUTTON] to open the menu!
+
+#org @gText_TrainerTips_EVs
+Any Pokemon who gains experience\nfrom a battle will also gain\l[GREEN]effort values[BLACK], or [GREEN]EVs[BLACK],\lfrom the defeated Pok\emon.\pEVs will be awarded in any of the\nsix stats a Pok\emon has.\pThe EVs a Pok\emon award generally\nreflect its own stats.\pFor example, Geodude has high\nDefense, so defeating one will\lgrant a Defense EV.\pSo your Pok\emon, in turn, will\nhave its Defense improve!\pTalk to a stats expert at Cerise\nLaboratory for more EV details!

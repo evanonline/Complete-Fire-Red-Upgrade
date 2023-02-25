@@ -89,10 +89,10 @@ Cerise Laboratory
 Hahaha! Haaa! Hoo-ee!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_FunnyRed
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [RED]Pok\emon Funny Red[BLACK].
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [RED]Pok\emon Funny Red[BLACK].\pThey'd never say things this wacky\nin a regular game!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_LaughGreen
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].\pI saw a character swear a cuss!\nThey do not do that in real games!
 
 #org @gText_VermilionCityNPC_Water
 What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could drink Hydro Pump\nwater for the rest of my life.
@@ -101,10 +101,106 @@ What would we do without Pok\emon?\pWe never have to worry about clean\nwater be
 Ma-gi-karp[.][.]
 
 #org @gText_VermilionCity_RivalCutscene1Rival1
-Okay! First things first,\n[GREEN]Diglett's Cave[BLACK]!\pA good Ground-type like Diglett\nwill SMOTHER Surge!\lGround beats Electric!
+[RED][RIVAL][BLACK]: Okay! First things first,\n[GREEN]Diglett's Cave[BLACK]!\pA good Ground-type like Diglett\nwill SMOTHER Surge!\lGround beats Electric!
 
 #org @gText_VermilionCity_RivalCutscene1DotDotDot
-[.] [.] [.] [.] [.]
+[.] [.] [.] [.] [.]\nYou can hear distant hollering.
 
 #org @gText_VermilionCity_RivalCutscene1Rival2
-[.] [.] [.]\nFreaking Snorlax[.]\pFine! I'll take Surge WITHOUT a\ntype advantage!
+[RED][RIVAL][BLACK]: [.] [.] [.]\nFreaking Snorlax[.]\pFine! I'll take Surge WITHOUT a\ntype advantage!
+
+#org @gText_VermilionCity_RivalCutscene2Rival0
+[RED][RIVAL][BLACK]: Hey! Hey you!\nGet off the phone,\land get out of my freaking way!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn1_1
+[RED]???[BLACK]: Eyy, you know your man Flynn\nhandles things around here now!\lOf course Lance knows I'm callin'!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn1_2
+Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can't send in a full team to\nrescue your old commander?
+
+#org @gText_VermilionCity_RivalCutscene2Rival1
+[RED][RIVAL][BLACK]: Hellooooo?\nCome on, Goggleface!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn2
+[RED]Flynn[BLACK]: Yes, I get that you're the\nonly man for the job.\lIt's just short notice here.\lAnd how long are you gonna be gone?
+
+#org @gText_VermilionCity_RivalCutscene2Rival2
+[RED][RIVAL][BLACK]: You're blocking the door!\nI gotta beat this gym, you jerk!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn3
+[RED]Flynn[BLACK]: Surge, buddy, I know you're\nnot really breaking up.\pI can tell that's just you making\nstatic noises with your mouth.
+
+#org @gText_VermilionCity_RivalCutscene2Rival3
+[RED][RIVAL][BLACK]: Oh! [PLAYER]!\nCan you believe this guy?
+
+#org @gText_VermilionCity_RivalCutscene2Flynn4
+[RED]Flynn[BLACK]: Lieutenant? Sir? I heard\nyour Pok\e Ball opening.\pDon't you go getting your Raichu\nto make ACTUAL signal interference!
+
+#org @gText_VermilionCity_RivalCutscene2Rival4
+[RED][RIVAL][BLACK]: Wait, "Lieutenant?\"\nAre you talking to[.]
+
+#org @gText_VermilionCity_RivalCutscene2Flynn5
+[RED]Flynn[BLACK]: Look, Surge, I'm in your\ncorner!\lYou don't need to dodge me here!\lI'll make this golden!\lI'll get the Gym closed for ya!
+
+#org @gText_VermilionCity_RivalCutscene2Rival5
+[RED][RIVAL][BLACK]: Wait, huh??\nNO! Don't close the gym!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn6
+[RED]Flynn[BLACK]: I'll handle the paperwork!\nYes, I just need-\lYes! Exactly.\pSo you can get me a list of\nreplacements?\lWonderful. Wonderful! We're gold!
+
+#org @gText_VermilionCity_RivalCutscene2Rival6
+[RED][RIVAL][BLACK]: Stoooop!\pStop stop stop!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn7_1
+[RED]Flynn[BLACK]: Stay gold, Lieutenant!\pAnd thank you for your service!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn7_2
+[.]Ahem. Sorry, kiddo!\nGym's closed.\l[BLUE]Indigo League[BLACK] orders!
+
+#org @gText_VermilionCity_RivalCutscene2Rival7
+[RED][RIVAL][BLACK]: KIDDO?! Ugh!\nI'm grown up!\pAnd I demand to know why the gym\nis closed!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn8
+[RED]Flynn[BLACK]: Simple stuff, golden boy!\pCan't have a gym without\na [BLUE]Gym Leader[BLACK]!\pThe Lieutenant has, ah[.]\nimportant military business.\lSo I'm shuttin' things down!
+
+#org @gText_VermilionCity_RivalCutscene2Rival8
+[RED][RIVAL][BLACK]: What gives you the right?!\nThis isn't YOUR gym!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn9
+[RED]Flynn[BLACK]: Aha! It seems my reputation\nhas yet to precede me!\pI'm Flynn! The newest member of\nthe [BLUE]Indigo Elite Four[BLACK]!
+
+#org @gText_VermilionCity_RivalCutscene2Rival9
+[RED][RIVAL][BLACK]: Pshh[.] Yeah right!\pI know all about the Champion,\nLance!\pHe would never send an underling\nto do his dirty work!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn10
+[RED]Flynn[BLACK]: Well, our Champion's a\nbusy man, squirt!\pI handle paperwork, personnel[.]\nStuff a champ can't bogged down by!
+
+#org @gText_VermilionCity_RivalCutscene2Rival10
+[RED][RIVAL][BLACK]: If you're one of the\nElite Four, prove it to me now!\lBattle me!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn11
+[RED]Flynn[BLACK]: And how many badges did you\nsay you had?
+
+#org @gText_VermilionCity_RivalCutscene2Rival11
+[RED][RIVAL][BLACK]: None!\nI don't need any to kick your butt!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn12
+[RED]Flynn[BLACK]: Haaa[.]\nYeah, no, bucko.
+
+#org @gText_VermilionCity_RivalCutscene2Rival12
+[RED][RIVAL][BLACK]: Grgrr[.]\nNow what are we supposed to do?
+
+#org @gText_VermilionCity_RivalCutscene2Flynn13
+[RED]Flynn[BLACK]: Hey, you've got plenty\nof gyms you can tackle, smallfry!\pIf you head north, up [GREEN]Route 6[BLACK], you\ncan find the old [GREEN]Underground Path[BLACK].\pIt's a little treacherous, but it\nwon't be a problem for an energetic\lkid like you!\pHatsumi must have set the two of\nyou up with everything, right?\pThen you should have a [BLUE]Town Map[BLACK]\nin your bag! Just follow that.\pYou can access [GREEN]Celadon[BLACK] or [GREEN]Cerulean[BLACK]\nthrough the Path.\lBoth great gyms!\l[GREEN]Erika[BLACK] and [GREEN]Misty[BLACK], brilliant gals!\lLove workin' with 'em!\pAnd hopefully, once you're done,\nI'll have a new Gym Leader here!
+
+#org @gText_VermilionCity_RivalCutscene2Rival13
+[RED][RIVAL][BLACK]: Hmmph[.]! Fine!\nHey, [PLAYER]!\lGo to any gym you want[.]\lBut I'M going to [GREEN]Cerulean City[BLACK]!\pI'm gonna prove myself by beating\nthe one and only Misty!\lHa!
+
+#org @gText_VermilionCity_RivalCutscene2Flynn14
+[RED]Flynn[BLACK]: [.]Huh! Quite the character.\nGuess he's a friend of yours?\pWell, hey, good luck, and\nstay gold out there!\pI get the feeling I'll be seeing\nmore of you both.
+
+#org @gText_VermilionCity_FlynnAfter
+[RED]Flynn[BLACK]: [GREEN]Celadon[BLACK] and [GREEN]Cerulean[BLACK]!\pErika and Misty!\pGo get their badges while I get\nthings all golden here!\lI've got some big calls to make!
+
+#org @gText_VermilionCity_FlynnAfter_DidntSeeCutscene
+[RED]Flynn[BLACK]: Ah, hey there!\nSorry, but this gym's closed!\lThe Lieutenant was called away.\pI'm Flynn, one of the [BLUE]Elite Four[BLACK]\nhere in [GREEN]Kanto[BLACK].\pI'm shutting this place down while\nI look for a new Gym Leader.\pI recommend heading to [GREEN]Cerulean[BLACK]\nor [GREEN]Celadon[BLACK] right now.\pMisty and Erika, brilliant dames!\nThey'll treat ya right!\pMe, I've got papers to file!\nCalls to make! Big stuff!
