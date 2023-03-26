@@ -830,12 +830,11 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	pause 0x20
 	msgbox gText_PokemonChoiceLobby_RivalUnimpressed MSG_KEEPOPEN
 	applymovement 0x1 EventScript_Intro_RivalAngySteppyOnceMore
-	checkflag FLAG_CHOSESTARTER1
-	if SET _call EventScript_SibHypedForSigilyph
-	checkflag FLAG_CHOSESTARTER2
-	if SET _call EventScript_SibHypedForPassimian
-	checkflag FLAG_CHOSESTARTER3
-	if SET _call EventScript_SibHypedForRelicanth
+	checkgender
+	compare LASTRESULT 0x0
+    if 0x1 _call EventScript_SherryStarterHype
+    compare LASTRESULT 0x1
+    if 0x1 _call EventScript_BrandyStarterHype
 	applymovement 0x1 EventScript_Intro_SibTeaseRival1
 	sound 0x1C
 	pause 0x15
@@ -906,52 +905,12 @@ EventScript_HatsumiNervousShuffle:
 	sound 0x9B
 	return
 
-EventScript_SibHypedForSigilyph:
-	checkgender
-	compare LASTRESULT 0x0
-    if 0x1 _call EventScript_SherrySigilyph
-    compare LASTRESULT 0x1
-    if 0x1 _call EventScript_BrandySigilyph
-	return
-	
-EventScript_SherrySigilyph:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere1_Sherry MSG_NORMAL
+EventScript_SherryStarterHype:
+	msgbox gText_PokemonChoiceLobby_SibSherry_StarterHype MSG_NORMAL
 	return
 
-EventScript_BrandySigilyph:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere1_Brandy MSG_NORMAL
-	return
-
-EventScript_SibHypedForPassimian:
-	checkgender
-	compare LASTRESULT 0x0
-    if 0x1 _call EventScript_SherryPassimian
-    compare LASTRESULT 0x1
-    if 0x1 _call EventScript_BrandyPassimian
-	return
-	
-EventScript_SherryPassimian:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere2_Sherry MSG_NORMAL
-	return
-
-EventScript_BrandyPassimian:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere2_Brandy MSG_NORMAL
-	return
-
-EventScript_SibHypedForRelicanth:
-	checkgender
-	compare LASTRESULT 0x0
-    if 0x1 _call EventScript_SherryRelicanth
-    compare LASTRESULT 0x1
-    if 0x1 _call EventScript_BrandyRelicanth
-	return
-	
-EventScript_SherryRelicanth:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere3_Sherry MSG_NORMAL
-	return
-
-EventScript_BrandyRelicanth:
-	msgbox gText_PokemonChoiceLobby_SibOuttaHere3_Brandy MSG_NORMAL
+EventScript_BrandyStarterHype:
+	msgbox gText_PokemonChoiceLobby_SibBrandy_StarterHype MSG_NORMAL
 	return
 
 EventScript_MoveSibIfCentered:
@@ -1369,6 +1328,7 @@ EventScript_VermilionPort_RivalEndTalk2:
 	setflag 0x959
 	hidesprite 7
 	setvar 0x511D 0x1
+	releaseall
 	end
 
 EventScript_RivalApologizePassimian:

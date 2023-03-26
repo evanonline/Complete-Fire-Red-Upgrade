@@ -226,7 +226,7 @@ EventScript_VermilionCity_RivalDisappointJog:
 	movesprite 0x5 0x10 0x1B
 	call EventScript_VermilionCity_MoveRival
 	closeonkeypress
-	release
+	releaseall
 	end
 	
 .global EventScript_VermilionCity_RivalAndFlynn
@@ -312,6 +312,7 @@ EventScript_VermilionCity_RivalAndFlynn:
 	setflag 0x59A
 	hidesprite 5
 	msgbox gText_VermilionCity_RivalCutscene2Flynn14 MSG_NORMAL
+	releaseall
 	end
 
 .global EventScript_VermilionCity_FlynnGym

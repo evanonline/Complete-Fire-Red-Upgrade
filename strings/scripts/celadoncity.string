@@ -9,3 +9,114 @@ I wrote the story!\nBut[.]\pThings aren't unfolding the way I\nwrote them[.]
 
 #org @gText_CeladonCity_NPC1
 Hmm[.] Pok\emon[.]
+
+#org @gText_CeladonCity_HotelInvisiblePC
+[PLAYER] turned on the PC.\p[.]Wait, what?!\nIt's a Pok\emon!
+
+#org @gText_CeladonCity_HotelWeirdFeeling
+This hotel is so cozy. I don't have\na room, but I love the lobby.\pBut yet[.]\pLately, I've been getting a weird\nfeeling in here.\lFeels like[.]\lThe spectre of lost technology.
+
+#org @gText_CeladonCity_HotelWeirdFeeling_Gone
+This hotel is so cozy. I don't have\na room, but this lobby is great.\pAnd now I don't feel creeped out\nin here anymore.\pThanks for fiddling with that ghost\ncomputer!
+
+#org @gText_CeladonCity_HotelMatron
+This is a hotel for people, not\nPok\emon.\lWe don't allow trainers.\pYou should try a Pok\emon Center,\nor that ritzy place in Vermilion.
+
+#org @gText_CeladonCity_HotelMatron_Rotomi
+How did a Pok\emon get in here?!\pThanks for taking care of that,\nkid.\pPok\emon are so rude[.]\nThis is a hotel for PEOPLE!\lI'm no Pok\emon concierge!
+
+#org @gText_CeladonCity_Pokecenter_RimeTrick
+Hey, hey[.]\nWanna see my Mr. Rime do a trick?
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickCost
+We'll perform for \$398.
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickNo
+Heh. Your loss, buddy!
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickNoMoney1
+Hah! Are you broke, or what?\pCome back when you can cough up\nthe dough.
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickYes
+Alright, kid.\nCheck this out[.]\lAlright, Rimes. Show 'em.
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickAfter
+No refunds.
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickCostRepeat
+Repeat performances are \$2000.
+
+#org @gText_CeladonCity_Pokecenter_RimeTrickNoMoney2
+You don't have enough cash.\pNo money, no tricks!
+
+#org @gText_CeladonCity_RimeCry
+Riii-iiiime[.]!
+
+#org @gText_CeladonCity_CenterNursePleaseStop
+(Hey[.]\nPlease stop paying this guy[.])
+
+#org @gText_CeladonCity_CyclingRoad_Closed
+I appreciate all the work that's\ngone into beautifying Celadon.\pBut I really wish they'd fix up\nthe old [GREEN]Cycling Road[BLACK], too.\pFuschia City used to maintain it,\nbut they don't have the money\lto handle it anymore.\pWe decided it was easier to close\nthe road from Celadon's side.\lBut I miss biking[.]
+
+#org @gText_CeladonCity_TalkingAboutGirl
+That weird girl by the fountain\nnever stops walking.\lEven if you try to chat with her.\lNot that she[.] has much to say[.]
+
+#org @gText_CeladonCity_RGroupAwesome
+Celadon City has become so classy!\nIt's all thanks to the R Group.\pTheir leader has put a lot of money\ninto the town.
+
+#org @gText_CeladonCity_GrassHint
+Y'know, there's a spot with tall\ngrass behind the Pokemon Center!\pIf you're lookin' for Pok\emon,\nyou gotta check it out!
+
+#org @gTextCeladonCity_RGroupMember
+Eyy, you new here?\nWell, on behalf of the R Group,\lwelcome to Celadon City.
+
+#org @gTextCeladonCity_RGroupNotStupid
+I think everyone knows the R Group\nis a rebranded Team Rocket.\pBut I don't care who they are if\nthey keep giving us so much money!\pAfter all, we don't wanna go the\nway [GREEN]Fuschia City[BLACK] did.
+
+#org @gTextCeladonCity_RGroupOtherNotStupid
+It makes me sad to see Celadon\nembrace this "R Group.\"\lThey're obviously Team Rocket.\pTeam Rocket stole my Mankey, long\nago. I never saw her again.\lI can't just forget that.\lWhy can everyone else?
+
+#org @gTextCeladonCity_RGroupOtherNotStupid2
+Aren't you the young'n who got rid\nof Team Rocket?\lOr one of 'em, anyway!\pI want to say thanks.\nTeam Rocket stole my beloved\nMankey, long ago.\lI never saw her again.\lAnd I'll never know where she is.\pTeam Rocket made their fortune by\nswindling and stealing.\pThat stolen money they put into our\ntown swayed many others.\lI'm glad it didn't sway you.
+
+#org @gTextCeladonCity_MyProperty
+This house is mine and mine alone!\pI don't care how much the R Group\nwants for it!\pI don't care how much noise comes\nfrom next door, and underground!\pI don't care that the homeowner's\nassociation hates the exterior!\pAnd I DON'T care that I need to\nsurf to enter my house!\pYou'll never buy it off of me!
+
+#org @gTextCeladonCity_CondominiumsSign
+Old Celadon Condominiums [ARROW_RIGHT]\n[ARROW_LEFT] Celadon Luxury Suites
+
+#org @gTextCeladonCity_RestaurantSign
+Restaurant
+
+#org @gTextCeladonCity_HotelSign
+Celadon Hotel
+
+#org @gTextCeladonCity_CondominiumsKnowitall1
+The door is locked.\nThere's a letter taped to it.
+
+#org @gTextCeladonCity_CondominiumsKnowitall2
+To whom it may concern:\pI just heard there's a Pok\emon\ncalled Sylveon.\pI might not know everything,\nafter all.\pWill reopen when I confirm if I\nstill know everything.
+
+#org @gTextCeladonCity_NoLongerKnowEverything
+I[.] no longer know everything[.]\pThe world is bigger than I realized[.]\pI didn't even know Eevee could\nevolve in so many other ways[.]\lI am shaken to my core.\pTake my Eevee[.]\nMy knowledge isn't enough for it.
+
+#org @gTextCeladonCity_NoLongerKnowEverything_TookEevee
+Please[.] Treat my Eevee well[.]\nAnd, if it's any use to you[.]\pI wrote about the\nWireless Adapter on my chalkboard[.]
+
+#org @gTextCeladonCity_HomemadePickles
+This restaurant's pickles are\nabysmal, but I keep coming anyway.\pYou know what I need to bring?\pHomemade pickles!\nHomemade pickles!
+
+#org @gTextCeladonCity_RestaurantStatue
+On closer inspection, this is a\nstatue of a man.\pHe looks like he could be picked\nup quite easily[.]
+
+#org @gTextCeladonCity_RestaurantStaff_TooBusy
+Hey, sorry. We're too busy\nfor more customers[.]\pSee, we're also a ghost kitchen for\n[BLUE]Iono Burger[BLACK].\pYou know, Iono? The streamer from\nthe [GREEN]Paldea[BLACK] region?\lShe has her own burger now.\pIt's got little toothpicks that\nlook like her hair clips.\pIono Burger only delivers through\nan app on your Rotom Phone.\lWe don't serve 'em in here.\p[.]What? You still have a dinky\nold Pok\edex? No phone?\lThat's rough, kid.
+
+#org @gTextCeladonCity_Restaurant_IonoSoda
+Chug[.]\pI've ordered from Iono Burger\nbefore. It's not great.\pBut Iono DOES have her own\nexclusive Baja Blastoise flavor[.]\l[BLUE]Baja Blastoise: Iono Volt Switch[BLACK]!\pThey should put it in stores.\nDown with exclusivity!
+
+#org @gTextCeladonCity_Restaurant_MayleneInspiredSquatter
+Munch[.]\nSlurp[.]\pThere's a Fighting-type Gym Leader\nfrom [GREEN]Sinnoh[BLACK] who likes eating here.\pI wanna be strong too!\nSo now I stay right here and eat.\lNo one's kicked me out yet!
+
+#org @gTextCeladonCity_RestaurantMayleneSign
+It's an autographed photo of a\npink-haired girl.\p"I thought you said I could have\nall I can eat!\lI'm not done yet!\lStop making me sign this!\"\l- [RED]Maylene[BLACK]

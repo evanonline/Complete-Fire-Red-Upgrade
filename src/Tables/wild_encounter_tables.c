@@ -36,10 +36,10 @@ const struct WildPokemon gVermilionPort_FishingMons[] =
     {4, 5, SPECIES_WISHIWASHI},
     {10, 16, SPECIES_WISHIWASHI},
     {12, 16, SPECIES_BRUXISH},
-    {10, 15, SPECIES_DHELMISE},
+    {10, 15, SPECIES_HORSEA},
     {25, 29, SPECIES_TENTACOOL},
     {30, 35, SPECIES_SKRELP},
-    {21, 29, SPECIES_HORSEA},
+    {21, 29, SPECIES_DHELMISE},
     {31, 31, SPECIES_TENTACRUEL},
     {25, 35, SPECIES_WISHIWASHI},
 };
@@ -57,7 +57,7 @@ const struct WildPokemon gVermilionPort_FishingMonsEveningNight[] =
     {30, 35, SPECIES_SKRELP},
     {21, 35, SPECIES_DHELMISE},
     {31, 31, SPECIES_TENTACRUEL},
-    {25, 35, SPECIES_DHELMISE},
+    {25, 35, SPECIES_WISHIWASHI},
 };
 
 const struct WildPokemonInfo gVermilionPort_FishingMonsInfoEveningNight = {25, gVermilionPort_FishingMonsEveningNight};
@@ -90,6 +90,134 @@ const struct WildPokemon gVermilionCity_FishingMons[] =
 };
 
 const struct WildPokemonInfo gVermilionCity_FishingMonsInfo = {30, gVermilionCity_FishingMons};
+
+// Celadon City
+
+const struct WildPokemon gCeladonCity_LandMonsMorning[] =
+{
+	{6, 8, SPECIES_SUNKERN},
+	{6, 8, SPECIES_YANMA},
+	{5, 5, SPECIES_GOSSIFLEUR},
+	{3, 4, SPECIES_COMBEE},
+	{4, 5, SPECIES_PACHIRISU},
+	{5, 5, SPECIES_PIDOVE},
+	{5, 5, SPECIES_GOSSIFLEUR},
+	{6, 6, SPECIES_SUNKERN},
+	{3, 4, SPECIES_SEEDOT},
+	{2, 3, SPECIES_NICKIT},
+	{2, 2, SPECIES_VOLBEAT},
+	{2, 2, SPECIES_ILLUMISE},
+};
+
+const struct WildPokemonInfo gCeladonCity_LandMonsInfoMorning = {21, gCeladonCity_LandMonsMorning};
+
+const struct WildPokemon gCeladonCity_LandMonsDay[] =
+{
+	{6, 8, SPECIES_SUNKERN},
+	{4, 5, SPECIES_PACHIRISU},
+	{5, 5, SPECIES_GOSSIFLEUR},
+	{3, 4, SPECIES_COMBEE},
+	{6, 8, SPECIES_YANMA},
+	{5, 5, SPECIES_PIDOVE},
+	{5, 6, SPECIES_PIDOVE},
+	{6, 6, SPECIES_SUNKERN},
+	{3, 4, SPECIES_SEEDOT},
+	{2, 3, SPECIES_NICKIT},
+	{2, 2, SPECIES_VOLBEAT},
+	{2, 2, SPECIES_ILLUMISE},
+};
+
+const struct WildPokemonInfo gCeladonCity_LandMonsInfoDay = {21, gCeladonCity_LandMonsDay};
+
+const struct WildPokemon gCeladonCity_LandMonsEvening[] =
+{
+	{6, 8, SPECIES_SEEDOT},
+	{5, 6, SPECIES_NICKIT},
+	{6, 6, SPECIES_SEEDOT},
+	{5, 5, SPECIES_VOLBEAT},
+	{5, 5, SPECIES_ILLUMISE},
+	{4, 5, SPECIES_PACHIRISU},
+	{6, 7, SPECIES_YANMA},
+	{6, 8, SPECIES_YANMA},
+	{5, 5, SPECIES_PIDOVE},
+	{3, 4, SPECIES_COMBEE},
+	{3, 5, SPECIES_GOSSIFLEUR},
+	{3, 4, SPECIES_SUNKERN},
+};
+
+const struct WildPokemonInfo gCeladonCity_LandMonsInfoEvening = {21, gCeladonCity_LandMonsEvening};
+
+const struct WildPokemon gCeladonCity_LandMonsNight[] =
+{
+	{5, 7, SPECIES_VOLBEAT},
+	{5, 7, SPECIES_ILLUMISE},
+	{6, 8, SPECIES_NICKIT},
+	{5, 8, SPECIES_NICKIT},
+	{6, 6, SPECIES_SEEDOT},
+	{6, 7, SPECIES_SEEDOT},
+	{6, 8, SPECIES_YANMA},
+	{4, 5, SPECIES_PACHIRISU},
+	{5, 5, SPECIES_PIDOVE},
+	{3, 4, SPECIES_COMBEE},
+	{2, 4, SPECIES_GOSSIFLEUR},
+	{2, 4, SPECIES_SUNKERN},
+};
+
+const struct WildPokemonInfo gCeladonCity_LandMonsInfoNight = {21, gCeladonCity_LandMonsNight};
+
+const struct WildPokemon gCeladonCity_WaterMons[] =
+{
+    {20, 23, SPECIES_LOTAD},
+    {10, 20, SPECIES_AZURILL},
+    {20, 25, SPECIES_MARILL},
+    {20, 23, SPECIES_PSYDUCK},
+    {21, 27, SPECIES_LOTAD},
+};
+
+const struct WildPokemonInfo gCeladonCity_WaterMonsInfo = {4, gCeladonCity_WaterMons};
+
+const struct WildPokemon gCeladonCity_WaterMonsNight[] =
+{
+    {20, 27, SPECIES_LOTAD},
+    {10, 20, SPECIES_AZURILL},
+    {20, 25, SPECIES_MARILL},
+    {20, 23, SPECIES_PSYDUCK},
+    {21, 28, SPECIES_LOTAD},
+};
+
+const struct WildPokemonInfo gCeladonCity_WaterMonsInfoNight = {4, gCeladonCity_WaterMonsNight};
+
+const struct WildPokemon gCeladonCity_FishingMons[] =
+{
+    {5, 5, SPECIES_LOTAD},
+    {5, 6, SPECIES_TYMPOLE},
+    {10, 15, SPECIES_TYMPOLE},
+    {12, 15, SPECIES_MAGIKARP},
+    {25, 25, SPECIES_WISHIWASHI},
+    {30, 30, SPECIES_PALPITOAD},
+    {30, 30, SPECIES_LOTAD},
+    {25, 30, SPECIES_TYMPOLE},
+    {35, 35, SPECIES_WISHIWASHI},
+    {30, 40, SPECIES_PALPITOAD},
+};
+
+const struct WildPokemonInfo gCeladonCity_FishingMonsInfo = {30, gCeladonCity_FishingMons};
+
+const struct WildPokemon gCeladonCity_FishingMonsNight[] =
+{
+    {5, 5, SPECIES_WISHIWASHI},
+    {5, 6, SPECIES_TYMPOLE},
+    {10, 15, SPECIES_TYMPOLE},
+    {5, 12, SPECIES_MAGIKARP},
+    {25, 25, SPECIES_WISHIWASHI},
+    {30, 30, SPECIES_PALPITOAD},
+    {30, 30, SPECIES_LOTAD},
+    {25, 30, SPECIES_TYMPOLE},
+    {35, 35, SPECIES_WISHIWASHI},
+    {30, 40, SPECIES_PALPITOAD},
+};
+
+const struct WildPokemonInfo gCeladonCity_FishingMonsInfoNight = {30, gCeladonCity_FishingMonsNight};
 
 // Route 6
 
@@ -334,14 +462,14 @@ const struct WildPokemonInfo gIcedPath_WaterMonsInfo = {3, gIcedPath_WaterMons};
 const struct WildPokemon gIcedPath_FishingMons[] =
 {
     {5, 5, SPECIES_SHELLDER},
-    {5, 7, SPECIES_FRILLISH},
+    {5, 7, SPECIES_SHELLDER},
     {10, 19, SPECIES_SHELLDER},
     {15, 18, SPECIES_SHELLDER},
-    {10, 15, SPECIES_FRILLISH},
+    {10, 15, SPECIES_SHELLDER},
     {25, 30, SPECIES_SHELLDER},
     {30, 35, SPECIES_SHELLDER},
-    {20, 25, SPECIES_FRILLISH},
-    {30, 38, SPECIES_JELLICENT},
+    {20, 25, SPECIES_SHELLDER},
+    {30, 38, SPECIES_EISCUE},
     {38, 41, SPECIES_CLOYSTER},
 };
 
@@ -364,6 +492,14 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(CELADON_CITY),
+		.mapNum = MAP_NUM(CELADON_CITY),
+		.landMonsInfo = &gCeladonCity_LandMonsInfoMorning,
+		.waterMonsInfo = &gCeladonCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gCeladonCity_FishingMonsInfo,
 	},
 	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
@@ -410,6 +546,14 @@ const struct WildPokemonHeader gWildMonDayHeaders[] =
 		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
 	},
 	{
+		.mapGroup = MAP_GROUP(CELADON_CITY),
+		.mapNum = MAP_NUM(CELADON_CITY),
+		.landMonsInfo = &gCeladonCity_LandMonsInfoDay,
+		.waterMonsInfo = &gCeladonCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gCeladonCity_FishingMonsInfo,
+	},
+	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),
 		.landMonsInfo = &gRoute6_LandMonsInfoDay,
@@ -454,6 +598,14 @@ const struct WildPokemonHeader gWildMonEveningHeaders[] =
 		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
 	},
 	{
+		.mapGroup = MAP_GROUP(CELADON_CITY),
+		.mapNum = MAP_NUM(CELADON_CITY),
+		.landMonsInfo = &gCeladonCity_LandMonsInfoEvening,
+		.waterMonsInfo = &gCeladonCity_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gCeladonCity_FishingMonsInfoNight,
+	},
+	{
 		.mapGroup = MAP_GROUP(ROUTE_6),
 		.mapNum = MAP_NUM(ROUTE_6),
 		.landMonsInfo = &gRoute6_LandMonsInfoEvening,
@@ -496,6 +648,14 @@ const struct WildPokemonHeader gWildMonNightHeaders[] =
 		.waterMonsInfo = &gVermilionCity_WaterMonsInfo,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gVermilionCity_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(CELADON_CITY),
+		.mapNum = MAP_NUM(CELADON_CITY),
+		.landMonsInfo = &gCeladonCity_LandMonsInfoNight,
+		.waterMonsInfo = &gCeladonCity_WaterMonsInfoNight,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gCeladonCity_FishingMonsInfoNight,
 	},
 	{
 		.mapGroup = MAP_GROUP(ROUTE_6),

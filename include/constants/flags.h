@@ -45,6 +45,9 @@
 //This is just to keep track of used flags on my end.
 
 /*
+#define FLAG_ROTOMI 0x4A7 //Used for determining completion of the hidden Rotomi, hides PC sprite
+#define FLAG_SEENRIMETRICK 0x4A8 //Seen Mr. Rime's trick in Celadon's Pokemon Center. Price goes up, another NPC will react somewhere and give the player an item out of solidarity
+
 #define FLAG_HIDE_SIB_HOTEL 0x951 //Person ID - hides sib sprite in intro room
 #define FLAG_HIDE_SIB_HOTEL2 0x952 //Person ID - hides sib sprite in trainer lobby room
 #define FLAG_HIDE_RIVAL_HOTEL1 0x953 //Person ID - hides rival sprite in trainer lobby room
@@ -1269,8 +1272,8 @@
 #define HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       190
 
 // Unused?
-#define FLAG_0x4A7               0x4A7
-#define FLAG_0x4A8               0x4A8
+#define FLAG_0x4A7               0x4A7 //is now for rotomi
+#define FLAG_0x4A8               0x4A8 //Now for Celadon Rime's trick
 #define FLAG_0x4A9               0x4A9
 #define FLAG_0x4AA               0x4AA
 #define FLAG_0x4AB               0x4AB

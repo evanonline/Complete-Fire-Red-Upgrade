@@ -187,7 +187,7 @@
 #define TRAINER_PIC_MALLOW 0x9F
 
 //Backsprites
-#define TRAINER_BACK_PIC_RED              	0
+#define TRAINER_BACK_PIC_BRANDY             0
 #define TRAINER_BACK_PIC_SHERRY				1
 #define TRAINER_BACK_PIC_BRENDAN          	2
 #define TRAINER_BACK_PIC_MAY_ORAS           3

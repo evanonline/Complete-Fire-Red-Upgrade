@@ -291,11 +291,41 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 		.paletteIndicesToFade =
 		{
 			{2,  RGB(24, 15, 12)},
-			{3,  RGB(31, 31, 28)},
-			{6,  RGB(14, 14, 13)},
+			{3,  RGB(30, 31, 21)},
+			{6,  RGB(14, 15, 10)},
 			{11,  RGB(31, 28, 16)},
 			{12,  RGB(27, 26, 14)},
 			{13,  RGB(24, 25, 12)},
+			TILESET_PAL_FADE_END
+		},
+	},
+		
+	{ //Celadon City - House & apartment windows and lampposts + Game Corner
+		.tilesetPointer = 0x82D4B3C, //Tileset 7
+		.paletteNumToFade = 7,
+		.paletteIndicesToFade =
+		{
+			{1,  RGB(30, 30, 27)},
+			{2,  RGB(30, 27, 22)},
+			{3,  RGB(11, 21, 11)},
+			{8,  RGB(26, 31, 25)},
+			{10,  RGB(31, 31, 13)},
+			{11,  RGB(29, 28, 14)},
+			{12,  RGB(27, 24, 12)},
+			{14,  RGB(14, 26, 14)},
+			TILESET_PAL_FADE_END
+		},
+	},
+	
+	{ //Celadon City - Department store
+		.tilesetPointer = 0x82D4B3C, //Tileset 7
+		.paletteNumToFade = 10,
+		.paletteIndicesToFade =
+		{
+			{2,  RGB(31, 31, 28)},
+			{10,  RGB(31, 31, 13)},
+			{11,  RGB(29, 28, 14)},
+			{12,  RGB(25, 21, 10)},
 			TILESET_PAL_FADE_END
 		},
 	},

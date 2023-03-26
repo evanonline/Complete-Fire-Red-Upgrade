@@ -134,7 +134,7 @@ AAAHH! I'M BACK! SORRYYYYY!\nI LEFT THE OLD RODS DOWNSTAIRS!
 [RED][RIVAL][BLACK]: [.] [.]\nGrgrr[.]
 
 #org @gText_PokemonChoiceLobby_Hatsumi_Introduction6
-[RED]Oak's Aide[BLACK]:  Ah! N-no offense!\nI'm not thinking straight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pI left your Pok\emon on the table.\nLet's get you all started!
+[RED]Oak's Aide[BLACK]: Ah! N-no offense!\nI'm not thinking straight[.]\pIt was hard work getting everything\ntogether in time for you lot!\pBut my gripes aren't important.\nToday's about YOU guys!\pI left your Pok\emon on the table.\nLet's get you all started!
 
 #org @gText_PokemonChoiceLobby_Whisk_Introduction3
 [RED][RIVAL][BLACK]: Finally!\nLet's see what we've got!
@@ -283,24 +283,11 @@ Ah! I've been here too long!\nOh no!\pI still have so much stuff to\ndo for the 
 #org @gText_PokemonChoiceLobby_RivalUnimpressed
 [RED][RIVAL][BLACK]: She's just out of here\nalready?!
 
-#org @gText_PokemonChoiceLobby_SibOuttaHere1_Sherry
-[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
+#org @gText_PokemonChoiceLobby_SibSherry_StarterHype
+[RED]Sherry[BLACK]: We should get going too,\nshouldn't we?\pC'mon! I wanna go see what\nmy Pok\emon can do!
 
-#org @gText_PokemonChoiceLobby_SibOuttaHere2_Sherry
-[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Passimian can do!
-
-#org @gText_PokemonChoiceLobby_SibOuttaHere3_Sherry
-[RED]Sherry[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Relicanth can do!
-
-#org @gText_PokemonChoiceLobby_SibOuttaHere1_Brandy
-[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Sigilyph can do!
-
-#org @gText_PokemonChoiceLobby_SibOuttaHere2_Brandy
-[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Passimian can do!
-
-#org @gText_PokemonChoiceLobby_SibOuttaHere3_Brandy
-[RED]Brandy[BLACK]: We should head out too,\ngang!\pC'mon! I wanna go see what\nmy Relicanth can do!
-
+#org @gText_PokemonChoiceLobby_SibBrandy_StarterHype
+[RED]Brandy[BLACK]: We should head out too,\ngang!\pLet's go! I wanna see how cool\nmy Pok\emon is!
 
 #org @gText_PokemonChoiceLobby_RivalAngyAngy1
 [RED][RIVAL][BLACK]: Ahghghg!\nCOME BACK HERE!
