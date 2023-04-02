@@ -92,6 +92,11 @@
 
 0x1200 - Scalemons
 0x940 - Randomizer
+
+Daily Events - Flags from 0xE00 to 0xEFF reset every day:
+
+#define FLAG_CELADONBERRYDAILY 0xE00 - Daily Berry from chef in Celadon City.
+
 */
 
 // Hide/show flags

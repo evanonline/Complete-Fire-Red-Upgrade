@@ -1162,8 +1162,6 @@ void SetUpTrainerEncounterMusic(void)
 		#ifndef ENCOUNTER_MUSIC_BY_CLASS
 		switch (GetTrainerEncounterMusicId(trainerId)) {
 			case TRAINER_ENCOUNTER_MUSIC_MALE: //0
-				music = BGM_EYE_BOY; //0x11D
-				break;
 			case TRAINER_ENCOUNTER_MUSIC_INTENSE: //4
 			case TRAINER_ENCOUNTER_MUSIC_COOL: //5
 			case TRAINER_ENCOUNTER_MUSIC_SWIMMER: //8
@@ -1183,7 +1181,7 @@ void SetUpTrainerEncounterMusic(void)
 				break;
 		}
 		#else //ENCOUNTER_MUSIC_BY_CLASS
-			music = gClassBasedTrainerEncounterBGM[GET_TRAINER(trainerId).trainerClass];
+			music = gClassBasedTrainerEncounterBGM[gTrainers[trainerId].trainerClass];
 
 			if (music == 0)
 				music = BGM_EYE_BOY;

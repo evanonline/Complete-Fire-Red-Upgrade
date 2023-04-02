@@ -185,8 +185,8 @@
 #define VAR_MAP_SCENE_MT_MOON_B2F                                              0x408B
 
 
-#define VAR_0x408C                 0x408C
-#define VAR_0x408D                 0x408D
+#define VAR_0x408C                 0x408C // Used for rival's movements in Vermilion City
+#define VAR_0x408D                 0x408D // Used for sibling battle in Celadon City
 #define VAR_0x408E                 0x408E
 #define VAR_0x408F                 0x408F
 #define VAR_0x4090                 0x4090
@@ -303,6 +303,13 @@
 #define VAR_0x40FF                 0x40FF
 
 #define VARS_END                   0x40FF
+
+// My vars. Not necessary...? Just kept here for personal organization
+
+#define VAR_0x511B                 0x511B // Tiles that keep the player in place in the Vermilion Port Trainer Suite intro scene
+#define VAR_0x511C                 0x511C // Activates sibling's dialogue when exiting the player's hotel room
+#define VAR_0x511D                 0x511D // Rival battle cutscene outside the hotel
+#define VAR_0x511E                 0x511E // Used for rival & Flynn scene
 
 #define SPECIAL_VARS_START         0x8000
 

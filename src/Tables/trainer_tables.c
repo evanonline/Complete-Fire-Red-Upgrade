@@ -29,7 +29,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_RivalBattle1_PlayerChoseSigilyp
 
 const struct TrainerMonNoItemDefaultMoves sParty_RivalBattle1_PlayerChosePassimian[] = {
     {
-        .iv = 15,
+        .iv = 3,
         .lvl = 5,
         .species = SPECIES_SIGILYPH,
     },
@@ -191,6 +191,86 @@ const struct TrainerMonNoItemDefaultMoves sParty_Route7InfielderDelbert[] = {
     },
 };
 
+//Celadon City, Sibling Battle 1
+
+const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChoseRelicanth[] = {
+    {
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_SIGILYPH,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_NICKIT,
+    },
+};
+	
+const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChoseSigilyph[] = {
+    {
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_PASSIMIAN,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_NICKIT,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChosePassimian[] = {
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_RELICANTH,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_NICKIT,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_SherryBattle1_PlayerChoseRelicanth[] = {
+    {
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_SIGILYPH,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_CHINGLING,
+    },
+};
+	
+const struct TrainerMonNoItemDefaultMoves sParty_SherryBattle1_PlayerChoseSigilyph[] = {
+    {
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_PASSIMIAN,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_CHINGLING,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_SherryBattle1_PlayerChosePassimian[] = {
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_RELICANTH,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_CHINGLING,
+    },
+};
+
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
 const struct Trainer gTrainers[] = {
@@ -238,6 +318,86 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_FIRST_BATTLE,
         .partySize = NELEMS(sParty_RivalBattle1_PlayerChosePassimian),
         .party = {.NoItemDefaultMoves = sParty_RivalBattle1_PlayerChosePassimian}
+    },
+	
+	// Sibling Battle 1
+	
+	[TRAINER_BRANDYBATTLE1_PLAYER_CHOSE_RELICANTH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_BRANDY,		
+        .trainerName = {_B, _r, _a, _n, _d, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_BrandyBattle1_PlayerChoseRelicanth),
+        .party = {.NoItemDefaultMoves = sParty_BrandyBattle1_PlayerChoseRelicanth}
+    },
+	
+	[TRAINER_BRANDYBATTLE1_PLAYER_CHOSE_SIGILYPH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_BRANDY,
+        .trainerName = {_B, _r, _a, _n, _d, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_BrandyBattle1_PlayerChoseSigilyph),
+        .party = {.NoItemDefaultMoves = sParty_BrandyBattle1_PlayerChoseSigilyph}
+    },
+		
+	[TRAINER_BRANDYBATTLE1_PLAYER_CHOSE_PASSIMIAN] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_BRANDY,
+        .trainerName = {_B, _r, _a, _n, _d, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_BrandyBattle1_PlayerChosePassimian),
+        .party = {.NoItemDefaultMoves = sParty_BrandyBattle1_PlayerChosePassimian}
+    },
+	
+		[TRAINER_SHERRYBATTLE1_PLAYER_CHOSE_RELICANTH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SHERRY,		
+        .trainerName = {_S, _h, _e, _r, _r, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_SherryBattle1_PlayerChoseRelicanth),
+        .party = {.NoItemDefaultMoves = sParty_SherryBattle1_PlayerChoseRelicanth}
+    },
+	
+	[TRAINER_SHERRYBATTLE1_PLAYER_CHOSE_SIGILYPH] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SHERRY,
+        .trainerName = {_S, _h, _e, _r, _r, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_SherryBattle1_PlayerChoseSigilyph),
+        .party = {.NoItemDefaultMoves = sParty_SherryBattle1_PlayerChoseSigilyph}
+    },
+		
+	[TRAINER_SHERRYBATTLE1_PLAYER_CHOSE_PASSIMIAN] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SHERRY,
+        .trainerName = {_S, _h, _e, _r, _r, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_SherryBattle1_PlayerChosePassimian),
+        .party = {.NoItemDefaultMoves = sParty_SherryBattle1_PlayerChosePassimian}
     },
 	
 	// Route 6

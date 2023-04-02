@@ -202,6 +202,11 @@ sign 3 26 0 EventScript_Route6_IcePathSign
 npc 3 29 0 EventScript_Route11_SnorlaxRuinManiac
 npc 3 29 1 EventScript_Route11_Snorlax
 
+## Route 16
+npc 25 2 0 EventScript_Route16_Gatehouse_TimeReminder
+npc 25 2 1 EventScript_Route16_Gatehouse_FuchsiaSad
+npc 25 2 2 EventScript_Route16_Gatehouse_AthletesFoot
+
 ## Iced Path
 map 1 31 gMapScripts_IcedPath_CheckHideTM97
 sign 1 31 7 EventScript_IcedPath_DirectionsSign
@@ -216,6 +221,9 @@ tile 1 31 0 EventScript_IcedPath_CheckVermilionGymCutscene
 tile 1 31 1 EventScript_IcedPath_CheckVermilionGymCutscene
 
 ## Celadon City
+map 3 6 gMapScripts_CeladonCitySibSprite_Outside
+sign 3 6 1 EventScript_CeladonCity_PrizeExchangeSign
+sign 3 6 2 EventScript_CeladonCity_GameCornerSign
 sign 3 6 3 EventScript_CeladonCity_CitySign
 sign 3 6 4 EventScript_CeladonCity_CondominiumsSign
 sign 3 6 5 EventScript_TrainerTips_WildCharge
@@ -225,6 +233,21 @@ sign 3 6 10 EventScript_CeladonCity_HotelSign
 npc 3 6 0 EventScript_CeladonCity_HmmPokemon
 npc 3 6 1 EventScript_CeladonCity_GirlCommentary
 npc 3 6 2 EventScript_CeladonCity_RGroupClassy
+npc 3 6 3 EventScript_CeladonCity_BurgerManStatue
+npc 3 6 4 EventScript_CeladonCity_RGroupMemberFirstOne
+npc 3 6 5 EventScript_CeladonCity_NotStupidAboutRGroup
+npc 3 6 8 EventScript_CeladonCity_VoltorbFlipKid
+npc 3 6 9 EventScript_CeladonCity_SceptileNoises
+npc 3 6 10 EventScript_CeladonCity_BerriesGuy
+npc 3 6 11 EventScript_CeladonCity_RGroupGameCornerPromoter
+npc 3 6 12 EventScript_CeladonCity_RGroupNoEntry1
+npc 3 6 13 EventScript_CeladonCity_RGroupNoEntry2
+sign 10 7 0 EventScript_CeladonCity_CondominiumsInteriorSign
+sign 10 7 1 EventScript_CeladonCity_CondominiumsInteriorSign
+npc 10 7 0 EventScript_CeladonCity_Quilladin
+npc 10 7 1 EventScript_CeladonCity_GameFreakFan
+npc 10 7 2 EventScript_CeladonCity_HGrowlithe
+npc 10 7 3 EventScript_CeladonCity_Manager
 npc 10 9 0 EventScript_CeladonCity_GameFreakNPC_0
 npc 10 9 2 EventScript_CeladonCity_GameFreakNPC_2
 npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
@@ -232,6 +255,13 @@ npc 10 12 1 EventScript_CeladonCity_PokecenterRimeTrickGuy
 npc 10 12 2 EventScript_CeladonCity_PokecenterRime
 npc 10 12 3 EventScript_CeladonCity_CyclingRoadTalk
 npc 10 12 4 EventScript_CeladonCity_GrassHint
+npc 10 14 5 EventScript_CeladonCity_ESRB
+npc 10 14 6 EventScript_CeladonCity_GameCornerBackpacker
+npc 10 14 7 EventScript_CeladonCity_GameCornerLootbox
+npc 10 14 8 EventScript_CeladonCity_MrGameLore
+npc 10 14 10 EventScript_CeladonCity_RocketGuardGameCorner
+npc 10 15 1 EventScript_CeladonCity_PrizeHouseMay
+sign 10 17 0 EventScript_CeladonCity_MayleneAutograph
 npc 10 17 0 EventScript_CeladonCity_IonoBurgerLore
 npc 10 17 1 EventScript_CeladonCity_MayleneInspiredSquatter
 npc 10 17 2 EventScript_CeladonCity_IonoSoda

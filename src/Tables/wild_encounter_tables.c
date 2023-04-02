@@ -95,7 +95,7 @@ const struct WildPokemonInfo gVermilionCity_FishingMonsInfo = {30, gVermilionCit
 
 const struct WildPokemon gCeladonCity_LandMonsMorning[] =
 {
-	{6, 8, SPECIES_SUNKERN},
+	{6, 8, SPECIES_KOFFING},
 	{6, 8, SPECIES_YANMA},
 	{5, 5, SPECIES_GOSSIFLEUR},
 	{3, 4, SPECIES_COMBEE},
@@ -168,8 +168,8 @@ const struct WildPokemonInfo gCeladonCity_LandMonsInfoNight = {21, gCeladonCity_
 const struct WildPokemon gCeladonCity_WaterMons[] =
 {
     {20, 23, SPECIES_LOTAD},
-    {10, 20, SPECIES_AZURILL},
-    {20, 25, SPECIES_MARILL},
+    {10, 20, SPECIES_DUCKLETT},
+    {20, 25, SPECIES_DEWPIDER},
     {20, 23, SPECIES_PSYDUCK},
     {21, 27, SPECIES_LOTAD},
 };
@@ -179,10 +179,10 @@ const struct WildPokemonInfo gCeladonCity_WaterMonsInfo = {4, gCeladonCity_Water
 const struct WildPokemon gCeladonCity_WaterMonsNight[] =
 {
     {20, 27, SPECIES_LOTAD},
-    {10, 20, SPECIES_AZURILL},
-    {20, 25, SPECIES_MARILL},
+    {10, 20, SPECIES_DEWPIDER},
+    {20, 25, SPECIES_DEWPIDER},
     {20, 23, SPECIES_PSYDUCK},
-    {21, 28, SPECIES_LOTAD},
+    {21, 28, SPECIES_DUCKLETT},
 };
 
 const struct WildPokemonInfo gCeladonCity_WaterMonsInfoNight = {4, gCeladonCity_WaterMonsNight};
@@ -297,8 +297,8 @@ const struct WildPokemon gRoute6_WaterMons[] =
 {
     {20, 30, SPECIES_PSYDUCK},
     {10, 20, SPECIES_WINGULL},
-    {20, 25, SPECIES_MARILL},
-    {5, 10, SPECIES_AZURILL},
+    {20, 25, SPECIES_LOTAD},
+    {5, 10, SPECIES_DEWPIDER},
     {10, 27, SPECIES_SWIRLIX},
 };
 

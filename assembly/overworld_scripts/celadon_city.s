@@ -10,8 +10,36 @@
 
 .equ FLAG_ROTOMI, 0x4A7
 .equ FLAG_SEENRIMETRICK, 0x4A8
+.equ FLAG_CHOSESTARTER1, 0x960
+.equ FLAG_CHOSESTARTER2, 0x961
+.equ FLAG_CHOSESTARTER3, 0x962
+.equ SP_DAILY_EVENT, 0xA0
+.equ SP_UPDATE_TIME_IN_VARS, 0xA1
+.equ SP_GET_TIME_DIFFERENCE, 0xA2
+.equ VAR_DAILY_EVENT, 0x50D2 @Also uses 0x50D3
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global EventScript_CeladonCitySibSprite_Outside
+gMapScripts_CeladonCitySibSprite_Outside:
+   mapscript MAP_SCRIPT_ON_TRANSITION EventScript_ChangeSibSprite_CeladonOutside
+   .byte MAP_SCRIPT_TERMIN
+
+EventScript_ChangeSibSprite_CeladonOutside:
+    checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_SetSibNPCAsSherry_CeladonOutside
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_SetSibNPCAsBrandy_CeladonOutside
+    end
+
+EventScript_SetSibNPCAsSherry_CeladonOutside:
+    setvar 0x5028 + 0x6 7
+    end
+
+EventScript_SetSibNPCAsBrandy_CeladonOutside:
+    setvar 0x5028 + 0x6 0
+    end
 
 .global EventScript_CeladonCity_GameFreakNPC_0
 EventScript_CeladonCity_GameFreakNPC_0:
@@ -176,6 +204,11 @@ EventScript_CeladonCity_RGroupClassy:
 	msgbox gText_CeladonCity_RGroupAwesome MSG_FACE
 	end
 		
+.global EventScript_CeladonCity_NotStupidAboutRGroup
+EventScript_CeladonCity_NotStupidAboutRGroup:
+	msgbox gText_CeladonCity_RGroupNotStupid MSG_FACE
+	end
+		
 .global EventScript_CeladonCity_GrassHint
 EventScript_CeladonCity_GrassHint:
 	msgbox gText_CeladonCity_GrassHint MSG_FACE
@@ -184,41 +217,231 @@ EventScript_CeladonCity_GrassHint:
 .global EventScript_CeladonCity_CondominiumsSign
 EventScript_CeladonCity_CondominiumsSign:
 	signmsg
-	msgbox gTextCeladonCity_CondominiumsSign MSG_SIGN
+	msgbox gText_CeladonCity_CondominiumsSign MSG_SIGN
 	end
 	
 .global EventScript_CeladonCity_RestaurantSign
 EventScript_CeladonCity_RestaurantSign:
 	signmsg
-	msgbox gTextCeladonCity_RestaurantSign MSG_SIGN
+	msgbox gText_CeladonCity_RestaurantSign MSG_SIGN
 	end
 	
 .global EventScript_CeladonCity_HotelSign
 EventScript_CeladonCity_HotelSign:
 	signmsg
-	msgbox gTextCeladonCity_HotelSign MSG_SIGN
+	msgbox gText_CeladonCity_HotelSign MSG_SIGN
 	end
 
 .global EventScript_CeladonCity_HomemadePickles
 EventScript_CeladonCity_HomemadePickles:
-	msgbox gTextCeladonCity_HomemadePickles MSG_FACE
-	applymovement 0x3 LookRight
+	msgbox gText_CeladonCity_HomemadePickles MSG_FACE
+	applymovement 0x4 LookRight
+	end
+	
+.global EventScript_CeladonCity_BurgerManStatue
+EventScript_CeladonCity_BurgerManStatue:
+	msgbox gText_CeladonCity_RestaurantStatue MSG_NORMAL
 	end
 	
 .global EventScript_CeladonCity_MayleneInspiredSquatter
 EventScript_CeladonCity_MayleneInspiredSquatter:
-	msgbox gTextCeladonCity_Restaurant_MayleneInspiredSquatter MSG_FACE
+	msgbox gText_CeladonCity_Restaurant_MayleneInspiredSquatter MSG_FACE
 	applymovement 0x3 LookRight
 	end
 
 .global EventScript_CeladonCity_IonoSoda
 EventScript_CeladonCity_IonoSoda:
-	msgbox gTextCeladonCity_Restaurant_IonoSoda MSG_FACE
+	msgbox gText_CeladonCity_Restaurant_IonoSoda MSG_FACE
 	end
 	
 .global EventScript_CeladonCity_IonoBurgerLore
 EventScript_CeladonCity_IonoBurgerLore:
-	msgbox gTextCeladonCity_RestaurantStaff_TooBusy MSG_FACE
+	msgbox gText_CeladonCity_RestaurantStaff_TooBusy MSG_FACE
+	end
+
+.global EventScript_CeladonCity_MayleneAutograph
+EventScript_CeladonCity_MayleneAutograph:
+	msgbox gText_CeladonCity_RestaurantMayleneSign1 MSG_KEEPOPEN
+	signmsg
+	msgbox gText_CeladonCity_RestaurantMayleneSign2 MSG_SIGN
+	end
+
+.global EventScript_CeladonCity_GameCornerLootbox
+EventScript_CeladonCity_GameCornerLootbox:
+	msgbox gText_CeladonCity_GameCornerSnoverwatch MSG_FACE
+	applymovement 0x8 LookRight 
+	end
+	
+.global EventScript_CeladonCity_GameCornerBackpacker
+EventScript_CeladonCity_GameCornerBackpacker:
+	msgbox gText_CeladonCity_GameCornerBackpacker MSG_FACE
+	applymovement 0x7 LookLeft 
+	end
+	
+.global EventScript_CeladonCity_ESRB
+EventScript_CeladonCity_ESRB:
+	msgbox gText_CeladonCity_ESRB MSG_FACE
+	applymovement 0x6 LookLeft 
+	end
+	
+.global EventScript_CeladonCity_MrGameLore
+EventScript_CeladonCity_MrGameLore:
+	msgbox gText_CeladonCity_GameCorner_GameLovingMan MSG_FACE
+	applymovement 0x9 LookLeft 
+	end
+
+.global EventScript_CeladonCity_RocketGuardGameCorner
+EventScript_CeladonCity_RocketGuardGameCorner:
+	checkflag 0x026D
+	if SET _goto EventScript_CeladonCity_RocketGuardGameCorner_Bemused
+	msgbox gText_CeladonCity_GameCorner_RGroupGuard MSG_FACE
+	end
+	
+EventScript_CeladonCity_RocketGuardGameCorner_Bemused:
+	msgbox gText_CeladonCity_GameCorner_RGroupGuardOpenedStairs MSG_FACE
+	end
+
+.global EventScript_CeladonCity_PrizeHouseMay
+EventScript_CeladonCity_PrizeHouseMay:
+	msgbox gText_CeladonCity_GameCorner_May MSG_FACE
+	end
+
+.global EventScript_CeladonCity_VoltorbFlipKid
+EventScript_CeladonCity_VoltorbFlipKid:
+	msgbox gText_CeladonCity_MissingVoltorbFlip MSG_FACE
+	end
+
+.global EventScript_CeladonCity_RGroupNoEntry1
+EventScript_CeladonCity_RGroupNoEntry1:
+	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_RGroupNoEntry2
+EventScript_CeladonCity_RGroupNoEntry2:
+	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_RGroupGameCornerPromoter
+EventScript_CeladonCity_RGroupGameCornerPromoter:
+	msgbox gText_CeladonCity_RGroupGameCornerPromoter MSG_FACE
+	end	
+	
+.global EventScript_CeladonCity_RGroupMemberFirstOne
+EventScript_CeladonCity_RGroupMemberFirstOne:
+	msgbox gText_CeladonCity_RGroupMemberFirstOne MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_CondominiumsInteriorSign
+EventScript_CeladonCity_CondominiumsInteriorSign:
+	signmsg
+	msgbox gText_CeladonCity_CeladonCondominiumManagerSuite MSG_SIGN
+	end
+
+.global EventScript_CeladonCity_Manager
+EventScript_CeladonCity_Manager:
+	msgbox gText_CeladonCity_FreshOuttaTea MSG_FACE
+	end
+
+.global EventScript_CeladonCity_GameFreakFan
+EventScript_CeladonCity_GameFreakFan:
+	msgbox gText_CeladonCity_GameFreakFan MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_Quilladin
+EventScript_CeladonCity_Quilladin:
+	cry SPECIES_QUILLADIN 0x0
+	msgbox gText_CeladonCity_QuilladinNoises MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_HGrowlithe
+EventScript_CeladonCity_HGrowlithe:
+	cry SPECIES_GROWLITHE 0x0
+	msgbox gText_CeladonCity_GrowlitheNoises MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_GameCornerSign
+EventScript_CeladonCity_GameCornerSign:
+	signmsg
+	msgbox gText_CeladonCity_GameCornerSign MSG_SIGN
+	end
+	
+.global EventScript_CeladonCity_PrizeExchangeSign
+EventScript_CeladonCity_PrizeExchangeSign:
+	signmsg
+	msgbox gText_CeladonCity_PrizeExchange MSG_SIGN
+	end
+
+.global EventScript_CeladonCity_SceptileNoises
+EventScript_CeladonCity_SceptileNoises:
+	cry SPECIES_SCEPTILE 0x0
+	msgbox gText_CeladonCity_BerriesSceptile MSG_FACE
+	applymovement 0x9 LookUp
+	end
+	
+.global EventScript_CeladonCity_BerriesGuy
+EventScript_CeladonCity_BerriesGuy:
+	setvar 0x8000 VAR_DAILY_EVENT
+	setvar 0x8001 0x0
+	special2 LASTRESULT SP_DAILY_EVENT
+	compare LASTRESULT 0x0
+	if equal _goto EventScript_ComeBackTomorrow
+	setvar 0x8000 VAR_DAILY_EVENT
+	special SP_UPDATE_TIME_IN_VARS
+	faceplayer
+	msgbox gText_CeladonCity_BerriesGuy1 MSG_KEEPOPEN
+    random 0x4
+    compare 0x800D 0x0 
+	if 0x1 _goto EventScript_RandoBerry1
+	compare 0x800D 0x1
+	if 0x1 _goto EventScript_RandoBerry2
+	compare 0x800D 0x2
+	if 0x1 _goto EventScript_RandoBerry3
+	compare 0x800D 0x3 
+	if 0x1 _goto EventScript_RandoBerry4
+	compare 0x800D 0x4
+	if 0x1 _goto EventScript_RandoBerry5
+	end
+	
+EventScript_RandoBerry1:
+	giveitem ITEM_CHESTO_BERRY 0x1 MSG_OBTAIN
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_NORMAL
+	end
+
+EventScript_RandoBerry2:
+	giveitem ITEM_FIGY_BERRY 0x1 MSG_OBTAIN
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_NORMAL
+	end
+
+EventScript_RandoBerry3:
+	giveitem ITEM_KASIB_BERRY 0x1 MSG_OBTAIN
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_NORMAL
+	end
+
+EventScript_RandoBerry4:
+	giveitem ITEM_CHERI_BERRY 0x1 MSG_OBTAIN
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_NORMAL
+	end
+
+EventScript_RandoBerry5:
+	giveitem ITEM_ASPEAR_BERRY 0x1 MSG_OBTAIN
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_NORMAL
+	end
+
+EventScript_ComeBackTomorrow:
+	setvar 0x8000 VAR_DAILY_EVENT
+	setvar 0x8001 0x1
+	special2 LASTRESULT SP_GET_TIME_DIFFERENCE
+	buffernumber 0x0 LASTRESULT
+	msgbox gText_CeladonCity_BerriesGuy2 MSG_FACE
+	end
+
+.global EventScript_CeladonCity_SibEncounter
+EventScript_CeladonCity_SibEncounter:
+	setvar 0x408D 0x1
+	end
+
+.global EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperhero
+EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperhero:
 	end
 
 LookLeft:
@@ -236,6 +459,10 @@ LookNurse:
 
 LookDown:
 	.byte look_down
+	.byte 0xFE
+	
+LookUp:
+	.byte look_up
 	.byte 0xFE
 	
 RimeTrick:

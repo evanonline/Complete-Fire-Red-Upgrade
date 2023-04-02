@@ -15,7 +15,6 @@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global EventScript_VermilionCity_MapScript
-
 gMapScripts_VermilionCity:
     mapscript MAP_SCRIPT_ON_TRANSITION, EventScript_VermilionCity_MapScript
     .byte MAP_SCRIPT_TERMIN
@@ -209,7 +208,7 @@ EventScript_CeriseLab_Sign:
 	
 .global EventScript_VermilionCity_RivalDisappointJog
 EventScript_VermilionCity_RivalDisappointJog:
-	setvar 0x4011 0x1
+	setvar 0x408C 0x1
 	lockall
 	setflag FLAG_RIVAL_WHINE_SEEN
 	msgbox gText_VermilionCity_RivalCutscene1Rival1 MSG_NORMAL
@@ -264,7 +263,7 @@ EventScript_VermilionCity_RivalAndFlynn:
 	msgbox gText_VermilionCity_RivalCutscene2Rival4 MSG_KEEPOPEN
 	applymovement 0x6 FaceUp
 	msgbox gText_VermilionCity_RivalCutscene2Flynn5 MSG_KEEPOPEN
-	applymovement 0x5 DoubleExclaim
+	applymovement 0x5 ExclaimNormal
 	sound 0x15
 	msgbox gText_VermilionCity_RivalCutscene2Rival5 MSG_KEEPOPEN
 	applymovement 0x5 RivalBumpsFlynn
@@ -354,10 +353,6 @@ FaceRightExclaim:
 
 ExclaimNormal:
 	.byte 0x62
-	.byte 0xFE
-	
-DoubleExclaim:
-	.byte 0x65
 	.byte 0xFE
 
 WalkLeft:
