@@ -22,3 +22,21 @@ EventScript_TrainerTips_EVs:
 	signmsg
 	msgbox gText_TrainerTips_EVs MSG_SIGN
 	end
+
+.global EventScript_TrainerTips_ShiftVsSet
+EventScript_TrainerTips_ShiftVsSet:
+	signmsg
+	msgbox gText_TrainerTips_ShiftVsSet MSG_SIGN
+	end
+
+.global EventScript_TrainerTips_PalletOriginalTip
+EventScript_TrainerTips_PalletOriginalTip:
+	signmsg
+	msgbox gText_TrainerTips_PalletStartMenu MSG_SIGN
+	end
+
+.global EventScript_TrainerTips_Stats
+EventScript_TrainerTips_Stats:
+	signmsg
+	msgbox gText_TrainerTips_Stats MSG_SIGN
+	end

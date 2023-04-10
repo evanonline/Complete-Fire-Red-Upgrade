@@ -8,6 +8,17 @@ Time to Dynamax!\p
 #org @gText_TestTrainerDynamaxMsg
 I now shall unleash the power\nof Dynamax!\p 
 
+//Trails
+
+#org @sText_SherryBattle1_FirstMonDown
+Wow! You don't mess around, huh,\nsib?\p 
+
+#org @sText_BrandyBattle1_FirstMonDown
+Not holdin' back, eh, sib?\nGood! Just how I want it!\p
+
+#org @sText_SibBattle1_LowHP
+C'mon[.]\nWe can still clutch it out!\p 
+
 //For Pokemon Unbound - Feel free to remove, and do not place strings below
 #ifdef UNBOUND
 

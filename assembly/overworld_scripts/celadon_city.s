@@ -22,16 +22,23 @@
 
 .global EventScript_CeladonCitySibSprite_Outside
 gMapScripts_CeladonCitySibSprite_Outside:
-   mapscript MAP_SCRIPT_ON_TRANSITION EventScript_ChangeSibSprite_CeladonOutside
+   mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite_CeladonOutside
    .byte MAP_SCRIPT_TERMIN
 
 EventScript_ChangeSibSprite_CeladonOutside:
+	checkflag 0x966
+	if SET _call HideSibSprite
     checkgender
     compare LASTRESULT 0x0
     if 0x1 _goto EventScript_SetSibNPCAsSherry_CeladonOutside
     compare LASTRESULT 0x1
     if 0x1 _goto EventScript_SetSibNPCAsBrandy_CeladonOutside
     end
+
+HideSibSprite:
+	setflag 0x966
+	hidesprite 7
+	return
 
 EventScript_SetSibNPCAsSherry_CeladonOutside:
     setvar 0x5028 + 0x6 7
@@ -40,6 +47,42 @@ EventScript_SetSibNPCAsSherry_CeladonOutside:
 EventScript_SetSibNPCAsBrandy_CeladonOutside:
     setvar 0x5028 + 0x6 0
     end
+
+.global EventScript_CeladonCitySibSprite_InsideCeladonPokeCenter
+gMapScripts_CeladonCitySibSprite_InsidePokeCenter:
+   mapscript MAP_SCRIPT_ON_LOAD EventScript_ChangeSibSprite_InsideCeladonPokeCenter
+   .byte MAP_SCRIPT_TERMIN
+
+EventScript_ChangeSibSprite_InsideCeladonPokeCenter:
+	setflag 0x96A
+	hidesprite 6
+	checkflag 0x967
+	if SET _goto SibSpriteCeladonPokeCenter_Gone
+	checkflag 0x966
+	if SET _goto SibSpriteCeladonPokeCenter
+	end
+	
+SibSpriteCeladonPokeCenter:
+	clearflag 0x96A
+	showsprite 6
+	checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_SetSibNPCAsSherry_CeladonPokeCenter
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_SetSibNPCAsBrandy_CeladonPokeCenter
+    end
+	
+SibSpriteCeladonPokeCenter_Gone:
+	end
+	
+EventScript_SetSibNPCAsSherry_CeladonPokeCenter:
+    setvar 0x5028 + 0x5 7
+    end
+
+EventScript_SetSibNPCAsBrandy_CeladonPokeCenter:
+    setvar 0x5028 + 0x5 0
+    end
+
 
 .global EventScript_CeladonCity_GameFreakNPC_0
 EventScript_CeladonCity_GameFreakNPC_0:
@@ -272,6 +315,18 @@ EventScript_CeladonCity_GameCornerLootbox:
 	applymovement 0x8 LookRight 
 	end
 	
+.global EventScript_CeladonCity_GameCornerDragonTamer
+EventScript_CeladonCity_GameCornerDragonTamer:
+	msgbox gText_CeladonCity_GameCornerDragonTamer MSG_FACE
+	applymovement 0x4 LookLeft
+	end	
+	
+.global EventScript_CeladonCity_GameCornerGamblin
+EventScript_CeladonCity_GameCornerGamblin:
+	msgbox gText_CeladonCity_GameCornerGambler MSG_FACE
+	applymovement 0x3 LookLeft
+	end
+	
 .global EventScript_CeladonCity_GameCornerBackpacker
 EventScript_CeladonCity_GameCornerBackpacker:
 	msgbox gText_CeladonCity_GameCornerBackpacker MSG_FACE
@@ -311,16 +366,122 @@ EventScript_CeladonCity_VoltorbFlipKid:
 	msgbox gText_CeladonCity_MissingVoltorbFlip MSG_FACE
 	end
 
-.global EventScript_CeladonCity_RGroupNoEntry1
-EventScript_CeladonCity_RGroupNoEntry1:
+.global EventScript_CeladonCity_RGroupNoEntryLeft
+EventScript_CeladonCity_RGroupNoEntryLeft:
+	checkflag 0x966
+	if SET _goto RGroupGuardLeftOopsie
 	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
 	end
-	
-.global EventScript_CeladonCity_RGroupNoEntry2
-EventScript_CeladonCity_RGroupNoEntry2:
+
+RGroupGuardLeftOopsie:
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_Left MSG_FACE
+	trainerbattle3 0x3 9 0x0 gText_CeladonCity_OutsideDeptStore_Left_Loss
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
+	applymovement 0xE LookRight
+	waitmovement 0x0
+	applymovement 0xD LookLeft
+	waitmovement 0x0
+	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
+	call GuardsDoorEnter
+	lockall
+	clearflag 0x966
+	showsprite 7
+	movesprite 0x7 0x11 0x16
+	pause 0x12
+	applymovement 0x7 SibEntersDept1_FoughtLeftRocket
+	waitmovement 0x0
+	pause 0x5
+	applymovement 0xFF LookRight
+	checkgender
+	compare LASTRESULT 0x0
+    if 0x1 _call EventScript_SherryGrats
+    compare LASTRESULT 0x1
+    if 0x1 _call EventScript_BrandyGrats
+	applymovement 0x7 SibEntersDept2
+	opendoor 0xF 0xE
+	waitdooranim
+	pause 0x8
+	setflag 0x966
+	hidesprite 7
+	closedoor 0xF 0xE
+	waitdooranim
+	releaseall
+	end
+
+.global EventScript_CeladonCity_RGroupNoEntryRight
+EventScript_CeladonCity_RGroupNoEntryRight:
+	checkflag 0x966
+	if SET _goto RGroupGuardRightOopsie
 	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
 	end
+
+RGroupGuardRightOopsie:
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_Right MSG_FACE
+	trainerbattle3 0x3 10 0x0 gText_CeladonCity_OutsideDeptStore_Right_Loss
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
+	applymovement 0xD LookLeft
+	waitmovement 0x0
+	applymovement 0xE LookRight
+	waitmovement 0x0
+	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
+	call GuardsDoorEnter
+	lockall
+	clearflag 0x966
+	showsprite 7
+	movesprite 0x7 0x09 0x16
+	pause 0x12
+	applymovement 0x7 SibEntersDept1_FoughtRightRocket
+	waitmovement 0x0
+	pause 0x5
+	applymovement 0xFF LookLeft
+	checkgender
+	compare LASTRESULT 0x0
+    if 0x1 _call EventScript_SherryGrats
+    compare LASTRESULT 0x1
+    if 0x1 _call EventScript_BrandyGrats
+	applymovement 0x7 SibEntersDept2
+	opendoor 0xB 0xE
+	waitdooranim
+	pause 0x8
+	setflag 0x966
+	hidesprite 7
+	closedoor 0xB 0xE
+	waitdooranim
+	releaseall
+	end
 	
+EventScript_SherryGrats:
+	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Sherry MSG_NORMAL
+	return
+	
+EventScript_BrandyGrats:
+	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Brandy MSG_NORMAL
+	return
+
+GuardsDoorEnter:
+	applymovement 0xD RocketsWalkUp
+	opendoor 0xF 0xE
+	waitdooranim
+	setflag 0x967
+	hidesprite 13
+	pause 0x8
+	closedoor 0xF 0xE
+	waitdooranim
+	pause 0x5
+	lockall
+	applymovement 0xE RocketsWalkUp
+	opendoor 0xB 0xE
+	waitdooranim
+	pause 0x15
+	hidesprite 14
+	closedoor 0xB 0xE
+	waitdooranim
+	return
+
 .global EventScript_CeladonCity_RGroupGameCornerPromoter
 EventScript_CeladonCity_RGroupGameCornerPromoter:
 	msgbox gText_CeladonCity_RGroupGameCornerPromoter MSG_FACE
@@ -435,13 +596,191 @@ EventScript_ComeBackTomorrow:
 	msgbox gText_CeladonCity_BerriesGuy2 MSG_FACE
 	end
 
-.global EventScript_CeladonCity_SibEncounter
-EventScript_CeladonCity_SibEncounter:
-	setvar 0x408D 0x1
+.global EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperherotoo
+EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperherotoo:
+	checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_SherryBriefAppearance_CeladonPokeCenter
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_BrandyBriefAppearance_CeladonPokeCenter
+    end
+
+EventScript_SherryBriefAppearance_CeladonPokeCenter:
+	msgbox gText_CeladonCity_Pokecenter_Sib_Sherry MSG_NORMAL
 	end
 
-.global EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperhero
-EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperhero:
+EventScript_BrandyBriefAppearance_CeladonPokeCenter:
+	msgbox gText_CeladonCity_Pokecenter_Sib_Brandy MSG_NORMAL
+	end
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;Main story@@@@@@@@@@@@@@@@@@@@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.global EventScript_CeladonCity_SibEncounter1Start_1
+EventScript_CeladonCity_SibEncounter1Start_1:
+	lockall
+	call EventScript_CeladonCity_SibEncounterScriptStart
+	applymovement 0xFF PlayerWalk_Gym1
+	waitmovement 0x0
+	goto CeladonSibFight_TeamCheck
+	end
+
+.global EventScript_CeladonCity_SibEncounter1Start_2
+EventScript_CeladonCity_SibEncounter1Start_2:
+	lockall
+	call EventScript_CeladonCity_SibEncounterScriptStart
+	applymovement 0xFF PlayerWalk_Gym2
+	waitmovement 0x0
+	goto CeladonSibFight_TeamCheck
+	end
+
+.global EventScript_CeladonCity_SibEncounter1Start_3
+EventScript_CeladonCity_SibEncounter1Start_3:
+	lockall
+	call EventScript_CeladonCity_SibEncounterScriptStart
+	applymovement 0xFF PlayerWalk_Gym3
+	waitmovement 0x0
+	goto CeladonSibFight_TeamCheck
+	end
+
+.global EventScript_CeladonCity_SibEncounter1Start_4
+EventScript_CeladonCity_SibEncounter1Start_4:
+	lockall
+	call EventScript_CeladonCity_SibEncounterScriptStart
+	applymovement 0xFF PlayerWalk_Gym4
+	waitmovement 0x0
+	goto CeladonSibFight_TeamCheck
+	end
+
+EventScript_CeladonCity_SibEncounterScriptStart:
+	lockall
+	applymovement 0x7 ExclaimAnim
+	sound 0x15
+	waitmovement 0x0
+	pause 0x10
+	applymovement 0x7 SibWalk_Gym
+	return
+
+CeladonSibFight_TeamCheck:
+	checkgender
+    compare LASTRESULT 0x0
+    if 0x1 _goto EventScript_CeladonCity_SibEncounter1_Sherry
+    compare LASTRESULT 0x1
+    if 0x1 _goto EventScript_CeladonCity_SibEncounter1_Brandy
+	end
+
+EventScript_CeladonCity_SibEncounter1_Sherry:
+	msgbox gText_CeladonCity_SibEncounterSherry MSG_NORMAL
+	checkflag FLAG_CHOSESTARTER1
+	if SET _goto CeladonSibFight1_SherryFight_StarterRelicanth
+	checkflag FLAG_CHOSESTARTER2
+	if SET _goto CeladonSibFight1_SherryFight_StarterSigilyph
+	checkflag FLAG_CHOSESTARTER3
+	if SET _goto CeladonSibFight1_SherryFight_StarterPassimian
+	end
+	
+EventScript_CeladonCity_SibEncounter1_Brandy:
+	msgbox gText_CeladonCity_SibEncounterBrandy MSG_NORMAL
+	checkflag FLAG_CHOSESTARTER1
+	if SET _goto CeladonSibFight1_BrandyFight_StarterRelicanth
+	checkflag FLAG_CHOSESTARTER2
+	if SET _goto CeladonSibFight1_BrandyFight_StarterSigilyph
+	checkflag FLAG_CHOSESTARTER3
+	if SET _goto CeladonSibFight1_BrandyFight_StarterPassimian
+	end
+	
+CeladonSibFight1_SherryFight_StarterRelicanth: @Starter was Relicanth, sib is Sherry and uses Sigilyph
+	trainerbattle3 0x3 19 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
+	end
+
+CeladonSibFight1_SherryFight_StarterSigilyph: @Starter was Sigilyph, sib is Sherry and uses Passimian
+	trainerbattle3 0x3 20 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
+	end
+	
+CeladonSibFight1_SherryFight_StarterPassimian: @Starter was Passimian, sib is Sherry and uses Relicanth
+	trainerbattle3 0x3 21 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
+	end
+	
+CeladonSibFight1_BrandyFight_StarterRelicanth:  @Starter was Relicanth, sib is Brandy and uses Sigilyph
+	trainerbattle3 0x3 16 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
+	end
+	
+CeladonSibFight1_BrandyFight_StarterSigilyph: @Starter was Sigilyph, sib is Brandy and uses Passimian
+	trainerbattle3 0x3 17 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
+	end
+	
+CeladonSibFight1_BrandyFight_StarterPassimian: @Starter was Passimian, sib is Brandy and uses Relicanth
+	trainerbattle3 0x3 18 0x0 gText_CeladonCity_SibFightYouWon
+	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
+	end
+
+EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer:
+	setvar 0x408D 0x1
+	msgbox gText_CeladonCity_SibEncounterSherryAfterFight MSG_KEEPOPEN
+	call UniversalMovementScript_GymScene1
+	msgbox gText_CeladonCity_ErikaGymSceneSherry1 MSG_KEEPOPEN
+	applymovement 0x8 GymTrainerShuffle
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC2 MSG_KEEPOPEN
+	msgbox gText_CeladonCity_ErikaGymSceneSherry2 MSG_KEEPOPEN
+	applymovement 0x8 GymTrainerShuffle
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC3 MSG_KEEPOPEN
+	applymovement 0x8 JumpyTime
+	sound 0x1C
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC4 MSG_KEEPOPEN
+	msgbox gText_CeladonCity_ErikaGymSceneSherry3 MSG_NORMAL
+	applymovement 0x7 SibLeavesGymZone
+	waitmovement 0x0
+	call HideSibSprite
+	msgbox gText_CeladonCity_ThatsYourSib MSG_NORMAL
+	releaseall
+	end
+
+EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer:
+	setvar 0x408D 0x1
+	msgbox gText_CeladonCity_SibEncounterBrandyAfterFight MSG_KEEPOPEN
+	call UniversalMovementScript_GymScene1
+	msgbox gText_CeladonCity_ErikaGymSceneBrandy1 MSG_KEEPOPEN
+	applymovement 0x8 GymTrainerShuffle
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC2 MSG_KEEPOPEN
+	msgbox gText_CeladonCity_ErikaGymSceneBrandy2 MSG_KEEPOPEN
+	applymovement 0x8 GymTrainerShuffle
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC3 MSG_KEEPOPEN
+	applymovement 0x8 JumpyTime
+	sound 0x1C
+	waitmovement 0x0
+	msgbox gText_CeladonCity_ErikaGymSceneNPC4 MSG_KEEPOPEN
+	msgbox gText_CeladonCity_ErikaGymSceneSherry3 MSG_NORMAL
+	applymovement 0x7 SibLeavesGymZone
+	waitmovement 0x0
+	call HideSibSprite
+	msgbox gText_CeladonCity_ThatsYourSib MSG_NORMAL
+	releaseall
+	end
+
+UniversalMovementScript_GymScene1:
+	msgbox gText_CeladonCity_SibEncounterFinal MSG_NORMAL
+	applymovement 0x7 PlayerSibWalkUp
+	applymovement 0xFF PlayerSibWalkUp
+	waitmovement 0x0
+	applymovement 0x8 GymTrainerShuffle
+	pause 0x5
+	msgbox gText_CeladonCity_ErikaGymSceneNPC1 MSG_KEEPOPEN
+	return
+
+.global EventScript_CeladonCity_GymTrainerOutside
+EventScript_CeladonCity_GymTrainerOutside:
+	msgbox gText_CeladonCity_PleaseGoDeptStore MSG_FACE
 	end
 
 LookLeft:
@@ -465,6 +804,98 @@ LookUp:
 	.byte look_up
 	.byte 0xFE
 	
+ExclaimAnim:
+	.byte exclaim
+	.byte 0xFE
+	
 RimeTrick:
 	.byte 0x56
+	.byte 0xFE
+
+SibWalk_Gym:
+	.byte walk_up
+	.byte walk_right
+	.byte walk_right
+	.byte 0xFE
+
+PlayerWalk_Gym1:
+	.byte walk_down
+	.byte walk_left
+	.byte 0xFE
+	
+PlayerWalk_Gym2:
+	.byte walk_left
+	.byte 0xFE
+	
+PlayerWalk_Gym3:
+	.byte walk_up
+	.byte walk_left
+	.byte 0xFE
+	
+PlayerWalk_Gym4:
+	.byte walk_up
+	.byte walk_up
+	.byte walk_left
+	.byte 0xFE
+
+PlayerSibWalkUp:
+	.byte walk_up
+	.byte walk_up
+	.byte walk_up
+	.byte 0xFE
+	
+RocketsWalkUp:
+	.byte walk_up
+	.byte 0xFE
+	
+GymTrainerShuffle:
+	.byte 0x25
+	.byte 0x25
+	.byte 0xFE
+	
+JumpyTime:
+	.byte 0x52
+	.byte 0xFE
+	
+SibLeavesGymZone:
+	.byte 0x3D 
+	.byte 0x3D 
+	.byte 0x3D 
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0x40
+	.byte 0xFE
+
+SibEntersDept1_FoughtRightRocket:
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x40
+	.byte walk_right
+	.byte 0xFE
+	
+SibEntersDept1_FoughtLeftRocket:
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3E
+	.byte 0x3F
+	.byte walk_left
+	.byte 0xFE
+
+SibEntersDept2:
+	.byte walk_up
+	.byte walk_up
+	.byte walk_up
 	.byte 0xFE

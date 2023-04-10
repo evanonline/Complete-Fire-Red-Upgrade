@@ -203,6 +203,7 @@ npc 3 29 0 EventScript_Route11_SnorlaxRuinManiac
 npc 3 29 1 EventScript_Route11_Snorlax
 
 ## Route 16
+sign 3 34 1 EventScript_Route16_CyclingRoadSign
 npc 25 2 0 EventScript_Route16_Gatehouse_TimeReminder
 npc 25 2 1 EventScript_Route16_Gatehouse_FuchsiaSad
 npc 25 2 2 EventScript_Route16_Gatehouse_AthletesFoot
@@ -236,12 +237,22 @@ npc 3 6 2 EventScript_CeladonCity_RGroupClassy
 npc 3 6 3 EventScript_CeladonCity_BurgerManStatue
 npc 3 6 4 EventScript_CeladonCity_RGroupMemberFirstOne
 npc 3 6 5 EventScript_CeladonCity_NotStupidAboutRGroup
+npc 3 6 7 EventScript_CeladonCity_GymTrainerOutside
 npc 3 6 8 EventScript_CeladonCity_VoltorbFlipKid
 npc 3 6 9 EventScript_CeladonCity_SceptileNoises
 npc 3 6 10 EventScript_CeladonCity_BerriesGuy
 npc 3 6 11 EventScript_CeladonCity_RGroupGameCornerPromoter
-npc 3 6 12 EventScript_CeladonCity_RGroupNoEntry1
-npc 3 6 13 EventScript_CeladonCity_RGroupNoEntry2
+npc 3 6 12 EventScript_CeladonCity_RGroupNoEntryRight
+npc 3 6 13 EventScript_CeladonCity_RGroupNoEntryLeft
+tile 3 6 0 EventScript_CeladonCity_SibEncounter1Start_1
+tile 3 6 1 EventScript_CeladonCity_SibEncounter1Start_2
+tile 3 6 2 EventScript_CeladonCity_SibEncounter1Start_3
+tile 3 6 3 EventScript_CeladonCity_SibEncounter1Start_4
+map 10 0 gMapScripts_DeptStoreSibSprite_Floor1
+npc 10 0 0 EventScript_CeladonDept_Floor1CustomerService
+npc 10 0 1 EventScript_CeladonDept_SherryBrandy_1F
+npc 10 0 2 EventScript_CeladonDept_1FRocketBattlingSib
+npc 10 0 3 EventScript_CeladonDept_BattlingRocket
 sign 10 7 0 EventScript_CeladonCity_CondominiumsInteriorSign
 sign 10 7 1 EventScript_CeladonCity_CondominiumsInteriorSign
 npc 10 7 0 EventScript_CeladonCity_Quilladin
@@ -251,10 +262,14 @@ npc 10 7 3 EventScript_CeladonCity_Manager
 npc 10 9 0 EventScript_CeladonCity_GameFreakNPC_0
 npc 10 9 2 EventScript_CeladonCity_GameFreakNPC_2
 npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
+map 10 12 gMapScripts_CeladonCitySibSprite_InsidePokeCenter
 npc 10 12 1 EventScript_CeladonCity_PokecenterRimeTrickGuy
 npc 10 12 2 EventScript_CeladonCity_PokecenterRime
 npc 10 12 3 EventScript_CeladonCity_CyclingRoadTalk
 npc 10 12 4 EventScript_CeladonCity_GrassHint
+npc 10 12 5 EventScript_CeladonCity_donkeykongismyfavoritemarvelsuperherotoo
+npc 10 14 2 EventScript_CeladonCity_GameCornerGamblin
+npc 10 14 3 EventScript_CeladonCity_GameCornerDragonTamer
 npc 10 14 5 EventScript_CeladonCity_ESRB
 npc 10 14 6 EventScript_CeladonCity_GameCornerBackpacker
 npc 10 14 7 EventScript_CeladonCity_GameCornerLootbox

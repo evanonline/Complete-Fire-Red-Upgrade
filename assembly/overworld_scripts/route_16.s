@@ -12,6 +12,12 @@
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+.global EventScript_Route16_CyclingRoadSign
+EventScript_Route16_CyclingRoadSign:
+	signmsg
+	msgbox gText_Route16_CyclingRoad_Sign MSG_SIGN
+	end
+
 .global EventScript_Route16_Gatehouse_TimeReminder
 EventScript_Route16_Gatehouse_TimeReminder:
 	msgbox gText_Route16_Gatehouse_TimeReminder MSG_FACE

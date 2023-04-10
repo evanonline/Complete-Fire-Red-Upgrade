@@ -107,7 +107,7 @@ Please[.] Treat my Eevee well[.]\nAnd, if it's any use to you[.]\pI wrote about 
 This restaurant's pickles are\nabysmal, but I keep coming anyway.\pYou know what I need to bring?\pHomemade pickles!\nHomemade pickles!
 
 #org @gText_CeladonCity_RestaurantStatue
-This is an upsettingly life-like\nstatue of the restaurant's mascot[.]\pIt looks like you could pick it up\nand toss it around easily.
+[.] [.] [.]\pThis is an upsettingly life-like\nstatue of the restaurant's mascot[.]\pIt looks like you could pick it up\nand toss it around easily.
 
 #org @gText_CeladonCity_RestaurantStaff_TooBusy
 Hey, sorry. We're too busy\nfor more customers[.]\pSee, we're also a ghost kitchen for\n[BLUE]Iono Burger[BLACK].\pYou know, Iono? The streamer from\nthe [GREEN]Paldea[BLACK] region?\lShe has her own burger now.\pIt's got little toothpicks that\nlook like her hair clips.\pIono Burger only delivers through\nan app on your Rotom Phone.\lWe don't serve 'em in here.\p[.]What? You still have a dinky\nold Pok\edex? No phone?\lThat's rough, kid.
@@ -128,10 +128,16 @@ It's an autographed photo of a\npink-haired girl.
 I was hiking to [GREEN]Fuchsia City[BLACK].\nBut when I saw slots were back[.]\lYou KNOW I had to drop everything!
 
 #org @gText_CeladonCity_GameCornerSnoverwatch
-Are slots really that bad?\pThis isn't any riskier than when I\nopen lootboxes in Snoverwatch,\lfor a chance at legendary skins.
+Are slots really that bad?\pThis isn't any riskier than when I\nopen lootboxes in [BLUE]Snoverwatch[BLACK],\lfor a chance at legendary skins.
+
+#org @gText_CeladonCity_GameCornerDragonTamer
+In my long life, I've tamed the\nmightiest of dragons[.]\lBut I just can't tame these slots!
+
+#org @gText_CeladonCity_GameCornerGambler
+Eyyy, I'm gamblin' 'ere!
 
 #org @gText_CeladonCity_RGroupBigShipment
-Sorry, the R Group is expecting to\nreceive an important shipment.\pPlease come back later.
+Sorry, the R Group is handling an\nimportant shipment inside.\pPlease come back later.
 
 #org @gText_CeladonCity_SibEncounterSherry
 [RED]Sherry[BLACK]: Hey, sib!\nYou came to Celadon too, huh?\pI figured Erika might be able to\ntell me where to find a Bulbasaur!\pThere's a problem at the gym,\nthough[.]\pBut now that you're here, who\ncares about that?\pYou gotta show me what your team\nlooks like!\lIt's fightin' time, sib!
@@ -149,10 +155,10 @@ You got me, fair and square!
 [RED]Brandy[BLACK]: Oof!\nThat ruled, though!
 
 #org @gText_CeladonCity_SibEncounterFinal
-Oh, about the gym, though[.]\pI went inside and everyone\nwas asleep.\pI managed to wake someone up,\nthough.\pThat's her out in front.\nLet's go ask her what was up!\pMaybe they all had a REALLY boring\lbattle or something.
+Oh, about the gym, though[.]\pI went inside and [RED]everyone\nwas asleep![BLACK]\pI managed to wake someone up,\nthough.\pThat's her out in front.\nLet's go ask her what was up!\pMaybe they all had a REALLY boring\nbattle or something.
 
 #org @gText_CeladonCity_ErikaGymSceneNPC1
-Oh, hey[.]\nThanks again for waking me up.\pSome prankster stuck a Paras in\nthe ventilation system in there[.]\pIt used Spore and put everyone to\nsleep.\pUgh[.]\nThose Rocket hoodlums[.]
+Oh, hey[.]\nThanks again for waking me up.\pSome prankster stuck a Paras in\nthe ventilation system in there[.]\pIt used [BLUE]Spore[BLACK] and put everyone to\nsleep.\lUgh[.]\lThose Rocket hoodlums[.]
 
 #org @gText_CeladonCity_ErikaGymSceneSherry1
 [RED]Sherry[BLACK]: Rocket? Like, Team Rocket?
@@ -167,19 +173,22 @@ Yeah[.]\nThose guys with the R shirts?\pThey call themselves the R Group,\nbut i
 [RED]Sherry[BLACK]: So, trouble's afoot in\nCeladon, huh?\pI wanna help!
 
 #org @gText_CeladonCity_ErikaGymSceneBrandy2
-[RED]Brandy[BLACK]: So, trouble's afoot in\nCeladon, huh?\pHow can we help?
+[RED]Brandy[BLACK]: So, trouble's afoot in\nCeladon, huh?\pWe're gonna help!
 
 #org @gText_CeladonCity_ErikaGymSceneNPC3
-Hah[.]\nOkay, okay.\pWell, there's something you can\ndo for us.\pEveryone else is awake now too,\nand we got rid of the Paras, but[.]
+Hah[.]\nOkay, okay.\pYou're one corny person, but I\nappreciate that right now.\pWell, there's something you can\ndo for us.\pEveryone else is awake now too,\nand we got rid of the Paras, but[.]
 
 #org @gText_CeladonCity_ErikaGymSceneNPC4
-Erika is still sleepy!\pShe's always had narcolepsy issues,\nbut this is the worst it's been!\pShe needs an [RED]energy drink[BLACK]!\pCan I ask you folks to get her\nsomething at the [GREEN]Department Store[BLACK]?\pTheir vending machine's on the\nroof.\lWhen she wakes up, we can reopen!
+Erika is still drowsy!\pShe's always had narcolepsy issues,\nbut this is the worst it's been!\pShe needs an [RED]energy drink[BLACK]!\pCan I ask you folks to get her\nsomething at the [GREEN]Department Store[BLACK]?\pTheir vending machine's on the\nroof.\lWhen she wakes up, we can reopen!
 
 #org @gText_CeladonCity_ErikaGymSceneSherry3
-[RED]Sherry[BLACK]: We're on it!\pI gotta go heal up my team, sib.\nI'll catch up to you later!
+[RED]Sherry[BLACK]: We're on it!\pI gotta go heal up my team, sib.\nI'll catch up to you at the store!
 
 #org @gText_CeladonCity_ErikaGymSceneBrandy3
-[RED]Brandy[BLACK]: We're on it!\pI gotta go heal up my team, sib.\nI'll catch up to you later!
+[RED]Brandy[BLACK]: We're on it!\pI gotta go heal up my team, sib.\nI'll catch up to you at the store!
+
+#org @gText_CeladonCity_ThatsYourSib
+That's your sibling, huh?\nThey're quite lively!\pI'll look after things here[.]\nThanks again.
 
 #org @gText_CeladonCity_PleaseGoDeptStore
 Please, go to the [GREEN]Department Store[BLACK]\nand get an energy drink for Erika!\pI'll stay here and watch over\nthings.
@@ -234,3 +243,36 @@ Sorry, I can't let you back here.\nR Group members only.
 
 #org @gText_CeladonCity_GameCorner_RGroupGuardOpenedStairs
 Uh[.]\pI'm not gonna let you in just 'cus\nyou pressed the stairs button.\lC'mon, man. 
+
+#org @gText_CeladonCity_OutsideDeptStore_Left
+Sorry, no one's coming in here.\pTeam Rocket is processing a huge\nshipment inside!\p[.] [.] [.] [.]\n[.] [.] [.] [.]\pDid I say "Team Rocket\" instead of\n"R Group\" just now?\pI'm gonna have to pummel you into\nsubmission.\lSorry about that.
+
+#org @gText_CeladonCity_OutsideDeptStore_Right
+Sorry, the store's closed.\pThe R Group is handling a shipment\nfor Team Rocket.\lI mean, for the R Group.\lWhich is Team Rocket.\lUmmm.\lErr[.] [.] [.]\pHey, I'm just gonna beat you up\nwith my Poochyena.
+
+#org @gText_CeladonCity_OutsideDeptStore_Left_Loss
+It's ME who got pummeled?!
+
+#org @gText_CeladonCity_OutsideDeptStore_Right_Loss
+Man. Lotta egg on my face right now,\nhuh?
+
+#org @gText_CeladonCity_OutsideDeptStore_After
+Crud! We need backup!
+
+#org @gText_CeladonCity_OutsideDeptStore_GetInside
+Let's get inside!
+
+#org @gText_CeladonShout
+Hey!
+
+#org @gText_CeladonCity_OutsideDeptStore_Sib_Sherry
+[RED]Sherry[BLACK]: Sibbbb!\nGood job with those minions!\lI saw it all!\pThis is so exciting, haha[.]\nThere's bad guys up to no good!\lC'mon, let's go get 'em!
+
+#org @gText_CeladonCity_OutsideDeptStore_Sib_Brandy
+[RED]Brandy[BLACK]: Wow, sib!\nI saw you handle those goons!\lAmazing!\pThis is so exciting, haha[.]\nWe're fighting evil for Erika!\lC'mon, let's be heroes!
+
+#org @gText_CeladonCity_Pokecenter_Sib_Sherry
+[RED]Sherry[BLACK]: Hey, sorry, I'm using\nthis one.\pTry upstairs, sib!
+
+#org @gText_CeladonCity_Pokecenter_Sib_Brandy
+[RED]Brandy[BLACK]: Hey, sorry, I'm using\nthis one.\pTry upstairs, sib!

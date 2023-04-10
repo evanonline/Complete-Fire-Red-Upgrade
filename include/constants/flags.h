@@ -76,6 +76,13 @@
 
 #define FLAG_RIVAL_WHINE_SEEN 0x964 //Player has seen the rival whine about Snorlax and move to the gym
 
+#define FLAG_SIB_CELADON_HIDE 0x966 //Person ID - Toggles visibility of sibling in Celadon City
+#define FLAG_DEPTROCKETS_CELADON_HIDE 0x967 //Person ID - Toggles visibility of Department Store guard Rockets
+#define FLAG_DEPTSIB_INTERIOR_HIDE 0x968 //Person ID - Sib on first floor of Department Store toggle
+#define FLAG_DEPTROCKETS_INTERIOR_HIDE 0x969 //Person ID - Rockets in all of Department Store
+#define FLAG_SIB_CELADONPC_HIDE 0x96A //Person ID - Sib in Celadon Pokemon Center during the brief window where they heal after fight #1
+
+
 #define FLAG_STARTER_CHOSEN 0x990 //Chose starter
 
 #define FLAG_SMART_STRIKE_TM 0x992 //Pewter City - Smart Strike TM 

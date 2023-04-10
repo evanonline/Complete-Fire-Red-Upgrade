@@ -271,6 +271,82 @@ const struct TrainerMonNoItemDefaultMoves sParty_SherryBattle1_PlayerChosePassim
     },
 };
 
+// Celadon Dept Store
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_RocketGuard1[] = {
+    {
+        .iv = 15,
+        .lvl = 9,
+        .species = SPECIES_POOCHYENA,
+        .moves = {
+            MOVE_TACKLE,
+            MOVE_SANDATTACK,
+            MOVE_TAUNT,
+            MOVE_SNARL,
+        },
+		.ability = 1,
+    }
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_RocketGuard2[] = {
+    {
+        .iv = 15,
+        .lvl = 9,
+        .species = SPECIES_POOCHYENA,
+        .moves = {
+            MOVE_TACKLE,
+            MOVE_SANDATTACK,
+            MOVE_TAUNT,
+            MOVE_SNARL,
+        },
+		.ability = 0,
+    }
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket1F[] = {
+    {
+        .iv = 20,
+        .lvl = 9,
+        .species = SPECIES_GROWLITHE_H,
+        .moves = {
+            MOVE_ROCKPOLISH,
+            MOVE_EMBER,
+            MOVE_ROAR,
+            MOVE_SNARL,
+        },
+		.ability = 2,
+    },
+    {
+        .iv = 20,
+        .lvl = 9,
+        .species = SPECIES_NICKIT,
+        .moves = {
+            MOVE_SNARL,
+            MOVE_HONECLAWS,
+            MOVE_TAILWHIP,
+            MOVE_QUICKATTACK,
+        },
+		.ability = 1,
+    }
+};
+
+// Celadon Dept Store - Garchomp Gavin 1
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_GarchompGavin1[] = {
+    {
+        .iv = 31,
+        .lvl = 7,
+        .species = SPECIES_GIBLE,
+        .moves = {
+            MOVE_DRAGONBREATH,
+            MOVE_SANDTOMB,
+            MOVE_BODYSLAM,
+            MOVE_SUBSTITUTE,
+        },
+		.ability = 2,
+    }
+};
+
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
 const struct Trainer gTrainers[] = {
@@ -469,32 +545,6 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_IcedPathSwimmerFrancine}
     },
 	
-	[TRAINER_ICEDPATH_SWIMMER_FRANCINE_2] = {
-        .partyFlags = 0,
-        .trainerClass = CLASS_SWIMMER,
-        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_SWIMMER_B,
-        .trainerName = {_F, _r, _a, _n, _c, _i, _n, _e, _END},
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
-        .partySize = NELEMS(sParty_IcedPathSwimmerFrancine_2),
-        .party = {.NoItemDefaultMoves = sParty_IcedPathSwimmerFrancine_2}
-    },
-	
-	[TRAINER_ICEDPATH_SWIMMER_FRANCINE_3] = {
-        .partyFlags = 0,
-        .trainerClass = CLASS_SWIMMER,
-        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_SWIMMER_B,
-        .trainerName = {_F, _r, _a, _n, _c, _i, _n, _e, _END},
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
-        .partySize = NELEMS(sParty_IcedPathSwimmerFrancine_3),
-        .party = {.NoItemDefaultMoves = sParty_IcedPathSwimmerFrancine_3}
-    },
-	
     [TRAINER_ICEDPATH_CAMPER_TROY] = {
         .partyFlags = 0,
         .trainerClass = CLASS_CAMPER,
@@ -521,19 +571,6 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_IcedPathCamperRoss}
     },
 	
-	[TRAINER_ICEDPATH_CAMPER_ROSS_2] = {
-        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
-        .trainerClass = CLASS_CAMPER,
-        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_CAMPER,
-        .trainerName = {_R, _o, _s, _s, _END},
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_SEMI_SMART | AI_SCRIPT_CHECK_GOOD_MOVE,
-        .partySize = NELEMS(sParty_IcedPathCamperRoss_2),
-        .party = {.NoItemCustomMoves = sParty_IcedPathCamperRoss_2}
-    },
-	
 	// Route 7
 	
 	[TRAINER_ROUTE7_INFIELDER_DELBERT] = {
@@ -547,5 +584,63 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_Route7InfielderDelbert),
         .party = {.NoItemDefaultMoves = sParty_Route7InfielderDelbert}
+    },
+	
+	// Celadon Rockets - Dept Store
+	
+	[TRAINER_CELADON_ROCKETGRUNT_LEFT] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_C, _h, _e, _t, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_RocketGuard1),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_RocketGuard1}
+    },	
+	
+	[TRAINER_CELADON_ROCKETGRUNT_RIGHT] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_B,
+        .trainerName = {_C, _h, _i, _e, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_RocketGuard2),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_RocketGuard2}
+    },
+	
+	// Celadon Dept Store - Rockets
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_1F] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_B,
+        .trainerName = {_T, _i, _r, _a, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket1F),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket1F}
+    },
+	
+	// Celadon Dept Store - Garchomp Gavin
+	
+	[TRAINER_CELADON_GARCHOMPGAVIN1] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_GARCHOMP,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_GARCHOMP_GAVIN,
+        .trainerName = {_G, _a, _v, _i, _n, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_GarchompGavin1),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_GarchompGavin1}
     },
 };

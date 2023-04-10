@@ -26,7 +26,12 @@ struct DynamaxTrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{},
+	{0x10, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x11, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x12, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x13, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x14, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x15, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
 
 	#ifdef UNBOUND //For Pokemon Unbound - Feel free to remove
 	{0x6, sText_MirskleFirstMonDown, NULL, NULL},

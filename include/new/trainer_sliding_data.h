@@ -14,6 +14,10 @@ extern const u8 BattleScript_TrainerSlideMsgEnd2[];
 extern const u8 gText_DefaultTrainerDynamaxMsg[];
 extern const u8 gText_TestTrainerDynamaxMsg[];
 
+extern const u8 sText_SherryBattle1_FirstMonDown[];
+extern const u8 sText_BrandyBattle1_FirstMonDown[];
+extern const u8 sText_SibBattle1_LowHP[];
+
 //For Unbound
 
 extern const u8 sText_MirskleFirstMonDown[];

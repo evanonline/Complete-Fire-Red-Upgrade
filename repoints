@@ -290,10 +290,28 @@ g001MayRSTiles 8239584
 g001MayRSPal 8239A24
 g002WhiskTiles 823958C
 g002WhiskPal 8239A2C
+g003AmbassadorTiles 8239594
+g003AmbassadorPal 8239A34
+g004VikingTiles 823959C
+g004VikingPal 8239A3C
+g005BookwormTiles 82395A4
+g005BookwormPal 8239A44
+g006TuberATiles 82395AC
+g006TuberAPal 8239A4C
+g007TuberBTiles 82395B4
+g007TuberBPal 8239A54
 
 g008JanitorTiles 82395BC
 g008JanitorPal 8239A5C
 
+g010HexManiacTiles 82395CC
+g010HexManiacPal 8239A6C
+g011JuniorHexerTiles 82395D4
+g011JuniorHexerPal 8239A74
+g012BackpackerTiles 82395DC
+g012BackpackerPal 8239A7C
+g013ClownTiles 82395E4
+g013ClownPal 8239A84
 g015InfielderTiles 82395F4
 g015InfielderPal 8239A94
 
@@ -302,6 +320,12 @@ g017GuitaristAPal 8239AA4
 
 g024FunOldManBTiles 823963C
 g024FunOldManBPal 8239ADC
+
+g054GarchompGavinTiles 823972C
+g054GarchompGavinPal 8239BCC
+
+g069JessieJamesTiles 82397A4
+g069JessieJamesPal 8239C44
 
 g082YoungsterBTiles 823980C
 g082YoungsterBPal 8239CAC
@@ -313,3 +337,9 @@ g086CamperPal 8239CCC
 
 g099SwimmerBTiles 8239894
 g099SwimmerBPal 8239D34
+
+g109RocketGruntATiles 82398E4
+g109RocketGruntAPal 8239D84
+
+g138RocketGruntBTiles 82399CC
+g138RocketGruntBPal 8239E6C

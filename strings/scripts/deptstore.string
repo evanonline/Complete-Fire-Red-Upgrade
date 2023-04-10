@@ -1,0 +1,101 @@
+#org @gText_CeladonDeptStore_SibBattle1F_Sherry
+[RED]Sherry[BLACK]: Haha!\nLet's goooo, Chingling!
+
+#org @gText_CeladonDeptStore_SibBattle1F_Brandy
+[RED]Brandy[BLACK]: C'mon, Nickit!\nWe've got a drink to buy!
+
+#org @gText_CeladonDeptStore_1FRocketBattlingSib
+Hey[.] C'mon, kid! Stop battlin' me!\nI've got work to do!
+
+#org @gText_CeladonDeptStore_1FRocketBattlingSib_LostSherry
+Grrrr!\nI'm just so mad that kid beat me!\pI hate 'em, and I REALLY hate their\ndumb Ivysaur hat!
+
+#org @gText_CeladonDeptStore_1FRocketBattlingSib_LostBrandy
+Grrrr!\nI'm just so mad that kid beat me!\pThem and their stupid, stupid\nTepig getup! Ugh!
+
+#org @gText_CeladonDeptStore_RocketEvent_CustomerService
+Hello. Are you with the R Group?\nYou must be, if you got in!
+
+#org @gText_CeladonDeptStore_RocketEvent_FirstRocket_Before
+An intruder?!\nNot now!\lTime for my awesome new Pok\emon!
+
+#org @gText_CeladonDeptStore_RocketEvent_FirstRocket_Lose
+My cool Pok\emon failed?!
+
+#org @gText_CeladonDeptStore_RocketEvent_FirstRocket_After
+The boss is giving us all some\nreally good Pok\emon!\pThat's part of the shipment!\n[.]\l[.] [.] [.]\lNot that you needed to know that.
+
+#org @gText_CeladonDeptStore_RocketEvent_Elevator
+Looks like the elevator is not\nin service.
+
+#org @gText_CeladonDeptStore_RocketEvent_NextRocket_Before
+Have you heard the latest album by\n[RED]Klefki Ring[BLACK]? Well, you won't[.]\lBecause I'M taking all the copies!
+
+#org @gText_CeladonDeptStore_RocketEvent_NextRocket_Lose
+I already took all the CDs.\pThe outcome of this fight changes\lnothing.
+
+#org @gText_CeladonDeptStore_RocketEvent_NextRocket_After
+I bet you've never even HEARD of\n[RED]Klefki Ring[BLACK]!\lIndie rock forever!
+
+#org @gText_CeladonDeptStore_RocketEvent_Rocket3_Before
+Hahaha! No more Rattatas and Zubats\nfor us, baby!\pI mean, unless you like Rattata\nand Zubat.\lAin't nothin' wrong with that.
+
+#org @gText_CeladonDeptStore_RocketEvent_Rocket3_Lose
+Maybe I shoulda stuck with Zubat[.]
+
+#org @gText_CeladonDeptStore_RocketEvent_Rocket3_After
+It feels so good to have some\nVARIETY, for once!\pI'll raise my new Pok\emon up real\ngood for the boss!\pBut, I should go find my old Zubat\nin my PC boxes.\lSee how she's doing.
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinIntro
+[RED]???[BLACK]: [.]Ahh! The world-famous\n[GREEN]Celadon Department Store[BLACK]!\lIsn't it awesome, fans?\pSo in this video, not only will I\nbe continuing my [GREEN]Nuzlocke[BLACK] run[.]\p[.]I'll be buying and unboxing the\nnew [RED]Klefki Ring[BLACK] album!
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinNext
+Oho! Fans, I've locked eyes with\nanother trainer!\lEven here, guys!\pOne of the stipulations for my run\nis to fight every trainer I see!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinSherry1
+[RED]Sherry[BLACK]: [.]Hey, [PLAYER]!\nDo you know this guy?
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy1
+[RED]Brandy[BLACK]: [.]Hey, [PLAYER]!\nDo you know this guy?
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin3
+[RED]???[BLACK]: Two challengers, huh?\nWelcome to the show, I'm\n[RED]Garchomp Gavin[BLACK].\lMaybe you've heard of my channel?
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinSherry2
+[RED]Sherry[BLACK]: Uh[.]\n[.] [.] [.]\pYou do realize there's a situation\nin this store right now, right?
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy2
+[RED]Brandy[BLACK]: Uh[.]\nGavin[.]\lCan I call you Gav?\pAre you[.] paying any attention to\nthe situation in here?
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin4
+[RED]Gavin[BLACK]: Now now, I'll make this\nquick!\lJust wait your turn, you!\pAlright viewers, this is great!\nEasy prize money and experience\npoints! Here we go!
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_Loss
+NO!!!!\nMY PRECIOUS GIBLE!!!!!
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_After
+[RED]Gavin[BLACK]: My Gible[.]\nYou KILLED my Gible!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinSherry3
+[RED]Sherry[BLACK]: Huh? No they didn't!\nYour Gible fainted like normally!\lIt was visibly breathing!\pJust go to a Pok\emon Center,\nMr. Gavin!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy3
+[RED]Brandy[BLACK]: What? No they didn't!\nYour Gible just fainted, dude!\lI saw it breathing!\pJust go to a Pok\emon Center,\nit'll be fine, Gav!
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_After2
+[RED]Gavin[BLACK]: You don't understand[.]\nI JUST started my [BLUE]Nuzlocke[BLACK] run[.]\pAnd in a [BLUE]Nuzlocke[BLACK] run, your\nPok\emon DIE when they faint!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinSherry4
+[RED]Sherry[BLACK]: No, you're just SAYING\nthey're dead!\pC'mon, don't lay this at our feet!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy4
+[RED]Brandy[BLACK]: No? Dude, that's not part\nof it.\pC'mon, man, don't put this on us!
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_Revenge
+[RED]Gavin[BLACK]: Eh, it's okay.\nI only just started this run.\lI'll just start a new one.\pBut next time you won't be so\nlucky!\pI'll see you again[.] in person, or\nin your recommended videos!\pRemember to like and subscribe to [RED]Garchomp Gavin[BLACK]!
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinSherry5
+[RED]Sherry[BLACK]: He got over that pretty\nquickly. Let's[.] move on[.]
+
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy6
+[RED]Brandy[BLACK]: At least that guy got over \nit quickly enough. Let's move on!

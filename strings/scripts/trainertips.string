@@ -11,4 +11,7 @@ Trainer Tips!\pA [GREEN]Nuzlocke[BLACK] is a [BLUE]self-imposed[BLACK]\nPok\emon
 Trainer Tips!\pPress [START_BUTTON] to open the menu!
 
 #org @gText_TrainerTips_EVs
-Any Pokemon who gains experience\nfrom a battle will also gain\l[GREEN]effort values[BLACK], or [GREEN]EVs[BLACK],\lfrom the defeated Pok\emon.\pEVs will be awarded in any of the\nsix stats a Pok\emon has.\pThe EVs a Pok\emon award generally\nreflect its own stats.\pFor example, Geodude has high\nDefense, so defeating one will\lgrant a Defense EV.\pSo your Pok\emon, in turn, will\nhave its Defense improve!\pTalk to a stats expert at Cerise\nLaboratory for more EV details!
+Trainer Tips!\pAny Pokemon who gains experience\nfrom a battle will also gain\l[GREEN]effort values[BLACK], or [GREEN]EVs[BLACK],\lfrom the defeated Pok\emon.\pEVs will be awarded in any of the\nsix stats a Pok\emon has.\pThe EVs a Pok\emon award generally\nreflect its own stats.\pFor example, Geodude has high\nDefense, so defeating one will\lgrant a Defense EV.\pSo your Pok\emon, in turn, will\nhave its Defense improve!\pTalk to a stats expert at Cerise\nLaboratory for more EV details!
+
+#org @gText_TrainerTips_ShiftVsSet
+Trainer Tips!\pYou can choose between two [BLUE]Battle\nStyles[BLACK] in the [BLUE]Options[BLACK] menu.\p[BLUE]Shift[BLACK] gives you the option to\nswitch your Pok\emon when your\lopponent's Pok\emon faints.\p[BLUE]Set[BLACK] removes this option, and keeps\nyour current Pok\emon in play during\lswitches after fainting.\pMany Trainers prefer the Set style\nfor challenge, strategy & fairness.\lGive it a try sometime!

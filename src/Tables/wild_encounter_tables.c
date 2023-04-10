@@ -33,11 +33,11 @@ const struct WildPokemonInfo gVermilionPort_WaterMonsInfo = {2, gVermilionPort_W
 const struct WildPokemon gVermilionPort_FishingMons[] =
 {
     {4, 4, SPECIES_WISHIWASHI},
-    {4, 5, SPECIES_WISHIWASHI},
+    {4, 5, SPECIES_TENTACOOL},
     {10, 16, SPECIES_WISHIWASHI},
-    {12, 16, SPECIES_BRUXISH},
-    {10, 15, SPECIES_HORSEA},
-    {25, 29, SPECIES_TENTACOOL},
+    {12, 16, SPECIES_TENTACOOL},
+    {10, 15, SPECIES_DHELMISE},
+    {25, 28, SPECIES_SKRELP},
     {30, 35, SPECIES_SKRELP},
     {21, 29, SPECIES_DHELMISE},
     {31, 31, SPECIES_TENTACRUEL},
@@ -48,12 +48,12 @@ const struct WildPokemonInfo gVermilionPort_FishingMonsInfo = {20, gVermilionPor
 
 const struct WildPokemon gVermilionPort_FishingMonsEveningNight[] =
 {
-    {4, 4, SPECIES_DHELMISE},
-    {4, 5, SPECIES_TENTACOOL},
-    {10, 18, SPECIES_DHELMISE},
-    {12, 17, SPECIES_BRUXISH},
-    {10, 15, SPECIES_DHELMISE},
-    {25, 28, SPECIES_HORSEA},
+    {4, 4, SPECIES_TENTACOOL},
+    {4, 5, SPECIES_WISHIWASHI},
+    {10, 16, SPECIES_DHELMISE},
+    {12, 16, SPECIES_TENTACOOL},
+    {10, 15, SPECIES_WISHIWASHI},
+    {25, 28, SPECIES_SKRELP},
     {30, 35, SPECIES_SKRELP},
     {21, 35, SPECIES_DHELMISE},
     {31, 31, SPECIES_TENTACRUEL},
