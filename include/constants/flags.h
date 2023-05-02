@@ -78,10 +78,12 @@
 
 #define FLAG_SIB_CELADON_HIDE 0x966 //Person ID - Toggles visibility of sibling in Celadon City
 #define FLAG_DEPTROCKETS_CELADON_HIDE 0x967 //Person ID - Toggles visibility of Department Store guard Rockets
-#define FLAG_DEPTSIB_INTERIOR_HIDE 0x968 //Person ID - Sib on first floor of Department Store toggle
-#define FLAG_DEPTROCKETS_INTERIOR_HIDE 0x969 //Person ID - Rockets in all of Department Store
+#define FLAG_DEPTSIB_INTERIOR_HIDE 0x968 //Person ID - Sib on first floor of Department Store toggle.
+#define FLAG_DEPTSTORE_ISABNORMAL 0x969 //Person ID - hides the Dept. Store employees and customers. Cleared after delivering energy drink; indicates that the Department Store is back to being a store
 #define FLAG_SIB_CELADONPC_HIDE 0x96A //Person ID - Sib in Celadon Pokemon Center during the brief window where they heal after fight #1
-
+#define FLAG_SIB_CELADONDEPT_ROOF 0x96B //Person ID - Controls Sib, Pelipper and Prize Master on Celadon Roof
+#define FLAG_CELADONDEPT_ROOF2 0x96C //Person ID - Controls Jessie, James, and Chie on Celadon Roof, ends the Rocket event, indicates townspeople hate you
+#define FLAG_CELADON_GYMOPEN 0x96D //Person ID - controls gym entrance woman, stops 0x969 from being set in Dept. Store so the regular shopkeepers & customers are shown
 
 #define FLAG_STARTER_CHOSEN 0x990 //Chose starter
 

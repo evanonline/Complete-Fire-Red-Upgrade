@@ -13,6 +13,8 @@
 .equ FLAG_CHOSESTARTER1, 0x960
 .equ FLAG_CHOSESTARTER2, 0x961
 .equ FLAG_CHOSESTARTER3, 0x962
+.equ FLAG_CELADONDEPT_ROOF2, 0x96C @Person ID to hide the rockets in the store
+.equ FLAG_CELADON_GYMOPEN, 0x96D 
 .equ SP_DAILY_EVENT, 0xA0
 .equ SP_UPDATE_TIME_IN_VARS, 0xA1
 .equ SP_GET_TIME_DIFFERENCE, 0xA2
@@ -244,17 +246,35 @@ EventScript_CeladonCity_GirlCommentary:
 	
 .global EventScript_CeladonCity_RGroupClassy
 EventScript_CeladonCity_RGroupClassy:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto EventScript_CeladonCity_RGroupClassy_Angry
 	msgbox gText_CeladonCity_RGroupAwesome MSG_FACE
+	end
+	
+EventScript_CeladonCity_RGroupClassy_Angry:
+	msgbox gText_CeladonCity_RGroupAwesome_WhatDidYouDo MSG_FACE
 	end
 		
 .global EventScript_CeladonCity_NotStupidAboutRGroup
 EventScript_CeladonCity_NotStupidAboutRGroup:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto EventScript_CeladonCity_NotStupidAboutRGroup_Angry
 	msgbox gText_CeladonCity_RGroupNotStupid MSG_FACE
 	end
-		
+
+EventScript_CeladonCity_NotStupidAboutRGroup_Angry:
+	msgbox gText_CeladonCity_RGroupNotStupid_WhatDidYouDo MSG_FACE
+	end
+
 .global EventScript_CeladonCity_GrassHint
 EventScript_CeladonCity_GrassHint:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto EventScript_CeladonCity_GrassHint_Angry
 	msgbox gText_CeladonCity_GrassHint MSG_FACE
+	end
+
+EventScript_CeladonCity_GrassHint_Angry:
+	msgbox gText_CeladonCity_GrassHint_Angry MSG_FACE
 	end
 
 .global EventScript_CeladonCity_CondominiumsSign
@@ -366,130 +386,26 @@ EventScript_CeladonCity_VoltorbFlipKid:
 	msgbox gText_CeladonCity_MissingVoltorbFlip MSG_FACE
 	end
 
-.global EventScript_CeladonCity_RGroupNoEntryLeft
-EventScript_CeladonCity_RGroupNoEntryLeft:
-	checkflag 0x966
-	if SET _goto RGroupGuardLeftOopsie
-	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
-	end
-
-RGroupGuardLeftOopsie:
-	lockall
-	msgbox gText_CeladonCity_OutsideDeptStore_Left MSG_FACE
-	trainerbattle3 0x3 9 0x0 gText_CeladonCity_OutsideDeptStore_Left_Loss
-	lockall
-	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
-	applymovement 0xE LookRight
-	waitmovement 0x0
-	applymovement 0xD LookLeft
-	waitmovement 0x0
-	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
-	call GuardsDoorEnter
-	lockall
-	clearflag 0x966
-	showsprite 7
-	movesprite 0x7 0x11 0x16
-	pause 0x12
-	applymovement 0x7 SibEntersDept1_FoughtLeftRocket
-	waitmovement 0x0
-	pause 0x5
-	applymovement 0xFF LookRight
-	checkgender
-	compare LASTRESULT 0x0
-    if 0x1 _call EventScript_SherryGrats
-    compare LASTRESULT 0x1
-    if 0x1 _call EventScript_BrandyGrats
-	applymovement 0x7 SibEntersDept2
-	opendoor 0xF 0xE
-	waitdooranim
-	pause 0x8
-	setflag 0x966
-	hidesprite 7
-	closedoor 0xF 0xE
-	waitdooranim
-	releaseall
-	end
-
-.global EventScript_CeladonCity_RGroupNoEntryRight
-EventScript_CeladonCity_RGroupNoEntryRight:
-	checkflag 0x966
-	if SET _goto RGroupGuardRightOopsie
-	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
-	end
-
-RGroupGuardRightOopsie:
-	lockall
-	msgbox gText_CeladonCity_OutsideDeptStore_Right MSG_FACE
-	trainerbattle3 0x3 10 0x0 gText_CeladonCity_OutsideDeptStore_Right_Loss
-	lockall
-	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
-	applymovement 0xD LookLeft
-	waitmovement 0x0
-	applymovement 0xE LookRight
-	waitmovement 0x0
-	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
-	call GuardsDoorEnter
-	lockall
-	clearflag 0x966
-	showsprite 7
-	movesprite 0x7 0x09 0x16
-	pause 0x12
-	applymovement 0x7 SibEntersDept1_FoughtRightRocket
-	waitmovement 0x0
-	pause 0x5
-	applymovement 0xFF LookLeft
-	checkgender
-	compare LASTRESULT 0x0
-    if 0x1 _call EventScript_SherryGrats
-    compare LASTRESULT 0x1
-    if 0x1 _call EventScript_BrandyGrats
-	applymovement 0x7 SibEntersDept2
-	opendoor 0xB 0xE
-	waitdooranim
-	pause 0x8
-	setflag 0x966
-	hidesprite 7
-	closedoor 0xB 0xE
-	waitdooranim
-	releaseall
-	end
-	
-EventScript_SherryGrats:
-	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Sherry MSG_NORMAL
-	return
-	
-EventScript_BrandyGrats:
-	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Brandy MSG_NORMAL
-	return
-
-GuardsDoorEnter:
-	applymovement 0xD RocketsWalkUp
-	opendoor 0xF 0xE
-	waitdooranim
-	setflag 0x967
-	hidesprite 13
-	pause 0x8
-	closedoor 0xF 0xE
-	waitdooranim
-	pause 0x5
-	lockall
-	applymovement 0xE RocketsWalkUp
-	opendoor 0xB 0xE
-	waitdooranim
-	pause 0x15
-	hidesprite 14
-	closedoor 0xB 0xE
-	waitdooranim
-	return
-
 .global EventScript_CeladonCity_RGroupGameCornerPromoter
 EventScript_CeladonCity_RGroupGameCornerPromoter:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto EventScript_CeladonCity_RGroupGameCornerPromoter_Angry
 	msgbox gText_CeladonCity_RGroupGameCornerPromoter MSG_FACE
 	end	
-	
+
+EventScript_CeladonCity_RGroupGameCornerPromoter_Angry:
+	msgbox gText_CeladonCity_RGroupGameCornerPromoter_Angry MSG_FACE
+	end	
+
 .global EventScript_CeladonCity_RGroupMemberFirstOne
 EventScript_CeladonCity_RGroupMemberFirstOne:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto EventScript_CeladonCity_RGroupMemberFirstOne_Angry
 	msgbox gText_CeladonCity_RGroupMemberFirstOne MSG_FACE
+	end
+	
+EventScript_CeladonCity_RGroupMemberFirstOne_Angry:
+	msgbox gText_CeladonCity_RGroupMemberFirstOne_Angry MSG_FACE
 	end
 	
 .global EventScript_CeladonCity_CondominiumsInteriorSign
@@ -536,7 +452,7 @@ EventScript_CeladonCity_PrizeExchangeSign:
 EventScript_CeladonCity_SceptileNoises:
 	cry SPECIES_SCEPTILE 0x0
 	msgbox gText_CeladonCity_BerriesSceptile MSG_FACE
-	applymovement 0x9 LookUp
+	applymovement 0x10 LookUp
 	end
 	
 .global EventScript_CeladonCity_BerriesGuy
@@ -777,10 +693,153 @@ UniversalMovementScript_GymScene1:
 	pause 0x5
 	msgbox gText_CeladonCity_ErikaGymSceneNPC1 MSG_KEEPOPEN
 	return
+	
+.global EventScript_CeladonCity_RGroupNoEntryLeft
+EventScript_CeladonCity_RGroupNoEntryLeft:
+	checkflag 0x966
+	if SET _goto RGroupGuardLeftOopsie
+	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
+	end
+
+RGroupGuardLeftOopsie:
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_Left MSG_FACE
+	trainerbattle3 0x3 9 0x0 gText_CeladonCity_OutsideDeptStore_Left_Loss
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
+	applymovement 0xE LookRight
+	waitmovement 0x0
+	applymovement 0xD LookLeft
+	waitmovement 0x0
+	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
+	call GuardsDoorEnter
+	lockall
+	clearflag 0x966
+	showsprite 7
+	movesprite 0x7 0x11 0x16
+	pause 0x12
+	applymovement 0x7 SibEntersDept1_FoughtLeftRocket
+	waitmovement 0x0
+	pause 0x5
+	applymovement 0xFF LookRight
+	checkgender
+	compare LASTRESULT 0x0
+    if 0x1 _call EventScript_SherryGrats
+    compare LASTRESULT 0x1
+    if 0x1 _call EventScript_BrandyGrats
+	applymovement 0x7 SibEntersDept2
+	opendoor 0xF 0xE
+	waitdooranim
+	pause 0x8
+	setflag 0x966
+	hidesprite 7
+	closedoor 0xF 0xE
+	waitdooranim
+	releaseall
+	end
+	
+.global EventScript_CeladonCity_NoLongerKnowEverything
+EventScript_CeladonCity_NoLongerKnowEverything:
+	msgbox gText_CeladonCity_NoLongerKnowEverything1 MSG_FACE
+	end
+
+.global EventScript_CeladonCity_RGroupNoEntryRight
+EventScript_CeladonCity_RGroupNoEntryRight:
+	checkflag 0x966
+	if SET _goto RGroupGuardRightOopsie
+	msgbox gText_CeladonCity_RGroupBigShipment MSG_FACE
+	end
+
+RGroupGuardRightOopsie:
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_Right MSG_FACE
+	trainerbattle3 0x3 10 0x0 gText_CeladonCity_OutsideDeptStore_Right_Loss
+	lockall
+	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
+	applymovement 0xD LookLeft
+	waitmovement 0x0
+	applymovement 0xE LookRight
+	waitmovement 0x0
+	msgbox gText_CeladonCity_OutsideDeptStore_GetInside MSG_NORMAL
+	call GuardsDoorEnter
+	lockall
+	clearflag 0x966
+	showsprite 7
+	movesprite 0x7 0x09 0x16
+	pause 0x12
+	applymovement 0x7 SibEntersDept1_FoughtRightRocket
+	waitmovement 0x0
+	pause 0x5
+	applymovement 0xFF LookLeft
+	checkgender
+	compare LASTRESULT 0x0
+    if 0x1 _call EventScript_SherryGrats
+    compare LASTRESULT 0x1
+    if 0x1 _call EventScript_BrandyGrats
+	applymovement 0x7 SibEntersDept2
+	opendoor 0xB 0xE
+	waitdooranim
+	pause 0x8
+	setflag 0x966
+	hidesprite 7
+	closedoor 0xB 0xE
+	waitdooranim
+	releaseall
+	end
+	
+EventScript_SherryGrats:
+	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Sherry MSG_NORMAL
+	return
+	
+EventScript_BrandyGrats:
+	msgbox gText_CeladonCity_OutsideDeptStore_Sib_Brandy MSG_NORMAL
+	return
+
+GuardsDoorEnter:
+	applymovement 0xD RocketsWalkUp
+	opendoor 0xF 0xE
+	waitdooranim
+	setflag 0x967
+	hidesprite 13
+	pause 0x8
+	closedoor 0xF 0xE
+	waitdooranim
+	pause 0x5
+	lockall
+	applymovement 0xE RocketsWalkUp
+	opendoor 0xB 0xE
+	waitdooranim
+	pause 0x15
+	hidesprite 14
+	closedoor 0xB 0xE
+	waitdooranim
+	return
 
 .global EventScript_CeladonCity_GymTrainerOutside
 EventScript_CeladonCity_GymTrainerOutside:
+	checkitem ITEM_ENERGY_DRINK 0x1
+	compare 0x800D 0x1
+	if 0x4 _goto ErikaGymOpen
 	msgbox gText_CeladonCity_PleaseGoDeptStore MSG_FACE
+	end
+
+ErikaGymOpen:
+	faceplayer
+	sound 0x15
+	applymovement 0x8 ExclaimAnim 
+	waitmovement 0x0
+	pause 0x5
+	msgbox gText_CeladonCity_GymTrainer_GetsEnergyDrink1 MSG_KEEPOPEN
+	applymovement 0x8 GymTrainerShuffle
+	removeitem ITEM_ENERGY_DRINK 0x1
+	msgbox gText_CeladonCity_GymTrainer_GetsEnergyDrink2 MSG_NORMAL
+	setflag 0x96D
+	applymovement 0x8 RocketsWalkUp
+	opendoor 0xB 0x1E
+	waitdooranim
+	pause 0x15
+	hidesprite 8
+	closedoor 0xB 0x1E
 	end
 
 LookLeft:

@@ -11,16 +11,6 @@ This is my work in progress fork for a personal romhack project (tentatively "Po
 
 Generally, credits are listed in the files, or in notes for the individual commits, for who changed what - but my process is confessedly pretty messy and I may have made some mistakes! Please do not hesitate to point out any problems to me.
 
-Trainer sprite sources:
-
-* Brandy & Sherry (our protags) created by Washy
-* Ambassador design created with JillKatze
-* "Junior Hexer" by Bombbity https://www.deviantart.com/bombbity/art/Hex-Maniac-Trainer-Sprite-First-Pass-704399414
-* "Bookworm"/Cassandra by Bombbity https://www.deviantart.com/bombbity/art/Cassandra-Trainer-Sprite-Second-Pass-698473514
-* Hex Maniac modified from Similation's sprite https://www.deviantart.com/similation/art/Hex-Maniac-837337841 as well as Kyledove's sprite https://www.deviantart.com/kyle-dove/art/All-Kalos-Trainer-Classes-892329880
-* Jessie and James by Kimba616 https://www.deviantart.com/kimba616/art/Jessie-and-James-145243037
-* Anything else is from the original games or by me!
-
 Attack animation particles are free to use (most of the new ones are from me) but please don't use any other graphics I've created or am using; though I have done many, I didn't create all of the character sprites used here. (A more detailed graphics credits listing will come when I start adding more character graphics)
 
 **Vanilla CFRU info - read the documentation!!**

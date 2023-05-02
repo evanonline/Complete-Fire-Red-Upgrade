@@ -11,7 +11,7 @@ I'm looking for a [GREEN]Galarian Zigzagoon[BLACK].\nThey're more common at [BLU
 I want a [GREEN]Hoennian Zigzagoon[BLACK].\nThey're more common in the [ORANGE]day[BLACK].\pBut you can find them [BLUE]right now,\nat night,[BLACK] if you look hard enough!\pIt's easy to check the clock on the\n[GREEN]Start Menu[BLACK].
 
 #org @gText_Route6_BrendanFirstAppear
-[RED]???[BLACK]: Ah, hey there[.]!\nMy name is [GREEN]Brendan[BLACK].\pYou look like you're itching for\na battle.\lBut, I have to turn you down.\pI'm searching for a[.] friend.\nSo I need my Pok\emon in top shape!\pHey, you haven't seen [RED]a girl with a\nred ribbon in her hair,[BLACK] have you?\pShe might be with her three, uh[.]\n[.] [.] [.] [.] [.]\l[.]identical sisters?\lJust, uh, tell me if you see her.
+[RED]???[BLACK]: Ah, hey there[.]!\n[PAUSE][5]My name is [GREEN]Brendan[BLACK].\pYou look like you're itching for\na battle.\lBut, I have to turn you down.\pI'm searching for a[.][PAUSE][20] friend.\nSo I need my Pok\emon in top shape!\pHey, you haven't seen [RED]a girl with a\nred ribbon in her hair,[BLACK] have you?\pShe might be with her three, uh[.]\n[PAUSE][10][.] [.] [.] [.] [.]\l[.]identical sisters?\lJust,[PAUSE][5] uh,[PAUSE][5] tell me if you see her.
 
 #org @gText_Route6_BrendanFirstAppear_FollowUp
 [RED]Brendan[BLACK]: My [RED]friend[BLACK] and her, uh,\nsisters, are hard to keep up with.\pI'll be travelling until I find the\nthree of them.\pKeep an eye out for them, and if\nwe bump into each other again,\ltell me where they've been!
@@ -20,16 +20,16 @@ I want a [GREEN]Hoennian Zigzagoon[BLACK].\nThey're more common in the [ORANGE]d
 Underground Path\n(NOTICE - OUT OF SERVICE)
 
 #org @gText_Route6_BugCatcherHorace_Before
-Grass, water, a moldy bathroom[.]\nA bug lives in those!
+Grass, water, a moldy bathroom[.]\n[PAUSE][10]A bug lives in those!
 
 #org @gText_Route6_BugCatcherHorace_Lose
 Anywhere can be home, if a bug can\ninfest it!
 
 #org @gText_Route6_BugCatcherHorace_After
-I don't see any bugs around here.\nPretty lousy route!
+I don't see any bugs around here.\n[PAUSE][10]Pretty lousy route!
 
 #org @gText_Route6_YoungsterMaruyama_Before
-Watch out!\nComin' through!\lI'm young, and fulla chutzpah!
+Watch out!\nComin' through!\lI'm young,[PAUSE][10] and fulla chutzpah!
 
 #org @gText_Route6_YoungsterMaruyama_Lose
 Chutzpah ain't always enough[.]

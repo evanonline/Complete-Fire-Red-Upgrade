@@ -176,8 +176,9 @@ tile 3 5 3 EventScript_VermilionCity_RivalDisappointJog
 tile 3 5 4 EventScript_VermilionCity_RivalDisappointJog
 tile 3 5 5 EventScript_VermilionCity_RivalAndFlynn
 
-## Route 5
-sign 3 23 0 EventScript_Route6_IcePathSign
+## Route 11
+npc 3 29 0 EventScript_Route11_SnorlaxRuinManiac
+npc 3 29 1 EventScript_Route11_Snorlax
 
 ## Route 6
 sign 3 24 0 EventScript_Route6_IcePathSign
@@ -188,25 +189,6 @@ npc 3 24 3 EventScript_Route6_DNSExplainer
 npc 3 24 4 EventScript_Route6_BugCatcherHorace
 npc 3 24 5 EventScript_Route6_YoungsterMaruyama
 npc 3 24 6 EventScript_Route6_DexnavExplainer
-
-## Route 7
-npc 3 25 0 EventScript_Route7_InfielderDelbert
-
-## Route 7
-sign 3 25 0 EventScript_Route6_IcePathSign
-
-## Route 8
-sign 3 26 0 EventScript_Route6_IcePathSign
-
-## Route 11
-npc 3 29 0 EventScript_Route11_SnorlaxRuinManiac
-npc 3 29 1 EventScript_Route11_Snorlax
-
-## Route 16
-sign 3 34 1 EventScript_Route16_CyclingRoadSign
-npc 25 2 0 EventScript_Route16_Gatehouse_TimeReminder
-npc 25 2 1 EventScript_Route16_Gatehouse_FuchsiaSad
-npc 25 2 2 EventScript_Route16_Gatehouse_AthletesFoot
 
 ## Iced Path
 map 1 31 gMapScripts_IcedPath_CheckHideTM97
@@ -220,6 +202,10 @@ npc 1 31 3 EventScript_IcedPath_CamperRoss
 npc 1 31 4 EventScript_TM97
 tile 1 31 0 EventScript_IcedPath_CheckVermilionGymCutscene
 tile 1 31 1 EventScript_IcedPath_CheckVermilionGymCutscene
+
+## Route 7
+npc 3 25 0 EventScript_Route7_InfielderDelbert
+sign 3 25 0 EventScript_Route6_IcePathSign
 
 ## Celadon City
 map 3 6 gMapScripts_CeladonCitySibSprite_Outside
@@ -248,11 +234,6 @@ tile 3 6 0 EventScript_CeladonCity_SibEncounter1Start_1
 tile 3 6 1 EventScript_CeladonCity_SibEncounter1Start_2
 tile 3 6 2 EventScript_CeladonCity_SibEncounter1Start_3
 tile 3 6 3 EventScript_CeladonCity_SibEncounter1Start_4
-map 10 0 gMapScripts_DeptStoreSibSprite_Floor1
-npc 10 0 0 EventScript_CeladonDept_Floor1CustomerService
-npc 10 0 1 EventScript_CeladonDept_SherryBrandy_1F
-npc 10 0 2 EventScript_CeladonDept_1FRocketBattlingSib
-npc 10 0 3 EventScript_CeladonDept_BattlingRocket
 sign 10 7 0 EventScript_CeladonCity_CondominiumsInteriorSign
 sign 10 7 1 EventScript_CeladonCity_CondominiumsInteriorSign
 npc 10 7 0 EventScript_CeladonCity_Quilladin
@@ -262,6 +243,7 @@ npc 10 7 3 EventScript_CeladonCity_Manager
 npc 10 9 0 EventScript_CeladonCity_GameFreakNPC_0
 npc 10 9 2 EventScript_CeladonCity_GameFreakNPC_2
 npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
+npc 10 11 0 EventScript_CeladonCity_NoLongerKnowEverything
 map 10 12 gMapScripts_CeladonCitySibSprite_InsidePokeCenter
 npc 10 12 1 EventScript_CeladonCity_PokecenterRimeTrickGuy
 npc 10 12 2 EventScript_CeladonCity_PokecenterRime
@@ -283,12 +265,64 @@ npc 10 17 2 EventScript_CeladonCity_IonoSoda
 npc 10 17 3 EventScript_CeladonCity_HomemadePickles
 npc 10 19 0 EventScript_CeladonCity_HotelMatron
 npc 10 19 1 EventScript_CeladonCity_ScaredCozyGuy
-npc 10 19 2 EventScript_CeladonCity_HotelRotomi
+@npc 10 19 2 EventScript_CeladonCity_HotelRotomi @briefly dummied out due to index issues between CFRU and DPE. Will fix later
+
+## Celadon Dept. Store
+map 10 0 gMapScripts_DeptStore_Floor1
+map 10 1 gMapScripts_DeptStore_Floor2
+map 10 2 gMapScripts_DeptStore_Floor3
+map 10 3 gMapScripts_DeptStore_Floor4
+map 10 4 gMapScripts_DeptStore_Floor5
+map 10 5 gMapScripts_DeptStore_RoofEvent
+npc 10 0 0 EventScript_CeladonDept_Floor1CustomerService
+npc 10 0 1 EventScript_CeladonDept_SherryBrandy_1F
+npc 10 0 2 EventScript_CeladonDept_1FRocketBattlingSib
+npc 10 0 3 EventScript_CeladonDept_1FBattlingRocket
+npc 10 0 4 EventScript_CeladonDeptStore_SibsPokemon
+npc 10 0 5 EventScript_CeladonDeptStore_RocketsArctozolt
+npc 10 0 6 EventScript_CeladonDept_Floor1_RegularNPC1
+npc 10 1 2 EventScript_CeladonDept_2FRocket_1
+npc 10 1 3 EventScript_CeladonDept_2FRocket_2
+npc 10 1 4 EventScript_CeladonDept_Floor2_RegularNPC1
+npc 10 1 5 EventScript_CeladonDept_Floor2_RegularNPC2
+tile 10 2 0 EventScript_CeladonDept_GavinsBigDebut1
+tile 10 2 1 EventScript_CeladonDept_GavinsBigDebut2
+npc 10 2 0 EventScript_CeladonDept_3FAttendant
+npc 10 3 0 EventScript_CeladonDept_4FRocket_2
+npc 10 3 1 EventScript_CeladonDept_4FRocket_1
+npc 10 3 3 EventScript_CeladonDept_Floor4_RegularNPC1
+npc 10 4 0 EventScript_CeladonDept_5FRocket_1
+npc 10 4 1 EventScript_CeladonDept_5FRocket_2
+npc 10 4 4 EventScript_CeladonDept_SibChilling5F
+npc 10 4 5 EventScript_CeladonDept_ShamedRocket
+npc 10 5 6 EventScript_CeladonDept_Roof_RegularNPC1
+
+## Route 16
+sign 3 34 1 EventScript_Route16_CyclingRoadSign
+sign 25 0 0 EventScript_Route16_CynthiasRecordPlayer
+sign 25 0 1 EventScript_Route16_CynthiasRecordPlayer
+sign 25 0 2 EventScript_Route16_CynthiasSink
+sign 25 0 3 EventScript_Route16_CynthiasSink
+sign 25 0 4 EventScript_Route16_CynthiasTV
+tile 25 1 2 EventScript_Route16_CyclingRoadClosed
+tile 25 1 3 EventScript_Route16_CyclingRoadClosed
+tile 25 1 8 EventScript_Route16_CyclingRoadClosed
+tile 25 1 9 EventScript_Route16_CyclingRoadClosed_WalkUp1
+tile 25 1 10 EventScript_Route16_CyclingRoadClosed_WalkUp2
+npc 25 1 1 EventScript_Route16_OldGuy
+npc 25 2 0 EventScript_Route16_Gatehouse_TimeReminder
+npc 25 2 1 EventScript_Route16_Gatehouse_FuchsiaSad
+npc 25 2 2 EventScript_Route16_Gatehouse_AthletesFoot
+sign 25 2 0 EventScript_Route16_LeftBinoculars
+sign 25 2 1 EventScript_Route16_RightBinoculars
 
 ## Cerulean City
 sign 3 3 0 EventScript_CeruleanCity_CitySign
 sign 3 3 1 EventScript_GymSign_Cerulean
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
+
+## Route 5
+sign 3 23 0 EventScript_Route6_IcePathSign
 
 ## Saffron guard tiles
 tile 17 1 0 Guard_LooksLeftMovesUp
@@ -316,6 +350,9 @@ npc 14 9 5 EventScript_SaffronCity_Throh1
 npc 14 9 6 EventScript_SaffronCity_ThrohRanger
 npc 14 9 7 EventScript_SaffronCity_Throh2
 npc 14 9 8 EventScript_SaffronCity_ThrohGranny
+
+## Route 8
+sign 3 26 0 EventScript_Route6_IcePathSign
 
 ## Lavender Town
 sign 3 4 1 EventScript_LavenderTown_CitySign

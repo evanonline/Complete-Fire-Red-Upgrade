@@ -56,7 +56,7 @@ Riii-iiiime[.]!
 (Hey[.]\nPlease stop paying this guy[.])
 
 #org @gText_CeladonCity_CyclingRoad_Closed
-I appreciate all the work that's\ngone into beautifying Celadon.\pBut I really wish they'd fix up\nthe old [GREEN]Cycling Road[BLACK], too.\pFuschia City used to maintain it,\nbut they don't have the money\lto handle it anymore.\pWe decided it was easier to close\nthe road from Celadon's side.\lBut I miss biking[.]
+I appreciate all the work that's\ngone into beautifying Celadon.\pBut I really wish they'd fix up\nthe old [GREEN]Cycling Road[BLACK], too.\pFuchsia City used to maintain it,\nbut they don't have the money\lto handle it anymore.\pWe decided it was easier to close\nthe road from Celadon's side.\lBut I miss biking[.]
 
 #org @gText_CeladonCity_TalkingAboutGirl
 That weird girl by the fountain\nnever stops walking.\lEven if you try to chat with her.\lNot that she[.] has much to say[.]
@@ -91,14 +91,8 @@ Restaurant
 #org @gText_CeladonCity_HotelSign
 Celadon Hotel
 
-#org @gText_CeladonCity_CondominiumsKnowitall1
-The door is locked.\nThere's a letter taped to it.
-
-#org @gText_CeladonCity_CondominiumsKnowitall2
-To whom it may concern:\pI just heard there's a Pok\emon\ncalled Sylveon.\pI might not know everything,\nafter all.\pWill reopen when I confirm if I\nstill know everything.
-
-#org @gText_CeladonCity_NoLongerKnowEverything
-I[.] no longer know everything[.]\pThe world is bigger than I realized[.]\pI didn't even know Eevee could\nevolve in so many other ways[.]\lI am shaken to my core.\pTake my Eevee[.]\nMy knowledge isn't enough for it.
+#org @gText_CeladonCity_NoLongerKnowEverything1
+Ah[.][PAUSE][20]\nGreetings[.]\pYou must have come because you\nread the sign on my door.\pWell, I have bad news[.] I don't\nknow everything.\lThe world is larger than I knew.\pIt turns out, there are new things\nto know about, all the time[.]\pI mean, I just found a 51st TM[.]\nCould there be even more?!\lEverything I've read is a lie!\pI need some time to myself[.]\nAnd, if it's any use to you[.]\pI wrote about the\nWireless Adapter on my chalkboard[.]
 
 #org @gText_CeladonCity_NoLongerKnowEverything_TookEevee
 Please[.] Treat my Eevee well[.]\nAnd, if it's any use to you[.]\pI wrote about the\nWireless Adapter on my chalkboard[.]
@@ -113,7 +107,7 @@ This restaurant's pickles are\nabysmal, but I keep coming anyway.\pYou know what
 Hey, sorry. We're too busy\nfor more customers[.]\pSee, we're also a ghost kitchen for\n[BLUE]Iono Burger[BLACK].\pYou know, Iono? The streamer from\nthe [GREEN]Paldea[BLACK] region?\lShe has her own burger now.\pIt's got little toothpicks that\nlook like her hair clips.\pIono Burger only delivers through\nan app on your Rotom Phone.\lWe don't serve 'em in here.\p[.]What? You still have a dinky\nold Pok\edex? No phone?\lThat's rough, kid.
 
 #org @gText_CeladonCity_Restaurant_IonoSoda
-Chug[.]\pI've ordered from Iono Burger\nbefore. It's not great.\pBut Iono DOES have her own\nexclusive Baja Blastoise flavor[.]\l[BLUE]Baja Blastoise: Iono Volt Switch[BLACK]!\pThey should put it in stores.\nDown with exclusivity!
+Chug[.]\pI've ordered from Iono Burger\nbefore. It's not great.\pBut Iono DOES have her own\nexclusive Baja Blastoise flavor[.]\l[RED]Baja Blastoise: Iono Volt Switch[BLACK]!\pThey should put it in stores.\nDown with exclusivity!
 
 #org @gText_CeladonCity_Restaurant_MayleneInspiredSquatter
 Munch[.]\nSlurp[.]\pThere's a Fighting-type Gym Leader\nfrom [GREEN]Sinnoh[BLACK] who likes eating here.\pI wanna be strong too!\nSo now I stay right here and eat.\lNo one's kicked me out yet!
@@ -211,6 +205,9 @@ Growlithe!
 #org @gText_CeladonCity_RGroupGameCornerPromoter
 Hey, you look like a lucky sort!\pCome on down to the\n[GREEN]R Group Game Corner[BLACK]!
 
+#org @gText_CeladonCity_RGroupGameCornerPromoter_Angry
+Hey, you look like a twerp!\pYou better stay away from the\n[GREEN]R Group Game Corner[BLACK]!
+
 #org @gText_CeladonCity_GameCornerSign
 R Group Game Corner & Business HQ
 
@@ -276,3 +273,27 @@ Hey!
 
 #org @gText_CeladonCity_Pokecenter_Sib_Brandy
 [RED]Brandy[BLACK]: Hey, sorry, I'm using\nthis one.\pTry upstairs, sib!
+
+#org @gText_CeladonCity_GymTrainer_GetsEnergyDrink1
+Oh![PAUSE][15]\nThat's the [RED]Energy Drink[BLACK]!
+
+#org @gText_CeladonCity_GymTrainer_GetsEnergyDrink2
+I had a feeling you got it[.]\pThe town's abuzz with talk that\nsome "twerps\" caused trouble\lat the Department Store.\pI'm sorry about that[.]\nWe're really grateful!\pIt looks like the R Group cleared\nout of the store, too.\pI'll tell Erika what you did, and\nwe'll try to, [PAUSE][20]uh[.]\l[.][PAUSE][20]rehabilitate your image[.]\p[.]But for now, let me get this\ndrink to Erika!\pAnd please, feel free to challenge\nthe gym!
+
+#org @gText_CeladonCity_RGroupNotStupid_WhatDidYouDo
+Aren't you one of the twerps who\nmessed with Team Rocket?\pLook, we all know the R Group is\nTeam Rocket.\pBut their money is so important\nfor Celadon!\pIf we go the way [GREEN]Fuchsia City[BLACK] did,\nit'll be because of folks like you.
+
+#org @gText_CeladonCity_RGroupAwesome_WhatDidYouDo
+The R Group has put so much money\ninto beautifying Celadon!\pYou're a real twerp for messing\nwith them!
+
+#org @gText_CeladonCity_RGroupMemberFirstOne_Angry
+Ey, twerp!\nGet outta Celadon!
+
+#org @gText_CeladonCity_GrassHint_Angry
+You!\pYou're the one who messed with\nJessie & James!\pI hope a Nickit comes out of the\ngrass behind the building[.]\l[.]and steals from YOU!\lThen we'll see how YOU like it!
+
+#org @gText_CeladonCity_GameCorner_Welcome
+Welcome to the\n[GREEN]R Group Game Corner[BLACK]!
+
+#org @gText_CeladonCity_GameCorner_WelcomeTwerp
+Welcome to the\n[GREEN]R Group Game Corner[BLACK], twerp!

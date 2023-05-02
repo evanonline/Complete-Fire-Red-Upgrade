@@ -20,13 +20,13 @@ Scraaaeh!
 Yamph!
 
 #org @gText_VermilionCityNPC_SceptileOwner
-Sceptile[.]\n[.]is just the coolest ever[.]
+Sceptile[.]\n[PAUSE][5][.][PAUSE][5]is just the coolest ever[.]
 
 #org @gText_VermilionCityNPC_YamperOwner
 My Yamper is such a darling!\pYou can actually catch a Yamper\njust north of the city, on Route 6!\lBut MINE is a true Galarian import!
 
 #org @gText_VermilionCityNPC_Pollution
-We're careful about pollution here!\nStill!\pNo toxic sludge in sight in\nVermilion!\pYou'll have to head to [GREEN]Fuchsia City[BLACK]\nif you wanna see sludge.
+We're careful about pollution here!\n[PAUSE][7]Still!\pNo toxic sludge in sight in\nVermilion!\pYou'll have to head to [GREEN]Fuchsia City[BLACK]\nif you wanna see sludge.
 
 #org @gText_VermilionCityNPC_NamesHater
 Pok\emon names these days are too\nlong.\pBack in my day[.] we kept their names\nunder 10 characters!\pIn Kanto, we still haven't adapted\nour name display systems.\pSo, you might run into Pok\emon\nwhose names look truncated.\pThat's not a typo!\nOur systems are just outdated!\lRespect Crabominable's full name!
@@ -47,13 +47,13 @@ It's me! The one, the only!\nThe Fishing Guru!\pIt looks like you already have a
 Things are the same as ever[.]\nI'm waiting for a shakeup.\pThere's no new Pok\emon types[.]\nBoring!
 
 #org @gText_VermilionCityNPC_HighExpectations
-These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog! THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.\lNo shame in that!
+These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog![PAUSE][5] THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.\lNo shame in that!
 
 #org @gText_VermilionCityNPC_PaldeaSandwichCritic
-Out in [GREEN]Paldea[BLACK], their trash glistens\na little bit out in the wild.\pBut here in [GREEN]Kanto[BLACK], you need to use\nan [BLUE]Itemfinder[BLACK] to get hidden items.\pCultural differences are so\ninteresting!
+Out in [GREEN]Paldea[BLACK], their trash glistens\na little bit out in the wild.\pBut here in [GREEN]Kanto[BLACK], you need to use\nan [BLUE]Itemfinder[BLACK] to see hidden items.\pCultural differences are so\ninteresting!
 
 #org @gText_VermilionCityNPC_PaldeaLetter
-Dear Greggy,\nI hope this letter finds you well.\pI heard the R Group is investing in\nbeautifying [GREEN]Celadon City[BLACK].\pA mining town like [GREEN]Zapapico[BLACK] doesn't\nneed to be pretty! We're rugged!\lBut, that does sound cool[.]
+Dear Greggy,\n[PAUSE][10]I hope this letter finds you well.\pI heard the R Group is investing in\nbeautifying [GREEN]Celadon City[BLACK].\pA mining town like [GREEN]Zapapico[BLACK] doesn't\nneed to be pretty! We're rugged!\lBut, that does sound cool[.]
 
 #org @gText_VermilionCityNPC_EvioliteDiscovery
 The moment I found out Primeape can\nevolve now, I got so excited.\pBecause now my Primeape can benefit\nfrom holding [BLUE]Eviolite[BLACK]!\pShe's gonna have sooo much\nSpecial Defense.\pI hope you can find your own\n[BLUE]Eviolite[BLACK]!
@@ -62,19 +62,19 @@ The moment I found out Primeape can\nevolve now, I got so excited.\pBecause now 
 Prau rau?
 
 #org @gText_VermilionCityNPC_TeamRocketMemory
-There's always going to be groups\nwho want to use Pok\emon for crime.\pBut if you ask me, none were worse\nthan Team Rocket was.\pOther teams wanted to reshape the\nworld. Change things.\lTeam Rocket[.] just wanted money.
+There's always going to be groups\nwho want to use Pok\emon for crime.\pBut if you ask me, none were worse\nthan Team Rocket was.\pOther teams wanted to reshape the\nworld. Change things.\lTeam Rocket[.][PAUSE][14] just wanted money.
 
 #org @gText_VermilionCityNPC_TeamRocketMemory2
 That Giovanni guy had so much\nmoney, so much power[.]\pBut all he could think to do with\nany of it was to vie for more.\pMe? I'm using my meager wealth to\nbuy my Finneon a snack.\pA buddy's smile is worth more than\nthe world.
 
 #org @gText_VermilionCityNPC_MoneySucks
-Grumble mumble[.]\nHey, you.\lAre you good at counting money?\lI'm sure not.
+Grumble mumble[.]\nHey, you.\lAre you good at counting money?\l[SHRINK]I'm sure not[.]
 
 #org @gText_VermilionPortSign
 Vermilion Port\n[ARROW_DOWN]
 
 #org @gText_VermilionCityNPC_SadTinkatonExpert
-Hi[.] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color and doesn't have\nfiery attacks, or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut no one will ever care.
+Hi[.][PAUSE][15] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color,[PAUSE][10] and doesn't\nhave fiery attacks,[PAUSE][10] or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut[PAUSE][20] no one will ever care.
 
 #org @gText_VermilionCityNPC_CoolFinally
 It was wonderful when they finally\nfinished that building over there.\pThere was a Machop who diligently\nprepared the construction site[.]\lEvery day! For years!\pThe town awarded that little guy\na medal for his hard work.\pWhat's the building?\nEh, some lab or something.
@@ -86,16 +86,16 @@ You can nickname your Pok\emon at\nany [GREEN]Pok\emon Center[BLACK] now!\lSo co
 Cerise Laboratory
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy1
-Hahaha! Haaa! Hoo-ee!
+Hahaha! Haaa![PAUSE][5] Hoo-ee!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_FunnyRed
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [RED]Pok\emon Funny Red[BLACK].\pThey'd never say things this wacky\nin a regular game!
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called[PAUSE][8] [RED]Pok\emon Funny Red[BLACK].\pThey'd never say things this wacky\nin a regular game!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_LaughGreen
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].\pI saw a character swear a cuss!\nThey do not do that in real games!
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called[PAUSE][8] [GREEN]Pok\emon Laugh Green[BLACK].\pI saw a character swear a cuss!\nThey do not do that in real games!
 
 #org @gText_VermilionCityNPC_Water
-What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could drink Hydro Pump\nwater for the rest of my life.
+What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could drink Hydro Pump\nwater for the rest of my life.\lIt's normal! Everyone drinks it!\lIt's chemically pure H20!
 
 #org @gText_VermilionCityNPC_MagikarpFlop
 Ma-gi-karp[.][.]
@@ -104,10 +104,10 @@ Ma-gi-karp[.][.]
 [RED][RIVAL][BLACK]: Okay! First things first,\n[GREEN]Diglett's Cave[BLACK]!\pA good Ground-type like Diglett\nwill SMOTHER Surge!\lGround beats Electric!
 
 #org @gText_VermilionCity_RivalCutscene1DotDotDot
-[.] [.] [.] [.] [.]\nYou can hear distant hollering.
+[.] [.] [.] [.] [.]\n[PAUSE][16]You can hear distant hollering.
 
 #org @gText_VermilionCity_RivalCutscene1Rival2
-[RED][RIVAL][BLACK]: [.] [.] [.]\nFreaking Snorlax[.]\pFine! I'll take Surge WITHOUT a\ntype advantage!
+[RED][RIVAL][BLACK]: [.] [.] [.]\nFreaking Snorlax[.]\pFine![PAUSE][10] I'll take Surge WITHOUT a\ntype advantage!
 
 #org @gText_VermilionCity_RivalCutscene2Rival0
 [RED][RIVAL][BLACK]: Hey! Hey you!\nGet off the phone,\land get out of my freaking way!
@@ -134,7 +134,7 @@ Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can'
 [RED][RIVAL][BLACK]: Oh! [PLAYER]!\nCan you believe this guy?
 
 #org @gText_VermilionCity_RivalCutscene2Flynn4
-[RED]Flynn[BLACK]: Lieutenant? Sir? I heard\nyour Pok\e Ball opening.\pDon't you go getting your Raichu\nto make ACTUAL signal interference!
+[RED]Flynn[BLACK]: Lieutenant? Sir?[PAUSE][7] I heard\nyour Pok\e Ball opening.\pDon't you go getting your Raichu\nto make ACTUAL signal interference!
 
 #org @gText_VermilionCity_RivalCutscene2Rival4
 [RED][RIVAL][BLACK]: Wait, "Lieutenant?\"\nAre you talking to[.]
@@ -143,16 +143,16 @@ Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can'
 [RED]Flynn[BLACK]: Look, Surge, I'm in your\ncorner!\lYou don't need to dodge me here!\lI'll make this golden!\lI'll get the Gym closed for ya!
 
 #org @gText_VermilionCity_RivalCutscene2Rival5
-[RED][RIVAL][BLACK]: Wait, huh??\nNO! Don't close the gym!
+[RED][RIVAL][BLACK]: Wait, huh??\nNO![PAUSE][10] Don't close the gym!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn6
-[RED]Flynn[BLACK]: I'll handle the paperwork!\nYes, I just need-\lYes! Exactly.\pSo you can get me a list of\nreplacements?\lWonderful. Wonderful! We're gold!
+[RED]Flynn[BLACK]: I'll handle the paperwork!\nYes, I just need-\lYes! Exactly.\pSo you can get me a list of\nreplacements?\lWonderful.[PAUSE][8] Wonderful![PAUSE][10] We're gold!
 
 #org @gText_VermilionCity_RivalCutscene2Rival6
 [RED][RIVAL][BLACK]: Stoooop!\pStop stop stop!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn7_1
-[RED]Flynn[BLACK]: Stay gold, Lieutenant!\pAnd thank you for your service!
+[RED]Flynn[BLACK]: Stay gold, Lieutenant!\n[PAUSE][20]And thank you for your service!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn7_2
 [.]Ahem. Sorry, kiddo!\nGym's closed.\l[BLUE]Indigo League[BLACK] orders!
@@ -161,7 +161,7 @@ Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can'
 [RED][RIVAL][BLACK]: KIDDO?! Ugh!\nI'm grown up!\pAnd I demand to know why the gym\nis closed!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn8
-[RED]Flynn[BLACK]: Simple stuff, golden boy!\pCan't have a gym without\na [BLUE]Gym Leader[BLACK]!\pThe Lieutenant has, ah[.]\nimportant military business.\lSo I'm shuttin' things down!
+[RED]Flynn[BLACK]: Simple stuff, golden boy!\pCan't have a gym without\na [BLUE]Gym Leader[BLACK]!\pThe Lieutenant has, ah[.][PAUSE][15]\nimportant military business.\lSo I'm shuttin' things down!
 
 #org @gText_VermilionCity_RivalCutscene2Rival8
 [RED][RIVAL][BLACK]: What gives you the right?!\nThis isn't YOUR gym!
@@ -188,13 +188,13 @@ Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can'
 [RED]Flynn[BLACK]: Haaa[.]\nYeah, no, bucko.
 
 #org @gText_VermilionCity_RivalCutscene2Rival12
-[RED][RIVAL][BLACK]: Grgrr[.]\nNow what are we supposed to do?
+[RED][RIVAL][BLACK]: Grgrr[.]\n[PAUSE][20]Now what are we supposed to do?
 
 #org @gText_VermilionCity_RivalCutscene2Flynn13
-[RED]Flynn[BLACK]: Hey, you've got plenty\nof gyms you can tackle, smallfry!\pIf you head north, up [GREEN]Route 6[BLACK], you\ncan find the old [GREEN]Underground Path[BLACK].\pIt's a little treacherous, but it\nwon't be a problem for an energetic\lkid like you!\pHatsumi must have set the two of\nyou up with everything, right?\pThen you should have a [BLUE]Town Map[BLACK]\nin your bag! Just follow that.\pYou can access [GREEN]Celadon[BLACK] or [GREEN]Cerulean[BLACK]\nthrough the Path.\lBoth great gyms!\l[GREEN]Erika[BLACK] and [GREEN]Misty[BLACK], brilliant gals!\lLove workin' with 'em!\pAnd hopefully, once you're done,\nI'll have a new Gym Leader here!
+[RED]Flynn[BLACK]: Hey, you've got plenty\nof gyms you can tackle, smallfry!\pIf you head north,[PAUSE][12] up [GREEN]Route 6[BLACK],[PAUSE][12] you\ncan find the old [GREEN]Underground Path[BLACK].\pIt's a little treacherous, but it\nwon't be a problem for an energetic\lkid like you!\pHatsumi must have set the two of\nyou up with everything, right?\pThen you should have a [BLUE]Town Map[BLACK]\nin your bag![PAUSE][14] Just follow that.\pYou can access [GREEN]Celadon[BLACK] or [GREEN]Cerulean[BLACK]\nthrough the Path.\lBoth great gyms!\l[GREEN]Erika[BLACK] and [GREEN]Misty[BLACK], brilliant gals!\lLove workin' with 'em!\pAnd hopefully, once you're done,\nI'll have a new Gym Leader here!
 
 #org @gText_VermilionCity_RivalCutscene2Rival13
-[RED][RIVAL][BLACK]: Hmmph[.]! Fine!\nHey, [PLAYER]!\lGo to any gym you want[.]\lBut I'M going to [GREEN]Cerulean City[BLACK]!\pI'm gonna prove myself by beating\nthe one and only Misty!\lHa!
+[RED][RIVAL][BLACK]: Hmmph[.]! Fine!\n[PAUSE][20]Hey, [PLAYER]!\lGo to any gym you want[.]\lBut I'M going to [GREEN]Cerulean City[BLACK]!\pI'm gonna prove myself by beating\nthe one and only Misty!\lHa!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn14
 [RED]Flynn[BLACK]: [.]Huh! Quite the character.\nGuess he's a friend of yours?\pWell, hey, good luck, and\nstay gold out there!\pI get the feeling I'll be seeing\nmore of you both.

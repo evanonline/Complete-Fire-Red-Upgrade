@@ -9,3 +9,36 @@ Athlete's foot is rough.\nYou'll never stop itching.\pBe sure to take care of yo
 
 #org @gText_Route16_CyclingRoad_Sign
 Cycling Road\nRESTRICTED ACCESS\lGatehouse open to guests.
+
+#org @gText_Route16_CynthiasRecordPlayer
+The record player is playing a\ndramatic piano piece.\pWho left this on?
+
+#org @gText_Route16_CynthiasSink
+It's hard to tell when the last\ntime someone cooked here was[.]\lUnlike with most sinks and stoves.
+
+#org @gText_Route16_CynthiasTV
+The TV is off.\nBut, there's a DVD case on top[.]\lIt's a concert recording[.]\pIt's titled [RED]"Koffing and the\nToxics: Kickin' Feebas in Virbank.\"[BLACK]\lIt's autographed!
+
+#org @gText_Route16_RoxieMsg
+"To Big C! Always fun kickin' it\nwith you in Undella Town! -Roxie\"
+
+#org @gText_Route16_LeftBinoculars
+Let's see what the binoculars have\nto show[.]\pThat's [GREEN]Mt. Moon[BLACK], between\n[GREEN]Pewter[BLACK] and [GREEN]Cerulean[BLACK].\pYou can see a Pok\emon Center\nat the foot of the mountain!
+
+#org @gText_Route16_RightBinoculars
+Let's see what the binoculars have\nto show[.]\pThat's [GREEN]Mt. Moon[BLACK], between\n[GREEN]Pewter[BLACK] and [GREEN]Cerulean[BLACK].\pThere's two men practicing karate\nat the foot of the mountain!
+
+#org @gText_Route16_OldGuyInGatehouse
+Huh? Whosawhatsit?\pWhere the heck am I?\nHow'd I get here?!\lWhat even IS this place?!\lI'm not even supposed to BE here!
+
+#org @gText_Route16_OldGuyInGatehouse_Angry
+Huh? Whosawhatsit?\pWhere the heck am I?\nHow'd I get here?!\lWho's this twerp in front of me?!\lI'm not even supposed to BE here!
+
+#org @gText_Route16_GuardStops
+Hey, hold up there!
+
+#org @gText_Route16_DontComeInCyclingRoad
+The old [GREEN]Cycling Road[BLACK] is closed to\nthe public.
+
+#org @gText_Route16_DontComeInCyclingRoad_EvenWithBike
+The old [GREEN]Cycling Road[BLACK] is closed to\nthe public.\lEven IF you have a bike!

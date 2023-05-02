@@ -187,9 +187,9 @@
 
 #define VAR_0x408C                 0x408C // Used for rival's movements in Vermilion City
 #define VAR_0x408D                 0x408D // Used for sibling battle in Celadon City
-#define VAR_0x408E                 0x408E
-#define VAR_0x408F                 0x408F
-#define VAR_0x4090                 0x4090
+#define VAR_0x408E                 0x408E // Used for blocking elevator in Celadon Dept. Store during Rocket event
+#define VAR_0x408F                 0x408F // Used for triggering Garchomp Gavin in Celadon Dept. Store
+#define VAR_0x4090                 0x4090 // Dept Store Rockets roof scene
 #define VAR_0x4091                 0x4091
 #define VAR_0x4092                 0x4092
 #define VAR_0x4093                 0x4093

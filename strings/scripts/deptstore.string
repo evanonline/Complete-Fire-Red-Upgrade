@@ -2,10 +2,13 @@
 [RED]Sherry[BLACK]: Haha!\nLet's goooo, Chingling!
 
 #org @gText_CeladonDeptStore_SibBattle1F_Brandy
-[RED]Brandy[BLACK]: C'mon, Nickit!\nWe've got a drink to buy!
+[RED]Brandy[BLACK]: C'mon, Chingling!\nWe've got a drink to buy!
 
 #org @gText_CeladonDeptStore_1FRocketBattlingSib
 Hey[.] C'mon, kid! Stop battlin' me!\nI've got work to do!
+
+#org @gText_CeladonDeptStore_1FRocketBattlingSib_AfterNotSurviving
+Agh[.] That kid took out all\nsix of my Pok\emon!
 
 #org @gText_CeladonDeptStore_1FRocketBattlingSib_LostSherry
 Grrrr!\nI'm just so mad that kid beat me!\pI hate 'em, and I REALLY hate their\ndumb Ivysaur hat!
@@ -15,6 +18,9 @@ Grrrr!\nI'm just so mad that kid beat me!\pThem and their stupid, stupid\nTepig 
 
 #org @gText_CeladonDeptStore_RocketEvent_CustomerService
 Hello. Are you with the R Group?\nYou must be, if you got in!
+
+#org @gText_CeladonDeptStore_RocketEvent_CustomerService_Angry
+Hello, twerp!\pIf I can help you with anything,\nplease hesitate to ask.
 
 #org @gText_CeladonDeptStore_RocketEvent_FirstRocket_Before
 An intruder?!\nNot now!\lTime for my awesome new Pok\emon!
@@ -32,7 +38,7 @@ Looks like the elevator is not\nin service.
 Have you heard the latest album by\n[RED]Klefki Ring[BLACK]? Well, you won't[.]\lBecause I'M taking all the copies!
 
 #org @gText_CeladonDeptStore_RocketEvent_NextRocket_Lose
-I already took all the CDs.\pThe outcome of this fight changes\lnothing.
+I already took all the CDs.\pThe outcome of this fight changes\nnothing.
 
 #org @gText_CeladonDeptStore_RocketEvent_NextRocket_After
 I bet you've never even HEARD of\n[RED]Klefki Ring[BLACK]!\lIndie rock forever!
@@ -46,20 +52,26 @@ Maybe I shoulda stuck with Zubat[.]
 #org @gText_CeladonDeptStore_RocketEvent_Rocket3_After
 It feels so good to have some\nVARIETY, for once!\pI'll raise my new Pok\emon up real\ngood for the boss!\pBut, I should go find my old Zubat\nin my PC boxes.\lSee how she's doing.
 
-#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinIntro
-[RED]???[BLACK]: [.]Ahh! The world-famous\n[GREEN]Celadon Department Store[BLACK]!\lIsn't it awesome, fans?\pSo in this video, not only will I\nbe continuing my [GREEN]Nuzlocke[BLACK] run[.]\p[.]I'll be buying and unboxing the\nnew [RED]Klefki Ring[BLACK] album!
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinIntro1
+[RED]???[BLACK]: [.]Ahh! The world-famous\n[GREEN]Celadon Department Store[BLACK]!\lIsn't it awesome, fans?
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinIntro2
+So in this video, not only will I\nbe continuing my [GREEN]Nuzlocke[BLACK] run[.]
+
+#org @gText_CeladonCity_DeptStoreRockets_GarchompGavinIntro3
+[.]I'll be buying and unboxing the\nnew [RED]Klefki Ring[BLACK] album!
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavinNext
-Oho! Fans, I've locked eyes with\nanother trainer!\lEven here, guys!\pOne of the stipulations for my run\nis to fight every trainer I see!
+Oho!\nNot another step, you!\pFans, I've locked eyes with\nanother trainer!\lEven here, guys!\pOne of the stipulations for my run\nis to fight every trainer I see!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinSherry1
-[RED]Sherry[BLACK]: [.]Hey, [PLAYER]!\nDo you know this guy?
+[RED]Sherry[BLACK]: [.]Hey, [PLAYER]!\nSorry I took so long[.]\pThat guy I was fighting had a\nfull team of 6!\p[.]Who's this person?
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinBrandy1
-[RED]Brandy[BLACK]: [.]Hey, [PLAYER]!\nDo you know this guy?
+[RED]Brandy[BLACK]: [.]Hey, [PLAYER]!\nSorry I took so long[.]\pThat guy I was fighting had a\nfull team of 6!\p[.]Who's this guy?
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin3
-[RED]???[BLACK]: Two challengers, huh?\nWelcome to the show, I'm\n[RED]Garchomp Gavin[BLACK].\lMaybe you've heard of my channel?
+[RED]???[BLACK]: Two challengers, huh?\nWelcome to the show, I'm[.]\l[RED]Garchomp Gavin[BLACK]!\lMaybe you've heard of my channel?
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinSherry2
 [RED]Sherry[BLACK]: Uh[.]\n[.] [.] [.]\pYou do realize there's a situation\nin this store right now, right?
@@ -68,34 +80,286 @@ Oho! Fans, I've locked eyes with\nanother trainer!\lEven here, guys!\pOne of the
 [RED]Brandy[BLACK]: Uh[.]\nGavin[.]\lCan I call you Gav?\pAre you[.] paying any attention to\nthe situation in here?
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin4
-[RED]Gavin[BLACK]: Now now, I'll make this\nquick!\lJust wait your turn, you!\pAlright viewers, this is great!\nEasy prize money and experience\npoints! Here we go!
+[RED]Gavin[BLACK]: Now now, I'll make this\nquick!\lJust wait your turn, you!\pAlright viewers, this is great!\nEasy prize money[.]\l[.]and easier experience points!\lHere we go!
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_Loss
-NO!!!!\nMY PRECIOUS GIBLE!!!!!
+NO!!!!\n[PAUSE][8]MY PRECIOUS GIBLE!!!!!
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_After
-[RED]Gavin[BLACK]: My Gible[.]\nYou KILLED my Gible!
+[RED]Gavin[BLACK]: My Gible[.]\n[PAUSE][7]You KILLED my Gible!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinSherry3
-[RED]Sherry[BLACK]: Huh? No they didn't!\nYour Gible fainted like normally!\lIt was visibly breathing!\pJust go to a Pok\emon Center,\nMr. Gavin!
+[RED]Sherry[BLACK]: Huh? No they didn't!\n[PAUSE][10]Your Gible fainted like normally!\lIt was visibly breathing!\pJust go to a Pok\emon Center,\nMr. Gavin!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinBrandy3
-[RED]Brandy[BLACK]: What? No they didn't!\nYour Gible just fainted, dude!\lI saw it breathing!\pJust go to a Pok\emon Center,\nit'll be fine, Gav!
+[RED]Brandy[BLACK]: What? No they didn't!\n[PAUSE][10]Your Gible just fainted, dude!\lI saw it breathing!\pJust go to a Pok\emon Center,\nit'll be fine, Gav!
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_After2
 [RED]Gavin[BLACK]: You don't understand[.]\nI JUST started my [BLUE]Nuzlocke[BLACK] run[.]\pAnd in a [BLUE]Nuzlocke[BLACK] run, your\nPok\emon DIE when they faint!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinSherry4
-[RED]Sherry[BLACK]: No, you're just SAYING\nthey're dead!\pC'mon, don't lay this at our feet!
+[RED]Sherry[BLACK]: No, you're just SAYING\nthey're dead!\pC'mon, don't mess around with us!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinBrandy4
 [RED]Brandy[BLACK]: No? Dude, that's not part\nof it.\pC'mon, man, don't put this on us!
 
 #org @gText_CeladonCity_DeptStoreRockets_GarchompGavin_Revenge
-[RED]Gavin[BLACK]: Eh, it's okay.\nI only just started this run.\lI'll just start a new one.\pBut next time you won't be so\nlucky!\pI'll see you again[.] in person, or\nin your recommended videos!\pRemember to like and subscribe to [RED]Garchomp Gavin[BLACK]!
+[RED]Gavin[BLACK]: Eh, it's okay.\nI only just started this run.\lI'll just start a new one.\pBut next time you won't be so\nlucky!\pI'll see you again[.] in person, or\nin your recommended videos!\pRemember to like and subscribe to\n[RED]Garchomp Gavin[BLACK]!
 
 #org @gText_CeladonCity_DeptStoreRockets_GavinSherry5
-[RED]Sherry[BLACK]: He got over that pretty\nquickly. Let's[.] move on[.]
+[RED]Sherry[BLACK]: He got over that pretty\nquickly.[PAUSE][10] Let's[.] move on[.]
 
-#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy6
-[RED]Brandy[BLACK]: At least that guy got over \nit quickly enough. Let's move on!
+#org @gText_CeladonCity_DeptStoreRockets_GavinBrandy5
+[RED]Brandy[BLACK]: At least that guy got over \nit quickly enough.[PAUSE][10] Let's move on!
+
+#org @gText_CeladonCity_DeptStoreRockets_TVGameShopCounter
+I'm so glad the R Group could\nprovide these retro electronics!\lAwesome!
+
+#org @gText_CeladonCity_DeptStoreRockets_TVGameShopCounter_Angry
+You twerp!\nI saw you mess with the R Group!\pDo you know how hard it is to get\nCRTs without them these days?\pPeople need those!\pTo play old video games with\nlow input lag!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket1_Before
+Gahaha! We all got our own\nSnarl TMs, baby!\pThis is what's gonna put us over\nthe top!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket1_Lose
+You won now, but it's only a matter\nof time before Snarl is your doom!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket1_After
+Years ago, the Snarl TM was hidden\naway from us in a [BLUE]Lock Capsule[BLACK][.]\pIt was THIS that ruined our plans!\nNothing else! We just needed Snarl!\pThings are gonna be different now\nthat we have the power of Snarl!\pThis would have changed EVERYTHING\nin [GREEN]Johto[BLACK]!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket2_Before
+Stupid kid! Get outta here!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket2_Lose
+Ugh[.]!\nYou nosy little Grubbin!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_4FRocket2_After
+You stink, kid!\nWe're busy!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket1_Before
+I don't know what you think we're\ndoing, ya intrudin' punk.\pBut it's all above board!\nThe R Group's legit, ya hear?!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket1_Lose
+Upstandin' and legit as I am,\n[PAUSE][10]here's ya prize money.
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket1_After
+The R Group ain't doin' anything\nwrong!\pWe're just gettin' some TMs and\nexotic Pok\emon!\pLiftin' a big ol' green tube\nwhat got someone inside of it,\land takin' it to the basement!\lAin't no laws sayin' we can't!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket2_Before
+Oof[.]\nHey, could you stop intruding?\pI just had to take a big tube down\nto our basement HQ.\lMy back hurts[.]
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket2_Lose
+If my back were alright, you'd be\ndead meat,[PAUSE][5] kid!
+
+#org @gText_CeladonDeptStore_DeptStoreRockets_5FRocket2_After
+I don't know why the boss needs his\nbig green tube in our HQ!\pMaybe he just likes the mood\nlighting! Not my business!
+
+#org @gText_CeladonDeptStore_SibFloor5_Sherry
+[RED]Sherry[BLACK]: Hey, sib! Gimme a second to\ncatch my breath.\pI just had a grueling fight[.]\pThat guy guarding the stairs had\na full team of 6 Pok\emon, too!\pHead upstairs and I'll be\nright behind you.
+
+#org @gText_CeladonDeptStore_SibFloor5_Brandy
+[RED]Brandy[BLACK]: Hey, sib! Gimme a second to\ncatch my breath.\pI just had a grueling fight!\pThat guy guarding the stairs had\na full team of 6 Pok\emon, too.\pHead upstairs and I'll be\nright behind you. 
+
+#org @gText_CeladonDeptStore_SibFloor5_Sherry_YouThrew
+[RED]Sherry[BLACK]: Oh[.] hey sib[.]\nThat was embarassing[.]\pI got away before they\ncould steal my Pok\emon.\pYou weren't trying to hit my\nChingling, right?\lI must have been looking wrong[.]\p[.]Actually,[PAUSE][20] I don't wanna talk about it.\pLook.\pLet's get back up there and\npretend none of it happened.\pI'm sure those two will be happy\nto do their poem again.
+
+#org @gText_CeladonDeptStore_SibFloor5_Brandy_YouThrew
+[RED]Brandy[BLACK]: Oh, hey sib[.]\nThat was embarassing[.]\pI ducked down here before they\ncould steal my Pok\emon.\pI was caught up in the moment and\ndidn't notice, but[.]\l[.]did you attack me, [PLAYER]?\lNo[.][PAUSE][20] no, you wouldn't.\pLet's just go back up there and\npretend none of it happened.\pI'm sure those guys will be happy\nto do their poem again.
+
+#org @gText_CeladonDeptStore_ShamedRocket
+I can't believe that kid beat me[.]\nI deserve to be in time-out[.]\lI should be grounded[.]
+
+#org @gText_CeladonDeptStore_SherrysChingling
+Ching, ling-inging ing!
+
+#org @gText_CeladonDeptStore_RocketArctozolt
+Zooooolt!
+
+#org @gText_CeladonDeptStore_RocketsRooftop_ChieAgain
+[.] I know it's bad we told 'em\nwe're Rockets!\pWe don't wanna get in trouble\nwith the boss!\lIt was an honest mistake!\pCan you guys fix this?\nCan ya take care of these kids?
+
+#org @gText_CeladonDeptStore_RocketsRooftop_JamesIntro
+[RED]???[BLACK]: Ohoho[.]! You were right to\ncome to us.\pAs the boss's favorites, we'll get\nthis sorted out.
+
+#org @gText_CeladonDeptStore_RocketsRooftop_JessieIntro
+[RED]???[BLACK]: Everything else has gone well!\nReally, don't sweat it, rookie.\pWe made plenty of boneheaded\nmistakes in our EARLY days.\pWe weren't always the hardened\nexperts we are now.\pJust make sure everything else\nis brought down to the hideout!
+
+#org @gText_CeladonDeptStore_RocketRooftop_ChieAgainAgain1
+You two are the best!\nI'll see to it, sir![PAUSE][10] And m-madam!
+
+#org @gText_CeladonDeptStore_RocketRooftop_ChieAgainAgain2
+Ah[.] Jessie! James!\nThe kids are HERE![PAUSE][10] Like, now!\lI-I'll leave it to you!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibSherry1
+[RED]Sherry[BLACK]: So, are you two in charge?\pDid YOU plant a Paras in Erika's\ngym??\lYou put everyone to sleep!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibBrandy1
+[RED]Brandy[BLACK]: So, you're the bosses!\pThen it's YOU who put Erika and\nher trainers to sleep!
+
+#org @gText_CeladonDeptStore_JessieReveal_1
+[RED]Jessie[BLACK]: Hah! No matter where we\ngo, we'll always stumble onto\la couple of twerps, hmm?\pYes, we're the scoundrels who\nstuffed those spores in the vents!\lThere's no point in hiding it!
+
+#org @gText_CeladonDeptStore_JamesReveal_1
+[RED]James[BLACK]: And because of our inspired\nsleep scheme[.]\p[.]our staff succeeded at stashing\nthe shipment in sheer secrecy!\lOhohoho!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibSherry2
+[RED]Sherry[BLACK]: Quit it!\nWho are you people?!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibBrandy2
+[RED]Brandy[BLACK]: Can it!\nWho the heck ARE you?!
+
+#org @gText_CeladonDeptStore_JamesReveal_2
+[RED]James[BLACK]: We thought[.]
+
+#org @gText_CeladonDeptStore_JessieReveal_2
+[RED]Jessie[BLACK]: [.]you'd never ask!
+
+#org @gText_CeladonDeptStore_TRMotto1
+To protect the world from\n[RED]devastation![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto2
+To unite all peoples within our\n[RED]nation![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto3
+To denounce the evils of truth and\n[RED]love![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto4
+To extend our reach to the stars\n[RED]above![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto5
+[RED]Jessie![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto6
+[RED]James![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto7
+[RED]Team Rocket[BLACK], blast off at the speed\nof [RED]light![BLACK]
+
+#org @gText_CeladonDeptStore_TRMotto8
+Surrender now, or prepare to\n[RED]fight![BLACK]
+
+#org @gText_CeladonDeptStore_TRBeat
+[.] [.] [.]
+
+#org @gText_CeladonDeptStore_JamesWaitNoPokemon1
+[RED]James[BLACK]: (Hey, Wobbuffet didn't come\nout.[PAUSE][5] Do you not have him?)
+
+#org @gText_CeladonDeptStore_JessieWaitNoPokemon1
+[RED]Jessie[BLACK]: (My regularly scheduled\nPok\e Ball polishing was today!)
+
+#org @gText_CeladonDeptStore_JamesWaitNoPokemon2
+[RED]James[BLACK]: (So was mine!)
+
+#org @gText_CeladonDeptStore_JessieWaitNoPokemon2
+[RED]Jessie[BLACK]: (Okay, okay. Let's not\npanic!)
+
+#org @gText_CeladonDeptStore_JamesWaitNoPokemon3
+[RED]James[BLACK]: (I'm not panicking,\nyou're panicking!)
+
+#org @gText_CeladonDeptStore_JessieWaitNoPokemon3
+[RED]Jessie[BLACK]: (Just call in the [BLUE]Prize\nMaster[BLACK], James!)
+
+#org @gText_CeladonDeptStore_JamesWaitNoPokemon4
+[RED]James[BLACK]: (Ah! Clever thinking,\nold girl!)
+
+#org @gText_CeladonDeptStore_JessieWaitNoPokemon4
+[RED]Jessie[BLACK]: Hey, twerps!\pGet a load of this!
+
+#org @gText_CeladonDeptStore_BeholdThePrizeMaster1
+[RED]Jessie[BLACK]: Behold[.]\nThe [BLUE]Rocket Prize Master[BLACK]!
+
+#org @gText_CeladonDeptStore_BeholdThePrizeMaster2
+What do you think we'll get\ntoday, James?\pA Gyarados?\nA Machamp?
+
+#org @gText_CeladonDeptStore_JamesGachaPulls
+[RED]James[BLACK]: Remember when I got a\nTyranitar? I love this thing!\pWe don't even need Meowth's coin\nanymore!\lLet's make our pulls!
+
+#org @gText_CeladonDeptStore_JessieReadyToGo
+[RED]Jessie[BLACK]: Once we're done showing\noff our might[.]\pYou're gonna hand over your\nPok\emon!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibSherry3
+[RED]Sherry[BLACK]: Sib![PAUSE][20] I dunno if we can\nhandle these guys[.]\pBut while they were doing all that,\n[RED]I secretly healed your entire team.[BLACK]\pAm I good or what?\nI'm with you all the way!\lLet's go!
+
+#org @gText_CeladonDeptStore_RocketRooftop_SibBrandy3
+[RED]Brandy[BLACK]: Sib![PAUSE][20] These guys seem like\nserious business[.]\pBut while they were doing all that,\n[RED]I secretly healed your entire team.[BLACK]\pAm I good or what?\nI'm with you all the way!\lLet's go!
+
+#org @gText_CeladonDeptStore_RocketsLose
+James: Oh, come on! Really?!\nJessie: Those were terrible pulls!
+
+#org @gText_CeladonDeptStore_RocketsAfter
+We're blasting off agaaaaaain!\p[.] [.] [.] [.]\n[.] [.] [.] [.]\l[.][PAUSE][10] [.][PAUSE][10] [.][PAUSE][10] [.][PAUSE][10] [.][PAUSE][10] [.]
+
+#org @gText_CeladonDeptStore_JessieLost1
+[RED]Jessie[BLACK]: Well?! Don't you twerps\nknow how to blast us off?!
+
+#org @gText_CeladonDeptStore_SherryConfused
+[RED]Sherry[BLACK]: [.]What?
+
+#org @gText_CeladonDeptStore_BrandyConfused
+[RED]Brandy[BLACK]: [.]What?
+
+#org @gText_CeladonDeptStore_JessieLost2
+[RED]Jessie[BLACK]: Kids these days just\ndon't have any tact, James.\lThese two are rank amateurs.
+
+#org @gText_CeladonDeptStore_JamesLost2
+[RED]James[BLACK]: Hmmph![PAUSE][20] Let's go, Jessie.
+
+#org @gText_CeladonDeptStore_JamesLost3
+[RED]James[BLACK]: [.]You know, we usually don't\nhave to drag this thing back[.]
+
+#org @gText_CeladonDeptStore_FadeToBlack
+You both watch Jessie & James\ncontinue to drag the Prize Master\ldownstairs at an agonizing pace.
+
+#org @gText_CeladonDeptStore_SherryAfterLeave_PlayerChoseRelicanth
+[RED]Sherry[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Sigilyph fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_SherryAfterLeave_PlayerChoseSigilyph
+[RED]Sherry[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Passimian fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_SherryAfterLeave_PlayerChosePassimian
+[RED]Sherry[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Relicanth fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_SherryAfterLeave_Rando
+[RED]Sherry[BLACK]: Sorry I couldn't help\nmore, sib.\pMy other Pok\emon fainted when I\n wasfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_BrandyAfterLeave_PlayerChoseRelicanth
+[RED]Brandy[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Sigilyph fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_BrandyAfterLeave_PlayerChoseSigilyph
+[RED]Brandy[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Passimian fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_BrandyAfterLeave_PlayerChosePassimian
+[RED]Brandy[BLACK]: Sorry I couldn't help\nmore, sib.\pMy Relicanth fainted when I was\nfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_BrandyAfterLeave_Rando
+[RED]Brandy[BLACK]: Sorry I couldn't help\nmore, sib.\pMy other Pok\emon fainted when I\n wasfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
+
+#org @gText_CeladonDeptStore_SibAfterRocketRoofWin
+Now, let's get that energy drink!\pIt'll be my treat, but you gotta\ntake it down to the gym, okay?
+
+#org @gText_CeladonDeptStore_SherryAfterWinLeave1
+[RED]Sherry[BLACK]: I gotta prepare better[.]\pSo I think that means I need more\nPok\emon!
+
+#org @gText_CeladonDeptStore_BrandyAfterWinLeave1
+[RED]Brandy[BLACK]: I gotta prepare better[.]\pSo I think that means I need more\nPok\emon!
+
+#org @gText_CeladonDeptStore_PlayerChosePassimianSoOopsIHaveRelicanth
+After all, my poor Relicanth won't\ndo so well at a Grass-type gym[.]
+
+#org @gText_CeladonDeptStore_SibAfterWinLeave2
+But! This was sooo cool, sib!\nI can't believe we get to do this!\pI'm sure everyone that in Celadon\nwill praise our heroism[.]!\pI'll catch you later, fellow hero!\nHeheh!
+
+#org @gText_CeladonDept_Floor1_RegularNPC1
+Remember when larger boxes of\ncereal would say,\l"Now 20% More Free\"?\pThey did that a LOT for a while,\nbut then they stopped.\lMaybe it was a legal thing?\lOr were people not falling for it?\p"20% more free\" doesn't make much\nsense.\pWere you getting 20% more cereal\nthan you used to?\pOr was the cereal now 20% more\nfree than before?\pI hadn't seen this marketing trick\nin years[.]\p[.]But I saw "20% more free\" on some\npainkillers just now.\pDon't let 'em manipulate you[.]\n[PAUSE][20]Ain't nothing's free.
+
+#org @gText_CeladonDept_Floor2_RegularNPC1
+Items items items!\nI'm getting so many items!\p[.]Hey, did all the [RED]Klefki Ring[BLACK]\nalbums sell out?
+
+#org @gText_CeladonDept_Floor2_RegularNPC2
+Hey, twerp!\pYou hear about the explosion at\nSilph's Max Repel factory in [GREEN]Tiksi[BLACK]?\pRepelled all the Pok\emon out of\nthe whole region, it did.\lHUGE disaster.\pAnd they all wound up here!\nThat's one of the MANY sources of\lKanto's invasive species problems[.]\pBut hey, at least it proves Repels\nwork, right, twerp?
+
+#org @gText_CeladonDept_Floor4_RegularNPC1
+Twerp twerp twerp twerp!\nMom says you're a twerp!
+
+#org @gText_CeladonDept_Roof_RegularNPC1_TwerpMode
+My girlfriend wants to make a trip\nto [GREEN]Groudon Beach[BLACK].\pIt's a new tourist attraction at\nthe [GREEN]Sevii Islands[BLACK].\pNot only is it a great beach,\nbut you get to meet THE Groudon!\pYou know, the one who's the\nBaja Blastoise mascot!\lNOT a run-of-the-mill Groudon!\p[.]Oh, wait, aren't you the twerp?\nShoot, uhh[.]\pDid I mention I have a [RED]GIRLFRIEND[BLACK]?\nI bet YOU don't, twerp!

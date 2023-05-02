@@ -102,42 +102,6 @@ const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine[] = {
     },
 };
 
-const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_2[] = {
-    {
-        .iv = 6,
-        .lvl = 15,
-        .species = SPECIES_PSYDUCK,
-    },
-	{
-        .iv = 3,
-        .lvl = 15,
-        .species = SPECIES_GOLDEEN,
-    },
-	{
-        .iv = 19,
-        .lvl = 17,
-        .species = SPECIES_LUVDISC,
-    },
-};
-
-const struct TrainerMonNoItemDefaultMoves sParty_IcedPathSwimmerFrancine_3[] = {
-    {
-        .iv = 6,
-        .lvl = 36,
-        .species = SPECIES_GOLDUCK,
-    },
-	{
-        .iv = 3,
-        .lvl = 38,
-        .species = SPECIES_SEAKING,
-    },
-	{
-        .iv = 3,
-        .lvl = 39,
-        .species = SPECIES_LUVDISC,
-    },
-};
-
 const struct TrainerMonNoItemDefaultMoves sParty_IcedPathCamperTroy[] = {
     {
         .iv = 0,
@@ -156,21 +120,6 @@ const struct TrainerMonNoItemCustomMoves sParty_IcedPathCamperRoss[] = {
             MOVE_BRICKBREAK,
             MOVE_SHADOWSNEAK,
             MOVE_MAGICCOAT,
-        },
-		.ability = 1,
-    }
-};
-
-const struct TrainerMonNoItemCustomMoves sParty_IcedPathCamperRoss_2[] = {
-    {
-        .iv = 20,
-        .lvl = 47,
-        .species = SPECIES_KECLEON,
-        .moves = {
-            MOVE_FAKEOUT,
-            MOVE_ICEBEAM,
-            MOVE_SHADOWSNEAK,
-            MOVE_CAMOUFLAGE,
         },
 		.ability = 1,
     }
@@ -202,7 +151,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChoseRelica
 	{
         .iv = 5,
         .lvl = 8,
-        .species = SPECIES_NICKIT,
+        .species = SPECIES_CHINGLING,
     },
 };
 	
@@ -215,7 +164,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChoseSigily
 	{
         .iv = 5,
         .lvl = 8,
-        .species = SPECIES_NICKIT,
+        .species = SPECIES_CHINGLING,
     },
 };
 
@@ -228,7 +177,7 @@ const struct TrainerMonNoItemDefaultMoves sParty_BrandyBattle1_PlayerChosePassim
 	{
         .iv = 5,
         .lvl = 8,
-        .species = SPECIES_NICKIT,
+        .species = SPECIES_CHINGLING,
     },
 };
 
@@ -330,12 +279,140 @@ const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket1F[] = {
     }
 };
 
+const struct TrainerMonNoItemDefaultMoves sParty_CeladonDept_Rocket2F_1[] = {
+	{
+        .iv = 15,
+        .lvl = 8,
+        .species = SPECIES_CHARMANDER,
+    },
+	{
+        .iv = 15,
+        .lvl = 8,
+        .species = SPECIES_BULBASAUR,
+    },
+	{
+        .iv = 5,
+        .lvl = 8,
+        .species = SPECIES_SQUIRTLE,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_CeladonDept_Rocket2F_2[] = {
+	{
+        .iv = 15,
+        .lvl = 10,
+        .species = SPECIES_PIPLUP,
+    },
+	{
+        .iv = 15,
+        .lvl = 10,
+        .species = SPECIES_TEPIG,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket4F_1[] = {
+    {
+        .iv = 20,
+        .lvl = 8,
+        .species = SPECIES_GRIMER_A,
+        .moves = {
+            MOVE_SNARL,
+            MOVE_HARDEN,
+            MOVE_ACIDSPRAY,
+            MOVE_MEANLOOK,
+        },
+		.ability = 0,
+    },
+    {
+        .iv = 20,
+        .lvl = 7,
+        .species = SPECIES_SNEASEL,
+        .moves = {
+            MOVE_SNARL,
+            MOVE_QUICKATTACK,
+            MOVE_TAUNT,
+            MOVE_METALCLAW,
+        },
+		.ability = 0,
+    }
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket4F_2[] = {
+    {
+        .iv = 14,
+        .lvl = 9,
+        .species = SPECIES_CARVANHA,
+        .moves = {
+            MOVE_AQUAJET,
+            MOVE_POISONFANG,
+            MOVE_FOCUSENERGY,
+            MOVE_SNARL,
+        },
+		.ability = 0,
+    },
+	{
+        .iv = 16,
+        .lvl = 8,
+        .species = SPECIES_CARVANHA,
+        .moves = {
+            MOVE_POISONFANG,
+            MOVE_PROTECT,
+            MOVE_LEER,
+            MOVE_SNARL,
+        },
+		.ability = 0,
+    },
+};
+
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket5F_1[] = {
+    {
+        .iv = 13,
+        .lvl = 8,
+        .species = SPECIES_LITLEO,
+        .moves = {
+            MOVE_TACKLE,
+            MOVE_EMBER,
+            MOVE_WORKUP,
+            MOVE_SNARL,
+        },
+		.ability = 0,
+    },
+    {
+        .iv = 9,
+        .lvl = 6,
+        .species = SPECIES_SPIRITOMB,
+        .moves = {
+            MOVE_SNARL,
+            MOVE_SHADOWSNEAK,
+            MOVE_CURSE,
+            MOVE_SPITE,
+        },
+		.ability = 0,
+    }
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket5F_2[] = {
+    {
+        .iv = 17,
+        .lvl = 8,
+        .species = SPECIES_ABSOL,
+        .moves = {
+            MOVE_PERISHSONG,
+            MOVE_QUICKATTACK,
+            MOVE_FLASH,
+            MOVE_SNARL,
+        },
+		.ability = 0,
+    },
+};
+
 // Celadon Dept Store - Garchomp Gavin 1
 
 const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_GarchompGavin1[] = {
     {
         .iv = 31,
-        .lvl = 7,
+        .lvl = 11,
         .species = SPECIES_GIBLE,
         .moves = {
             MOVE_DRAGONBREATH,
@@ -346,6 +423,37 @@ const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_GarchompGavin1[] = {
 		.ability = 2,
     }
 };
+
+// Celadon Dept Store - Jessie & James 1
+
+const struct TrainerMonNoItemDefaultMoves sParty_CeladonDept_JessieJames1[] = {
+	{
+        .iv = 1,
+        .lvl = 7,
+        .species = SPECIES_ZUBAT,
+    },
+	{
+        .iv = 1,
+        .lvl = 7,
+        .species = SPECIES_RATTATA,
+    }
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeladonDeptRockets_SibPartner[] = {
+	{
+        .iv = 5,
+        .lvl = 14,
+        .species = SPECIES_CHINGLING,
+        .moves = {
+            MOVE_WRAP,
+            MOVE_YAWN,
+            MOVE_CONFUSION,
+            MOVE_ASTONISH,
+        },
+		.ability = 0,
+    }
+};
+
 
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
@@ -437,7 +545,7 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_BrandyBattle1_PlayerChosePassimian}
     },
 	
-		[TRAINER_SHERRYBATTLE1_PLAYER_CHOSE_RELICANTH] = {
+	[TRAINER_SHERRYBATTLE1_PLAYER_CHOSE_RELICANTH] = {
         .partyFlags = 0,
         .trainerClass = CLASS_PKMN_TRAINER,
         .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
@@ -627,6 +735,84 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_CeladonDept_Rocket1F),
         .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket1F}
+    },	
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_2F_1] {
+        .partyFlags = 0,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_J, _e, _r, _e, _m, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket2F_1),
+        .party = {.NoItemDefaultMoves = sParty_CeladonDept_Rocket2F_1}
+    },	
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_2F_2] {
+        .partyFlags = 0,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_M, _o, _n, _t, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket2F_2),
+        .party = {.NoItemDefaultMoves = sParty_CeladonDept_Rocket2F_2}
+    },
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_4F_1] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_B,
+        .trainerName = {_A, _l, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket4F_1),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket4F_1}
+    },
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_4F_2] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_B, _r, _a, _m, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket4F_2),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket4F_2}
+    },	
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_5F_1] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_D, _r, _e, _w, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket5F_1),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket5F_1}
+    },
+	
+	[TRAINER_DEPTSTORE_ROCKETGRUNT_5F_2] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_ROCKET_GRUNT,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_A,
+        .trainerName = {_Z, _i, _n, _o, _v, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_Rocket5F_2),
+        .party = {.NoItemCustomMoves = sParty_CeladonDept_Rocket5F_2}
     },
 	
 	// Celadon Dept Store - Garchomp Gavin
@@ -642,5 +828,46 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_CeladonDept_GarchompGavin1),
         .party = {.NoItemCustomMoves = sParty_CeladonDept_GarchompGavin1}
+    },	
+	
+	// Celadon Dept Store - Jessie & James
+	
+	[TRAINER_CELADON_JESSIEJAMES1] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_ROCKET_DUO,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_JESSIE_JAMES,
+        .trainerName = {_J, _e, _s, _s, _i, _e, _J, _a, _m, _e, _s, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDept_JessieJames1),
+        .party = {.NoItemDefaultMoves = sParty_CeladonDept_JessieJames1}
+    },
+	
+	[TRAINER_DEPTSTORE_SHERRYPARTNER] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SHERRY,		
+        .trainerName = {_S, _h, _e, _r, _r, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDeptRockets_SibPartner),
+        .party = {.NoItemCustomMoves = sParty_CeladonDeptRockets_SibPartner}
+    },		
+	
+	[TRAINER_DEPTSTORE_BRANDYPARTNER] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_BRANDY,
+        .trainerName = {_B, _r, _a, _n, _d, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_SEMI_SMART | AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_CeladonDeptRockets_SibPartner),
+        .party = {.NoItemCustomMoves = sParty_CeladonDeptRockets_SibPartner}
     },
 };
