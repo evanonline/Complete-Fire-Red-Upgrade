@@ -363,3 +363,27 @@ Twerp twerp twerp twerp!\nMom says you're a twerp!
 
 #org @gText_CeladonDept_Roof_RegularNPC1_TwerpMode
 My girlfriend wants to make a trip\nto [GREEN]Groudon Beach[BLACK].\pIt's a new tourist attraction at\nthe [GREEN]Sevii Islands[BLACK].\pNot only is it a great beach,\nbut you get to meet THE Groudon!\pYou know, the one who's the\nBaja Blastoise mascot!\lNOT a run-of-the-mill Groudon!\p[.]Oh, wait, aren't you the twerp?\nShoot, uhh[.]\pDid I mention I have a [RED]GIRLFRIEND[BLACK]?\nI bet YOU don't, twerp!
+
+#org @gText_CeladonCity_DeptStoreMerchantHiTwerp1
+Hey, twerp! What do you want?\nDon't expect any of our GOOD items!
+
+#org @gText_CeladonCity_DeptStoreMerchantHiTwerp2
+Hey, twerp!\nWhat do you want?
+
+#org @gText_CeladonCity_DeptStoreMerchantByeTwerp1
+Good!\nGet lost, twerp!
+
+#org @gText_CeladonCity_DeptStoreMerchantByeTwerp2
+You're lucky we're serving you!\nGet out of here, twerp.
+
+#org @gText_CeladonCity_DeptStoreMerchantEVs
+Hey[.] I've got [BLUE]vitamins[BLACK] and\n[BLUE]power items[BLACK] for [BLUE]EV Training[BLACK].
+
+#org @gText_CeladonCity_DeptStoreMerchantBattleItems
+Hey!\nI've got [BLUE]battle items[BLACK] for sale.
+
+#org @gText_CeladonCity_DeptStoreMerchant_ByeNotHater
+Good luck out there.\nSorry about my co-workers[.]
+
+#org @gText_CeladonCity_DeptStore_Chisps
+You know those potato chips?\nThe ones with the slogan,\l[RED]"Bet you can't eat just one!\"[BLACK]\pI'm immune to marketing and\npropaganda, so I did eat just one.\pI was 7 years old.\nHaven't eaten a potato chip since.\pAlthough, it's possible that I was\nforcefed a chip whilst I slept.\pBut that wouldn't count as\nME eating it.\lEating is YOUR choice!

@@ -15,6 +15,7 @@
 .equ FLAG_CHOSESTARTER3, 0x962
 .equ FLAG_CELADONDEPT_ROOF2, 0x96C @Person ID to hide the rockets in the store
 .equ FLAG_CELADON_GYMOPEN, 0x96D 
+.equ FLAG_GOT_COIN_CASE, 0x243
 .equ SP_DAILY_EVENT, 0xA0
 .equ SP_UPDATE_TIME_IN_VARS, 0xA1
 .equ SP_GET_TIME_DIFFERENCE, 0xA2
@@ -328,6 +329,53 @@ EventScript_CeladonCity_MayleneAutograph:
 	signmsg
 	msgbox gText_CeladonCity_RestaurantMayleneSign2 MSG_SIGN
 	end
+	
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@Game Corner coin attendants@@@@@@@@@@
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
+	
+.global EventScript_CeladonCity_GameCornerAttendant1
+EventScript_CeladonCity_GameCornerAttendant1:
+	checkflag FLAG_GOT_COIN_CASE
+	if SET _goto GotCoinCaseAlready
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if NOT_SET _call AttendantNormalMsg
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _call AttendantTwerpMsg
+	giveitem ITEM_COIN_CASE 0x1 MSG_OBTAIN
+	setflag FLAG_GOT_COIN_CASE
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if NOT_SET _call AttendantNormalDoneMsg
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _call AttendantTwerpDoneMsg
+	end
+
+AttendantNormalMsg:
+	msgbox gText_CeladonCity_GameCorner_Welcome MSG_KEEPOPEN
+	return
+
+AttendantTwerpMsg:
+	msgbox gText_CeladonCity_GameCorner_WelcomeTwerp MSG_KEEPOPEN
+	return
+
+AttendantNormalDoneMsg:
+	msgbox gText_CeladonCity_GameCorner_GotCoinCase MSG_NORMAL
+	return
+
+AttendantTwerpDoneMsg:
+	msgbox gText_CeladonCity_GameCorner_GotCoinCaseTwerp MSG_NORMAL
+	return
+
+GotCoinCaseAlready:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if NOT_SET _call AttendantNormalDoneMsg
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _call AttendantTwerpDoneMsg
+	end
+	
+@@@other attendant just uses vanilla scripts currently - need to review scrolling multichoice scripts later with skeli doc
+
+@;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 .global EventScript_CeladonCity_GameCornerLootbox
 EventScript_CeladonCity_GameCornerLootbox:

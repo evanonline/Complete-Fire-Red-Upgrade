@@ -1017,12 +1017,145 @@ EventScript_CeladonDept_Floor4_RegularNPC1:
 	msgbox gText_CeladonDept_Floor4_RegularNPC1 MSG_FACE
 	end	
 		
-	
 .global EventScript_CeladonDept_Roof_RegularNPC1
 EventScript_CeladonDept_Roof_RegularNPC1:
 	msgbox gText_CeladonDept_Roof_RegularNPC1_TwerpMode MSG_FACE
-	end	
+	end
 
+.global EventScript_CeladonDept_Chisps
+EventScript_CeladonDept_Chisps:
+	msgbox gText_CeladonCity_DeptStore_Chisps MSG_FACE
+	end
+
+.global EventScript_CeladonDept_2F_PokeBallsVendor
+EventScript_CeladonDept_2F_PokeBallsVendor:
+	lock
+	faceplayer
+	preparemsg gText_CeladonCity_DeptStoreMerchantHiTwerp1
+	waitmsg
+	pokemart EventScript_CeladonDept_PokeBalls_1
+	msgbox gText_CeladonCity_DeptStoreMerchantByeTwerp1 MSG_NORMAL
+	release
+	end
+
+.global EventScript_CeladonDept_2F_ConvenienceVendor
+EventScript_CeladonDept_2F_ConvenienceVendor:
+	lock
+	faceplayer
+	preparemsg gText_CeladonCity_DeptStoreMerchantHiTwerp2
+	waitmsg
+	pokemart EventScript_CeladonDept_ConvenienceItems_1
+	msgbox gText_CeladonCity_DeptStoreMerchantByeTwerp2 MSG_NORMAL
+	release
+	end
+	
+.global EventScript_CeladonDept_4F_EvoItemsGiftsVendor
+EventScript_CeladonDept_4F_EvoItemsGiftsVendor:
+	lock
+	faceplayer
+	preparemsg gText_CeladonCity_DeptStoreMerchantHiTwerp1
+	waitmsg
+	pokemart EventScripts_CeladonDept_GiftsEvoItems_1
+	msgbox gText_CeladonCity_DeptStoreMerchantByeTwerp2 MSG_NORMAL
+	release
+	end
+	
+.global EventScript_CeladonDept_5F_VitaminsPowerItemsVendor
+EventScript_CeladonDept_5F_VitaminsPowerItemsVendor:
+	lock
+	faceplayer
+	preparemsg gText_CeladonCity_DeptStoreMerchantEVs
+	waitmsg
+	pokemart EventScripts_CeladonDept_VitaminsPower
+	msgbox gText_CeladonCity_DeptStoreMerchant_ByeNotHater MSG_NORMAL
+	release
+	end
+	
+.global EventScript_CeladonDept_5F_BattleItemsVendor
+EventScript_CeladonDept_5F_BattleItemsVendor:
+	lock
+	faceplayer
+	preparemsg gText_CeladonCity_DeptStoreMerchantBattleItems
+	waitmsg
+	pokemart EventScripts_CeladonDept_XItems
+	msgbox gText_CeladonCity_DeptStoreMerchant_ByeNotHater MSG_NORMAL
+	release
+	end
+	
+EventScript_CeladonDept_PokeBalls_1:
+	.hword ITEM_POKE_BALL
+	.hword ITEM_NET_BALL
+	.hword ITEM_NEST_BALL
+	.hword ITEM_HEAL_BALL
+	.hword 0x0
+	
+EventScript_CeladonDept_PokeBalls_2:
+	.hword ITEM_POKE_BALL
+	.hword ITEM_GREAT_BALL
+	.hword ITEM_ULTRA_BALL
+	.hword ITEM_MASTER_BALL
+	.hword ITEM_NET_BALL
+	.hword ITEM_DIVE_BALL
+	.hword ITEM_NEST_BALL
+	.hword ITEM_REPEAT_BALL
+	.hword ITEM_TIMER_BALL
+	.hword ITEM_LUXURY_BALL
+	.hword ITEM_DUSK_BALL
+	.hword ITEM_HEAL_BALL
+	.hword ITEM_QUICK_BALL
+	.hword ITEM_DREAM_BALL
+	.hword ITEM_BEAST_BALL
+	.hword ITEM_FAST_BALL
+	.hword ITEM_LEVEL_BALL
+	.hword ITEM_LURE_BALL
+	.hword ITEM_HEAVY_BALL
+	.hword ITEM_LOVE_BALL
+	.hword ITEM_FRIEND_BALL
+	.hword ITEM_MOON_BALL
+	.hword 0x0
+
+@@@Safari & Sport Balls are in Fuchsia	
+
+EventScript_CeladonDept_ConvenienceItems_1:
+	.hword ITEM_POTION
+	.hword ITEM_ANTIDOTE
+	.hword ITEM_PARALYZE_HEAL
+	.hword ITEM_AWAKENING
+	.hword ITEM_REPEL
+	.hword 0x0
+	
+EventScripts_CeladonDept_GiftsEvoItems_1:
+	.hword ITEM_POKE_DOLL
+	.hword ITEM_RETRO_MAIL
+	.hword ITEM_SHADOW_MAIL
+	.hword 0x0
+	
+EventScripts_CeladonDept_VitaminsPower:
+	.hword ITEM_HP_UP
+	.hword ITEM_PROTEIN
+	.hword ITEM_IRON
+	.hword ITEM_CALCIUM
+	.hword ITEM_ZINC
+	.hword ITEM_CARBOS
+	.hword ITEM_POWER_BRACER
+	.hword ITEM_POWER_BELT
+	.hword ITEM_POWER_LENS
+	.hword ITEM_POWER_BAND
+	.hword ITEM_POWER_ANKLET
+	.hword ITEM_POWER_WEIGHT
+	.hword ITEM_MACHO_BRACE
+	.hword 0x0
+
+EventScripts_CeladonDept_XItems:
+	.hword ITEM_X_ATTACK
+	.hword ITEM_X_DEFEND
+	.hword ITEM_X_SPEED
+	.hword ITEM_X_SPECIAL
+	.hword ITEM_X_ACCURACY
+	.hword ITEM_GUARD_SPEC
+	.hword ITEM_DIRE_HIT
+	.hword 0x0
+		
 LookUp:
 	.byte look_up
 	.byte 0xFE

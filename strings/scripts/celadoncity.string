@@ -293,7 +293,37 @@ Ey, twerp!\nGet outta Celadon!
 You!\pYou're the one who messed with\nJessie & James!\pI hope a Nickit comes out of the\ngrass behind the building[.]\l[.]and steals from YOU!\lThen we'll see how YOU like it!
 
 #org @gText_CeladonCity_GameCorner_Welcome
-Welcome to the\n[GREEN]R Group Game Corner[BLACK]!
+Welcome to the\n[GREEN]R Group Game Corner[BLACK]!\pHere's a [BLUE]Coin Case[BLACK] so you can\nget started.
 
 #org @gText_CeladonCity_GameCorner_WelcomeTwerp
-Welcome to the\n[GREEN]R Group Game Corner[BLACK], twerp!
+Welcome to the\n[GREEN]R Group Game Corner[BLACK], twerp!\pHere's a [BLUE]Coin Case[BLACK]. Waste all your\ncoins gambling, twerp!
+
+#org @gText_CeladonCity_GameCorner_GotCoinCase
+Now that you have a Coin Case,\nyou're good to game!\pYou can take your winnings next\ndoor for some awesome prizes.
+
+#org @gText_CeladonCity_GameCorner_GotCoinCaseTwerp
+Now that you have a Coin Case,\nyou're good to game, twerp!\pYou can take your winnings next\ndoor for some prizes.
+
+#org @gText_CeladonCity_GameCorner_NoCoinCase
+You don't have a Coin Case!\pHead next door and they'll give you\none at the counter.
+
+#org @gText_GameCorner_Items
+Items
+
+#org @gText_GameCorner_Pokemon
+Pok\emon
+
+#org @gText_GameCorner_NoThanks
+No thanks
+
+#org @gText_GameCorner_PrizeShop_Intro
+If you've got Coins, I've got\nprizes!
+
+#org @gText_GameCorner_PrizeShop_IntroTwerp
+If you've got Coins, I've got\nprizes, twerp!
+
+#org @gText_GameCorner_PrizeShop_WhichPrize
+Choose your prize.
+
+#org @gText_GameCorner_item
+Items!

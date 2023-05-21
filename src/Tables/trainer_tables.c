@@ -454,6 +454,20 @@ const struct TrainerMonNoItemCustomMoves sParty_CeladonDeptRockets_SibPartner[] 
     }
 };
 
+// Route 5
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route5ClownJeeves[] = {
+	{
+        .iv = 12,
+        .lvl = 8,
+        .species = SPECIES_KRICKETOT,
+    },
+	{
+        .iv = 12,
+        .lvl = 6,
+        .species = SPECIES_STANTLER,
+    }
+};
 
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
@@ -869,5 +883,18 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_SEMI_SMART | AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_CeladonDeptRockets_SibPartner),
         .party = {.NoItemCustomMoves = sParty_CeladonDeptRockets_SibPartner}
+    },
+	
+	[TRAINER_ROUTE5_CLOWN_JEEVES] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_CLOWN,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_CLOWN,
+        .trainerName = {_J, _e, _e, _v, _e, _s, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_Route5ClownJeeves),
+        .party = {.NoItemDefaultMoves = sParty_Route5ClownJeeves}
     },
 };

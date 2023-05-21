@@ -1,11 +1,14 @@
 #org @gtext_CeruleanCity_MintIntroMintro
-Hey! You!\nYou're a Pok\emon Trainer, right?\lCould I ask for a favor[.]?\pThat bridge ahead is [GREEN]Nugget Bridge[BLACK].\pYou have to beat five Pok\emon\nTrainers to get across.\pBut[.] I don't have any Pok\emon!\pI'm trying to go meet this guy\nnamed Bill who lives up that way[.]\pBut if I don't have any Pok\emon,\nI have to do the fighting myself!\pI don't really want to punch any\nmore Pok\emon[.]\pSo, can you clear the way for me?\nI don't have any rewards to offer[.]\l[.]but[.]\lI heard there's a prize if you win.
+[RED]???[BLACK]: Hey! You!\n[PAUSE][20]You're a Pok\emon Trainer, right?\pMy name's [RED]Mint[BLACK]!\nCould I ask for a favor[.]?\pThat bridge ahead is [GREEN]Nugget Bridge[BLACK].\pYou have to beat five Pok\emon\nTrainers to get across.
+
+#org @gtext_CeruleanCity_MintIntroMintro2
+But[.][PAUSE][20] I don't have any Pok\emon!\pI'm trying to go meet this guy\nnamed [RED]Bill[BLACK] who lives up that way[.]\pBut if I don't have any Pok\emon,\nI have to do the fighting myself!\pI don't really want to punch any\nmore Pok\emon[.]\pSo, can you clear the way for me?\nI don't have any rewards to offer[.]\l[.][PAUSE][20]but[.]\lI heard there's a prize if you win.\lSo you scratch my back, I'll[.]\l[.][PAUSE][15]allow you to scratch yours?
 
 #org @gtext_CeruleanCity_MintIntro_AfterTalking
-Please clear the [GREEN]Nugget Bridge[BLACK]\nfor me!\pI heard the prize is a job offer,\nor solid gold, or something!\pWhatever it is, it's all yours!\nI just need to meet my hero, Bill!
+[RED]Mint[BLACK]: Please clear the\n[GREEN]Nugget Bridge[BLACK] for me!\pI heard the prize is a job offer,\nor solid gold, or something!\pWhatever it is, it's all yours!\nI just need to meet my hero, [RED]Bill[BLACK]!
 
 #org @gText_CeruleanCity_PokedexSnob
-Hohoho[.] What have we here?\nAre you making an encyclopedia?\lon Pok\emon?\pThat sounds so very amusing!\nI wish you best of luck, my good\nchum!\lHa!\lA Pok\emon index!\lWhat a novel idea!
+Hohoho[.] What have we here?\nAre you making an encyclopedia?\lon Pok\emon?\pThat sounds so very amusing!\nI wish you best of luck,\lmy good chum!\lHa!\lA Pok\emon index!\lWhat a novel idea!
 
 #org @gText_CeruleanCity_BajaBlastoiseWallpaper
 Have you seen the new promotional\nPC wallpaper?\lIt's themed around Baja Blastoise!\pThe new mascot kid is soooo cute!
@@ -15,3 +18,12 @@ Have you seen the new promotional\nPC wallpaper?\lIt's themed around Baja Blasto
 
 #org @gText_CeruleanCity_Vikings
 Have you ever seen a viking?\nIt's rare they leave Minnesota.
+
+#org @gText_CeruleanCity_BikeShop_May
+[RED]???[BLACK]: Huh!\nNo [BLUE]Acro Bikes[BLACK] for sale here?\pHey you! Between you and me?\p[GREEN]Mauville City[BLACK] in [GREEN]Hoenn[BLACK] sells the\ncoolest bikes in ANY world!
+
+#org @gText_CeruleanCity_BikeShop_OtherWoman
+This Bike Shop's prices are\nexorbitant to a fault.\pBut they ARE open 24 hours!\pIt's nice to know I can buy a bike\nat 3 AM if I need to.
+
+#org @gText_CeruleanRoute9_AnnoyingTree
+An annoying little tree is in the\nway.
