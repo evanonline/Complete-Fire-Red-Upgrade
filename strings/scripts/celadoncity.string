@@ -110,7 +110,7 @@ Hey, sorry. We're too busy\nfor more customers[.]\pSee, we're also a ghost kitch
 Chug[.]\pI've ordered from Iono Burger\nbefore. It's not great.\pBut Iono DOES have her own\nexclusive Baja Blastoise flavor[.]\l[RED]Baja Blastoise: Iono Volt Switch[BLACK]!\pThey should put it in stores.\nDown with exclusivity!
 
 #org @gText_CeladonCity_Restaurant_MayleneInspiredSquatter
-Munch[.]\nSlurp[.]\pThere's a Fighting-type Gym Leader\nfrom [GREEN]Sinnoh[BLACK] who likes eating here.\pI wanna be strong too!\nSo now I stay right here and eat.\lNo one's kicked me out yet!
+Munch[.]\nSlurp[.]\pThere's a Fighting-type Gym Leader\nfrom [GREEN]Sinnoh[BLACK] who likes eating here.\pI wanna be strong too!\nSo now I stay right here and eat.\lI never do anything else!\lNo one's kicked me out yet!
 
 #org @gText_CeladonCity_RestaurantMayleneSign1
 It's an autographed photo of a\npink-haired girl.
@@ -327,3 +327,9 @@ Choose your prize.
 
 #org @gText_GameCorner_item
 Items!
+
+#org @gText_CeladonCondominiums_Graffiti
+There's mustachioed graffiti on\nthe wall[.]\l[PLAYER] added a goofy nose!
+
+#org @gText_CeladonCondominiumsRoofGuy
+I love high places!\pThe only things that like high\nplaces more than me are[.]\lsmoke,\lbirds,\lclouds,\lspaceships,\lairplanes,\ldragons,\land balloons.\lIn that order!

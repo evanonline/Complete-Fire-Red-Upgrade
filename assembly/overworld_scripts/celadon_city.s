@@ -284,6 +284,11 @@ EventScript_CeladonCity_CondominiumsSign:
 	msgbox gText_CeladonCity_CondominiumsSign MSG_SIGN
 	end
 	
+.global EventScript_CeladonCity_CondominiumsGraffiti
+EventScript_Celadoncity_CondominiumsGraffiti:
+	msgbox gText_CeladonCondominiums_Graffiti MSG_NORMAL
+	end
+	
 .global EventScript_CeladonCity_RestaurantSign
 EventScript_CeladonCity_RestaurantSign:
 	signmsg
@@ -889,6 +894,10 @@ ErikaGymOpen:
 	hidesprite 8
 	closedoor 0xB 0x1E
 	end
+
+EventScript_CeladonCity_CondoRoofGuy:
+	msgbox gText_CeladonCondominiumsRoofGuy MSG_FACE
+	return
 
 LookLeft:
 	.byte look_left

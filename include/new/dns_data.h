@@ -329,6 +329,18 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
+	
+	{ //Cerulean City
+		.tilesetPointer = 0x82D4AF4, //Tileset 4
+		.paletteNumToFade = 8,
+		.paletteIndicesToFade =
+		{
+			{5,  RGB(25, 25, 9)},
+			{6,  RGB(28, 28, 15)},
+			{7,  RGB(30, 31, 19)},
+			TILESET_PAL_FADE_END
+		},
+	},
 };
 
 #else //For Pokemon Unbound - Feel free to remove

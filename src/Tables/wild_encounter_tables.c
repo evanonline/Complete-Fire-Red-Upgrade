@@ -484,6 +484,62 @@ const struct WildPokemon gRoute16_LandMonsNight[] =
 
 const struct WildPokemonInfo gRoute16_LandMonsInfoNight = {21, gRoute16_LandMonsNight};
 
+// Route 5
+
+const struct WildPokemon gRoute5_LandMonsMorning[] =
+{
+	{5, 7, SPECIES_TAILLOW},
+	{5, 7, SPECIES_TAILLOW},
+	{5, 6, SPECIES_ABRA},
+	{6, 6, SPECIES_WOOLOO},
+	{5, 6, SPECIES_SPRITZEE},
+	{4, 6, SPECIES_AZURILL},
+	{4, 6, SPECIES_MINCCINO},
+	{5, 6, SPECIES_CHATOT},
+	{5, 6, SPECIES_SPINDA},
+	{4, 6, SPECIES_HAPPINY},
+	{4, 7, SPECIES_HOOTHOOT},
+	{6, 7, SPECIES_NINCADA},
+};
+
+const struct WildPokemonInfo gRoute5_LandMonsInfoMorning = {21, gRoute5_LandMonsMorning};
+
+const struct WildPokemon gRoute5_LandMonsEvening[] =
+{
+	{5, 7, SPECIES_ABRA},
+	{5, 6, SPECIES_CHATOT},	
+	{6, 6, SPECIES_NINCADA},
+	{5, 6, SPECIES_TAILLOW},
+	{4, 7, SPECIES_HOOTHOOT},
+	{6, 6, SPECIES_WOOLOO},
+	{4, 6, SPECIES_MINCCINO},
+	{4, 6, SPECIES_AZURILL},
+	{5, 6, SPECIES_SPINDA},
+	{5, 6, SPECIES_SPRITZEE},
+	{4, 7, SPECIES_HAPPINY},
+	{4, 7, SPECIES_TAILLOW},
+};
+
+const struct WildPokemonInfo gRoute5_LandMonsInfoEvening = {21, gRoute5_LandMonsEvening};
+
+const struct WildPokemon gRoute5_LandMonsNight[] =
+{
+	{4, 7, SPECIES_HOOTHOOT},
+	{5, 6, SPECIES_HOOTHOOT},
+	{6, 6, SPECIES_NINCADA},
+	{5, 7, SPECIES_ABRA},
+	{6, 6, SPECIES_WOOLOO},
+	{5, 6, SPECIES_CHATOT},	
+	{4, 6, SPECIES_MINCCINO},
+	{4, 6, SPECIES_AZURILL},
+	{5, 6, SPECIES_SPINDA},
+	{5, 6, SPECIES_SPRITZEE},
+	{4, 7, SPECIES_HAPPINY},
+	{5, 7, SPECIES_TAILLOW},
+};
+
+const struct WildPokemonInfo gRoute5_LandMonsInfoNight = {23, gRoute5_LandMonsNight};
+
 // Iced Path
 
 const struct WildPokemon gIcedPath_LandMons[] =
@@ -607,6 +663,14 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
 	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_5),
+		.mapNum = MAP_NUM(ROUTE_5),
+		.landMonsInfo = &gRoute5_LandMonsInfoMorning,
+		.waterMonsInfo = NULL,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = NULL,
+	},
 };
 
 const struct WildPokemonHeader gWildMonDayHeaders[] =
@@ -663,6 +727,14 @@ const struct WildPokemonHeader gWildMonDayHeaders[] =
 		.mapGroup = MAP_GROUP(ROUTE_16),
 		.mapNum = MAP_NUM(ROUTE_16),
 		.landMonsInfo = &gRoute16_LandMonsInfoDay,
+		.waterMonsInfo = NULL,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = NULL,
+	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_5),
+		.mapNum = MAP_NUM(ROUTE_5),
+		.landMonsInfo = &gRoute5_LandMonsInfoMorning,
 		.waterMonsInfo = NULL,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
@@ -727,6 +799,14 @@ const struct WildPokemonHeader gWildMonEveningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,
 	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_5),
+		.mapNum = MAP_NUM(ROUTE_5),
+		.landMonsInfo = &gRoute5_LandMonsInfoEvening,
+		.waterMonsInfo = NULL,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = NULL,
+	},
 };
 
 const struct WildPokemonHeader gWildMonNightHeaders[] =
@@ -783,6 +863,14 @@ const struct WildPokemonHeader gWildMonNightHeaders[] =
 		.mapGroup = MAP_GROUP(ROUTE_16),
 		.mapNum = MAP_NUM(ROUTE_16),
 		.landMonsInfo = &gRoute16_LandMonsInfoNight,
+		.waterMonsInfo = NULL,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = NULL,
+	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_5),
+		.mapNum = MAP_NUM(ROUTE_5),
+		.landMonsInfo = &gRoute5_LandMonsInfoNight,
 		.waterMonsInfo = NULL,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = NULL,

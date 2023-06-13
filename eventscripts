@@ -243,6 +243,8 @@ npc 10 7 3 EventScript_CeladonCity_Manager
 npc 10 9 0 EventScript_CeladonCity_GameFreakNPC_0
 npc 10 9 2 EventScript_CeladonCity_GameFreakNPC_2
 npc 10 9 3 EventScript_CeladonCity_GameFreakNPC_3
+sign 10 10 2 EventScript_Celadoncity_CondominiumsGraffiti
+npc 10 10 0 EventScript_CeladonCity_CondoRoofGuy
 npc 10 11 0 EventScript_CeladonCity_NoLongerKnowEverything
 map 10 12 gMapScripts_CeladonCitySibSprite_InsidePokeCenter
 npc 10 12 1 EventScript_CeladonCity_PokecenterRimeTrickGuy
@@ -331,6 +333,15 @@ npc 3 23 0 EventScript_Route5_ClownJeeves
 sign 3 3 0 EventScript_CeruleanCity_CitySign
 sign 3 3 1 EventScript_GymSign_Cerulean
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
+npc 3 3 2 EventScript_CeruleanRoute9_AnnoyingTree
+npc 3 3 3 EventScript_CeruleanCity_AngryGeezer
+npc 3 3 4 EventScript_CeruleanCity_PokedexSnob
+npc 7 2 0 EventScript_CeruleanCity_BajaBlastoiseFan1
+npc 7 2 1 EventScript_CeruleanCity_BajaBlastoiseFan2
+npc 7 3 1 EventScript_CeruleanCity_Vikings
+npc 7 3 2 EventScript_CeruleanCity_MistyGossip
+npc 7 3 3 EventScript_CeruleanCity_Miraidon
+npc 7 3 4 EventScript_CeruleanCity_BajaBlastoiseWallpaper
 npc 7 6 1 EventScript_CeruleanCity_BikeShopMay
 npc 7 6 2 EventScript_CeruleanCity_BikeShopOtherCustomer
 

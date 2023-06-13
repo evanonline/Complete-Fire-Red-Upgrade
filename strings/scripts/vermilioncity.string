@@ -44,13 +44,13 @@ The [GREEN]S.S. Anne[BLACK] had a controversial\naccident many years back.\pThey
 It's me! The one, the only!\nThe Fishing Guru!\pIt looks like you already have an\nawesome Old Rod.\lThat's the best kind of rod!\lYou're a kindred soul, buddy!
 
 #org @gText_VermilionCityNPC_TypesSame
-Things are the same as ever[.]\nI'm waiting for a shakeup.\pThere's no new Pok\emon types[.]\nBoring!
+Things are the same as ever[.]\nI'm waiting for a shakeup.\pI want a bunch of Pok\emon to get\nawesome new types!\pSudowoodo could be Grass/Rock!\pOr, Whismur could be Sound-type!\pBut no[.] Every Pok\emon is how\nyou'd expect them to be.\lBoring[.]
 
 #org @gText_VermilionCityNPC_HighExpectations
-These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog![PAUSE][5] THAT'S my hobby.\pIf you're a new trainer, you might\nwanna look stuff up online.\lNo shame in that!
+These days you're expected to know\nso much about Pok\emon.\pI don't know what an [BLUE]EV[BLACK] or [BLUE]IV[BLACK] is!\nI'm born to jog![PAUSE][5] THAT'S my hobby.\pApparently, the folks up at [GREEN]Cerise\nLab[BLACK] on the hill are experts on\ldeep Pok\emon intricacies.\pBut it's ok to look up confusing\nstuff online, too!\lNo shame in that!
 
 #org @gText_VermilionCityNPC_PaldeaSandwichCritic
-Out in [GREEN]Paldea[BLACK], their trash glistens\na little bit out in the wild.\pBut here in [GREEN]Kanto[BLACK], you need to use\nan [BLUE]Itemfinder[BLACK] to see hidden items.\pCultural differences are so\ninteresting!
+Out in [GREEN]Paldea[BLACK], small items glisten\na little bit out in the wild.\pBut here in [GREEN]Kanto[BLACK], you need to use\nan [BLUE]Itemfinder[BLACK] to see hidden items.\pCultural differences are so\ninteresting!
 
 #org @gText_VermilionCityNPC_PaldeaLetter
 Dear Greggy,\n[PAUSE][10]I hope this letter finds you well.\pI heard the R Group is investing in\nbeautifying [GREEN]Celadon City[BLACK].\pA mining town like [GREEN]Zapapico[BLACK] doesn't\nneed to be pretty! We're rugged!\lBut, that does sound cool[.]
@@ -65,10 +65,10 @@ Prau rau?
 There's always going to be groups\nwho want to use Pok\emon for crime.\pBut if you ask me, none were worse\nthan Team Rocket was.\pOther teams wanted to reshape the\nworld. Change things.\lTeam Rocket[.][PAUSE][14] just wanted money.
 
 #org @gText_VermilionCityNPC_TeamRocketMemory2
-That Giovanni guy had so much\nmoney, so much power[.]\pBut all he could think to do with\nany of it was to vie for more.\pMe? I'm using my meager wealth to\nbuy my Finneon a snack.\pA buddy's smile is worth more than\nthe world.
+That Giovanni guy had so much\nmoney, so much power[.]\pBut all he could think to do with\nany of it was to vie for more.\pMe? I'm using my meager wealth to\nbuy my Finneon a snack.\pA buddy's smile is worth more than\nanything.
 
 #org @gText_VermilionCityNPC_MoneySucks
-Grumble mumble[.]\nHey, you.\lAre you good at counting money?\l[SHRINK]I'm sure not[.]
+Grumble mumble[.]\nHey, you.\lAre you good at counting money?\l[SHRINK]I'm not[.]
 
 #org @gText_VermilionPortSign
 Vermilion Port\n[ARROW_DOWN]
