@@ -300,7 +300,6 @@ g006TuberATiles 82395AC
 g006TuberAPal 8239A4C
 g007TuberBTiles 82395B4
 g007TuberBPal 8239A54
-
 g008JanitorTiles 82395BC
 g008JanitorPal 8239A5C
 
@@ -321,6 +320,15 @@ g017GuitaristAPal 8239AA4
 g024FunOldManBTiles 823963C
 g024FunOldManBPal 8239ADC
 
+g036YoungsterATiles 823969C
+g036YoungsterAPal 8239B3C
+
+g046BirdkeeperTiles 82396EC
+g046BirdkeeperPal 8239B8C
+
+g049ParasolLadyTiles 8239704
+g049ParasolLadyPal 8239BA4
+
 g054GarchompGavinTiles 823972C
 g054GarchompGavinPal 8239BCC
 
@@ -331,15 +339,24 @@ g082YoungsterBTiles 823980C
 g082YoungsterBPal 8239CAC
 g083BugCatcherTiles	8239814
 g083BugCatcherPal 8239CB4
+g084LassTiles 823981C
+g084LassPal 8239CBC
 
 g086CamperTiles 823982C
 g086CamperPal 8239CCC
+g087PicnickerTiles 8239834
+g087PicnickerPal 8239CD4
 
 g099SwimmerBTiles 8239894
 g099SwimmerBPal 8239D34
+
+g102DragonTamerTiles 82398AC
+g102DragonTamerPal 8239D4C
 
 g109RocketGruntATiles 82398E4
 g109RocketGruntAPal 8239D84
 
 g138RocketGruntBTiles 82399CC
 g138RocketGruntBPal 8239E6C
+g139BattleGirlTiles 82399D4
+g139BattleGirlPal 8239E74

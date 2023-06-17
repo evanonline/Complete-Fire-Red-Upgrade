@@ -1,14 +1,23 @@
-#org @gtext_CeruleanCity_MintIntroMintro
-[RED]???[BLACK]: Hey! You!\n[PAUSE][20]You're a Pok\emon Trainer, right?\pMy name's [RED]Mint[BLACK]!\nCould I ask for a favor[.]?\pThat bridge ahead is [GREEN]Nugget Bridge[BLACK].\pYou have to beat five Pok\emon\nTrainers to get across.
+#org @gText_CeruleanCity_MintIntroMintroHeyStop
+[RED]???[BLACK]: Hey! You! Ahhh!\nCan I have a second?
 
-#org @gtext_CeruleanCity_MintIntroMintro2
-But[.][PAUSE][20] I don't have any Pok\emon!\pI'm trying to go meet this guy\nnamed [RED]Bill[BLACK] who lives up that way[.]\pBut if I don't have any Pok\emon,\nI have to do the fighting myself!\pI don't really want to punch any\nmore Pok\emon[.]\pSo, can you clear the way for me?\nI don't have any rewards to offer[.]\l[.][PAUSE][20]but[.]\lI heard there's a prize if you win.\lSo you scratch my back, I'll[.]\l[.][PAUSE][15]allow you to scratch yours?
+#org @gText_CeruleanCity_MintIntroMintroHeyYouApproachedMe
+[RED]???[BLACK]: Oh! Hello there!\nCan I ask you something?
 
-#org @gtext_CeruleanCity_MintIntro_AfterTalking
+#org @gText_CeruleanCity_MintIntroMintro1
+You're a Pok\emon Trainer, right?\pMy name's [RED]Mint[BLACK]!\n[PAUSE][16]Could I ask for a favor[.]?\pThat bridge ahead is [GREEN]Nugget Bridge[BLACK].\pYou have to beat five Pok\emon\nTrainers to get across.\p[.] [.] [.]
+
+#org @gText_CeruleanCity_MintIntroMintro2
+But[.][PAUSE][20] I don't have any Pok\emon!
+
+#org @gText_CeruleanCity_MintIntroMintro3
+I'm trying to go meet this guy\nnamed [RED]Bill[BLACK] who lives up that way[.]\pBut if I don't have any Pok\emon,\nI have to do the fighting myself!\pI really don't want to punch any\nmore Pok\emon[.]\pSo, can you clear the way for me?\nI don't have any rewards to offer[.]\l[.][PAUSE][20]but[.]\lI heard there's a prize if you win.\lSo you scratch my back, I'll[.]\l[.][PAUSE][15]allow you to scratch your own?
+
+#org @gText_CeruleanCity_MintIntro_AfterTalking
 [RED]Mint[BLACK]: Please clear the\n[GREEN]Nugget Bridge[BLACK] for me!\pI heard the prize is a job offer,\nor solid gold, or something!\pWhatever it is, it's all yours!\nI just need to meet my hero, [RED]Bill[BLACK]!
 
 #org @gText_CeruleanCity_PokedexSnob
-Hohoho[.] What have we here?\nAre you making an encyclopedia?\lOn Pok\emon?\pThat sounds so very amusing![PAUSE][21]\nI wish you best of luck,\lmy good chum!\lHa!\lA Pok\emon index!\lWhat a novel idea!
+Hohoho[.] What have we here?\nAre you making an encyclopedia?\lOn Pok\emon?\pThat sounds so very amusing![PAUSE][16]\nI wish you best of luck,\lmy good chum!\lHa!\lA Pok\emon index!\lWhat a novel idea!
 
 #org @gText_CeruleanCity_BikeShop_May
 [RED]???[BLACK]: Huh!\nNo [BLUE]Acro Bikes[BLACK] for sale here?\pHey you! Between you and me?\p[GREEN]Mauville City[BLACK] in [GREEN]Hoenn[BLACK] sells the\ncoolest bikes in ANY world!
@@ -41,25 +50,52 @@ I think Misty should fill the pool\nin her Gym with Baja Blastoise[.]\lHow AWESO
 Y'know, the author [GREEN]J. R. R. Pokken[BLACK]\nonce said[.]\p[.]that "Baja Blastoise\" is the most\nbeautiful phrase in any language.
 
 #org @gText_CeruleanCity_MistyGrouch_Brandy
-Pah, you people and your Pok\emon.\pTraining these Pok\emon creatures\nis utterly worthless!\pDo you really wanna dedicate your\nlife to a child's hobby?\pYou wanna turn out like Misty?\n[PAUSE][15]An unmarried woman?\lScorned by her family?\lGoin' through emotional phases,\lwhere yer dyin' your hair black,\land wearin' freaky swimsuits?\pGet a REAL job!\nContribute to society!\lWork at the Mart or somethin'!\pAnd ditch the Tepig necktie!\n[PAUSE][20]You're embarassing yourself!
+Pah, you people and your Pok\emon.\pTraining these Pok\emon creatures\nis utterly worthless!\pDo you really wanna dedicate your\nlife to a child's hobby?\pYou wanna turn out like Misty?\n[PAUSE][15]An unmarried woman?\lScorned by her family?\lGoin' through emotional phases,\lwhere yer dyin' your hair black,\land wearin' freaky swimsuits?\pGet a REAL job!\n[PAUSE][15]Contribute to society!\lWork at the Mart or somethin'!\pAnd ditch the Tepig costume!\n[PAUSE][15]You're embarassing yourself!
 
 #org @gText_CeruleanCity_MistyGrouch_Sherry
-Pah, you people and your Pok\emon.\pTraining these Pok\emon creatures\nis utterly worthless!\pDo you really wanna dedicate your\nlife to a child's hobby?\pYou wanna turn out like Misty?\n[PAUSE][15]An unmarried woman?\lScorned by her family?\lGoin' through emotional phases,\lwhere yer dyin' your hair black,\land wearin' freaky swimsuits?\pGet a REAL job!\nContribute to society!\lWork at the Mart or somethin'!\pAnd ditch the Ivysaur hat!\n[PAUSE][20]You're embarassing yourself!
+Pah, you people and your Pok\emon.\pTraining these Pok\emon creatures\nis utterly worthless!\pDo you really wanna dedicate your\nlife to a child's hobby?\pYou wanna turn out like Misty?\n[PAUSE][15]An unmarried woman?\lScorned by her family?\lGoin' through emotional phases,\lwhere yer dyin' your hair black,\land wearin' freaky swimsuits?\pGet a REAL job!\n[PAUSE][15]Contribute to society!\lWork at the Mart or somethin'!\pAnd ditch the Ivysaur hat!\n[PAUSE][15]You're embarassing yourself!
 
 #org @gText_CeruleanCity_StreamerTalk
-A lot of people make their careers\nonline these days.\pThe guitarist for that band,\n[RED]Klefki Ring[BLACK], got her start posting\lvideos of her practice sessions.\pSome people get [PAUSE][20]WEIRD[PAUSE][20] with it\nonline, though.\pYou ever hear of [GREEN]Nidothing[BLACK]?\nThe streamer?\lWhat's with that costume??\lReally creeps me out.
+A lot of people make their careers\nonline these days.\pThe guitarist for that band,\n[RED]Klefki Ring[BLACK], got her start posting\lvideos of her practice sessions.\pSome people get[.] [PAUSE][16]WEIRD[PAUSE][16] with it\nonline, though.\pYou ever hear of [GREEN]Nidothing[BLACK]?\nThe streamer?\lWhat's with that costume??\lReally creeps me out.
 
 #org @gText_CeruleanCity_MistyCommunityFigure
 Our Gym Leader, Misty, goes above\nand beyond at her job.\lShe's a community figure!\pThe other day, she fixed my son's\nbike. She's very handy!\pShe said that she has quite a\nhistory with broken bikes.\pShe didn't elaborate, but I knew\nwhat she was referring to[.]\pShe could probably never afford\nthe bike shop's crazy prices!\lSo, she started fixing old bikes!
 
-#org @gText_CeruleanCity_MistysFamily
-The Cerulean City gym has belonged\nto Misty's family for ages.\pBut Misty's really the first one\nin her family to be GOOD at it!\pHer parents abandoned the family\nbecause they hated running a gym.\pHer sisters were never all that\ninterested in it, either[.]
-
 #org @gText_CeruleanCity_CascadeBadge
-Hehhh, you need the [RED]Cascade Badge[BLACK],\nbuddyyyy?\lI got one of those, easy!\pA few years ago, these three\ngorgeous girls ran the gym.\pAnd they'd just give the badges\nout for free!\pNow you gotta battle Misty for\na badge[.] Tough luuuuck, bud!
+Hehhh, you need the [RED]Cascade Badge[BLACK],\nbuddyyyy?\lI got one of those, easy!\pA few years ago, these three\ngorgeous girls ran the Gym.\pAnd they'd just give the badges\nout for free!\pNow you gotta battle Misty for\na badge[.] Tough luuuuck, bud!
 
 #org @gText_CeruleanCity_CascadeBadge_PlayerGotBadge
 Hey, you got a [RED]Cascade Badge[BLACK]?\nNiiiiice.\pY'know, back in the day, the old\nGym Leaders gave out free badges!\pThe Champion had to come down and\nyell at 'em for it.\pSorry you had to work for it[.]\nSuckeeeeer!
 
+#org @gText_CeruleanCity_MistyGone
+I'm one of Misty's Gym trainers.\nI like having free pool access.\pBut she left and locked the door!\nNow I can't go swimming[.]\pShe's probably up at [GREEN]Route 25[BLACK],\nstaring at the sea[.]\pShe's a real navelgazer!\n[PAUSE][17]Which is fitting, given her outfit.
+
 #org @gText_CeruleanCity_MistySisterDramaGossip
 I heard my aunts say that Misty\nstopped talkin' to her sisters!\pThey had some big duel and\nMisty won!\lNow she's the ONLY Gym Leader!\pIf I beat MY sister in a fight,\ncan I stop talking to her, too?
+
+#org @gText_CeruleanCity_MistyGymLocked
+The Gym's door is locked[.]
+
+#org @gText_CeruleanCity_CeruleanCaveGuy
+This is the [GREEN]Cerulean Cave[BLACK].\nThe [GREEN]Unknown Dungeon[BLACK].\pYou need authorization from the\nPok\emon League in order to enter!
+
+#org @gText_CeruleanCity_WistfulBreeder
+When I was a young boy, there was\na strip of land connecting from\lhere to [GREEN]Route 24[BLACK].\pThe tides rose enough over the\nyears to wash it all away.\pNow the sea meets the river and\ngoes right under [GREEN]Nugget Bridge[BLACK]!
+
+#org @gText_CeruleanCity_MistysFamily
+The Cerulean City Gym has belonged\nto Misty's family for ages.\pBut Misty's really the first one\nin her family to be GOOD at it!\pHer parents abandoned the family\nbecause they hated running a Gym.\pHer sisters were never all that\ninterested in it, either[.]
+
+#org @gText_CeruleanCity_GuyWithBackyard
+Do you know how hard it is to find\na house with a yard in Kanto?\pThis is the most valuable house\nin the region.
+
+#org @gText_CeruleanCity_TormentKid1
+I wanna be a Pikachu when I grow\nup!\pBut I know I can't[.]\pThe fact that I'll never be\na Pikachu[.]\lIt makes me feel so,[PAUSE][16] so,[PAUSE][16] much[.][.][.]!
+
+#org @gText_RecieveTorment
+[PLAYER] recieved [GREEN]TM41[BLACK]!\nIt contains [GREEN]Torment[BLACK]!
+
+#org @gText_CeruleanCity_TormentKid2
+That!\n[PAUSE][16]Yeah, that!\lTorment!\lIt makes me feel so much Torment!\pTorment is a move that prevents\nPok\emon from using the same move\ltwice in a row.\pI hope you enjoy Torment, person!
+
+#org @gText_CeruleanCity_TormentKidAfter
+You know, I can use moves as many\ntimes as I want.\pBut if I was Pikachu, and someone\nused Torment on me[.]\pI'd have to change moves every\nother turn!\pI guess it's good I'm not Pikachu.\n[PAUSE][12]I feel better now, person!

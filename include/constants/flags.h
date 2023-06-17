@@ -296,8 +296,8 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_0x0DD               0x0DD
 #define FLAG_0x0DE               0x0DE
 #define FLAG_0x0DF               0x0DF
-#define FLAG_0x0E0               0x0E0
-#define FLAG_0x0E1               0x0E1
+#define FLAG_MINT_CERULEANTALK   0x0E0 //Using for Mint flagging the player down in Cerulean
+#define FLAG_TORMENT_TM          0x0E1 //Using for TM41 NPC in Cerulean
 #define FLAG_0x0E2               0x0E2
 #define FLAG_0x0E3               0x0E3
 #define FLAG_0x0E4               0x0E4

@@ -134,10 +134,10 @@ Eyyy, I'm gamblin' 'ere!
 Sorry, the R Group is handling an\nimportant shipment inside.\pPlease come back later.
 
 #org @gText_CeladonCity_SibEncounterSherry
-[RED]Sherry[BLACK]: Hey, sib!\nYou came to Celadon too, huh?\pI figured Erika might be able to\ntell me where to find a Bulbasaur!\pThere's a problem at the gym,\nthough[.]\pBut now that you're here, who\ncares about that?\pYou gotta show me what your team\nlooks like!\lIt's fightin' time, sib!
+[RED]Sherry[BLACK]: Hey, sib!\nYou came to Celadon too, huh?\pI figured Erika might be able to\ntell me where to find a Bulbasaur!\pThere's a problem at the Gym,\nthough[.]\pBut now that you're here, who\ncares about that?\pYou gotta show me what your team\nlooks like!\lIt's fightin' time, sib!
 
 #org @gText_CeladonCity_SibEncounterBrandy
-[RED]Brandy[BLACK]: Oh, it's you, sib!\pI came right to Celadon, too!\lCool city, right?\pI wanted to challenge Erika with\nmy fiery-hot spirit! Haha.\lBut[.] there's a problem at the gym[.]\pI was a little bummed, but now\nyou're here!\lAnd I FINALLY get to fight you!\lLet's go!
+[RED]Brandy[BLACK]: Oh, it's you, sib!\pI came right to Celadon, too!\lCool city, right?\pI wanted to challenge Erika with\nmy fiery-hot spirit! Haha.\lBut[.] there's a problem at the Gym[.]\pI was a little bummed, but now\nyou're here!\lAnd I FINALLY get to fight you!\lLet's go!
 
 #org @gText_CeladonCity_SibFightYouWon
 You got me, fair and square!
@@ -149,7 +149,7 @@ You got me, fair and square!
 [RED]Brandy[BLACK]: Oof!\nThat ruled, though!
 
 #org @gText_CeladonCity_SibEncounterFinal
-Oh, about the gym, though[.]\pI went inside and [RED]everyone\nwas asleep![BLACK]\pI managed to wake someone up,\nthough.\pThat's her out in front.\nLet's go ask her what was up!\pMaybe they all had a REALLY boring\nbattle or something.
+Oh, about the Gym, though[.]\pI went inside and [RED]everyone\nwas asleep![BLACK]\pI managed to wake someone up,\nthough.\pThat's her out in front.\nLet's go ask her what was up!\pMaybe they all had a REALLY boring\nbattle or something.
 
 #org @gText_CeladonCity_ErikaGymSceneNPC1
 Oh, hey[.]\nThanks again for waking me up.\pSome prankster stuck a Paras in\nthe ventilation system in there[.]\pIt used [BLUE]Spore[BLACK] and put everyone to\nsleep.\lUgh[.]\lThose Rocket hoodlums[.]
@@ -278,7 +278,7 @@ Hey!
 Oh![PAUSE][15]\nThat's the [RED]Energy Drink[BLACK]!
 
 #org @gText_CeladonCity_GymTrainer_GetsEnergyDrink2
-I had a feeling you got it[.]\pThe town's abuzz with talk that\nsome "twerps\" caused trouble\lat the Department Store.\pI'm sorry about that[.]\nWe're really grateful!\pIt looks like the R Group cleared\nout of the store, too.\pI'll tell Erika what you did, and\nwe'll try to, [PAUSE][20]uh[.]\l[.][PAUSE][20]rehabilitate your image[.]\p[.]But for now, let me get this\ndrink to Erika!\pAnd please, feel free to challenge\nthe gym!
+I had a feeling you got it[.]\pThe town's abuzz with talk that\nsome "twerps\" caused trouble\lat the Department Store.\pI'm sorry about that[.]\nWe're really grateful!\pIt looks like the R Group cleared\nout of the store, too.\pI'll tell Erika what you did, and\nwe'll try to, [PAUSE][20]uh[.]\l[.][PAUSE][20]rehabilitate your image[.]\p[.]But for now, let me get this\ndrink to Erika!\pAnd please, feel free to challenge\nthe Gym!
 
 #org @gText_CeladonCity_RGroupNotStupid_WhatDidYouDo
 Aren't you one of the twerps who\nmessed with Team Rocket?\pLook, we all know the R Group is\nTeam Rocket.\pBut their money is so important\nfor Celadon!\pIf we go the way [GREEN]Fuchsia City[BLACK] did,\nit'll be because of folks like you.

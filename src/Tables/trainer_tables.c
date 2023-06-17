@@ -469,6 +469,103 @@ const struct TrainerMonNoItemDefaultMoves sParty_Route5ClownJeeves[] = {
     }
 };
 
+// Route 24 - Nugget Bridge
+
+const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgeLassJarabe[] = {
+	{
+        .iv = 12,
+        .lvl = 7,
+        .species = SPECIES_MANKEY,
+    },
+	{
+        .iv = 12,
+        .lvl = 7,
+        .species = SPECIES_BUDEW,
+    }
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgeBirdkeeperAntipasto[] = {
+	{
+        .iv = 12,
+        .lvl = 4,
+        .species = SPECIES_PIDOVE,
+    },
+	{
+        .iv = 12,
+        .lvl = 8,
+        .species = SPECIES_HONCHKROW,
+    }
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgeYoungsterSeltzer[] = {
+	{
+        .iv = 12,
+        .lvl = 7,
+        .species = SPECIES_GEODUDE,
+    },
+	{
+        .iv = 12,
+        .lvl = 8,
+        .species = SPECIES_BERGMITE,
+    },
+	{
+        .iv = 12,
+        .lvl = 9,
+        .species = SPECIES_MILCERY,
+    }
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgeBattleGirlMaslina[] = {
+	{
+        .iv = 12,
+        .lvl = 7,
+        .species = SPECIES_TYROGUE,
+    },
+	{
+        .iv = 12,
+        .lvl = 8,
+        .species = SPECIES_FALINKS,
+    },
+	{
+        .iv = 12,
+        .lvl = 7,
+        .species = SPECIES_SNEASEL_H,
+    },
+	{
+        .iv = 12,
+        .lvl = 8,
+        .species = SPECIES_SAWK,
+    }
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgePicnickerOatmeal[] = {
+	{
+        .iv = 10,
+        .lvl = 7,
+        .species = SPECIES_TAUROS,
+    },
+	{
+        .iv = 10,
+        .lvl = 8,
+        .species = SPECIES_SPINDA,
+    },
+	{
+        .iv = 10,
+        .lvl = 9,
+        .species = SPECIES_TORKOAL,
+    },
+	{
+        .iv = 12,
+        .lvl = 9,
+        .species = SPECIES_MAKUHITA,
+    },
+	{
+        .iv = 15,
+        .lvl = 8,
+        .species = SPECIES_TAUROS,
+    }
+};
+
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
 const struct Trainer gTrainers[] = {
@@ -885,6 +982,8 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemCustomMoves = sParty_CeladonDeptRockets_SibPartner}
     },
 	
+	// Route 5
+	
 	[TRAINER_ROUTE5_CLOWN_JEEVES] = {
         .partyFlags = 0,
         .trainerClass = CLASS_CLOWN,
@@ -896,5 +995,72 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_SEMI_SMART,
         .partySize = NELEMS(sParty_Route5ClownJeeves),
         .party = {.NoItemDefaultMoves = sParty_Route5ClownJeeves}
+    },
+	
+	// Route 24 - Nugget Bridge
+
+	[TRAINER_NUGGETBRIDGE_LASS_JARABE] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_LASS,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_LASS,
+        .trainerName = {_J, _a, _r, _a, _b, _e, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_NuggetBridgeLassJarabe),
+        .party = {.NoItemDefaultMoves = sParty_NuggetBridgeLassJarabe}
+    },
+	
+	[TRAINER_NUGGETBRIDGE_BIRDKEEPER_ANTIPASTO] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_BIRD_KEEPER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_BIRDKEEPER,
+        .trainerName = {_A, _n, _t, _i, _p, _a, _s, _t, _o, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_NuggetBridgeBirdkeeperAntipasto),
+        .party = {.NoItemDefaultMoves = sParty_NuggetBridgeBirdkeeperAntipasto}
+    },
+	
+	[TRAINER_NUGGETBRIDGE_YOUNGSTER_SELTZER] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_YOUNGSTER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_YOUNGSTER_A,
+        .trainerName = {_S, _e, _l, _t, _z, _e, _r, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_NuggetBridgeYoungsterSeltzer),
+        .party = {.NoItemDefaultMoves = sParty_NuggetBridgeYoungsterSeltzer}
+    },
+	
+	[TRAINER_NUGGETBRIDGE_BATTLEGIRL_MASLINA] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_BATTLE_GIRL,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_BATTLE_GIRL,
+        .trainerName = {_M, _a, _s, _l, _i, _n, _a, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_NuggetBridgeBattleGirlMaslina),
+        .party = {.NoItemDefaultMoves = sParty_NuggetBridgeBattleGirlMaslina}
+    },
+	
+	[TRAINER_NUGGETBRIDGE_PICNICKER_OATMEAL] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_PICNICKER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_PICNICKER,
+        .trainerName = {_O, _a, _t, _m, _e, _a, _l, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .partySize = NELEMS(sParty_NuggetBridgePicnickerOatmeal),
+        .party = {.NoItemDefaultMoves = sParty_NuggetBridgePicnickerOatmeal}
     },
 };

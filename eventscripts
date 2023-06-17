@@ -328,22 +328,47 @@ sign 25 2 1 EventScript_Route16_RightBinoculars
 ## Route 5
 sign 3 23 0 EventScript_Route6_IcePathSign
 npc 3 23 0 EventScript_Route5_ClownJeeves
+npc 17 0 0 EventScript_Route5_ZakBagon
+npc 17 0 1 EventScript_Route5_ExternalOperator
+npc 17 0 2 EventScript_Route5_CameraMan
+npc 17 0 3 EventScript_Route5_SecondaryGuy
 
 ## Cerulean City
 sign 3 3 0 EventScript_CeruleanCity_CitySign
 sign 3 3 1 EventScript_GymSign_Cerulean
 sign 3 3 3 EventScript_TrainerTips_Nuzlocke
+tile 3 3 0 EventScript_CeruleanCity_MintStopsYou
+tile 3 3 1 EventScript_CeruleanCity_MintStopsYou
+tile 3 3 2 EventScript_CeruleanCity_ClosedGym
+npc 3 3 0 EventScript_CeruleanCaveGuy
+npc 3 3 1 EventScript_CeruleanCity_MintPlayerApproaches
 npc 3 3 2 EventScript_CeruleanRoute9_AnnoyingTree
 npc 3 3 3 EventScript_CeruleanCity_AngryGeezer
 npc 3 3 4 EventScript_CeruleanCity_PokedexSnob
+npc 3 3 5 EventScript_CeruleanCity_MistyFixesBikes
+npc 3 3 6 EventScript_CeruleanCity_CascadeBadgeJerk
+npc 3 3 7 EventScript_CeruleanCity_DisgruntedGymSwimmer
+npc 3 3 8 EventScript_CeruleanCity_WistfulBreeder
+npc 7 0 0 EventScript_CeruleanCity_YardGuy
 npc 7 2 0 EventScript_CeruleanCity_BajaBlastoiseFan1
 npc 7 2 1 EventScript_CeruleanCity_BajaBlastoiseFan2
 npc 7 3 1 EventScript_CeruleanCity_Vikings
 npc 7 3 2 EventScript_CeruleanCity_MistyGossip
 npc 7 3 3 EventScript_CeruleanCity_Miraidon
 npc 7 3 4 EventScript_CeruleanCity_BajaBlastoiseWallpaper
+npc 7 4 4 EventScript_CeruleanCity_LittleSisHater
 npc 7 6 1 EventScript_CeruleanCity_BikeShopMay
 npc 7 6 2 EventScript_CeruleanCity_BikeShopOtherCustomer
+npc 7 7 2 EventScript_CeruleanCity_StreamerTalk
+npc 7 8 0 EventScript_CeruleanCity_TormentKid
+npc 7 8 1 EventScript_CeruleanCity_MistyFamilyLoreGuy
+
+## Route 24
+npc 3 43 1 EventScript_Route24_PicnickerOatmeal
+npc 3 43 2 EventScript_Route24_BattleGirlMaslina
+npc 3 43 3 EventScript_Route24_YoungsterSeltzer
+npc 3 43 4 EventScript_Route24_BirdkeeperAntipasto
+npc 3 43 5 EventScript_Route24_LassJarabe
 
 ## Saffron guard tiles
 tile 17 1 0 Guard_LooksLeftMovesUp

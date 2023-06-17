@@ -191,7 +191,7 @@ You two are the best!\nI'll see to it, sir![PAUSE][10] And m-madam!
 Ah[.] Jessie! James!\nThe kids are HERE![PAUSE][10] Like, now!\lI-I'll leave it to you!
 
 #org @gText_CeladonDeptStore_RocketRooftop_SibSherry1
-[RED]Sherry[BLACK]: So, are you two in charge?\pDid YOU plant a Paras in Erika's\ngym??\lYou put everyone to sleep!
+[RED]Sherry[BLACK]: So, are you two in charge?\pDid YOU plant a Paras in Erika's\nGym??\lYou put everyone to sleep!
 
 #org @gText_CeladonDeptStore_RocketRooftop_SibBrandy1
 [RED]Brandy[BLACK]: So, you're the bosses!\pThen it's YOU who put Erika and\nher trainers to sleep!
@@ -335,7 +335,7 @@ You both watch Jessie & James\ncontinue to drag the Prize Master\ldownstairs at 
 [RED]Brandy[BLACK]: Sorry I couldn't help\nmore, sib.\pMy other Pok\emon fainted when I\n wasfighting downstairs!\pI used all my healing items on you,\nbecause I wanted to impress you[.]\lNot the smartest, huh?\pBut Chingling did great!\n[PAUSE][15]It gained so many levels in there!
 
 #org @gText_CeladonDeptStore_SibAfterRocketRoofWin
-Now, let's get that energy drink!\pIt'll be my treat, but you gotta\ntake it down to the gym, okay?
+Now, let's get that energy drink!\pIt'll be my treat, but you gotta\ntake it down to the Gym, okay?
 
 #org @gText_CeladonDeptStore_SherryAfterWinLeave1
 [RED]Sherry[BLACK]: I gotta prepare better[.]\pSo I think that means I need more\nPok\emon!
@@ -344,7 +344,7 @@ Now, let's get that energy drink!\pIt'll be my treat, but you gotta\ntake it dow
 [RED]Brandy[BLACK]: I gotta prepare better[.]\pSo I think that means I need more\nPok\emon!
 
 #org @gText_CeladonDeptStore_PlayerChosePassimianSoOopsIHaveRelicanth
-After all, my poor Relicanth won't\ndo so well at a Grass-type gym[.]
+After all, my poor Relicanth won't\ndo so well at a Grass-type Gym[.]
 
 #org @gText_CeladonDeptStore_SibAfterWinLeave2
 But! This was sooo cool, sib!\nI can't believe we get to do this!\pI'm sure everyone that in Celadon\nwill praise our heroism[.]!\pI'll catch you later, fellow hero!\nHeheh!

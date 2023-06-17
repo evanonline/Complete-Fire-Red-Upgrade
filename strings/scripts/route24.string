@@ -1,0 +1,53 @@
+#org @gText_Route24_LassJarabe_Before
+Welcome to the Nugget Bridge\nchallenge!\pI'll be your first battle!\nWah ha!
+
+#org @gText_Route24_LassJarabe_Lose
+One down, four to go!\nKeep at it!
+
+#org @gText_Route24_LassJarabe_After
+I did my best.\nI have no regrets!
+
+#org @gText_Route24_BirdkeeperAntipasto_Before
+Cerulean is a Nugget town,\npretty-face.
+
+#org @gText_Route24_BirdkeeperAntipasto_Lose
+You will never speak of my loss to\nanyone, if you know what's good.
+
+#org @gText_Route24_BirdkeeperAntipasto_After
+I did my best.\nI have none of these,\lshall we say,\lregrets.
+
+#org @gText_Route24_YoungsterSeltzer_Before
+I was watching you fight\nAntipasto.\pWhat a tryhard, right!\nA Level 8 Honchkrow?!\pWho uses a Dusk Stone on their\nMurkrow that early?!
+
+#org @gText_Route24_YoungsterSeltzer_Lose
+Gah! I shouldn't talk smack!\nMaybe I'm a trysoft!
+
+#org @gText_Route24_YoungsterSeltzer_After
+I didn't do my best[.]\nI have a few regrets.
+
+#org @gText_Route24_BattleGirlMaslina_Before
+Challenger number 4, comin' atcha!\nHiiiiiiyah! Hooh!\lI'm rarin' to go!
+
+#org @gText_Route24_BattleGirlMaslina_Lose
+Rats[.]\nWell, you've got one fight left[.]
+
+#org @gText_Route24_BattleGirlMaslina_After
+It's no fair[.]\pYou get to run back to a Pok\emon\nCenter after every fight.\pMeanwhile, ol' Maslina here has to\nstand around and wait for you!
+
+#org @gText_Route24_PicnickerOatmeal_Before
+I'm your final opponent!\nI'm Oatmeal!\lHave you realized our theme?
+
+#org @gText_Route24_PicnickerOatmeal_Lose
+That's right! All of us on Nugget\nBridge have themed names!
+
+#org @gText_Route24_PicnickerOatmeal_After
+We're all named after stuff you can\nfind in a grocery store.\lWe all have really weird parents.
+
+#org @gText_Route24_RivalBattle_Before
+Grah ah ah[.]\nIt's me, [PLAYER]!\pI'm here to offer you an\nincredible opportunity[.]\pJoin, uh[.] Team Rocket!\nYeah.
+
+#org @gText_Route24_RivalBattle_Yes
+Grah ha ha[.]\nUh[.][PAUSE][16]I[.]\lwasn't expecting you to say that[.]\pAhem. Okay! Uh!\nActually I was testing you.\lAnd you just failed.\lI'll get you[.]\lEvil, doer[.]?
+
+#org @gText_Route24_RivalBattle_No
+Grah ah ah. I'll make you pay for\ndefying Team Rocket.\lWhich is what I've been a part of.\lAll along[.]!
