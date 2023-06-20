@@ -395,7 +395,7 @@ const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket5F_1[] = {
 const struct TrainerMonNoItemCustomMoves sParty_CeladonDept_Rocket5F_2[] = {
     {
         .iv = 17,
-        .lvl = 8,
+        .lvl = 9,
         .species = SPECIES_ABSOL,
         .moves = {
             MOVE_PERISHSONG,
@@ -565,6 +565,34 @@ const struct TrainerMonNoItemDefaultMoves sParty_NuggetBridgePicnickerOatmeal[] 
         .species = SPECIES_TAUROS,
     }
 };
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route24CamperShane[] = {
+	{
+        .iv = 10,
+        .lvl = 9,
+        .species = SPECIES_RATTATA,
+    },
+	{
+        .iv = 10,
+        .lvl = 9,
+        .species = SPECIES_EKANS,
+    },	
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route24_RivalBattle2[] = {
+	{
+        .iv = 25,
+        .lvl = 9,
+        .species = SPECIES_NINCADA,
+    },
+	{
+        .iv = 25,
+        .lvl = 10,
+        .species = SPECIES_SNEASEL_H,
+    },
+};
+
+
 
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
@@ -1062,5 +1090,31 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_NuggetBridgePicnickerOatmeal),
         .party = {.NoItemDefaultMoves = sParty_NuggetBridgePicnickerOatmeal}
+    },
+	
+	[TRAINER_ROUTE24_CAMPER_SHANE] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_CAMPER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = {_S, _h, _a, _n, _e, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_Route24CamperShane),
+        .party = {.NoItemDefaultMoves = sParty_Route24CamperShane}
+    },
+	
+	[TRAINER_RIVALBATTLE2] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_RIVAL,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_RIVAL,		
+        .trainerName = NO_NAME, // Name replaced from RIVAL trainer classes
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .partySize = NELEMS(sParty_Route24_RivalBattle2),
+        .party = {.NoItemDefaultMoves = sParty_Route24_RivalBattle2}
     },
 };

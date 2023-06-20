@@ -32,7 +32,7 @@ Challenger number 4, comin' atcha!\nHiiiiiiyah! Hooh!\lI'm rarin' to go!
 Rats[.]\nWell, you've got one fight left[.]
 
 #org @gText_Route24_BattleGirlMaslina_After
-It's no fair[.]\pYou get to run back to a Pok\emon\nCenter after every fight.\pMeanwhile, ol' Maslina here has to\nstand around and wait for you!
+It's no fair[.]\pYou get to run back to a Pok\emon\nCenter after every fight.\pMeanwhile, ol' Maslina here has to\nstand around and wait for you!\pBut that's just the rules on\nNugget Bridge.
 
 #org @gText_Route24_PicnickerOatmeal_Before
 I'm your final opponent!\nI'm Oatmeal!\lHave you realized our theme?
@@ -43,11 +43,35 @@ That's right! All of us on Nugget\nBridge have themed names!
 #org @gText_Route24_PicnickerOatmeal_After
 We're all named after stuff you can\nfind in a grocery store.\lWe all have really weird parents.
 
+#org @gText_Route24_CamperShane_Before
+I saw your feat from the grass!\nNow I see your feet in the grass!
+
+#org @gText_Route24_CamperShane_Lose
+I should have known someone with\nyour feats and feet would beat me!
+
+#org @gText_Route24_CamperShane_After
+I love watching Nugget Bridge\nfeats from this spot in the grass.\lBeen doin' it for years!
+
 #org @gText_Route24_RivalBattle_Before
-Grah ah ah[.]\nIt's me, [PLAYER]!\pI'm here to offer you an\nincredible opportunity[.]\pJoin, uh[.] Team Rocket!\nYeah.
+[RED][RIVAL][BLACK]: Grah ah ah[.]\nIt's me, [PLAYER]!\pI'm here to offer you an\nincredible opportunity[.]\pJoin, uh[.] Team Rocket!\nYeah.
 
 #org @gText_Route24_RivalBattle_Yes
-Grah ha ha[.]\nUh[.][PAUSE][16]I[.]\lwasn't expecting you to say that[.]\pAhem. Okay! Uh!\nActually I was testing you.\lAnd you just failed.\lI'll get you[.]\lEvil, doer[.]?
+Grah ha ha[.]\nUh[.][PAUSE][16] I[.]\lwasn't expecting you to say that[.]\pAhem. Okay! Uh![PAUSE][17]\nActually I was testing you.\lAnd you just failed.\lI'll get you[.]\lEvil, doer[.]?
 
 #org @gText_Route24_RivalBattle_No
 Grah ah ah. I'll make you pay for\ndefying Team Rocket.\lWhich is what I've been a part of.\lAll along[.]!
+
+#org @gText_Route24_Rival_Loss
+Ugh[.]! Graahhhhh!\nI can't play pretend anymore!\pNothing's going my way right now!
+
+#org @gText_Route24_Rival_AfterBattle
+[RED][RIVAL][BLACK]: Ghhh[.]\n[PLAYER], this adventure sucks!\lI mean, [PAUSE][17]s-stinks!\pMy starter Pok\emon wasn't right,[PAUSE][17]\nMisty's not at her Gym,\land on top of all of that[.]\pThere's no freaking prize for\nwinning at Nugget Bridge anymore!\lIt's all purely recreational!\pI had heard that Team Rocket used\nto recruit people who won here!\lBut nooooo! No villains to fight!\lNothing cool happened!\pI decided I'd pretend to be from\nTeam Rocket for you[.]\pThat way, at least SOMEONE gets a\ncool adventure moment[.]
+
+#org @gText_Route24_Rival_RunNoise
+[.]Hey, do you hear something?
+
+#org @gText_Route24_MintRunsUp
+[RED]Mint[BLACK]: Thaaaaaanks, straaaangeeeer!
+
+#org @gText_Route24_Rival_MintRanBy
+Wait, who was that?!\pMaybe THEY were a bad guy I can\nfight!

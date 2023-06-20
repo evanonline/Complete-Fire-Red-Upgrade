@@ -89,7 +89,6 @@ def InsertCode():
     else:
         os.system("python scripts/insert.py")
 
-
 def ClearFromTo(rom, from_: int, to_: int):
     rom.seek(from_)
     for i in range(0, to_ - from_):

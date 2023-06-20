@@ -364,11 +364,15 @@ npc 7 8 0 EventScript_CeruleanCity_TormentKid
 npc 7 8 1 EventScript_CeruleanCity_MistyFamilyLoreGuy
 
 ## Route 24
+tile 3 43 0 EventScript_Rival2_Tile1
+tile 3 43 1 EventScript_Rival2_Tile2
+npc 3 43 0 EventScript_Route24_Rival2
 npc 3 43 1 EventScript_Route24_PicnickerOatmeal
 npc 3 43 2 EventScript_Route24_BattleGirlMaslina
 npc 3 43 3 EventScript_Route24_YoungsterSeltzer
 npc 3 43 4 EventScript_Route24_BirdkeeperAntipasto
 npc 3 43 5 EventScript_Route24_LassJarabe
+npc 3 43 6 EventScript_Route24_CamperShane
 
 ## Saffron guard tiles
 tile 17 1 0 Guard_LooksLeftMovesUp
