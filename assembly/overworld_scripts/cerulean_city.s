@@ -188,25 +188,20 @@ EventScript_CeruleanCity_MistyFamilyLoreGuy:
 
 .global EventScript_CeruleanCity_TormentKid
 EventScript_CeruleanCity_TormentKid:
-	lockall
 	faceplayer
 	checkflag FLAG_TORMENT_TM
 	if 0x1 _goto EventScript_CeruleanCity_TormentKid_AfterTM
-	msgbox gText_CeruleanCity_TormentKid1 MSG_FACE
+	msgbox gText_CeruleanCity_TormentKid1 MSG_KEEPOPEN
 	fanfare 0x101
-	msgbox gText_RecieveTorment MSG_FACE
+	msgbox gText_RecieveTorment MSG_KEEPOPEN
 	waitfanfare 
 	additem ITEM_TM41 0x1
 	setflag FLAG_TORMENT_TM
-	lockall
 	msgbox gText_CeruleanCity_TormentKid2 MSG_FACE
-	releaseall
 	end
 
 EventScript_CeruleanCity_TormentKid_AfterTM:
-	lockall
 	msgbox gText_CeruleanCity_TormentKidAfter MSG_FACE
-	releaseall
 	end
 
 LookLeft:

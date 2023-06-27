@@ -592,7 +592,48 @@ const struct TrainerMonNoItemDefaultMoves sParty_Route24_RivalBattle2[] = {
     },
 };
 
+// Route 25
 
+const struct TrainerMonNoItemCustomMoves sParty_Route25BackpackerJaney[] = {
+    {
+        .iv = 30,
+        .lvl = 7,
+        .species = SPECIES_GEODUDE,
+		.moves = {
+            MOVE_ROCKTOMB,
+            MOVE_DEFENSECURL,
+            MOVE_ROCKPOLISH,
+            MOVE_FLAIL,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route25_LassIphigenia[] = {
+	{
+        .iv = 21,
+        .lvl = 9,
+        .species = SPECIES_SEWADDLE,
+    },
+	{
+        .iv = 14,
+        .lvl = 9,
+        .species = SPECIES_CHIKORITA,
+    },
+};
+
+const struct TrainerMonNoItemDefaultMoves sParty_Route25_PokeKidJamie[] = {
+	{
+        .iv = 21,
+        .lvl = 6,
+        .species = SPECIES_IGGLYBUFF,
+    },
+	{
+        .iv = 14,
+        .lvl = 6,
+        .species = SPECIES_GRUBBIN,
+    },
+};
 
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
@@ -1113,8 +1154,49 @@ const struct Trainer gTrainers[] = {
         .trainerName = NO_NAME, // Name replaced from RIVAL trainer classes
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_Route24_RivalBattle2),
         .party = {.NoItemDefaultMoves = sParty_Route24_RivalBattle2}
+    },
+	
+	// Route 25
+
+	[TRAINER_ROUTE25_BACKPACKER_JANEY] {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_BACKPACKER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_BACKPACKER,
+        .trainerName = {_J, _a, _n, _e, _y, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_Route25BackpackerJaney),
+        .party = {.NoItemCustomMoves = sParty_Route25BackpackerJaney}
+    },
+	
+	[TRAINER_ROUTE25_LASS_IPHIGENIA] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_LASS,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_LASS,
+        .trainerName = {_I, _p, _h, _i, _g, _e, _n, _i, _a, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_Route25_LassIphigenia),
+        .party = {.NoItemDefaultMoves = sParty_Route25_LassIphigenia}
+    },
+	
+	[TRAINER_ROUTE25_POKEKID_JAMIE] = {
+        .partyFlags = 0,
+        .trainerClass = CLASS_POKE_KID,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_POKEKID_B,
+        .trainerName = {_J, _a, _m, _i, _e, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
+        .partySize = NELEMS(sParty_Route25_PokeKidJamie),
+        .party = {.NoItemDefaultMoves = sParty_Route25_PokeKidJamie}
     },
 };

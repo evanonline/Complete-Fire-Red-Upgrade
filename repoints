@@ -332,8 +332,16 @@ g049ParasolLadyPal 8239BA4
 g054GarchompGavinTiles 823972C
 g054GarchompGavinPal 8239BCC
 
+g065PokeKidATiles 8239784
+g065PokeKidAPal 8239C24
+g066PokeKidBTiles 823978C
+g066PokeKidBPal 8239C2C
+
 g069JessieJamesTiles 82397A4
 g069JessieJamesPal 8239C44
+
+g078LillieTiles 82397EC
+g078LilliePal 8239C8C
 
 g082YoungsterBTiles 823980C
 g082YoungsterBPal 8239CAC
@@ -347,14 +355,25 @@ g086CamperPal 8239CCC
 g087PicnickerTiles 8239834
 g087PicnickerPal 8239CD4
 
+g090HikerTiles 823984C
+g090HikerPal 8239CEC
+
 g099SwimmerBTiles 8239894
 g099SwimmerBPal 8239D34
 
 g102DragonTamerTiles 82398AC
 g102DragonTamerPal 8239D4C
+g103CherishBallerTiles 82398B4
+g103CherishBallerPal 8239D54
 
 g109RocketGruntATiles 82398E4
 g109RocketGruntAPal 8239D84
+
+g117MistyTiles 8239924
+g117MistyPal 8239DC4
+
+g119ErikaTiles 8239934
+g119ErikaPal 8239DD4
 
 g138RocketGruntBTiles 82399CC
 g138RocketGruntBPal 8239E6C

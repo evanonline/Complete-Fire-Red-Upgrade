@@ -374,6 +374,11 @@ npc 3 43 4 EventScript_Route24_BirdkeeperAntipasto
 npc 3 43 5 EventScript_Route24_LassJarabe
 npc 3 43 6 EventScript_Route24_CamperShane
 
+## Route 25
+npc 3 44 0 EventScript_Route25_BackpackerJaney
+npc 3 44 1 EventScript_Route25_PokeKidJamie
+npc 3 44 2 EventScript_Route25_LassIphigenia
+
 ## Saffron guard tiles
 tile 17 1 0 Guard_LooksLeftMovesUp
 tile 17 1 1 Guard_LooksLeftMovesUp
