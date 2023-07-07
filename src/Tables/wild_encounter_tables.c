@@ -256,7 +256,7 @@ const struct WildPokemon gRoute6_LandMonsMorning[] =
 	{3, 4, SPECIES_ZIGZAGOON},
 	{1, 5, SPECIES_DUCKLETT},
 	{3, 4, SPECIES_YAMPER},
-	{2, 3, SPECIES_SURSKIT},
+	{2, 3, SPECIES_SEWADDLE},
 	{1, 2, SPECIES_SWIRLIX},
 	{1, 3, SPECIES_CHINGLING},
 	{3, 5, SPECIES_SWIRLIX},
@@ -270,7 +270,7 @@ const struct WildPokemonInfo gRoute6_LandMonsInfoMorning = {21, gRoute6_LandMons
 
 const struct WildPokemon gRoute6_LandMonsDay[] =
 {
-	{3, 6, SPECIES_SURSKIT},
+	{3, 6, SPECIES_SEWADDLE},
 	{3, 4, SPECIES_YAMPER},
 	{1, 5, SPECIES_DUCKLETT},
 	{2, 3, SPECIES_ZIGZAGOON},
@@ -293,13 +293,13 @@ const struct WildPokemon gRoute6_LandMonsEvening[] =
 	{3, 5, SPECIES_CHINGLING},
 	{4, 4, SPECIES_YAMPER},
 	{3, 6, SPECIES_SNUBBULL},
-	{2, 3, SPECIES_SURSKIT},
+	{2, 3, SPECIES_SEWADDLE},
 	{1, 3, SPECIES_SWIRLIX},
 	{2, 3, SPECIES_IGGLYBUFF},
 	{1, 3, SPECIES_DUCKLETT},
 	{1, 4, SPECIES_PATRAT},
 	{4, 4, SPECIES_ZIGZAGOON_G},
-	{5, 6, SPECIES_SURSKIT},
+	{5, 6, SPECIES_SEWADDLE},
 };
 
 const struct WildPokemonInfo gRoute6_LandMonsInfoEvening = {21, gRoute6_LandMonsEvening};
@@ -312,7 +312,7 @@ const struct WildPokemon gRoute6_LandMonsNight[] =
 	{2, 5, SPECIES_PATRAT},
 	{3, 5, SPECIES_CHINGLING},
 	{2, 3, SPECIES_SNUBBULL},
-	{1, 3, SPECIES_SURSKIT},
+	{1, 3, SPECIES_SEWADDLE},
 	{1, 3, SPECIES_YAMPER},
 	{1, 3, SPECIES_PIDGEY},
 	{3, 3, SPECIES_ZIGZAGOON},
@@ -369,7 +369,6 @@ const struct WildPokemonInfo gRoute6_FishingMonsInfoNight = {30, gRoute6_Fishing
 
 const struct WildPokemon gRoute7_LandMonsMorning[] =
 {
-	{3, 6, SPECIES_ODDISH},
 	{5, 6, SPECIES_BELLSPROUT},
 	{5, 6, SPECIES_MORELULL},
 	{6, 6, SPECIES_COMBEE},
@@ -378,6 +377,7 @@ const struct WildPokemon gRoute7_LandMonsMorning[] =
 	{4, 6, SPECIES_THROH},
 	{3, 6, SPECIES_SAWK},
 	{3, 6, SPECIES_SPEAROW},
+	{3, 6, SPECIES_ODDISH},
 	{4, 6, SPECIES_MURKROW},
 	{4, 4, SPECIES_HOUNDOUR},
 	{4, 4, SPECIES_MEOWTH_A},
@@ -388,14 +388,14 @@ const struct WildPokemonInfo gRoute7_LandMonsInfoMorning = {21, gRoute7_LandMons
 const struct WildPokemon gRoute7_LandMonsDay[] =
 {
 	{5, 6, SPECIES_MEOWTH},
-	{4, 6, SPECIES_ODDISH},
-	{6, 6, SPECIES_MORELULL},
 	{4, 6, SPECIES_THROH},
 	{5, 6, SPECIES_BELLSPROUT},
 	{6, 6, SPECIES_COMBEE},
 	{4, 6, SPECIES_SAWK},
 	{4, 6, SPECIES_FURFROU},
 	{3, 6, SPECIES_SPEAROW},
+	{6, 6, SPECIES_MORELULL},
+	{4, 6, SPECIES_ODDISH},
 	{4, 6, SPECIES_MURKROW},
 	{4, 4, SPECIES_HOUNDOUR},
 	{4, 4, SPECIES_MEOWTH_A},
@@ -425,11 +425,11 @@ const struct WildPokemon gRoute7_LandMonsNight[] =
 {
 	{5, 6, SPECIES_MURKROW},
 	{5, 7, SPECIES_MEOWTH_A},
+	{4, 6, SPECIES_ODDISH},
 	{3, 6, SPECIES_SPEAROW},
 	{5, 5, SPECIES_MORELULL},
 	{4, 6, SPECIES_SAWK},
 	{6, 6, SPECIES_HOUNDOUR},
-	{4, 6, SPECIES_ODDISH},
 	{5, 6, SPECIES_BELLSPROUT},
 	{4, 6, SPECIES_THROH},
 	{4, 4, SPECIES_FURFROU},
@@ -717,6 +717,123 @@ const struct WildPokemon gRoute24_LandMonsNight[] =
 
 const struct WildPokemonInfo gRoute24_LandMonsInfoNight = {21, gRoute24_LandMonsNight};
 
+// Route 25
+
+const struct WildPokemon gRoute25_LandMonsMorning[] =
+{
+	{5, 8, SPECIES_SENTRET},
+	{6, 9, SPECIES_SKIDDO},
+	{6, 9, SPECIES_CRAMORANT},
+	{5, 7, SPECIES_BUIZEL},
+	{6, 8, SPECIES_BUNNELBY},
+	{7, 8, SPECIES_BUNEARY},
+	{6, 9, SPECIES_SWABLU},	
+	{6, 9, SPECIES_VULLABY},
+	{6, 9, SPECIES_SLAKOTH},
+	{6, 9, SPECIES_ODDISH},
+	{6, 7, SPECIES_VOLBEAT},
+	{6, 7, SPECIES_ILLUMISE},
+};
+
+const struct WildPokemonInfo gRoute25_LandMonsInfoMorning = {21, gRoute25_LandMonsMorning};
+
+const struct WildPokemon gRoute25_LandMonsDay[] =
+{
+	{5, 7, SPECIES_BUIZEL},
+	{6, 9, SPECIES_CRAMORANT},
+	{6, 9, SPECIES_BUNEARY},
+	{6, 9, SPECIES_BUNNELBY},
+	{7, 9, SPECIES_SKIDDO},
+	{5, 9, SPECIES_SENTRET},
+	{6, 9, SPECIES_SWABLU},	
+	{6, 9, SPECIES_VULLABY},
+	{6, 9, SPECIES_SLAKOTH},
+	{6, 9, SPECIES_ODDISH},
+	{6, 6, SPECIES_VOLBEAT},
+	{6, 6, SPECIES_ILLUMISE},
+};
+
+const struct WildPokemonInfo gRoute25_LandMonsInfoDay = {21, gRoute25_LandMonsDay};
+
+const struct WildPokemon gRoute25_LandMonsEvening[] =
+{
+	{5, 7, SPECIES_BUIZEL},
+	{6, 8, SPECIES_VULLABY},
+	{5, 8, SPECIES_SENTRET},
+	{6, 8, SPECIES_BUNNELBY},
+	{6, 9, SPECIES_BUNEARY},
+	{7, 8, SPECIES_CRAMORANT},
+	{6, 9, SPECIES_SKIDDO},
+	{6, 9, SPECIES_SLAKOTH},
+	{6, 9, SPECIES_SWABLU},
+	{6, 9, SPECIES_ODDISH},
+	{6, 8, SPECIES_VOLBEAT},
+	{6, 8, SPECIES_ILLUMISE},
+};
+
+const struct WildPokemonInfo gRoute25_LandMonsInfoEvening = {21, gRoute25_LandMonsEvening};
+
+const struct WildPokemon gRoute25_LandMonsNight[] =
+{
+	{5, 7, SPECIES_BUIZEL},
+	{6, 8, SPECIES_ODDISH},
+	{6, 8, SPECIES_VOLBEAT},
+	{6, 8, SPECIES_ILLUMISE},
+	{5, 8, SPECIES_SENTRET},
+	{6, 8, SPECIES_BUNNELBY},
+	{6, 9, SPECIES_SKIDDO},
+	{7, 9, SPECIES_CRAMORANT},
+	{6, 9, SPECIES_VULLABY},
+	{6, 9, SPECIES_BUNEARY},
+	{6, 9, SPECIES_SWABLU},
+	{6, 9, SPECIES_SLAKOTH},
+};
+
+const struct WildPokemonInfo gRoute25_LandMonsInfoNight = {21, gRoute25_LandMonsNight};
+
+const struct WildPokemon gRoute25_WaterMons[] =
+{
+    {20, 24, SPECIES_CLOBBOPUS},
+    {20, 20, SPECIES_PSYDUCK},
+    {20, 25, SPECIES_SLOWPOKE},
+    {24, 30, SPECIES_SLOWPOKE},
+    {33, 36, SPECIES_SEAKING},
+};
+
+const struct WildPokemonInfo gRoute25_WaterMonsInfo = {3, gRoute25_WaterMons};
+
+const struct WildPokemon gRoute25_FishingMonsMorning[] =
+{
+    {5, 6, SPECIES_ARROKUDA},
+    {5, 7, SPECIES_MAGIKARP},
+    {10, 19, SPECIES_FEEBAS},
+    {15, 18, SPECIES_ARROKUDA},
+    {10, 15, SPECIES_ARROKUDA},
+    {25, 30, SPECIES_ARROKUDA},
+    {30, 35, SPECIES_ARROKUDA},
+    {25, 29, SPECIES_FEEBAS},
+    {30, 38, SPECIES_ARROKUDA},
+    {38, 45, SPECIES_BARRASKEWDA},
+};
+
+const struct WildPokemonInfo gRoute25_FishingMonsInfoMorning = {21, gRoute25_FishingMonsMorning};
+
+const struct WildPokemon gRoute25_FishingMons[] =
+{
+    {5, 5, SPECIES_MAGIKARP},
+    {5, 7, SPECIES_ARROKUDA},
+    {10, 19, SPECIES_FEEBAS},
+    {15, 18, SPECIES_ARROKUDA},
+    {10, 15, SPECIES_ARROKUDA},
+    {25, 30, SPECIES_FEEBAS},
+    {30, 35, SPECIES_FEEBAS},
+    {20, 25, SPECIES_FEEBAS},
+    {30, 38, SPECIES_ARROKUDA},
+    {38, 45, SPECIES_BARRASKEWDA},
+};
+
+const struct WildPokemonInfo gRoute25_FishingMonsInfo = {21, gRoute25_FishingMons};
+
 // Iced Path
 
 const struct WildPokemon gIcedPath_LandMons[] =
@@ -872,6 +989,14 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gCeruleanCity_FishingMonsInfo,
 	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_25),
+		.mapNum = MAP_NUM(ROUTE_25),
+		.landMonsInfo = &gRoute25_LandMonsInfoMorning,
+		.waterMonsInfo = &gRoute25_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute25_FishingMonsInfoMorning,
+	},
 };
 
 const struct WildPokemonHeader gWildMonDayHeaders[] =
@@ -963,6 +1088,14 @@ const struct WildPokemonHeader gWildMonDayHeaders[] =
 		.waterMonsInfo = &gCeruleanCity_WaterMonsInfo,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gCeruleanCity_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_25),
+		.mapNum = MAP_NUM(ROUTE_25),
+		.landMonsInfo = &gRoute25_LandMonsInfoDay,
+		.waterMonsInfo = &gRoute25_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute25_FishingMonsInfo,
 	},
 };
 
@@ -1056,6 +1189,14 @@ const struct WildPokemonHeader gWildMonEveningHeaders[] =
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gCeruleanCity_FishingMonsInfo,
 	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_25),
+		.mapNum = MAP_NUM(ROUTE_25),
+		.landMonsInfo = &gRoute25_LandMonsInfoEvening,
+		.waterMonsInfo = &gRoute25_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute25_FishingMonsInfo,
+	},
 };
 
 const struct WildPokemonHeader gWildMonNightHeaders[] =
@@ -1147,6 +1288,14 @@ const struct WildPokemonHeader gWildMonNightHeaders[] =
 		.waterMonsInfo = &gCeruleanCity_WaterMonsInfo,
 		.rockSmashMonsInfo = NULL,
 		.fishingMonsInfo = &gCeruleanCity_FishingMonsInfo,
+	},
+	{
+		.mapGroup = MAP_GROUP(ROUTE_25),
+		.mapNum = MAP_NUM(ROUTE_25),
+		.landMonsInfo = &gRoute25_LandMonsInfoNight,
+		.waterMonsInfo = &gRoute25_WaterMonsInfo,
+		.rockSmashMonsInfo = NULL,
+		.fishingMonsInfo = &gRoute25_FishingMonsInfo,
 	},
 };
 

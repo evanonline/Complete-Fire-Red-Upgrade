@@ -375,9 +375,21 @@ npc 3 43 5 EventScript_Route24_LassJarabe
 npc 3 43 6 EventScript_Route24_CamperShane
 
 ## Route 25
+map 3 44 gMapScripts_Route25
 npc 3 44 0 EventScript_Route25_BackpackerJaney
 npc 3 44 1 EventScript_Route25_PokeKidJamie
 npc 3 44 2 EventScript_Route25_LassIphigenia
+npc 3 44 3 EventScript_Route25_BillIntro_LillieStart
+npc 3 44 4 EventScript_Route25_BillIntro_RivalStart
+npc 3 44 5 EventScript_Route25_BillIntro_MintStart
+npc 3 44 6 EventScript_Route25_Seagazer
+sign 30 0 0 EventScript_Route25_BillsHouse_GravelerCriesIDontKnowWhyThisIsHappening
+npc 30 0 1 EventScript_Route25_BillsHouse_Lillie
+npc 30 0 2 EventScript_Route25_BillsHouse_SandyShocks
+npc 30 0 3 EventScript_Route25_BillsHouse_Clefairy
+npc 30 0 4 EventScript_Route25_BillsHouse_Rival
+npc 30 0 5 EventScript_Route25_BillsHouse_Mint
+npc 30 0 6 EventScript_Route25_BillsHouse_Misty
 
 ## Saffron guard tiles
 tile 17 1 0 Guard_LooksLeftMovesUp

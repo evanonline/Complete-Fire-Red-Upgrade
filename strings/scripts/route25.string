@@ -24,3 +24,306 @@ I'm scared of rare Pok\emon!
 
 #org @gText_Route25_PokeKidJamie_After
 I'm just staying right here!\nThere's nothing rare or scary!
+
+#org @gText_Route25_SightseeingCherishBaller
+The Cerulean Cape is so pretty[.]\nIt's quite a popular date spot!\pI came up here to see Bill's rare\nPok\emon, but[.]\l[.]instead I'm lookin' at the sea!
+
+#org @gText_Route25_BillIntro_RivalIntroQuote1
+[RED][RIVAL][BLACK]: Let me in!\pI need to meet important people\non my adventure!!!
+
+#org @gText_Route25_BillIntro_RivalIntroQuote2
+[RED][RIVAL][BLACK]: No, let ME in!\pI need to meet important people\non my adventure!!!
+
+#org @gText_Route25_BillIntro_MintIntroQuote1
+[RED]Mint[BLACK]: Let me in!\pI wanna meet the guy on my most\nfavorite trading card!!!
+
+#org @gText_Route25_BillIntro_MintIntroQuote2
+[RED]Mint[BLACK]: And let me in, too!\pI wanna meet the guy on my most\nfavorite trading card!!!
+
+#org @gText_Route25_BillIntro_LillieDenial1
+[RED]???[BLACK]: Ahh[.]\nAhem! Excuse me!\p[.][.][.]\pEXCUSE ME!!!!!
+
+#org @gText_Route25_BillIntro_LillieDenial2
+I'm sorry, Bill is occupied with\na guest.\lPlease come back another time.
+
+#org @gText_Route25_BillIntro_Mint1
+[RED]Mint[BLACK]: That's okay!\nI'll just wait right here!\lI'll sleep here if I have to!
+
+#org @gText_Route25_BillIntro_Rival1
+[RED][RIVAL][BLACK]: I'm not going anywhere,\neither!\pI want to see rare Pok\emon!
+
+#org @gText_Route25_BillIntro_LillieUgh1
+[RED]???[BLACK]: Ahh[.]\p[BLUE](I-I still don't know how to deal\nwith rude people[.])\p(Get it together, Lillie!\n[PAUSE][16]Remember, full force!)
+
+#org @gText_Route25_BillIntro_LillieUgh2
+Listen, and listen well!\pImportant research is being done\naround the clock here at the\lSea Cottage!\pResearch regarding the very nature\nof what makes Pok\emon,[PAUSE][16] Pok\emon!\pIt's a delicate process that can't\nbe disturbed!\pWe simply cannot have tourists\nhovering around!\lPlease, get going and[.]
+
+#org @gText_Route25_BillIntro_Bill
+[RED]Bill[BLACK]: Yoohoo, Lillie!\nI thought I heard visitors!\pCome on in! Misty brought too many\nsandwiches!\lYou guys can help us finish 'em!\lAnd I'll show you my Pok\emon!
+
+#org @gText_Route25_BillIntro_Rival2
+[RED][RIVAL][BLACK]: MISTY'S IN THERE?!\pOutta the way!
+
+#org @gText_Route25_BillIntro_LillieUghhhhh
+[RED]Lillie[BLACK]: Ahh[.]\n[PAUSE][17][.][.][.][.][.]\p[BLUE](I really wanted some time to work\nalone during lunch[.])
+
+#org @gText_Route25_BillIntro_LillieSigh
+Well, I suppose you both may\nenter, as well[.]
+
+#org @gText_Route25_BillIntro_Mint2
+[RED]Mint[BLACK]: Wahoo!\nI'm gonna meet Bill AND Misty!\lThis is awesome!
+
+#org @gText_Route25_BillIntro_Mint3
+Hey, stranger, I never got your\nname.\p[.][.][.]\n[PAUSE][16][PLAYER], huh?\lCool name!\pYou're not on any trading cards\nI've ever owned.\pBut you're so nice, you're bound\nto get one someday!\pWell, seeya inside!
+
+#org @gText_Route25_BillsHouse_SandyShocks
+The strange Pok\emon stares at you\nin silence with all three eyes[.]
+
+#org @gText_Route25_BillsHouse_RivalTalk
+[RED][RIVAL][BLACK]: What the HECK is this\nweird Pok\emon?! I want one!
+
+#org @gText_Route25_BillsHouse_LillieTalk
+[RED]Lillie[BLACK]: Please! Be careful with\nShocksie!
+
+#org @gText_Route25_BillsHouse_MintTalk
+[RED]Mint[BLACK]: It's really Misty[.]!\n[PAUSE][16]I've seen her Wrath, and her Duel!\lAnd her Wish, too!\pI gotta introduce myself[.]\nShe's so awesome[.]
+
+#org @gText_Route25_BillsHouse_MistyTalk
+[RED]Misty[BLACK]: (Munch munch chomp[.])\nMan, this machine[.]\pI wonder how many times Bill has\nturned himself into a Pok\emon\lover the years[.]\l(Chomp chomp snack munch[.])\lHe did it once, (chew munch,)\lsurely he did it again[.] (Chomp[.])\lMan. Good sandwiches[.]
+
+#org @gText_Route25_BillsHouse_Clefairy
+Clefclef!
+
+#org @gText_Route25_BillsHouse_GravelerCries
+Bill's computer is on. He has a\nvideo playing, which is titled[.]\p"10 Hours of Silence Occasionally\nInterrupted by Graveler Cries.\"
+
+#org @gText_Route25_BillsHouse_BillStart
+[RED]Bill[BLACK]: Greetings, bud!\nThis is where the magic happens!\pI love having guests, especially\nwhen they're Pok\emon trainers!\pI wanna hear all about you, and\nwhat brings you here.\pShall we all sit down and dish\nover some sandwiches?
+
+#org @gText_Route25_BillsHouse_BillStart_No
+Let me know when you're ready to\neat, and I'll gather everyone up.
+
+#org @gText_Route25_BillsHouse_BillStart_Yes
+Great! Let's eat.
+
+#org @gText_Route25_BillsHouse_BillStart_LunchIntro
+[RED]Bill[BLACK]: Haha! I only have five\nchairs, so I'll stand.\lThat's what hospitality's about!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_1_Bill
+Welcome to the Sea Cottage!\pSurely you know what I do here,\lso tell me about yourselves!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_2_Rival
+[RED][RIVAL][BLACK]: I don't have time for\nsandwiches! I want a Gym Badge!\pLet's go back to your gym right\nnow and fight, Misty!
+
+#org @gText_Route25_BillsHouse_BillStart_3_Bill
+[RED]Bill[BLACK]: Hahaha. Lotta moxie, kid!\pYou're a real Scrafty!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_4_Rival
+[RED][RIVAL][BLACK]: Grgghhh!\nI'm no kid!\pWhy does everyone keep calling us\nkids?!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_5_Misty
+[RED]Misty[BLACK]: [.] [.] [.]\n[PAUSE][17]Sweetie, you might be an adult[.]\p[.]but you're certainly not acting\nlike one.\pSit back, eat a sandwich, and tell\nus about yourself.\lI'm not going anywhere.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_6_Rival
+[RED][RIVAL][BLACK]: Gh-ghhh! Fine!\nI'm [RIVAL]!\pThe person over there is [PLAYER]!\lWe're from [GREEN]Three Island[BLACK]!\pNot to brag, but we're the next\nbig Pok\emon trainers!\lEspecially me!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_7_Rival
+But I don't know who that girl is.\nShe's just some weirdo[.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch_8_Mint
+[RED]Mint[BLACK]: I[.][PAUSE][16] I'm[.][PAUSE][16] I am[.][PAUSE][16]\nThat is to say[PAUSE][16], I'm[.][PAUSE][16][.][PAUSE][16][.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch_9_Mint
+I'M MINT!!!!!!!\p[PAUSE][16]WOW!!!!!!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_10_Mint
+I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI can't begin to thank you both\nfor what you've done for me!\pBill, your Supporter ability has\ngotten me out of so many jams!\pThank you for helping me draw 2\ncards!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_11_Bill
+[RED]Bill[BLACK]: [.] [.] [.][PAUSE][16] [.] [.] [.]\nOhhhh! Hahahaha.\pYou're from [GREEN]TCG Island[BLACK], aren't\nyou, Mint?\pWell, you all know Misty, the\nCerulean City Gym Leader.\pAnd Lillie here is working with\nme on a major project!\pI'm sure you new trainers have\nplenty of questions for us.\nYou haven't had much of a chance\nto talk, [PLAYER].\lI'll let you start!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TopicSelection
+What would you like to discuss?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TopicSelectionAlreadyDiscussed
+You've already talked about that.\nBetter not bore everyone[.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_1_Misty
+[RED]Misty[BLACK]: So, [GREEN]TCG Island[BLACK]?\nThat place is real?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_2_Bill
+[RED]Bill[BLACK]: Quite so, Misty!\p[GREEN]TCG Island[BLACK] is a place essentially\ndevoid of Pok\emon.\pWithout Pok\emon, there's a\ncertain[.] social emptiness.\pSo the people there developed a\ntrading card game, or a TCG.\pThis way, they could still battle\nand trade, even without Pok\emon.\pThe cards themselves feature Pok\emon\nand prominent celebrities.\lSuch as us, Misty.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_3_Mint
+[RED]Mint[BLACK]: That's right!\nThis is all so crazy!\pI went my whole life not knowing\nthe TCG is based on something real!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_4_Misty
+[RED]Misty[BLACK]: Wow[.] I'm so sorry.\nThat's messed up.\pDid they lie to you about the\noutside world[.]?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_5_Mint
+[RED]Mint[BLACK]: Oh, no. Nothing like that.\nApparently, everyone else knew.\pI never asked and no one ever told\nme. Pretty embarassing, right?\lHeehee!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_6_Lillie
+[RED]Lillie[BLACK]: Ah[.] I think I'm on some of\nthose cards, actually.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_7_Mint
+[RED]Mint[BLACK]: Hmmm[.]\nNope, never seen ya, miss!\pAnd I've got every card they ever\nmade!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_8_Bill
+[RED]Bill[BLACK]: Ahh, yeah. She's probably\nnever seen you, Lillie.\pY'see, a while back, the original\nTCG company lost the license[.]\p[.]and the new one doesn't bother\nsending cards to TCG Island.\pI watched a documentary about it\nonce. Compelling stuff.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_9_Mint
+[RED]Mint[BLACK]: Huh! I'm learning so much!\pWell, I've got plenty of Misty\ncards, though!\pMisty, I wanna ask you all about\nmy favorite card[.][PAUSE][20] [BLUE]Misty's Tears[BLACK]!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Bill_DotDotDot
+[RED]Bill[BLACK]: [.] [.] [.] [.] [.] [.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Lillie_DotDotDot
+[RED]Lillie[BLACK]: [.] [.] [.] [.] [.] [.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch__TCGIsland_10_Misty
+[RED]Misty[BLACK]: Ah, well[.] Y'see[.]\nIt was a different time.\pMy sisters were always talking up\ntheir own beauty.\pThey were always saying I wasn't\nas "sensational\" as them[.]\pI had something to prove, so I\ndid an artsy photoshoot.\pIt was very tasteful, but it's not\nsomething I'd do again.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_11_Mint
+[RED]Mint[BLACK]: That's interesting! [PAUSE][16]I wanted\nto ask something else, though!\pIn the photo, what's with Staryu?\nIs it bruised, or is it rusting?\lDo Staryus rust?\lThere's so much I don't know!\pAnd the whirlpool you're in!\nHow'd you end up there?
+
+#org @gText_Route25_BillsHouse_FunnyLunch__TCGIsland_12_Misty
+[RED]Misty[BLACK]: [.] [.] [.] [PAUSE][17]\nHeheh. Right.\pMint, you're the Nacli of the\nearth.\pI'll show you a Staryu later, and\nyou can see what it's like.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_13_Mint
+[RED]Mint[BLACK]: Wow!\nThank you!\lAnd what's a Nacli!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_1_Lillie
+[RED]Lillie[BLACK]: It's always so lovely to\nsee you, Misty.\pI'm quite glad I know someone\nnearby while I study here.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_2_Misty
+[RED]Misty[BLACK]: Ah, yeah[.] Forgive me for\nprying, but how's that going?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_3_Lillie
+[RED]Lillie[BLACK]: It's[.] complicated.\pBill's[.] experience[.] is different\nfrom my mother's.\pWe've gained useful insights to\nher condition, but no solutions.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_4_Rival
+[RED]RIVAL[BLACK]: What in the world are\nyou talking about?!\pWho's your mom?\nWhat's she got to do with Bill?!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_5_Misty
+[RED]Misty[BLACK]: It's a sensitive subject,\nyou pest[.]!\pSigh.\nShould I explain, Lillie?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_6_Lillie
+[RED]Lillie[BLACK]: Ah[.] thank you, but I can\nhandle it.\pDid you hear about the Aether\nFoundation incident out in [GREEN]Alola[BLACK]?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_7_Rival
+[RED]RIVAL[BLACK]: Of course!\pThe president was some crazy lady\nwho tried to destroy the world!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_8_Misty
+[RED]Misty[BLACK]: I didn't think I could get\nthis angry anymore,\lbut you're pushing me, punk!
+
+#org @gText_MistysRage1
+Use context clues, you jerk!
+
+#org @gText_MistysRage2
+The president!
+
+#org @gText_MistysRage3
+Is!
+
+#org @gText_MistysRage4
+HER MOM!!!!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_9_Rival
+[RED]RIVAL[BLACK]: Aa-ah[.]\nI-I-I'm sorry!\lJ-j-just tell me the story[.]
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_10_Lillie
+[RED]Lillie[BLACK]: It's quite alright, Misty.\nMy mother was, indeed,\lquite the "crazy lady.\"\pSigh[.] It started when my father\ndisappeared.\pThe Foundation was studying\ninterdimensional travel.\pHoopa rings, space-time distortion\nand[.] Ultra Wormholes.\pMy father vanished in a wormhole\nand was lost for years.\pIn my mother's efforts to recover\nhim, she became fixated on the\nbeings she found in the wormholes.\lThe [BLUE]Ultra Beasts[BLACK].\pTo make a long story short, when\nshe went[.] [PAUSE][17]"crazy\"[.]\pShe fused herself with an Ultra\nBeast.\pThough we stopped her, she remains\nquite ill after the fusion.\pBill here has experienced\nsomething similar,\lso I sought his help.\pI've since become Bill's junior\nassistant, of a sort.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_11_Mint
+[RED]Mint[BLACK]: There's so much I don't know\nabout Pok\emon, huh[.]?\pIf I may ask[.] Bill, what happened\nto you that was "similar?\"
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_12_Bill
+[RED]Bill[BLACK]: Oh, uh[.] I got stuck in a\nteleporter with my Clefairy.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_13_Mint
+[RED]Mint[BLACK]: I see.\n[PAUSE][18][BLUE]([.][PAUSE][13]HOW IS THAT SIMILAR???)
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_14_Misty
+[RED]Misty[BLACK]: They[.] found your dad\nrecently, didn't they, Lillie?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_15_Lillie
+[RED]Lillie[BLACK]: Yes[.] A friend of mine\nfound him.\pIt turned out they had been in\ntouch with him for some time.\pThey only realized who he was much\nlater[.]\pWhen I went last went back to\nAlola, I visited him.\pHe had been caring for Pok\emon,\nwith love and kindness.\pHe remembers nothing of our\nfamily, but yet[.]\pHe looked at me, and wanted me to\nhave his hat.\pI've been keeping it on ever\nsince.\pAs much as I want to believe my\nmother was once kind[.]\p[.]I wonder if it was simply that my\nfather shielded us from her worst.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_16_Misty
+[RED]Misty[BLACK]: Lillie[.]\nYou're a strong person.\lYou know that, right?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_17_Rival
+[RED][RIVAL][BLACK]: Yeah, I bet your Pok\emon\nare super strong after all that!\lI wanna fight you and see!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_18_Misty
+[RED]Misty[BLACK]: IF YOU WANT A FIGHT, YOU'RE\nGETTING ONE FROM MY HANDS!!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_19_Rival
+[RED]RIVAL[BLACK]: I-I-I'm sorry!\nI just want to fight someone cool!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_1_Mint
+[RED]Mint[BLACK]: So hey, Bill!\nWhat's with your Clefairy?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_2_Bill
+[RED]Bill[BLACK]: Oh, she's just on patrol.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_3_Mint
+[RED]Mint[BLACK]: For what?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_4_Bill
+[RED]Bill[BLACK]: I dunno.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_5_Mint
+[RED]Mint[BLACK]: Do all Pok\emon do that?
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_6_Bill
+[RED]Bill[BLACK]: Not really.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Clefairy_7_Mint
+[RED]Mint[BLACK]: Huh!\nThese little things are crazy!
+
+rewrite all of this:
+
+#org @gText_Route25_BillsHouse_FunnyLunch_MistysGym_1_Bill
+[RED]Bill[BLACK]: How have things been with the gym, Misty?
+
+[RED][RIVAL][BLACK]: No, forget TELLING us about the gym! Let's go back there right now and see it!
+
+[RED]Misty[BLACK]: Pal[.] I gotta take it easy. The gym drives me crazy these days. Really, all of Cerulean City does.
+
+[RED]Lillie[BLACK]: Have you at least had any good challengers?
+
+[RED]Misty[BLACK]: Nope. I haven't had a good fight since I was last traveling. Good trainers don't come through here anymore. 
+
+[RED][RIVAL][BLACK]: But I thought the Indigo League was a big deal! It cost our parents so much money to sign us up!
+
+[RED]Misty[BLACK]: Sure, it's prestigious. The Indigo League is famous, and plenty of people try. But eventually, the gym challenge gets too hard and they give up. Most folks only get a couple of badges.
+
+[RED][RIVAL][BLACK]: Not me! You'e looking at Kanto's next champion!
+
+[RED]Misty[BLACK]: Tch[.] I'll give you one thing, [RIVAL]. You sure sound like Ash Ketchum did back in the day. Brash and overconfident[.]
+
+[RED][RIVAL][BLACK]: And he was right to be! He became the world champion!
+
+[RED]Misty[BLACK]: Not before he suffered countless losses. Do you know how many leagues Ash had to enter before he finally came out on top of one? He never gave up, but he never made any progress, either. He just kept doing the same thing for years.
+
+[RED][RIVAL][BLACK]: How do you know Ash Ketchum?!
+
+[RED]Misty[BLACK]: We traveled together for a long time. This is how I met Brock, the Pewter City Gym Leader, too. He was a hothead, but so was I back then. I was originally following him over, uh, damaged property[.] [.]but eventually I was doing it just because of young love. Haha.
+
+"Tell me one thing. What makes you think you're different? There can only be one Pokemon League Champion. Why's it gonna be you?"
+
+"Because it has to be me! For my dad! Do you know how hard he worked to get me out of the Sevii Islands?! It's not easy to get someone into Professor Oak's new program when you live out in the sticks, like we do! It took a lot of money, and sacrifice, and risk. That's why we're all older than most new Pokemon trainers are! It took our parents so much time to save up! But I know why my dad went to all this trouble... it's because he knows how awesome I am! He knows I can be the very best, like no one ever was! So if my dad thinks I can do it, then I know he's right, because my dad's the best! Plus... Sherry's parents had to work even harder than my dad, because their sibling's also a new Pokemon trainer too! So I gotta look out for them! I promised my dad!"
+
+"...Heheheh. Alright, Whisk. Doing it for your dad, huh? I think I understand why you are how you are now."
+
+later
+
+"Hey, I'm sorry for losing my temper with your little buddy Whisk when we were eating. I thought he was just another little pest. He's... a lot, but he's different, isn't he? He reminds me of Ash, when I first met him. He's cocky, and he's gonna have a humbling experience sooner than later. But he's doing this for more than himself. And YOU remind me of Red. Unerringly strong and silent, even when you're stuck babysitting a loudmouth like Whisk. You must have a lot of inner strength. And meeting Mint, with all her curiosity, and remembering what Lillie's working for... Every trainer who's come through my doors has just been going through the motions. But you all WANT to be Pokemon trainers."
+
+lillie "Between you and me... it's rare to see Misty apologize to anyone! She must really see something in you if she was willing to talk to you so earnestly... And I think I see it, too."
+
+"It seems like everyone these days takes Pokemon for granted, but you folks... you seem grateful for the chance to do all this. I'd forgotten what that feels like. I told you you could try as many times as you needed. It's because I wanted to see the look on your face when you won. Now, I'm not psychic like Sabrina. Maybe that was easy for you. Maybe that was a struggle. That doesn't matter. I saw the face of someone who truly earned the Cascade Badge, and I haven't seen that in a long, long time. Now I know my sisters were wrong to hand out badges carelessly. This is what it's all about."
+
+"There's an old saying, "iron sharpens iron." Look out for Whisk, and your sibling, too, okay? You're all going to become stronger if you stick together and push each other... and you'll make everyone else around you stronger, as well. I'm sorry Kanto hasn't been quite what you hoped for. I promise, I want to look out for you. I'll pull some strings when you need them, and I'll keep in touch. I'll vouch for you. You all deserve a fair shot at the Indigo Plateau."

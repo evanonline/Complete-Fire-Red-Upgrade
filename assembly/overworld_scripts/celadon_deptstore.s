@@ -1137,6 +1137,12 @@ EventScripts_CeladonDept_VitaminsPower:
 	.hword ITEM_CALCIUM
 	.hword ITEM_ZINC
 	.hword ITEM_CARBOS
+	.hword ITEM_POMEG_BERRY
+	.hword ITEM_KELPSY_BERRY
+	.hword ITEM_QUALOT_BERRY
+	.hword ITEM_HONDEW_BERRY
+	.hword ITEM_GREPA_BERRY
+	.hword ITEM_TAMATO_BERRY
 	.hword ITEM_POWER_BRACER
 	.hword ITEM_POWER_BELT
 	.hword ITEM_POWER_LENS
