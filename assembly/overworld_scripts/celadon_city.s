@@ -729,7 +729,7 @@ EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer:
 	sound 0x1C
 	waitmovement 0x0
 	msgbox gText_CeladonCity_ErikaGymSceneNPC4 MSG_KEEPOPEN
-	msgbox gText_CeladonCity_ErikaGymSceneSherry3 MSG_NORMAL
+	msgbox gText_CeladonCity_ErikaGymSceneBrandy3 MSG_NORMAL
 	applymovement 0x7 SibLeavesGymZone
 	waitmovement 0x0
 	call HideSibSprite
