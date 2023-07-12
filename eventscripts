@@ -266,6 +266,7 @@ npc 10 17 0 EventScript_CeladonCity_IonoBurgerLore
 npc 10 17 1 EventScript_CeladonCity_MayleneInspiredSquatter
 npc 10 17 2 EventScript_CeladonCity_IonoSoda
 npc 10 17 3 EventScript_CeladonCity_HomemadePickles
+npc 10 18 0 EventScript_CeladonCity_AbilityHaver
 npc 10 19 0 EventScript_CeladonCity_HotelMatron
 npc 10 19 1 EventScript_CeladonCity_ScaredCozyGuy
 @npc 10 19 2 EventScript_CeladonCity_HotelRotomi @briefly dummied out due to index issues between CFRU and DPE. Will fix later
@@ -350,6 +351,7 @@ npc 3 3 6 EventScript_CeruleanCity_CascadeBadgeJerk
 npc 3 3 7 EventScript_CeruleanCity_DisgruntedGymSwimmer
 npc 3 3 8 EventScript_CeruleanCity_WistfulBreeder
 npc 7 0 0 EventScript_CeruleanCity_YardGuy
+npc 7 1 0 EventScript_CeruleanCity_Commuter
 npc 7 2 0 EventScript_CeruleanCity_BajaBlastoiseFan1
 npc 7 2 1 EventScript_CeruleanCity_BajaBlastoiseFan2
 npc 7 3 1 EventScript_CeruleanCity_Vikings

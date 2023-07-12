@@ -729,7 +729,7 @@ EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer:
 	sound 0x1C
 	waitmovement 0x0
 	msgbox gText_CeladonCity_ErikaGymSceneNPC4 MSG_KEEPOPEN
-	msgbox gText_CeladonCity_ErikaGymSceneSherry3 MSG_NORMAL
+	msgbox gText_CeladonCity_ErikaGymSceneBrandy3 MSG_NORMAL
 	applymovement 0x7 SibLeavesGymZone
 	waitmovement 0x0
 	call HideSibSprite
@@ -878,6 +878,7 @@ EventScript_CeladonCity_GymTrainerOutside:
 
 ErikaGymOpen:
 	faceplayer
+	pause 0x6
 	sound 0x15
 	applymovement 0x8 ExclaimAnim 
 	waitmovement 0x0
@@ -885,6 +886,7 @@ ErikaGymOpen:
 	msgbox gText_CeladonCity_GymTrainer_GetsEnergyDrink1 MSG_KEEPOPEN
 	applymovement 0x8 GymTrainerShuffle
 	removeitem ITEM_ENERGY_DRINK 0x1
+	faceplayer
 	msgbox gText_CeladonCity_GymTrainer_GetsEnergyDrink2 MSG_NORMAL
 	setflag 0x96D
 	applymovement 0x8 RocketsWalkUp
@@ -895,9 +897,15 @@ ErikaGymOpen:
 	closedoor 0xB 0x1E
 	end
 
+.global EventScript_CeladonCity_CondoRoofGuy
 EventScript_CeladonCity_CondoRoofGuy:
 	msgbox gText_CeladonCondominiumsRoofGuy MSG_FACE
-	return
+	end
+
+.global EventScript_CeladonCity_AbilityHaver
+EventScript_CeladonCity_AbilityHaver:
+	msgbox gText_CeladonCity_AbilityHaver MSG_FACE
+	end
 
 LookLeft:
 	.byte look_left

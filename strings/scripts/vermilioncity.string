@@ -86,13 +86,13 @@ You can nickname your Pok\emon at\nany [GREEN]Pok\emon Center[BLACK] now!\lSo co
 Cerise Laboratory
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy1
-Hahaha! Haaa![PAUSE][5] Hoo-ee!
+Hahaha! Haaa![PAUSE][15] Hoo-ee!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_FunnyRed
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called[PAUSE][8] [RED]Pok\emon Funny Red[BLACK].\pThey'd never say things this wacky\nin a regular game!
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [RED]Pok\emon Funny Red[BLACK].\pThey'd never say things this wacky\nin a regular game!
 
 #org @gText_VermilionCityNPC_FunnyRomhackGuy2_LaughGreen
-Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called[PAUSE][8] [GREEN]Pok\emon Laugh Green[BLACK].\pI saw a character swear a cuss!\nThey do not do that in real games!
+Oh, me?\pI'm just playing the hot new\nromhack everyone's talking about.\lIt's called [GREEN]Pok\emon Laugh Green[BLACK].\pI saw a character swear a cuss!\nThey do not do that in real games!
 
 #org @gText_VermilionCityNPC_Water
 What would we do without Pok\emon?\pWe never have to worry about clean\nwater because of Pok\emon.\pSeriously, I could drink Hydro Pump\nwater for the rest of my life.\lIt's normal! Everyone drinks it!\lIt's chemically pure H20!
@@ -173,7 +173,7 @@ Yes, yes, Lieutenant[.] I understand[.]\nIt's just, a solo operation?\pThey can'
 [RED][RIVAL][BLACK]: Pshh[.] Yeah right!\pI know all about the Champion,\nLance!\pHe would never send an underling\nto do his dirty work!
 
 #org @gText_VermilionCity_RivalCutscene2Flynn10
-[RED]Flynn[BLACK]: Well, our Champion's a\nbusy man, squirt!\pI handle paperwork, personnel[.]\nStuff a champ can't bogged down by!
+[RED]Flynn[BLACK]: Well, our Champion's a\nbusy man, squirt!\pI handle paperwork, personnel[.]\nStuff that'd bog down the champ!
 
 #org @gText_VermilionCity_RivalCutscene2Rival10
 [RED][RIVAL][BLACK]: If you're one of the\nElite Four, prove it to me now!\lBattle me!
