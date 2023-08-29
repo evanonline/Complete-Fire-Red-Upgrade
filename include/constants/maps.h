@@ -458,6 +458,8 @@ u8 __attribute__((long_call)) GetCurrentRegionMapSectionId(void);
 
 // Map Group 30
 #define MAP_ROUTE25_SEA_COTTAGE (0 | (30 << 8))
+#define MAP_ROUTE25_TRANSITION (1 | (30 << 8))
+#define MAP_BILLS_GARDEN (2 | (30 << 8))
 
 // Map Group 31
 #define MAP_SEVEN_ISLAND_HOUSE_ROOM1       (0 | (31 << 8))

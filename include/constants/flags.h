@@ -298,13 +298,13 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_BILLROUTE25         0x0DF //Using for Bill's brief appearance at Route 25 / Cerulean Cape
 #define FLAG_MINT_CERULEANTALK   0x0E0 //Using for Mint flagging the player down in Cerulean
 #define FLAG_TORMENT_TM          0x0E1 //Using for TM41 NPC in Cerulean
-#define FLAG_EVERYONEELSEROUTE25 0x0E2
-#define FLAG_0x0E3               0x0E3
-#define FLAG_0x0E4               0x0E4
-#define FLAG_0x0E5               0x0E5
-#define FLAG_0x0E6               0x0E6
-#define FLAG_0x0E7               0x0E7
-#define FLAG_0x0E8               0x0E8
+#define FLAG_EVERYONEELSEROUTE25 0x0E2 //Everyone else Route 25
+#define FLAG_LUNCH1_MINT         0x0E3 //Lunch - Mint conversation topic
+#define FLAG_LUNCH2_MISTY        0x0E4 //Lunch - Misty conversation topic
+#define FLAG_LUNCH3_BILL         0x0E5 //Lunch - Bill conversation topic
+#define FLAG_LUNCH4_PLAYERRIVAL  0x0E6 //Lunch - Player & Rival conversation topic
+#define FLAG_LUNCH5_LILLIE       0x0E7 //Lunch - Lillie conversation topic
+#define FLAG_LUNCHDONE           0x0E8 //Lunch over
 #define FLAG_0x0E9               0x0E9
 #define FLAG_0x0EA               0x0EA
 #define FLAG_0x0EB               0x0EB

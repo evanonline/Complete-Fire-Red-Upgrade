@@ -70,7 +70,7 @@
 #define MAPSEC_CAPE_BRINK                   0x98
 #define MAPSEC_BOND_BRIDGE                  0x99
 #define MAPSEC_THREE_ISLE_PORT              0x9A
-#define MAPSEC_SEVII_ISLE_6                 0x9B
+#define MAPSEC_BILLS_GARDEN                	0x9B //Was "Sevii Isle 6" unused map
 #define MAPSEC_SEVII_ISLE_7                 0x9C
 #define MAPSEC_SEVII_ISLE_8                 0x9D
 #define MAPSEC_SEVII_ISLE_9                 0x9E

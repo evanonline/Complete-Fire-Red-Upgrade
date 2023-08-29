@@ -33,8 +33,8 @@ extern u8 gText_InGameTrade_Mon_Esphere[];
 extern u8 gText_InGameTrade_Trainer_Clifton[];
 extern u8 gText_InGameTrade_Mon_Tangeny[];
 extern u8 gText_InGameTrade_Trainer_Norma[];
-extern u8 gText_InGameTrade_Mon_Seelor[];
-extern u8 gText_InGameTrade_Trainer_Garett[];
+extern u8 gText_InGameTrade_Mon_Bart[];
+extern u8 gText_InGameTrade_Trainer_Shigeki[];
 
 static const struct InGameTrade sInGameTrades[] = {
     [INGAME_TRADE_MR_MIME] = 
@@ -165,21 +165,21 @@ static const struct InGameTrade sInGameTrades[] = {
         .nature = NATURE_HASTY,
         .requestedSpecies = SPECIES_VENONAT
     },
-    [INGAME_TRADE_SEEL] = 
+    [INGAME_TRADE_MEW] = 
     {
-        .nickname = gText_InGameTrade_Mon_Seelor,
-        .species = SPECIES_SEEL,
-        .ivs = {24, 15, 22, 16, 23, 22},
+        .nickname = gText_InGameTrade_Mon_Bart,
+        .species = SPECIES_MEW,
+        .ivs = {31, 15, 24, 31, 24, 24},
         .abilityNum = 0,
         .otId = 9853,
         .conditions = {5, 5, 5, 5, 30},
         .personality = 0x482cac89,
-        .heldItem = ITEM_NONE,
+        .heldItem = ITEM_PERSIM_BERRY,
         .mailNum = 255,
-        .otName = gText_InGameTrade_Trainer_Garett,
+        .otName = gText_InGameTrade_Trainer_Shigeki,
         .otGender = MALE,
-        .nature = NATURE_BOLD,
-        .requestedSpecies = SPECIES_PONYTA
+        .nature = NATURE_MODEST,
+        .requestedSpecies = SPECIES_MEW
     }
 };
 

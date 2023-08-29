@@ -66,6 +66,11 @@ EventScript_VermilionCity_NPC_CoolLass:
 	msgbox gText_VermilionCityNPC_CoolLass MSG_FACE
 	end
 	
+.global EventScript_VermilionCity_NPC_TownMapArtist
+EventScript_VermilionCity_NPC_TownMapArtist:
+	msgbox gText_VermilionCityNPC_TownMap MSG_FACE
+	end
+	
 .global EventScript_VermilionCity_NPC_NamesHater
 EventScript_VermilionCity_NPC_NamesHater:
 	msgbox gText_VermilionCityNPC_NamesHater MSG_FACE

@@ -336,3 +336,9 @@ I love high places!\pThe only things that like high\nplaces more than me are[.]\
 
 #org @gText_CeladonCity_AbilityHaver
 Some Pok\emon have unique abilities\nthat only they can use.\lLike Cramorant's Gulp Missile!\pAfter Cramorant uses Surf or Dive,\nit'll snag a Pok\emon in its mouth,\lthanks to its ability.\pI have my own, unique ability,\ntoo, by the way.\pWhen I try to plug in USB cables,\nI ALWAYS hold them right-side-up\lon my first try!
+
+#org @gText_CeladonCity_NewCondominiumsReceptionist
+Hello.\nAre you visiting a resident?\lNo?\lThen I can't let you in.\lThese apartments are private.
+
+#org @gText_CeladonCity_NewCondominiumsGuard
+Residents only past this point,\nsorry!\pWhat?[PAUSE][16] You look confused about my\nswimwear.\lSecurity guards have hobbies, too.

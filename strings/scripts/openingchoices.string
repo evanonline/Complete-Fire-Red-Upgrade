@@ -80,7 +80,7 @@ Randomizer Mode [RED]disabled[BLACK].
 Would you like to activate\n[GREEN]Sinnoh Problem Mode[BLACK]?\p[RED]DEV: this setting currently\ndoes nothing\pinteraction between sinnoh problem\nand randomizer TBD
 
 #org @gText_OpeningOptionsSinnohProblemExplain
-In the wild, only Pok\emon from the\noriginal Sinnoh Pok\edex will spawn.\pThis setting does not apply to\nPok\emon with fixed spawns.\pThis includes overworld encounters,\ngift Pok\emon, and the starters.\pThis setting expires on completion\nof the Pok\emon League.
+Under this setting, only Pok\emon\nfrom the [RED]original Sinnoh Pok\edex[BLACK]\lwill appear in the wild.\pPok\emon met through means other\nthan random wild encounters,\lsuch as the starter Pok\emon,\lare unchanged.\pThis setting does not apply to\nopposing trainers.\pThis setting expires on completion\nof the Pok\emon League.
 
 #org @gText_SinnohProblemCurrentlyDisabled
 Sinnoh Problem Mode is currently\n[RED]disabled[BLACK].

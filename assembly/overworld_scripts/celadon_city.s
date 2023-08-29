@@ -906,6 +906,16 @@ EventScript_CeladonCity_CondoRoofGuy:
 EventScript_CeladonCity_AbilityHaver:
 	msgbox gText_CeladonCity_AbilityHaver MSG_FACE
 	end
+	
+.global EventScript_CeladonCity_NewCondominiumsReceptionist
+EventScript_CeladonCity_NewCondominiumsReceptionist:
+	msgbox gText_CeladonCity_NewCondominiumsReceptionist MSG_FACE
+	end
+	
+.global EventScript_CeladonCity_NewCondominiumsGuard
+EventScript_CeladonCity_NewCondominiumsGuard:
+	msgbox gText_CeladonCity_NewCondominiumsGuard MSG_FACE
+	end
 
 LookLeft:
 	.byte look_left

@@ -20,6 +20,7 @@
 #include "../include/new/dynamax.h"
 #include "../include/new/end_battle_battle_scripts.h"
 #include "../include/new/form_change.h"
+#include "../include/new/util.h"
 #include "../include/new/util2.h"
 #include "../include/new/mega.h"
 #include "../include/new/pokemon_storage_system.h"
@@ -989,6 +990,7 @@ bool8 DoubleWildPokeBallItemUseFix(u8 taskId)
 	}
 
 	return effect;
+	
 }
 
 struct Pokemon* LoadTargetPartyData(void)

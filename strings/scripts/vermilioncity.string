@@ -35,7 +35,10 @@ Pok\emon names these days are too\nlong.\pBack in my day[.] we kept their names\
 I'm just the best.\pI've got looks, style[.]\pI deserve an award.
 
 #org @gText_VermilionCityNPC_CalebVsAnnihilape
-Listen to this! An Annihilape\npunched my friend Caleb, right?\pBut Caleb says he's so tough he\ndidn't even feel it!\pBut get this! He says no one saw it\nhappen 'cus Annihilape is a ghost.\pMan[.]\lCaleb is so cool!
+Listen to this! An Annihilape\npunched my friend Caleb, right?\pBut Caleb says he's so tough he\ndidn't even feel it!\pBut get this! He says no one saw it\nhappen 'cus Annihilape is a ghost.\pMan[.]\nCaleb is so cool!
+
+#org @gText_VermilionCityNPC_TownMap
+You should probably have a\n[BLUE]Town Map[BLACK] in your bag.\pIt’s called the Town Map, because\nit’s a map that shows you where\lall the towns are.\pBut at first, I thought it was a\nmap for just this one town[.]\pI would have preferred that,\nactually.
 
 #org @gText_VermilionCityNPC_SailorSSAnne
 The [GREEN]S.S. Anne[BLACK] had a controversial\naccident many years back.\pThey were talking about making an\n[GREEN]S.S. Anne 2[BLACK], but[.]\lthere's better ways to sail now!
