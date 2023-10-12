@@ -1,0 +1,44 @@
+#org @gText_Global_Pokecenter_SecondaryNurse_Intro1
+Greetings! I can provide additional\nPok\emon services at this desk.
+
+#org @gText_Global_Pokecenter_SecondaryNurse_Intro2
+What can I help you with?
+
+#org @gText_GlobalPokecenter_SecondaryNurse_MoveRelearnerListText
+Move Relearner
+
+#org @gText_GlobalPokecenter_SecondaryNurse_NicknameListText
+Rename Pok\emon
+
+#org @gText_GlobalPokecenter_SecondaryNurse_MoveRelearner
+If you show me your Pok\emon, I can\nhelp it relearn levelup moves!
+
+#org @gText_GlobalPokecenter_SecondaryNurse_MoveRelearner_No
+Sorry[.]\pIt doesn't appear as if I have a\nmove I can teach that Pok\emon.
+
+#org @gText_GlobalPokecenter_SecondaryNurse_MoveRelearner_WhatMove
+And what move should I teach it?
+
+#org @gText_GlobalPokecenter_SecondaryNurse_Nickname
+I can help you give your Pok\emon\nnew nicknames!\pWhich one should I prepare the\npaperwork for?
+
+#org @gText_GlobalPokecenter_SecondaryNurse_ConfirmNickname
+So you want to rename\n[BUFFER1]?
+
+#org @gText_GlobalPokecenter_SecondaryNurse_NicknameWhat
+And what should we change\n[BUFFER1]'s name to?
+
+#org @gText_GlobalPokecenter_SecondaryNurse_NicknameSame
+Okay! We'll keep\n[BUFFER1]'s name as it is.
+
+#org @gText_GlobalPokecenter_SecondaryNurse_NicknameComplete
+Done! From now on, this Pok\emon\nshall be known as [BUFFER1]!
+
+#org @gText_GlobalPokecenter_SecondaryNurse_NicknameTraded
+I can't rename Pok\emon whose\nTrainer IDs don't match yours[.]\pSorry, bureaucratic stuff!\nOutta my hands!
+
+#org @gText_GlobalPokecenter_SecondaryNurse_CantHelpEgg
+That's just an Egg.\nCan't help you there!
+
+#org @gText_GlobalPokecenter_SecondaryNurse_Bye
+We're here any time you need us!

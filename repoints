@@ -302,7 +302,8 @@ g007TuberBTiles 82395B4
 g007TuberBPal 8239A54
 g008JanitorTiles 82395BC
 g008JanitorPal 8239A5C
-
+g009CoolTrainerTiles 82395C4
+g009CoolTrainerPal 8239A64
 g010HexManiacTiles 82395CC
 g010HexManiacPal 8239A6C
 g011JuniorHexerTiles 82395D4
@@ -311,14 +312,32 @@ g012BackpackerTiles 82395DC
 g012BackpackerPal 8239A7C
 g013ClownTiles 82395E4
 g013ClownPal 8239A84
+g014HoopsterTiles 82395EC
+g014HoopsterPal 8239A8C
 g015InfielderTiles 82395F4
 g015InfielderPal 8239A94
-
+g016PsychicCTiles 82395FC
+g016PsychicCPal 8239A9C
 g017GuitaristATiles 8239604
 g017GuitaristAPal 8239AA4
-
+g018KindlerTiles 823960C
+g018KindlerPal 8239AAC
+g019BugManiacATiles 8239614
+g019BugManiacAPal 8239AB4
+g020BugManiacBTiles 823961C
+g020BugManiacBPal 8239ABC
+g021BlaineTiles 8239624
+g021BlainePal 8239AC4
+g022WarriorGalTiles 823962C
+g022WarriorGalPal 8239ACC
+g023FunOldManATiles 8239634
+g023FunOldManAPal 8239AD4
 g024FunOldManBTiles 823963C
 g024FunOldManBPal 8239ADC
+
+
+g032RailStaffTiles 823967C
+g032RailStaffPal 8239B1C
 
 g036YoungsterATiles 823969C
 g036YoungsterAPal 8239B3C
@@ -328,10 +347,16 @@ g046BirdkeeperPal 8239B8C
 
 g049ParasolLadyTiles 8239704
 g049ParasolLadyPal 8239BA4
+g050AuntPeppyTiles 823970C
+g050AuntPeppyPal 8239BAC
 
 g054GarchompGavinTiles 823972C
 g054GarchompGavinPal 8239BCC
+g055MintTiles 8239734
+g055MintPal 8239BD4
 
+g064PokeManiacBTiles 823977C
+g064PokeManiacBPal 8239C1C
 g065PokeKidATiles 8239784
 g065PokeKidAPal 8239C24
 g066PokeKidBTiles 823978C

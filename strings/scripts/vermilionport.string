@@ -137,16 +137,16 @@ I need to get a better Pok\emon\nimmediately!\lThis one won't do at all!\l[.] [.
 And to think I won my first battle\nwith such a bad Pok\emon!\l[.] [.]\lEr[.]
 
 #org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseRelicanth
-(I-I'm sorry, Passimian[.]\nYou're not the problem.)\p(We just don't fit each other\nwell[.])\p(I've never been much for sports[.]\nIt's really my fault[.])
+[BLUE](I-I'm sorry, Passimian[.]\nYou're not the problem.)\p(We just don't fit each other\nwell[.])\p(I've never been much for sports[.]\nIt's really my fault[.])[BLACK]
 
 #org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChoseSigilyph
-(I-I'm sorry, Relicanth[.]\nYou're not the problem.)\p(We really just don't fit each\nother well[.])\p(Maybe if I were a pro swimmer, or\na marine biologist[.])
+[BLUE](I-I'm sorry, Relicanth[.]\nYou're not the problem.)\p(We really just don't fit each\nother well[.])\p(Maybe if I were a pro swimmer, or\na marine biologist[.])[BLACK]
 
 #org @gText_VermilionPortHotel_RivalFight1_After2_PlayerChosePassimian
-(I-I'm sorry, Sigilyph[.]\nYou're not the problem.)\p(I think we just don't fit each\nother well[.])\p(I just don't know much about\nancient history yet[.])
+[BLUE](I-I'm sorry, Sigilyph[.]\nYou're not the problem.)\p(I think we just don't fit each\nother well[.])\p(I just don't know much about\nancient history yet[.])[BLACK]
 
 #org @gText_VermilionPortHotel_RivalFight1_After2_Randomized
-(I'm sorry, my starter[.]\nRandomization is rough.)\p(I don't think we suit each other[.]\nIt's not your fault!)
+[BLUE](I'm sorry, my starter[.]\nRandomization is rough.)\p(I don't think we suit each other[.]\nIt's not your fault!)[BLACK]
 
 #org @gText_VermilionPortHotel_RivalFight1_After3
 [.]Ahem!\nI'm gonna go catch more Pok\emon!\pKanto is supposed to have TONS of\nPok\emon now!\pIt shouldn't be hard to find one\nthat suits me better.\p[GREEN]Vermilion City[BLACK] has a Gym to\nchallenge, too!\pThe world's my Cloyster! This\nadventure can still be awesome!\pAnd then, at the end[.] I'll\nclobber your whole weird family!

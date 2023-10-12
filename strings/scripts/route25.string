@@ -83,7 +83,7 @@ Hey, stranger, I never got your\nname.\p[.][.][.]\n[PAUSE][16][PLAYER], huh?\lCo
 The strange Pok\emon stares at you\nin silence with all three eyes[.]
 
 #org @gText_Route25_BillsHouse_RivalTalk
-[RED][RIVAL][BLACK]: What the HECK is this\nweird Pok\emon?! I want one!
+[RED][RIVAL][BLACK]: WHAT is this weird\nPok\emon?! I want one!
 
 #org @gText_Route25_BillsHouse_LillieTalk
 [RED]Lillie[BLACK]: Please! Be careful with\nShocksie!
@@ -101,7 +101,7 @@ Clefclef!
 Bill's computer is on. He has a\nvideo playing, which is titled[.]\p"10 Hours of Silence Occasionally\nInterrupted by Graveler Cries.\"
 
 #org @gText_Route25_BillsHouse_BillStart
-[RED]Bill[BLACK]: Greetings, bud!\nThis is where the magic happens!\pI love having guests, especially\nwhen they're Pok\emon trainers!\pI wanna hear all about you, and\nwhat brings you here.\pShall we all sit down and dish\nover some sandwiches?
+[RED]Bill[BLACK]: Greetings, bud!\nThis is where the magic happens!\pI love having guests, especially\nwhen they're Pok\emon trainers!\pI wanna hear all about you, and\nwhat brings you here.\pShall we all sit down and chat\nover some sandwiches?
 
 #org @gText_Route25_BillsHouse_BillStart_No
 Let me know when you're ready to\neat, and I'll gather everyone up.
@@ -116,7 +116,7 @@ Great! Let's eat.
 Welcome to the Sea Cottage!\pSurely you know what I do here,\nso tell me about yourselves!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_2_Rival
-[RED][RIVAL][BLACK]: I don't have time for\nsandwiches![PAUSE][15] I want a Gym Badge!\pLet's go back to your gym right\nnow and fight, Misty!
+[RED][RIVAL][BLACK]: I don't have time for\nsandwiches![PAUSE][15] I want a Gym Badge!\pLet's go back to your Gym right\nnow and fight, Misty!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_3_Bill
 [RED]Bill[BLACK]: Hahaha. Lotta moxie, kid!\nYou're a real Scrafty!
@@ -134,7 +134,7 @@ Welcome to the Sea Cottage!\pSurely you know what I do here,\nso tell me about y
 But I don't know who that girl is.\nShe's just some weirdo[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_8_Mint
-[RED]Mint[BLACK]: I[.][PAUSE][16] I'm[.][PAUSE][16] I am[.][PAUSE][16]\nThat is to say,[PAUSE][16] I'm[.][PAUSE][16][.][PAUSE][16][.]
+[RED]Mint[BLACK]: I[.][PAUSE][16] I'm[.][PAUSE][16] I am[.][PAUSE][16]\nThat is to say,[PAUSE][16] I'm[.][PAUSE][16][.][PAUSE][14][.]!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_9_Mint
 I'M [LIGHT_BLUE]MINT[BLACK]!!!!!!!\n[PAUSE][16]WOW!!!!!!
@@ -145,7 +145,7 @@ I'M [LIGHT_BLUE]MINT[BLACK]!!!!!!!\n[PAUSE][16]WOW!!!!!!
 // Multichoice dialog
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TopicSelection
-What would you like to discuss?
+[PAUSE][6][BLUE]What would you like to discuss?[PAUSE][8]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TopicSelectionAlreadyDiscussed
 You've already talked about that.\nBetter not bore everyone[.]
@@ -153,10 +153,13 @@ You've already talked about that.\nBetter not bore everyone[.]
 // Mint's story
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_1_Mint
-I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI can't begin to thank you both\nfor what you've done for me!\pBill, your Supporter ability has\ngotten me out of so many jams!\pThank you for helping me draw 2\ncards!
+[RED]Mint[BLACK]: I can't believe you're all\nreal! This is so cool!\lThe REAL Bill and Misty!\pI can't begin to thank you both\nfor what you've done for me!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_1_Mint_Split
+Bill, your Supporter ability has\ngotten me out of so many jams!\pThank you for helping me draw 2\ncards!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_2_Bill
-[RED]Bill[BLACK]: [.] [.] [.][PAUSE][16] [.] [.] [.]\nOhhhh! Hahahaha.\pYou're from [GREEN]TCG Island[BLACK], aren't\nyou, Mint?
+[RED]Bill[BLACK]: [.] [.] [.][PAUSE][16] [.] [.] [.]\p[.][PAUSE][16]Ohhhh![PAUSE][10] Hahahaha.\pYou're from [GREEN]TCG Island[BLACK], aren't\nyou, Mint?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_3_Mint
 [RED]Mint[BLACK]: Yes!\nI can't believe you know about it!
@@ -165,13 +168,13 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED]Misty[BLACK]: [GREEN]TCG Island[BLACK]?\nThat place is real?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_5_Bill
-[RED]Bill[BLACK]: Quite so, Misty!\p[GREEN]TCG Island[BLACK] is a place essentially\ndevoid of Pok\emon.\pWithout Pok\emon, there's a\ncertain[.] social emptiness.\pSo the people there developed a\ntrading card game, or a TCG.\pThis way, they could still battle\nand trade, even without Pok\emon.\pThe cards themselves feature Pok\emon\nand prominent celebrities.\lSuch as us, Misty.
+[RED]Bill[BLACK]: Quite so, Misty!\p[GREEN]TCG Island[BLACK] is a place essentially\ndevoid of Pok\emon.\pWithout Pok\emon, there's a\ncertain[.] social emptiness.\pSo the people there adopted a\nPok\emon trading card game, or TCG,\las a cultural substitute.\pThis way, they could still battle\nand trade, even without Pok\emon.\pThe cards themselves feature art\nand photos of Pok\emon,\las well as prominent figures.\lSuch as myself and Misty!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_6_Mint
 [RED]Mint[BLACK]: That's right!\nThis is all so crazy!\pI went my whole life not knowing\nthe TCG is based on something real!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_7_Misty
-[RED]Misty[BLACK]: Wow[.] I'm so sorry.\nThat's messed up.\pDid they lie to you about the\noutside world[.]?
+[RED]Misty[BLACK]: Wow[.] I'm so sorry.[PAUSE][11]\nThat's messed up.\pIt's awful that they lied to you\nabout the outside world[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_8_Mint
 [RED]Mint[BLACK]: Oh, no. Nothing like that.\nApparently, everyone else knew.\pI never asked and no one ever told\nme. Pretty embarassing, right?\lHeehee!
@@ -180,10 +183,10 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED]Lillie[BLACK]: Ah[.] I think I'm on some of\nthose cards, actually.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_10_Mint
-[RED]Mint[BLACK]: Hmmm[.]\nNope, never seen ya, miss!\pAnd I've got every card they ever\nmade!
+[RED]Mint[BLACK]: Hmmm[.][PAUSE][11]\nNope,[PAUSE][7] never seen ya, miss!\pAnd I've got every card they ever\nmade!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_11_Bill
-[RED]Bill[BLACK]: Ahh, yeah. She's probably\nnever seen you, Lillie.\pY'see, a while back, the original\nTCG company lost the license[.]\p[.]and the new one doesn't bother\nsending cards to TCG Island.\pI watched a documentary about it\nonce. Compelling stuff.
+[RED]Bill[BLACK]: Ahh, yes. She's probably\nnever seen you, Lillie.\pSee, a while back, the original\nTCG company lost the license[.]\p[.]and the current printers won't\nship any new cards to TCG Island.\pI watched a documentary about it\nonce. [PAUSE][11]Compelling stuff.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_12_Mint
 [RED]Mint[BLACK]: Huh! I'm learning so much!\pWell, I've got plenty of Misty\ncards, though!\pMisty, I wanna ask you all about\nmy favorite card[.][PAUSE][20] [BLUE]Misty's Tears[BLACK]!
@@ -195,12 +198,12 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED]Lillie[BLACK]: [.] [.] [.] [.] [.] [.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_13_Misty
-[RED]Misty[BLACK]: Ah, well[.] Y'see[.]\nIt was a different time.\pMy sisters were always talking up\ntheir own beauty.\pThey were always saying I wasn't\nas "sensational\" as them[.]\pI had something to prove, so I\ndid an artsy photoshoot.\pIt was very tasteful, but it's not\nsomething I'd do again.
+[RED]Misty[BLACK]: Ah, well[.] Y'see[.][PAUSE][12]\nIt was a different time.\pMy sisters were always talking up\ntheir own beauty.\pThey were always saying I wasn't\nas "sensational\" as them[.]\pI had something to prove, so I\ndid an artsy photoshoot.\pIt was very tasteful, but it's not\nsomething I'd do again.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_14_Mint
 [RED]Mint[BLACK]: That's interesting! [PAUSE][16]I wanted\nto ask something else, though!\pIn the photo, what's with Staryu?\nIs it bruised, or is it rusting?\lDo Staryus rust?\lThere's so much I don't know!\pAnd the whirlpool you're in!\nHow'd you end up there?
 
-#org @gText_Route25_BillsHouse_FunnyLunch__TCGIsland_15_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_15_Misty
 [RED]Misty[BLACK]: [.] [.] [.] [PAUSE][17]\nHeheh. Right.\pMint, you're the Nacli of the\nearth.\pI'll show you a Staryu later, and\nyou can see what it's like.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_TCGIsland_16_Mint
@@ -218,34 +221,40 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED][RIVAL][BLACK]: Did you say Ash?!\nAsh Ketchum?!?!\lThe [RED]World Champion[BLACK]!\pSo you DO know him!\nI had heard rumors!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_4_Misty
-[RED]Misty[BLACK]: Tch[.]\n[PAUSE][13]Yeah, there's rumors, alright.\pYeah, I knew him, back when he\nfirst started out.\pI traveled with him, and Brock,\nthe [GREEN]Pewter City[BLACK] Gym Leader.\pAsh is the kind of person who can\nnever stay still.\pHe thought he could break every\nwall by bashing his skull on it.\pWhen he'd lose, he'd just start\nfresh in another region.\pEventually, duty called, and we\nwent our separate ways.\lBut he never stopped.\p[GREEN]Hoenn[BLACK], [GREEN]Sinnoh[BLACK], [GREEN]Unova[BLACK][.]\nFailed all of 'em.\pHe never gave up, but he never\nmade any progress, either.\pEventually, when he went to [GREEN]Kalos[BLACK],\lhe suffered a really ugly loss.
+[RED]Misty[BLACK]: Tch[.]\n[PAUSE][13]Yeah, there's rumors, all right.\pYeah, I knew him, back when he\nfirst started out.\pI traveled with him, and Brock,\nthe [GREEN]Pewter City[BLACK] Gym Leader.\pAsh is the kind of person who can\nnever stay still.\pHe thought he could break every\nwall by bashing his skull on it.\pWhen he'd lose, he'd just start\nfresh in another region.\pEventually, duty called, and we\nwent our separate ways.\lBut he never stopped.\p[GREEN]Hoenn[BLACK], [GREEN]Sinnoh[BLACK], [GREEN]Unova[BLACK][.]\nFailed all of 'em.\pHe never gave up, but he never\nmade any progress, either.\pEventually, when he went to [GREEN]Kalos[BLACK],\nhe suffered a very ugly loss.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_5_Lillie
-[RED]Lillie[BLACK]: Ah, right.\nThat's when I met him.\lWe went to school together!\pHe wanted to get himself together,\nand get an education.
+[RED]Lillie[BLACK]: Ah, yes. I met him when he\ndecided to go to school[.]\lWe were classmates!\pHe wanted to get himself together,\nand get a degree.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_6_Misty
 [RED]Misty[BLACK]: Yeah. Time caught up with\nhim.\pHe had been a trainer for so long,\nand he had nothing to show for it.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_7_Rival
-[RED][RIVAL][BLACK]: But he was the [RED]Alolan Champion[BLACK]!\nNow he's the best in the WORLD!\lHe didn't give up!
+[RED][RIVAL][BLACK]: Nuh-uh! He went to [GREEN]Alola[BLACK]\nto become their CHAMPION!\lNow he's the best in the WORLD!\lHe didn't quit!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_8_Misty
-[RED]Misty[BLACK]: What he did wasn't\n"giving up.\"\lHe realized he had to change.\pHe graduated, finally took a title,\nstarted on the world circuit[.]\pNow he's the [RED]World Champion[BLACK],\nhe's got a [RED]cute boyfriend[BLACK][.]\pThey're gallavanting across the\nworld together.\pEven Brock is in a committed\nrelationship now, apparently.\pAnd here I am.\nIn the same old town.\lHearing the same old gossip.\lAbout me.\lSpread by the same old spinsters.\lFighting the same entitled kids.\pNothing changes here, no matter\nwhat I try to do.\pNew swimsuits, new hair color[.]\nNothing makes it interesting.\pNothing here makes me feel the\nway my adventures did.
+[RED]Misty[BLACK]: What he did wasn't\n"quitting.\"\lHe realized he had to change.\pIt's BECAUSE of his education that\nhe was able to take a League title.\pNow he's the [RED]World Champion[BLACK],\nhe's got a [RED]cute boyfriend[BLACK][.]\pThey're gallavanting across the\nworld together.\pEven Brock is in a committed\nrelationship now, apparently.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_8_MistySplit
+And here I am.\nIn the same old town.\lHearing the same old gossip.\lAbout me.\lSpread by the same old spinsters.\lFighting the same entitled kids.\pNothing changes here, no matter\nwhat I try to do.\pNew swimsuits, new hair color[.]\nNew Pok\emon, new trainers[.]\lNothing makes it interesting.\pNothing here makes me feel the\nway my old adventures did.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_9_Bill
 [RED]Bill[BLACK]: I only met Ash the one time[.]\pBut I've certainly seen the trail\nof broken hearts he's left behind!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_10_Misty
-[RED]Misty[BLACK]: Tch[.]\n[SHRINK](grumble grumble[.])
+[RED]Misty[BLACK]: Tch[.]\n[SHRINK](grumble grumble[.][.][.])
 
-#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_10_Lillie
-[RED]Lillie[BLACK]: Misty[.] I'm sorry.\pSurely you're due for some good\nchallengers.\pDidn't you have to fight the\nlegendary trainer, Red?\lAnd his group from [GREEN]Pallet Town[BLACK]?\pSurely more trainers like them\nwill come through here!\pPerhaps our new, um[.]\nfriends, here[.]\l[.]are just what you're looking for!
+#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_11_Lillie
+[RED]Lillie[BLACK]: Misty[.] I'm sorry.\pSurely you're due for some good\nchallengers.\pDidn't you have to fight the\nlegendary trainer, Red, long ago?\lAnd his group from [GREEN]Pallet Town[BLACK]?\pSurely more trainers like them\nwill come through here!\lEventually!\pPerhaps our new, um[.]\nfriends, here[.]\l[.]are just what you're looking for!
 
-#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_11_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_12_Misty
 [RED]Misty[BLACK]: Nah. The Pallet Sweep\nwill never happen again.\pYou two, I'll fight you.\n[PAUSE][13]It IS my job.\pBut the Pok\emon League has lost\nits meaning.\pIt's a business now. The soul is\ngone.\pYou missed out on when this\njourney meant anything.\pThere's no room for young dreamers\nlike Ash or Red anymore.\pI'm sorry to be the one to break\nit to ya.
 
-#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_12_Rival
-[RED][RIVAL][BLACK]: [.][.][.]\n[SHRINK]Grgrr[.]
+#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_13_Rival
+[RED][RIVAL][BLACK]: [.][.][.]\n[SHRINK]Grgrr!!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_StrongestTrainers_14_Lillie
+[RED]Lillie[BLACK]: [BLUE](E-everyone here seems so\ngrouchy[.])
 
 //Bill's Pokemon
 
@@ -265,19 +274,19 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED]Bill[BLACK]: Yes, but this was different!\pPok\emon from the past appeared!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_BillsPokemon_6_Misty
-[RED]Misty[BLACK]: Yeah?\nLike the Hisuian ones?\lThey're easy to come by, Bill.
+[RED]Misty[BLACK]: Yeah?\nLike the [GREEN]Hisuian[BLACK] ones?\lThey're easy to come by, Bill.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_BillsPokemon_7_Bill
-[RED]Bill[BLACK]: No, no! Like, the ANCIENT\npast! We're talkin' prehistoric!\pThere are future Pok\emon, too!\nBut they don't make sense!\lThey're[.] [RED]paradoxical[BLACK]!
+[RED]Bill[BLACK]: No, no! Like, the ANCIENT\npast! We're talking prehistoric!\pThere are future Pok\emon, too!\nBut they don't make sense!\lThey're[.] [RED]paradoxical[BLACK]!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_BillsPokemon_8_Misty
-[RED]Misty[BLACK]: This sounds a lot like\nUltra Beasts.\pWhich, by the way, are ALSO coming\nout of weird rifts all the time.
+[RED]Misty[BLACK]: This sounds a lot like\nUltra Beasts.\pWhich, by the way, are ALSO coming\nout of weird rifts all the time.\lJust ask Lillie.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_BillsPokemon_9_Bill
 [RED]Bill[BLACK]: You've got no sense of\nwonder, Misty!\pThe average public can't even\nENTER the Great Crater of Paldea!\pI had to make a major trade with\na Paldean scientist for this beaut.\pSandy Shocks is one of the finest\ntreasures in my Pok\emon collection!\pI let it roam freely, so everyone\ncan see it.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_BillsPokemon_10_Lillie
-[RED]Lillie[BLACK]: Shocksie sheds iron filings\neverywhere it goes.\pYou need to polish its leg magnets\ntwice a day or it gets sad.\pShocksie tried to eat the [BLUE]Pok\emon\nStorage System's[BLACK] cloud server once.\pPlease find its Pok\e Ball, Bill[.]
+[RED]Lillie[BLACK]: Shocksie sheds iron filings\neverywhere it goes.\pI need to polish its leg magnets\ntwice a day or it gets sad.\pShocksie tried to eat the [BLUE]Pok\emon\nStorage System's[BLACK] cloud server once.\pPlease find its Pok\e Ball, Bill[.]
 
 //About us
 
@@ -285,92 +294,105 @@ I can't believe you're all real!\nThis is so cool!\lThe REAL Bill and Misty!\pI 
 [RED][RIVAL][BLACK]: Yeah! About us!\nYou all ought to learn who we are!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_2_Mint
-[RED]Mint[BLACK]: I already know who you are!\n[RIVAL] and [PLAYER]!\lYou told us!\pWhat I wanna know is, what's\n[RED]Three Island[BLACK]?
+[RED]Mint[BLACK]: I already know who you are!\n[RIVAL] and [PLAYER]!\lYou told us!\pWhat I wanna know is, what's\nthe [GREEN]Three Island[BLACK] you mentioned?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_3_Rival
-[RED][RIVAL][BLACK]: It's one of the\n[RED]Sevii Islands[BLACK], you weirdo!\pYou know! Another region!\pI've been there all my life!\nEveryone knows about them!
+[RED][RIVAL][BLACK]: It's one of the\n[GREEN]Sevii Islands[BLACK], you weirdo!\pYou know! Another region!\pI've been there all my life!\nEveryone knows about them!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_4_Lillie
-[RED]Lillie[BLACK]: Are the Sevii Islands a\nregion of their own?\pI always thought they were simply part of [RED]Kanto[BLACK]!
+[RED]Lillie[BLACK]: Are the Sevii Islands a\nregion of their own?\pI always thought they were simply\npart of [GREEN]Kanto[BLACK]!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_5_Misty
-[RED]Misty[BLACK]: Ah, no no no.\nThey're like, an archipelago?\pI mean, that'a just a name for\na bunch of islands.\pBut I think geopolitically, an\narchipelago is distinct from a\lregion?
+[RED]Misty[BLACK]: Ah, no no no.\nThey're like, an archipelago?\pI mean, that's just a name for\na bunch of islands.\pBut,[PAUSE][10] I think geopolitically,[PAUSE][9]\nan archipelago is different thing\lthan a region?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_6_Lillie
-[RED]Lillie[BLACK]: But [RED]Alola[BLACK] is an archipelago,\ntoo!\lAnd that's DEFINITELY a region!\pSurely they wouldn't use the same\nterm to mean two different things[.]
+[RED]Lillie[BLACK]: But [GREEN]Alola[BLACK] is an archipelago,\ntoo!\lAnd that's DEFINITELY a region!\pSurely they wouldn't use the same\nterm to mean two different things[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_7_Misty
-[RED]Misty[BLACK]: Y'know how in [RED]Galar[BLACK],\nthey call a season of a TV series,\la "series\"?\pIt's like that.
+[RED]Misty[BLACK]: Y'know how in [GREEN]Galar[BLACK],\nthey call a season of a TV series\la "series,\" too?\lSo it's a series of a TV series?\lIt's like that.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_8_Rival
-[RED][RIVAL][BLACK]: I can't believe how much\nrespect I'm losing for you, Misty[.]
+[RED][RIVAL][BLACK]: [.][PAUSE][12]I can't believe how much\nrespect I'm losing for you, Misty[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_9_Misty
-[RED]Misty[BLACK]: Meh.[PAUSE][15] I can.\pHey, Bill, back me up.\nWhat ARE the Sevii Islands?
+[RED]Misty[BLACK]: Meh.[PAUSE][14] I can.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_9_MistySplit
+Hey, Bill, back me up.\nWhat ARE the Sevii Islands?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_10_Bill
-[RED]Bill[BLACK]: I actually have a good\nfriend who lives on [RED]One Island[BLACK].\pSo I can say with great confidence\nthat the Sevii Islands are[.]\l[.] [.] [.] [.]\lTheir own thing?
+[RED]Bill[BLACK]: I actually have a good\nfriend who lives on [GREEN]One Island[BLACK].\pSo I can say with great confidence\nthat the Sevii Islands are[.]\l[.] [.] [.] [.]\lTheir own thing?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_11_Rival
-[RED][RIVAL][BLACK]: Grgrr[.]\pI'll make sure you all learn how\ncool the [RED]Sevii Islands[BLACK] are!\pWe have this weird cliff where\nDunsparce live!\lWe've got the [RED]Berry Forest[BLACK]!\pAnd, uh[.] I'm sure the other\nSevii Islands are cool, too!\pIt's no wonder our parents moved\nout there!\pAre any of YOU from an island?\nI doubt it!
+[RED][RIVAL][BLACK]: Grgrr[.]\pI'll make sure you all learn how\ncool the Sevii Islands are!\pWe have this weird cliff where\nDunsparce live!\lWe've got the [GREEN]Berry Forest[BLACK]!\pAnd, uh[.] I'm sure the other\nSevii Islands are cool, too!\pIt's no wonder our parents moved\nout there!\pAre any of YOU from an island?\nI doubt it!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_12_Mint
 [RED]Mint[BLACK]: Oh! Me! Me me me!\pFinally, I can contribute to a\ndiscussion!\lYou're right, islands DO rock!
 
+#org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_12_Mint_AlreadyMentioned
+[RED]Mint[BLACK]: I just told you I was from\nan island!\l[GREEN]TCG Island[BLACK]!\lIt's a pretty cool island!
+
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_13_Lillie
-[RED]Lillie[BLACK]: Ha ha, well, I didn't\nintend to say anything, but[.]\lI'm from an island, too[.]
+[RED]Lillie[BLACK]: Ha ha, well, I didn't\nintend to say anything, but[.]\lI AM from Alola[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AboutUs_14_Rival
 [RED][RIVAL][BLACK]: Err[.]\pWell, they probably aren't as cool\nas MY island[.]
 
 //Lillie's research
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LilliesResearch_1_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_1_Misty
 [RED]Misty[BLACK]: Oh, yeah. How's your\nresearch coming along, Lillie?\lAny progress?
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LilliesResearch_2_Lillie
-[RED]Lillie[BLACK]: O-oh! Mmm[.]\nYes and no.\pBill's[.] experience[.] is different\nfrom my mother's.\pWe've gained useful insights to\nher condition, but no solutions.
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_2_Lillie
+[RED]Lillie[BLACK]: O-oh! Mmm[.]\nYes and no.\pBill's[.][PAUSE][12] experience[.][PAUSE][13] is different\nfrom my mother's.\pWe've gained useful insights to\nher condition, but no solutions.
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_4_Rival
-[RED]RIVAL[BLACK]: What in the world are\nyou talking about?!\pWho's your mom?\nWhat's she got to do with Bill?!
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_3_Rival
+[RED][RIVAL][BLACK]: What in the world are\nyou talking about?!\pWho's your mom?\nWhat's she got to do with Bill?!
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_5_Misty
-[RED]Misty[BLACK]: It's a sensitive subject,\nyou pest[.]!\pSigh.\nShould I explain, Lillie?
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_4_Misty
+[RED]Misty[BLACK]: It's a sensitive subject,\nyou pest[.]!\pUgh.\nShould I explain, Lillie?
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_6_Lillie
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_5_Lillie
 [RED]Lillie[BLACK]: Ah[.] thank you, but I can\nhandle it.\pHave you heard about the [BLUE]Aether\nFoundation[BLACK] incident out in [GREEN]Alola[BLACK]?
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_7_Rival
-[RED]RIVAL[BLACK]: Of course!\pThe president was some crazy lady\nwho tried to destroy the world!
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_6_Rival
+[RED][RIVAL][BLACK]: Of course!\pThe president was some crazy lady\nwho tried to destroy the world!
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_8_Lillie
-[RED]Lillie[BLACK]: Ah, mmm[.]\nWell, not quite.\pBut, my mother, Lusamine, was the\n"crazy lady\" in question[.]\pTo make a long story short[.]\n[PAUSE][15](inhale)\pIt started when my father\ndisappeared.\pThe Foundation was studying\ninterdimensional travel.\pMy father fell into a wormhole\nand was lost for years.\pIn my mother's efforts to recover\nhim, she became fixated on the\nbeings she found in the wormholes.\lThe [BLUE]Ultra Beasts[BLACK].\pTo make a long story short, when\nshe went[.] [PAUSE][17]"crazy\"[.]\pShe fused herself with an Ultra\nBeast.\pThough we stopped her, she remains\nquite ill after the fusion.\pBill here has experienced\nsomething similar,\lso I sought his expertise.\pI've since become Bill's junior\nassistant, of a sort.
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_7_Lillie
+[RED]Lillie[BLACK]: Ah, mmm[.]\nWell, not quite.\pBut, my mother, Lusamine, was the\n"crazy lady\" in question[.]\pTo make a long story short[.]\n[PAUSE][15][BLUE](inhale)[BLACK]\pIt started when my father\ndisappeared.\pThe Foundation was studying\ninterdimensional travel.\pMy father fell into a wormhole\nand was lost for years.\pIn my mother's efforts to recover\nhim, she became fixated on the\lbeings she found in the wormholes.\lThe [BLUE]Ultra Beasts[BLACK].\pWhen she went[.]\n[PAUSE][17]"crazy,\"[PAUSE][8] as you put it[.]\pShe fused herself with an Ultra\nBeast.\pThough we stopped her, she remains\nquite ill after the fusion.\pBill here has experienced\nsomething similar,\lso I sought his expertise.\pI've since become Bill's junior\nassistant, of a sort.
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_9_Mint
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_8_Mint
 [RED]Mint[BLACK]: There's so much I don't know\nabout Pok\emon, huh[.]?\pIf I may ask[.] Bill, what happened\nto you that was "similar?\"
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_10_Bill
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_9_Bill
 [RED]Bill[BLACK]: Oh, uh[.] I got stuck in my\nteleporter with my Clefairy.
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_11_Mint
-[RED]Mint[BLACK]: I see.\n[PAUSE][18][BLUE]([.][PAUSE][13]HOW IS THAT SIMILAR???)
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_10_Mint
+[RED]Mint[BLACK]: I see!\n[PAUSE][18][BLUE]([.][PAUSE][13]HOW IS THAT SIMILAR???)
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_12_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_11_Misty
 [RED]Misty[BLACK]: They[.] found your dad\nrecently, didn't they, Lillie?
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_13_Lillie
-[RED]Lillie[BLACK]: As it turned out, a friend\nof mine had known where he was.\pThey only realized who he was much\nlater[.]\pI visited him, you know.\pHe had no memory of his past, or\nof me[.]\lYet, he was so warm, and loving.\pHe looked at me, and wanted me to\nhave his hat.\lHe didn't want me to burn up!\pI've been keeping it on ever\nsince.\pAll this time, he had been caring\nfor Pok\emon, on a remote island.\pEven with no memory, his natural\ninclination was to help others.\pAs much as I want to believe my\nmother was once kind[.]\lThat something changed her[.]\p[.]I wonder if it was simply that my\nfather shielded us from her worst.
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_12_Lillie
+[RED]Lillie[BLACK]: Ah, yes[.] It turned out, a\n[RED]friend of mine[BLACK] had known where\lhe was all along[.]\pThey only put together who he was\nmuch later, and told my brother.\pI actually just visited my father,\nyou know.\pHe had no memory of his past, or\nof me[.]\lYet, he was so warm, and loving.\pHe looked at me, and wanted me to\nhave his hat.\lHe didn't want me to get sunburn!\pI've been keeping it on ever\nsince.\pAll this time, he had been caring\nfor Pok\emon, on a remote island.\pEven with no memory, his natural\ninclination was to help others.\pAs much as I want to believe my\nmother was once kind[.]\lThat something changed her[.]\p[.]I wonder if it was simply that my\nfather shielded us from her worst.
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_14_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_13_Misty
 [RED]Misty[BLACK]: Lillie[.]\nYou're a strong person.\lYou know that, right?
 
-#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_15_Misty
+#org @gText_Route25_BillsHouse_FunnyLunch_LillieHistory_14_Rival
 [RED][RIVAL][BLACK]: [BLUE](Strong, huh[.] Maybe I\nshould fight her[.])
+
+
+#org @gText_TurnOnExpShare
+[RED]Exp. Share[BLACK] has been turned on.\pAll party members will\nreceive Exp. Points.
+
+#org @gText_TurnOffExpShare
+[RED]Exp. Share[BLACK] has been turned off.
 
 //Done talking
 
 #org @gText_Route25_BillsHouse_FunnyLunch_DoneTalking_AreYouSure
-[BLUE]Sharing a meal with others is a\nrare and treasurable experience.\pYou may never get the opportunity\nto share a table and a sandwich,\lwith this particular company,\lever again.\pKnowing this, will you still allow\nthis fleeting moment to pass,\lwith things left unsaid?
+[BLUE]Sharing a meal with others is a\nrare and treasurable experience.\pYou may never get the opportunity\nto share a table,[PAUSE][13] and a sandwich,\lwith this particular company,\lever again.\pKnowing this, will you still allow\nthis fleeting moment to pass,\lwith things left unsaid?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_AskedSomeStuffButNotAll_Bill
 [RED]Bill[BLACK]: I still have some things I\nwant to ask you all!\lSo[.]
@@ -384,37 +406,37 @@ You enjoy your sandwiches while\nBill leads a rousing conversation!\pYou learn s
 //after
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_1_Rival
-[RED][RIVAL][BLACK]: Okay! We ate!\nCan we go to the gym now?
+[RED][RIVAL][BLACK]: Okay! We talked!\nCan we go to the Gym now?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_2_Misty
-[RED]Misty[BLACK]: Honestly, pal[.]\nWhat's your rush?
+[RED]Misty[BLACK]: Honestly, you pest[.]\n[PAUSE][14]What's your rush?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_3_Rival
 [RED][RIVAL][BLACK]: Because getting all the\nbadges is what this journey's for!\lI gotta prove my worth!!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_4_Misty
-[RED]Misty[BLACK]: Tch[.] do you know how many\nPok\emon trainers challenge me?\pDo you know how few even ATTEMPT\nto get through [GREEN]Victory Road[BLACK]?\pHeck, do you know how few even\nmanage to beat me?\pAmbitious kids like you are a dime\na dozen.\lWhat makes you different?\lWhat makes you worth my time?
+[RED]Misty[BLACK]: Tch[.][PAUSE][14] do you know how many\nPok\emon trainers challenge me?\pAnd do you know how few of them go\non to even TRY getting through\l[GREEN]Victory Road[BLACK]?\pHeck, do you know how few even\nmanage to beat me?\pAmbitious kids like you are a dime\na dozen.\lWhat makes you different?\lWhat makes you worth my time?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_5_Rival
-[RED][RIVAL][BLACK]: I'm worth your time\nbecause[.]\l[.]Because I have to be!\pDo you know how hard my dad worked\nto afford the Trainer Package?!\p[PLAYER], their sibling and I[.]\nWe're from the [GREEN]Sevii Islands[BLACK].\pIt's not easy to get approved by\nOak Labs if you're not from [GREEN]Kanto[BLACK].\pIt took money, time, risk and\nsacrifice.\pThat's why we're older than most\nnew trainers.
+[RED][RIVAL][BLACK]: I'm worth your time\nbecause[.]\l[.]Because I have to be!\pDo you know how hard my dad worked\nto afford the Trainer Package?!\lAnd [PLAYER]'s parents, too!\pIt's difficult to get approved by\nOak Labs if you're not from [GREEN]Kanto[BLACK].\pIt took money, time, risk and\nsacrifice.\pThat's why we're older than most\nnew trainers.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_6_Misty
-[RED]Misty[BLACK]: [.] [.] [.]
+[RED]Misty[BLACK]: [.][PAUSE][7] [.][PAUSE][7] [.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_7_Bill
 [RED]Bill[BLACK]: The Trainer Package[.]\n[PAUSE][14]How many times did you apply?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_8_Rival
-[RED][RIVAL][BLACK]: I don't know! I lost\ncount!\pBut there's an application fee\nevery time, and then[.]\p[.]it's even MORE money once you\nARE approved!\pBut my dad[.]\nHe kept applying every year!\n[PAUSE]Because he knows I'm awesome!\pWe were already older than an\naverage new trainer when we\lstarted applying!\pSo I can't have a bad adventure!\nI can't waste my dad's money!\lAnd I can't waste more time!\pSo I've gotta get strong, fast!\nOkay?! Do you get it now?!?\pI'm gonna be the best, like no one\never was!\lFor my dad, for the [GREEN]Sevii Islands[BLACK][.]\l[.][PAUSE][14]And, (grumble grumble)[.]\l[.][PAUSE][14]even for [PLAYER]!
+[RED][RIVAL][BLACK]: I don't know![PAUSE][13] I lost\ncount!\pBut there's an application fee\nevery time, and then[.]\p[.]it's even MORE money once you\nARE approved!\pBut my dad[.]\nHe kept applying every year!\lBecause he knows I'm awesome!\pWe were already older than an\naverage new trainer when we\lstarted applying!\pSo I can't have a bad adventure!\nI can't waste my dad's money!\lAnd I can't waste more time!\pSo I've gotta get strong, fast!\nOkay?! Do you get it now?!?\pI'm gonna be the best, like no one\never was!\lFor my dad, for the [GREEN]Sevii Islands[BLACK][.]\l[.][PAUSE][14]And, (grumble grumble)[.]\l[.][PAUSE][14][SHRINK]even for [PLAYER]'s weird family!
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_9_Misty
-[RED]Misty[BLACK]: [.] [.] Heheh. [PAUSE][14]Okay, okay.\n[PAUSE][14]I see now.\lFor your dad[.]\pBill, is it alright if we borrow your garden?
+[RED]Misty[BLACK]: [.] [.] Heheh. [PAUSE][14]Okay, okay.\n[PAUSE][14]I see now.\lAlright[.]\lHm.\pBill, is it alright if we borrow\nyour garden?
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_10_Bill
 [RED]Bill[BLACK]: Ah!\nCertainly!\pLet me clean up around the door[.]
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_11_Misty
-[RED]Misty[BLACK]: Thanks.[PAUSE][14] Alright, all of you,\nhead to the back.\pEspecially you, Mint.
+[RED]Misty[BLACK]: Thanks.[PAUSE][14] Alright, all of you,\nfollow Bill.\pEspecially you, Mint.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_12_Mint
 [RED]Mint[BLACK]: Wahoooooo!
@@ -422,17 +444,38 @@ You enjoy your sandwiches while\nBill leads a rousing conversation!\pYou learn s
 #org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_13_Rival
 [RED][RIVAL][BLACK]: Something special, huh?\nFinally[.]
 
+#org @gText_Route25_BillsHouse_FunnyLunch_Conclusion_14_Misty
+[RED]Misty[BLACK]: Come on, look alive,\nyou two.
+
 #org @gText_Route25_BillsHouse_FunnyLunch_AfterLunch_LillieIdle
 [RED]Lillie[BLACK]: I've never known what to\nthink of the Trainer Package[.]\lIt seems unnecessary.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_AfterLunch_LillieDontLeave
+[RED]Lillie[BLACK]: A-ah! Wait!\pI'm sure you have things to do,\n[PLAYER][.] Goodness knows I do!\pBut I can't remember the last time\nMisty wanted to do, well[.]\lanything[.]!\pIt'd mean a lot to me if you'd\nindulge her.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_FinalAfter_1_Misty
 [RED]Misty[BLACK]: Oh, hold up, [PLAYER].
 
 #org @gText_Route25_BillsHouse_FunnyLunch_FinalAfter_2_Misty
-I wanted to[.] apologize.\pI think it'd bounce off of [RIVAL],\nso I'll say it to you.\pI have a hard time dealing with\nfolks like him[.]\p[.]and my temper can still get the\nbest of me.\pHe's a lot, but he's different.\nYou both are, aren't you?\p[.] [.] [.]\n[PAUSE][14]He reminds me of Ash.\pHe's cocky, and he's in for a\nhumbling experience, as a trainer.\pBut he's doing this for more than\nhimself.\pAnd you, you remind me of Red.\nUnerringly strong and silent, even\naround a loudmouth like [RIVAL].\pYou must have a lot of inner\nstrength.\pIt's true that the League has\ngotten different, business-like[.]\lYou should prepare for that.\pBut[.] [PAUSE][15](sigh) I dunno.\nLet's get going.
+I wanted to[.] apologize.\pI think it'd bounce off of [RIVAL],\nso I'll say it to you.\pI have a hard time dealing with\nfolks like him[.]\p[.]and my temper can still get the\nbest of me.\pHe's a lot, but he's different.\nYou both are, aren't you?\p[.] [.] [.]\n[PAUSE][14]He reminds me of Ash.\pHe's cocky, and he's in for a\nhumbling experience, as a trainer.\pBut he's doing this for more than\nhimself.\pAnd you, you remind me of Red.\nUnerringly strong and silent, even\laround a loudmouth like [RIVAL].\pYou must have a lot of inner\nstrength.\pIt's true that the League has\ngotten different, business-like[.]\lYou should prepare for that.\pBut[.] [PAUSE][15][BLUE](sigh)[BLACK] I dunno.\nLet's get going.
 
 #org @gText_Route25_BillsHouse_FunnyLunch_FinalAfter_3_Lillie
 [RED]Lillie[BLACK]: Psst[.]\pBetween you and me, [PLAYER], it's\nrare to see Misty apologize!\pShe must really see something in\nyou if she was willing to talk\lso earnestly[.]\lAnd I think I see it, too!\lHeehee.
+
+#org @gText_Route25_BillsHouse_SecretGardenSign
+Bill's Secret Garden\nCome on in!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Bill_Standing_After2v2
+[RED]Bill[BLACK]: [PLAYER]!\nI've got big plans for my garden!\pCome on by again after you've\ngotten more badges!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Lillie_Standing_After2v2
+[RED]Lillie[BLACK]: Oh, [PLAYER]! Good luck\nwith your fight against Misty!
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Lillie_Standing_AfterMistyGym_1
+[RED]Lillie[BLACK]: Welcome back, [PLAYER]!\nOh, is that Misty's badge?\lSo, you did it then[.]!\pMisty had visited my school a few\ntimes. We weren't close at first.\pBut when she heard I had moved\nnearby, and why I was here[.]\l[.]she reached out.\pShe helped me get my bearings[.]\nShe made sure I wasn't alone.\lShe's become a dear friend[.]\pMisty is a compassionate, spirited\nwoman.\pI wanted to thank you for bringing\nout that side of her again.
+
+#org @gText_Route25_BillsHouse_FunnyLunch_Lillie_Standing_AfterMistyGym_2
+[RED]Lillie[BLACK]: I'm rooting for you,\n[PLAYER]!\pUm, could you root for me to\nfinish my own work, too?\pI'd appreciate it[.]
 
 //Placeholders
 
@@ -451,3 +494,5 @@ place holder four!
 #org @gText_Route25_BillsHouse_FunnyLunch_Placeholder5
 placeh older five
 
+#org @gText_Route25_BillsHouse_BillAfterLunch
+bill after lunch ! !

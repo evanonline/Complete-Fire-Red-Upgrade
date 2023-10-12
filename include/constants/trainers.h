@@ -196,6 +196,7 @@
 #define TRAINER_BACK_PIC_PRIMO      	  	6
 #define TRAINER_BACK_PIC_OLD_MAN 			7
 #define TRAINER_BACK_PIC_MARLEY             8
+#define TRAINER_BACK_PIC_RIVAL              9
 
 
 #ifndef UNBOUND //CHANGE THESE

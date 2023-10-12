@@ -582,12 +582,12 @@ const struct TrainerMonNoItemDefaultMoves sParty_Route24CamperShane[] = {
 const struct TrainerMonNoItemDefaultMoves sParty_Route24_RivalBattle2[] = {
 	{
         .iv = 25,
-        .lvl = 9,
+        .lvl = 10,
         .species = SPECIES_NINCADA,
     },
 	{
         .iv = 25,
-        .lvl = 10,
+        .lvl = 11,
         .species = SPECIES_SNEASEL_H,
     },
 };
@@ -632,6 +632,63 @@ const struct TrainerMonNoItemDefaultMoves sParty_Route25_PokeKidJamie[] = {
         .iv = 14,
         .lvl = 6,
         .species = SPECIES_GRUBBIN,
+    },
+};
+
+// Bill's Garden
+
+const struct TrainerMonItemCustomMoves sParty_BillsGarden_Mint[] = {
+    {
+        .iv = 31,
+        .lvl = 13,
+        .species = SPECIES_STARYU,
+		.moves = {
+            MOVE_SUBSTITUTE,
+            MOVE_RAPIDSPIN,
+            MOVE_RECOVER,
+            MOVE_LIGHTSCREEN,
+        },
+		.heldItem = ITEM_EVIOLITE,
+        .ability = 2,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_BillsGarden_Lillie[] = {
+    {
+        .iv = 27,
+        .lvl = 10,
+        .species = SPECIES_CUTIEFLY,
+		.moves = {
+            MOVE_FAIRYWIND,
+            MOVE_POWDER,
+            MOVE_LIGHTSCREEN,
+            MOVE_REFLECT,
+        },
+        .ability = 1,
+    },
+    {
+        .iv = 29,
+        .lvl = 11,
+        .species = SPECIES_POPPLIO,
+		.moves = {
+            MOVE_POUND,
+            MOVE_BRINE,
+            MOVE_GROWL,
+            MOVE_LIFEDEW,
+        },
+        .ability = 0,
+    },
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
     },
 };
 
@@ -1198,5 +1255,31 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_GOOD_MOVE,
         .partySize = NELEMS(sParty_Route25_PokeKidJamie),
         .party = {.NoItemDefaultMoves = sParty_Route25_PokeKidJamie}
+    },
+	
+	[TRAINER_BILLSGARDEN_MINT] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM,
+        .trainerClass = CLASS_TCG_FANATIC,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_MINT,
+        .trainerName = {_M, _i, _n, _t, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_FIRST_BATTLE,
+        .partySize = NELEMS(sParty_BillsGarden_Mint),
+        .party = {.ItemCustomMoves = sParty_BillsGarden_Mint}
+    },
+	
+	[TRAINER_BILLSGARDEN_LILLIE] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_PKMN_TRAINER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_LILLIE,
+        .trainerName = {_L, _i, _l, _l, _i, _e, _END},
+        .items = {},
+        .doubleBattle = FALSE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_BillsGarden_Lillie),
+        .party = {.NoItemCustomMoves = sParty_BillsGarden_Lillie}
     },
 };

@@ -1,0 +1,110 @@
+#org @gText_BillsGarden_BeforeDoubleBattle_Bill
+[RED]Bill[BLACK]: What do you think of my\ngarden, [PLAYER]?\pIt's pretty nifty, but I want more\nrare Pok\emon to play here!
+
+#org @gText_BillsGarden_BeforeDoubleBattle_Rival
+[RED][RIVAL][BLACK]: Hurry up and talk to\nMisty!!
+
+#org @gText_BillsGarden_BeforeDoubleBattle_Lillie
+[RED]Lillie[BLACK]: I'd rather be doing other\nthings right now, but[.]\lI do enjoy hanging out with Misty.
+
+#org @gText_BillsGarden_BeforeDoubleBattle_Mint
+[RED]Mint[BLACK]: I saw some kind of blue\nPikachu in that tall grass!\lThat's crazy, [PLAYER]!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_1_Misty
+[RED]Misty[BLACK]: Yeesh, [PLAYER]! How long\ndoes it take ya to climb a ladder?\p[.][PAUSE][13]Heh. Just messing with you.\nLet me heal you up.
+
+#org @gText_BillsGarden_DoubleBattleFightStart_1_MistySplit1
+Alright, go stand next to [RIVAL]!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_1_MistySplit2
+[RED]Misty[BLACK]: Okay, folks. I want to see\na 2v2 battle. Plain and simple.\pLillie, you mind playing along?
+
+#org @gText_BillsGarden_DoubleBattleFightStart_2_Lillie
+[RED]Lillie[BLACK]: Oh! Should I go use a PC\nand fetch my Lunala?
+
+#org @gText_BillsGarden_DoubleBattleFightStart_3_Misty
+[RED]Misty[BLACK]: Whoa, no, of course not!\nI'm having you fight the newbies!\lYou'd end up destroying them!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_4_Rival
+[RED][RIVAL][BLACK]: No, don't listen to her!\nI want you to try and destroy me!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_5_Misty
+[RED]Misty[BLACK]: [.][.]Just use the new Pok\emon\nyou were hatching from eggs, Lillie[.]
+
+#org @gText_BillsGarden_DoubleBattleFightStart_6_Lillie
+[RED]Lillie[BLACK]: Right[.]
+
+#org @gText_BillsGarden_DoubleBattleFightStart_7_Misty
+[RED]Misty[BLACK]: Alright. Next[.]\pMint! Front and center!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_8_Mint
+[RED]Mint[BLACK]: YES MA'AM!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_9_Misty
+[RED]Misty[BLACK]: You're in this fight, too.\nYou're borrowing my Staryu.\pAs it so happens, they're a\ndescendant of the Staryu from[.]\l[BLUE](ahem)[BLACK][PAUSE][9] [SHRINK]that one trading card.
+
+#org @gText_BillsGarden_DoubleBattleFightStart_10_Mint
+[RED]Mint[BLACK]: I'm[.][PAUSE][9] I'm so honored!\nI'll do my best!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_11_Misty
+[RED]Misty[BLACK]: Staryu's the only Pok\emon\nI can spare, so[.]\pI gave it some defensive moves,\nand an item to hold,\lto keep you in the fight longer.\lJust leave that [BLUE]Eviolite[BLACK] attached!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_11_MistySplit
+Now, Lillie has knows her stuff,\nso Mint's, ah[.] inexperience[.]\l[.]balances them out as a team.\pMeanwhile, I want to see how well\n[RIVAL] and [PLAYER] work together.\pOnce you two can beat Mint and\nLillie, I'll go back to my Gym.
+
+#org @gText_BillsGarden_DoubleBattleFightStart_12_Rival
+[RED][RIVAL][BLACK]: Hmph! Easy! J-just don't\nhold me back, [PLAYER]!\p[.][.][.]\n[BLUE](Gulp[.])
+
+#org @gText_BillsGarden_DoubleBattleFightStart_13_Misty
+[RED]Misty[BLACK]: Oh, and remember, since\nthis is a 2v2[.]\p[.]each trainer will only use\ntheir first three Pok\emon.
+
+#org @gText_BillsGarden_DoubleBattleFightStart_14_Rival
+[RED][RIVAL][BLACK]: I-I can win with only\nTWO Pok\emon!
+
+#org @gText_BillsGarden_DoubleBattleFightStart_15_Misty
+[RED]Misty[BLACK]: [.]Okay, man.\nWhatever you say.\pNow, all of you, show me\nwhat you've got!
+
+#org @gText_BillsGarden_DoubleBattle_MintLose
+So this is Pok\emon!\nWowie!
+
+#org @gText_BillsGarden_DoubleBattle_LillieLose
+Well done, you two!
+
+#org @gText_BillsGarden_AfterStoryBattle_1_Misty
+[RED]Misty[BLACK]: [.]Okay.\n[PAUSE][12]I've seen what I need to see.\pI'll give you two a fight.
+
+#org @gText_BillsGarden_AfterStoryBattle_2_Rival
+[RED][RIVAL][BLACK]: HA!! YES!\nI did it!\pI knew I could impress you, Misty!
+
+#org @gText_BillsGarden_AfterStoryBattle_3_Misty
+[RED]Misty[BLACK]: Don't push it, sweetie.\pOh, and Mint, you're welcome to\nchallenge me, too.\pYou can keep that Staryu and work\non a team of your own.
+
+#org @gText_BillsGarden_AfterStoryBattle_4_Mint
+[RED]Mint[BLACK]: My[.]! My own Pok\emon!\pYahooooooo!
+
+#org @gText_BillsGarden_AfterStoryBattle_5_Misty
+[RED]Misty[BLACK]: [.][.][.]\nAlright, I'm out.\lSee you back in town.
+
+#org @gText_BillsGarden_AfterStoryBattle_6_Rival
+[RED][RIVAL][BLACK]: Hmmph! We did good,\nhuh, [PLAYER]?\pBut, umm, if I want to face Misty,\nI want our fight to be[.]\l[.]an utterly dominant performance!\pS-so you should fight her first\nwhile I go get more Pok\emon!\lL-later!
+
+#org @gText_BillsGarden_AfterStoryBattle_7_Bill
+[RED]Bill[BLACK]: Hahaha! What a lively crew!\nI truly love having guests!\pGoodness, I need to spruce up my\ngarden for next time!\pCome with me, Lillie, I have some\nideas we ought to discuss[.]
+
+#org @gText_BillsGarden_AfterStoryBattle_8_Lillie
+[RED]Lillie[BLACK]: V-very well[.]
+
+#org @gText_BillsGarden_AfterStoryBattle_8_LillieSplit
+I hope you get back to Cerulean\nCity safely, [PLAYER]!
+
+#org @gText_BillsGarden_LostReturn_1_Misty
+[RED]Misty[BLACK]: Hey, [PLAYER], welcome back.\pDon't worry, I'm not testing if\nyou can do this flawlessly.\pI just want to see if you two can\ndo it, at all.\pLet me heal you up.\nThat keeps things fair.
+
+#org @gText_BillsGarden_LostReturn_2_Misty
+[RED]Misty[BLACK]: Now, give it another go.
+
+#org @gText_BillsGarden_LostReturn_3_Rival
+[RED][RIVAL][BLACK]: L-let's do it, [PLAYER][.]!
+
+#org @gText_BillsGarden_Rival_LostDoubleBattle
+[RED][RIVAL][BLACK]: Grgrr[.]\n[PAUSE][12][.][.][.]\pYou should have done better!\nB-but!\lI could have, too.\lI admit it[.]\pYou'd better, uh, do better, this\ntime!\pS-so that I'm not the only one\ntrying even harder!

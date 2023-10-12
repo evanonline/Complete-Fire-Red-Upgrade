@@ -61,6 +61,7 @@ EventScript_IcedPath_SwimmerFrancine_2:
 
 .global EventScript_IcedPath_CheckVermilionGymCutscene
 EventScript_IcedPath_CheckVermilionGymCutscene:
+	setflag 0x0AF @this is to hide Brendan on Route 6
 	checkflag 0x59A
 	if NOT_SET _call EventScript_NullifyRivalCutsceneVermilion
 	setvar 0x4012 0x1

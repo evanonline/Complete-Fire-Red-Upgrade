@@ -1,8 +1,32 @@
 #org @gText_CeriseLab_DexOrdersExplained
-Have you noticed the new numbering\nscheme for the [BLUE]Kanto Pok\edex[BLACK]?\pWhen the Pok\emon population\nexploded here, we reorganized it.\lIt was kind of a big deal!\pThe [BLUE]National Dex[BLACK] is still in the\noriginal order, though.
+Have you noticed the new numbering\nscheme for the [BLUE]Kanto Pok\edex[BLACK]?\pWhen the Pok\emon population\nexploded here, we reorganized.\lIt was kind of a big deal!\pThe [BLUE]National Dex[BLACK] is still in the\noriginal order, though.
+
+#org @gText_CeriseLab_Forms
+When you catch a Pok\emon with\nmultiple forms, they can be viewed\nin Pok\edex's Habitat lists.
 
 #org @gText_CeriseLab_DexOrganization
-Every few years, we accept a new\nregion's Pok\emon into the Pok\edex.\pThere's countless Pok\emon, so we\nneed regions' professors to meet\nspecific documentation criteria.\pI used to work at Oak's, you know.\nThere was one year[.]\pIt was when [GREEN]Unova[BLACK]'s Pok\emon were\nadded to the [BLUE]National Pok\edex[BLACK].\pWe got a really blurry screenshot\nfrom Professor Juniper's team,\lof a Pok\emon we didn't know.\pWe were really crunching to get\nthe Pok\edex ready in time.\pIn the heat of the moment, someone\ndrew over the blurry photo[.]\l[.]and just[.]\l[.]made their own Pok\emon out of it.\pIt was some kind of duck with an\nacorn lodged in its head?\pWe got a better photo a few hours\nlater.\pThe Pok\emon in question was\nOshawott[.]\lNeither a duck, nor acorn.\lSomeone did get fired for that.
+Every few years, we accept a new\nregion's Pok\emon into the Pok\edex.\pThere's countless Pok\emon, so we\nneed regions' professors to meet\nspecific documentation criteria.\pI was still working at Oak's when\nwe integrated Unova a decade ago!\pI remember we were only sent a\nblurry silhouette for Oshawott.\pOne of the lab technicians did a\nmockup in a rush to finish things[.]\pHe drew a duck with an acorn stuck\nin its skull over the silhouette,\land passed it along.\pSomeone else sent it ahead because\nthey got it mixed with Ducklett.\pIt took forever to clean that mess\nup[.] It's tough working for Oak!
 
 #org @gText_CeriseLab_DendraIntro
-???: Osu!\n[PAUSE][15]Welcome to Cerise Laboratory!\lMy name's Dendra!\pAbout me[.]\n[PAUSE][20]My age?\l27!\lMy hobby?\lWorking out!\lMy previous job?\lTeacher at [GREEN]Uva Academy[BLACK]!\lReason I was fired?\lWorkplace misconduct!\pAnd my type?\nStrong and muscular Fighting-types,\ltil the bitter end!\pI'm a battle expert, and proud of\nit!\pWanna know about types?\nPhysical and special moves?\lEVs and IVs?\lI'm your woman!
+???: Osu!\n[PAUSE][15]Welcome to Cerise Laboratory!\lMy name's Dendra!\pAbout me[.]\n[PAUSE][20]My age?\l26!\lMy hobby?\lWorking out!\lMy previous job?\lTeacher at [GREEN]Uva Academy[BLACK]!\lReason I was fired?\lWorkplace misconduct!\pAnd my type?\nStrong and muscular Fighting-types,\luntil the bitter end!\pI'm a battle expert, and proud of\nit!\pWanna know about stats?\nI'm your woman!
+
+#org @gText_CeriseLab_DendraIntroAfterMet
+[RED]Dendra[BLACK]: Osu!\nI'm still Dendra!\pAnd I'm STILL the resident battle\nstudies expert here!
+
+#org @gText_CeriseLab_DendraMenu
+What can I help you with?
+
+#org @gText_CeriseLab_DendraByeBye
+Good luck out there, kid!
+
+#org @gText_CeriseLab_DendraTutorials_EVs
+Ahh, the all important EVs!\pEV stands for "effort value.\"\nSome folks call 'em "base points.\"\pSee, when your Pok\emon wins a\nfight, it learns something\leach time.\lEVs are how we can track that!\pFor instance, Pidgey is a fast\nPok\emon.\lBeating one yields 1 Speed EV!\pThe EVs you get are different for\nevery Pok\emon, though!\pEV yield is usually related to a\nPok\emon's highest stat. Usually!\pFor a Level 100 Pok\emon, 4 EVs\nequal 1 stat point!\pEvery Pok\emon who gains experience\nin a fight will get EVs, too!\pSo if two Pok\emon beat a Pidgey,\nthey BOTH get 1 Speed EV!\pEach Pok\emon can earn 510 EVs in\ntotal, across all stats.\pBut a singular stat can only\nhave 252 EVs applied to it.\pLastly, there's items to help with\nEV training.\pFeeding Pok\emon certain Berries\ncan lower one of their EVs by 10!\pThat's good for if you want to\nretrain a Pok\emon.\pVitamins give 10 EVs in a stat,\nFeathers give 1 EV in a stat[.]\pThere's even held items that can\nincrease the EVs a Pok\emon gains\lafter winning a fight.\pYou can buy all of these at the\n[GREEN]Celadon Department Store[BLACK]!\lCheck the fifth floor!\pAnd that's EVs!\nWhew!
+
+#org @gText_CeriseLab_DendraTutorials_IVs
+IV stands for "individual value.\"\pEvery Pok\emon has a unique IV from\n0 to 31 for each of its stats.\pIVs exist in addition to EVs,\nbase stats and natures.\pIVs are just what a Pok\emon is\nborn with. They're fixed stats!\pIt takes a special kind of\ntraining to change 'em!\pPrimo can do that for you, though.\nHe's such a great guy!
+
+#org @gText_CeriseLab_DendraTutorials_Natures
+A Pok\emon's nature influences its\nstats in battle!\pFor example, a Modest Pok\emon will\nhave a weaker Attack stat[.]\l[.]but stronger Special Attack!\pBut, some abilities are neutral,\nand there's no differences.\pThere's [BLUE]mints[BLACK] out there that can\nchange a Pok\emon's nature.\lIt's worth looking for those!\pWe might have a guide somewhere on\nwhich nature does what[.]\l[.]but I can never keep it straight!\lHahaha!
+
+#org @gText_CeriseLab_DendraTutorials_PhysicalSpecial
+Physical attacks use the Attack\nstat, and are measured against\lan opponent's Defense!\pSpecial attacks use the Special\nAttack stat, and are measured\lagainst Special Defense!\pPhysical attacks are stuff like\npunches and kicks! My favorite!\pSpecial attacks are stuff like\nenergy-based attacks! Also cool!\pPhysical attacks have a red punchy\nsymbol on the status screen.\pSpecial attacks have a blue circly\nsymbol!\pAnd status moves have a gray\nswirly symbol.\pA little silly, but that's how I\nremember it!

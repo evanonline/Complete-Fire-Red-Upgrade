@@ -17,7 +17,10 @@ Wow! You don't mess around, huh,\nsib?\p
 Not holdin' back, eh, sib?\nGood! Just how I want it!\p
 
 #org @sText_SibBattle1_LowHP
-C'mon[.]\nWe can still clutch it out!\p 
+C'mon[.]\nWe can still clutch it out!\p
+
+#org @sText_MintLillieBattle1_MintLowHP
+Am I doing any good?\nI THINK I am? Maybe?
 
 //For Pokemon Unbound - Feel free to remove, and do not place strings below
 #ifdef UNBOUND

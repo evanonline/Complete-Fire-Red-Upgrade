@@ -32,6 +32,7 @@ static const struct TrainerSlide sTrainerSlides[] =
 	{0x13, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
 	{0x14, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
 	{0x15, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	//{0x2B, NULL, NULL, sText_MintLillieBattle1_MintLowHP},
 
 	#ifdef UNBOUND //For Pokemon Unbound - Feel free to remove
 	{0x6, sText_MirskleFirstMonDown, NULL, NULL},

@@ -43,8 +43,65 @@ You should probably have a\n[BLUE]Town Map[BLACK] in your bag.\pIt’s called th
 #org @gText_VermilionCityNPC_SailorSSAnne
 The [GREEN]S.S. Anne[BLACK] had a controversial\naccident many years back.\pThey were talking about making an\n[GREEN]S.S. Anne 2[BLACK], but[.]\lthere's better ways to sail now!
 
-#org @gText_VermilionCityNPC_FishingGuru
+#org @gText_VermilionCityNPC_FishingGuruIntro
 It's me! The one, the only!\nThe Fishing Guru!\pIt looks like you already have an\nawesome Old Rod.\lThat's the best kind of rod!\lYou're a kindred soul, buddy!
+
+#org @gText_VermilionCityNPC_FishingGuruIntro2
+If you'd like, I can tell you what\nfish you can catch around here!
+
+#org @gText_VermilionCityNPC_FishingGuruIntro2_NextMenu
+I know about these locations, too!
+
+#org @gText_VermilionCityNPC_FishingGuruList_VermilionPort
+Vermilion Port
+
+#org @gText_VermilionCityNPC_FishingGuruList_VermilionCity
+Vermilion City
+
+#org @gText_VermilionCityNPC_FishingGuruList_Route6
+Route 6
+
+#org @gText_VermilionCityNPC_FishingGuruList_IcedPath
+Iced Path
+
+#org @gText_VermilionCityNPC_FishingGuruList_CeladonCity
+Celadon City
+
+#org @gText_VermilionCityNPC_FishingGuruList_Route4_24_Cerulean
+Route 4 / Route 24 / Cerulean City
+
+#org @gText_VermilionCityNPC_FishingGuruList_Route25
+Route 25
+
+#org @gText_VermilionCityNPC_FishingGuruList_Next
+Next
+
+#org @gText_VermilionCityNPC_FishingGuruList_Previous
+Previous
+
+#org @gText_VermilionCityNPC_FishingGuru_VermilionPort
+In [GREEN]Vermilion Port[BLACK][.]\pAn Old Rod will get you Wishiwashi\nand Tentacool!\pA Good Rod can fish up Dhelmise!\pA Super Rod can fish up Skrelp!\pSo you know, some Pok\emon at the\nport are more common at night!
+
+#org @gText_VermilionCityNPC_FishingGuru_VermilionCity
+In [GREEN]Vermilion City[BLACK][.]\pAn Old Rod can fish up Magikarp\nand Goldeen!\pA Good Rod can fish up Remoraid\nand Carvanha!\pA Super Rod can fish up Skrelp or\nthe mighty Octillery!
+
+#org @gText_VermilionCityNPC_FishingGuru_Route6
+On [GREEN]Route 6[BLACK][.]\pAn Old Rod will get you Swirlix,\nas well as Magikarp in the day,\lor Corphish at night.\pA Good Rod can fish up Goldeen or\nPoliwag!\pAnd a Super Rod can fish up\nPoliwhirl or Gyarados!
+
+#org @gText_VermilionCityNPC_FishingGuru_IcedPath
+At the [GREEN]Iced Path[BLACK][.]\pOld Rod and Good Rod fishers will\nonly turn up Shellder!\pBut with a Super Rod, you might\nfind Eiscue or Cloyster!
+
+#org @gText_VermilionCityNPC_FishingGuru_CeladonCity
+In [GREEN]Celadon City[BLACK][.]\pAn Old Rod can fish up Magikarp!\nOr Tympole, at night!\pA Good Rod can fish up Lotad,\nand Tympole at any time!\pAnd a Super Rod can fish up\nPalpitoad!
+
+#org @gText_VermilionCityNPC_FishingGuru_Route4_Route24_Cerulean
+There's a river that runs through\n[GREEN]Cerulean City[BLACK], and [GREEN]Routes 4[BLACK] & [GREEN]24[BLACK].\lThere, you'll find[.]\pPsyduck and Magikarp,\nwith an Old Rod!\pTentacool and Finneon,\nwith a Good Rod!\pAnd Horsea, Golduck and Lumineon\nwith a Super Rod!
+
+#org @gText_VermilionCityNPC_FishingGuru_Route25
+On [GREEN]Route 25[BLACK][.]\pAn Old Rod will fish up Magikarp\nand Arrokuda!\pA Good Rod will fish up Feebas!\pAnd a Super Rod will fish up\nBarraskewda!\pApparently, Arrokuda are slightly\nmore common in the morning!\pFun fact: Arrokuda aren't native to\nRoute 25.\pBut Cramorants who came to roost\noften drop Arrokuda in the water!
+
+#org @gText_VermilionCityNPC_FishingGuruOutro
+Listen up! The DexNav can't tell\nyou about Pok\emon you fish for.\lSo, come to me for fishing info!
 
 #org @gText_VermilionCityNPC_TypesSame
 Things are the same as ever[.]\nI'm waiting for a shakeup.\pI want a bunch of Pok\emon to get\nawesome new types!\pSudowoodo could be Grass/Rock!\pOr, Whismur could be Sound-type!\pBut no[.] Every Pok\emon is how\nyou'd expect them to be.\lBoring[.]
@@ -77,7 +134,7 @@ Grumble mumble[.]\nHey, you.\lAre you good at counting money?\l[SHRINK]I'm not[.
 Vermilion Port\n[ARROW_DOWN]
 
 #org @gText_VermilionCityNPC_SadTinkatonExpert
-Hi[.][PAUSE][15] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color,[PAUSE][10] and doesn't\nhave fiery attacks,[PAUSE][10] or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut[PAUSE][20] no one will ever care.
+Hi[.][PAUSE][15] I'm an expert on all things\nTinkaton.\lBut I don't think anyone cares[.]\pIt's pink in color,[PAUSE][10] and doesn't\nhave fiery attacks,[PAUSE][10] or armor,\lso no one ever seems to notice it.\pWith its [BLUE]Hidden Ability[BLACK], Pickpocket,\nit can steal held items from foes.\lBut no one ever seems to care[.]\pI'd suggest that you add one to\nyour collection[.]\lBut[PAUSE][14] no one will ever care.
 
 #org @gText_VermilionCityNPC_CoolFinally
 It was wonderful when they finally\nfinished that building over there.\pThere was a Machop who diligently\nprepared the construction site[.]\lEvery day! For years!\pThe town awarded that little guy\na medal for his hard work.\pWhat's the building?\nEh, some lab or something.

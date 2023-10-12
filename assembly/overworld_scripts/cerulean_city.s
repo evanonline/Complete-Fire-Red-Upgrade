@@ -10,6 +10,7 @@
 
 .equ FLAG_MINT_CERULEANTALK, 0x0E0
 .equ FLAG_TORMENT_TM, 0x0E1
+.equ FLAG_BILLSGARDEN_NPCS, 0x0B2
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -110,11 +111,17 @@ EventScript_CeruleanCity_DisgruntedGymSwimmer:
 
 .global EventScript_CeruleanCity_ClosedGym
 EventScript_CeruleanCity_ClosedGym:
+	checkflag FLAG_BILLSGARDEN_NPCS
+	if SET _goto UnlockGym
 	lockall
 	applymovement 0xFF LookUp
 	waitmovement 0x0
 	msgbox gText_CeruleanCity_MistyGymLocked MSG_NORMAL
 	applymovement 0xFF WalkDown
+	end
+	
+UnlockGym:
+	setvar 0x4091 0x1
 	end
 	
 .global EventScript_CeruleanCaveGuy

@@ -22,13 +22,13 @@ EventScript_PewterCity_HouseHusband2:
 	faceplayer
 	checkflag FLAG_SMART_STRIKE_TM
 	if 0x1 _goto EventScript_PewterCity_HouseHusband2_AfterSmartStrike
-	msgbox gText_PewterHouseHusband2BeforeTM MSG_FACE
+	msgbox gText_PewterHouseHusband2BeforeTM MSG_KEEPOPEN
 	fanfare 0x101
-	msgbox gText_RecieveSmartStrike MSG_FACE
+	msgbox gText_RecieveSmartStrike MSG_KEEPOPEN
 	waitfanfare 
 	additem ITEM_TM106 0x1
 	setflag FLAG_SMART_STRIKE_TM
-	msgbox gText_AfterGaveTM106 MSG_FACE
+	msgbox gText_AfterGaveTM106 MSG_NORMAL
 	release
 	end
 

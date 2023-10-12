@@ -247,12 +247,12 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
 // Unused?
-#define FLAG_0x0AF               0x0AF
-#define FLAG_0x0B0               0x0B0
-#define FLAG_0x0B1               0x0B1
-#define FLAG_0x0B2               0x0B2
-#define FLAG_0x0B3               0x0B3
-#define FLAG_0x0B4               0x0B4
+#define FLAG_BRENDAN_ROUTE6      0x0AF //Brendan Route 6 person ID
+#define FLAG_BILL_BILLSGARDEN    0x0B0 //Bill in Bill's Garden person ID
+#define FLAG_LILLIE_BILLSGARDEN  0x0B1 //Lillie in Bill's Garden person ID
+#define FLAG_BILLSGARDEN_NPCS    0x0B2 //Misty, Mint and Rival in Bill's Garden person IDs. Also denotes the 2v2 in Bill's Garden is complete and Misty's gym is now open.
+#define FLAG_DIDNTCLEARGARDEN    0x0B3 //Set at the beginning of the Bill's Garden 2v2 and cleared after winning it; this allows for new dialogue if you lose.
+#define FLAG_FISHINGGURUINTRO    0x0B4 //Spoken to Fishing Guru for first time
 #define FLAG_0x0B5               0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7
@@ -304,11 +304,11 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_LUNCH3_BILL         0x0E5 //Lunch - Bill conversation topic
 #define FLAG_LUNCH4_PLAYERRIVAL  0x0E6 //Lunch - Player & Rival conversation topic
 #define FLAG_LUNCH5_LILLIE       0x0E7 //Lunch - Lillie conversation topic
-#define FLAG_LUNCHDONE           0x0E8 //Lunch over
-#define FLAG_0x0E9               0x0E9
-#define FLAG_0x0EA               0x0EA
-#define FLAG_0x0EB               0x0EB
-#define FLAG_0x0EC               0x0EC
+#define FLAG_LUNCHDONE           0x0E8 //Lunch over. Controls different dialogue + is used as the Person ID to hide Mint and Rival as they never appear in the Sea Cottage again.
+#define FLAG_BILLNPCFLAG         0x0E9 //Bill Sea Cottage person ID
+#define FLAG_MISTYSCNPCFLAG      0x0EA //Misty Sea Cottage person ID
+#define FLAG_LILLIESCNPCFLAG     0x0EB //Lillie Sea Cottage person ID
+#define FLAG_DENDRASPOKENLAB     0x0EC //Met Dendra at Cerise Lab for the first time
 #define FLAG_0x0ED               0x0ED
 #define FLAG_0x0EE               0x0EE
 #define FLAG_0x0EF               0x0EF

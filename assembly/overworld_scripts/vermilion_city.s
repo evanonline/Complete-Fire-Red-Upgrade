@@ -11,6 +11,7 @@
 .equ FLAG_VISQUEZ_IS_HOME, 0x995
 .equ FLAG_RIVAL_WHINE_SEEN, 0x964
 .equ FLAG_SKIPPED_VERMILIONGYMSCENE, 0x59B
+.equ FLAG_FISHINGGURUINTRO, 0x0B4
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -110,7 +111,97 @@ EventScript_VermilionCity_NPC_YamperOwner:
 
 .global EventScript_VermilionCity_NPC_FishingGuru
 EventScript_VermilionCity_NPC_FishingGuru:
-	msgbox gText_VermilionCityNPC_FishingGuru MSG_FACE
+	checkflag FLAG_FISHINGGURUINTRO
+	if SET _goto FishingGuruMenu1
+	faceplayer
+	lockall
+	msgbox gText_VermilionCityNPC_FishingGuruIntro MSG_KEEPOPEN
+	setflag FLAG_FISHINGGURUINTRO
+	goto FishingGuruMenu1
+	end
+
+FishingGuruMenu1:
+	lockall
+	msgbox gText_VermilionCityNPC_FishingGuruIntro2 MSG_KEEPOPEN
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_VermilionPort 0
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_VermilionCity 1
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_Route6 2
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_IcedPath 3
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_Next 4
+	multichoiceoption sRunSettingsCancel 5
+	multichoice 0x0 0x0 SIX_MULTICHOICE_OPTIONS 0x0
+	copyvar 0x4001 LASTRESULT
+	compare 0x4001 0x0 
+	if 0x1 _goto VermilionPortFishInfo
+	compare 0x4001 0x1
+	if 0x1 _goto VermilionCityFishInfo
+	compare 0x4001 0x2
+	if 0x1 _goto Route6FishInfo
+	compare 0x4001 0x3
+	if 0x1 _goto IcedPathFishInfo
+	compare 0x4001 0x4
+	if 0x1 _goto FishingGuruMenu2
+	compare 0x4001 0x5
+	if 0x1 _goto FishingGuruMenuEnd
+	goto FishingGuruMenuEnd
+	releaseall
+	end
+
+FishingGuruMenu2:
+	lockall
+	msgbox gText_VermilionCityNPC_FishingGuruIntro2_NextMenu MSG_KEEPOPEN
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_CeladonCity 0
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_Route4_24_Cerulean 1
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_Route25 2
+	multichoiceoption gText_VermilionCityNPC_FishingGuruList_Previous 3
+	multichoiceoption sRunSettingsCancel 4
+	multichoice 0x0 0x0 FIVE_MULTICHOICE_OPTIONS 0x0
+	copyvar 0x4001 LASTRESULT
+	compare 0x4001 0x0 
+	if 0x1 _goto CeladonCityFishInfo
+	compare 0x4001 0x1
+	if 0x1 _goto CeruleanFishInfo
+	compare 0x4001 0x2
+	if 0x1 _goto Route25FishInfo
+	compare 0x4001 0x3
+	if 0x1 _goto FishingGuruMenu1
+	compare 0x4001 0x4
+	if 0x1 _goto FishingGuruMenuEnd
+	goto FishingGuruMenuEnd
+	releaseall
+	end	
+
+VermilionPortFishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_VermilionPort MSG_KEEPOPEN
+	goto FishingGuruMenu1
+
+VermilionCityFishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_VermilionCity MSG_KEEPOPEN
+	goto FishingGuruMenu1
+
+Route6FishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_Route6 MSG_KEEPOPEN
+	goto FishingGuruMenu1
+
+IcedPathFishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_IcedPath MSG_KEEPOPEN
+	goto FishingGuruMenu1
+
+CeladonCityFishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_CeladonCity MSG_KEEPOPEN
+	goto FishingGuruMenu2
+	
+CeruleanFishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_Route4_Route24_Cerulean MSG_KEEPOPEN
+	goto FishingGuruMenu2
+
+Route25FishInfo:
+	msgbox gText_VermilionCityNPC_FishingGuru_Route25 MSG_KEEPOPEN
+	goto FishingGuruMenu2
+
+FishingGuruMenuEnd:
+	msgbox gText_VermilionCityNPC_FishingGuruOutro MSG_NORMAL
+	releaseall
 	end
 
 .global EventScript_VermilionCity_NPC_MagikarpFlop

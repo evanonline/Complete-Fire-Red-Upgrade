@@ -248,7 +248,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define HOOPA_CHANGE_IN_PC //Hoopa-Unbound will revert to confined form when placed in or withdrawn from a box
 //#define SHAYMIN_CHANGE_IN_PC //Shaymin-Sky will revert to sky from when placed in or withdrawn from a box
 #define HIGH_PITCH_MEGA_PRIMAL_CRY //Mega Pokemon cries will be higher pitched. This is useful if you're using the base form cries for Mega Evolutions
-#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158. Note that this will break vanilla FR scripts around Celadon, such as the elevators, TM 4 drink girl, etc.
+//#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158. Note that this will break vanilla FR scripts around Celadon, such as the elevators, TM 4 drink girl, etc. ////(Disabled because it seems broken in my build? Probably something I did. - Evan)
 //#define REPLACE_SOME_VANILLA_SPECIALS //Replaces the sp07C, sp07D, sp09E, sp156, sp18B, & the Coins scripting commands with modified versions. Breaks vanilla FR compatability.
 #define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
 #define ONLY_CHECK_ITEM_FOR_HM_USAGE //Allows HMs to be used if the HM is the Bag, and as long as there is a Pokemon in the party that can learn the HM

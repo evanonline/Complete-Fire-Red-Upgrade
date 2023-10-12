@@ -8,6 +8,7 @@
 
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+.equ FLAG_EXP_SHARE, 0x906
 .equ FLAG_STARTER_CHOSEN, 0x990
 .equ FLAG_CHOSESTARTER1, 0x960
 .equ FLAG_CHOSESTARTER2, 0x961
@@ -734,7 +735,7 @@ EventScript_VermilionIntro_RandomizedStartersForAll2:
 	msgbox gText_PokemonChoiceLobby_HatsumiDefense_RandomizerOn MSG_KEEPOPEN
 	release
 	end
-	
+
 EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	msgbox gText_PokemonChoiceLobby_HatsumiPackage MSG_FACE
 	pause 0x20
@@ -765,6 +766,7 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	additem ITEM_MEGA_RING 0x1
 	additem ITEM_Z_POWER_RING 0x1
 	additem ITEM_DYNAMAX_BAND 0x1
+	setflag FLAG_EXP_SHARE
 	pause 0x20
 	msgbox gText_PokemonChoiceLobby_OthersGotStuff MSG_KEEPOPEN
 	fanfare 0x13E
