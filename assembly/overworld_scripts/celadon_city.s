@@ -917,6 +917,25 @@ EventScript_CeladonCity_NewCondominiumsGuard:
 	msgbox gText_CeladonCity_NewCondominiumsGuard MSG_FACE
 	end
 
+.global EventScript_CeladonCity_GameCornerTV
+EventScript_CeladonCity_GameCornerTV:
+	msgbox gText_CeladonCity_SlotsLights MSG_NORMAL
+	end
+
+.global EventScript_CeladonCity_FallingForItGuy
+EventScript_CeladonCity_FallingForItGuy:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto FallingForItGuyTwerp
+	msgbox gText_CeladonCity_FallingForItGuy MSG_FACE
+	applymovement 0x1 LookUp
+	end
+
+FallingForItGuyTwerp:
+	msgbox gText_CeladonCity_FallingForItGuy_TwerpPilled MSG_FACE
+	applymovement 0x1 LookUp
+	end
+
+
 LookLeft:
 	.byte look_left
 	.byte 0xFE	

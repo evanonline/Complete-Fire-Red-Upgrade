@@ -15,3 +15,9 @@ Ey, wise guy!\pYou gotta problem with our house?\pGot somethin' to say 'bout\nho
 
 #org @gText_PewterMunchiesNPC
 Crunch[.] Crack[.]\nMmm[.]\pI love the rocky-tough taste of\n[BLUE]Pewter Crunchies[BLACK].\pThey taste just like a rock!\nCrrnch snrhrk[.]\pI just don't understand why these\nhaven't become a global delicacy!\lCrunch crunch crack crunch[.]\l[.]\lHey, unrelated question.\lDo you know any dentists, kid?
+
+#org @gText_PewterCity_SickGrandpa
+Ohhhhh[.]\pI feel sick to my freaking\ngriiiddddle[.]
+
+#org @gText_PewterCity_GrandpasKid
+Yayyy! Grampy's sick again!\pNow I can go to the beach, and\nno one can stop me!\pI just need him to tell me what a\nbeach is, so I can go to it.

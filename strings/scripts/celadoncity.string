@@ -68,7 +68,7 @@ Celadon City has become so classy!\nIt's all thanks to the R Group.\pTheir leade
 Y'know, there's a spot with tall\ngrass behind the Pokemon Center!\pIf you're lookin' for Pok\emon,\nyou gotta check it out!
 
 #org @gText_CeladonCity_RGroupMemberFirstOne
-Eyy, you new here?\nWell, on behalf of the R Group,\lwelcome to Celadon City.
+Eyy, you new here?\nWell, on behalf of the R Group,\lwelcome to [GREEN]Celadon City[BLACK].
 
 #org @gText_CeladonCity_RGroupNotStupid
 I think everyone knows the R Group\nis a rebranded Team Rocket.\pBut I don't care who they are if\nthey keep giving us so much money!\pAfter all, we don't wanna go the\nway [GREEN]Fuchsia City[BLACK] did.
@@ -342,3 +342,12 @@ Hello.\nAre you visiting a resident?\lNo?\lThen I can't let you in.\lThese apart
 
 #org @gText_CeladonCity_NewCondominiumsGuard
 Residents only past this point,\nsorry!\pWhat?[PAUSE][16] You look confused about my\nswimwear.\lSecurity guards have hobbies, too.
+
+#org @gText_CeladonCity_SlotsLights
+It’s a commercial for the [GREEN]Celadon\nGame Corner[BLACK].\pA man is stuffing the word "slots\"\ninto a berry blender[.]?
+
+#org @gText_CeladonCity_FallingForItGuy
+Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\emon\nat the [GREEN]Game Corner[BLACK] next door!\lThe R Group is awesome!
+
+#org @gText_CeladonCity_FallingForItGuy_TwerpPilled
+Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\emon\nat the [GREEN]Game Corner[BLACK] next door!\lThe R Group is awesome, you twerp!

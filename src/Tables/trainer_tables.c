@@ -692,6 +692,99 @@ const struct TrainerMonNoItemCustomMoves sParty_BillsGarden_Lillie[] = {
     },
 };
 
+// Cerulean Gym
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_SwimmerJulie_Badge1[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_SwimmerJulie_Badge2[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_SwimmerMick_Badge1[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_SwimmerMick_Badge2[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_Misty_Badge1[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_Misty_Badge2[] = {
+    {
+        .iv = 26,
+        .lvl = 10,
+        .species = SPECIES_VULPIX_A,
+		.moves = {
+            MOVE_MOONBLAST,
+            MOVE_POWERSWAP,
+            MOVE_BABYDOLLEYES,
+            MOVE_ICESHARD,
+        },
+        .ability = 0,
+    },
+};
+
+
 #define NO_NAME {_END, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE, _SPACE}
 
 const struct Trainer gTrainers[] = {
@@ -1282,4 +1375,85 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sParty_BillsGarden_Lillie),
         .party = {.NoItemCustomMoves = sParty_BillsGarden_Lillie}
     },
+	
+	// Cerulean Gym
+	
+		[TRAINER_CERULEANGYM_SWIMMER_JULIE_BADGE1] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_SWIMMER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_SWIMMER_B,
+        .trainerName = {_J, _u, _l, _i, _e, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_SwimmerJulie_Badge1),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_SwimmerJulie_Badge1}
+    },
+	
+		[TRAINER_CERULEANGYM_SWIMMER_JULIE_BADGE2] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_SWIMMER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_SWIMMER_B,
+        .trainerName = {_J, _u, _l, _i, _e, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_SwimmerJulie_Badge2),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_SwimmerJulie_Badge2}
+    },
+	
+		[TRAINER_CERULEANGYM_SWIMMER_MICK_BADGE1] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_SWIMMER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SWIMMER_A,
+        .trainerName = {_M, _i, _c, _k, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_SwimmerMick_Badge1),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_SwimmerMick_Badge1}
+    },
+	
+		[TRAINER_CERULEANGYM_SWIMMER_MICK_BADGE2] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_SWIMMER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+		.trainerPic = TRAINER_PIC_SWIMMER_A,
+        .trainerName = {_M, _i, _c, _k, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_SwimmerMick_Badge2),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_SwimmerMick_Badge2}
+    },	
+	
+		[TRAINER_CERULEANGYM_MISTY_BADGE1] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_GYM_LEADER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_MISTY,
+        .trainerName = {_M, _i, _s, _t, _y, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_Misty_Badge1),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_Misty_Badge1}
+    },
+	
+		[TRAINER_CERULEANGYM_MISTY_BADGE2] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES,
+        .trainerClass = CLASS_GYM_LEADER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_SWIMMER_A,
+        .trainerName = {_M, _i, _s, _t, _y, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeruleanGym_Misty_Badge1),
+        .party = {.NoItemCustomMoves = sParty_CeruleanGym_Misty_Badge1}
+    },
+	
 };

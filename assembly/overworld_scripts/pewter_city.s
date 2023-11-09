@@ -36,3 +36,20 @@ EventScript_PewterCity_HouseHusband2_AfterSmartStrike:
 	msgbox gText_PewterHouseHusband2AfterTM MSG_FACE
 	release
 	end
+
+.global EventScript_PewterCity_SickGrandpa
+EventScript_PewterCity_SickGrandpa:
+	lockall
+	msgbox gText_PewterCity_SickGrandpa MSG_NORMAL
+	releaseall
+	end	
+
+.global EventScript_PewterCity_GrandpasKid
+EventScript_PewterCity_GrandpasKid:
+	msgbox gText_PewterCity_GrandpasKid MSG_FACE
+	end	
+	
+.global EventScript_PewterCity_PewterMunchies
+EventScript_PewterCity_PewterMunchies:
+	msgbox gText_PewterMunchiesNPC MSG_FACE
+	end	

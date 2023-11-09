@@ -18,9 +18,9 @@
 EventScript_CeriseLab_Dendra:
 	faceplayer
 	checkflag FLAG_DENDRASPOKENLAB
-	if NOT_SET _call DendraIntroNotTalkedTo
-	checkflag FLAG_DENDRASPOKENLAB
 	if SET _call DendraIntroTalkedTo
+	checkflag FLAG_DENDRASPOKENLAB
+	if NOT_SET _call DendraIntroNotTalkedTo
 	goto DendraMultichoice
 	end
 	
@@ -65,6 +65,7 @@ DendraMultichoice:
 	
 EventScript_CeriseLab_Dendra_EVs:
 	msgbox gText_CeriseLab_DendraTutorials_EVs MSG_KEEPOPEN
+	goto DendraMultichoice
 	end
 	
 EventScript_CeriseLab_Dendra_IVs:

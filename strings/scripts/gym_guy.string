@@ -1,8 +1,32 @@
+#org @gText_GymChallenge_Activation
+Are you ready to challenge this\nGym?
+
+#org @gText_GymChallenge_Leave
+If you leave the Gym, your\nprogress will be reset.\pWould you still like to leave?
+
 #org @gText_GymGuy_GymMechanicsExplainer_DoYouKnow
-Whoa, hey there, champ in the\nmaking! I haven't seen you before!\pPok\emon Gyms have new rules, you\nknow!\lWould you like me to explain?
+Whoa, hey there, champ in the\nmaking! I haven't seen you before!\pPok\emon Gyms have [RED]new rules[BLACK], you\nknow!\lWould you like me to explain?
 
 #org @gText_GymGuy_GymMechanicsExplainer_Yes
-Gym rule number one!\p[RED]Once you start a Gym challenge,\nyou can't leave the Gym![BLACK]\pGym rule number two!\p[RED]You can't use items in your bag\nduring Gym battles!\lOnly in-between fights![BLACK]\pGym rule three!\p[RED]All battles in the Gym are\nDouble Battles![BLACK]\pAnd[.] that's it!
+Gym rule number one!\p[RED]Once you start a Gym challenge,\nleaving is considered forfeiting!\lAll Gym Trainers will fight again![BLACK]\pGym rule number two!\p[RED]You can't use items in your bag\nduring Gym battles!\lOnly in-between fights![BLACK]\pGym rule three!\p[RED]All battles in the Gym are\nDouble Battles![BLACK]\pAnd[.] that's it!
 
 #org @gText_GymGuy_GymMechanicsExplainer_No
 Wow! You must have your finger on\nthe pulse!\pWell, good luck!
+
+#org @gText_GymGuy_HelpDefault
+Yo!\nChamp in the making!\pI can give you a refresher on Gym\nrules, or tips about THIS Gym!
+
+#org @gText_GymGuy_HelpDefault_None
+Good luck in there, sport!
+
+#org @gText_GymGuy_ErikaGymBefore
+Erika plays slow and steady. She's a big fan of status effects. 
+
+#org @gText_GymGuy_ErikaGymAfter
+Well done! You're gonna blossom\ninto quite the trainer!
+
+#org @gText_GymGuy_MistyGymBefore
+In Misty's Gym, you'll use water\nfountains that spray you skyward!\pBut between us, the puzzle is a\nbit half-baked.\lIn fact, it's barely a puzzle.\pIn battle, Misty likes to get\ntricky.\pShe'll make heavy use of moves\nthat switch her Pok\emon out.
+
+#org @gText_GymGuy_MistyGymAfter
+well done! You truly swam through that fight!

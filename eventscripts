@@ -277,7 +277,9 @@ npc 10 19 0 EventScript_CeladonCity_HotelMatron
 npc 10 19 1 EventScript_CeladonCity_ScaredCozyGuy
 @npc 10 19 2 EventScript_CeladonCity_HotelRotomi @briefly dummied out due to index issues between CFRU and DPE. Will fix later
 npc 10 20 0 EventScript_CeladonCity_NewCondominiumsReceptionist
-npc 10 20 1 EventScript_CeladonCity_NewCondominiumsGuard 
+npc 10 20 1 EventScript_CeladonCity_NewCondominiumsGuard
+sign 10 26 0 EventScript_CeladonCity_GameCornerTV
+npc 10 26 0 EventScript_CeladonCity_FallingForItGuy
 
 ## Celadon Dept. Store
 map 10 0 gMapScripts_DeptStore_Floor1
@@ -349,6 +351,8 @@ sign 3 3 3 EventScript_TrainerTips_Nuzlocke
 tile 3 3 0 EventScript_CeruleanCity_MintStopsYou
 tile 3 3 1 EventScript_CeruleanCity_MintStopsYou
 tile 3 3 2 EventScript_CeruleanCity_ClosedGym
+tile 7 5 0 EventScript_Gym_GymGuyFirstGym_Cerulean_Tile
+tile 7 5 1 EventScript_Gym_GymGuyFirstGym_Cerulean_Tile
 npc 3 3 0 EventScript_CeruleanCaveGuy
 npc 3 3 1 EventScript_CeruleanCity_MintPlayerApproaches
 npc 3 3 2 EventScript_CeruleanRoute9_AnnoyingTree
@@ -368,6 +372,7 @@ npc 7 3 3 EventScript_CeruleanCity_Miraidon
 npc 7 3 4 EventScript_CeruleanCity_BajaBlastoiseWallpaper
 npc 7 3 7 EventScript_Pokecenter_Services
 npc 7 4 4 EventScript_CeruleanCity_LittleSisHater
+npc 7 5 0 EventScript_Gym_GymGuyFirstGym_Cerulean_NPC
 npc 7 6 1 EventScript_CeruleanCity_BikeShopMay
 npc 7 6 2 EventScript_CeruleanCity_BikeShopOtherCustomer
 npc 7 7 2 EventScript_CeruleanCity_StreamerTalk
@@ -453,6 +458,9 @@ sign 3 4 1 EventScript_LavenderTown_CitySign
 ## Pewter City
 sign 3 2 4 EventScript_PewterCity_CitySign
 sign 3 2 2 EventScript_GymSign_Pewter
+npc 3 2 2 EventScript_PewterCity_PewterMunchies
+npc 6 4 0 EventScript_PewterCity_SickGrandpa
+npc 6 4 1 EventScript_PewterCity_GrandpasKid
 npc 6 7 0 EventScript_PewterCity_HouseHusband1
 npc 6 7 1 EventScript_PewterCity_HouseHusband2
 
