@@ -50,12 +50,7 @@ EventScript_IcedPath_DiveHintNPC:
 	
 .global EventScript_IcedPath_SwimmerFrancine
 EventScript_IcedPath_SwimmerFrancine:
-	trainerbattle0 0x0 0x5 0x0 gText_IcedPath_SwimmerFrancine_Before gText_IcedPath_SwimmerFrancine_Lose
-    msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
-	end
-	
-EventScript_IcedPath_SwimmerFrancine_2:
-	trainerbattle0 0x0 0x8 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose
+	trainerbattle0 0x0 5 0x0 gText_IcedPath_SwimmerFrancine_Before gText_IcedPath_SwimmerFrancine_Lose
     msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
 	end
 
@@ -73,26 +68,15 @@ EventScript_NullifyRivalCutsceneVermilion:
 	setvar 0x511E 0x1
 	return
 
-EventScript_IcedPath_SwimmerFrancine_3:
-	trainerbattle0 0x0 0x9 0x0 gText_IcedPath_SwimmerFrancine_VsSeeker gText_IcedPath_SwimmerFrancine_Lose
-    msgbox gText_IcedPath_SwimmerFrancine_After MSG_NORMAL
-	end
-
-
 .global EventScript_IcedPath_CamperTroy
 EventScript_IcedPath_CamperTroy:
-	trainerbattle0 0x0 0x6 0x0 gText_IcedPath_CamperTroy_Before gText_IcedPath_CamperTroy_Lose
+	trainerbattle0 0x0 3 0x0 gText_IcedPath_CamperTroy_Before gText_IcedPath_CamperTroy_Lose
     msgbox gText_IcedPath_CamperTroy_After MSG_NORMAL
 	end
 
 .global EventScript_IcedPath_CamperRoss
 EventScript_IcedPath_CamperRoss:
-	trainerbattle0 0x0 0x7 0x0 gText_IcedPath_CamperRoss_Before gText_IcedPath_CamperRoss_Lose
-    msgbox gText_IcedPath_CamperRoss_After MSG_NORMAL
-	end
-
-EventScript_IcedPath_CamperRoss_2:
-	trainerbattle0 0x0 0xA 0x0 gText_IcedPath_CamperRoss_Before gText_IcedPath_CamperRoss_Lose
+	trainerbattle0 0x0 4 0x0 gText_IcedPath_CamperRoss_Before gText_IcedPath_CamperRoss_Lose
     msgbox gText_IcedPath_CamperRoss_After MSG_NORMAL
 	end
 

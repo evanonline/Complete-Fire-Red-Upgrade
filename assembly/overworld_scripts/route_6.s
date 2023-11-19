@@ -57,18 +57,27 @@ EventScript_Route6_DNSExplainer_Day:
 
 .global EventScript_Route6_BugCatcherHorace
 EventScript_Route6_BugCatcherHorace:
-    trainerbattle0 0x0 0x2 0x0 gText_Route6_BugCatcherHorace_Before gText_Route6_BugCatcherHorace_Lose
+    trainerbattle0 0x0 2 0x0 gText_Route6_BugCatcherHorace_Before gText_Route6_BugCatcherHorace_Lose
     msgbox gText_Route6_BugCatcherHorace_After MSG_NORMAL
     end
 	
 .global EventScript_Route6_YoungsterMaruyama
 EventScript_Route6_YoungsterMaruyama:
-    trainerbattle0 0x0 0x3 0x0 gText_Route6_YoungsterMaruyama_Before gText_Route6_YoungsterMaruyama_Lose
+    trainerbattle0 0x0 111 0x0 gText_Route6_YoungsterMaruyama_Before gText_Route6_YoungsterMaruyama_Lose
+	special2 LASTRESULT 0x39
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_Route6_YoungsterMaruyama_Rematch
     msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
     end
-	
+
+EventScript_Route6_YoungsterMaruyama_Rematch:
+	trainerbattle5 0x5 112 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
+	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+	end
+
+@@@@@should activate after beating Erika & Misty
 EventScript_Route6_YoungsterMaruyama2:
-	trainerbattle0 0x0 0xB 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
+	trainerbattle5 0x5 0xB 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
 	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
 	end
 

@@ -664,3 +664,6 @@ TradeBufferOTnameAndNicknames 8050E24 0
 GetInGameTradeSpeciesInfo 8053A9C 0
 BufferInGameTradeMonName 8053AE4 0
 CreateInGameTradePokemonInternal 8053B48 2
+
+##Colored Natures
+PrintSkillsPage 081370ec 0

@@ -10,9 +10,17 @@
 
 .global EventScript_Route5_ClownJeeves
 EventScript_Route5_ClownJeeves:
-    trainerbattle0 0x0 0x20 0x0 gText_Route5_ClownJeeves_Before gText_Route5_ClownJeeves_Lose
-    msgbox gText_Route5_ClownJeeves_After MSG_FACE
+    trainerbattle0 0x0 34 0x0 gText_Route5_ClownJeeves_Before gText_Route5_ClownJeeves_Lose
+	special2 LASTRESULT 0x39
+	compare LASTRESULT 0x1
+	if 0x1 _goto EventScript_Route5_ClownJeeves_Rematch
+    msgbox gText_Route5_ClownJeeves_After MSG_NORMAL
     end
+	
+EventScript_Route5_ClownJeeves_Rematch:
+	trainerbattle5 0x5 35 0x0 gText_Route5_ClownJeeves_BeforeRematch gText_Route5_ClownJeeves_LoseRematch
+	msgbox gText_Route5_ClownJeeves_After MSG_NORMAL
+	end
 
 .global EventScript_Route5_ZakBagon
 EventScript_Route5_ZakBagon:
