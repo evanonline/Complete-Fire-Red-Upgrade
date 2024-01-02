@@ -26,13 +26,14 @@ struct DynamaxTrainerSlide
 
 static const struct TrainerSlide sTrainerSlides[] =
 {
-	{0x10, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	{0x11, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	{0x12, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	{0x13, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	{0x14, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	{0x15, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
-	//{0x2B, NULL, NULL, sText_MintLillieBattle1_MintLowHP},
+	{0x6, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x7, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x8, sText_BrandyBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x9, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0xA, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0xB, sText_SherryBattle1_FirstMonDown, NULL, sText_SibBattle1_LowHP},
+	{0x31, sText_MistyBattle1_FirstMonDown, sText_MistyBattle1_LastSwitchIn, sText_MistyBattle1_LowHP},
+	{0x32, sText_MistyBattle1_FirstMonDown, sText_MistyBattle1_LastSwitchIn, sText_MistyBattle1_LowHP},
 
 	#ifdef UNBOUND //For Pokemon Unbound - Feel free to remove
 	{0x6, sText_MirskleFirstMonDown, NULL, NULL},

@@ -1,6 +1,9 @@
 #org @gText_GymChallenge_Activation
 Are you ready to challenge this\nGym?
 
+#org @gText_GymChallenge_Activation_Need2Pokemon
+You will need at least 2 Pok\emon in\nyour party to challenge a Gym.
+
 #org @gText_GymChallenge_Leave
 If you leave the Gym, your\nprogress will be reset.\pWould you still like to leave?
 
@@ -20,7 +23,7 @@ Yo!\nChamp in the making!\pI can give you a refresher on Gym\nrules, or tips abo
 Good luck in there, sport!
 
 #org @gText_GymGuy_ErikaGymBefore
-Erika plays slow and steady. She's a big fan of status effects. 
+Erika plays slow and steady.\nShe's a big fan of status effects.\pShe plays defensively[.] and that's\nreflected in her Gym's layout!\pTo get to Erika, you're gonna have\nto find that big plant's roots,\land give 'em a good tugging.
 
 #org @gText_GymGuy_ErikaGymAfter
 Well done! You're gonna blossom\ninto quite the trainer!
@@ -29,4 +32,31 @@ Well done! You're gonna blossom\ninto quite the trainer!
 In Misty's Gym, you'll use water\nfountains that spray you skyward!\pBut between us, the puzzle is a\nbit half-baked.\lIn fact, it's barely a puzzle.\pIn battle, Misty likes to get\ntricky.\pShe'll make heavy use of moves\nthat switch her Pok\emon out.
 
 #org @gText_GymGuy_MistyGymAfter
-well done! You truly swam through that fight!
+Well done! You truly swam through\nthat fight with Misty!
+
+#org @gText_GiveMistyBadge
+[BLUE][PLAYER] received the\nCascade Badge from Misty!
+
+#org @gText_GiveErikaBadge
+[BLUE][PLAYER] received the\nRainbow Badge from Erika!
+
+#org @gText_GiveVisquezBadge
+[BLUE][PLAYER] received the\nThunder Badge from Visquez!
+
+#org @gText_GiveSabrinaBadge
+[BLUE][PLAYER] received the\nMarsh Badge from Sabrina!
+
+#org @gText_GiveBrockBadge
+[BLUE][PLAYER] received the\nBoulder Badge from Brock!
+
+#org @gText_GiveBryonyBadge
+[BLUE][PLAYER] received the\nSlash Badge from Bryony!
+
+#org @gText_GiveJoyBadge
+[BLUE][PLAYER] received the\nHeart Badge from Joy!
+
+#org @gText_GiveJoeyBadge
+[BLUE][PLAYER] received the\nIncisor Badge from Joey!
+
+#org @gText_BadgeAffixed
+[BLUE][PLAYER] affixed the Badge to\ntheir Trainer Card.

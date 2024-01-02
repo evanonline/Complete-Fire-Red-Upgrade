@@ -102,3 +102,57 @@ You know, I can use moves as many\ntimes as I want.\pBut if I was Pikachu, and s
 
 #org @gText_CeruleanCity_PowerPlantCommuter
 I got a new job at the [GREEN]Power Plant[BLACK]\non [GREEN]Route 9[BLACK].\pThey'll even let me wear my\nCharizard pants to work.\pI bought this awesome house so my\ncommute would be simple!\pBut that tree outside[.]\nIt's blocking me[.]\lAND it's devaluing the property[.]\lI'm too depressed to unpack[.]
+
+#org @gText_CeruleanGym_SwimmerJulie_Intro
+Thanks for getting Misty back[.]\nBut, go away!\lI wanna swim!
+
+#org @gText_CeruleanGym_SwimmerJulie_Lose
+Gah! At least I can swim now.
+
+#org @gText_CeruleanGym_SwimmerJulie_After
+Misty's a downer to be around\nthese days.\pI'm really only here for free\npool access.
+
+#org @gText_CeruleanGym_SwimmerJulie_After2
+Huh, you beat Misty[.]\nNow let me swim in peace!
+
+#org @gText_CeruleanGym_SwimmerMick_Intro
+Wrrrooooooaaaar! WINGULL!
+
+#org @gText_CeruleanGym_SwimmerMick_Lose
+Aw[.]
+
+#org @gText_CeruleanGym_SwimmerMick_After
+Good luck with Misty!
+
+#org @gText_CeruleanGym_SwimmerMick_AfterMisty
+Congrats on beating Misty!\nShe looks happy.\l[.]Or, at least, I HOPE she's happy!\pOne time, Misty got so sad, that\nshe wore a weird swimsuit and dyed\lher hair black.
+
+#org @gText_CeruleanGym_Misty_BeforeFight1
+[RED]Misty[BLACK]: Hey.\n[PAUSE][13]You made it, kid.\pI'll keep it simple for you.\nThere's something I need to see.\pAnd I'm only going to see it when\nyou win a battle against me.\pYou've got as many tries as you\nfeel like giving it.\pBut I'd better see what I'm\nlooking for from you.\pLet's get to it.\nTry and keep up, yeah?
+
+#org @gText_CeruleanGym_Misty_BeforeFight2
+[RED]Misty[BLACK]: I'm glad to see you back.\pTry and beat me this time,\nalright?
+
+#org @gText_CeruleanGym_Misty_Lose
+[.][.][.]\p[.][PAUSE][13]Heh[.]\pHeheh!\n[PAUSE][13]I've seen what I wanted to see.
+
+#org @gText_CeruleanGym_Misty_After1
+[RED]Misty[BLACK]: Well done, [PLAYER].\nSeriously.\pThe thing I was looking for was[.]\p[.]the face you made when you won.\pMake no mistake, I'm not a psychic.\nThat's Sabrina's thing.\pMaybe that victory was difficult,\nmaybe you think I was an easy win.\lI don't care about that.\pBut I can tell you WANTED to win.\pYou're not just going through the\nmotions.\lYou want to see what's next.\pWell, what's next is this[.]\nCerulean City's one and only Gym Badge!
+
+#org @gText_CeruleanGym_Misty_FlipTurn
+[RED]Misty[BLACK]: While I'm at it, here's a\nTM.\pYou might have noticed I really\nlike this move[.]
+
+#org @gText_RecieveFlipTurn
+[PLAYER] recieved [GREEN]TM10[BLACK]!\nIt contains [GREEN]Flip Turn[BLACK]!
+
+#org @gText_CeruleanGym_Misty_After2
+[RED]Misty[BLACK]: Before you go, I wanna say\nsomething to you.\pThings have changed in Kanto.\nIt's hard to explain[.]\l[.][PAUSE][14]but it's different.\pGah, maybe I shouldn't say\nanything to discourage you.\pBut here's the deal. I'll make a\npromise to you, here and now.\pYou, [RIVAL][.] and your sibling,\nwhenever I meet them, too[.]\pI'll throw my weight around for\nyou three.\pIf anyone with Oak or the League\ngives you trouble, let me know.\pIt turns out, I wanna see what's\nnext for you all, too.\pNow get going!
+
+#org @gText_CeruleanGym_Misty_PostFight_1stGym
+[RED]Misty[BLACK]: You should hit up\nthe Gym in [GREEN]Celadon City[BLACK].\pErika and I are very different\npeople[.] but, she's cool.\pI just hope she's awake when you\nget there[.]
+
+#org @gText_CeruleanGym_Misty_PostFight_2ndGym
+[RED]Misty[BLACK]: Oh, I should mention.\pI heard they just opened the gates to\n[GREEN]Saffron City[BLACK] again.\pYou might wanna go check that out.
+
+#org @gText_CeruleanGym_mistyplaceholder
+placeholder? test?

@@ -6853,7 +6853,7 @@ const struct BattleMove gBattleMoves[] =
 	[MOVE_WILDCHARGE] =
 	{
 		.effect = EFFECT_RECOIL,
-		.power = 120,
+		.power = 100,
 		.type = TYPE_ELECTRIC,
 		.accuracy = 100,
 		.pp = 15,

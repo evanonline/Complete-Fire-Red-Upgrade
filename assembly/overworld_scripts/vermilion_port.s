@@ -753,7 +753,7 @@ EventScript_VermilionIntro_Hatsumi_GivesDaItems:
 	setflag 0x829
 	setflag 0x91E
 	special 0x16F
-	setflag 0x292 @vs seeker flag
+	@setflag 0x292 @vs seeker flag
 	additem ITEM_POKE_BALL 0x5
 	additem ITEM_HEAL_BALL 0x1
 	additem ITEM_POTION 0x1
@@ -1258,7 +1258,7 @@ EventScript_VermilionPort_RivalBattle1:
 	end
 	
 EventScript_VermilionPort_RivalBattle1_Starter1: @Starter was Relicanth, rival uses Passimian
-	trainerbattle9 0x9 326 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	trainerbattle9 0x9 16 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
 	special 0x0
 	compare LASTRESULT 0x0
 	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival
@@ -1267,7 +1267,7 @@ EventScript_VermilionPort_RivalBattle1_Starter1: @Starter was Relicanth, rival u
 	end
 	
 EventScript_VermilionPort_RivalBattle1_Starter2: @Starter was Sigilyph, rival uses Relicanth
-	trainerbattle9 0x9 327 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	trainerbattle9 0x9 17 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
 	special 0x0
 	compare LASTRESULT 0x0
 	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival
@@ -1276,7 +1276,7 @@ EventScript_VermilionPort_RivalBattle1_Starter2: @Starter was Sigilyph, rival us
 	end
 	
 EventScript_VermilionPort_RivalBattle1_Starter3: @Starter was Passimian, rival uses Sigilyph
-	trainerbattle9 0x9 328 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
+	trainerbattle9 0x9 18 0x0 gText_VermilionPortHotel_RivalFight1_Lose gText_VermilionPortHotel_RivalFight1_Win
 	special 0x0
 	compare LASTRESULT 0x0
 	if 0x1 _goto EventScript_VermilionPort_PlayerBeatRival

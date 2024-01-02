@@ -171,6 +171,7 @@ const species_t gTelekinesisBanList[] =
 	SPECIES_PALOSSAND,
 	SPECIES_GENGAR_MEGA,
 	SPECIES_TABLES_TERMIN
+	//Remember Wiglett and Wugtrio
 };
 
 const species_t gSkyBattleBannedSpeciesList[] =
@@ -1024,6 +1025,7 @@ const species_t gSmogonLittleCup_SpeciesList[] =
 	SPECIES_ZORUA,
 	SPECIES_ZUBAT,
 	SPECIES_TABLES_TERMIN
+	//update for Hisui and Paldea Pokemon!
 };
 
 const move_t gSmogonLittleCup_MoveBanList[] =

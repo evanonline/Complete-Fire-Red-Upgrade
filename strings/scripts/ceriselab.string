@@ -30,3 +30,30 @@ A Pok\emon's nature influences its\nstats in battle!\pFor example, a Modest Pok\
 
 #org @gText_CeriseLab_DendraTutorials_PhysicalSpecial
 Physical attacks use the Attack\nstat, and are measured against\lan opponent's Defense!\pSpecial attacks use the Special\nAttack stat, and are measured\lagainst Special Defense!\pPhysical attacks are stuff like\npunches and kicks! My favorite!\pSpecial attacks are stuff like\nenergy-based attacks! Also cool!\pPhysical attacks have a red punchy\nsymbol on the status screen.\pSpecial attacks have a blue circly\nsymbol!\pAnd status moves have a gray\nswirly symbol.\pA little silly, but that's how I\nremember it!
+
+#org @gText_CeriseLab_PrimoIntro
+[RED]???[BLACK]: Hello! It is me!\nYou know me! The Pok\e Dude!\pSurely you know Primo, the big\nbrother!\l[.] [.] [.]\l[.]I was on TV!\pArrgh, that cannot be true!\nYou MUST know [RED]"The Show Me Show!\"[BLACK]\pPerhaps I did not make it to\nsyndication?!\pWhatever it may be, I now work\nfor Professor Cerise!\pWhen it comes to Pok\emon stats,\nI know it all!\pI can [BLUE]toggle stat ratings for the\nPok\emon summary screen,[BLACK] any time!\pI also specialize in [RED]Hyper\nTraining[BLACK]!\pThat means I can help [RED]permanently\nalter[BLACK] your Pok\emon's stats!\pSo! What can the big brother do\nfor you?!
+
+#org @gText_CeriseLab_PrimoIntroAfterMet
+[RED]Primo[BLACK]: Greetings, Trainer!\nWhat can the big brother do for you today?!
+
+#org @gText_CeriseLab_PrimoHyperTrainingIntro
+I will engage any one of your\nPok\emon in Hyper Training!\pAll I need is a contribution to my Bottle Cap collection!
+
+#org @gText_CeriseLab_PrimoHyperTrainingRusty
+Guoh[.] GUOOOHHHH!!!\nA Rusty Bottle Cap?!\pIf you give me one of these, I will\nhave no choice but to lower your\nPok\emon's chosen IV to 0!\pThink carefully! Do you really\nwant to give me this?!
+
+#org @gText_CeriseLab_PrimoHyperTrainingExplain
+[RED]Hyper Training[BLACK] is the latest\nsensation!\pIt's a special, intensive exercise\nthat helps Pok\emon improve\ntheir very essence!\pIf you know what [RED]"individual[BLACK]values,\" or "IVs\", are[.]\nHyper Training affects those!\pBut Hyper Training is strenuous,\neven for the big brother!\lI won't do it for free! No no!\pI also happen to be an avid\nBottle Cap collector!\pIf you give me Bottle Caps, I will\nhelp a Pok\emon maximize\la single one of its stats!\pIf you bring me a rare and coveted\nGold Bottle Cap, I will happily\nmax out ALL of a Pok\emon's stats!\pBut if you bring me a disgusting\nRusty Bottle Cap[.]\pOhhh[.] Ohhhhhh! There is no telling\nwhat I will do!\pA Rusty Bottle Cap would upset me\nenough to train a single one of\lyour Pok\emon's stats down to zero!\pThat is right! Darkness can be\nfound within us all[.]\leven the big brother!
+
+#org @gText_CeriseLab_PrimoStatToggleBefore
+I can enable & disable stat ratings\non the Pok\emon summary screen!
+
+#org @gText_CeriseLab_PrimoStatToggleAfterEnable
+Ha! Show you I shall!
+
+#org @gText_CeriseLab_PrimoStatToggleAfterDisable
+I understand! Not everyone wants\nto grade their Pok\emon!
+
+#org @gText_CeriseLab_PrimoByeBye
+Remember, [PLAYER], a good deed a\nday brings happiness to stay!

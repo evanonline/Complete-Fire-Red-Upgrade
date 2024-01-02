@@ -17,7 +17,22 @@ Ey, wise guy!\pYou gotta problem with our house?\pGot somethin' to say 'bout\nho
 Crunch[.] Crack[.]\nMmm[.]\pI love the rocky-tough taste of\n[BLUE]Pewter Crunchies[BLACK].\pThey taste just like a rock!\nCrrnch snrhrk[.]\pI just don't understand why these\nhaven't become a global delicacy!\lCrunch crunch crack crunch[.]\l[.]\lHey, unrelated question.\lDo you know any dentists, kid?
 
 #org @gText_PewterCity_SickGrandpa
-Ohhhhh[.]\pI feel sick to my freaking\ngriiiddddle[.]
+Ohhhhh[.]\pI feel slick to my freaking\ngriiiddddle[.]
 
 #org @gText_PewterCity_GrandpasKid
 Yayyy! Grampy's sick again!\pNow I can go to the beach, and\nno one can stop me!\pI just need him to tell me what a\nbeach is, so I can go to it.
+
+#org @gText_PewterToiletWeirdoNPC
+The kids in toilet training videos\nare sooo proud of what they do.\pThey'll stand up from the toilet\nand yell, "Yay! I went potty!\"\pWell, I decided to bring that\nback.\pEvery time I use the toilet,\nI cheer!\pIt's always age-appropriate to\ncelebrate the miracle of the\lmodern sewage system!\pCelebrating myself like this adds\njoy and positivity to my\leveryday life.\pAnd now, my Torkoal is curious\nabout using the potty,\lbecause of my cheers!\lI'll have to train her!
+
+#org @gText_PewterCity_TourGuide_FirstTime_1
+Ahhh! You scared me!\pSince when do new trainers come\nfrom THAT direction?!\pAlloy sure didn't! He came from\n[GREEN]Pallet[BLACK], like a regular person!\pAnd don't try to fool me, I know\nthe stench of a rookie!\pYou ought to fight Brock first!\nFollow me!
+
+#org @gText_PewterCity_TourGuide_FirstTime_2
+Ugh, this isn't the Gym!\nYou messed with my whole vibe!\pI don't know, you figure it out\non your own!\pThe Gym's weird these days,\nyou'd fit right in!\lWeirdo!
+
+#org @gText_PewterCity_TourGuide_AfterGuided
+Gahh[.]\pCome and go as you please,\nI guess[.]\lBut you should really beat Brock!\pCan't you act like a regular\ntrainer, like Alloy??
+
+#org @gText_PewterCity_TourGuide_AfterBrock
+I see you beat Brock[.]\nI guess you had the right stuff!

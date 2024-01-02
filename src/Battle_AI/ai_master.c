@@ -1023,9 +1023,12 @@ static bool8 FindMonThatAbsorbsOpponentsMove(void)
 	if (STAT_STAGE(gActiveBattler, STAT_STAGE_EVASION) >= 6 + 3)
 		return FALSE; //Invested in Evasion so don't switch
 
-	if (((predictedMove1 == MOVE_NONE || predictedMove1 == MOVE_PREDICTION_SWITCH) && (predictedMove2 == MOVE_NONE || predictedMove2 == MOVE_PREDICTION_SWITCH))
-	|| (SPLIT(predictedMove1) == SPLIT_STATUS && SPLIT(predictedMove2) == SPLIT_STATUS))
-		return FALSE;
+
+	if ((predictedMove1 == MOVE_NONE && predictedMove2 == MOVE_NONE) //No predicted move
+	|| ((SPLIT(predictedMove1) == SPLIT_STATUS && SPLIT(predictedMove2) == SPLIT_STATUS)
+	&& gBattleMoves[predictedMove1].target != MOVE_TARGET_SELECTED
+	&& gBattleMoves[predictedMove2].target != MOVE_TARGET_SELECTED)) //Predicted move is status move that doesn't target AI
+		return FALSE; //Don't bother running checks
 
 	u8 moveType;
 	if (predictedMove1 != MOVE_NONE && predictedMove1 != MOVE_PREDICTION_SWITCH)

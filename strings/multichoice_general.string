@@ -74,6 +74,32 @@ Natures
 #org @sText_Dendra_PhysSpec
 Physical & special moves
 
+#org @sText_Primo_HyperTraining
+Hyper Training
+
+#org @sText_Primo_HyperTrainingExplain
+Hyper Training explanation
+
+#org @sText_Primo_StatRatings
+Stat rating settings
+
+#org @sText_Primo_RaidDiscussion
+I saw you in a Raid Battle[.]
+
+#org @sText_Primo_ShowMeStats
+Show me!
+
+#org @sText_Primo_DontShowMeStats
+Don't show me!
+
+#org @sText_Primo_HyperTraining_BottleCap
+Give Bottle Cap
+
+#org @sText_Primo_HyperTraining_GoldBottleCap
+Give Gold Bottle Cap
+#org @sText_Primo_HyperTraining_RustyBottleCap
+Give Rusty Bottle Cap
+
 #org @sText_NoThanks
 No thanks
 

@@ -170,7 +170,7 @@ Yeah[.]\nThose guys with the R shirts?\pThey call themselves the R Group,\nbut i
 [RED]Brandy[BLACK]: So, trouble's afoot in\nCeladon, huh?\pWe're gonna help!
 
 #org @gText_CeladonCity_ErikaGymSceneNPC3
-Hah[.]\nOkay, okay.\pYou're one corny person, but I\nappreciate that right now.\pWell, there's something you can\ndo for us.\pEveryone else is awake now too,\nand we got rid of the Paras, but[.]
+Hah[.]\nOkay, okay.\pYou're quite forward, but I\nappreciate that right now.\pWell, there's something you can\ndo for us.\pEveryone else is awake now too,\nand we got rid of the Paras, but[.]
 
 #org @gText_CeladonCity_ErikaGymSceneNPC4
 Erika is still drowsy!\pShe's always had narcolepsy issues,\nbut this is the worst it's been!\pShe needs an [RED]energy drink[BLACK]!\pCan I ask you folks to get her\nsomething at the [GREEN]Department Store[BLACK]?\pTheir vending machine's on the\nroof.\lWhen she wakes up, we can reopen!
@@ -351,3 +351,81 @@ Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\e
 
 #org @gText_CeladonCity_FallingForItGuy_TwerpPilled
 Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\emon\nat the [GREEN]Game Corner[BLACK] next door!\lThe R Group is awesome, you twerp!
+
+#org @gText_CeladonCity_ToedscoolKnower
+Hey! Did you hear about Erika's\nnew Pok\emon?\pApparently, she went to the [GREEN]Paldea[BLACK]\nregion, and came back with\lsomething weird!\pIt's hard to find [GREEN]Paldean[BLACK] Pok\emon\nfor yourself in this area[.]
+
+#org @gText_CeladonCity_ToedscoolKnower_TwerpPilled
+Hey, twerp! I'm not telling you\nsquat about Erika's new Pok\emon!\pYou won't learn anything about her\ncool mushroom thing from me!
+
+#org @gText_CeladonCity_TangelaShoesFan
+Erika has such a handsome little\nTangela.\pDid you know I once had my own\npair of replica Tangela shoes?\pUnfortunately, my Sinistcha filled\nmy Tangela shoes with its matcha.\pI guess my Sinistcha was jealous\nthat I admire another Grass-type.
+
+#org @gText_CeladonCity_TangelaShoesFan_TwerpPilled
+Erika has such a handsome little\nTangela.\pDid you know I once had my own\npair of replica Tangela shoes?\pUnfortunately, my Sinistcha filled\nmy Tangela shoes with its matcha.\pSounds like the kind of thing YOU'D\ndo, twerp!
+
+#org @gText_CeladonCity_CommunityHouse_Woman1
+We once used this building as a\nsmall community space.\pErika would hold town meetings\nhere. Sometimes we did cook-offs!\pThe R Group managed to convince a\nlot of the townsfolk that\lour meetings were useless[.]\pBut I care too much about Celadon\nto let a corporation decide how\lto run this city.
+
+#org @gText_CeladonCity_CommunityHouse_NPC2
+Erika keeps a small apartment on\nthe second floor here.\pBut she usually just sleeps in\nthe Gym.\pI don't know when she ever comes\nhome.
+
+#org @gText_CeladonCity_ErikaApartment_VileplumePlush
+This massive Vileplume plush looks\nlike it could be used as a bed.\pIn fact, this is the only bed-like\nthing in this room[.]
+
+#org @gText_CeladonCity_ErikaApartment_Unknown
+There's a door here.\pIs it a closet? A bathroom?\pThere's one thing it definitely\nisn't[.]\l[.]anyone's business but Erika's!
+
+#org @gText_CeladonGym_PicnickerFynley_Intro
+Yaaaawn[.]\pThose spores in the vent made me\nsoooo sleepy!
+
+#org @gText_CeladonGym_PicnickerFynley_Lose
+Can I go back to bed[.]\nAuuuuhhh[.]!
+
+#org @gText_CeladonGym_PicnickerFynley_After
+Sleep is[.]\n[PAUSE][12]just as awesome than picnics[.]\pGrammar[.][PAUSE][12]\nnot important if when sleepy[.]
+
+#org @gText_CeladonGym_GuitaristClint_Intro
+Yooooo!\pSurprised to see a rocker like me\nhere?\pMake no mistake, flowers rock me\nto my core!
+
+#org @gText_CeladonGym_GuitaristClint_Lose
+My Petilil babies[.]\nYou both did great!
+
+#org @gText_CeladonGym_GuitaristClint_After
+This Gym used to have a\n"girls only\" rule.\pBut I needed to ask Erika for help\nwhen one of my Petilil got sick[.]\pI bonded with everyone here over\nGrass-types, and eventually,\lthey decided their rule was dumb.\lIt was righteous of them!
+
+#org @gText_CeladonGym_PkmnBreederMurphy_Intro
+Oh, it's you! Thanks again for\ngetting that energy drink!\pI hope I can give you the\nchallenge you deserve!
+
+#org @gText_CeladonGym_PkmnBreederMurphy_Lose
+Whew! Maybe I'm still sleepy, too!
+
+#org @gText_CeladonGym_PkmnBreederMurphy_After
+Thanks again for all your help!\nYou're sweeter than Berry Juice!
+
+#org @gText_CeladonGym_LadyTorgal_Intro
+I can't believe Team Rocket\nattacked us[.]\pTraining at this Gym is a huge\nfinancial risk for someone like\lme!
+
+#org @gText_CeladonGym_LadyTorgal_Lose
+Gahh! I hate giving up my money\nwhen I lose!
+
+#org @gText_CeladonGym_LadyTorgal_After
+You might not expect it, but\nI ndon't have much money.\lI just wear very nice clothes.\pI don't know if I'm solvent enough\nto keep training here[.]
+
+#org @gText_CeladonGym_BigPlant
+The plant stands firm and tall,\nobstructing the path.
+
+#org @gText_CeladonGym_PlantRoots
+A weird root is wriggling around\nin the dirt.\pYou give it a good pull, and it\nretracts!
+
+#org @gText_CeladonGym_PlantRootsPulled
+The root has already been pulled.
+
+#org @gText_CeladonGym_ThePlantsReturn
+Oh! The plant roots have sprouted\nback up!
+
+#org @gText_CeladonGym_PlantRoots2
+It sounds like the big plant in\nthe center is gone!
+
+#org @gText_CeladonGym_Erika_Intro
+[RED]Erika[BLACK]: Yaaaaawwnn[.] Mmm[.]\n[PAUSE][12]Ah, you must be [PLAYER][.]\pWelcome, and thank you.

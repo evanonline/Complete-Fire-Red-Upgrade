@@ -195,8 +195,8 @@
 #define VAR_0x4093                 0x4093 // Lillie stops player at Sea Cottage door
 #define VAR_0x4094                 0x4094 // Misty stops player before entering Secret Garden
 #define VAR_0x4095                 0x4095 // Cerulean / Celadon gym guy's first gym notification
-#define VAR_0x4096                 0x4096
-#define VAR_0x4097                 0x4097
+#define VAR_0x4096                 0x4096 // Celadon Gym entry var
+#define VAR_0x4097                 0x4097 // Cerulean Gym entry var
 #define VAR_0x4098                 0x4098
 #define VAR_0x4099                 0x4099
 #define VAR_0x409A                 0x409A

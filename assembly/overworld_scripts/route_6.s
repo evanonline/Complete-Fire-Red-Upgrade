@@ -64,20 +64,20 @@ EventScript_Route6_BugCatcherHorace:
 .global EventScript_Route6_YoungsterMaruyama
 EventScript_Route6_YoungsterMaruyama:
     trainerbattle0 0x0 111 0x0 gText_Route6_YoungsterMaruyama_Before gText_Route6_YoungsterMaruyama_Lose
-	special2 LASTRESULT 0x39
-	compare LASTRESULT 0x1
+	special2 0x800D 0x39
+	compare 0x800D 1
 	if 0x1 _goto EventScript_Route6_YoungsterMaruyama_Rematch
-    msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+    msgbox gText_maruyamatestone MSG_FACE
     end
 
 EventScript_Route6_YoungsterMaruyama_Rematch:
 	trainerbattle5 0x5 112 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
-	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
+	msgbox gText_maruyamatest2 MSG_FACE
 	end
 
 @@@@@should activate after beating Erika & Misty
 EventScript_Route6_YoungsterMaruyama2:
-	trainerbattle5 0x5 0xB 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
+	trainerbattle5 0x5 113 0x0 gText_Route6_YoungsterMaruyama_VsSeeker gText_Route6_YoungsterMaruyama_Lose
 	msgbox gText_Route6_YoungsterMaruyama_After MSG_NORMAL
 	end
 

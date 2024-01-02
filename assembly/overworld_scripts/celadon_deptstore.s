@@ -761,7 +761,7 @@ EventScript_CeladonDeptStore_SibsPokemon:
 
 .global EventScript_CeladonDept_1FBattlingRocket
 EventScript_CeladonDept_1FBattlingRocket:
-    trainerbattle0 0x0 22 0x0 gText_CeladonDeptStore_RocketEvent_FirstRocket_Before gText_CeladonDeptStore_RocketEvent_FirstRocket_Lose
+    trainerbattle0 0x0 12 0x0 gText_CeladonDeptStore_RocketEvent_FirstRocket_Before gText_CeladonDeptStore_RocketEvent_FirstRocket_Lose
 	msgbox gText_CeladonDeptStore_RocketEvent_FirstRocket_After MSG_NORMAL
 	end
 
@@ -873,7 +873,7 @@ GavinsBigDebutContinued:
 	msgbox gText_CeladonCity_DeptStoreRockets_GarchompGavin4 MSG_NORMAL
 	applymovement 0x2 WalkRight
 	waitmovement 0x0
-	trainerbattle3 0x3 8 0x0 gText_CeladonCity_DeptStoreRockets_GarchompGavin_Loss
+	trainerbattle3 0x3 19 0x0 gText_CeladonCity_DeptStoreRockets_GarchompGavin_Loss
 	applymovement 0x2 GavinsJumps
 	sound 0x1C
 	waitmovement 0x0

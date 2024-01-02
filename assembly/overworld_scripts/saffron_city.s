@@ -18,6 +18,11 @@ EventScript_SaffronCity_ThrohGranny:
 	msgbox gText_SaffronCity_ThrohGranny MSG_FACE
 	end
 	
+.global EventScript_SaffronCity_SchoolGossip
+EventScript_SaffronCity_SchoolGossip:
+	msgbox gText_SaffronCity_SchoolGossip MSG_FACE
+	end
+	
 .global EventScript_SaffronCity_Throh1
 EventScript_SaffronCity_Throh1:
 	cry SPECIES_THROH 0x0

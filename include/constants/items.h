@@ -785,8 +785,8 @@ enum
 #define ITEM_ADAMANT_CRYSTAL 0x2E5 //transforms Dialga to Origin Form
 #define ITEM_LUSTROUS_GLOBE 0x2E6 //transforms Palkia to Origin Form
 #define ITEM_REINS_OF_UNITY 0x2E7 //Fuses Calyrex to Spectrier and Glastrier
-#define ITEM_LOADED_DICE 0x2E8 //"If a Pokémon uses a multistrike move, that move will be more likely to hit more times."
-#define ITEM_FREE_SPACE17 0x2E9
+#define ITEM_LOADED_DICE 0x2E8 //Sets all multihit moves to hit at least 4 times.
+#define ITEM_RUSTY_BOTTLE_CAP 0x2E9 //Used for setting IVs to 0 in Hyper Training, instead of 31
 #define ITEM_FREE_SPACE18 0x2EA
 #define ITEM_FREE_SPACE19 0x2EB
 #define ITEM_FREE_SPACE20 0x2EC
@@ -832,7 +832,7 @@ enum
 	ITEM_TM07_HAIL,
 	ITEM_TM08_BULK_UP,
 	ITEM_TM09_BULLET_SEED,
-	ITEM_TM10_WORK_UP,
+	ITEM_TM10_FLIP_TURN,
 	ITEM_TM11_SUNNY_DAY,
 	ITEM_TM12_TAUNT,
 	ITEM_TM13_ICE_BEAM,

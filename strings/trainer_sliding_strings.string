@@ -14,13 +14,19 @@ I now shall unleash the power\nof Dynamax!\p
 Wow! You don't mess around, huh,\nsib?\p 
 
 #org @sText_BrandyBattle1_FirstMonDown
-Not holdin' back, eh, sib?\nGood! Just how I want it!\p
+Not holdin' back, eh, sib?\nGood! Just how I want it!\p 
 
 #org @sText_SibBattle1_LowHP
-C'mon[.]\nWe can still clutch it out!\p
+C'mon[.]\nWe can still clutch it out!\p 
 
-#org @sText_MintLillieBattle1_MintLowHP
-Am I doing any good?\nI THINK I am? Maybe?
+#org @sText_MistyBattle1_FirstMonDown
+Alright, alright.\nKeep that up.\p 
+
+#org @sText_MistyBattle1_LastSwitchIn
+Last one, huh[.]\nThen go, my steady!\p[.]Heheh!\p 
+
+#org @sText_MistyBattle1_LowHP
+Hm[.] Well, I'll be.\nYou're actually making me sweat[.]!\p 
 
 //For Pokemon Unbound - Feel free to remove, and do not place strings below
 #ifdef UNBOUND

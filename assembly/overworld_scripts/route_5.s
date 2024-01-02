@@ -19,7 +19,7 @@ EventScript_Route5_ClownJeeves:
 	
 EventScript_Route5_ClownJeeves_Rematch:
 	trainerbattle5 0x5 35 0x0 gText_Route5_ClownJeeves_BeforeRematch gText_Route5_ClownJeeves_LoseRematch
-	msgbox gText_Route5_ClownJeeves_After MSG_NORMAL
+	msgbox gText_maruyamatest2 MSG_NORMAL
 	end
 
 .global EventScript_Route5_ZakBagon

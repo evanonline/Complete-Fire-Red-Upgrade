@@ -335,6 +335,26 @@ EventScript_CeladonCity_MayleneAutograph:
 	msgbox gText_CeladonCity_RestaurantMayleneSign2 MSG_SIGN
 	end
 	
+.global EventScript_CeladonCity_CommunityHouse_Woman1
+EventScript_CeladonCity_CommunityHouse_Woman1:
+	msgbox gText_CeladonCity_CommunityHouse_Woman1 MSG_FACE
+	end	
+	
+.global EventScript_CeladonCity_CommunityHouse_NPC2
+EventScript_CeladonCity_CommunityHouse_NPC2:
+	msgbox gText_CeladonCity_CommunityHouse_NPC2 MSG_FACE
+	end	
+
+.global EventScript_CeladonCity_ErikaBathroom
+EventScript_CeladonCity_ErikaBathroom:
+	msgbox gText_CeladonCity_ErikaApartment_Unknown MSG_NORMAL
+	end	
+
+.global EventScript_CeladonCity_ErikaVileplumePlush
+EventScript_CeladonCity_ErikaVileplumePlush:
+	msgbox gText_CeladonCity_ErikaApartment_VileplumePlush MSG_NORMAL
+	end	
+
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @Game Corner coin attendants@@@@@@@@@@
 @;@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@	
@@ -505,7 +525,8 @@ EventScript_CeladonCity_PrizeExchangeSign:
 EventScript_CeladonCity_SceptileNoises:
 	cry SPECIES_SCEPTILE 0x0
 	msgbox gText_CeladonCity_BerriesSceptile MSG_FACE
-	applymovement 0x10 LookUp
+	pause 0x3
+	applymovement 0xA LookUp
 	end
 	
 .global EventScript_CeladonCity_BerriesGuy
@@ -660,32 +681,32 @@ EventScript_CeladonCity_SibEncounter1_Brandy:
 	end
 	
 CeladonSibFight1_SherryFight_StarterRelicanth: @Starter was Relicanth, sib is Sherry and uses Sigilyph
-	trainerbattle3 0x3 19 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 9 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
 	end
 
 CeladonSibFight1_SherryFight_StarterSigilyph: @Starter was Sigilyph, sib is Sherry and uses Passimian
-	trainerbattle3 0x3 20 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 10 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
 	end
 	
 CeladonSibFight1_SherryFight_StarterPassimian: @Starter was Passimian, sib is Sherry and uses Relicanth
-	trainerbattle3 0x3 21 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 11 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Sherry_ErikaGymExplainer
 	end
 	
 CeladonSibFight1_BrandyFight_StarterRelicanth:  @Starter was Relicanth, sib is Brandy and uses Sigilyph
-	trainerbattle3 0x3 16 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 6 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
 	end
 	
 CeladonSibFight1_BrandyFight_StarterSigilyph: @Starter was Sigilyph, sib is Brandy and uses Passimian
-	trainerbattle3 0x3 17 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 7 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
 	end
 	
 CeladonSibFight1_BrandyFight_StarterPassimian: @Starter was Passimian, sib is Brandy and uses Relicanth
-	trainerbattle3 0x3 18 0x0 gText_CeladonCity_SibFightYouWon
+	trainerbattle3 0x3 8 0x0 gText_CeladonCity_SibFightYouWon
 	goto EventScript_CeladonCity_AfterSibFight_Brandy_ErikaGymExplainer
 	end
 
@@ -757,7 +778,7 @@ EventScript_CeladonCity_RGroupNoEntryLeft:
 RGroupGuardLeftOopsie:
 	lockall
 	msgbox gText_CeladonCity_OutsideDeptStore_Left MSG_FACE
-	trainerbattle3 0x3 9 0x0 gText_CeladonCity_OutsideDeptStore_Left_Loss
+	trainerbattle3 0x3 14 0x0 gText_CeladonCity_OutsideDeptStore_Left_Loss
 	lockall
 	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
 	applymovement 0xE LookRight
@@ -806,7 +827,7 @@ EventScript_CeladonCity_RGroupNoEntryRight:
 RGroupGuardRightOopsie:
 	lockall
 	msgbox gText_CeladonCity_OutsideDeptStore_Right MSG_FACE
-	trainerbattle3 0x3 10 0x0 gText_CeladonCity_OutsideDeptStore_Right_Loss
+	trainerbattle3 0x3 15 0x0 gText_CeladonCity_OutsideDeptStore_Right_Loss
 	lockall
 	msgbox gText_CeladonCity_OutsideDeptStore_After MSG_KEEPOPEN
 	applymovement 0xD LookLeft
@@ -935,6 +956,27 @@ FallingForItGuyTwerp:
 	applymovement 0x1 LookUp
 	end
 
+.global EventScript_CeladonCity_ToedscoolKnower
+EventScript_CeladonCity_ToedscoolKnower:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto ToedscoolKnowerTwerp
+	msgbox gText_CeladonCity_ToedscoolKnower MSG_FACE
+	end
+
+ToedscoolKnowerTwerp:
+	msgbox gText_CeladonCity_ToedscoolKnower_TwerpPilled MSG_FACE
+	end
+
+.global EventScript_CeladonCity_TangelaShoesFan
+EventScript_CeladonCity_TangelaShoesFan:
+	checkflag FLAG_CELADONDEPT_ROOF2
+	if SET _goto TangelaShoesFanTwerp
+	msgbox gText_CeladonCity_TangelaShoesFan MSG_FACE
+	end
+
+TangelaShoesFanTwerp:
+	msgbox gText_CeladonCity_TangelaShoesFan_TwerpPilled MSG_FACE
+	end
 
 LookLeft:
 	.byte look_left

@@ -1384,7 +1384,6 @@ static bool8 AbilityCanChangeTypeAndBoost(u16 move, u8 atkAbility, u8 electrifyT
 
 u8 GetExceptionMoveType(u8 bankAtk, u16 move)
 {
-	int i;
 	u8 moveType = gBattleMoves[move].type;
 	u16 item = ITEM(bankAtk);
 	u8 effect = ITEM_EFFECT(bankAtk);
@@ -1421,21 +1420,7 @@ u8 GetExceptionMoveType(u8 bankAtk, u16 move)
 			break;
 
 		case MOVE_NATURALGIFT:
-			if (IsBerry(item))
-			{
-				for (i = 0; gNaturalGiftTable[i].berry != ITEM_TABLES_TERMIN; ++i)
-				{
-					if (gNaturalGiftTable[i].berry == item)
-					{
-						moveType = gNaturalGiftTable[i].type;
-						goto BREAK_NATURAL_GIFT;
-					}
-				}
-				moveType = TYPE_MYSTERY; //If the berry isn't in the table, it has no type
-			}
-			else
-				moveType = TYPE_MYSTERY; //If Natural Gift fails, it has no type
-		BREAK_NATURAL_GIFT:
+			moveType = GetNaturalGiftMoveType(item);
 			break;
 
 		case MOVE_JUDGMENT:
@@ -1522,7 +1507,6 @@ u8 GetExceptionMoveType(u8 bankAtk, u16 move)
 
 u8 GetMonExceptionMoveType(struct Pokemon* mon, u16 move)
 {
-	int i;
 	u8 moveType = gBattleMoves[move].type;
 	u8 ability = GetMonAbility(mon);
 	u16 item = mon->item;
@@ -1554,21 +1538,7 @@ u8 GetMonExceptionMoveType(struct Pokemon* mon, u16 move)
 			break;
 
 		case MOVE_NATURALGIFT:
-			if (IsBerry(item))
-			{
-				for (i = 0; gNaturalGiftTable[i].berry != ITEM_TABLES_TERMIN; ++i)
-				{
-					if (gNaturalGiftTable[i].berry == item)
-					{
-						moveType = gNaturalGiftTable[i].type;
-						goto NATURAL_GIFT_BREAK;
-					}
-				}
-				moveType = TYPE_MYSTERY; //If the berry isn't in the table, it has no type
-			}
-			else
-				moveType = TYPE_MYSTERY; //If Natural Gift fails, it has no type
-		NATURAL_GIFT_BREAK:
+			moveType = GetNaturalGiftMoveType(item);
 			break;
 
 		case MOVE_JUDGMENT:
@@ -3060,18 +3030,7 @@ static u16 GetBasePower(struct DamageCalc* data)
 			break;
 
 		case MOVE_NATURALGIFT:
-			power = 0; //Would be at 1 before
-			if (IsBerry(data->atkItem))
-			{
-				for (i = 0; gNaturalGiftTable[i].berry != ITEM_TABLES_TERMIN; ++i)
-				{
-					if (gNaturalGiftTable[i].berry == data->atkItem)
-					{
-						power = gNaturalGiftTable[i].power;
-						break;
-					}
-				}
-			}
+			power = GetNaturalGiftMovePower(data->atkItem);
 			break;
 
 		case MOVE_PURSUIT:
@@ -3641,6 +3600,46 @@ u16 CalcVisualBasePower(u8 bankAtk, u8 bankDef, u16 move, bool8 ignoreDef)
 			if (IsDynamaxed(bankDef))
 				power *= 2;
 			break;
+	}
+
+	return power;
+}
+
+u8 GetNaturalGiftMoveType(u16 item)
+{
+	u32 i;
+	u8 moveType = TYPE_NORMAL; //If the berry isn't in the table, it's just shown as a normal type move (can't be Mystery because of Max Strike)
+
+	if (IsBerry(item))
+	{
+		for (i = 0; gNaturalGiftTable[i].berry != ITEM_TABLES_TERMIN; ++i)
+		{
+			if (gNaturalGiftTable[i].berry == item)
+			{
+				moveType = gNaturalGiftTable[i].type;
+				break;
+			}
+		}
+	}
+
+	return moveType;
+}
+
+u8 GetNaturalGiftMovePower(u16 item)
+{
+	u32 i;
+	u8 power = 0; //Would be at 1 before
+
+	if (IsBerry(item))
+	{
+		for (i = 0; gNaturalGiftTable[i].berry != ITEM_TABLES_TERMIN; ++i)
+		{
+			if (gNaturalGiftTable[i].berry == item)
+			{
+				power = gNaturalGiftTable[i].power;
+				break;
+			}
+		}
 	}
 
 	return power;

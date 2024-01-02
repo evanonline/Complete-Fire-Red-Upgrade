@@ -116,10 +116,10 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_HIDE_OAK_IN_HIS_LAB                           0x02B
 #define FLAG_HIDE_OAK_IN_PALLET_TOWN                       0x02C
 #define FLAG_HIDE_RIVAL_IN_LAB                             0x02D
-#define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                    0x02E
+#define FLAG_HIDE_PEWTER_CITY_GYM_GUIDE                    0x02E //Used for gag with same NPC
 #define FLAG_HIDE_DOME_FOSSIL                              0x02F
 #define FLAG_HIDE_HELIX_FOSSIL                             0x030
-#define FLAG_HIDE_NUGGET_BRIDGE_ROCKET                     0x031 // Used for Mint and Rival at Nugget Bridge
+#define FLAG_HIDE_NUGGET_BRIDGE_ROCKET                     0x031 //Used for Mint and Rival at Nugget Bridge
 #define FLAG_HIDE_BILL_CLEFAIRY                            0x032
 #define FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE                   0x033
 #define FLAG_HIDE_TOWER_FUJI                               0x034
@@ -255,12 +255,12 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_FISHINGGURUINTRO    	0x0B4 //Spoken to Fishing Guru for first time
 #define FLAG_GYM_CHALLENGE_ACTIVE	0x0B5 //Denotes whether or not the player is actively in a Gym taking on the trainers etc. Maybe redundant, I wonder if I can tie this to the bag disable flag for my purposes...
 #define FLAG_GYMGUY_CELADONCERULEAN	0x0B6 //Flag for when the player has been stopped by the Gym Guy in Celadon & Cerulean to hear an explainer on the new mechanics for gyms
-#define FLAG_0x0B7               	0x0B7
-#define FLAG_0x0B8               	0x0B8
-#define FLAG_0x0B9               	0x0B9
-#define FLAG_0x0BA               	0x0BA
-#define FLAG_0x0BB               	0x0BB
-#define FLAG_0x0BC               	0x0BC
+#define FLAG_MISTY_FIRST_ATTEMPT    0x0B7 //Attempted the first Misty fight at least once, prompting different dialogue on a rematch.
+#define FLAG_CELADONGYM_ROOT_1      0x0B8 //Celadon Gym plant root 1
+#define FLAG_CELADONGYM_ROOT_2      0x0B9 //Celadon Gym plant root 2
+#define FLAG_CELADONGYM_ROOT_3      0x0BA //Celadon Gym plant root 3
+#define FLAG_CELADONGYM_ROOT_4      0x0BB //Celadon Gym plant root 4
+#define FLAG_CELADONGYM_ROOT_ALL    0x0BC //All Celadon Gym plant roots removed
 #define FLAG_0x0BD               	0x0BD
 #define FLAG_0x0BE               	0x0BE
 #define FLAG_0x0BF               	0x0BF
@@ -660,7 +660,7 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_GOT_OLD_ROD                                 0x240
 #define FLAG_GOT_BIKE_VOUCHER                            0x241
 #define FLAG_0x242                                       0x242
-#define FLAG_GOT_COIN_CASE                               0x243
+#define FLAG_GOT_COIN_CASE                               0x243 // Used
 #define FLAG_GOT_GOOD_ROD                                0x244
 #define FLAG_GOT_TM29_FROM_MR_PSYCHIC                    0x245
 #define FLAG_GOT_LAPRAS_FROM_SILPH                       0x246
@@ -1299,16 +1299,16 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 // Boss clear flags, 1200
 #define FLAG_DEFEATED_BROCK           0x4B0
 #define FLAG_DEFEATED_MISTY           0x4B1
-#define FLAG_DEFEATED_LT_SURGE        0x4B2
+#define FLAG_DEFEATED_VISQUEZ	      0x4B2
 #define FLAG_DEFEATED_ERIKA           0x4B3
-#define FLAG_DEFEATED_KOGA            0x4B4
+#define FLAG_DEFEATED_JOY             0x4B4
 #define FLAG_DEFEATED_SABRINA         0x4B5
-#define FLAG_DEFEATED_BLAINE          0x4B6
-#define FLAG_DEFEATED_LEADER_GIOVANNI 0x4B7
+#define FLAG_DEFEATED_BRYONY          0x4B6
+#define FLAG_DEFEATED_JOEY 			  0x4B7
 #define FLAG_DEFEATED_LORELEI         0x4B8
 #define FLAG_DEFEATED_BRUNO           0x4B9
-#define FLAG_DEFEATED_AGATHA          0x4BA
-#define FLAG_DEFEATED_LANCE           0x4BB
+#define FLAG_DEFEATED_FLYNN           0x4BA
+#define FLAG_DEFEATED_KAREN           0x4BB
 #define FLAG_DEFEATED_CHAMP           0x4BC
 
 // Unused?

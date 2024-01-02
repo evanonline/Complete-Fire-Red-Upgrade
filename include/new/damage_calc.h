@@ -103,6 +103,10 @@ void CalculateShellSideArmSplits(void);
 u32 GetActualSpeciesWeight(u16 species, u8 ability, u8 itemEffect, u8 bank, bool8 checkNimble);
 bool8 IsBankHoldingFocusSash(u8 bank);
 
+u8 GetNaturalGiftMoveType(u16 item);
+u8 GetNaturalGiftMovePower(u16 item);
+u32 GetActualSpeciesWeight(u16 species, u8 ability, u8 itemEffect, u8 bank, bool8 checkNimble);
+
 //Functions Hooked In
 u8 GetSummaryScreenMoveType(u16 move, struct Pokemon* mon);
 

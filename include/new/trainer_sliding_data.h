@@ -18,7 +18,9 @@ extern const u8 sText_SherryBattle1_FirstMonDown[];
 extern const u8 sText_BrandyBattle1_FirstMonDown[];
 extern const u8 sText_SibBattle1_LowHP[];
 
-extern const u8 sText_MintLillieBattle1_MintLowHP[];
+extern const u8 sText_MistyBattle1_FirstMonDown[];
+extern const u8 sText_MistyBattle1_LastSwitchIn[];
+extern const u8 sText_MistyBattle1_LowHP[];
 
 //For Unbound
 
