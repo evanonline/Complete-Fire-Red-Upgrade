@@ -199,6 +199,7 @@ npc 3 24 6 EventScript_Route6_DexnavExplainer
 map 1 31 gMapScripts_IcedPath_CheckHideTM97
 sign 1 31 7 EventScript_IcedPath_DirectionsSign
 npc 1 32 0 EventScript_IcedPath_ExplainNPC1
+npc 1 32 1 EventScript_IcedPath_DeptStoreWarn
 npc 1 31 0 EventScript_IcedPath_ExplainNPC2
 npc 1 35 0 EventScript_IcedPath_DiveHintNPC
 npc 1 31 1 EventScript_IcedPath_CamperTroy
@@ -295,6 +296,7 @@ npc 10 20 0 EventScript_CeladonCity_NewCondominiumsReceptionist
 npc 10 20 1 EventScript_CeladonCity_NewCondominiumsGuard
 sign 10 26 0 EventScript_CeladonCity_GameCornerTV
 npc 10 26 0 EventScript_CeladonCity_FallingForItGuy
+npc 10 26 1 EventScript_CeladonCity_GimmighoulHintGirl
 npc 10 28 0 EventScript_CeladonCity_ToedscoolKnower
 npc 10 28 1 EventScript_CeladonCity_TangelaShoesFan
 npc 10 29 0 EventScript_CeladonCity_CommunityHouse_Woman1

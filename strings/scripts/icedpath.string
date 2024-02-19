@@ -42,3 +42,9 @@ I'm feeling great after another icy\nswim! Gimme a rematch!
 
 #org @gText_IcedPath_DiveHint
 Icewater blocks the path below.\nIt looks deep enough to dive in[.]\lWith a Pok\emon's help, of course.\pOnly a fool would swim in that\nfrigid, dirty water without help!\pAs a matter of fact, there's a\nswimmer down there I came to stop.\pBut, my Bruxish doesn't know Surf.\pAnd swimming across myself would be\nhypocritical.
+
+#org @gText_IcedPath_CeladonWarning
+Did you know that Celadon City's\n[GREEN]Department Store[BLACK] is closed?\lThey shut down for a shipment.\pYou might want to stock up on\nsupplies before heading west!
+
+#org @gText_IcedPath_CeladonWarning_RGroupOut
+I like shopping at Pok\e Marts.\nIt's a bit of an addiction[.]\pHave you bought any Potions,\nlately?\lThey're the most fun item to buy.

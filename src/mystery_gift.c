@@ -49,6 +49,7 @@ extern const u8 gText_MysteryGift_CacneaPokeParkPassword[];
 extern const u8 gText_MysteryGift_VietnameseCrystalPassword[];
 extern const u8 gText_MysteryGift_SonicLabyrinthPassword[];
 extern const u8 gText_MysteryGift_MetroidPassword[];
+extern const u8 gText_MysteryGift_FunnySeviperPassword[];
 extern const u8 gText_MysteryGift_GameBoyAdvanceSecretCode[];
 
 const struct NewMysteryGift gMysteryGifts[] = 
@@ -783,6 +784,42 @@ const struct NewMysteryGift gMysteryGifts[] =
         .password = gText_MysteryGift_MetroidPassword,
     },
 	
+	//A funny Seviper
+		{
+        .species = SPECIES_SEVIPER,
+        .item = ITEM_WIKI_BERRY,
+        .abilityNum = 2,
+        .nature = NATURE_BRAVE,
+        .moves = 
+        {
+            MOVE_CELEBRATE,
+            MOVE_POISONTAIL,
+            MOVE_ASSURANCE,
+            MOVE_XSCISSOR,
+        },
+        .ivs =
+        {
+            31,
+            31,
+            20,
+            31,
+            20,
+            0,
+        },
+        .evs = 
+        {
+            0,
+            69,
+            0,
+            0,
+            0,
+            0,
+        },
+        .level = 25,
+        .isShiny = TRUE,
+        .ballType = BALL_TYPE_CHERISH_BALL,
+        .password = gText_MysteryGift_FunnySeviperPassword,
+    },
 };
 
 u8 CheckMysteryGiftPassword(void)

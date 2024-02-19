@@ -32,6 +32,17 @@ EventScript_IcedPath_ExplainNPC1:
 	msgbox gText_IcedPath_IcePathExplain1 MSG_FACE
 	end
 
+.global EventScript_IcedPath_DeptStoreWarn
+EventScript_IcedPath_DeptStoreWarn:
+	checkflag 0x96C
+	if SET _goto DeptStoreNotWarnAnymore
+	msgbox gText_IcedPath_CeladonWarning MSG_FACE
+	end
+
+DeptStoreNotWarnAnymore:
+	msgbox gText_IcedPath_CeladonWarning_RGroupOut MSG_FACE
+	end
+
 .global EventScript_IcedPath_ExplainNPC2
 EventScript_IcedPath_ExplainNPC2:
 	msgbox gText_IcedPath_IcePathExplain2 MSG_FACE

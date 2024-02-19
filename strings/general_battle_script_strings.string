@@ -200,6 +200,9 @@ The sleep clause prevents more\nPok\emon from being put to sleep!
 #org @gText_AbilityBlocksHealBell
 [SCRIPTING_BANK] blocks\n[CURRENT_MOVE]!
 
+#org @gText_TransformFailsOnWildBosses
+But [TARGET]'s aura\nprevents transformation!
+
 #org @gText_DefogRemovedSideStatus
 [FD][37] team's [BUFFER][00]\nwore off!
 

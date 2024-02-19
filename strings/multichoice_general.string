@@ -97,6 +97,7 @@ Give Bottle Cap
 
 #org @sText_Primo_HyperTraining_GoldBottleCap
 Give Gold Bottle Cap
+
 #org @sText_Primo_HyperTraining_RustyBottleCap
 Give Rusty Bottle Cap
 
@@ -108,5 +109,41 @@ What are the rules for Gyms?
 
 #org @sText_GymGuy2
 What's this Gym like?
+
+#org @sText_FurfrouGroomer_HeartTrim
+Heart trim
+
+#org @sText_FurfrouGroomer_StarTrim
+Star trim
+
+#org @sText_FurfrouGroomer_DiamondTrim
+Diamond trim
+
+#org @sText_FurfrouGroomer_DebutanteTrim
+Debutante trim
+
+#org @sText_FurfrouGroomer_MatronTrim
+Matron trim
+
+#org @sText_MoreFurfrouTrims
+More trims
+
+#org @sText_FurfrouGroomer_DandyTrim
+Dandy trim
+
+#org @sText_FurfrouGroomer_LaReineTrim
+La Reine trim
+
+#org @sText_FurfrouGroomer_KabukiTrim
+Kabuki trim
+
+#org @sText_FurfrouGroomer_PharaohTrim
+Pharaoh trim
+
+#org @sText_FurfrouGroomer_Natural
+Make it natural!
+
+#org @sText_FurfrouGroomer_Keep
+Actually, nevermind
 
 #endif

@@ -990,6 +990,9 @@ void HandleAction_UseMove(void)
 	if (IsRaidBattle())
 		gNewBS->dynamaxData.turnStartHP = gBattleMons[BANK_RAID_BOSS].hp;
 
+//Fix Struggle not working - thanks to Matteo
+u8 moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
+
 //Get Move to be Used
 	if (gProtectStructs[gBankAttacker].onlyStruggle)
 	{

@@ -25,6 +25,27 @@ Sceptile[.]\n[PAUSE][5][.][PAUSE][5]is just the coolest ever[.]
 #org @gText_VermilionCityNPC_YamperOwner
 My Yamper is such a darling!\pYou can actually catch a Yamper\njust north of the city, on Route 6!\lBut MINE is a true Galarian import!
 
+#org @gText_VermilionCity_FurfrouGroomer
+Hello! I'm a Furfrou groomer!\nDo you have a Furfrou?\pI can trim your Furfrou's hair for\n\$500.
+
+#org @gText_VermilionCity_FurfrouGroomer_No
+Okay! But when you want a fancy\nFurfrou, remember me!
+
+#org @gText_VermilionCity_FurfrouGroomer_DontHaveFurfrouInParty
+You don't have a Furfrou in your\nparty!\pFurfrou live just east of Celadon,\non [GREEN]Route 7[BLACK].\pYou should get one there!\nThey're so handsome!
+
+#org @gText_VermilionCity_FurfrouGroomer_Which
+There's a bunch of ways I can trim\nyour Furfrou. Which do you want?
+
+#org @gText_VermilionCity_FurfrouGroomer_Which2
+How about these styles?
+
+#org @gText_VermilionCity_FurfrouGroomer_LetsDoIt
+Alright! Time for a trimming!
+
+#org @gText_VermilionCity_FurfrouGroomer_Done
+Voila!\pOh, that's a word that means\n"I'm done\" in Kalos.\pI hope you enjoy your fluffy\nnew buddy!
+
 #org @gText_VermilionCityNPC_Pollution
 We're careful about pollution here!\n[PAUSE][7]Still!\pNo toxic sludge in sight in\nVermilion!\pYou'll have to head to [GREEN]Fuchsia City[BLACK]\nif you wanna see sludge.
 

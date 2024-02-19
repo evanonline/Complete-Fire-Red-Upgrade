@@ -14,10 +14,109 @@ No worries, ma'am!\pI can corral these Throh out of the\nhouse with a [GREEN]Cap
 [RED]"Who Wants to Be a Millionaire\nPok\emon?\"[BLACK] is such a fun TV show!\pTrainers from all over try to win\nbig by answering trivia questions.\pThe twist is, they get to bring\na Pok\emon to help!\pGet this!\nThis one dope brought a Sunkern!\pThey wanted it to use [BLUE]Solar Beam[BLACK] to\ndraw in the bright stage lights,\lto help with the stage pressure.\pBut Sunkern is weak and fragile,\nso it just ended up fainting.\pNeedless to say[.]\p[.]that was NOT a Millionaire Pok\emon!
 
 #org @gText_SaffronCity_MillionairePokemon2
-The craziest player on [RED]"Who Wants\nto Be a Millionaire Pok\emon?\"\lwas definitely the Me First guy.\pDo you not know about that one?\pSo, this guy had his Furret use\nMe First on the host.\pSo Furret would steal the question\nand ASK IT TO THE HOST.\pSo the host had to answer the VERY\nQUESTION he was about to ask!\pThe host answered all the questions\nwrong on purpose, of course.\pBut that still meant the guy could\nrule out one of the 4 choices!\pThis show is awesome!
+The craziest player on [RED]"Who Wants\nto Be a Millionaire Pok\emon?\"[BLACK]\lwas definitely the Me First guy.\pDo you not know about that one?\pSo, this guy had his Furret use\nMe First on the host.\pSo Furret would steal the question\nand ASK IT TO THE HOST.\pSo the host had to answer the VERY\nQUESTION he was about to ask!\pThe host answered all the questions\nwrong on purpose, of course.\pBut that still meant the guy could\nrule out one of the 4 choices!\pThis show is awesome!
 
 #org @gText_SaffronCity_GuardGateFirst
 Sorry, access to [GREEN]Saffron City[BLACK]\nis closed.\pThey're filming a commercial.
 
 #org @gText_SaffronCity_SchoolGossip
 [GREEN]Viridian City[BLACK] used to have a small\n[GREEN]Trainers' School[BLACK].\pI heard that they closed it because\nof these two precocious kids,\lwho used their Hypno,\lto hypnotize the principal,\linto thinking he was a Palafin,\lwho was obsessed with underwear.\pEither that, or maybe it's because\nthey opened a new, better school,\lnear the [GREEN]Indigo Plateau[BLACK].\lCould be either of the two.
+
+#org @gText_SaffronCity_PreSeviiCutscene_Intro
+[BLUE](You can hear some sort of\ncommotion in the center of town[.])
+
+#org @gText_SaffronCity_PreSeviiCutscene_MeowthOnDaScene1
+[RED]Meowth[BLACK]: I'm here on da scene!\pIt's Meeeeeowth, with da\n[RED]R Group Kanto News[BLACK]!
+
+#org @gText_SaffronCity_PreSeviiCutscene_MeowthOnDaScene2
+We're live from Saffron City,\nwhere Kanto's communication outage\lhas interrupted da filmin' of a\lmajor commoishal!
+
+#org @gText_SaffronCity_PreSeviiCutscene_SherryGreeting1
+[RED]Sherry[BLACK]: [BLUE](Psst, [PLAYER]!\nOver here!)
+
+#org @gText_SaffronCity_PreSeviiCutscene_BrandyGreeting1
+[RED]Brandy[BLACK]: [BLUE](Psst, [PLAYER]!\nOver here!)
+
+#org @gText_SaffronCity_PreSeviiCutscene_SibGreeting2
+[BLUE](Did you hear anything about this\n"communication outage,\" sib?)\p(This must be breaking news!)\n[PAUSE][12](Also, what's a "commoishal\"?)
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue1
+[RED]Meowth[BLACK]: A member of da production\nteam has agreed to talk to us!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Rando_Interview_Dialogue2
+Auh, yeah.\pSo uhhh, I can't say WHAT the\ncommercial is about,\lbut we have this major celebrity,\land the commercial's going to be,\luhhhhh,\lwe gotta send the film to [GREEN]Sinnoh[BLACK].\pAnd we can't contact outside\nregions at all right now.\pS'really puttin' our Ninjask in\nthe Trick Room, if you get me.
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue3
+[RED]Meowth[BLACK]: Dat's right, folks!\pWith production stalled in Saffron,\nwho knows what could happen?\pAn independent estimate conducted\nby the R Group suggests that[.]\p[.]Saffron City could lose upwards\nof \$5,100,000 due to the delays!\pPok\emon League representatives\nhave declined to comment!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Rival_Interview_Dialogue4
+[RED][RIVAL][BLACK]: HEY, IS THAT A TALKING\nMEOWTH!?
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue5
+[RED]Meowth[BLACK]: [.][.][.]\p[.]Luckily, da R Group is proud to\nsay dat our state of da art\lbroadcast systems are unaffected\lby da interference in Kanto!\pSo keep watchin' da R Group\nNetwork!\pAfter all, ya ain't got nothin'\nelse right now!\lHe he!\lJust a little joke!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue6
+Now, for my next segment, I'll be doin' a local human interest story!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue7
+And you, ma'am, look like one\ninterestin' human!\pMind tellin' us brings you and\nyer li'l brudder to Saffron today?
+
+#org @gText_SaffronCity_PreSeviiCutscene_Venus_Interview_Dialogue8
+[RED]???[BLACK]: Ooooohohoho!\n[PAUSE][12]Meowth, you flatterer!\lThis is my son!\pMy name is Venus, and this is my\nlittle boy, Alloy! We're both\lbig fans of your show, Meowth!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue9
+[RED]Meowth[BLACK]: Wowee! Such a cute kid\nand a bee-yoo-tiful mother!\lAre either of ya Pok\emon trainers?
+
+#org @gText_SaffronCity_PreSeviiCutscene_Venus_Interview_Dialogue10
+[RED]Venus[BLACK]: I don't dabble in it like\nI used to, but my son here\ljust started challenging Gyms!\pNow, I don't mean to be doting,\nbut Alloy called me to say he got\lhis first badge here in Saffron,\lso I came congratulate him!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue11
+[RED]Meowth[BLACK]: Hold on, ya son's first\nGym Leader was Sabrina!?\pY'know, she's one of Kanto's\nstrongest Trainers!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Venus_Interview_Dialogue12
+[RED]Venus[BLACK]: Oh, it was an easy victory\nfor my boy! It's in his blood!\pAs you may know, Professor Oak is\ndone awarding Trainer Packages\lfor the year[.]\pBut the good professor saw Alloy's\npotential and made an exception!\pAlloy was given finest starter\nselection, the latest Rotom Phone[.]
+
+#org @gText_SaffronCity_PreSeviiCutscene_Rival_Interview_Dialogue13
+[RED][RIVAL][BLACK]: WHAT?!?!?!?!?
+
+#org @gText_SaffronCity_PreSeviiCutscene_SherryRestraint
+[RED]Sherry[BLACK]: [BLUE](Hey, chill out!)
+
+#org @gText_SaffronCity_PreSeviiCutscene_BrandyRestraint
+[RED]Brandy[BLACK]: [BLUE](Whoa, easy, buddy[.])
+
+#org @gText_SaffronCity_PreSeviiCutscene_Venus_Interview_Dialogue14
+[RED]Venus[BLACK]: [.]Alloy even received a\nsponsorship from [RED]Baja Blastoise[BLACK]!\pThat's right!\pBaja Blastoise!\pThe premiere soda for the trainer\non the go!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue15
+[RED]Meowth[BLACK]: I see!\n[PAUSE][10]Mmm HMMMM!\pIt seems like all'a Kanto oughtta\nkeep its eye on li'l Alloy here!\pBefore we go, would you like to\nsay anythin' yerself, Alloy?
+
+#org @gText_AlloySpeaksWowFirstTimeAmazing
+[RED]Alloy[BLACK]: [.] [.] [.]\p[.] [.] [.]My analytical mind[.]\n[PAUSE][12][.]will lead me to a swift victory.
+
+#org @gText_SaffronCity_PreSeviiCutscene_Venus_Interview_Dialogue16
+[RED]Venus[BLACK]: That's my boy!\nSo confident!\pAll of you at home better burn\nthis sight into your eyes[.]\lYou're looking at your next Champion!\lCan you imagine?\pAnd don't forget the mother who\nmade him this way, either!\pRemember[.][PAUSE][14]\nI'm your Venus!\lEveryone's Venus, that's me!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Meowth_Interview_Dialogue17
+[RED]Meowth[BLACK]: And theeeeere you have it!\n[PAUSE][9]Dat ends my report from da scene!
+
+#org @gText_SaffronCity_PreSeviiCutscene_VenusAlloyExit
+[RED]Venus[BLACK]: Well done, boy!\nNow come along!\lWe ought to discuss things.
+
+#org @gText_SaffronCity_PreSeviiCutscene_Rival_EveryoneDispersed
+[RED][RIVAL][BLACK]: Grgrr[.]\nWhat makes that kid so special?!\pI[.] [PAUSE][12]WE should be the ones getting\ninterviews!\lAnd Baja Blastoise sponsorships!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Sherry_EveryoneDispersed
+[RED]Sherry[BLACK]: Why don't we go try to\nfight Sabrina ourselves, [RIVAL]?\pIf that kid could beat her, I bet\nwe could, too!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Brandy_EveryoneDispersed
+[RED]Brandy[BLACK]: Relax, [RIVAL]! Let's go\nfight Sabrina ourselves!\pIf that weird kid could do it,\nso can we!
+
+#org @gText_SaffronCity_LittleGuysReinvigoratedMoments
+[RED][RIVAL][BLACK]:Y-yeah[.][PAUSE][12] YEAH!\pI bet Sabrina's just washed,\nactually!\lYEAH!
+
+#org @gText_SaffronCity_PreSeviiCutscene_Sherry_WakaWaka
+[RED]Sherry[BLACK]: Like, her clothes[.]?
+
+#org @gText_SaffronCity_PreSeviiCutscene_Brandy_WakaWaka
+[RED]Brandy[BLACK]: Like, her clothes[.]?

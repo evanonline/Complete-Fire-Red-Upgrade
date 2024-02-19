@@ -109,6 +109,21 @@ EventScript_VermilionCity_NPC_YamperOwner:
 	msgbox gText_VermilionCityNPC_YamperOwner MSG_FACE
 	end
 
+@.global EventScript_VermilionCity_NPC_FurfrouGroomer
+@EventScript_VermilionCity_NPC_FurfrouGroomer:
+	@showmoney 0x14 0x0 0x00
+	@msgbox gText_VermilionCity_FurfrouGroomer MSG_YESNO
+	@compare LASTRESULT 0x1
+	@if equal _goto FurfrouGroomerCheckForFurfrou
+	@msgbox gText_VermilionCity_FurfrouGroomer_No MSG_FACE
+	@hidemoney 0x14 0x0
+	@release
+	@end
+
+@FurfrouGroomerCheckForFurfrou:
+	@callasm IsFurfrou
+	@end
+
 .global EventScript_VermilionCity_NPC_FishingGuru
 EventScript_VermilionCity_NPC_FishingGuru:
 	checkflag FLAG_FISHINGGURUINTRO

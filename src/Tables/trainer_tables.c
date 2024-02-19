@@ -1082,7 +1082,7 @@ const struct TrainerMonItemCustomMoves sParty_CeladonGym_Erika_Badge1[] = {
             MOVE_ABSORB,
         },
 		.heldItem = ITEM_SITRUS_BERRY,
-        .ability = 0, @want it to be prankster
+        .ability = 0, //want it to be prankster
     },
 	{
         .iv = 27,
