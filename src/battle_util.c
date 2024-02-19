@@ -1495,7 +1495,7 @@ bool8 CanBePutToSleep(u8 bank, bool8 checkFlowerVeil)
 
 	switch (ABILITY(bank)) {
 		case ABILITY_INSOMNIA:
-		case ABILITY_VITALSPIRIT:
+		//case ABILITY_VITALSPIRIT:
 		case ABILITY_SWEETVEIL:
 			return FALSE;
 	}
@@ -1531,7 +1531,7 @@ bool8 CanBeYawned(u8 bank)
 
 	switch (ABILITY(bank)) {
 		case ABILITY_INSOMNIA:
-		case ABILITY_VITALSPIRIT:
+		//case ABILITY_VITALSPIRIT:
 		case ABILITY_SWEETVEIL:
 		case ABILITY_COMATOSE:
 			return FALSE;
