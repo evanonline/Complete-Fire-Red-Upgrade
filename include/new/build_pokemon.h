@@ -51,9 +51,10 @@ enum TierBanCheckingType
 	CHECK_PARTY_OFFSET,
 };
 
-struct DuplicateAbility
+struct ReplaceAbility
 {
 	u16 species;
 	u8 currAbility;
 	const u8* replaceAbilityString;
+	const u8* replaceDescString;
 };

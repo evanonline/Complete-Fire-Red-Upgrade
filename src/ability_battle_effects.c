@@ -11,6 +11,7 @@
 #include "../include/new/ability_battle_effects.h"
 #include "../include/new/ability_battle_scripts.h"
 #include "../include/new/ability_tables.h"
+#include "../include/new/ability_util.h"
 #include "../include/new/battle_start_turn_start.h"
 #include "../include/new/battle_strings.h"
 #include "../include/new/battle_script_util.h"
@@ -20,11 +21,14 @@
 #include "../include/new/damage_calc.h"
 #include "../include/new/dynamax.h"
 #include "../include/new/form_change.h"
-#include "../include/new/move_battle_scripts.h"
+#include "../include/new/util2.h"
 #include "../include/new/move_tables.h"
 #include "../include/new/text.h"
-#include "../include/new/util.h"
 #include "../include/new/cmd49_battle_scripts.h"
+#include "../include/new/move_battle_scripts.h"
+#include "../include/new/move_tables.h"
+#include "../include/new/util.h"
+
 /*
 ability_battle_effects.c
 	-functions that introduce or moodify battle effects via abilities or otherwise.
@@ -166,7 +170,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_NORMALIZE] = -1,
 	[ABILITY_OBLIVIOUS] = 2,
 	[ABILITY_OVERCOAT] = 5,
-	[ABILITY_OVERGROW] = 5,
+//	[ABILITY_OVERGROW] = 5,
 	[ABILITY_OWNTEMPO] = 3,
 	[ABILITY_PARENTALBOND] = 10,
 	[ABILITY_PICKUP] = 1,
@@ -190,7 +194,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_QUICKFEET] = 5,
 	[ABILITY_RAINDISH] = 3,
 	[ABILITY_RATTLED] = 3,
-	[ABILITY_RECEIVER] = 0,
+//	[ABILITY_RECEIVER] = 0,
 	[ABILITY_RECKLESS] = 6,
 	[ABILITY_REFRIGERATE] = 8,
 	[ABILITY_REGENERATOR] = 8,
@@ -240,7 +244,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_SUCTIONCUPS] = 2,
 	[ABILITY_SUPERLUCK] = 3,
 	[ABILITY_SURGESURFER] = 4,
-	[ABILITY_SWARM] = 5,
+//	[ABILITY_SWARM] = 5,
 	[ABILITY_SWEETVEIL] = 4,
 	[ABILITY_SWIFTSWIM] = 6,
 	[ABILITY_SYMBIOSIS] = 0,
@@ -253,7 +257,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 //	[ABILITY_TERAVOLT] = 7,
 	[ABILITY_THICKFAT] = 7,
 	[ABILITY_TINTEDLENS] = 7,
-	[ABILITY_TORRENT] = 5,
+//	[ABILITY_TORRENT] = 5,
 	[ABILITY_TOXICBOOST] = 6,
 	[ABILITY_TOUGHCLAWS] = 7,
 	[ABILITY_TRACE] = 6,
@@ -264,14 +268,14 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_UNBURDEN] = 7,
 	[ABILITY_UNNERVE] = 3,
 	[ABILITY_VICTORYSTAR] = 6,
-	[ABILITY_VITALSPIRIT] = 4,
+//	[ABILITY_VITALSPIRIT] = 4,
 	[ABILITY_VOLTABSORB] = 7,
 	[ABILITY_WATERABSORB] = 7,
 	[ABILITY_WATERBUBBLE] = 8,
 	[ABILITY_WATERCOMPACTION] = 4,
 	[ABILITY_WATERVEIL] = 4,
 	[ABILITY_WEAKARMOR] = 2,
-	[ABILITY_WHITESMOKE] = 4,
+//	[ABILITY_WHITESMOKE] = 4,
 //	[ABILITY_WIMPOUT] = 3,
 	[ABILITY_WONDERGUARD] = 10,
 	[ABILITY_WONDERSKIN] = 4,
@@ -289,7 +293,7 @@ const s8 gAbilityRatings[ABILITIES_COUNT] =
 	[ABILITY_ICESCALES] = 7,
 	[ABILITY_RIPEN] = 4,
 	[ABILITY_ICEFACE] = 4,
-	[ABILITY_POWERSPOT] = 2, //UPDATE
+//	[ABILITY_POWERSPOT] = 2, //UPDATE
 	[ABILITY_MIMICRY] = 2,
 	[ABILITY_SCREENCLEANER] = 3,
 	[ABILITY_NEUTRALIZINGGAS] = 5,
@@ -339,11 +343,11 @@ const bool8 gMoldBreakerIgnoredAbilities[] =
 	[ABILITY_TANGLEDFEET] =		TRUE,
 	[ABILITY_THICKFAT] =		TRUE,
 	[ABILITY_UNAWARE] =			TRUE,
-	[ABILITY_VITALSPIRIT] =		TRUE,
+//	[ABILITY_VITALSPIRIT] =		TRUE,
 	[ABILITY_VOLTABSORB] =		TRUE,
 	[ABILITY_WATERABSORB] =		TRUE,
 	[ABILITY_WATERVEIL] =		TRUE,
-	[ABILITY_WHITESMOKE] =		TRUE,
+//	[ABILITY_WHITESMOKE] =		TRUE,
 	[ABILITY_WONDERGUARD] =		TRUE,
 	[ABILITY_BIGPECKS] =		TRUE,
 	[ABILITY_CONTRARY] =		TRUE,
@@ -695,54 +699,60 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			}
 			break;
 
-		case ABILITY_TRACE: ;
+case ABILITY_TRACE: ;
 			u8 target2;
-			side = (GetBattlerPosition(bank) ^ BIT_SIDE) & BIT_SIDE; // side of the opposing pokemon
-			target1 = GetBattlerAtPosition(side);
-			target2 = GetBattlerAtPosition(side + BIT_FLANK);
+			target1 = FOE(bank);
+			target2 = PARTNER(target1);
+
 			if (IS_DOUBLE_BATTLE)
 			{
-				if (*GetAbilityLocation(target1) != ABILITY_NONE && gBattleMons[target1].hp != 0
-				&& *GetAbilityLocation(target2) != ABILITY_NONE && gBattleMons[target2].hp != 0)
+				if (*GetAbilityLocation(target1) != ABILITY_NONE && BATTLER_ALIVE(target1)
+				&& *GetAbilityLocation(target2) != ABILITY_NONE && BATTLER_ALIVE(target2))
 				{
-					gActiveBattler = GetBattlerAtPosition(((Random() & 1) * 2) | side);
-					effect++;
-				}
-				else if (*GetAbilityLocation(target1) != ABILITY_NONE && gBattleMons[target1].hp != 0)
-				{
-					gActiveBattler = target1;
+					if (gSpecialAbilityFlags[*GetAbilityLocation(target1)].gTraceBannedAbilities)
+						target1 = target2; //Pick the one that might not have a banned Ability
+					else if (Random() & 1)
+						target1 = target2; //50% chance of picking flank bank
 
 					effect++;
 				}
-				else if (*GetAbilityLocation(target2) != ABILITY_NONE && gBattleMons[target2].hp != 0)
+				else if (*GetAbilityLocation(target1) != ABILITY_NONE && BATTLER_ALIVE(target1) != 0)
 				{
-					gActiveBattler = target2;
+					//target1 = target1;
+					effect++;
+				}
+				else if (*GetAbilityLocation(target2) != ABILITY_NONE && BATTLER_ALIVE(target2) != 0)
+				{
+					target1 = target2;
 					effect++;
 				}
 			}
 			else //Single Battle
 			{
-				if (*GetAbilityLocation(target1) && gBattleMons[target1].hp)
+				if (BATTLER_ALIVE(target1) && *GetAbilityLocation(target1) != ABILITY_NONE)
 				{
-					gActiveBattler = target1;
+					target1 = target1;
 					effect++;
 				}
 			}
 
 			if (effect)
 			{
-				if (!CheckTableForAbility(*GetAbilityLocation(gActiveBattler), gTraceBannedAbilities))
+				if (!gSpecialAbilityFlags[*GetAbilityLocation(target1)].gTraceBannedAbilities)
 				{
 					gBankAttacker = bank;
-					*GetAbilityLocation(bank) = *GetAbilityLocation(gActiveBattler);
-					gLastUsedAbility = *GetAbilityLocation(gActiveBattler);
+					*GetAbilityLocation(bank) = *GetAbilityLocation(target1);
+					SetTookAbilityFrom(bank, target1);
+					gLastUsedAbility = *GetAbilityLocation(target1);
 					BattleScriptPushCursorAndCallback(BattleScript_TraceActivates);
 
-					PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gActiveBattler, gBattlerPartyIndexes[gActiveBattler])
+					PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, target1, gBattlerPartyIndexes[target1])
 					PREPARE_ABILITY_BUFFER(gBattleTextBuff2, gLastUsedAbility)
 				}
 				else
-					--effect;
+				{
+					effect = FALSE;
+				}
 			}
 			break;
 
@@ -835,7 +845,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						moveType = GetExceptionMoveType(FOE(bank), move);
 
 					if (MOVE_RESULT_SUPER_EFFECTIVE &
-						TypeCalc(move, FOE(bank), bank, 0, 0))
+						TypeCalc(move, PARTNER(FOE(bank)), bank, NULL))
 					{
 						++effect;
 						break;
@@ -858,7 +868,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						moveType = GetExceptionMoveType(PARTNER(FOE(bank)), move);
 
 					if (MOVE_RESULT_SUPER_EFFECTIVE &
-						TypeCalc(move, PARTNER(FOE(bank)), bank, 0, 0))
+						TypeCalc(move, FOE(bank), bank, NULL))
 					{
 						++effect;
 						break;
@@ -1209,7 +1219,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			{
 				if (!IsAbilitySuppressed(i) //Gastro Acid has higher priority
 				&& ABILITY(i) != ABILITY_NONE
-				&& !CheckTableForAbility(ABILITY(i), gNeutralizingGasBannedAbilities))
+				&& !gSpecialAbilityFlags[ABILITY(i)].gNeutralizingGasBannedAbilities)
 				{
 					u8* abilityLoc = GetAbilityLocation(i);
 					gNewBS->neutralizingGasBlockedAbilities[i] = *abilityLoc;
@@ -1508,12 +1518,12 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						break;
 
 					case ABILITY_BULLETPROOF:
-						if (CheckTableForMove(move, gBallBombMoves))
+						if (gSpecialMoveFlags[move].gBallBombMoves)
 							effect = 1;
 						break;
-
+						
 					case ABILITY_OVERCOAT:
-						if (CheckTableForMove(move, gPowderMoves))
+						if (gSpecialMoveFlags[move].gPowderMoves)
 							effect = 1;
 						break;
 
@@ -1702,7 +1712,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						effect++;
 					}
 					if (SPECIES(bank) == SPECIES_CRAMORANT_GORGING 
-					&& CanBeParalyzed(gBankAttacker, TRUE)
+					&& CanBeParalyzed(gBankAttacker, bank, TRUE)
 					&& BATTLER_ALIVE(gBankAttacker)) {
 						gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
 						BattleScriptPushCursor();
@@ -1732,7 +1742,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
 				&& ABILITY(gBankAttacker) != ABILITY_MAGICGUARD
-				&& CheckContact(move, gBankAttacker))
+				&& CheckContact(move, gBankAttacker, bank))
 				{
 					gBattleMoveDamage = MathMax(1, GetBaseMaxHP(gBankAttacker) / 8);
 					BattleScriptPushCursor();
@@ -1746,7 +1756,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker)
+				&& CheckContact(move, gBankAttacker, bank)
 				&& IsAffectedByPowder(gBankAttacker)
 				&& Random() % 10 == 0)
 				{
@@ -1757,7 +1767,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 
 					switch (gBattleCommunication[MOVE_EFFECT_BYTE]) {
 						case MOVE_EFFECT_SLEEP:
-							if (CanBePutToSleep(gBankAttacker, TRUE))
+							if (CanBePutToSleep(gBankAttacker, bank, TRUE))
 								++effect;
 							break;
 						case MOVE_EFFECT_POISON:
@@ -1766,7 +1776,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							break;
 						case MOVE_EFFECT_BURN: //Gets changed to Paralysis
 							gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_PARALYSIS;
-							if (CanBeParalyzed(gBankAttacker, TRUE))
+							if (CanBeParalyzed(gBankAttacker, bank, TRUE))
 								++effect;
 							break;
 					}
@@ -1788,7 +1798,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker)
+				&& CheckContact(move, gBankAttacker, bank)
 				&& CanBePoisoned(gBankAttacker, gBankTarget, TRUE)
 				&& umodsi(Random(), 3) == 0)
 				{
@@ -1805,8 +1815,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker)
-				&& CanBeParalyzed(gBankAttacker, TRUE)
+				&& CheckContact(move, gBankAttacker, bank)
+				&& CanBeParalyzed(gBankAttacker, bank, TRUE)
 				&& umodsi(Random(), 3) == 0)
 				{
 					gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_PARALYSIS;
@@ -1822,8 +1832,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker)
-				&& CanBeBurned(gBankAttacker, TRUE)
+				&& CheckContact(move, gBankAttacker, bank)
+				&& CanBeParalyzed(gBankAttacker, bank, TRUE)
 				&& umodsi(Random(), 3) == 0)
 				{
 					gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_BURN;
@@ -1840,7 +1850,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& BATTLER_ALIVE(bank)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker)
+				&& CheckContact(move, gBankAttacker, bank)
 				&& umodsi(Random(), 3) == 0
 				&& ABILITY(gBankAttacker) != ABILITY_OBLIVIOUS
 				&& ABILITY(gBankAttacker) != ABILITY_AROMAVEIL
@@ -1890,7 +1900,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			case ABILITY_WEAKARMOR:
 				if (MOVE_HAD_EFFECT
 				&& TOOK_DAMAGE(bank)
-				&& CalcMoveSplit(gBankAttacker, gCurrentMove) == SPLIT_PHYSICAL
+				&& CalcMoveSplit(gCurrentMove, gBankAttacker, bank) == SPLIT_PHYSICAL
 				&& BATTLER_ALIVE(bank)
 				&& gBankAttacker != bank
 				&& (gBattleMons[bank].statStages[STAT_SPEED - 1] < 12 || gBattleMons[bank].statStages[STAT_DEF - 1] > 0))
@@ -1921,7 +1931,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker))
+				&& CheckContact(move, gBankAttacker, bank))
 				{
 					switch (ABILITY(gBankAttacker)) {
 						case ABILITY_MUMMY:
@@ -1950,7 +1960,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& TOOK_DAMAGE(bank)
 				&& (BATTLER_ALIVE(gBankAttacker) || BATTLER_ALIVE(gBankTarget))
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker))
+				&& CheckContact(move, gBankAttacker, bank))
 				{
 					BattleScriptPushCursor();
 					gBattlescriptCurrInstr = BattleScript_WanderingSpiritActivates;
@@ -1980,7 +1990,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
 				&& ABILITY(gBankAttacker) != ABILITY_MAGICGUARD
-				&& CheckContact(move, gBankAttacker)
+				&& CheckContact(move, gBankAttacker, bank)
 				&& !BATTLER_ALIVE(bank)
 				&& !ABILITY_PRESENT(ABILITY_DAMP))
 				{
@@ -2010,7 +2020,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 			case ABILITY_GOOEY:
 				if (MOVE_HAD_EFFECT
 				&& TOOK_DAMAGE(bank)
-				&& CheckContact(move, gBankAttacker)
+				&& CheckContact(move, gBankAttacker, bank)
 				&& BATTLER_ALIVE(gBankAttacker)
 				&& gBankAttacker != bank
 				&& (STAT_CAN_FALL(gBankAttacker, STAT_SPD) || ABILITY(gBankAttacker) == ABILITY_MIRRORARMOR))
@@ -2120,7 +2130,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				if (MOVE_HAD_EFFECT
 				&& TOOK_DAMAGE(bank)
 				&& gBankAttacker != bank
-				&& CheckContact(move, gBankAttacker))
+				&& CheckContact(move, gBankAttacker, bank))
 				{
 					BattleScriptPushCursor();
 					gBattlescriptCurrInstr = BattleScript_PerishBody;

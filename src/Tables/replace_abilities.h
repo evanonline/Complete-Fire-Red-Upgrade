@@ -299,30 +299,6 @@ static struct ReplaceAbility sReplaceAbilities[] =
         .replaceAbilityString = NAME_TERAVOLT,
     },
     {
-        .species = SPECIES_FEAROW,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_STRONG_BEAK,
-        .replaceDescString = DESC_STRONG_BEAK,
-    },
-    {
-        .species = SPECIES_PIKIPEK,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_STRONG_BEAK,
-        .replaceDescString = DESC_STRONG_BEAK,
-    },
-    {
-        .species = SPECIES_TRUMBEAK,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_STRONG_BEAK,
-        .replaceDescString = DESC_STRONG_BEAK,
-    },
-    {
-        .species = SPECIES_TOUCANNON,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_STRONG_BEAK,
-        .replaceDescString = DESC_STRONG_BEAK,
-    },
-    {
         .species = SPECIES_VIBRAVA,
         .currAbility = ABILITY_TRANSISTOR,
         .replaceAbilityString = NAME_TECTONATE,
@@ -339,30 +315,6 @@ static struct ReplaceAbility sReplaceAbilities[] =
         .currAbility = ABILITY_HUGEPOWER,
         .replaceAbilityString = NAME_SUPREME_OVERLORD,
         .replaceDescString = DESC_SUPREME_OVERLORD,
-    },
-    {
-        .species = SPECIES_GALLADE,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_SHARPNESS,
-        .replaceDescString = DESC_SHARPNESS,
-    },
-    {
-        .species = SPECIES_GALLADE_MEGA,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_SHARPNESS,
-        .replaceDescString = DESC_SHARPNESS,
-    },
-    {
-        .species = SPECIES_SAMUROTT_H,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_SHARPNESS,
-        .replaceDescString = DESC_SHARPNESS,
-    },
-    {
-        .species = SPECIES_KLEAVOR,
-        .currAbility = ABILITY_IRONKICK,
-        .replaceAbilityString = NAME_SHARPNESS,
-        .replaceDescString = DESC_SHARPNESS,
     },
     {
         .species = SPECIES_PONYTA_G,

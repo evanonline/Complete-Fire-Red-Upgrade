@@ -32,6 +32,7 @@ attackcanceler_battle_scripts.s
 .global BattleScript_HoopaCantUseHyperspaceFury
 .global BattleScript_MoveUsedDynamaxPrevents
 .global BattleScript_MoveUsedRaidBattlePrevents
+.global BattleScript_MoveUsedRaidShieldPrevents
 .global BattleScript_RaidBattleStatNullification
 
 .global BattleScript_TryRemoveIllusion
@@ -313,6 +314,20 @@ BattleScript_MoveUsedRaidBattlePrevents:
 	printstring 0x184
 	waitmessage DELAY_1SECOND
 	goto BS_MOVE_END
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+BattleScript_MoveUsedRaidShieldPrevents:
+	attackstring
+	ppreduce
+	pause DELAY_HALFSECOND
+	orbyte OUTCOME OUTCOME_FAILED
+	setword BATTLE_STRING_LOADER gText_RaidShieldProtected
+	printstring 0x184
+	waitmessage DELAY_1SECOND
+	goto BS_MOVE_END
+
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

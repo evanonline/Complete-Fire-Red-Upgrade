@@ -285,6 +285,21 @@ bool8 IsMonOfType(struct Pokemon* mon, u8 type)
 	return type1 == type || type2 == type;
 }
 
+
+bool8 IsSpeciesAffectedByScalemons(u16 species)
+{
+	if (species == SPECIES_SHEDINJA) //Shedinja would get OP stats because of its low HP and BST
+		return FALSE;
+
+	//if (!IsOnlyScalemonsGame())
+		//return FALSE;
+
+	//if (CanSpeciesEvolve(species))	
+		//return FALSE; //Only Pokemon that are fully evolved are affected by the scaling outside of the Frontier
+
+	return TRUE;
+}
+
 #define TILE_SIZE 32
 #define SPRITE_RAM 0x6010000
 #define sSpriteTileAllocBitmap ((u8*) 0x2021B48)

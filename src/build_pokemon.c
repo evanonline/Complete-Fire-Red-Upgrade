@@ -21,6 +21,7 @@
 #include "../include/constants/tutors.h"
 
 #include "../include/new/ability_tables.h"
+#include "../include/new/ability_util.h"
 #include "../include/new/ai_advanced.h"
 #include "../include/new/build_pokemon.h"
 #include "../include/new/build_pokemon_2.h"
@@ -40,7 +41,7 @@
 #include "Tables/raid_encounters.h"
 #include "Tables/raid_partners.h"
 #include "Tables/trainers_with_evs_table.h"
-#include "Tables/duplicate_abilities.h"
+#include "Tables/replace_abilities.h"
 
 /*
 build_pokemon.c
@@ -3839,12 +3840,12 @@ bool8 GetAlternateHasSpecies(struct BoxPokemon* mon)
 	SetMonData(mon, field, &n);								\
 }
 
-void CalculateMonStatsNew(struct Pokemon *mon)
+void CalculateMonStatsNew(struct Pokemon* mon)
 {
 	u32 i;
 	u16 newMaxHP;
-	u8 ivs[NUM_STATS] = {0};
-	u8 evs[NUM_STATS] = {0};
+	u8 ivs[NUM_STATS] = { 0 };
+	u8 evs[NUM_STATS] = { 0, 0, 0, 0, 0, 0 };
 
 	for (i = STAT_HP; i < NUM_STATS; ++i)
 	{
@@ -3873,13 +3874,13 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 
 	SetMonData(mon, MON_DATA_LEVEL, &level);
 
-	#ifdef SPECIES_SHEDINJA
+#ifdef SPECIES_SHEDINJA
 	if (species == SPECIES_SHEDINJA)
 	{
 		newMaxHP = 1;
 	}
 	else
-	#endif
+#endif
 	{
 		u32 n = 2 * baseHP + ivs[STAT_HP];
 		newMaxHP = MathMin((((n + evs[STAT_HP] / 4) * level) / 100) + level + 10, 0xFFFF);
@@ -3892,12 +3893,12 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 	SetMonData(mon, MON_DATA_MAX_HP, &newMaxHP);
 
 	u8 nature = GetNature(mon);
-	if (IsScaleMonsBattle())
+	if (IsScaleMonsBattle() && IsSpeciesAffectedByScalemons(species))
 	{
 		for (i = STAT_ATK; i < NUM_STATS; ++i) //HP doesn't change in Scalemons
 		{
 			u16 base = ((u8*) (&gBaseStats[species].baseHP))[i];
-			base = (base * (600 - baseHP)) / (baseStatTotal - baseHP);
+			base = MathMin((base * (600 - baseHP)) / (baseStatTotal - baseHP), 255); //Max 255
 			CALC_STAT(base, ivs[i], evs[i], i, MON_DATA_ATK + (i - 1));
 		}
 	}
@@ -3913,7 +3914,7 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 	{
 		for (i = STAT_ATK; i < NUM_STATS; ++i) //HP doesn't change in Scalemons
 		{
-			u16 base = ((u8*) (&gBaseStats[species].baseHP))[i] * 2;
+			u16 base = ((u8*)(&gBaseStats[species].baseHP))[i] * 2;
 			CALC_STAT(base, ivs[i], evs[i], i, MON_DATA_ATK + (i - 1));
 		}
 	}
@@ -3921,12 +3922,12 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 	{
 		for (i = STAT_ATK; i < NUM_STATS; ++i)
 		{
-			u16 base = ((u8*) (&gBaseStats[species].baseHP))[i];
+			u16 base = ((u8*)(&gBaseStats[species].baseHP))[i];
 			CALC_STAT(base, ivs[i], evs[i], i, MON_DATA_ATK + (i - 1));
 		}
 	}
 
-	#ifdef SPECIES_SHEDINJA
+#ifdef SPECIES_SHEDINJA
 	if (species == SPECIES_SHEDINJA)
 	{
 		if (currentHP != 0 || oldMaxHP == 0)
@@ -3935,7 +3936,7 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 			return;
 	}
 	else
-	#endif
+#endif
 	{
 		if (currentHP == 0 && oldMaxHP == 0)
 			currentHP = newMaxHP;
@@ -3943,30 +3944,12 @@ void CalculateMonStatsNew(struct Pokemon *mon)
 			currentHP += newMaxHP - oldMaxHP;
 		else
 			return;
+
+		if (!gMain.inBattle && currentHP > newMaxHP)
+			currentHP = newMaxHP;
 	}
 
 	SetMonData(mon, MON_DATA_HP, &currentHP);
-}
-
-u8 TryRandomizeAbility(u8 ability, unusedArg u16 species)
-{
-	u32 newAbility = ability;
-
-	#ifdef FLAG_ABILITY_RANDOMIZER
-	if (FlagGet(FLAG_ABILITY_RANDOMIZER) && !FlagGet(FLAG_BATTLE_FACILITY))
-	{
-		u32 id = MathMax(1, T1_READ_32(gSaveBlock2->playerTrainerId)); //0 id would mean Pokemon wouldn't have ability
-
-		do
-		{
-			newAbility = newAbility * id * species;
-			newAbility = MathMax(1, newAbility % ABILITIES_COUNT);
-		}
-		while (CheckTableForAbility(newAbility, gRandomizerAbilityBanList));
-	}
-	#endif
-
-	return newAbility;
 }
 
 
@@ -4100,39 +4083,33 @@ static const u8 sLevelNickTextColors[][3] =
 	{0, 11, 10},
 };
 
-void HandleDuplicateNames_SummaryScreen()
-{
-    struct Pokemon* mon = &(sMonSummaryScreen->currentMon);
-    u8 ability = GetMonAbility(mon);
-    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-	for(u8 i = 0; i < ARRAY_COUNT(sDuplicateAbilities); i++)
+void DoDuplicateAbilityStuff(void) {
+	struct Pokemon* mon = &(sMonSummaryScreen->currentMon);
+	u8 ability = GetMonAbility(mon);
+	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	for(u8 i = 0; i < ARRAY_COUNT(sReplaceAbilities); i++)
 	{
-		if(ability == sDuplicateAbilities[i].currAbility && species == sDuplicateAbilities[i].species)
+		if(ability == sReplaceAbilities[i].currAbility && species == sReplaceAbilities[i].species)
 		{
-			StringCopy(sMonSummaryScreen->summary.abilityNameStrBuf, sDuplicateAbilities[i].replaceAbilityString);
+			StringCopy(sMonSummaryScreen->summary.abilityNameStrBuf, sReplaceAbilities[i].replaceAbilityString);
 		}
 	}
 }
 
 void PokeSum_PrintAbilityNameAndDesc(void)
 {
-	HandleDuplicateNames_SummaryScreen();
+	struct Pokemon* mon = &(sMonSummaryScreen->currentMon);
+	u8 ability = GetMonAbility(mon);
+	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+	DoDuplicateAbilityStuff();
 
+	CopyAbilityDescription(sMonSummaryScreen->summary.abilityDescStrBuf, ability, species);
 
-	//COMMENT THIS IF YOU ARE USING THE DEFAULT SUMMARY SCREEN
 	FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
 
 	AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[4], 2, 4, 2, sLevelNickTextColors[0], TEXT_SPEED_FF,
 		sMonSummaryScreen->summary.abilityNameStrBuf);
 
-	AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2, 4, 0, sLevelNickTextColors[0], TEXT_SPEED_FF,
+	AddTextPrinterParameterized4(sMonSummaryScreen->windowIds[5], 2, 4, 0, 0, 0xFD, sLevelNickTextColors[0], TEXT_SPEED_FF,
 		sMonSummaryScreen->summary.abilityDescStrBuf);
-
-	//UNCOMMENT THIS IF YOU ARE USING THE DEFAULT SUMMARY SCREEN
-	/*FillWindowPixelBuffer(sMonSummaryScreen->windowIds[5], 0);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
-                                 66, 1, sLevelNickTextColors[0], TEXT_SPEED_FF, sMonSummaryScreen->summary.abilityNameStrBuf);
-    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[5], 2,
-                                 2, 15, sLevelNickTextColors[0], TEXT_SPEED_FF,
-                                 sMonSummaryScreen->summary.abilityDescStrBuf);*/
 }

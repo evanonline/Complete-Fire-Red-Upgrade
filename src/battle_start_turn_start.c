@@ -3,13 +3,19 @@
 #include "../include/battle_transition.h"
 #include "../include/battle_setup.h"
 #include "../include/event_data.h"
+#include "../include/gpu_regs.h"
+#include "../include/load_save.h"
 #include "../include/random.h"
+#include "../include/safari_zone.h"
+#include "../include/scanline_effect.h"
 #include "../include/constants/songs.h"
 #include "../include/constants/trainers.h"
 #include "../include/constants/trainer_classes.h"
 
+#include "../include/new/ability_battle_effects.h"
 #include "../include/new/ability_battle_scripts.h"
 #include "../include/new/ai_master.h"
+#include "../include/new/ai_util.h"
 #include "../include/new/battle_start_turn_start.h"
 #include "../include/new/battle_start_turn_start_battle_scripts.h"
 #include "../include/new/battle_transition.h"
@@ -17,15 +23,17 @@
 #include "../include/new/cmd49.h"
 #include "../include/new/damage_calc.h"
 #include "../include/new/dexnav.h"
+#include "../include/new/dns.h"
 #include "../include/new/dynamax.h"
 #include "../include/new/form_change.h"
 #include "../include/new/frontier.h"
+#include "../include/new/general_bs_commands.h"
 #include "../include/new/multi.h"
 #include "../include/new/mega.h"
 #include "../include/new/move_battle_scripts.h"
 #include "../include/new/move_tables.h"
 #include "../include/new/set_z_effect.h"
-#include "../include/new/util.h"
+#include "../include/new/util2.h"
 
 /*
 battle_start_turn_start.c
@@ -1095,8 +1103,8 @@ u8 moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
 		if (IsRaidBattle() && gBankAttacker == BANK_RAID_BOSS)
 		{
 			u8 split = SPLIT(gCurrentMove);
-			bool8 isBannedMove = CheckTableForMove(gCurrentMove, gRaidBattleBannedRaidMonMoves)
-							  || CheckTableForMove(gCurrentMove, gRaidBattleBannedMoves)
+			bool8 isBannedMove = gSpecialMoveFlags[gCurrentMove].gRaidBattleBannedRaidMonMoves
+							   || gSpecialMoveFlags[gCurrentMove].gRaidBattleBannedMoves
 							  || IsUnusableMove(gCurrentMove, gBankAttacker, 0xFF, 1, ABILITY(gBankAttacker), ITEM_EFFECT(gBankAttacker), CHOICED_MOVE(gBankAttacker));
 
 			if (isBannedMove && split != SPLIT_STATUS) //Use banned status move - don't use Max Guard
@@ -1272,13 +1280,13 @@ static void TrySetupRaidBossRepeatedAttack(u8 actionFuncId)
 {
 	if (IsRaidBattle() && gNewBS->dynamaxData.attackAgain && gNewBS->dynamaxData.repeatedAttacks < 2 && actionFuncId == ACTION_FINISHED)
 	{
-		u8 i, moveLimitations, viableMoves, curPos;
+		u8 i, moveLimitations, viableMoves;
 		gNewBS->dynamaxData.attackAgain = FALSE;
 
 		gBankAttacker = gBanksByTurnOrder[gCurrentTurnActionNumber - 1]; //Get original attacker
 
 		if (gBankAttacker != BANK_RAID_BOSS //Just in case the player KOs the partner and sets the bit
-		|| CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE, gBankAttacker, FOE(gBankAttacker)) == 0) //Don't attack again if no one left to hit
+			|| CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE, gBankAttacker, FOE(gBankAttacker)) == 0) //Don't attack again if no one left to hit
 			return;
 
 		moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
@@ -1301,13 +1309,7 @@ static void TrySetupRaidBossRepeatedAttack(u8 actionFuncId)
 		++gNewBS->dynamaxData.repeatedAttacks;
 		gCurrentActionFuncId = gActionsByTurnOrder[--gCurrentTurnActionNumber] = ACTION_USE_MOVE;
 
-		do
-		{
-			curPos = gBattleStruct->chosenMovePositions[gBankAttacker] = Random() & 3;
-			gCurrentMove = gBattleMons[gBankAttacker].moves[curPos]; //Choose a new move
-		} while (gCurrentMove == MOVE_NONE || (gBitTable[curPos] & moveLimitations));
-
-		gBattleStruct->moveTarget[gBankAttacker] = GetMoveTarget(gCurrentMove, FALSE);
+		PickRaidBossRepeatedMove(moveLimitations);
 
 		gHitMarker &= ~(HITMARKER_NO_ATTACKSTRING);
 		gHitMarker &= ~(HITMARKER_UNABLE_TO_USE_MOVE);

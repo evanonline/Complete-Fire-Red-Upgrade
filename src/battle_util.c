@@ -6,6 +6,8 @@
 #include "../include/constants/pokedex.h"
 
 #include "../include/new/ai_master.h"
+#include "../include/new/ability_tables.h"
+#include "../include/new/ability_util.h"
 #include "../include/new/battle_start_turn_start.h"
 #include "../include/new/battle_util.h"
 #include "../include/new/build_pokemon.h"
@@ -14,7 +16,11 @@
 #include "../include/new/frontier.h"
 #include "../include/new/item.h"
 #include "../include/new/mega.h"
+#include "../include/new/multi.h"
 #include "../include/new/move_tables.h"
+#include "../include/new/util2.h"
+//#include "../include/base_stats.h"
+#include "../include/new/multi.h"
 #include "../include/new/util.h"
 
 /*
@@ -259,17 +265,18 @@ bool8 CheckGrounding(u8 bank)
 		return GROUNDED;
 
 	else if ((gStatuses3[bank] & (STATUS3_LEVITATING | STATUS3_TELEKINESIS | STATUS3_IN_AIR))
-		   || ITEM_EFFECT(bank) == ITEM_EFFECT_AIR_BALLOON
-		   || ABILITY(bank) == ABILITY_LEVITATE
-		   || gBattleMons[bank].type3 == TYPE_FLYING
-		   || gBattleMons[bank].type1 == TYPE_FLYING
-		   || gBattleMons[bank].type2 == TYPE_FLYING)
-				return IN_AIR;
+	|| ITEM_EFFECT(bank) == ITEM_EFFECT_AIR_BALLOON
+	|| ABILITY(bank) == ABILITY_LEVITATE
+	|| IsFloatingWithMagnetism(bank)
+	|| gBattleMons[bank].type3 == TYPE_FLYING
+	|| gBattleMons[bank].type1 == TYPE_FLYING
+	|| gBattleMons[bank].type2 == TYPE_FLYING)
+		return IN_AIR;
 
 	return GROUNDED;
 }
 
-bool8 NonInvasiveCheckGrounding(u8 bank)
+bool8 NonInvasiveCheckGrounding(u8 bank, u8 defAbility, u8 defType1, u8 defType2, u8 defType3)
 {
 	if (BATTLER_SEMI_INVULNERABLE(bank)) //Apparently a thing
 		return IN_AIR;
@@ -280,17 +287,18 @@ bool8 NonInvasiveCheckGrounding(u8 bank)
 		return GROUNDED;
 
 	else if ((gStatuses3[bank] & (STATUS3_LEVITATING | STATUS3_TELEKINESIS | STATUS3_IN_AIR))
-		   || GetRecordedItemEffect(bank) == ITEM_EFFECT_AIR_BALLOON
-		   || GetRecordedAbility(bank) == ABILITY_LEVITATE
-		   || gBattleMons[bank].type3 == TYPE_FLYING
-		   || gBattleMons[bank].type1 == TYPE_FLYING
-		   || gBattleMons[bank].type2 == TYPE_FLYING)
-				return IN_AIR;
+   || GetRecordedItemEffect(bank) == ITEM_EFFECT_AIR_BALLOON
+   || IsFloatingWithMagnetism(bank)
+   || defAbility == ABILITY_LEVITATE
+   || defType1 == TYPE_FLYING
+   || defType2 == TYPE_FLYING
+   || defType3 == TYPE_FLYING)
+		return IN_AIR;
 
 	return GROUNDED;
 }
 
-bool8 CheckGroundingFromPartyData(struct Pokemon* mon)
+bool8 CheckMonGrounding(struct Pokemon* mon)
 {
 	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
 	u16 item = GetMonData(mon, MON_DATA_HELD_ITEM, NULL);
@@ -299,11 +307,42 @@ bool8 CheckGroundingFromPartyData(struct Pokemon* mon)
 	|| (ItemId_GetHoldEffect(item) == ITEM_EFFECT_IRON_BALL && GetMonAbility(mon) != ABILITY_KLUTZ))
 		return GROUNDED;
 
-	else if  (GetMonAbility(mon) == ABILITY_LEVITATE
-		|| gBaseStats[species].type1 == TYPE_FLYING
-		|| gBaseStats[species].type2 == TYPE_FLYING)
-			return IN_AIR;
+	else if (GetMonAbility(mon) == ABILITY_LEVITATE
+	|| IsMonFloatingWithMagnetism(mon)
+	|| gBaseStats[species].type1 == TYPE_FLYING
+	|| gBaseStats[species].type2 == TYPE_FLYING)
+		return IN_AIR;
+
 	return GROUNDED;
+}
+
+bool8 ItemEffectPreventsHazards(u8 itemEffect)
+{
+	return itemEffect == ITEM_EFFECT_HEAVY_DUTY_BOOTS;
+}
+
+bool8 CheckGroundingByDetails(u16 species, u16 item, u8 ability)
+{
+	if (ability != ABILITY_KLUTZ && ItemId_GetHoldEffect(item) == ITEM_EFFECT_IRON_BALL)
+		return GROUNDED;
+	else if (ability == ABILITY_LEVITATE
+	|| gBaseStats[species].type1 == TYPE_FLYING
+	|| gBaseStats[species].type2 == TYPE_FLYING)
+		return IN_AIR;
+
+	return GROUNDED;
+}
+
+bool8 IsFloatingWithMagnetism(u8 bank)
+{
+	return IsMagnetRiseBattle()
+		&& (IsOfType(bank, TYPE_ELECTRIC) || IsOfType(bank, TYPE_STEEL));
+}
+
+bool8 IsMonFloatingWithMagnetism(unusedArg struct Pokemon* mon)
+{
+	return IsMagnetRiseBattle()
+		&& (IsMonOfType(mon, TYPE_ELECTRIC) || IsMonOfType(mon, TYPE_STEEL));
 }
 
 u8 ViableMonCountFromBank(u8 bank)
@@ -351,24 +390,45 @@ bool8 HasMonToSwitchTo(u8 bank)
 	return i != lastMonId;
 }
 
-bool8 CheckContact(u16 move, u8 bank)
+bool8 CheckContact(u16 move, u8 bankAtk, unusedArg u8 bankDef)
 {
-	if (!(gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
-	|| ITEM_EFFECT(bank) == ITEM_EFFECT_PROTECTIVE_PADS
-	|| ABILITY(bank) == ABILITY_LONGREACH)
-		return FALSE;
-
-	return TRUE;
+	return gBattleMoves[move].flags & FLAG_MAKES_CONTACT
+		&& !CanNeverMakeContact(bankAtk);
 }
 
 bool8 CheckContactByMon(u16 move, struct Pokemon* mon)
 {
-	if (!(gBattleMoves[move].flags & FLAG_MAKES_CONTACT)
-	|| GetMonItemEffect(mon) == ITEM_EFFECT_PROTECTIVE_PADS
-	|| GetMonAbility(mon) == ABILITY_LONGREACH)
-		return FALSE;
+	return gBattleMoves[move].flags & FLAG_MAKES_CONTACT
+		&& !CanMonNeverMakeContact(mon);
+}
 
-	return TRUE;
+bool8 IsContactMove(u16 move, u8 bankAtk, u8 bankDef)
+{
+	if (move == MOVE_SHELLSIDEARM && bankAtk != bankDef)
+		return gNewBS->shellSideArmSplit[bankAtk][bankDef] == SPLIT_PHYSICAL; //Calculated in advance
+	else
+		return gBattleMoves[move].flags & FLAG_MAKES_CONTACT;
+}
+
+bool8 CanNeverMakeContact(u8 bank)
+{
+	return CanNeverMakeContactByAbilityItemEffect(ABILITY(bank), ITEM_EFFECT(bank));
+}
+
+bool8 CanMonNeverMakeContact(struct Pokemon* mon)
+{
+	return CanNeverMakeContactByAbilityItemEffect(GetMonAbility(mon), GetMonItemEffect(mon));
+}
+
+bool8 CanNeverMakeContactByAbilityItemEffect(u8 ability, u8 itemEffect)
+{
+	return ability == ABILITY_LONGREACH
+		|| itemEffect == ITEM_EFFECT_PROTECTIVE_PADS;
+}
+
+bool8 CanNeverMakeContactByItemEffect(u8 itemEffect)
+{
+	return itemEffect == ITEM_EFFECT_PROTECTIVE_PADS;
 }
 
 bool8 CheckHealingMove(move_t move)
@@ -378,12 +438,12 @@ bool8 CheckHealingMove(move_t move)
 
 bool8 CheckSoundMove(move_t move)
 {
-	return CheckTableForMove(move, gSoundMoves);
+	return gSpecialMoveFlags[move].gSoundMoves;
 }
 
 bool8 SheerForceCheck(void)
 {
-	return ABILITY(gBankAttacker) == ABILITY_SHEERFORCE && CheckTableForMove(gCurrentMove, gSheerForceBoostedMoves);
+	return ABILITY(gBankAttacker) == ABILITY_SHEERFORCE && gSpecialMoveFlags[gCurrentMove].gSheerForceBoostedMoves;
 }
 
 bool8 IsOfType(u8 bank, u8 type)
@@ -545,6 +605,10 @@ u8 CheckMoveLimitations(u8 bank, u8 unusableMoves, u8 check)
 	return unusableMoves;
 }
 
+//MOVE_LIMITATION_ENCORE is checked only when every other limitation is checked
+//MOVE_LIMITATION_DISABLED is checked specifically for Sleep Talk
+//MOVE_LIMITATION_TAUNT is checked for status Dynamax moves
+//Otherwise, limitations are checked all together
 bool8 IsUnusableMove(u16 move, u8 bank, u8 check, u8 pp, u8 ability, u8 holdEffect, u16 choicedMove)
 {
 	bool8 isMaxMove = IsAnyMaxMove(move);
@@ -564,30 +628,29 @@ bool8 IsUnusableMove(u16 move, u8 bank, u8 check, u8 pp, u8 ability, u8 holdEffe
 	else if (gDisableStructs[bank].encoreTimer && gDisableStructs[bank].encoredMove != move && check & MOVE_LIMITATION_ENCORE)
 		return TRUE;
 	else if (!isMaxMove
-		 && (holdEffect == ITEM_EFFECT_CHOICE_BAND || ability == ABILITY_GORILLATACTICS)
+		 && IsChoiceItemEffectOrAbility(holdEffect, ability)
 		 && choicedMove != 0 && choicedMove != 0xFFFF && choicedMove != move
 		 && check & MOVE_LIMITATION_CHOICE)
 	{
 		return TRUE;
 	}
-	else if (holdEffect == ITEM_EFFECT_ASSAULT_VEST && SPLIT(move) == SPLIT_STATUS)
+	else if (holdEffect == ITEM_EFFECT_ASSAULT_VEST && IsMoveBannedByAssaultVest(move) && check & MOVE_LIMITATION_TAUNT)
 		return TRUE;
 	#ifdef FLAG_SKY_BATTLE
-	else if (FlagGet(FLAG_SKY_BATTLE) && CheckTableForMove(move, gSkyBattleBannedMoves))
+	else if (gSpecialMoveFlags[move].gSkyBattleBannedMoves && FlagGet(FLAG_SKY_BATTLE) && check & MOVE_LIMITATION_ENCORE)
 		return TRUE;
 	#endif
-	else if (IsGravityActive() && CheckTableForMove(move, gGravityBannedMoves))
+	else if (gSpecialMoveFlags[move].gGravityBannedMoves && IsGravityActive() && check & MOVE_LIMITATION_DISABLED)
 		return TRUE;
-	else if (CantUseSoundMoves(bank) && CheckSoundMove(move))
+	else if (CheckSoundMove(move) && CantUseSoundMoves(bank) && check & MOVE_LIMITATION_DISABLED)
 		return TRUE;
-	else if (IsHealBlocked(bank) && CheckHealingMove(move))
+	else if (CheckHealingMove(move) && IsHealBlocked(bank) && check & MOVE_LIMITATION_DISABLED)
 		return TRUE;
-	else if (IsRaidBattle() && bank != BANK_RAID_BOSS && CheckTableForMove(move, gRaidBattleBannedMoves))
+	else if (IsRaidBattle() && bank != BANK_RAID_BOSS && gSpecialMoveFlags[move].gRaidBattleBannedMoves && check & MOVE_LIMITATION_ENCORE)
 		return TRUE;
 
 	return FALSE;
 }
-
 u8 CheckMoveLimitationsFromParty(struct Pokemon* mon, u8 unusableMoves, u8 check)
 {
 	u8 holdEffect = GetMonItemEffect(mon);
@@ -600,15 +663,15 @@ u8 CheckMoveLimitationsFromParty(struct Pokemon* mon, u8 unusableMoves, u8 check
 			unusableMoves |= gBitTable[i];
 		else if (GetMonData(mon, MON_DATA_PP1 + i, NULL) == 0 && check & MOVE_LIMITATION_PP)
 			unusableMoves |= gBitTable[i];
-		else if (holdEffect == ITEM_EFFECT_ASSAULT_VEST && SPLIT(move) == SPLIT_STATUS)
+		else if (holdEffect == ITEM_EFFECT_ASSAULT_VEST && IsMoveBannedByAssaultVest(move))
 			unusableMoves |= gBitTable[i];
 		#ifdef FLAG_SKY_BATTLE
-		else if (FlagGet(FLAG_SKY_BATTLE) && CheckTableForMove(move, gSkyBattleBannedMoves))
+		else if (check & MOVE_LIMITATION_ENCORE && FlagGet(FLAG_SKY_BATTLE) && gSpecialMoveFlags[move].gSkyBattleBannedMoves)
 			unusableMoves |= gBitTable[i];
 		#endif
-		else if (IsGravityActive() && CheckTableForMove(move, gGravityBannedMoves))
+		else if (check & MOVE_LIMITATION_DISABLED && IsGravityActive() && gSpecialMoveFlags[move].gGravityBannedMoves)
 			unusableMoves |= gBitTable[i];
-		else if (IsRaidBattle() && CheckTableForMove(move, gRaidBattleBannedMoves))
+		else if (check & MOVE_LIMITATION_ENCORE && IsRaidBattle() && gSpecialMoveFlags[move].gRaidBattleBannedMoves)
 			unusableMoves |= gBitTable[i];
 	}
 
@@ -1156,7 +1219,7 @@ bool8 MoveIgnoresSubstitutes(u16 move, u8 atkAbility)
 {
 	return CheckSoundMove(move)
 		|| (atkAbility == ABILITY_INFILTRATOR && move != MOVE_TRANSFORM && move != MOVE_SKYDROP)
-		|| CheckTableForMove(move, gSubstituteBypassMoves);
+		|| gSpecialMoveFlags[move].gSubstituteBypassMoves;
 }
 
 bool8 MoveBlockedBySubstitute(u16 move, u8 bankAtk, u8 bankDef)
@@ -1183,7 +1246,7 @@ bool8 IsMoveAffectedByParentalBond(u16 move, u8 bankAtk)
 {
 	if (SPLIT(move) != SPLIT_STATUS
 	&& !IsAnyMaxMove(move)
-	&& !CheckTableForMove(move, gParentalBondBannedMoves)
+	&& !gSpecialMoveFlags[move].gParentalBondBannedMoves
 	&& !IsTwoTurnsMove(move)
 	&& gBattleMoves[move].effect != EFFECT_0HKO
 	&& gBattleMoves[move].effect != EFFECT_MULTI_HIT
@@ -1210,24 +1273,26 @@ bool8 IsMoveAffectedByParentalBond(u16 move, u8 bankAtk)
 	return FALSE;
 }
 
-u8 CalcMoveSplit(u8 bank, u16 move)
+u8 CalcMoveSplit(u16 move, u8 bankAtk, u8 bankDef)
 {
-	if (CheckTableForMove(move, gMovesThatChangePhysicality)
+	if (gSpecialMoveFlags[move].gMovesThatChangePhysicality
 	&&  SPLIT(move) != SPLIT_STATUS)
 	{
-		u32 attack = gBattleMons[bank].attack;
-		u32 spAttack = gBattleMons[bank].spAttack;
-
-		attack = attack * gStatStageRatios[STAT_STAGE(bank, STAT_STAGE_ATK)][0];
-		attack = udivsi(attack, gStatStageRatios[STAT_STAGE(bank, STAT_STAGE_ATK)][1]);
-
-		spAttack = spAttack * gStatStageRatios[STAT_STAGE(bank, STAT_STAGE_SPATK)][0];
-		spAttack = udivsi(spAttack, gStatStageRatios[STAT_STAGE(bank, STAT_STAGE_SPATK)][1]);
+		u32 attack = gBattleMons[bankAtk].attack;
+		u32 spAttack = gBattleMons[bankAtk].spAttack;
+		
+		APPLY_QUICK_STAT_MOD(attack, STAT_STAGE(bankAtk, STAT_STAGE_ATK));
+		APPLY_QUICK_STAT_MOD(spAttack, STAT_STAGE(bankAtk, STAT_STAGE_SPATK));
 
 		if (spAttack >= attack)
 			return SPLIT_SPECIAL;
 		else
 			return SPLIT_PHYSICAL;
+	}
+	else if (move == MOVE_SHELLSIDEARM
+	&& bankAtk != bankDef) //Indicator to just use the base physicality
+	{
+		return gNewBS->shellSideArmSplit[bankAtk][bankDef];
 	}
 
 	#ifdef OLD_MOVE_SPLIT
@@ -1240,9 +1305,9 @@ u8 CalcMoveSplit(u8 bank, u16 move)
 	#endif
 }
 
-u8 CalcMoveSplitFromParty(struct Pokemon* mon, u16 move)
+u8 CalcMoveSplitFromParty(u16 move, struct Pokemon* mon)
 {
-	if (CheckTableForMove(move, gMovesThatChangePhysicality))
+	if (gSpecialMoveFlags[move].gMovesThatChangePhysicality)
 	{
 		if (mon->spAttack >= mon->attack)
 			return SPLIT_SPECIAL;
@@ -1398,6 +1463,194 @@ void RemoveScreensFromSide(const u8 side)
 	gNewBS->AuroraVeilTimers[side] = 0;
 }
 
+void UpdateQuickClawRandomNumber(u8 bank)
+{
+	gNewBS->quickClawRandomNumber[bank] = ((u32) Random32()) % 100;
+	gNewBS->quickDrawRandomNumber[bank] = ((u32) Random32()) % 100;
+}
+
+void GiveOmniboost(u8 bank)
+{
+	u32 i;
+
+	for (i = STAT_STAGE_ATK; i <= STAT_STAGE_SPDEF; ++i)
+	{
+		if (STAT_STAGE(bank, i) < STAT_STAGE_MAX)
+			++STAT_STAGE(bank, i);
+	}
+}
+
+bool8 WillPoltergeistFail(u16 item, u8 ability)
+{
+	return item == ITEM_NONE
+		|| ability == ABILITY_KLUTZ
+		|| IsMagicRoomActive();
+}
+
+bool8 WillSyncronoiseFail(u8 bankAtk, u8 bankDef)
+{
+	u8 atkType1 = gBattleMons[bankAtk].type1;
+	u8 atkType2 = gBattleMons[bankAtk].type2;
+	u8 atkType3 = gBattleMons[bankAtk].type3;
+
+	u8 defType1 = gBattleMons[bankDef].type1;
+	u8 defType2 = gBattleMons[bankDef].type2;
+	u8 defType3 = gBattleMons[bankDef].type3;
+
+	u8 defItemEffect = ITEM_EFFECT(bankDef);
+
+	return WillSyncronoiseFailByAttackerTypesAnd3DefTypesAndItemEffect(atkType1, atkType2, atkType3, defType1, defType2, defType3, defItemEffect);
+}
+
+bool8 WillSyncronoiseFailByAttackerTypesAndBank(u8 atkType1, u8 atkType2, u8 atkType3, u8 bankDef)
+{
+	u8 defType1 = gBattleMons[bankDef].type1;
+	u8 defType2 = gBattleMons[bankDef].type2;
+	u8 defType3 = gBattleMons[bankDef].type3;
+
+	u8 defItemEffect = ITEM_EFFECT(bankDef);
+
+	return WillSyncronoiseFailByAttackerTypesAnd3DefTypesAndItemEffect(atkType1, atkType2, atkType3, defType1, defType2, defType3, defItemEffect);
+}
+
+bool8 WillSyncronoiseFailByAttackerAnd3DefTypesAndItemEffect(u8 bankAtk, u8 defType1, u8 defType2, u8 defType3, u8 defItemEffect)
+{
+	u8 atkType1 = gBattleMons[bankAtk].type1;
+	u8 atkType2 = gBattleMons[bankAtk].type2;
+	u8 atkType3 = gBattleMons[bankAtk].type3;
+
+	return WillSyncronoiseFailByAttackerTypesAnd3DefTypesAndItemEffect(atkType1, atkType2, atkType3, defType1, defType2, defType3, defItemEffect);
+}
+
+bool8 WillSyncronoiseFailByAttackerTypesAnd2DefTypesAndItemEffect(u8 atkType1, u8 atkType2, u8 atkType3, u8 defType1, u8 defType2, u8 defItemEffect)
+{
+	return WillSyncronoiseFailByAttackerTypesAnd3DefTypesAndItemEffect(atkType1, atkType2, atkType3, defType1, defType2, TYPE_BLANK, defItemEffect);
+}
+
+bool8 WillSyncronoiseFailByAttackerTypesAnd3DefTypesAndItemEffect(u8 atkType1, u8 atkType2, u8 atkType3, u8 defType1, u8 defType2, u8 defType3, u8 defItemEffect)
+{
+	if (defItemEffect == ITEM_EFFECT_RING_TARGET)
+		return FALSE;
+
+	if (!IS_BLANK_TYPE(atkType1))
+	{
+		if (atkType1 == defType1
+		||  atkType1 == defType2
+		||  atkType1 == defType3)
+			return FALSE; //No fail
+	}
+
+	if (!IS_BLANK_TYPE(atkType2))
+	{
+		if (atkType2 == defType1
+		||  atkType2 == defType2
+		||  atkType2 == defType3)
+			return FALSE; //No fail
+	}
+
+	if (!IS_BLANK_TYPE(atkType3))
+	{
+		if (atkType3 == defType1
+		||  atkType3 == defType2
+		||  atkType3 == defType3)
+			return FALSE; //No fail
+	}
+
+	return TRUE; //No type in common so fail
+}
+
+bool8 IsAffectedByElectricTerrain(u8 bank)
+{
+	return CheckGrounding(bank) || IsFloatingWithMagnetism(bank); //Draws Electric Terrain up to it when floating with electromagnetism
+}
+
+bool8 IsMonAffectedByElectricTerrain(struct Pokemon* mon)
+{
+	return CheckMonGrounding(mon) || IsMonFloatingWithMagnetism(mon);
+}
+
+bool8 WeatherHasEffect(void)
+{
+	u32 i;
+
+	for (i = 0; i < gBattlersCount; ++i)
+	{
+		u8 ability = ABILITY(i);
+
+		if ((ability == ABILITY_CLOUDNINE || ability == ABILITY_AIRLOCK)
+		&& BATTLER_ALIVE(i))
+			return FALSE;
+	}
+
+	return TRUE;
+}
+
+bool8 ItemEffectIgnoresSunAndRain(u8 itemEffect)
+{
+	return itemEffect == ITEM_EFFECT_UTILITY_UMBRELLA;
+}
+
+bool8 IgnoresSunAndRain(u8 bank)
+{
+	return ItemEffectIgnoresSunAndRain(ITEM_EFFECT(bank));
+}
+
+bool8 AffectedBySun(u8 bank)
+{
+	return !IgnoresSunAndRain(bank);
+}
+
+bool8 AffectedByRain(u8 bank)
+{
+	return !IgnoresSunAndRain(bank);
+}
+
+
+bool8 IsChoiceAbility(u8 ability)
+{
+	return ability == ABILITY_GORILLATACTICS;
+}
+
+bool8 IsChoiceItemEffectOrAbility(u8 itemEffect, u8 ability)
+{
+	return itemEffect == ITEM_EFFECT_CHOICE_BAND || IsChoiceAbility(ability);
+}
+
+u8 GetImposterBank(u8 bank)
+{
+	u8 transformBank;
+
+	if (IS_SINGLE_BATTLE)
+		transformBank = FOE(bank);
+	else if (IsRaidBattle())
+	{
+		if (SIDE(bank) == B_SIDE_PLAYER)
+			transformBank = BANK_RAID_BOSS;
+		else //Raid boss always transforms into player's Pokemon
+			transformBank = GetBattlerAtPosition(B_POSITION_PLAYER_LEFT);
+	}
+	else //Standard double battle
+		transformBank = GetBattlerAtPosition(PARTNER(BATTLE_OPPOSITE(GetBattlerPosition(bank)))); //Directly in front of in doubles
+
+	return transformBank;
+}
+
+bool8 ImposterWorks(u8 bankAtk, bool8 checkingMonAtk) //bankAtk here is mainly used for the battle slot
+{
+	u8 targetBank = GetImposterBank(bankAtk);
+
+	return BATTLER_ALIVE(targetBank)
+		&& !(gBattleMons[targetBank].status2 & (STATUS2_TRANSFORMED | STATUS2_SUBSTITUTE))
+		&& !(gStatuses3[targetBank] & (STATUS3_SEMI_INVULNERABLE | STATUS3_ILLUSION))
+		&& (checkingMonAtk || !IS_TRANSFORMED(bankAtk)) //Obviously a party mon can't be transformed
+		#ifdef UNBOUND
+		&& SPECIES(targetBank) != SPECIES_SHADOW_WARRIOR
+		&& (SPECIES(targetBank) < SPECIES_CELEBI || SPECIES(targetBank) > SPECIES_TREECKO) //Those Pokemon in between are used for Fakemon bosses
+		#endif
+		&& !HasRaidShields(targetBank)
+		&& !ABILITY_ON_FIELD(ABILITY_NEUTRALIZINGGAS);
+}
+
 void ClearBankStatus(u8 bank)
 {
 	if (gBattleMons[bank].status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
@@ -1416,6 +1669,38 @@ void ClearBankStatus(u8 bank)
 	gActiveBattler = bank;
 	EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[bank].status1);
 	MarkBufferBankForExecution(gActiveBattler);
+}
+
+bool8 IsSleepClauseInEffect(unusedArg u8 bankToPutToSleep)
+{
+	if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+	{
+		switch (VarGet(VAR_BATTLE_FACILITY_TIER))
+		{
+			case BATTLE_FACILITY_OU:
+			case BATTLE_FACILITY_UBER:
+			case BATTLE_FACILITY_LITTLE_CUP:
+			case BATTLE_FACILITY_MONOTYPE:
+			case BATTLE_FACILITY_CAMOMONS:
+			case BATTLE_FACILITY_UBER_CAMOMONS:
+			case BATTLE_FACILITY_LC_CAMOMONS:
+			case BATTLE_FACILITY_SCALEMONS:
+			case BATTLE_FACILITY_350_CUP:
+			case BATTLE_FACILITY_AVERAGE_MONS:
+			case BATTLE_FACILITY_BENJAMIN_BUTTERFREE:
+			case BATTLE_FACILITY_NATIONAL_DEX_OU:
+				return TRUE;
+		}
+	}
+	#ifdef VAR_GAME_DIFFICULTY
+	else if (VarGet(VAR_GAME_DIFFICULTY) >= OPTIONS_EXPERT_DIFFICULTY && !FlagGet(FLAG_SYS_GAME_CLEAR)) //Insane before game cleared
+	{
+		if (SIDE(bankToPutToSleep) == B_SIDE_OPPONENT) //Bank to be put to sleep
+			return TRUE; //Only player is affected by the sleep clause
+	}
+	#endif
+
+	return FALSE;
 }
 
 bool8 DoesSleepClausePrevent(u8 bank)
@@ -1451,118 +1736,243 @@ bool8 DoesSleepClausePrevent(u8 bank)
 	return FALSE;
 }
 
-bool8 CanBeGeneralStatused(u8 bank, bool8 checkFlowerVeil)
+static bool8 CanBeGeneralStatused(u8 bankDef, u8 defAbility, u8 atkAbility, bool8 checkFlowerVeil)
 {
-	#ifdef SPECIES_MINIOR_SHIELD
-	if (ABILITY(bank) == ABILITY_SHIELDSDOWN
-	&&  GetBankPartyData(bank)->species == SPECIES_MINIOR_SHIELD) //Prevents Ditto from getting this benefit
-		return FALSE;
-	#endif
-
-	switch (ABILITY(bank)) {
-		case ABILITY_COMATOSE:
-			return FALSE;
-
-		case ABILITY_LEAFGUARD:
-			if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY && ITEM_EFFECT(bank) != ITEM_EFFECT_UTILITY_UMBRELLA)
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_COMATOSE:
 				return FALSE;
-			break;
 
-		case ABILITY_FLOWERVEIL:
-			if (checkFlowerVeil && IsOfType(bank, TYPE_GRASS))
-				return FALSE;
+			case ABILITY_LEAFGUARD:
+				if (gBattleWeather & WEATHER_SUN_ANY && WEATHER_HAS_EFFECT && ITEM_EFFECT(bankDef) != ITEM_EFFECT_UTILITY_UMBRELLA)
+					return FALSE;
+				break;
+
+			case ABILITY_FLOWERVEIL:
+				if (checkFlowerVeil && IsOfType(bankDef, TYPE_GRASS))
+					return FALSE;
+				break;
+
+			#ifdef SPECIES_MINIOR_SHIELD
+			case ABILITY_SHIELDSDOWN:
+				if (GetBankPartyData(bankDef)->species == SPECIES_MINIOR_SHIELD) //Prevents Ditto from getting this benefit
+					return FALSE;
+				break;
+			#endif
+		}
 	}
 
-	if (checkFlowerVeil && ABILITY(PARTNER(bank)) == ABILITY_FLOWERVEIL && IsOfType(bank, TYPE_GRASS) && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+	if (checkFlowerVeil
+	&& IS_DOUBLE_BATTLE
+	&& ABILITY(PARTNER(bankDef)) == ABILITY_FLOWERVEIL //Check target partner Flower Veil
+	&& IsOfType(bankDef, TYPE_GRASS)
+	&& !IsTargetAbilityIgnoredNoMove(ABILITY_FLOWERVEIL, atkAbility)
+	&& !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+		return FALSE;
+
+	if (gTerrainType == MISTY_TERRAIN && CheckGrounding(bankDef))
+		return FALSE;
+
+	if (gBattleMons[bankDef].status1 != STATUS1_NONE)
+		return FALSE;
+
+	if (checkFlowerVeil && BankSideHasSafeguard(bankDef) && !BypassesScreens(atkAbility) && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+		return FALSE;
+
+	return TRUE;
+}
+
+bool8 CanBePutToSleep(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
+{
+	u8 atkAbility = ABILITY(bankAtk);
+	u8 defAbility = ABILITY(bankDef);
+
+	if (!CanBeGeneralStatused(bankDef, defAbility, atkAbility, checkFlowerVeil))
+		return FALSE;
+
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_INSOMNIA:
+			//#ifdef ABILITY_VITALSPIRIT
+			//case ABILITY_VITALSPIRIT:
+			//#endif
+			case ABILITY_SWEETVEIL:
+				if(!SpeciesHasPastelVeil(SPECIES(bankDef)))
+					return FALSE;
+		}
+	}
+
+	if (gTerrainType == ELECTRIC_TERRAIN && IsAffectedByElectricTerrain(bankDef))
+		return FALSE;
+
+	if (IS_DOUBLE_BATTLE && ABILITY(PARTNER(bankDef)) == ABILITY_SWEETVEIL && !IsTargetAbilityIgnoredNoMove(ABILITY_SWEETVEIL, atkAbility) && !SpeciesHasPastelVeil(SPECIES(PARTNER(bankDef))))
+		return FALSE;
+
+	if (DoesSleepClausePrevent(bankDef))
+		return FALSE;
+
+	if (IsUproarBeingMade())
+		return FALSE;
+
+	return TRUE;
+}
+
+bool8 CanBeYawned(u8 bankDef, u8 bankAtk)
+{
+	if (gTerrainType == ELECTRIC_TERRAIN && IsAffectedByElectricTerrain(bankDef))
+		return FALSE;
+
+	if (gBattleMons[bankDef].status1 != STATUS1_NONE)
+		return FALSE;
+
+	if (!(gStatuses3[bankDef] & STATUS3_YAWN))
+		return FALSE;
+
+	u8 atkAbility = ABILITY(bankAtk);
+	if (BankSideHasSafeguard(bankDef) && !BypassesScreens(atkAbility) && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+		return FALSE;
+
+	u8 defAbility = ABILITY(bankDef);
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_INSOMNIA:
+			//#ifdef ABILITY_VITALSPIRIT
+			//case ABILITY_VITALSPIRIT:
+			//#endif
+			case ABILITY_SWEETVEIL:
+				if (!SpeciesHasPastelVeil(SPECIES(bankDef)))
+					return FALSE;
+				break;
+			case ABILITY_COMATOSE:
+				return FALSE;
+			case ABILITY_LEAFGUARD:
+				if (gBattleWeather & WEATHER_SUN_ANY && WEATHER_HAS_EFFECT && ITEM_EFFECT(bankDef) != ITEM_EFFECT_UTILITY_UMBRELLA)
+					return FALSE;
+				break;
+			case ABILITY_FLOWERVEIL:
+				if (IsOfType(bankDef, TYPE_GRASS))
+					return FALSE;
+				break;
+			#ifdef SPECIES_MINIOR_SHIELD
+			case ABILITY_SHIELDSDOWN:
+				if (GetBankPartyData(bankDef)->species == SPECIES_MINIOR_SHIELD) //Prevents Ditto from getting this benefit
+					return FALSE;
+				break;
+			#endif
+		}
+	}
+
+	if (IS_DOUBLE_BATTLE)
+	{
+		u8 defPartnerAbility = ABILITY(PARTNER(bankDef));
+
+		if (!IsTargetAbilityIgnoredNoMove(defPartnerAbility, atkAbility)) //Target partner's Ability is not ignored
+		{
+			switch (defPartnerAbility) {
+				case ABILITY_SWEETVEIL:
+					if (!SpeciesHasPastelVeil(SPECIES(bankDef)))
+						return TRUE;
+					break;
+				case ABILITY_FLOWERVEIL:
+					if (IsOfType(bankDef, TYPE_GRASS) && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+						return TRUE;
+					break;
+			}
+		}
+	}
+
+	return TRUE;
+}
+
+bool8 CanRest(u8 bank)
+{
+	if (BATTLER_MAX_HP(bank))
+		return FALSE;
+
+	if (gTerrainType == ELECTRIC_TERRAIN && IsAffectedByElectricTerrain(bank))
 		return FALSE;
 
 	if (gTerrainType == MISTY_TERRAIN && CheckGrounding(bank))
 		return FALSE;
 
-	if (gBattleMons[bank].status1 != STATUS1_NONE)
-		return FALSE;
-
-	if (checkFlowerVeil && gSideStatuses[SIDE(bank)] & SIDE_STATUS_SAFEGUARD && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
-		return FALSE;
-
-	return TRUE;
-}
-
-bool8 CanBePutToSleep(u8 bank, bool8 checkFlowerVeil)
-{
-	if (!CanBeGeneralStatused(bank, checkFlowerVeil))
-		return FALSE;
-
-	switch (ABILITY(bank)) {
-		case ABILITY_INSOMNIA:
-		//case ABILITY_VITALSPIRIT:
-		case ABILITY_SWEETVEIL:
-			return FALSE;
-	}
-
-	if (gTerrainType == ELECTRIC_TERRAIN && CheckGrounding(bank))
+	if (gBattleMons[bank].status1 & STATUS1_SLEEP)
 		return FALSE;
 
 	if (DoesSleepClausePrevent(bank))
 		return FALSE;
 
-	return TRUE;
-}
-
-bool8 CanBeYawned(u8 bank)
-{
-	#ifdef SPECIES_MINIOR_SHIELD
-	if (ABILITY(bank) == ABILITY_SHIELDSDOWN
-	&&  GetBankPartyData(bank)->species == SPECIES_MINIOR_SHIELD) //Prevents Ditto from getting this benefit
-		return FALSE;
-	#endif
-
-	if (ABILITY(PARTNER(bank)) == ABILITY_FLOWERVEIL && IsOfType(bank, TYPE_GRASS) && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
+	if (IsUproarBeingMade())
 		return FALSE;
 
-	if (gTerrainType == ELECTRIC_TERRAIN && CheckGrounding(bank))
-		return FALSE;
-
-	if (gBattleMons[bank].status1 != STATUS1_NONE)
-		return FALSE;
-
-	if (gSideStatuses[SIDE(bank)] & SIDE_STATUS_SAFEGUARD && !(gHitMarker & HITMARKER_IGNORE_SAFEGUARD))
-		return FALSE;
+	if (IS_DOUBLE_BATTLE)
+	{
+		switch (ABILITY(PARTNER(bank))) {
+			case ABILITY_SWEETVEIL:
+				if (!SpeciesHasPastelVeil(SPECIES(bank)))
+					return TRUE;
+				break;
+			case ABILITY_FLOWERVEIL:
+				if (IsOfType(bank, TYPE_GRASS))
+					return TRUE;
+				break;
+		}
+	}
 
 	switch (ABILITY(bank)) {
 		case ABILITY_INSOMNIA:
 		//case ABILITY_VITALSPIRIT:
-		case ABILITY_SWEETVEIL:
 		case ABILITY_COMATOSE:
 			return FALSE;
+		case ABILITY_SWEETVEIL:
+			if (!SpeciesHasPastelVeil(SPECIES(bank)))
+				return FALSE;
+			break;
 		case ABILITY_LEAFGUARD:
-			if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY && ITEM_EFFECT(bank) != ITEM_EFFECT_UTILITY_UMBRELLA)
+			if (gBattleWeather & WEATHER_SUN_ANY && WEATHER_HAS_EFFECT && ITEM_EFFECT(bank) != ITEM_EFFECT_UTILITY_UMBRELLA)
 				return FALSE;
 			break;
 		case ABILITY_FLOWERVEIL:
 			if (IsOfType(bank, TYPE_GRASS))
 				return FALSE;
 			break;
+		#ifdef SPECIES_MINIOR_SHIELD
+		case ABILITY_SHIELDSDOWN:
+			if (GetBankPartyData(bank)->species == SPECIES_MINIOR_SHIELD) //Prevents Ditto from getting this benefit
+				return FALSE;
+			break;
+		#endif
 	}
 
 	return TRUE;
 }
 
+
 bool8 CanBePoisoned(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 {
-	if (!CanBeGeneralStatused(bankDef, checkFlowerVeil))
+	u8 atkAbility = (bankAtk > gBattlersCount) ? 0 : ABILITY(bankAtk); //bankAtk == 0xFF means no attacker - eg. Toxic Spikes
+	u8 defAbility = ABILITY(bankDef);
+
+	if (!CanBeGeneralStatused(bankDef, defAbility, atkAbility, checkFlowerVeil))
 		return FALSE;
 
-	switch (ABILITY(bankDef)) {
-		case ABILITY_IMMUNITY:
-		case ABILITY_PASTELVEIL:
-			return FALSE;
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_IMMUNITY:
+				return FALSE;
+			case ABILITY_SWEETVEIL:
+				if(SpeciesHasPastelVeil(SPECIES(bankDef)))
+					return FALSE;
+		}
 	}
 
-	if (IS_DOUBLE_BATTLE && ABILITY(PARTNER(bankDef)) == ABILITY_PASTELVEIL)
+	if (IS_DOUBLE_BATTLE && ABILITY(PARTNER(bankDef)) == ABILITY_SWEETVEIL && SpeciesHasPastelVeil(SPECIES(PARTNER(bankDef))) && !IsTargetAbilityIgnoredNoMove(ABILITY_SWEETVEIL, atkAbility))
 		return FALSE;
 
-	if (ABILITY(bankAtk) != ABILITY_CORROSION)
+	if (atkAbility != ABILITY_CORROSION)
 	{
 		if (IsOfType(bankDef, TYPE_POISON) || IsOfType(bankDef, TYPE_STEEL))
 			return FALSE;
@@ -1571,53 +1981,81 @@ bool8 CanBePoisoned(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 	return TRUE;
 }
 
-bool8 CanBeParalyzed(u8 bank, bool8 checkFlowerVeil)
+bool8 CanBeParalyzed(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 {
-	if (!CanBeGeneralStatused(bank, checkFlowerVeil))
+	u8 atkAbility = ABILITY(bankAtk);
+	u8 defAbility = ABILITY(bankDef);
+
+	if (!CanBeGeneralStatused(bankDef, defAbility, atkAbility, checkFlowerVeil))
 		return FALSE;
 
-	if (IsOfType(bank, TYPE_ELECTRIC))
+	if (IsOfType(bankDef, TYPE_ELECTRIC))
 		return FALSE;
 
-	switch (ABILITY(bank)) {
-		case ABILITY_LIMBER:
-			return FALSE;
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_LIMBER:
+				return FALSE;
+		}
 	}
 
 	return TRUE;
 }
 
-bool8 CanBeBurned(u8 bank, bool8 checkFlowerVeil)
+bool8 CanBeBurned(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 {
-	if (!CanBeGeneralStatused(bank, checkFlowerVeil))
+	u8 atkAbility = ABILITY(bankAtk);
+	u8 defAbility = ABILITY(bankDef);
+
+	if (!CanBeGeneralStatused(bankDef, defAbility, atkAbility, checkFlowerVeil))
 		return FALSE;
 
-	if (IsOfType(bank, TYPE_FIRE))
+	if (IsOfType(bankDef, TYPE_FIRE))
 		return FALSE;
 
-	switch (ABILITY(bank)) {
-		case ABILITY_WATERVEIL:
-		case ABILITY_WATERBUBBLE:
-			return FALSE;
+	#ifdef UNBOUND
+	if (SPECIES(bankDef) == SPECIES_SHADOW_WARRIOR)
+		return FALSE;
+	#endif
+
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_WATERVEIL:
+			case ABILITY_WATERBUBBLE:
+				return FALSE;
+		}
 	}
 
 	return TRUE;
 }
 
-bool8 CanBeFrozen(u8 bank, bool8 checkFlowerVeil)
+bool8 CanBeFrozen(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 {
-	if (!CanBeGeneralStatused(bank, checkFlowerVeil))
+	u8 atkAbility = ABILITY(bankAtk);
+	u8 defAbility = ABILITY(bankDef);
+
+	if (!CanBeGeneralStatused(bankDef, defAbility, atkAbility, checkFlowerVeil))
 		return FALSE;
 
-	if (IsOfType(bank, TYPE_ICE))
+	if (IsOfType(bankDef, TYPE_ICE))
 		return FALSE;
 
-	switch (ABILITY(bank)) {
-		case ABILITY_MAGMAARMOR:
-			return FALSE;
+	#ifdef UNBOUND
+	if (SPECIES(bankDef) == SPECIES_SHADOW_WARRIOR)
+		return FALSE;
+	#endif
+
+	if (!IsTargetAbilityIgnoredNoMove(defAbility, atkAbility)) //Target's Ability is not ignored
+	{
+		switch (defAbility) {
+			case ABILITY_MAGMAARMOR:
+				return FALSE;
+		}
 	}
 
-	if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY && ITEM_EFFECT(bank) != ITEM_EFFECT_UTILITY_UMBRELLA)
+	if (gBattleWeather & WEATHER_SUN_ANY && WEATHER_HAS_EFFECT && ITEM_EFFECT(bankDef) != ITEM_EFFECT_UTILITY_UMBRELLA)
 		return FALSE;
 
 	return TRUE;
@@ -1736,6 +2174,29 @@ bool8 BankSideHasMist(u8 bank)
 {
 	return gSideStatuses[SIDE(bank)] & SIDE_STATUS_MIST
 		|| (IS_BATTLE_CIRCUS && gBattleCircusFlags & BATTLE_CIRCUS_MIST);
+}
+
+bool8 BankHasTailwind(u8 bank)
+{
+	return BankSideHasTailwind(bank)
+		#ifdef FLAG_TAILWIND_BATTLE
+		|| (FlagGet(FLAG_TAILWIND_BATTLE) && IsOfType(bank, TYPE_FLYING))
+		#endif
+		;
+}
+
+bool8 BankSideHasTailwind(u8 bank)
+{
+	return gNewBS->TailwindTimers[SIDE(bank)];
+}
+
+bool8 MonHasTailwind(unusedArg struct Pokemon* mon, u8 side)
+{
+	return gNewBS->TailwindTimers[side]
+		#ifdef FLAG_TAILWIND_BATTLE
+		|| (FlagGet(FLAG_TAILWIND_BATTLE) && IsMonOfType(mon, TYPE_FLYING))
+		#endif
+		;
 }
 
 bool8 BankSideHasSeaOfFire(u8 bank)

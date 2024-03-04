@@ -1157,7 +1157,7 @@ void AnimTask_GetTerrain(u8 taskId)
 
 void AnimTask_ShellSideArm(u8 taskId)
 {
-	switch(CalcMoveSplit(gBattleAnimAttacker, sAnimMoveIndex)) {
+	switch(CalcMoveSplit(gBattleAnimAttacker, sAnimMoveIndex, 0)) {
 		case SPLIT_PHYSICAL:
 			gBattleAnimArgs[0] = 0;
 			break;
@@ -1168,6 +1168,7 @@ void AnimTask_ShellSideArm(u8 taskId)
 
 	DestroyAnimVisualTask(taskId);
 }
+//may be unnecessary?
 
 void AnimTask_IsTargetPartner(u8 taskId)
 {
