@@ -768,6 +768,7 @@ struct NewBattleStruct
 	u8 quickDrawRandomNumber[MAX_BATTLERS_COUNT];
 	u8 powerShifted[MAX_BATTLERS_COUNT];
 	u16 tookAbilityFrom[MAX_BATTLERS_COUNT]; //Helps display the correct Ability when one has been passed around
+	u8 rageFistCounter[MAX_BATTLERS_COUNT];
 
 	//Bit Fields for Banks
 	u8 MicleBerryBits;
@@ -777,6 +778,8 @@ struct NewBattleStruct
 	u8 playedShellTrapMessage;
 	u8 RoostCounter;
 	u8 quickClawCustapIndicator;
+	u8 quickDrawIndicator;
+	u8 ateCustapBerry;
 	u8 HealingWishLoc;
 	u8 PowderByte;
 	u8 quashed;
@@ -791,6 +794,7 @@ struct NewBattleStruct
 	u8 doSwitchInEffects;
 	u8 devolveForgotMove;
 	u8 hiddenAnimBattlerSprites;
+	u8 enduredDamage;
 
 	//Bit Fields for Party
 	u8 revealedEnemyMons;
@@ -834,6 +838,7 @@ struct NewBattleStruct
 	bool8 ParentalBondOn : 2;
 	bool8 MeFirstByte : 1;
 	bool8 ReceiverActivated : 1;
+	bool8 consumedGem : 1;
 	bool8 GemHelper : 1;
 	bool8 fusionFlareUsedPrior : 1;
 	bool8 fusionBoltUsedPrior : 1;

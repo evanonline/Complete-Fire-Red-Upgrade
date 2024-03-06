@@ -147,12 +147,12 @@ bool8 IsMoxieAbility(u8 ability)
 	switch (ability)
 	{
 		case ABILITY_MOXIE:
-		//#ifdef ABILITY_GRIMNEIGH
-		//case ABILITY_GRIMNEIGH:
-		//#endif
-		//#ifdef ABILITY_CHILLINGNEIGH
-		//case ABILITY_CHILLINGNEIGH:
-		//#endif
+		#ifdef ABILITY_GRIMNEIGH
+		case ABILITY_GRIMNEIGH:
+		#endif
+		#ifdef ABILITY_CHILLINGNEIGH
+		case ABILITY_CHILLINGNEIGH:
+		#endif
 		#ifdef ABILITY_ASONE_GRIM
 		case ABILITY_ASONE_GRIM:
 		#endif

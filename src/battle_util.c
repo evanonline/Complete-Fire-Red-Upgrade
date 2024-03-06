@@ -707,7 +707,7 @@ bool8 IsMoveRedirectionPrevented(u16 move, u8 atkAbility)
 {
 	return move == MOVE_SKYDROP
 		|| move == MOVE_SNIPESHOT
-//		|| atkAbility == ABILITY_PROPELLERTAIL
+		|| atkAbility == ABILITY_PROPELLERTAIL
 		|| atkAbility == ABILITY_STALWART;
 }
 
@@ -1795,9 +1795,9 @@ bool8 CanBePutToSleep(u8 bankDef, u8 bankAtk, bool8 checkFlowerVeil)
 	{
 		switch (defAbility) {
 			case ABILITY_INSOMNIA:
-			//#ifdef ABILITY_VITALSPIRIT
-			//case ABILITY_VITALSPIRIT:
-			//#endif
+			#ifdef ABILITY_VITALSPIRIT
+			case ABILITY_VITALSPIRIT:
+			#endif
 			case ABILITY_SWEETVEIL:
 				if(!SpeciesHasPastelVeil(SPECIES(bankDef)))
 					return FALSE;
@@ -1839,9 +1839,9 @@ bool8 CanBeYawned(u8 bankDef, u8 bankAtk)
 	{
 		switch (defAbility) {
 			case ABILITY_INSOMNIA:
-			//#ifdef ABILITY_VITALSPIRIT
-			//case ABILITY_VITALSPIRIT:
-			//#endif
+			#ifdef ABILITY_VITALSPIRIT
+			case ABILITY_VITALSPIRIT:
+			#endif
 			case ABILITY_SWEETVEIL:
 				if (!SpeciesHasPastelVeil(SPECIES(bankDef)))
 					return FALSE;
@@ -1923,7 +1923,7 @@ bool8 CanRest(u8 bank)
 
 	switch (ABILITY(bank)) {
 		case ABILITY_INSOMNIA:
-		//case ABILITY_VITALSPIRIT:
+		case ABILITY_VITALSPIRIT:
 		case ABILITY_COMATOSE:
 			return FALSE;
 		case ABILITY_SWEETVEIL:
