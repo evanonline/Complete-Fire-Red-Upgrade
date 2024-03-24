@@ -6,7 +6,6 @@
 
 #include "../include/new/ability_battle_effects.h"
 #include "../include/new/ability_battle_scripts.h"
-#include "../include/new/ability_util.h"
 #include "../include/new/ability_tables.h"
 #include "../include/new/battle_start_turn_start_battle_scripts.h"
 #include "../include/new/battle_util.h"
@@ -391,15 +390,18 @@ void MoldBreakerRemoveAbilitiesOnForceSwitchIn(void)
 	else
 		bank = gBankAttacker;
 
-	if (IsMoldBreakerAbility(ABILITY(bank)))
+	if (ABILITY(bank) == ABILITY_MOLDBREAKER
+	/*||  ABILITY(bank) == ABILITY_TURBOBLAZE
+	||  ABILITY(bank) == ABILITY_TERAVOLT*/)
 	{
-		if (gSpecialAbilityFlags[ABILITY(gBankSwitching)].gMoldBreakerIgnoredAbilities)
+		if (gMoldBreakerIgnoredAbilities[ABILITY(gBankSwitching)])
 		{
 			gNewBS->DisabledMoldBreakerAbilities[gBankSwitching] = gBattleMons[gBankSwitching].ability;
 			gBattleMons[gBankSwitching].ability = 0;
 		}
 	}
 }
+
 
 void MoldBreakerRestoreAbilitiesOnForceSwitchIn(void)
 {
@@ -600,7 +602,7 @@ void BelchFunction(void)
 	if (IsRaidBattle() && gBankAttacker == BANK_RAID_BOSS)
 		return; //Raid bosses can always use Belch
 
-	if (!(gNewBS->canBelch[SIDE(gBankAttacker)] & gBitTable[gBattlerPartyIndexes[gBankAttacker]]))
+	if (!(gNewBS->BelchCounters & gBitTable[gBattlerPartyIndexes[gBankAttacker]]))
 		gBattlescriptCurrInstr = BattleScript_ButItFailed - 5 - 2;
 }
 
@@ -646,7 +648,7 @@ void CopycatFunc(void)
 	|| gNewBS->LastUsedMove == 0xFFFF
 	|| IsZMove(gNewBS->LastUsedMove)
 	|| IsAnyMaxMove(gNewBS->LastUsedMove)
-	|| gSpecialMoveFlags[gNewBS->LastUsedMove].gCopycatBannedMoves)
+	|| CheckTableForMove(gNewBS->LastUsedMove, gCopycatBannedMoves))
 	{
 		gBattlescriptCurrInstr = BattleScript_ButItFailed - 1 - 5;	//From PP Reduce
 	}
@@ -715,8 +717,8 @@ void MeFirstFunc(void)
 
 	if (SPLIT(move) == SPLIT_STATUS
 	|| GetBattlerTurnOrderNum(gBankTarget) < gCurrentTurnActionNumber
-	|| gSpecialMoveFlags[move].gMeFirstBannedMoves
-	|| gSpecialMoveFlags[move].gMovesThatCallOtherMoves)
+	|| CheckTableForMove(move, gMeFirstBannedMoves)
+	|| CheckTableForMove(move, gMovesThatCallOtherMoves))
 	{
 		gBattlescriptCurrInstr = BattleScript_ButItFailed - 5 - 1; //Start from PP Reduce
 	}
@@ -1012,7 +1014,7 @@ void ChangeTargetTypeFunc(void)
 	switch (gCurrentMove) {
 		case MOVE_SOAK:
 			if (ABILITY(gBankTarget) == ABILITY_MULTITYPE
-			||  ABILITY(gBankTarget) == ABILITY_RKS_SYSTEM
+			||  ABILITY(gBankTarget) == ABILITY_RKSSYSTEM
 			|| (gBattleMons[gBankTarget].type1 == TYPE_WATER &&
 				gBattleMons[gBankTarget].type2 == TYPE_WATER &&
 				gBattleMons[gBankTarget].type3 == TYPE_BLANK))
@@ -1029,7 +1031,7 @@ void ChangeTargetTypeFunc(void)
 
 		case MOVE_MAGICPOWDER:
 			if (ABILITY(gBankTarget) == ABILITY_MULTITYPE
-			||  ABILITY(gBankTarget) == ABILITY_RKS_SYSTEM
+			||  ABILITY(gBankTarget) == ABILITY_RKSSYSTEM
 			|| (gBattleMons[gBankTarget].type1 == TYPE_PSYCHIC &&
 				gBattleMons[gBankTarget].type2 == TYPE_PSYCHIC &&
 				gBattleMons[gBankTarget].type3 == TYPE_BLANK))
@@ -1257,9 +1259,9 @@ void TryExecuteInstruct(void)
 {
 	u16 move = gLastPrintedMoves[gBankTarget];
 
-	if (gSpecialMoveFlags[move].gInstructBannedMoves
-	//||  gSpecialMoveFlags[move].gMovesThatRequireRecharging
-	||  gSpecialMoveFlags[move].gMovesThatCallOtherMoves
+	if (CheckTableForMove(move, gInstructBannedMoves)
+	||  CheckTableForMove(move, gMovesThatRequireRecharging)
+	||  CheckTableForMove(move, gMovesThatCallOtherMoves)
 	|| IsZMove(move)
 	|| IsAnyMaxMove(move)
 	|| IsDynamaxed(gBankTarget)
@@ -1416,7 +1418,7 @@ void AbilityChangeBSFunc(void)
 
 	switch (gCurrentMove) {
 		case MOVE_WORRYSEED:
-			if (gSpecialAbilityFlags[defAbility].gWorrySeedBannedAbilities)
+			if (CheckTableForAbility(defAbility, gWorrySeedBannedAbilities))
 				gBattlescriptCurrInstr = BattleScript_ButItFailed - 5;
 			else
 			{
@@ -1429,7 +1431,7 @@ void AbilityChangeBSFunc(void)
 			break;
 
 		case MOVE_GASTROACID:
-		if (gSpecialAbilityFlags[defAbility].gGastroAcidBannedAbilities
+			if (CheckTableForAbility(defAbility, gGastroAcidBannedAbilities)
 			|| gStatuses3[gBankTarget] & STATUS3_ABILITY_SUPPRESS)
 			{
 				gBattlescriptCurrInstr = BattleScript_ButItFailed - 5;
@@ -1450,8 +1452,8 @@ void AbilityChangeBSFunc(void)
 		case MOVE_ENTRAINMENT:
 			if (atkAbility == ABILITY_NONE
 			||  IsDynamaxed(gBankTarget)
-			||  gSpecialAbilityFlags[atkAbility].gEntrainmentBannedAbilitiesAttacker
-			||  gSpecialAbilityFlags[defAbility].gEntrainmentBannedAbilitiesTarget)
+			||  CheckTableForAbility(atkAbility, gEntrainmentBannedAbilitiesAttacker)
+			||  CheckTableForAbility(defAbility, gEntrainmentBannedAbilitiesTarget))
 				gBattlescriptCurrInstr = BattleScript_ButItFailed - 5;
 			else
 			{
@@ -1467,7 +1469,7 @@ void AbilityChangeBSFunc(void)
 			break;
 
 		case MOVE_SIMPLEBEAM:
-			if (gSpecialAbilityFlags[defAbility].gSimpleBeamBannedAbilities)
+			if (CheckTableForAbility(defAbility, gSimpleBeamBannedAbilities))
 			{
 				gBattlescriptCurrInstr = BattleScript_ButItFailed - 5;
 			}
@@ -1490,7 +1492,7 @@ void LoadStatustoPsychoShiftTransfer(void)
 {
 	u32 status = gBattleMons[gBankAttacker].status1;
 
-	if (status & STATUS_SLEEP && CanBePutToSleep(gBankTarget, gBankAttacker, TRUE))
+	if (status & STATUS_SLEEP && CanBePutToSleep(gBankTarget, TRUE))
 	{
 		gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_SLEEP;
 	}
@@ -1502,20 +1504,14 @@ void LoadStatustoPsychoShiftTransfer(void)
 	{
 		gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_POISON;
 	}
-	else if (status & STATUS_BURN && CanBeBurned(gBankTarget, gBankAttacker, TRUE))
+	else if (status & STATUS_BURN && CanBeBurned(gBankTarget, TRUE))
 	{
 		gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_BURN;
 	}
-	else if (status & STATUS_PARALYSIS && CanBeParalyzed(gBankTarget, gBankAttacker, TRUE))
+	else if (status & STATUS_PARALYSIS && CanBeParalyzed(gBankTarget, TRUE))
 	{
 		gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_PARALYSIS;
 	}
-	#ifdef FROSTBITE
-	else if (status & STATUS_FREEZE && CanBeFrozen(gBankTarget, gBankAttacker, TRUE))
-	{
-		gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_FREEZE;
-	}
-	#endif
 	else
 		gBattlescriptCurrInstr = BattleScript_ButItFailed - 5;
 }
@@ -1883,7 +1879,7 @@ void TryRemovePrimalWeatherOnPivot(void)
 {
 	RestoreOriginalAttackerAndTarget();
 	gNewBS->skipBankStatAnim = gBankAttacker; //Helps with Neutralizing Gas and Intimidate
-	if (HandleSpecialSwitchOutAbilities(gBankAttacker, ABILITY(gBankAttacker), TRUE))
+	if (HandleSpecialSwitchOutAbilities(gBankAttacker, ABILITY(gBankAttacker)))
 		gBattlescriptCurrInstr -= 5;
 	else
 		gNewBS->skipBankStatAnim = 0xFF; //No longer needed
@@ -1893,7 +1889,7 @@ void TryRemovePrimalWeatherSwitchingBank(void)
 {
 	RestoreOriginalAttackerAndTarget();
 	gNewBS->skipBankStatAnim = gBankSwitching; //Helps with Neutralizing Gas and Intimidate
-	if (HandleSpecialSwitchOutAbilities(gBankSwitching, ABILITY(gBankSwitching), TRUE))
+	if (HandleSpecialSwitchOutAbilities(gBankSwitching, ABILITY(gBankSwitching)))
 		gBattlescriptCurrInstr -= 5;
 	else
 		gNewBS->skipBankStatAnim = 0xFF; //No longer needed
@@ -1902,13 +1898,7 @@ void TryRemovePrimalWeatherSwitchingBank(void)
 void TryRemovePrimalWeatherAfterAbilityChange(void)
 {
 	RestoreOriginalAttackerAndTarget();
-	if (HandleSpecialSwitchOutAbilities(gBankTarget, gNewBS->backupAbility, FALSE))
-		gBattlescriptCurrInstr -= 5;
-}
-
-void TryRemovePrimalWeatherAfterTransformation(void)
-{
-	if (HandleSpecialSwitchOutAbilities(gBankAttacker, gNewBS->backupAbility, FALSE))
+	if (HandleSpecialSwitchOutAbilities(gBankTarget, gNewBS->backupAbility))
 		gBattlescriptCurrInstr -= 5;
 }
 

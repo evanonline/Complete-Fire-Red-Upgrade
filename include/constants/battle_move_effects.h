@@ -243,7 +243,7 @@
 #define EFFECT_TEAM_EFFECTS 239
 #define EFFECT_CAMOUFLAGE 240
 #define EFFECT_FLAMEBURST 241
-#define EFFECT_LASTRESORT_SKYDROP 242 //why did i condense these together? did i do this or did i just blindly copy code i didn't understand from somewhere (like i'm doing now). is this simply because you can't go over 255 effects
+#define EFFECT_LASTRESORT_SKYDROP 242
 #define EFFECT_DAMAGE_SET_TERRAIN 243
 #define EFFECT_TEATIME 244
 #define EFFECT_DECORATE 245

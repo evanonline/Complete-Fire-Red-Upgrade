@@ -34,6 +34,7 @@
 
 #include "../include/new/battle_strings.h"
 #include "../include/new/catching.h"
+#include "../include/new/damage_calc.h"
 #include "../include/new/dns.h"
 #include "../include/new/util.h"
 #include "../include/new/item.h"
@@ -2962,7 +2963,7 @@ u8* LoadTextBuffer0D(void)
 //		  Var 0x8001 - Buffer #
 void sp0CF_BufferAbilityName(void)
 {
-	const u8* name = GetAbilityName(Var8000, SPECIES_NONE);
+	const u8* name = GetAbilityName(Var8000);
 	StringCopy(sScriptStringVars[Var8001], name);
 }
 

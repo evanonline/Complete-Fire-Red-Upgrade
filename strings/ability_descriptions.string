@@ -140,6 +140,7 @@ May disable a foe's move.
 Lowers the foe's Speed if hit.
 
 #org @DESC_MUMMY
+#org @DESC_LINGERINGAROMA
 Spreads with contact.
 
 #org @DESC_IRONBARBS
@@ -465,8 +466,8 @@ Powers up allies.
 #org @DESC_RECEIVER
 Takes over a KOed ally's Ability.
 
-#org @DESC_POWEROFALCHEMY
-Takes over a KOed ally's Ability.
+#org @DESC_MYCELIUMMIGHT
+Slow-but-unimpeded status moves.
 
 #org @DESC_NEUROFORCE
 Powers up super-effective hits.
@@ -572,3 +573,11 @@ Combines mount and rider powers.
 #org @DESC_ASONE_GRIM
 Combines mount and rider powers.
 
+#org @DESC_PROTOSYNTHESIS
+Boosts highest stat in sunlight.
+
+#org @DESC_QUARKDRIVE
+Elec. Terrain boosts highest stat.
+
+#org @DESC_POWEROFALCHEMY
+Takes over a KOed ally's Ability.

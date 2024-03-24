@@ -22,6 +22,8 @@
 .equ FLAG_CELADONGYM_ROOT_4, 0x0BB
 .equ FLAG_CELADONGYM_ROOT_ALL, 0x0BC
 
+.equ FLAG_ERIKA_FIRST_ATTEMPT, 0x0BD
+
 .equ FLAG_DEFEATED_BROCK, 0x4B0
 .equ FLAG_DEFEATED_MISTY, 0x4B1
 .equ FLAG_DEFEATED_VISQUEZ, 0x4B2
@@ -214,7 +216,10 @@ EventScript_Gym_CeruleanGym_Misty:
 	checkflag FLAG_MISTY_FIRST_ATTEMPT
 	if NOT_SET _call Misty_FirstEncounter
 	setflag FLAG_MISTY_FIRST_ATTEMPT
-	trainerbattle3 0x3 49 0x0 gText_CeruleanGym_Misty_Lose
+	checkflag FLAG_DEFEATED_ERIKA
+	if SET _call Misty_Gym2
+	checkflag FLAG_DEFEATED_ERIKA
+	if NOT_SET _call Misty_Gym1
 	setvar 0x4097 0x1 @disables gate tiles
 	clearflag FLAG_DISABLE_BAG
 	clearflag FLAG_GYM_CHALLENGE_ACTIVE
@@ -242,9 +247,22 @@ Misty_Attempt2:
 	msgbox gText_CeruleanGym_Misty_BeforeFight2 MSG_NORMAL
 	return
 	
-
+Misty_Gym1:
+	trainerbattle3 0x3 49 0x0 gText_CeruleanGym_Misty_Lose
+	return
+	
+Misty_Gym2:
+	trainerbattle3 0x3 50 0x0 gText_CeruleanGym_Misty_Lose
+	return
+	
 MistyAfter:
+	checkflag 0x823
+	if SET _goto MistySaffronAdvice
 	msgbox gText_CeruleanGym_Misty_PostFight_1stGym MSG_FACE
+	end
+	
+MistySaffronAdvice:
+	msgbox gText_CeruleanGym_Misty_PostFight_2ndGym MSG_FACE
 	end
 
 @@@@Celadon@@@@
@@ -320,6 +338,68 @@ EventScript_Gym_CeladonGym_LadyTorgal:
     trainerbattle0 0x0 57 0x0 gText_CeladonGym_LadyTorgal_Intro gText_CeladonGym_LadyTorgal_Lose
 	msgbox gText_CeladonGym_LadyTorgal_After MSG_NORMAL
 	end
+
+.global EventScript_Gym_CeladonGym_Erika
+EventScript_Gym_CeladonGym_Erika:
+	lockall
+	checkflag FLAG_DEFEATED_ERIKA
+	if SET _goto ErikaAfter
+	lockall
+	checkflag FLAG_ERIKA_FIRST_ATTEMPT
+	if SET _call Erika_Attempt2
+	checkflag FLAG_ERIKA_FIRST_ATTEMPT
+	if NOT_SET _call Erika_FirstEncounter
+	setflag FLAG_ERIKA_FIRST_ATTEMPT
+	checkflag FLAG_DEFEATED_MISTY
+	if SET _call Erika_Gym2
+	checkflag FLAG_DEFEATED_MISTY
+	if NOT_SET _call Erika_Gym1
+	setvar 0x4096 0x1 @disables gate tiles
+	clearflag FLAG_DISABLE_BAG
+	clearflag FLAG_GYM_CHALLENGE_ACTIVE
+	msgbox gText_CeladonGym_Erika_After1 MSG_KEEPOPEN
+	fanfare 260
+	msgbox gText_GiveErikaBadge MSG_KEEPOPEN
+	waitfanfare
+	setflag 0x823
+	msgbox gText_BadgeAffixed MSG_KEEPOPEN
+	pause 0x5
+	setflag FLAG_DEFEATED_ERIKA
+	msgbox gText_CeladonGym_Erika_BulletSeed MSG_KEEPOPEN
+	fanfare 0x101
+	msgbox gText_RecieveBulletSeed MSG_KEEPOPEN
+	waitfanfare 
+	additem ITEM_TM09 0x1
+	msgbox gText_CeladonGym_Erika_After2 MSG_NORMAL
+	releaseall
+	end
+	
+Erika_Gym1:
+	trainerbattle3 0x3 59 0x0 gText_CeladonGym_Erika_Lose
+	return
+	
+Erika_Gym2:
+	trainerbattle3 0x3 60 0x0 gText_CeladonGym_Erika_Lose
+	return
+	
+Erika_FirstEncounter:
+	msgbox gText_CeladonGym_Erika_BeforeFight1 MSG_FACE
+	return
+
+Erika_Attempt2:
+	msgbox gText_CeladonGym_Erika_BeforeFight2 MSG_FACE
+	return
+	
+ErikaAfter:
+	checkflag 0x821
+	if SET _goto ErikaSaffronAdvice
+	msgbox gText_CeladonGym_Erika_PostFight_1stGym MSG_FACE
+	end
+	
+ErikaSaffronAdvice:
+	msgbox gText_CeladonGym_Erika_PostFight_2ndGym MSG_FACE
+	end
+	
 
 .global EventScript_Gym_CeladonGym_BigPlant
 EventScript_Gym_CeladonGym_BigPlant:

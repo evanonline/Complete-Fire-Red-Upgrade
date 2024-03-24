@@ -951,9 +951,15 @@ EventScript_CeladonCity_FallingForItGuy:
 	applymovement 0x1 LookUp
 	end
 
+
 FallingForItGuyTwerp:
 	msgbox gText_CeladonCity_FallingForItGuy_TwerpPilled MSG_FACE
 	applymovement 0x1 LookUp
+	end
+
+.global EventScript_CeladonCity_GimmighoulHintGirl
+EventScript_CeladonCity_GimmighoulHintGirl:
+	msgbox gText_CeladonCity_GimmighoulHint MSG_FACE
 	end
 
 .global EventScript_CeladonCity_ToedscoolKnower

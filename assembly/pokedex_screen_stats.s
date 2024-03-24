@@ -17,7 +17,6 @@ PokedexScreenStats:
 	
 hp:
 	mov r0, #0
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #4 @ y co-ord
 	str r3, [sp]
@@ -27,7 +26,6 @@ hp:
 	
 atk:
 	mov r0, #1
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #4 @ y co-ord
 	str r3, [sp]
@@ -37,7 +35,6 @@ atk:
 
 def:
 	mov r0, #2
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #18 @ y co-ord
 	str r3, [sp]
@@ -47,7 +44,6 @@ def:
 
 spa:
 	mov r0, #4
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #18 @ y co-ord
 	str r3, [sp]
@@ -57,7 +53,6 @@ spa:
 
 spd:
 	mov r0, #5
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #32 @ y co-ord
 	str r3, [sp]
@@ -67,7 +62,6 @@ spd:
 
 spe:
 	mov r0, #3
-	ldrh r1, [sp, #0x1C]
 	bl print_stat
 	mov r3, #32 @ y co-ord
 	str r3, [sp]
@@ -76,10 +70,18 @@ spe:
 	bl call_via_r5
 
 print_ability_one:
-	ldrh r0, [sp, #0x1C] @Species
-	bl GetAbility1
+	ldr r0, [sp, #0x1C]
+	mov r3, #0x1C
+	mul r0, r3
+	ldr r1, base_stats
+	ldr r1, [r1]
+	mov r3, #0x16
+	add r1, r1, r3
+	add r1, r0, r1
+	ldrb r0, [r1]
 	ldrh r1, [sp, #0x1C]
-	bl GetAbilityName
+	bl TryRandomizeAbility
+	bl GetAbilityNameDex
 	mov r2, r0
  
 	ldr r1, [r7]
@@ -94,18 +96,24 @@ print_ability_one:
 	bl call_via_r5
 
 print_ability_two:
-	ldrh r0, [sp, #0x1C]
-	bl GetAbility1
-	mov r5, r0
 	ldr r0, [sp, #0x1C]
-	bl GetAbility2
-
-	cmp r5, r0 @Ability 1 == Ability 2
+	mov r3, #0x1C
+	mul r0, r3
+	ldr r1, base_stats
+	ldr r1, [r1]
+	mov r3, #0x16
+	add r1, r1, r3
+	add r1, r0, r1
+	ldrb r2, [r1, #1]
+	ldrb r5, [r1, #0]
+	cmp r2, r5
 	beq return
-	cmp r0, #0 @Ability 2 == 0
+	cmp r2, #0
 	beq return
+	mov r0, r2
 	ldrh r1, [sp, #0x1C]
-	bl GetAbilityName
+	bl TryRandomizeAbility
+	bl GetAbilityNameDex
    	mov r2, r0
 	
 	ldr r1, [r7]
@@ -137,9 +145,15 @@ return:
 
 print_stat:
 	push {lr}
+	ldr r3, [sp, #0x20]
+	mov r1, #0x1C
+	mul r3, r1
+	ldr r2, base_stats
+	ldr r2, [r2]
+	add r2, r3
+	add r2, r0
+	ldrb r1, [r2]
 	mov r4, r0
-	bl GetVisualBaseStat
-	mov r1, r0
 	ldr r0, =gStringVar1
 	mov r3, #0
 	cmp r1, #99

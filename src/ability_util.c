@@ -284,12 +284,8 @@ bool8 IsUnnerveAbility(u8 ability)
 bool8 UnnerveOnOpposingField(u8 bank)
 {
 	return ABILITY_ON_OPPOSING_FIELD(bank, ABILITY_UNNERVE)
-		#ifdef ABILITY_ASONE_GRIM
 		|| ABILITY_ON_OPPOSING_FIELD(bank, ABILITY_ASONE_GRIM)
-		#endif
-		#ifdef ABILITY_ASONE_CHILLING
 		|| ABILITY_ON_OPPOSING_FIELD(bank, ABILITY_ASONE_CHILLING)
-		#endif
 		;
 }
 

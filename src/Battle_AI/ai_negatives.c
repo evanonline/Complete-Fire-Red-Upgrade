@@ -354,8 +354,8 @@ u8 AIScript_Negatives(const u8 bankAtk, const u8 bankDef, const u16 originalMove
 				break;
 
 			case ABILITY_CLEARBODY:
-			//case ABILITY_FULLMETALBODY:
-			case ABILITY_WHITESMOKE:
+			case ABILITY_FULLMETALBODY:
+			//case ABILITY_WHITESMOKE:
 				if (CheckTableForMoveEffect(move, gStatLoweringMoveEffects))
 				{
 					DECREASE_VIABILITY(10);

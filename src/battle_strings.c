@@ -20,7 +20,7 @@
 #include "../include/new/set_z_effect.h"
 #include "../include/new/text.h"
 
-//#include "Tables/duplicate_abilities.h"
+#include "Tables/duplicate_abilities.h"
 
 /*
 battle_strings.c
@@ -29,7 +29,7 @@ battle_strings.c
 
 extern u8 gMoveNames[][MOVE_NAME_LENGTH + 1];
 extern u8 gLongMoveNames[][MOVE_NAME_LENGTH + 5];
-//extern const u8 gAbilityNames[][ABILITY_NAME_LENGTH + 1];
+extern const u8 gAbilityNames[][ABILITY_NAME_LENGTH + 1];
 
 extern u8 gStatusConditionString_DisableProblem[];
 extern u8 gStatusConditionString_EncoreProblem[];
@@ -82,9 +82,9 @@ void BufferStringBattle(u16 stringID)
 	bool8 zMoveActive = (*gStringInfo)->zMoveActive;
 
 	for (i = 0; i < MAX_BATTLERS_COUNT; i++)
-	
+	{
 		gAbilitiesPerBank[i] = (*gStringInfo)->abilities[i];
-	
+	}
 	for (i = 0; i < TEXT_BUFF_ARRAY_COUNT; i++)
 	{
 		gBattleTextBuff1[i] = (*gStringInfo)->textBuffs[0][i];
@@ -571,19 +571,23 @@ u32 BattleStringExpandPlaceholders(const u8* src, u8* dst)
 				toCpy = text;
 				break;
 			case B_TXT_LAST_ABILITY: // last used ability
-				toCpy = GetAbilityName(gLastUsedAbility, SPECIES(gActiveBattler));
+				toCpy = GetAbilityNameByMon(gLastUsedAbility, gLastUsedSpecies);
 				break;
 			case B_TXT_ATK_ABILITY: // attacker ability
-				toCpy = GetAbilityName(gAbilitiesPerBank[gBankAttacker], (*gStringInfo)->species[gBankAttacker]);
+				species = GetBankPartyData(gBankAttacker)->species;
+				toCpy = GetAbilityNameByMon(gAbilitiesPerBank[gBankAttacker], species);
 				break;
 			case B_TXT_DEF_ABILITY: // target ability
-				toCpy = GetAbilityName(gAbilitiesPerBank[gBankTarget], (*gStringInfo)->species[gBankTarget]);
+				species = GetBankPartyData(gBankTarget)->species;
+				toCpy = GetAbilityNameByMon(gAbilitiesPerBank[gBankTarget], species);
 				break;
 			case B_TXT_SCR_ACTIVE_ABILITY: // scripting active ability
-				toCpy = GetAbilityName(gAbilitiesPerBank[gBattleScripting.bank], (*gStringInfo)->species[gBattleScripting.bank]);
+				species = GetBankPartyData(gBattleScripting.bank)->species;
+				toCpy = GetAbilityNameByMon(gAbilitiesPerBank[gBattleScripting.bank], species);
 				break;
 			case B_TXT_EFF_ABILITY: // effect battlerId ability
-				toCpy = GetAbilityName(gAbilitiesPerBank[gEffectBank], (*gStringInfo)->species[gEffectBank]);
+				species = GetBankPartyData(gEffectBank)->species;
+				toCpy = GetAbilityNameByMon(gAbilitiesPerBank[gEffectBank], species);
 				break;
 			case B_TXT_TRAINER1_CLASS: // trainer class name
 				if (gTrainerBattleOpponent_A == 0x400) //Lol Secret Bases
@@ -996,10 +1000,7 @@ void EmitPrintString(u8 bufferId, u16 stringID)
 		StringCopyBattleStringLoader(stringInfo->battleStringLoader, gBattleStringLoader);
 
 	for (i = 0; i < MAX_BATTLERS_COUNT; i++)
-	{
-		stringInfo->abilities[i] = *GetAbilityLocation(i);	
-		stringInfo->species[i] = SPECIES(i);
-	}
+		stringInfo->abilities[i] = *GetAbilityLocation(i);
 	for (i = 0; i < TEXT_BUFF_ARRAY_COUNT; i++)
 	{
 		stringInfo->textBuffs[0][i] = gBattleTextBuff1[i];
@@ -1041,6 +1042,54 @@ void EmitPrintSelectionString(u8 bufferId, u16 stringID)
 		stringInfo->textBuffs[2][i] = gBattleTextBuff3[i];
 	}
 	PrepareBufferDataTransfer(bufferId, gBattleBuffersTransferData, sizeof(struct BattleMsgData) + 4);
+}
+
+const u8* GetAbilityName(const u8 ability)
+{
+	const u8* ptr = gAbilityNames[ability];
+
+	if (ptr[3] == 0x8 || ptr[3] == 0x9) //Expanded Ability Names
+		ptr = T1_READ_PTR(ptr);
+
+	return ptr;
+}
+
+const u8* GetAbilityNameByMon(u8 ability, u16 species)
+{
+	const u8* ptr = NULL;
+	for(u8 i = 0; i < ARRAY_COUNT(sDuplicateAbilities); i++)
+	{
+		if(ability == sDuplicateAbilities[i].currAbility && species == sDuplicateAbilities[i].species)
+		{
+			ptr = sDuplicateAbilities[i].replaceAbilityString;
+		}
+	}
+	if (ptr == NULL)
+		ptr = gAbilityNames[ability];
+
+
+	if (ptr[3] == 0x8 || ptr[3] == 0x9) //Expanded Ability Names
+		ptr = T1_READ_PTR(ptr);
+
+	return ptr;
+}
+
+const u8* GetAbilityNameDex(const u8 ability)
+{
+	u16 species = sPokedexScreenData->dexSpecies;
+
+	return GetAbilityNameByMon(ability, species);
+}
+
+void CopyAbilityNameByMon(u8* dst, const u8 ability, u16 species)
+{
+	StringCopy(dst, GetAbilityNameByMon(ability, species));
+}
+
+
+void CopyAbilityName(u8* dst, const u8 ability)
+{
+	StringCopy(dst, GetAbilityName(ability));
 }
 
 #ifdef OPEN_WORLD_TRAINERS

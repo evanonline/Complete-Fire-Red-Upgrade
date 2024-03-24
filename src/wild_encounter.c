@@ -134,7 +134,7 @@ static u8 ChooseWildMonLevel(const struct WildPokemon* wildPokemon)
 	if (!GetMonData(&gPlayerParty[0], MON_DATA_IS_EGG, NULL))
 	{
 		u8 ability = GetMonAbility(&gPlayerParty[0]);
-		if (ability == ABILITY_HUSTLE || ability == ABILITY_VITALSPIRIT || ability == ABILITY_PRESSURE)
+		if (ability == ABILITY_HUSTLE || /*ability == ABILITY_VITALSPIRIT //todo, need workaround from stacking with Insomnia// ||*/ ability == ABILITY_PRESSURE)
 		{
 			if (Random() % 2 == 0)
 				return max;
@@ -705,7 +705,7 @@ u8 GetAbilityEncounterRateModType(void)
         u8 ability = GetMonAbility(&gPlayerParty[0]);
 
 		switch (ability) {
-			case ABILITY_WHITESMOKE:
+			//case ABILITY_WHITESMOKE: //Todo, need to find a workaround for stacking with Clear Body
 			case ABILITY_STENCH:
 			case ABILITY_QUICKFEET:
 			case ABILITY_INFILTRATOR:

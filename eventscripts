@@ -279,6 +279,7 @@ sign 10 16 4 EventScript_Gym_CeladonGym_PlantRoot3
 sign 10 16 5 EventScript_Gym_CeladonGym_PlantRoot4
 sign 10 16 6 EventScript_Gym_CeladonGym_BigPlant
 npc 10 16 0 EventScript_Gym_GymGuyFirstGym_Celadon_NPC
+npc 10 16 1 EventScript_Gym_CeladonGym_Erika
 npc 10 16 2 EventScript_Gym_CeladonGym_PicnickerFynley
 npc 10 16 3 EventScript_Gym_CeladonGym_LadyTorgal
 npc 10 16 4 EventScript_Gym_CeladonGym_PkmnBreederMurphy
@@ -291,7 +292,7 @@ npc 10 17 3 EventScript_CeladonCity_HomemadePickles
 npc 10 18 0 EventScript_CeladonCity_AbilityHaver
 npc 10 19 0 EventScript_CeladonCity_HotelMatron
 npc 10 19 1 EventScript_CeladonCity_ScaredCozyGuy
-@npc 10 19 2 EventScript_CeladonCity_HotelRotomi @briefly dummied out due to index issues between CFRU and DPE. Will fix later
+npc 10 19 2 EventScript_CeladonCity_HotelRotomi
 npc 10 20 0 EventScript_CeladonCity_NewCondominiumsReceptionist
 npc 10 20 1 EventScript_CeladonCity_NewCondominiumsGuard
 sign 10 26 0 EventScript_CeladonCity_GameCornerTV
@@ -484,6 +485,10 @@ sign 3 26 0 EventScript_Route6_IcePathSign
 
 ## Lavender Town
 sign 3 4 1 EventScript_LavenderTown_CitySign
+
+## Route 4
+npc 16 0 3 EventScript_Route4_Pokecenter_LeftFool
+npc 16 0 4 EventScript_Route4_Pokecenter_RightFool
 
 ## Pewter City
 sign 3 2 4 EventScript_PewterCity_CitySign

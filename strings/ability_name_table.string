@@ -707,8 +707,8 @@ Battery
 #org @NAME_RECEIVER
 Receiver
 
-#org @NAME_POWER_OF_ALCHEMY
-Alchemic Power
+#org @NAME_MYCELIUMMIGHT
+Mycelium Might
 
 #org @NAME_NEUROFORCE
 Neuroforce
@@ -811,3 +811,15 @@ Filter
 
 #org @NAME_LINGERINGAROMA
 Lingering Aroma
+
+#org @NAME_PROTOSYNTHESIS
+Protosynthesis
+
+#org @NAME_QUARKDRIVE
+Quark Drive
+
+#org @NAME_ARMORTAIL
+Armor Tail
+
+#org @NAME_POWER_OF_ALCHEMY
+Alchemic Power

@@ -14,7 +14,6 @@
 
 #include "../include/new/ability_battle_effects.h"
 #include "../include/new/ability_battle_scripts.h"
-#include "../include/new/ability_util.h"
 #include "../include/new/ai_master.h"
 #include "../include/new/ai_util.h"
 #include "../include/new/battle_start_turn_start.h"
@@ -35,7 +34,6 @@
 #include "../include/new/move_tables.h"
 #include "../include/new/set_z_effect.h"
 #include "../include/new/util2.h"
-
 /*
 battle_start_turn_start.c
 	-handles the logic for determining which pokemon attacks first
@@ -1003,7 +1001,7 @@ void HandleAction_UseMove(void)
 u8 moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
 
 //Get Move to be Used
-	if (gProtectStructs[gBankAttacker].onlyStruggle)
+	if (gProtectStructs[gBankAttacker].onlyStruggle || moveLimitations == 0xF)
 	{
 		gProtectStructs[gBankAttacker].onlyStruggle = 0;
 		gCurrentMove = gChosenMove = MOVE_STRUGGLE;
@@ -1104,8 +1102,8 @@ u8 moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
 		if (IsRaidBattle() && gBankAttacker == BANK_RAID_BOSS)
 		{
 			u8 split = SPLIT(gCurrentMove);
-			bool8 isBannedMove = gSpecialMoveFlags[gCurrentMove].gRaidBattleBannedRaidMonMoves
-							   || gSpecialMoveFlags[gCurrentMove].gRaidBattleBannedMoves
+			bool8 isBannedMove = CheckTableForMove(gCurrentMove, gRaidBattleBannedRaidMonMoves)
+							  || CheckTableForMove(gCurrentMove, gRaidBattleBannedMoves)
 							  || IsUnusableMove(gCurrentMove, gBankAttacker, 0xFF, 1, ABILITY(gBankAttacker), ITEM_EFFECT(gBankAttacker), CHOICED_MOVE(gBankAttacker));
 
 			if (isBannedMove && split != SPLIT_STATUS) //Use banned status move - don't use Max Guard
@@ -1281,13 +1279,13 @@ static void TrySetupRaidBossRepeatedAttack(u8 actionFuncId)
 {
 	if (IsRaidBattle() && gNewBS->dynamaxData.attackAgain && gNewBS->dynamaxData.repeatedAttacks < 2 && actionFuncId == ACTION_FINISHED)
 	{
-		u8 i, moveLimitations, viableMoves;
+		u8 i, moveLimitations, viableMoves, curPos;
 		gNewBS->dynamaxData.attackAgain = FALSE;
 
 		gBankAttacker = gBanksByTurnOrder[gCurrentTurnActionNumber - 1]; //Get original attacker
 
 		if (gBankAttacker != BANK_RAID_BOSS //Just in case the player KOs the partner and sets the bit
-			|| CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE, gBankAttacker, FOE(gBankAttacker)) == 0) //Don't attack again if no one left to hit
+		|| CountAliveMonsInBattle(BATTLE_ALIVE_DEF_SIDE, gBankAttacker, FOE(gBankAttacker)) == 0) //Don't attack again if no one left to hit
 			return;
 
 		moveLimitations = CheckMoveLimitations(gBankAttacker, 0, 0xFF);
@@ -1310,7 +1308,13 @@ static void TrySetupRaidBossRepeatedAttack(u8 actionFuncId)
 		++gNewBS->dynamaxData.repeatedAttacks;
 		gCurrentActionFuncId = gActionsByTurnOrder[--gCurrentTurnActionNumber] = ACTION_USE_MOVE;
 
-		PickRaidBossRepeatedMove(moveLimitations);
+		do
+		{
+			curPos = gBattleStruct->chosenMovePositions[gBankAttacker] = Random() & 3;
+			gCurrentMove = gBattleMons[gBankAttacker].moves[curPos]; //Choose a new move
+		} while (gCurrentMove == MOVE_NONE || (gBitTable[curPos] & moveLimitations));
+
+		gBattleStruct->moveTarget[gBankAttacker] = GetMoveTarget(gCurrentMove, FALSE);
 
 		gHitMarker &= ~(HITMARKER_NO_ATTACKSTRING);
 		gHitMarker &= ~(HITMARKER_UNABLE_TO_USE_MOVE);
@@ -1556,34 +1560,25 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 	u32 bank1Spd, bank2Spd;
 
 //Priority Calc
-	if (!ignoreMovePriorities)
+	if(!ignoreMovePriorities)
 	{
-		u16 move1 = ReplaceWithZMoveRuntime(bank1, gBattleMons[bank1].moves[gBattleStruct->chosenMovePositions[bank1]]);
-		u16 move2 = ReplaceWithZMoveRuntime(bank2, gBattleMons[bank2].moves[gBattleStruct->chosenMovePositions[bank2]]);
-	
-		bank1Priority = PriorityCalc(bank1, gChosenActionByBank[bank1], move1);
-		bank2Priority = PriorityCalc(bank2, gChosenActionByBank[bank2], move2);
+		bank1Priority = PriorityCalc(bank1, gChosenActionByBank[bank1], ReplaceWithZMoveRuntime(bank1, gBattleMons[bank1].moves[gBattleStruct->chosenMovePositions[bank1]]));
+		bank2Priority = PriorityCalc(bank2, gChosenActionByBank[bank2], ReplaceWithZMoveRuntime(bank2, gBattleMons[bank2].moves[gBattleStruct->chosenMovePositions[bank2]]));
 		if (bank1Priority > bank2Priority)
 			return FirstMon;
 		else if (bank1Priority < bank2Priority)
 			return SecondMon;
-
-		bank1Bracket = gNewBS->lastBracketCalc[bank1] = BracketCalc(bank1, gChosenActionByBank[bank1], move1);
-		bank2Bracket = gNewBS->lastBracketCalc[bank2] = BracketCalc(bank2, gChosenActionByBank[bank2], move2);
-	}
-	else
-	{
-		//Bracket Calc
-		bank1Bracket = gNewBS->lastBracketCalc[bank1] = BracketCalc(bank1, 0, MOVE_NONE);
-		bank2Bracket = gNewBS->lastBracketCalc[bank2] = BracketCalc(bank2, 0, MOVE_NONE);
 	}
 
+	//BracketCalc
+	bank1Bracket = gNewBS->lastBracketCalc[bank1];
+	bank2Bracket = gNewBS->lastBracketCalc[bank2];
 	if (bank1Bracket > bank2Bracket)
 		return FirstMon;
 	else if (bank1Bracket < bank2Bracket)
 		return SecondMon;
 
-//Speed Calc
+//SpeedCalc
 	bank1Spd = SpeedCalc(bank1);
 	bank2Spd = SpeedCalc(bank2);
 	u32 temp;
@@ -1599,10 +1594,7 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 	else if (bank1Spd < bank2Spd)
 		return SecondMon;
 
-	if (Random() & 1)
-		return SpeedTie; //Second mon goes first because it won the speed tie
-
-	return FirstMon;
+	return SpeedTie;
 }
 
 static u8 GetWhoStrikesFirstUseLastBracketCalc(u8 bank1, u8 bank2)
@@ -1721,6 +1713,11 @@ s8 PriorityCalcMon(struct Pokemon* mon, u16 move)
 	return priority;
 }
 
+bool8 QuickClawActivatesThisTurn(u8 bank)
+{
+	return gNewBS->quickClawRandomNumber[bank] < ITEM_QUALITY(bank);
+}
+
 s32 BracketCalc(u8 bank, u8 action, u16 move)
 {
 	u8 itemEffect = ITEM_EFFECT(bank);
@@ -1752,22 +1749,23 @@ s32 BracketCalc(u8 bank, u8 action, u16 move)
 					}
 					break;
 
-				case ITEM_EFFECT_CUSTAP_BERRY:
-					if (PINCH_BERRY_CHECK(bank) && !UnnerveOnOpposingField(bank))
-					{
-						gNewBS->quickClawCustapIndicator |= gBitTable[bank];
-						return 1;
-					}
-					break;
+			case ITEM_EFFECT_CUSTAP_BERRY:
+				if (!AbilityBattleEffects(ABILITYEFFECT_CHECK_OTHER_SIDE, bank, ABILITY_UNNERVE, 0, 0)
+				&& PINCH_BERRY_CHECK(bank))
+				{
+					gNewBS->quickClawCustapIndicator |= gBitTable[bank];
+					return 1;
+				}
+				break;
 
 				case ITEM_EFFECT_LAGGING_TAIL:
 					return -2;
 			}
 		}
 
-		if (ability == ABILITY_STALL && !SpeciesHasMyceliumMight(SPECIES(bank)))
+		if (ability == ABILITY_STALL)
 			return -1;
-		else if (ability == ABILITY_STALL && SpeciesHasMyceliumMight(SPECIES(bank)) && SPLIT(move) == SPLIT_STATUS)
+		else if (ability == ABILITY_MYCELIUMMIGHT && SPLIT(move) == SPLIT_STATUS)
 			return -1;
 	}
 

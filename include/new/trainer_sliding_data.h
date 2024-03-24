@@ -22,6 +22,10 @@ extern const u8 sText_MistyBattle1_FirstMonDown[];
 extern const u8 sText_MistyBattle1_LastSwitchIn[];
 extern const u8 sText_MistyBattle1_LowHP[];
 
+extern const u8 sText_ErikaBattle1_FirstMonDown[];
+extern const u8 sText_ErikaBattle1_LastSwitchIn[];
+extern const u8 sText_ErikaBattle1_LowHP[];
+
 //For Unbound
 
 extern const u8 sText_MirskleFirstMonDown[];

@@ -2,8 +2,6 @@
 #include "defines_battle.h"
 #include "../include/battle.h"
 #include "../include/field_weather.h"
-#include "../include/field_player_avatar.h"
-#include "../include/fieldmap.h"
 #include "../include/overworld.h"
 #include "../include/constants/hold_effects.h"
 #include "../include/constants/items.h"
@@ -11,12 +9,8 @@
 #include "../include/constants/pokemon.h"
 #include "../include/constants/species.h"
 
-#include "../include/new/catching.h"
 #include "../include/new/dns.h"
 #include "../include/new/evolution.h"
-#include "../include/new/form_change.h"
-#include "../include/new/util.h"
-
 /*
 evolution.c
 	handles old and new evolution methods
@@ -24,7 +18,7 @@ evolution.c
 
 u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 {
-	u32 i, j;
+	int i, j;
 	u16 targetSpecies = 0;
 	u32 personality = mon->personality;
 	u16 species = mon->species;
@@ -35,12 +29,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 	u16 upperPersonality = personality >> 16;
 	u8 holdEffect = ItemId_GetHoldEffect(heldItem);
 
-	if (holdEffect == ITEM_EFFECT_PREVENT_EVOLVE && type != 3)
+	if ( (holdEffect == ITEM_EFFECT_PREVENT_EVOLVE || holdEffect == ITEM_EFFECT_EVIOLITE)  && type != 3)
 		return SPECIES_NONE;
 
 	switch (type)
 	{
-	case EVO_MODE_NORMAL:
+	case 0:
 		level = mon->level;
 		friendship = mon->friendship;
 
@@ -123,9 +117,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 					break;
 
 				case EVO_MOVE_TYPE:	// expanded for custom evolutions of any move type
-					if (gEvolutionTable[species][i].unknown && friendship < 220) //Needs High Friendship & Move Type
-						break;
-
 					// move type to know in param
 					for (j = 0; j < MAX_MON_MOVES; ++j)
 					{
@@ -218,19 +209,8 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 					}
 					#endif
 					break;
-				
-				case EVO_MOVE_MALE:
-					if (GetMonGender(mon) != MON_MALE)
-						break;
-					goto REGULAR_EVO_MOVE;
-				
-				case EVO_MOVE_FEMALE:
-					if (GetMonGender(mon) != MON_FEMALE)
-						break;
-					//Fallthrough
 
 				case EVO_MOVE:
-				REGULAR_EVO_MOVE:
 					for (j = 0; j < MAX_MON_MOVES; ++j)
 					{
 						if (gEvolutionTable[species][i].param == mon->moves[j])
@@ -270,22 +250,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 					if (FlagGet(gEvolutionTable[species][i].param))
 						targetSpecies = gEvolutionTable[species][i].targetSpecies;
 					break;
-
-				case EVO_CRITICAL_HIT:
-					if (gMain.callback2 == BattleMainCB2) //Only after battles
-					{
-						for (j = 0; j < PARTY_SIZE; ++j)
-						{
-							if (mon == &gPlayerParty[j] || mon == &gEnemyParty[j]) //Get the correct mon id
-							{
-								if (gScored3CritsInBattle & gBitTable[j])
-									targetSpecies = gEvolutionTable[species][i].targetSpecies;
-								break;
-							}
-						}
-					}
-					break;
-
+				
 				case EVO_NATURE_HIGH:
 					if (level >= gEvolutionTable[species][i].param
 					&& HasHighNature(mon))
@@ -297,45 +262,11 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 					&& !HasHighNature(mon))
 						targetSpecies = gEvolutionTable[species][i].targetSpecies;
 					break;
-
-				//case EVO_DAMAGE_LOCATION:
-
-				case EVO_LEVEL_HOLD_ITEM: //Level up to level while holding item
-					if (level >= gEvolutionTable[species][i].param && heldItem == gEvolutionTable[species][i].unknown)
-					{
-						targetSpecies = gEvolutionTable[species][i].targetSpecies;
-						#ifdef EVO_HOLD_ITEM_REMOVAL
-							FlagSet(FLAG_REMOVE_EVO_ITEM);
-						#endif
-					}
-					break;
-
-				case EVO_COINS:
-					if (gSaveBlock1->coins >= gEvolutionTable[species][i].param)
-					{
-						targetSpecies = gEvolutionTable[species][i].targetSpecies;
-						gSaveBlock1->coins -= gEvolutionTable[species][i].param;
-						break;
-					}
-					break;
 			}
 		}
-
-		#ifdef SPECIES_SILVALLY
-		if (targetSpecies == SPECIES_SILVALLY
-		&& ItemId_GetHoldEffect(GetMonData(mon, MON_DATA_HELD_ITEM, NULL)) == ITEM_EFFECT_MEMORY
-		&& (!mon->hiddenAbility || gBaseStats[SPECIES_SILVALLY].hiddenAbility == ABILITY_NONE)) //Ensure the new mon will have RKS System
-		{
-			//Evolve into the Silvally of the correct type
-			u8 type = ItemId_GetHoldEffectParam(GetMonData(mon, MON_DATA_HELD_ITEM, NULL));
-			if (gTypeToSilvallyForm[type] != SPECIES_NONE)
-				targetSpecies = gTypeToSilvallyForm[type];
-		}
-		#endif
-
 		break;
 
-	case EVO_MODE_TRADE:
+	case 1:
 		for (i = 0; i < EVOS_PER_MON; ++i)
 		{
 			switch (gEvolutionTable[species][i].method)
@@ -357,44 +288,17 @@ u16 GetEvolutionTargetSpecies(struct Pokemon* mon, u8 type, u16 evolutionItem)
 		}
 		break;
 
-	case EVO_MODE_ITEM_USE:
-	case EVO_MODE_ITEM_CHECK:	// using items
+	case 2:
+	case 3:	// using items
 		for (i = 0; i < EVOS_PER_MON; ++i)
 		{
-			if ((gEvolutionTable[species][i].method == EVO_ITEM
-			 || gEvolutionTable[species][i].method == EVO_ITEM_LOCATION
-			 || gEvolutionTable[species][i].method == EVO_ITEM_HOLD_ITEM
-			 || gEvolutionTable[species][i].method == EVO_ITEM_NIGHT)
+			if (gEvolutionTable[species][i].method == EVO_ITEM
 			 && gEvolutionTable[species][i].param == evolutionItem)
 			{
 				if (evolutionItem == ITEM_DAWN_STONE && GetMonGender(mon) != gEvolutionTable[species][i].unknown)
-					continue;
-
-				if (gEvolutionTable[species][i].method == EVO_ITEM_LOCATION)
-				{
-					s16 x, y, behaviour;
-					PlayerGetDestCoords(&x, &y);
-					behaviour = MapGridGetMetatileBehaviorAt(x, y);
-
-					if (behaviour != gEvolutionTable[species][i].unknown) //Not standing on the correct kind of tile
-						continue;				
-				}
-				else if (gEvolutionTable[species][i].method == EVO_ITEM_HOLD_ITEM)
-				{
-					if (heldItem != gEvolutionTable[species][i].unknown) //Not holding the correct item
-						continue;
-
-					#ifdef EVO_HOLD_ITEM_REMOVAL
-					FlagSet(FLAG_REMOVE_EVO_ITEM);
-					#endif
-				}
-				else if (gEvolutionTable[species][i].method == EVO_ITEM_NIGHT)
-				{
-					if (!IsNightTime())
-						continue;
-				}
-
+					break;
 				targetSpecies = gEvolutionTable[species][i].targetSpecies;
+				break;
 			}
 		}
 		break;
@@ -437,7 +341,6 @@ bool8 IsLevelUpEvolutionMethod(u8 method)
 		case EVO_LEVEL_SPECIFIC_TIME_RANGE:
 		case EVO_NATURE_HIGH:
 		case EVO_NATURE_LOW:
-		case EVO_LEVEL_HOLD_ITEM:
 			return TRUE;
 		default:
 			return FALSE;
@@ -448,12 +351,9 @@ bool8 IsItemEvolutionMethod(u8 method)
 {
 	switch (method) {
 		case EVO_ITEM:
-		case EVO_ITEM_LOCATION:
-		case EVO_ITEM_HOLD_ITEM:
 		case EVO_TRADE_ITEM:
 		case EVO_HOLD_ITEM_NIGHT:
 		case EVO_HOLD_ITEM_DAY:
-		case EVO_ITEM_NIGHT:
 			return TRUE;
 		default:
 			return FALSE;
@@ -466,7 +366,6 @@ bool8 IsFriendshipEvolutionMethod(u8 method)
 		case EVO_FRIENDSHIP:
 		case EVO_FRIENDSHIP_DAY:
 		case EVO_FRIENDSHIP_NIGHT:
-		case EVO_MOVE_TYPE:
 			return TRUE;
 		default:
 			return FALSE;
@@ -478,34 +377,15 @@ bool8 IsOtherEvolutionMethod(u8 method)
 	switch (method) {
 		case EVO_BEAUTY:
 		case EVO_TRADE:
+		case EVO_MOVE_TYPE:
 		case EVO_MAP:
 		case EVO_MOVE:
-		case EVO_MOVE_MALE:
-		case EVO_MOVE_FEMALE:
 		case EVO_OTHER_PARTY_MON:
 		case EVO_FLAG_SET:
-		case EVO_CRITICAL_HIT:
-		case EVO_DAMAGE_LOCATION:
-		case EVO_COINS:
 			return TRUE;
 		default:
 			return FALSE;
 	}
-}
-
-bool8 EvolutionMethodRequiresLevelUp(u8 method)
-{
-	return IsLevelUpEvolutionMethod(method)
-		|| IsFriendshipEvolutionMethod(method)
-		|| method == EVO_BEAUTY
-		|| method == EVO_MOVE_TYPE
-		|| method == EVO_MAP
-		|| method == EVO_MOVE
-		|| method == EVO_MOVE_MALE
-		|| method == EVO_MOVE_FEMALE
-		|| method == EVO_OTHER_PARTY_MON
-		|| method == EVO_COINS
-		|| method == EVO_FLAG_SET;
 }
 
 bool8 HasHighNature(struct Pokemon* mon)
@@ -531,39 +411,12 @@ bool8 HasHighNature(struct Pokemon* mon)
 	}
 }
 
-bool8 EvolvesViaScoring3Crits(struct Pokemon* mon)
-{
-	u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-	const struct Evolution* evolutions = gEvolutionTable[species];
-
-	for (u32 i = 0; i < EVOS_PER_MON; ++i)
-	{
-		if (evolutions[i].method == EVO_NONE) //Most likely end of entries
-			break; //Break now to save time
-		else if (evolutions[i].method == EVO_CRITICAL_HIT)
-			return TRUE;
-	}
-
-	return FALSE;
-}
-
-static u16 GetDevolution(u16 originalSpecies, u16 backupSpecies)
+u16 GetMonDevolution(struct Pokemon* mon)
 {
 	int j, k;
 	bool8 found;
 	bool8 checkingBackupSpecies = FALSE;
-	u16 dexNum = SpeciesToNationalPokedexNum(originalSpecies);
-
-	switch(dexNum) {
-		#if (defined NATIONAL_DEX_PIKACHU && defined SPECIES_PICHU)
-		case NATIONAL_DEX_PIKACHU: //Get's all the special forms
-			return SPECIES_PICHU;
-		#endif
-		#if (defined NATIONAL_DEX_VIVILLON && defined SPECIES_SPEWPA)
-		case NATIONAL_DEX_VIVILLON:
-			return SPECIES_SPEWPA;
-		#endif
-	}
+	u16 originalSpecies = GetMonData(mon, MON_DATA_SPECIES, NULL);
 
 	SEARCH_START: ;
 	u16 species = originalSpecies;
@@ -594,102 +447,35 @@ static u16 GetDevolution(u16 originalSpecies, u16 backupSpecies)
 				found = TRUE;
 				break;
 			}
-
-			if (gEvolutionTable[j][k].method == EVO_NONE)
-				break; //Likely no more entries, so break here to save time
 		}
 
 		if (found)
 			break;
 	}
 
+	u16 dexNum = SpeciesToNationalPokedexNum(species);
+	switch(dexNum) {
+		#if (defined NATIONAL_DEX_PIKACHU && defined SPECIES_PICHU)
+		case NATIONAL_DEX_PIKACHU: //Get's all the special forms
+			species = SPECIES_PICHU;
+			break;
+		#endif
+		#if (defined NATIONAL_DEX_VIVILLON && defined SPECIES_SCATTERBUG)
+		case NATIONAL_DEX_VIVILLON:
+			species = SPECIES_SCATTERBUG;
+			break;
+		#endif
+	}
+
 	if (species != originalSpecies)
 		return species;
 
-	if (backupSpecies != SPECIES_NONE && !checkingBackupSpecies) //Only check once
+	if (mon->backupSpecies != SPECIES_NONE && !checkingBackupSpecies) //Only check once
 	{
 		checkingBackupSpecies = TRUE;
-		originalSpecies = backupSpecies;
+		originalSpecies = mon->backupSpecies;
 		goto SEARCH_START;
 	}
 
 	return SPECIES_NONE;
-}
-
-u16 GetMonDevolution(struct Pokemon* mon)
-{
-	return GetDevolution(GetMonData(mon, MON_DATA_SPECIES, NULL), mon->backupSpecies);
-}
-
-u8 GetMinimumLevel(u16 species)
-{
-	u32 i;
-	u32 increase = 0;
-
-	while (TRUE)
-	{
-		u16 devolutionSpecies = GetDevolution(species, SPECIES_NONE);
-		if (devolutionSpecies == SPECIES_NONE)
-			return 1 + increase; //Can't go any lower
-
-		for (i = 0; i < EVOS_PER_MON; ++i)
-		{
-			if (gEvolutionTable[devolutionSpecies][i].targetSpecies == species)
-			{
-				u8 method = gEvolutionTable[devolutionSpecies][i].method;
-
-				if (IsLevelUpEvolutionMethod(method))
-					return gEvolutionTable[devolutionSpecies][i].param + increase; //The minimum level is the one that it was when it evolved
-				else if (EvolutionMethodRequiresLevelUp(method))
-					increase = 1; //Must have leveled up at least once to evolve
-			}
-
-			if (gEvolutionTable[devolutionSpecies][i].method == EVO_NONE)
-				break; //Likely no more entries, so break here to save time
-		}
-
-		species = devolutionSpecies; //Go another round down
-	}
-}
-
-void CreateShedinja(u16 preEvoSpecies, struct Pokemon* mon)
-{
-	u32 data = 0;
-	if (gEvolutionTable[preEvoSpecies][0].method == EVO_LEVEL_NINJASK
-	&& gPlayerPartyCount < PARTY_SIZE
-	&& CheckBagHasItem(ITEM_POKE_BALL, 1)) //Must have a standard Poke Ball in the Bag
-	{
-		s32 i;
-		const struct Evolution *evos;
-		const struct Evolution *evos2;
-		u8 ball = BALL_TYPE_POKE_BALL;
-
-		CopyMon(&gPlayerParty[gPlayerPartyCount], mon, sizeof(struct Pokemon));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, (&gEvolutionTable[preEvoSpecies][1].targetSpecies));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_NICKNAME, (gSpeciesNames[gEvolutionTable[preEvoSpecies][1].targetSpecies]));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_HELD_ITEM, (&data));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MARKINGS, (&data));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_ENCRYPT_SEPARATOR, (&data));
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_POKEBALL, &ball);
-
-		for (i = MON_DATA_COOL_RIBBON; i < MON_DATA_COOL_RIBBON + 5; i++)
-			SetMonData(&gPlayerParty[gPlayerPartyCount], i, (&data));
-		for (i = MON_DATA_CHAMPION_RIBBON; i <= MON_DATA_FATEFUL_ENCOUNTER; i++)
-			SetMonData(&gPlayerParty[gPlayerPartyCount], i, (&data));
-
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_STATUS, (&data));
-		data = 0xFF;
-		SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MAIL, (&data));
-
-		CalculateMonStats(&gPlayerParty[gPlayerPartyCount]);
-		CalculatePlayerPartyCount();
-
-		// can't match it otherwise, ehh
-		evos2 = gEvolutionTable[0];
-		evos = evos2 + EVOS_PER_MON * preEvoSpecies;
-
-		GetSetPokedexFlag(SpeciesToNationalPokedexNum(evos[1].targetSpecies), FLAG_SET_SEEN);
-		GetSetPokedexFlag(SpeciesToNationalPokedexNum(evos[1].targetSpecies), FLAG_SET_CAUGHT);
-		RemoveBagItem(ITEM_POKE_BALL, 1);
-	}
 }

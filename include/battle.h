@@ -768,7 +768,6 @@ struct NewBattleStruct
 	u8 quickDrawRandomNumber[MAX_BATTLERS_COUNT];
 	u8 powerShifted[MAX_BATTLERS_COUNT];
 	u16 tookAbilityFrom[MAX_BATTLERS_COUNT]; //Helps display the correct Ability when one has been passed around
-	u8 rageFistCounter[MAX_BATTLERS_COUNT];
 
 	//Bit Fields for Banks
 	u8 MicleBerryBits;
@@ -794,14 +793,10 @@ struct NewBattleStruct
 	u8 doSwitchInEffects;
 	u8 devolveForgotMove;
 	u8 hiddenAnimBattlerSprites;
-	u8 enduredDamage;
 
 	//Bit Fields for Party
-	u8 revealedEnemyMons;
-	u8 canBelch[NUM_BATTLE_SIDES];
-	u8 corrodedItems[NUM_BATTLE_SIDES];
-	//u8 BelchCounters;
-	u8 IllusionBroken; //not sure if still used?
+	u8 BelchCounters;
+	u8 IllusionBroken;
 
 	//Other Helpers
 	u8 switchOutAbilitiesState; //For tracking effects that happen on switch-out
@@ -838,7 +833,6 @@ struct NewBattleStruct
 	bool8 ParentalBondOn : 2;
 	bool8 MeFirstByte : 1;
 	bool8 ReceiverActivated : 1;
-	bool8 consumedGem : 1;
 	bool8 GemHelper : 1;
 	bool8 fusionFlareUsedPrior : 1;
 	bool8 fusionBoltUsedPrior : 1;
@@ -879,17 +873,6 @@ struct NewBattleStruct
 	bool8 lessThanHalfHPBeforeShellBell : 1; //For Emergency Exit
 	bool8 usedLastBall : 1; //Helps prevent the bag from opening
 	bool8 threwBall : 1; //Last Used Ball only appears once a ball has been thrown once
-	bool8 statBuffEffectNotProtectAffected : 1; //For Max Moves
-	bool8 rolloutFinalHit : 1; //Helps with Rollout 5th hit damage calc
-	bool8 totemOmniboostActive : 1; //Allows Contrary mons to get the correct animation
-	bool8 dontActivateMoldBreakersAnymoreThisTurn : 1;
-	bool8 trainerSlideInProgress : 1;
-	bool8 stickyWebActive : 1;
-	bool8 inPivotingMove : 1;
-	bool8 triedToTakeWildItem : 1;
-	bool8 printedStrongWindsWeakenedAttack : 1;
-	bool8 isTrainerBattle : 1;
-	bool8 cottonDownActive : 1;
 
 	//Other
 	u16 LastUsedMove;

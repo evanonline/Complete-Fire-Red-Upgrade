@@ -694,7 +694,7 @@ void atkFF15_jumpifstatcanbemodified(void)
 			gFormCounter = 2;
 
 		else if (ability == ABILITY_CLEARBODY
-		|| ability == ABILITY_WHITESMOKE
+		//|| ability == ABILITY_WHITESMOKE
 		|| ability == ABILITY_FULLMETALBODY
 		|| (ability == ABILITY_FLOWERVEIL && IsOfType(gActiveBattler, TYPE_GRASS)))
 		{
@@ -1433,7 +1433,7 @@ void atkFF29_trysetsleep(void)
 	{
 		switch (ABILITY(bank)) {
 			case ABILITY_INSOMNIA:
-			case ABILITY_VITALSPIRIT:
+			//case ABILITY_VITALSPIRIT:
 				gBattlescriptCurrInstr = BattleScript_TargetStayedAwakeUsingAbility;
 				return;
 			case ABILITY_LEAFGUARD:
@@ -1542,7 +1542,7 @@ void atkD7_setyawn(void)
 	{
 		switch (ABILITY(bank)) {
 			case ABILITY_INSOMNIA:
-			case ABILITY_VITALSPIRIT:
+			//case ABILITY_VITALSPIRIT:
 				gBattlescriptCurrInstr = BattleScript_TargetStayedAwakeUsingAbility;
 				return;
 			case ABILITY_LEAFGUARD:

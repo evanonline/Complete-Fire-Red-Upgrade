@@ -1104,6 +1104,10 @@ bool8 MoveWillHit(u16 move, u8 bankAtk, u8 bankDef)
 	||   (gStatuses3[bankDef] & STATUS3_DISAPPEARED))
 		return FALSE;
 
+
+	if (ABILITY(bankAtk) == ABILITY_MYCELIUMMIGHT && SPLIT(move) == SPLIT_STATUS)
+		return TRUE;
+
 	if ((move == MOVE_TOXIC && IsOfType(bankAtk, TYPE_POISON))
 	|| (move == MOVE_WILLOWISP && IsOfType(bankAtk, TYPE_FIRE))
 	|| (move == MOVE_THUNDERWAVE && IsOfType(bankAtk, TYPE_ELECTRIC))
@@ -1115,6 +1119,17 @@ bool8 MoveWillHit(u16 move, u8 bankAtk, u8 bankDef)
 	||  IsAnyMaxMove(move))
 		return TRUE;
 
+	return FALSE;
+}
+
+bool8 MonMoveWillHit(u16 move, struct Pokemon* monAtk, u8 bankDef)
+{
+	if (GetMonAbility(monAtk) == ABILITY_NOGUARD || ABILITY(bankDef) == ABILITY_NOGUARD)
+		return TRUE;
+
+	if (GetMonAbility(monAtk) == ABILITY_MYCELIUMMIGHT && SPLIT(move) == SPLIT_STATUS)
+		return TRUE;
+	
 	return FALSE;
 }
 
@@ -1143,7 +1158,7 @@ bool8 MoveWouldHitBeforeOtherMove(u16 moveAtk, u8 bankAtk, u16 moveDef, u8 bankD
 	}
 
 //BracketCalc
-	if (BracketCalc(bankAtk) > BracketCalc(bankDef)) //Hehehe...AI knows when its Quick Claw activates
+	if (BracketCalc(bankAtk, ACTION_USE_MOVE, moveAtk) > BracketCalc(bankDef, ACTION_USE_MOVE, moveDef)) //Hehehe...AI knows when its Quick Claw activates
 		return TRUE;
 
 //SpeedCalc
@@ -1667,7 +1682,7 @@ bool8 GoodIdeaToLowerAttack(u8 bankDef, u8 bankAtk, u16 move)
 	return STAT_STAGE(bankDef, STAT_STAGE_ATK) > 4 && PhysicalMoveInMoveset(bankDef)
 		&& defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		&& defAbility != ABILITY_WHITESMOKE
+		//&& defAbility != ABILITY_WHITESMOKE
 		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_HYPERCUTTER;
 }
@@ -1683,7 +1698,7 @@ bool8 GoodIdeaToLowerDefense(u8 bankDef, u8 bankAtk, u16 move)
 		&& PhysicalMoveInMoveset(bankAtk)
 		&& defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		&& defAbility != ABILITY_WHITESMOKE
+		//&& defAbility != ABILITY_WHITESMOKE
 		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_BIGPECKS;
 }
@@ -1733,7 +1748,7 @@ bool8 GoodIdeaToLowerAccuracy(u8 bankDef, u8 bankAtk, u16 move)
 
 	return defAbility != ABILITY_CONTRARY
 		&& defAbility != ABILITY_CLEARBODY
-		&& defAbility != ABILITY_WHITESMOKE
+		//&& defAbility != ABILITY_WHITESMOKE
 		&& defAbility != ABILITY_FULLMETALBODY
 		&& defAbility != ABILITY_KEENEYE;
 }

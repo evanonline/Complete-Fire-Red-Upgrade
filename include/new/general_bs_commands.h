@@ -8,11 +8,9 @@
  */
 
 //Exported Functions
-void TrySetMissStringForSafetyGoggles(u8 bankDef);
 bool8 TryDoBenjaminButterfree(u8 scriptOffset);
-s32 GetPsywaveDamage(u8 level, u8 randDamage);
+s32 GetPsywaveDamage(u8 randDamage);
 bool8 TrySpitePPReduce(u8 bank, u8 lostPP);
-bool8 CanLastMoveNotBeEncored(u8 bank);
 bool8 SetSunnyWeather(void);
 bool8 SetRainyWeather(void);
 bool8 SetHailWeather(void);
@@ -25,13 +23,10 @@ u32 GetSandstormDamage(u8 bank);
 u32 GetHailDamage(u8 bank);
 void TransformPokemon(u8 bankAtk, u8 bankDef);
 u8 CastformDataTypeChange(u8 bank);
-bool8 CanSwapItems(u8 bankAtk, u8 bankDef);
-u8 GetSecretPowerEffect(void);
 u16 GetNaturePowerMove(void);
 void RecycleItem(u8 bank);
 u8 GetCamouflageType(void);
 void BufferAttackerItem(void);
-void ResetDoublesSpreadMoveCalcs(void);
 void MoveValuesCleanUp(void);
 
 //Exported Constants
@@ -44,7 +39,6 @@ enum FaintEffectsStates
 	Faint_ReceiverActivate,
 	Faint_SwitchInAbilities,
 	Faint_PrimalWeather,
-	Faint_SkyDrop,
 	Faint_RaidBattle,
 	Faint_LastPokemonMusic,
 	Faint_FormsRevert,

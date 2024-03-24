@@ -865,18 +865,58 @@ const struct TrainerMonItemCustomMoves sParty_CeruleanGym_Misty_Badge1[] = {
     },
 };
 
-const struct TrainerMonNoItemCustomMoves sParty_CeruleanGym_Misty_Badge2[] = {
-    {
-        .iv = 26,
-        .lvl = 10,
-        .species = SPECIES_VULPIX_A,
+const struct TrainerMonItemCustomMoves sParty_CeruleanGym_Misty_Badge2[] = {
+      {
+        .iv = 27,
+        .lvl = 17,
+        .species = SPECIES_PSYDUCK,
 		.moves = {
-            MOVE_MOONBLAST,
-            MOVE_POWERSWAP,
-            MOVE_BABYDOLLEYES,
-            MOVE_ICESHARD,
+            MOVE_FUTURESIGHT,
+            MOVE_ENCORE,
+            MOVE_FLIPTURN,
+            MOVE_WATERGUN,
         },
+		.heldItem = ITEM_SITRUS_BERRY,
+        .ability = 1,
+    },
+	{
+        .iv = 27,
+        .lvl = 18,
+        .species = SPECIES_BUIZEL,
+		.moves = {
+            MOVE_AQUAJET,
+            MOVE_BATONPASS,
+            MOVE_FLIPTURN,
+            MOVE_AGILITY,
+        },
+		.heldItem = ITEM_SALAC_BERRY,
+        .ability = 1,
+    },
+	{
+        .iv = 27,
+        .lvl = 18,
+        .species = SPECIES_CLAUNCHER,
+		.moves = {
+            MOVE_WATERPULSE,
+            MOVE_PROTECT,
+            MOVE_FLIPTURN,
+            MOVE_RAINDANCE,
+        },
+		.heldItem = ITEM_LUM_BERRY,
         .ability = 0,
+    },
+	{
+        .iv = 27,
+        .lvl = 19,
+        .species = SPECIES_STARYU,
+		.moves = {
+            MOVE_FLIPTURN,
+            MOVE_MAGICCOAT,
+            MOVE_RECOVER,
+            MOVE_WATERGUN,
+        },
+		.heldItem = ITEM_ASSAULT_VEST,
+        .ability = 1,
     },
 };
 
@@ -1082,46 +1122,101 @@ const struct TrainerMonItemCustomMoves sParty_CeladonGym_Erika_Badge1[] = {
             MOVE_ABSORB,
         },
 		.heldItem = ITEM_SITRUS_BERRY,
-        .ability = 0, //want it to be prankster
+        .ability = 2, //want it to be prankster
     },
 	{
         .iv = 27,
         .lvl = 15,
-        .species = SPECIES_,
+        .species = SPECIES_TANGELA,
 		.moves = {
-            MOVE_,
-            MOVE_,
-            MOVE_,
-            MOVE_AGILITY,
+            MOVE_BIND,
+            MOVE_MEGADRAIN,
+            MOVE_RAGEPOWDER,
+            MOVE_BULLETSEED,
         },
-		.heldItem = ITEM_,
+		.heldItem = ITEM_LUM_BERRY,
         .ability = 1,
     },
 	{
         .iv = 27,
         .lvl = 15,
-        .species = SPECIES_,
+        .species = SPECIES_ODDISH,
 		.moves = {
-            MOVE_,
-            MOVE_,
-            MOVE_,
-            MOVE_,
+            MOVE_GROWTH,
+            MOVE_ABSORB,
+            MOVE_GRASSYTERRAIN,
+            MOVE_INGRAIN,
         },
-		.heldItem = ITEM_,
-        .ability = 0,
+		.heldItem = ITEM_GANLON_BERRY,
+       .ability = 0,
     },
 	{
         .iv = 27,
         .lvl = 16,
-        .species = SPECIES_,
+        .species = SPECIES_TOEDSCOOL,
 		.moves = {
-            MOVE_,
-            MOVE_,
-            MOVE_,
-            MOVE_,
+            MOVE_SUPERSONIC,
+            MOVE_TOXIC,
+            MOVE_TAUNT,
+            MOVE_BULLETSEED,
         },
-		.heldItem = ITEM_,
+		.heldItem = ITEM_FOCUS_SASH,
+        .ability = 0,
+    },
+};
+
+const struct TrainerMonItemCustomMoves sParty_CeladonGym_Erika_Badge2[] = {
+    {
+        .iv = 27,
+        .lvl = 17,
+        .species = SPECIES_COTTONEE,
+		.moves = {
+            MOVE_STUNSPORE,
+            MOVE_LEECHSEED,
+            MOVE_FAIRYWIND,
+            MOVE_NATUREPOWER,
+        },
+		.heldItem = ITEM_SITRUS_BERRY,
+        .ability = 2, //want it to be prankster
+    },
+	{
+        .iv = 27,
+        .lvl = 18,
+        .species = SPECIES_TANGELA,
+		.moves = {
+            MOVE_BIND,
+            MOVE_MEGADRAIN,
+            MOVE_RAGEPOWDER,
+            MOVE_BULLETSEED,
+        },
+		.heldItem = ITEM_LUM_BERRY,
         .ability = 1,
+    },
+	{
+        .iv = 27,
+        .lvl = 18,
+        .species = SPECIES_ODDISH,
+		.moves = {
+            MOVE_GROWTH,
+            MOVE_ABSORB,
+            MOVE_GRASSYTERRAIN,
+            MOVE_INGRAIN,
+        },
+		.heldItem = ITEM_GANLON_BERRY,
+       .ability = 0,
+    },
+	{
+        .iv = 27,
+        .lvl = 19,
+        .species = SPECIES_TOEDSCOOL,
+		.moves = {
+            MOVE_SUPERSONIC,
+            MOVE_TOXIC,
+            MOVE_TAUNT,
+            MOVE_BULLETSEED,
+        },
+		.heldItem = ITEM_FOCUS_SASH,
+        .ability = 0,
     },
 };
 
@@ -1819,8 +1914,8 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
-        .partySize = NELEMS(sParty_CeruleanGym_Misty_Badge1),
-        .party = {.ItemCustomMoves = sParty_CeruleanGym_Misty_Badge1}
+        .partySize = NELEMS(sParty_CeruleanGym_Misty_Badge2),
+        .party = {.ItemCustomMoves = sParty_CeruleanGym_Misty_Badge2}
     },
 	
 	// Celadon Gym
@@ -1928,4 +2023,31 @@ const struct Trainer gTrainers[] = {
         .partySize = NELEMS(sParty_CeladonGym_LadyTorgal_Badge2),
         .party = {.NoItemCustomMoves =  sParty_CeladonGym_LadyTorgal_Badge2}
     },		
+	
+		[TRAINER_CELADONGYM_ERIKA_BADGE1] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM,
+        .trainerClass = CLASS_GYM_LEADER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_ERIKA,
+        .trainerName = {_E, _r, _i, _k, _a, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeladonGym_Erika_Badge1),
+        .party = {.ItemCustomMoves = sParty_CeladonGym_Erika_Badge1}
+    },
+	
+		[TRAINER_CELADONGYM_ERIKA_BADGE2] = {
+        .partyFlags = PARTY_FLAG_CUSTOM_MOVES | PARTY_FLAG_HAS_ITEM,
+        .trainerClass = CLASS_GYM_LEADER,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_FEMALE,
+		.trainerPic = TRAINER_PIC_ERIKA,
+        .trainerName = {_E, _r, _i, _k, _a, _END},
+        .items = {},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_DOUBLE_BATTLE | AI_SCRIPT_SETUP_FIRST_TURN | AI_SCRIPT_SEMI_SMART,
+        .partySize = NELEMS(sParty_CeladonGym_Erika_Badge2),
+        .party = {.ItemCustomMoves = sParty_CeladonGym_Erika_Badge2}
+    },
+	
 };

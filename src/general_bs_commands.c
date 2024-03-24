@@ -1347,8 +1347,7 @@ void atk1B_cleareffectsonfaint(void) {
 					gBattlescriptCurrInstr = BattleScript_Receiver;
 
 					gAbilityPopUpHelper = gLastUsedAbility;
-					gAbilityPopUpSpecies = SPECIES(gActiveBattler);
-					EmitDataTransfer(0, &gAbilityPopUpHelper, 3, &gAbilityPopUpHelper); //Copy Ability and Species
+					EmitDataTransfer(0, &gAbilityPopUpHelper, 1, &gAbilityPopUpHelper);
 					MarkBufferBankForExecution(gActiveBattler);
 
 					++gNewBS->faintEffectsState;
@@ -2415,7 +2414,7 @@ void atk81_trysetrest(void)
 	{
 		switch (ABILITY(gActiveBattler)) {
 			case ABILITY_INSOMNIA:
-			case ABILITY_VITALSPIRIT:
+			//case ABILITY_VITALSPIRIT:
 				gBattlescriptCurrInstr = BattleScript_TargetStayedAwakeUsingAbility;
 				fail = TRUE;
 				break;
@@ -2484,7 +2483,7 @@ void atk84_jumpifcantmakeasleep(void) {
 	)
 		gBattlescriptCurrInstr = jump_loc;
 
-	else if (defAbility == ABILITY_INSOMNIA || defAbility == ABILITY_VITALSPIRIT || defAbility == ABILITY_COMATOSE || defAbility == ABILITY_SWEETVEIL
+	else if (defAbility == ABILITY_INSOMNIA /*|| defAbility == ABILITY_VITALSPIRIT*/ || defAbility == ABILITY_COMATOSE || defAbility == ABILITY_SWEETVEIL
 	|| (defAbility == ABILITY_LEAFGUARD && WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SUN_ANY)
 	|| (defAbility == ABILITY_FLOWERVEIL && IsOfType(bankDef, TYPE_GRASS) && gCurrentMove != MOVE_REST)) {
 		gLastUsedAbility = defAbility;

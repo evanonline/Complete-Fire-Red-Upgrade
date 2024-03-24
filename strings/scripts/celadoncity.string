@@ -353,7 +353,7 @@ Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\e
 Hmm[.]\pLong ago, Team Rocket stole my\nPok\emon.\pMaybe I could win a new Pok\emon\nat the [GREEN]Game Corner[BLACK] next door!\lThe R Group is awesome, you twerp!
 
 #org @gText_CeladonCity_GimmighoulHint
-I was reading about this weird\n[RED]type of Pok\emon that loves coins.[BLACK]\pGoodness, I bet they've love the\nGame Corner, hm?\pA full [BLUE]Coin Case[BLACK] would be as\ngood as gold to them!
+I was reading about this weird\n[RED]type of Pok\emon that loves coins.[BLACK]\pGoodness, I bet they'd love the\nGame Corner, hm?\pA full [BLUE]Coin Case[BLACK] would be as\ngood as gold to them!
 
 #org @gText_CeladonCity_ToedscoolKnower
 Hey! Did you hear about Erika's\nnew Pok\emon?\pApparently, she went to the [GREEN]Paldea[BLACK]\nregion, and came back with\lsomething weird!\pIt's hard to find [GREEN]Paldean[BLACK] Pok\emon\nfor yourself in this area[.]
@@ -430,5 +430,29 @@ Oh! The plant roots have sprouted\nback up!
 #org @gText_CeladonGym_PlantRoots2
 It sounds like the big plant in\nthe center is gone!
 
-#org @gText_CeladonGym_Erika_Intro
-[RED]Erika[BLACK]: Yaaaaawwnn[.] Mmm[.]\n[PAUSE][12]Ah, you must be [PLAYER][.]\pWelcome, and thank you.
+#org @gText_CeladonGym_Erika_BeforeFight1
+[RED]Erika[BLACK]: Yaaaaawwnn[.] Mmm[.]\n[PAUSE][12]Ah, you must be [PLAYER][.]\pWelcome, and thank you.\pTeam Rocket's activities have been\ndifficult for our fair city to\ldeal with, let alone our Gym.\pTo think those ruffians would take\nadvantage of my, ahem[.]\l[.]predilection for sleep[.]!\pYou're my Gym's honored guest.\nBut, make no mistake[.]\pI will reward you with the\nchallenge you deserve!
+
+#org @gText_CeladonGym_Erika_BeforeFight2
+[RED]Erika[BLACK]: It's good to see you again.\nShall we battle once more?
+
+#org @gText_CeladonGym_Erika_Lose
+My, my!\nWell done, [PLAYER].\lYou are as fierce as you are kind.\pYou and your Pok\emon moved as if\ndancing, like a petal in the wind.
+
+#org @gText_CeladonGym_Erika_After1
+[RED]Erika[BLACK]: It is my honor to present\nto you the Rainbow Badge.
+
+#org @gText_CeladonGym_Erika_BulletSeed
+[RED]Erika[BLACK]: Please accept this gift,\nas well.
+
+#org @gText_RecieveBulletSeed
+[PLAYER] recieved [GREEN]TM09[BLACK]!\nIt contains [GREEN]Bullet Seed[BLACK]!
+
+#org @gText_CeladonGym_Erika_After2
+[RED]Erika[BLACK]: Team Rocket's hooliganism\ncan't be allowed.\pBut I fear they've already won\nthe fight.\pIs money truly enough to forgive\nwhat they've done[.]?\pI am thankful for kind-hearted\npeople like you, [PLAYER].\pI wish you best of luck in your\nfurther journeys.\pNo matter how the rest of Celadon\nfeels, you will always be welcome\lin my Gym.
+
+#org @gText_CeladonGym_Erika_PostFight_1stGym
+[RED]Erika[BLACK]: I recommend visiting the\nGym in [GREEN]Cerulean City[BLACK], [PLAYER].\pI believe Misty has felt\ndowntrodden lately.\pA visit from a spirited trainer\nsuch as yourself would surely help.
+
+#org @gText_CeladonGym_Erika_PostFight_2ndGym
+[RED]Erika[BLACK]: Oh, I should inform you.\pI believe that [GREEN]Saffron City[BLACK]\nhas reopened its gates.\pMy friend, Sabrina, runs the Gym\nthere.

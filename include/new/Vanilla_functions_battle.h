@@ -143,7 +143,7 @@ void __attribute__((long_call)) SetPpNumbersPaletteInMoveSelection(void);
 u8 __attribute__((long_call)) GetEreaderTrainerFrontSpriteId(void);
 u8 __attribute__((long_call)) GetEreaderTrainerClassId(void);
 void __attribute__((long_call)) GetEreaderTrainerName(u8* dst);
-bool8 __attribute__((long_call)) BtlCtrl_OakOldMan_TestState2Flag(u32 a);
+bool8 __attribute__((long_call)) sub_80EB2E0(u32 a);
 //bool8 __attribute__((long_call)) IsLinkDoubleBattle(void);
 void __attribute__((long_call)) SwitchPartyOrderLinkMulti(u8 bank, u8 partyID, u8 r2);
 void __attribute__((long_call)) SwitchPartyMonSlots(u8 slot, u8 slot2);

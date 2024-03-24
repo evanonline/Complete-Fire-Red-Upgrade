@@ -261,7 +261,7 @@ Daily Events - Flags from 0xE00 to 0xEFF reset every day:
 #define FLAG_CELADONGYM_ROOT_3      0x0BA //Celadon Gym plant root 3
 #define FLAG_CELADONGYM_ROOT_4      0x0BB //Celadon Gym plant root 4
 #define FLAG_CELADONGYM_ROOT_ALL    0x0BC //All Celadon Gym plant roots removed
-#define FLAG_0x0BD               	0x0BD
+#define FLAG_ERIKA_FIRST_ATTEMPT    0x0B7 //Attempted the first Erika fight at least once, prompting different dialogue on a rematch.
 #define FLAG_0x0BE               	0x0BE
 #define FLAG_0x0BF               	0x0BF
 #define FLAG_0x0C0               	0x0C0
